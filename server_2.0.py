@@ -20,8 +20,8 @@ port = 5000
 account_sid = "AC9dcfe6b1a8638baaa231fcd0f92d66bc"
 auth_token = "bfb0bd3c5dc7540b8d8d95920f0b47b7"
 client = Client(account_sid, auth_token)
-bot_num = +18444177372
-my_num = +12674361580
+bot_num = 18444177372
+my_num = 12674361580
 start_keyword = "--start--"
 schedule={# norm/early/hr_early/2hr_delay
 	"06:28/06:28":"Hurry up!",
@@ -56,17 +56,39 @@ def hook():
 				# 			keep_alive = bool(str(f.readline()))
 				# os.abort()
 		else:
-				if "-" in message:
-						message = message.split("-")
-				else:
-					message = [message, ""]
-					match message[0]:
-						case "alarm":
-								alarm()
-						case "temp":
-							temp()
-						case _:
-							text("That command does not exist. To see a list of all commands, text commands")
+			if " " in message:
+				message = message.split(" ")
+			else:
+				message = [message, ""]
+			args = message[1:]
+			message = message[0]
+			match message:
+				case "alarm":
+					alarm()
+				case "temp":
+					temp()
+				case "spam":
+					spam(args)
+				case "weather":
+					weather()
+				case "quote":
+					quote()
+				case "school":
+					school()
+				case "scan":
+					scan(args)
+				case "bday":
+					bday()
+				case "today":
+					today()
+				case "desc":
+					desc()
+				case "commands":
+					commands()
+				case "clean":
+					clean()
+				case _:
+					text("That command does not exist. To see a list of all commands, text commands")
 		return "200"
 
 def kill():
@@ -84,12 +106,13 @@ def alarm():
 	if log_command("alarm"):
 		return
 	with open("text_files/alarm") as alarm_file:
-		alarm_on = bool(str(alarm_file.readline()))
+		alarm_on = bool(int(alarm_file.readline()))
+	with open("text_files/alarm", "w") as alarm_file:
 		if alarm_on:
-			alarm_file.write("False")
+			alarm_file.write("0")
 		else:
-			alarm_file.write("True")
-		alarm_state="on" if alarm_on else "off"
+			alarm_file.write("1")
+		alarm_state="off" if alarm_on else "on"
 		text(f"Your alarm is now {alarm_state}")
 
 def temp():
@@ -98,32 +121,18 @@ def temp():
 	temp=get_weather("temp")
 	text(f"{temp}°")
 
-def spam(arg):
+def spam(message):
 	if log_command("spam"):
 		return
 	for i in range(5):
-		if "str" in str(type(arg)):
-			text(arg)
-		else:
-			text(" ".join(arg))
-		time.sleep(1)
-
-
-def crypto(arg):
-	if log_command("crypto"):
-		return
-	price=crypto_price(arg)
-	if price!="error":
-		text(f"${price}")
-
-
+		text(message)
+		time.sleep(2)
 
 def weather():
 	if log_command("weather"):
 		return
 	formatted=formatted_weather()
 	text(formatted)
-
 
 def quote():
 	if log_command("quote"):
@@ -141,14 +150,14 @@ def school():
 	left=6840-(24*day_hours+hours)
 	message = ""
 	message += "Remaining School:\n"
-	message += f"Percent of school completed - {str(np.round((left/6840)*100,1))}%\n"
+	message += f"School completed - {str(np.round((left/6840)*100,1))}%\n"
 	message += f"Days till school is over - {str(np.round(285-left/24,1))}"
 	text(message)
 
 def scan(keyword):
 	if log_command("scan"):
 		return
-	text(get_quote(keyword))
+	text(get_quote(keyword[0]))
 
 def bday():
 	if log_command("bday"):
@@ -171,21 +180,22 @@ def today():
 		return
 	day_num=int(rn("%d"))
 	suffix=num_suffix(int(rn("%d")[1]))
-	text(rn(f"Today is %A, %b {day_num}{suffix}"))
+	message = ""
+	message += rn(f"Today is %A, %b {day_num}{suffix}") +"\n"
 	if during_school("day"):
 		letr_day=letter_day()
 		if letr_day!="error":
 			if letr_day in "AEF":
-				text(f"It is an {letr_day} day")
+				message += f"It is an {letr_day} day"
 			else:
-				text(f"It is a {letr_day} day")
+				message += f"It is a {letr_day} day"
+	text(message)
 
 
-def info():
-	if log_command("info"):
+def desc():
+	if log_command("desc"):
 		return
-	message = ""
-	message += '''I am Evan's personal bot.\n
+	message = '''I am Evan's personal bot.\n
 		If I am going crazy and you need to terminate me, text KILL.\n
 		If you would like to see my commands, text \"commands\".\n
 		If you have any suggestions on new features that you would like added to me, text \"suggest\" before your suggestion.\n
@@ -197,24 +207,26 @@ def info():
 def commands():
 	if log_command("commands"):
 		return
-	commands={
-	"alarm":"toggles whether or not ping the sender when one of their classes ends"
-	,"temp":"sends the current temperature where Evan lives"
-	,"spam ___":"spams any message"
-	,"crypto ___":"sends current price of of any popular crypto"
-	,"weather":"sends a brief overview of the current weather conditions where Evan lives"
-	,"quote":"sends a random quote"
-	,"school":"sends how much school is left"
-	,"coming soon":"sends a list of features that will be added soon in order of importance"
-	,"scan ___":"searches through all the unused quotes that contain that word/phrase"
-	,"bday":"sends 5 famous people that were born today"
-	,"today":"sends the day of the month, week, and school cycle"
-	,"info":"sends a description of this bot"
-	,"commands":"sends this"}
-	for key,val in commands.items():
-		text(key+" -> "+val)
-		time.sleep(.5)
-	text("I also have a few other surprises ;)")
+	message = ""
+	commands=[
+	"alarm -> toggles whether or not ping the sender when one of their classes ends"
+	,"temp -> sends the current temperature where Evan lives"
+	,"spam ___ -> spams any message"
+	,"weather -> sends a brief overview of the current weather conditions where Evan lives"
+	,"quote -> sends a random quote"
+	,"school -> sends how much school is left"
+	,"coming soon -> sends a list of features that will be added soon in order of importance"
+	,"scan ___ -> searches through all the unused quotes that contain that word/phrase"
+	,"bday -> sends 5 famous people that were born today"
+	,"today -> sends the day of the month, week, and school cycle"
+	,"clean -> performs a number of functions that keep this bot running well"
+	,"desc -> sends a description of this bot"
+	,"commands -> sends this"]
+	for i in commands:
+		message += i+"\n"
+	message += "I also have a few other surprises ;)"
+	pprint(message)
+	text(message)
 
 
 def clean():
@@ -301,31 +313,6 @@ def during_school(start="07:21",end="14:12"):
 		error_report("during_school")
 		return
 	return(0<=now<=end)
-
-def crypto_price(name):
-	try:
-		crypto_page=requests.get(f"https://coinstats.app/coins/{name}/")
-		crypto_soup=BeautifulSoup(crypto_page.content,"html.parser").get_text()
-		search_string=name.capitalize()+" price is \$.+\d, "
-		crypto_price=re.search(search_string,crypto_soup).group()[:-2].split("is $")[1]
-		uncancel("crypto_price")
-		if "," in crypto_price:
-			crypto_price=crypto_price.replace(",","")
-			crypto_price=float("".join(crypto_price))
-			return(crypto_price)
-		return(float(crypto_price))
-	except:
-		error_report("crypto_price")
-		return "error"
-
-def get_profit(worth=False):
-	uni_price=crypto_price("uniswap")
-	bit_price=crypto_price("bitcoin")
-	if uni_price=="error" or bit_price=="error":
-		error_report("profit")
-		return "error"
-	total=round((uni_price*2)+(bit_price*.000717)-(49.6+30),2)
-	return total
 
 def log_command(name):
 	with open("text_files/command_list","a") as command_file:
@@ -459,7 +446,7 @@ def get_weather(data="full"):
 def formatted_weather():
 	weather=get_weather()
 	try:
-		conditions = weather["vis"]
+		conditions = weather["conditions"]
 		temp = weather["temp"]
 		humidity = weather["humidity"]
 		wind_speed = weather["wind_speed"]
@@ -469,7 +456,6 @@ def formatted_weather():
 	message = ""
 	message += f"Temperature - {temp}°\n"
 	message += f"Conditions - {conditions}\n"
-	message += "Humidity - Above Average"
 	if 62<dewpoint<69:	message += "Humidity - Above Average\n"
 	elif 69<=dewpoint:	message += "Humidity - High\n"
 	elif humidity<=30:	message += "Humidity - Very Low\n"
@@ -480,7 +466,7 @@ def formatted_weather():
 	elif 10<=wind_speed<17:	message += "Wind Speed - Windy\n"
 	elif 5<=wind_speed<10:	message += "Wind Speed - Light Breeze\n"
 	else:	message += "Wind Speed - Negligible\n"
-	message += f"Visibility - {weather['vis']}"
+	message += f"Visibility - {weather['vis'].replace('10.00', '10')}"
 	return message
 
 
@@ -507,8 +493,7 @@ def get_quote(scan=False):
 	else:
 		keyword_quotes=[i for i in quote_list if scan in i]
 		message = ""
-		message += "Matching quotes\n"
-		message += f"Number of Quotes: {len(quote_list)}\n"
+		message += f"Total Number of Quotes: {len(quote_list)}\n"
 		message += f"Number of Matching Quotes: {len(keyword_quotes)}\n"
 		if len(keyword_quotes)==0:
 			return "No matching quotes"
