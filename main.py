@@ -4,10 +4,7 @@ ngrok authtoken
 '''
 
 from flask import Flask, request
-import config
-import json
 import requests
-import time
 from pprint import pprint
 import requests
 import time
@@ -20,7 +17,6 @@ from bs4 import BeautifulSoup
 import re
 from twilio.rest import Client
 import uvicorn
-import sys
 
 
 app = Flask(__name__)
