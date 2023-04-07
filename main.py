@@ -1,3 +1,8 @@
+'''
+ngrok authtoken
+2M5EGMAKqjQcKZJlslUHSrFWOYn_3e5FMxonCXeFjfZa62Mph
+'''
+
 from flask import Flask, request
 import config
 import json
@@ -28,9 +33,9 @@ my_num = +12674361580
 start_keyword = "--start--"
 
 my_schedule = {
-	"02:55":"test"
+	"22:21":"test"
 }
-school_schedule = {  # norm/early/hr_early/2hr_delay
+school_schedule = {# norm/early/hr_early/2hr_delay
 	"08:28/07:59": {"A": "C39", "B": "C39", "C": "C39", "D": "C39", "E": "E14", "F": "C39"},
 	"09:17/08:35": {"A": "K30", "B": "C39", "C": "GYM", "D": "AUDN", "E": "C39", "F": "GYM"},
 	"10:06/09:11": "A11",
@@ -44,10 +49,10 @@ school_times = {
 	"early": ["07:21", "11:00"],
 }
 no_eat = ["milk", "ravioli", "fruit cup", "pasta", "sausage", "macaroni",
-         "cheese", "salad", "pretzel", "spanish beans", "muffin", "max sticks",
-         "bosco", "broccoli", "nacho", "vegetable", "juice", "mozzarella", "roll",
-         "buffalo", "spartan", "sweet and sour", "parm", "sausage", "knights",
-         "100%", "chicken bowl", "carrot", "celery", "pizza"]
+			"cheese", "salad", "pretzel", "spanish beans", "muffin", "max sticks",
+			"bosco", "broccoli", "nacho", "vegetable", "juice", "mozzarella", "roll",
+			"buffalo", "spartan", "sweet and sour", "parm", "sausage", "knights",
+			"100%", "chicken bowl", "carrot", "celery", "pizza"]
 months = ["january", "february", "march", "april", "may", "june", "july", "august",
 				"september", "october", "november", "december"]
 
@@ -377,8 +382,8 @@ def schedule(day_type, letr_day):
 		alarm_on = bool(str(alarm_file.readline()))
 	if alarm_on:
 		try:
+			response = my_schedule[rn()]
 			found_time = True
-			return my_schedule[rn()]
 		except:
 			pass
 		if during_school("day"):
@@ -391,9 +396,10 @@ def schedule(day_type, letr_day):
 					found_time = True
 	if not found_time:
 		return
-	if type_checker(response, "str"):
+	elif type_checker(response, "str"):
 		return response
-	return send_cycle(response, letr_day)
+	else:
+		return send_cycle(response, letr_day)
 
 
 def send_cycle(response, letr_day):
@@ -689,7 +695,15 @@ def setup_lunches():
 
 
 def event_loop():
+	event_id = random.randint(0, 10000000000)
+	with open("text_files/event_id", "w") as event_id_file:
+		event_id_file.write(str(event_id))
 	while True:
+		if int(rn("%M")) % 5 == 0:
+			with open("text_files/event_id") as event_id_file:
+				if int(event_id_file.readline()) != event_id:
+					print("duplicate process detected, aborting...")
+					break
 		day_type = get_day_type()
 		letr_day = letter_day()
 		response = schedule(day_type, letr_day)
