@@ -1,4 +1,7 @@
 '''
+all dates are in month/day/year
+
+
 ngrok authtoken
 2M5EGMAKqjQcKZJlslUHSrFWOYn_3e5FMxonCXeFjfZa62Mph
 '''
@@ -8,7 +11,7 @@ import requests
 from pprint import pprint
 import requests
 import time
-from datetime import datetime
+from datetime import datetime, date
 import pytz
 import random
 import os
@@ -55,7 +58,6 @@ months = ["january", "february", "march", "april", "may", "june", "july", "augus
 
 def text(body):
 	message = client.messages.create(body=body, from_=bot_num, to=my_num)
-text("Online")
 
 @app.route("/", methods=["POST"])
 def hook():
@@ -71,39 +73,38 @@ def hook():
 			message = [message, ""]
 		args = message[1:]
 		message = message[0]
-		match message:
-			case "KILL":
-				kill()
-			case "Kill":
-				kill()
-			case "kill":
-				kill()
-			case "alarm":
-				alarm()
-			case "temp":
-				temp()
-			case "spam":
-				spam(args)
-			case "weather":
-				weather()
-			case "quote":
-				quote()
-			case "school":
-				school()
-			case "scan":
-				scan(args)
-			case "bday":
-				bday()
-			case "today":
-				today()
-			case "desc":
-				desc()
-			case "commands":
-				commands()
-			case "clean":
-				clean()
-			case _:
-				text("That command does not exist.\nTo see a list of all commands, text \"commands\".")
+		if message == "KILL":
+			kill()
+		elif message == "Kill":
+			kill()
+		elif message == "kill":
+			kill()
+		elif message == "alarm":
+			alarm()
+		elif message == "temp":
+			temp()
+		elif message == "spam":
+			spam(args)
+		elif message == "weather":
+			weather()
+		elif message == "quote":
+			quote()
+		elif message == "school":
+			school()
+		elif message == "scan":
+			scan(args)
+		elif message == "bday":
+			bday()
+		elif message == "today":
+			today()
+		elif message == "desc":
+			desc()
+		elif message == "commands":
+			commands()
+		elif message == "clean":
+			clean()
+		else:
+			text("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
 
 
@@ -118,6 +119,28 @@ def text(body):
 def rn(target="%H:%M"):
 	now = datetime.now(pytz.timezone("America/New_York"))
 	return now.strftime(target)
+
+
+def log_command(name):
+	with open("text_files/command_list", "a") as command_file:
+		command_file.write(f"{name}\n")
+	with open("text_files/cancel") as cancel_file:
+		cancels = cancel_file.readlines()
+	return(name in cancels)
+
+
+def days_until(target, start=None):
+	if log_command("days_until"):
+		return
+	target = target.split("/")
+	target = date(year=int(target[2]), month=int(target[0]), day=int(target[1]))
+	if start == None:
+		start = date.today()
+	else:
+		start = start.split("/")
+		start = date(year=int(start[2]), month=int(start[0]), day=int(start[1]))
+	difference = target - start
+	return difference
 
 
 def alarm():
@@ -165,16 +188,10 @@ def quote():
 def school():
 	if log_command("school"):
 		return
-	if int(rn("%y")) >= 22:
-		day_hours = 162-int(rn("%j"))
-	else:
-		day_hours = 365+162-int(rn("%j"))
-	hours = int(rn("%H"))
-	left = 6840-(24*day_hours+hours)
-	message = ""
-	message += "Remaining School:\n"
-	message += f"School completed - {str(np.round((left/6840)*100,1))}%\n"
-	message += f"Days till school is over - {str(np.round(285-left/24,1))}"
+	left = int(days_until("09/15/2023").days)
+	total = int(days_until("09/15/2023", "06/15/2023").days)
+	message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n"
+	message += f"Days till I move out - {left}"
 	text(message)
 
 
@@ -338,14 +355,6 @@ def during_school(start="07:21", end="14:12"):
 		error_report("during_school")
 		return
 	return(0 <= now<=end)
-
-
-def log_command(name):
-	with open("text_files/command_list", "a") as command_file:
-		command_file.write(f"{name}\n")
-	with open("text_files/cancel") as cancel_file:
-		cancels = cancel_file.readlines()
-	return(name in cancels)
 
 
 def letter_day():
