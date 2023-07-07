@@ -29,10 +29,12 @@ client = Client(account_sid, auth_token)
 bot_num = +18444177372
 my_num = +12674361580
 start_keyword = "--start--"
+header = {
+	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+}
 
 
-
-def text(body):
+def text_me(body):
 	try:
 		message = client.messages.create(body=body, from_=bot_num, to=my_num)
 	except:
@@ -43,7 +45,7 @@ def text(body):
 def hook():
 	message = str(dict(request.values)["Body"])
 	if message == start_keyword:
-			text("process started")
+			text_me("process started")
 			daily_funcs()
 			event_loop()
 	else:
@@ -60,27 +62,27 @@ def hook():
 		elif message == "kill":
 			kill()
 		elif message == "alarm":
-			text(alarm())
+			text_me(alarm())
 		elif message == "temp":
 			if log_command("temp"):
 				return
-			text(f"{get_weather('temp')}°")
+			text_me(f"{get_weather('temp')}°")
 		elif message == "spam":
 			spam(args)
 		elif message == "weather":
 			if log_command("weather"):
 				return
-			text(formatted_weather())
+			text_me(formatted_weather())
 		elif message == "quote":
 			if log_command("quote"):
 				return
-			text(get_quote())
+			text_me(get_quote())
 		elif message == "school":
 			school()
 		elif message == "scan":
 			if log_command("scan"):
 				return
-			text(get_quote(args[0]))
+			text_me(get_quote(args[0]))
 		elif message == "bday":
 			bday()
 		elif message == "today":
@@ -94,16 +96,12 @@ def hook():
 		elif message == "work":
 			schedule_work(args)
 		else:
-			text("That command does not exist.\nTo see a list of all commands, text \"commands\".")
+			text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
 
 
 def kill():
 	os.abort()
-
-
-def text(body):
-	message = client.messages.create(body=body, from_=bot_num, to=my_num)
 
 
 def rn(target="%H:%M"):
@@ -112,9 +110,9 @@ def rn(target="%H:%M"):
 
 
 def log_command(name):
-	with open("text_files/command_list", "a") as command_file:
+	with open("main_folder/text_files/command_list", "a") as command_file:
 		command_file.write(f"{name}\n")
-	with open("text_files/cancel") as cancel_file:
+	with open("main_folder/text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
 	return(name in cancels)
 
@@ -136,9 +134,9 @@ def days_until(target, start=None):
 def alarm():
 	if log_command("alarm"):
 		return
-	with open("text_files/alarm") as alarm_file:
+	with open("main_folder/text_files/alarm") as alarm_file:
 		alarm_on = bool(int(alarm_file.readline()))
-	with open("text_files/alarm", "w") as alarm_file:
+	with open("main_folder/text_files/alarm", "w") as alarm_file:
 		if alarm_on:
 			alarm_file.write("0")
 		else:
@@ -151,7 +149,7 @@ def spam(message):
 	if log_command("spam"):
 		return
 	for i in range(5):
-		text(message)
+		text_me(message)
 		time.sleep(2)
 
 
@@ -162,26 +160,81 @@ def school():
 	total = int(days_until("09/15/2023", "06/15/2023").days)
 	message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n"
 	message += f"Days till I move out - {left}"
-	text(message)
+	text_me(message)
 
+
+def bday_famousbirthdays():
+	if log_command("bday_famousbirthdays"):
+		return
+	try:
+		url = f"https://www.famousbirthdays.com/{rn('%B').lower()}{str(int(rn('%d')))}.html"
+		bday_page = requests.get(url, headers=header)
+		bday_soup = BeautifulSoup(bday_page.content, "html.parser")
+		raw_bday_list = list(
+			filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
+		for i in range(len(raw_bday_list)):
+			try:
+				not_used = int(raw_bday_list[i])
+				raw_bday_list.remove(raw_bday_list[i])
+			except:
+				pass
+		fake_famous = [
+			"TikTok Star", "Reality Star", "Gospel Singer",
+			"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
+			"Family Member", "Dubsmash Star", "Twitch Star", "Stylist",
+			"eSports Player", "Cat", "Dog"
+		]
+		fake_famous_conditional = [["Model", range(21, 999)]]
+		bday_list = []
+		name = None
+		age = None
+		occupation = None
+		for i in range(len(raw_bday_list)):
+			if i % 2 == 0:
+				if raw_bday_list[i].count(",") > 1:
+					name = ",".join(raw_bday_list[i].split(",")[:-1])
+					age = raw_bday_list[i].split(",")[-1][1:]
+				elif raw_bday_list[i].count(",") == 1:
+					name = raw_bday_list[i].split(",")[0]
+					age = raw_bday_list[i].split(",")[-1][1:]
+				else:
+					name = raw_bday_list[i].split("(")[0]
+					age = "(" + raw_bday_list[i].split("(")[-1]
+				occupation = raw_bday_list[i+1]
+				bday_list.append(tuple([name[1:], age, occupation]))
+		refined_bday_list = []
+		for i in range(len(bday_list)):
+			makes_list = False
+			if "(" in bday_list[i][1] and ")" in bday_list[i][1]:
+				makes_list = True
+			if not bday_list[i][2] in fake_famous:
+				makes_list = True
+			for j in fake_famous_conditional:
+				if bday_list[i][2] == j[0]:
+					if int(bday_list[i][1]) in j[1]:
+						makes_list = True
+					else:
+						makes_list = False
+			if makes_list:
+				refined_bday_list.append(bday_list[i])
+		return refined_bday_list
+	except Exception as e:
+		print("error")
+		print(e)
+		return "error"
+
+def bday_brainyquote():
+	if log_command("bday"):
+		return
+	url = "https://www.brainyquote.com/"
+	bday_page = requests.get(url, headers=header)
+	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
+
+def bday_ducksters():
+	pass
 
 def bday():
-	try:
-		if log_command("bday"):
-			return
-		bday_page = requests.get("https://www.brainyquote.com/")
-		bday_soup = BeautifulSoup(bday_page.content, "html.parser").get_text()
-		bdays = re.findall("- .+", bday_soup)[1:6]
-		if len(bdays) != 5:
-			error_report("bday")
-			return
-		message = ""
-		message += "Famous People Born Today:\n\n"
-		for i in bdays:
-			message += str(i[2:])+"\n"
-		text(message)
-	except:
-		print("error")
+	pass
 
 def today():
 	if log_command("today"):
@@ -189,7 +242,7 @@ def today():
 	day_num = int(rn("%d"))
 	suffix = num_suffix(int(rn("%d")[1]))
 	message = rn(f"Today is %A, %b {day_num}{suffix}") + "\n"
-	text(message)
+	text_me(message)
 
 
 def desc():
@@ -201,7 +254,7 @@ If you would like to see my commands, text "commands".
 I will pass all suggestions along to my developer.
 Have an amazing day :)
 	'''
-	text(message)
+	text_me(message)
 
 
 def commands():
@@ -224,17 +277,17 @@ def commands():
 	message1 = "\n".join(command_lst[:length//2])
 	message2 = "\n".join(command_lst[length//2:])
 	message2 += "\nI also have a few other surprises ;)"
-	text(message1)
-	text(message2)
+	text_me(message1)
+	text_me(message2)
 
 
 def clean():
 	if log_command("clean"):
 		return
 	daily_funcs()
-	with open("text_files/quotes") as quotes_file:
+	with open("main_folder/text_files/quotes") as quotes_file:
 		quotes = list(set(quotes_file.readlines()))
-	with open("text_files/used_quotes") as used_quotes_file:
+	with open("main_folder/text_files/used_quotes") as used_quotes_file:
 		used_quotes = list(set(used_quotes_file.readlines()))
 	for i in quotes:
 		if i in used_quotes:
@@ -242,26 +295,26 @@ def clean():
 			used_quotes.append(i)
 	quote_fix = False
 	used_fix = False
-	with open("text_files/quotes") as quotes_file:
+	with open("main_folder/text_files/quotes") as quotes_file:
 		if quotes != quotes_file.readlines():
 			quote_fix = True
-	with open("text_files/used_quotes") as used_quotes_file:
+	with open("main_folder/text_files/used_quotes") as used_quotes_file:
 		if used_quotes != used_quotes_file.readlines():
 			used_fix = True
 	if quote_fix:
-		with open("text_files/quotes", "w") as quotes_file:
+		with open("main_folder/text_files/quotes", "w") as quotes_file:
 			quotes_file.writelines(quotes)
 	if used_fix:
-		with open("text_files/used_quotes", "w") as used_quotes_file:
+		with open("main_folder/text_files/used_quotes", "w") as used_quotes_file:
 			used_quotes_file.writelines(used_quotes)
-	with open("text_files/alarm") as alarm_file:
+	with open("main_folder/text_files/alarm") as alarm_file:
 		alarm_bool = alarm_file.readline()
 		try:
 			x = int(alarm_bool)
 		except:
-			text("error in alarm file")
+			text_me("error in alarm file")
 			error_report("alarm_file")
-	text("All Clean!")
+	text_me("All Clean!")
 
 
 def schedule_work(work):
@@ -270,7 +323,7 @@ def schedule_work(work):
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")
-	with open("text_files/errors") as error_file:
+	with open("main_folder/text_files/errors") as error_file:
 		errors = error_file.readlines()
 	if len(errors) >=40:
 			errors = errors[30:]
@@ -279,14 +332,14 @@ def error_report(name):
 	elif len(errors)>=5:
 			errors = errors[5:]
 	if len(errors) >5 and errors.count(errors[0])==len(errors):
-		with open("text_files/cancel") as cancel_file:
+		with open("main_folder/text_files/cancel") as cancel_file:
 			cancels = cancel_file.readlines()
 		cancels.append(name+"\n")
 		cancels = list(set(cancels))
-		with open("text_files/cancel", "w") as cancel_file:
+		with open("main_folder/text_files/cancel", "w") as cancel_file:
 			cancel_file.writelines(cancels)
 	else:
-		with open("text_files/errors", "a") as error_list:
+		with open("main_folder/text_files/errors", "a") as error_list:
 			error_list.write(f"{name}:{time_stamp}\n")
 
 
@@ -303,17 +356,17 @@ def get_weather(data="full"):
 	weather_soup = str(weather_soup.get_text())
 	if data == "temp" or full:
 		try:
-			temp = int(re.search("Wind Chill*\d+°F", weather_soup).group()[10:-2])
+			temp = int(re.search(r"Wind Chill*\d+°F", weather_soup).group()[10:-2])
 		except:
-			temp = int(np.round(float(re.search("\d+°F", weather_soup).group()[:-2]),0))
+			temp = int(np.round(float(re.search(r"\d+°F", weather_soup).group()[:-2]),0))
 	if data == "humidity" or full:
-		humidity = int(re.search("\d+%", weather_soup).group()[:-1])
+		humidity = int(re.search(r"\d+%", weather_soup).group()[:-1])
 	if data == "wind_speed" or full:
-		wind_speed = int(re.search("\d+\smph", weather_soup).group()[:-4])
+		wind_speed = int(re.search(r"\d+\smph", weather_soup).group()[:-4])
 		if ("Calm" in weather_soup) and (" Calm" not in weather_soup):
 			wind_speed = 0
 	if data == "dewpoint" or full:
-		dewpoint = int(re.search("Dewpoint\s\d+°F", weather_soup).group()[9:-2])
+		dewpoint = int(re.search(r"Dewpoint\s\d+°F", weather_soup).group()[9:-2])
 	if data == "vis" or full:
 		vis = re.search("Visibility\n.+", weather_soup).group().replace("Visibility\n","")
 	if data == "conditions":
@@ -371,21 +424,21 @@ def formatted_weather():
 
 
 def uncancel(name):
-	with open("text_files/cancel") as cancel_file:
+	with open("main_folder/text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
 	name += "\n"
 	if name in cancels:
 		cancels.remove(name)
 	else:
 		return
-	with open("text_files/cancel", "w") as cancel_file:
+	with open("main_folder/text_files/cancel", "w") as cancel_file:
 		cancel_file.writelines(cancels)
 
 
 def get_quote(scan=False):
-	with open("text_files/used_quotes") as used_quotes_file:
+	with open("main_folder/text_files/used_quotes") as used_quotes_file:
 		used_quotes = (used_quotes_file.readlines())
-	with open("text_files/quotes") as quotes_file:
+	with open("main_folder/text_files/quotes") as quotes_file:
 		quote_list = list(set(quotes_file.readlines()))
 	if "" in quote_list:
 		quote_list.remove("")
@@ -407,9 +460,9 @@ def get_quote(scan=False):
 		if i in quote_list:
 			quote_list.remove(i)
 	random.shuffle(quote_list)
-	with open("text_files/quotes", "w") as quotes_file:
+	with open("main_folder/text_files/quotes", "w") as quotes_file:
 		quotes_file.writelines(quote_list)
-	with open("text_files/used_quotes", "a") as used_quotes_file:
+	with open("main_folder/text_files/used_quotes", "a") as used_quotes_file:
 		used_quotes_file.write(quote)
 	if scan:
 		return message
@@ -417,8 +470,8 @@ def get_quote(scan=False):
 
 
 def daily_funcs():
-	os.remove("text_files/cancel")
-	open("text_files/cancel", "x")
+	os.remove("main_folder/text_files/cancel")
+	open("main_folder/text_files/cancel", "x")
 
 
 def num_suffix(num):
@@ -441,14 +494,14 @@ def type_checker(var, assumed_type=None):
 
 
 def event_loop():
-	event_id = random.randint(0, 10000000000)
-	with open("text_files/event_id", "w") as event_id_file:
+	event_id = int(time.time())
+	with open("main_folder/text_files/event_id", "w") as event_id_file:
 		event_id_file.write(str(event_id))
 	while True:
 		if int(rn("%M")) % 5 == 0:
-			with open("text_files/event_id") as event_id_file:
+			with open("main_folder/text_files/event_id") as event_id_file:
 				if int(event_id_file.readline()) != event_id:
-					print("duplicate process detected, aborting...")
+					text_me("duplicate process detected, aborting...")
 					break
 		if rn() == "10:30":
 			if log_command("morning"):
@@ -461,21 +514,21 @@ def event_loop():
 				message += f"You move out in {days_until('09/15/2023').days} days\n"
 				message += "Here's today's weather:\n\t"
 				message += formatted_weather().replace("\n", "\n\t")
-				text(message)
-				with open("text_files/errors") as errors:
+				text_me(message)
+				with open("main_folder/text_files/errors") as errors:
 					error_list = list(errors.readlines())
 					if len(error_list) > 100000:
-						text("OVER 100,000 ERRORS, FIX IMMEDIATELY!")
+						text_me("OVER 100,000 ERRORS, FIX IMMEDIATELY!")
 					elif len(error_list) > 10000:
-						text("Over 10,000 errors, fix it soon.")
+						text_me("Over 10,000 errors, fix it soon.")
 					elif len(error_list) > 1000:
-						text("Over 1,000 erros, check it out sometime soon.")
+						text_me("Over 1,000 erros, check it out sometime soon.")
 				time.sleep(60)
 		if rn() == "11:00":
 			if log_command("morning quote"):
 				time.sleep(1)
 			else:
-				text(get_quote())
+				text_me(get_quote())
 				time.sleep(50)
 		elif rn("%H") in "0103": # daily operations
 			daily_funcs()
@@ -483,4 +536,6 @@ def event_loop():
 
 
 if __name__ == "__main__":
+	bday_famousbirthdays()
+	time.sleep(0.5)
 	app.run(host="0.0.0.0", port=port, debug=True)
