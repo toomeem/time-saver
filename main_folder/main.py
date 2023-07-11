@@ -84,7 +84,7 @@ def hook():
 				return
 			text_me(get_quote(args[0]))
 		elif message == "bday":
-			bday()
+			text_me(bday())
 		elif message == "today":
 			today()
 		elif message == "desc":
@@ -166,75 +166,130 @@ def school():
 def bday_famousbirthdays():
 	if log_command("bday_famousbirthdays"):
 		return
-	try:
-		url = f"https://www.famousbirthdays.com/{rn('%B').lower()}{str(int(rn('%d')))}.html"
-		bday_page = requests.get(url, headers=header)
-		bday_soup = BeautifulSoup(bday_page.content, "html.parser")
-		raw_bday_list = list(
-			filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
-		for i in range(len(raw_bday_list)):
-			try:
-				not_used = int(raw_bday_list[i])
-				raw_bday_list.remove(raw_bday_list[i])
-			except:
-				pass
-		fake_famous = [
-			"TikTok Star", "Reality Star", "Gospel Singer",
-			"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
-			"Family Member", "Dubsmash Star", "Twitch Star", "Stylist",
-			"eSports Player", "Cat", "Dog"
-		]
-		fake_famous_conditional = [["Model", range(21, 999)]]
-		bday_list = []
-		name = None
-		age = None
-		occupation = None
-		for i in range(len(raw_bday_list)):
-			if i % 2 == 0:
-				if raw_bday_list[i].count(",") > 1:
-					name = ",".join(raw_bday_list[i].split(",")[:-1])
-					age = raw_bday_list[i].split(",")[-1][1:]
-				elif raw_bday_list[i].count(",") == 1:
-					name = raw_bday_list[i].split(",")[0]
-					age = raw_bday_list[i].split(",")[-1][1:]
-				else:
-					name = raw_bday_list[i].split("(")[0]
-					age = "(" + raw_bday_list[i].split("(")[-1]
-				occupation = raw_bday_list[i+1]
-				bday_list.append(tuple([name[1:], age, occupation]))
-		refined_bday_list = []
-		for i in range(len(bday_list)):
-			makes_list = False
-			if "(" in bday_list[i][1] and ")" in bday_list[i][1]:
-				makes_list = True
-			if not bday_list[i][2] in fake_famous:
-				makes_list = True
-			for j in fake_famous_conditional:
-				if bday_list[i][2] == j[0]:
-					if int(bday_list[i][1]) in j[1]:
-						makes_list = True
-					else:
-						makes_list = False
-			if makes_list:
-				refined_bday_list.append(bday_list[i])
-		return refined_bday_list
-	except Exception as e:
-		print("error")
-		print(e)
-		return "error"
-
-def bday_brainyquote():
-	if log_command("bday"):
-		return
-	url = "https://www.brainyquote.com/"
+	month = rn("%B").lower()
+	day = str(int(rn("%d")))
+	url = f"https://www.famousbirthdays.com/{month}{day}.html"
 	bday_page = requests.get(url, headers=header)
 	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
+	raw_bday_list = list(
+		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
+	for i in range(len(raw_bday_list)):
+		try:
+			not_used = int(raw_bday_list[i])
+			raw_bday_list.remove(raw_bday_list[i])
+		except:
+			pass
+	fake_famous = [
+		"TikTok Star", "Reality Star", "Gospel Singer",
+		"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
+		"Family Member", "Dubsmash Star", "Twitch Star", "Stylist",
+		"eSports Player", "Cat", "Dog", "Rugby Player", "Soap Opera Actress",
+		"World Music Singer"
+	]
+	bday_list = []
+	name = None
+	birth = None
+	death = None
+	job = None
+	for i in range(len(raw_bday_list)):
+		if i % 2 == 0:
+			if raw_bday_list[i].count(",") > 1:
+				name = ",".join(raw_bday_list[i].split(",")[:-1])
+				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
+				death = "?"
+				if int(rn("%Y")) - birth < 18:
+					continue
+			elif raw_bday_list[i].count(",") == 1:
+				name = raw_bday_list[i].split(",")[0]
+				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
+				death = "?"
+				if int(rn("%Y")) - birth < 18:
+					continue
+			else:
+				name = raw_bday_list[i].split("(")[0]
+				birth = int(raw_bday_list[i].split("(")[-1].split("-")[0])
+				death = int(raw_bday_list[i].split("(")[-1].replace(")", "").split("-")[-1])
+			job = raw_bday_list[i+1]
+			bday_list.append({"name":name.strip().replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"famousbirthdays"})
+	final_bday_list = []
+	for i in range(len(bday_list)):
+		makes_list = False
+		if bday_list[i]["death"] != "?":
+			makes_list = True
+		if not bday_list[i]["job"] in fake_famous:
+			makes_list = True
+		if makes_list:
+			final_bday_list.append(bday_list[i])
+	return final_bday_list
+
 
 def bday_ducksters():
-	pass
+	month = rn('%B').lower()
+	day = str(int(rn('%d')))
+	url = f"https://www.ducksters.com/history/{month}birthdays.php?day={day}"
+	bday_page = requests.get(url, headers=header)
+	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
+	bday_text = ("".join(bday_soup.get_text().split("Birthdays: \n")[1])).split("Archive:\n")[0].split("\xa0")
+	for i in range(bday_text.count("")):
+		bday_text.remove("")
+	for i in range(len(bday_text)):
+		bday_text[i] = bday_text[i].replace("\n", "")
+	bday_list = []
+	name = bday_text[1].split("(")[0].strip()
+	birth = int(bday_text[0].strip())
+	death = "?"
+	job = bday_text[1].split("(")[-1].split(")")[0].strip()
+	bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
+	for i in range(2, len(bday_text)):
+		name = bday_text[i].split("(")[0].strip()
+		birth = int(bday_text[i-1].split(")")[-1].strip())
+		death = "?"
+		job = bday_text[i].split("(")[-1].split(")")[0].strip()
+		bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
+	return(bday_list)
+
 
 def bday():
-	pass
+	big_list = bday_famousbirthdays() + bday_ducksters()
+	merged_list = []
+	for i in big_list:
+		if merged_list == []:
+			merged_list.append(i)
+			continue
+		in_list = False
+		for k in merged_list:
+			if i["name"] == k["name"]:
+				in_list = True
+				if i["death"] != "?" and k["death"] == "?":
+					k["death"] = i["death"]
+				if k["source"] == "famousbirthdays":
+					k["source"] = "both"
+					k["job"] = i["job"]
+		if not in_list:
+			merged_list.append(i)
+	top_ten = []
+	for i in merged_list:
+		if i["source"] == "both":
+			top_ten.append(i)
+	if len(top_ten) < 10:
+		for i in merged_list:
+			if i["source"] == "ducksters":
+				top_ten.append(i)
+	births = []
+	if len(top_ten) < 10:
+		for i in merged_list:
+			if i["source"] == "famousbirthdays":
+				births.append(i["birth"])
+	births.sort()
+	births = births[:10-len(top_ten)]
+	for i in births:
+		for k in merged_list:
+			if k["birth"] == i:
+				top_ten.append(k)
+	message = ["Famous Birthdays Today:"]
+	for i in top_ten:
+		message.append(f"{i['name']}({i['birth']}-{i['death']}): {i['job']}")
+	return "\n".join(message)
 
 def today():
 	if log_command("today"):
@@ -487,12 +542,6 @@ def num_suffix(num):
 	return "th"
 
 
-def type_checker(var, assumed_type=None):
-	if assumed_type == None:
-		return(str(type(var))[8:-2])
-	return assumed_type in str(type(var))
-
-
 def event_loop():
 	event_id = int(time.time())
 	with open("main_folder/text_files/event_id", "w") as event_id_file:
@@ -536,6 +585,5 @@ def event_loop():
 
 
 if __name__ == "__main__":
-	bday_famousbirthdays()
-	time.sleep(0.5)
+	text_me(bday())
 	app.run(host="0.0.0.0", port=port, debug=True)
