@@ -1,9 +1,6 @@
 '''
 all dates are in month/day/year
 
-
-ngrok authtoken
-2M5EGMAKqjQcKZJlslUHSrFWOYn_3e5FMxonCXeFjfZa62Mph
 '''
 
 from flask import Flask, request
@@ -19,24 +16,52 @@ import numpy as np
 from bs4 import BeautifulSoup
 import re
 from twilio.rest import Client
+from dotenv import load_dotenv
+import pandas as pd
+import matplotlib.pyplot as plt
+import sys
+import cloudinary.uploader
+from scipy import stats
+import threading
 
+
+load_dotenv()
 
 app = Flask(__name__)
 port = 5000
-account_sid = "AC9dcfe6b1a8638baaa231fcd0f92d66bc"
-auth_token = "bfb0bd3c5dc7540b8d8d95920f0b47b7"
-client = Client(account_sid, auth_token)
-bot_num = +18444177372
-my_num = +12674361580
+twilio_account_sid = os.getenv("TWILIO_ACCOUNT_SID")
+twilio_auth_token = os.getenv("TWILIO_AUTH_TOKEN")
+client = Client(twilio_account_sid, twilio_auth_token)
+bot_num = os.getenv("TWILIO_PHONE_NUMBER")
+my_num = os.getenv("MY_PHONE_NUMBER")
+cloudinary_cloud_name = os.getenv("CLOUDINARY_CLOUD_NAME")
+cloudinary_api_key = os.getenv("CLOUDINARY_API_KEY")
+cloudinary_api_secret = os.getenv("CLOUDINARY_API_SECRET")
+tz = pytz.timezone("America/New_York")
 start_keyword = "--start--"
-header = {
+request_header = {
 	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
 }
 
+plot_attributes = {
+	"weight": {
+		"grid": "y",
+		"title":"Weight Over Time",
+		"xlabel": "Year",
+		"ylabel": "Weight(lbs)",
+		"filename": "main_folder/weight.png",
+		"show_points": False,
+		"show_moving_avg": True,
+		"show_regression_line": True,
+		"window_size": 7,
+		"bulk_dates":["01/28/2023"],
+		"cut_dates":["06/06/2023"]
+	}
+}
 
-def text_me(body):
+def text_me(body, media_url=None):
 	try:
-		message = client.messages.create(body=body, from_=bot_num, to=my_num)
+		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 	except:
 		pass
 
@@ -44,59 +69,58 @@ def text_me(body):
 @app.route("/", methods=["POST"])
 def hook():
 	message = str(dict(request.values)["Body"])
-	if message == start_keyword:
-			text_me("process started")
-			daily_funcs()
-			event_loop()
+	if " " in message:
+		message = message.split(" ")
 	else:
-		if " " in message:
-			message = message.split(" ")
-		else:
-			message = [message, ""]
-		args = message[1:]
-		message = message[0]
-		if message == "KILL":
-			kill()
-		elif message == "Kill":
-			kill()
-		elif message == "kill":
-			kill()
-		elif message == "alarm":
-			text_me(alarm())
-		elif message == "temp":
-			if log_command("temp"):
-				return
+		message = [message, ""]
+	args = message[1:]
+	message = message[0]
+	if message == "KILL":
+		kill()
+	elif message == "Kill":
+		kill()
+	elif message == "kill":
+		kill()
+	elif message == "alarm":
+		text_me(alarm())
+	elif message == "temp":
+		if not log_command("temp"):
 			text_me(f"{get_weather('temp')}°")
-		elif message == "spam":
-			spam(args)
-		elif message == "weather":
-			if log_command("weather"):
-				return
+	elif message == "spam":
+		spam(args)
+	elif message == "weather":
+		if not log_command("weather"):
 			text_me(formatted_weather())
-		elif message == "quote":
-			if log_command("quote"):
-				return
+	elif message == "quote":
+		if not log_command("quote"):
 			text_me(get_quote())
-		elif message == "school":
-			school()
-		elif message == "scan":
-			if log_command("scan"):
-				return
+	elif message == "school":
+		school()
+	elif message == "scan":
+		if not log_command("scan"):
 			text_me(get_quote(args[0]))
-		elif message == "bday":
-			text_me(bday())
-		elif message == "today":
-			today()
-		elif message == "desc":
-			desc()
-		elif message == "commands":
-			commands()
-		elif message == "clean":
-			clean()
-		elif message == "work":
-			schedule_work(args)
-		else:
-			text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
+	elif message == "bday":
+		text_me(bday())
+	elif message == "today":
+		today()
+	elif message == "desc":
+		desc()
+	elif message == "commands":
+		commands()
+	elif message == "clean":
+		clean()
+	elif message == "work":
+		schedule_work(args)
+	elif message == "weight":
+		text_me(log_weight(args))
+	elif message == "calories":
+		text_me(log_calories(args))
+	elif message == "graph":
+		send_weight_graph()
+	elif message.lower() == "hi":
+		text_me("Hello!")
+	else:
+		text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
 
 
@@ -105,7 +129,7 @@ def kill():
 
 
 def rn(target="%H:%M"):
-	now = datetime.now(pytz.timezone("America/New_York"))
+	now = datetime.now(tz)
 	return now.strftime(target)
 
 
@@ -117,9 +141,9 @@ def log_command(name):
 	return(name in cancels)
 
 
-def days_until(target, start=None):
+def days_until(target, start=None, return_days=False):
 	if log_command("days_until"):
-		return
+		return "error"
 	target = target.split("/")
 	target = date(year=int(target[2]), month=int(target[0]), day=int(target[1]))
 	if start == None:
@@ -128,6 +152,8 @@ def days_until(target, start=None):
 		start = start.split("/")
 		start = date(year=int(start[2]), month=int(start[0]), day=int(start[1]))
 	difference = target - start
+	if return_days:
+		return int(difference.days)
 	return difference
 
 
@@ -156,11 +182,14 @@ def spam(message):
 def school():
 	if log_command("school"):
 		return
-	left = int(days_until("09/15/2023").days)
-	total = int(days_until("09/15/2023", "06/15/2023").days)
-	message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n"
-	message += f"Days till I move out - {left}"
-	text_me(message)
+	try:
+		left = days_until("09/15/2023", return_days=True)
+		total = days_until("09/15/2023", "06/15/2023", return_days=True)
+		message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n" # type: ignore
+		message += f"Days until I move out - {left}"
+		text_me(message)
+	except:
+		text_me("Error")
 
 
 def bday_famousbirthdays():
@@ -169,7 +198,7 @@ def bday_famousbirthdays():
 	month = rn("%B").lower()
 	day = str(int(rn("%d")))
 	url = f"https://www.famousbirthdays.com/{month}{day}.html"
-	bday_page = requests.get(url, headers=header)
+	bday_page = requests.get(url, headers=request_header)
 	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
 	raw_bday_list = list(
 		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
@@ -227,7 +256,7 @@ def bday_ducksters():
 	month = rn('%B').lower()
 	day = str(int(rn('%d')))
 	url = f"https://www.ducksters.com/history/{month}birthdays.php?day={day}"
-	bday_page = requests.get(url, headers=header)
+	bday_page = requests.get(url, headers=request_header)
 	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
 	bday_text = ("".join(bday_soup.get_text().split("Birthdays: \n")[1])).split("Archive:\n")[0].split("\xa0")
 	for i in range(bday_text.count("")):
@@ -250,46 +279,52 @@ def bday_ducksters():
 
 
 def bday():
-	big_list = bday_famousbirthdays() + bday_ducksters()
-	merged_list = []
-	for i in big_list:
-		if merged_list == []:
-			merged_list.append(i)
-			continue
-		in_list = False
-		for k in merged_list:
-			if i["name"] == k["name"]:
-				in_list = True
-				if i["death"] != "?" and k["death"] == "?":
-					k["death"] = i["death"]
-				if k["source"] == "famousbirthdays":
-					k["source"] = "both"
-					k["job"] = i["job"]
-		if not in_list:
-			merged_list.append(i)
-	top_ten = []
-	for i in merged_list:
-		if i["source"] == "both":
-			top_ten.append(i)
-	if len(top_ten) < 10:
+	if log_command("bday"):
+		return "error"
+	try:
+		big_list = bday_famousbirthdays() + bday_ducksters()
+		merged_list = []
+		for i in big_list:
+			if merged_list == []:
+				merged_list.append(i)
+				continue
+			in_list = False
+			for k in merged_list:
+				if i["name"] == k["name"]:
+					in_list = True
+					if i["death"] != "?" and k["death"] == "?":
+						k["death"] = i["death"]
+					if k["source"] == "famousbirthdays":
+						k["source"] = "both"
+						k["job"] = i["job"]
+			if not in_list:
+				merged_list.append(i)
+		top_ten = []
 		for i in merged_list:
-			if i["source"] == "ducksters":
+			if i["source"] == "both":
 				top_ten.append(i)
-	births = []
-	if len(top_ten) < 10:
-		for i in merged_list:
-			if i["source"] == "famousbirthdays":
-				births.append(i["birth"])
-	births.sort()
-	births = births[:10-len(top_ten)]
-	for i in births:
-		for k in merged_list:
-			if k["birth"] == i:
-				top_ten.append(k)
-	message = ["Famous Birthdays Today:"]
-	for i in top_ten:
-		message.append(f"{i['name']}({i['birth']}-{i['death']}): {i['job']}")
-	return "\n".join(message)
+		if len(top_ten) < 10:
+			for i in merged_list:
+				if i["source"] == "ducksters":
+					top_ten.append(i)
+		births = []
+		if len(top_ten) < 10:
+			for i in merged_list:
+				if i["source"] == "famousbirthdays":
+					births.append(i["birth"])
+		births.sort()
+		births = births[:10-len(top_ten)]
+		for i in births:
+			for k in merged_list:
+				if k["birth"] == i:
+					top_ten.append(k)
+		message = ["Famous Birthdays Today:"]
+		for i in top_ten:
+			message.append(f"{i['name']}({i['birth']}-{i['death']}): {i['job']}")
+		return "\n".join(message)
+	except:
+		error_report("bday")
+		return "error"
 
 def today():
 	if log_command("today"):
@@ -298,6 +333,43 @@ def today():
 	suffix = num_suffix(int(rn("%d")[1]))
 	message = rn(f"Today is %A, %b {day_num}{suffix}") + "\n"
 	text_me(message)
+
+def log_weight(pounds):
+	if log_command("log_weight"):
+		return
+	with open("main_folder/text_files/weight", "a") as weight_file:
+		weight_file.write(f"{rn('%m/%d/%Y')}:{pounds[0]}\n")
+	return "Logged"
+
+def send_weight_graph():
+	if log_command("send_weight_graph"):
+		return
+	with open("main_folder/text_files/weight") as f:
+		raw_weights = f.readlines()
+	data = [date_to_num(i).split(":") for i in raw_weights]
+	data = sorted(data)
+	x = [int(i[0]) for i in data]
+	y = [float(i[1]) for i in data]
+	create_graph(x, y, "weight")
+	cloudinary.config(
+		cloud_name= cloudinary_cloud_name,
+		api_key= cloudinary_api_key,
+		api_secret= cloudinary_api_secret
+	)
+	graph_url = cloudinary.uploader.upload(
+		"main_folder/weight.png",
+		public_id="weight_graph",
+		overwrite=True)["secure_url"]
+	text_me("Here is your weight graph", graph_url)
+	os.remove("main_folder/weight.png")
+
+
+def log_calories(cals):
+	if log_command("log_calories"):
+		return
+	with open("main_folder/text_files/calories", "a") as calories_file:
+		calories_file.write(f"{rn('%m/%d/%Y')}:{cals[0]}\n")
+	return "Logged"
 
 
 def desc():
@@ -399,82 +471,86 @@ def error_report(name):
 
 
 def get_weather(data="full"):
-	weather_page = requests.get(
-		"https://forecast.weather.gov/MapClick.php?lat=40.2549&lon=-75.2429#.YXWhSOvMK02")
-	weather_soup = BeautifulSoup(weather_page.content, "html.parser")
-	if "Not a current observation" in str(weather_soup):
-		error_report("weather")
+	try:
+		weather_page = requests.get(
+			"https://forecast.weather.gov/MapClick.php?lat=40.2549&lon=-75.2429#.YXWhSOvMK02")
+		weather_soup = BeautifulSoup(weather_page.content, "html.parser")
+		if "Not a current observation" in str(weather_soup):
+			error_report("weather")
+			return "error"
+		full = data == "full"
+		if data == "conditions" or full:
+			weather_conditions = re.search("\">.+</p", str(weather_soup)).group()[2:-3]
+		weather_soup = str(weather_soup.get_text())
+		if data == "temp" or full:
+			try:
+				temp = int(re.search(r"Wind Chill*\d+°F", weather_soup).group()[10:-2])
+			except:
+				temp = int(np.round(float(re.search(r"\d+°F", weather_soup).group()[:-2]),0))
+		if data == "humidity" or full:
+			humidity = int(re.search(r"\d+%", weather_soup).group()[:-1])
+		if data == "wind_speed" or full:
+			wind_speed = int(re.search(r"\d+\smph", weather_soup).group()[:-4])
+			if ("Calm" in weather_soup) and (" Calm" not in weather_soup):
+				wind_speed = 0
+		if data == "dewpoint" or full:
+			dewpoint = int(re.search(r"Dewpoint\s\d+°F", weather_soup).group()[9:-2])
+		if data == "vis" or full:
+			vis = re.search("Visibility\n.+", weather_soup).group().replace("Visibility\n","")
+		if data == "conditions":
+			return weather_conditions
+		elif data == "temp":
+			return temp
+		elif data == "humidity":
+			return humidity
+		elif data == "wind_speed":
+			return wind_speed
+		elif data == "dewpoint":
+			return dewpoint
+		elif data == "vis":
+			return vis
+		weather_data = {"conditions":weather_conditions,"temp":temp,"humidity":humidity,
+									"wind_speed": wind_speed, "dewpoint":dewpoint,"vis":vis}
+		return weather_data
+	except:
+		error_report("get_weather")
 		return "error"
-	full = data == "full"
-	if data == "conditions" or full:
-		conditions = re.search("\">.+</p", str(weather_soup)).group()[2:-3]
-	weather_soup = str(weather_soup.get_text())
-	if data == "temp" or full:
-		try:
-			temp = int(re.search(r"Wind Chill*\d+°F", weather_soup).group()[10:-2])
-		except:
-			temp = int(np.round(float(re.search(r"\d+°F", weather_soup).group()[:-2]),0))
-	if data == "humidity" or full:
-		humidity = int(re.search(r"\d+%", weather_soup).group()[:-1])
-	if data == "wind_speed" or full:
-		wind_speed = int(re.search(r"\d+\smph", weather_soup).group()[:-4])
-		if ("Calm" in weather_soup) and (" Calm" not in weather_soup):
-			wind_speed = 0
-	if data == "dewpoint" or full:
-		dewpoint = int(re.search(r"Dewpoint\s\d+°F", weather_soup).group()[9:-2])
-	if data == "vis" or full:
-		vis = re.search("Visibility\n.+", weather_soup).group().replace("Visibility\n","")
-	if data == "conditions":
-		return conditions
-	elif data == "temp":
-		return temp
-	elif data == "humidity":
-		return humidity
-	elif data == "wind_speed":
-		return wind_speed
-	elif data == "dewpoint":
-		return dewpoint
-	elif data == "vis":
-		return vis
-	weather_data = {"conditions":conditions,"temp":temp,"humidity":humidity,
-								"wind_speed": wind_speed, "dewpoint":dewpoint,"vis":vis}
-	return weather_data
-
 
 def formatted_weather():
 	weather = get_weather()
 	try:
-		conditions = weather["conditions"]
-		temp = weather["temp"]
-		humidity = weather["humidity"]
-		wind_speed = weather["wind_speed"]
-		dewpoint = weather["dewpoint"]
+		conditions = weather["conditions"] # type: ignore
+		temp = weather["temp"] # type: ignore
+		humidity = weather["humidity"] # type: ignore
+		wind_speed = weather["wind_speed"] # type: ignore
+		dewpoint = weather["dewpoint"] # type: ignore
 	except:
 		error_report("formatted_weather")
+		return "error"
 	message = ""
 	message += f"Temperature - {temp}°\n"
 	message += f"Conditions - {conditions}\n"
-	if 62 <dewpoint<69:
+	if 62 <dewpoint<69: # type: ignore
 		message += "Humidity - Above Average\n"
-	elif 69<=dewpoint:
+	elif 69<=dewpoint: # type: ignore
 		message += "Humidity - High\n"
-	elif humidity<=30:
+	elif humidity<=30: # type: ignore
 		message += "Humidity - Very Low\n"
-	elif humidity<=45:
+	elif humidity<=45: # type: ignore
 		message += "Humidity - Low\n"
 	else:
 		message += "Humidity - Average\n"
-	if wind_speed>=25:
+	if wind_speed>=25: # type: ignore
 		message += "Wind Speed - Extremely High\n"
-	elif 17<=wind_speed<25:
+	elif 17<=wind_speed<25: # type: ignore
 		message += "Wind Speed - Very High\n"
-	elif 10<=wind_speed<17:
+	elif 10<=wind_speed<17: # type: ignore
 		message += "Wind Speed - Windy\n"
-	elif 5<=wind_speed<10:
+	elif 5<=wind_speed<10: # type: ignore
 		message += "Wind Speed - Light Breeze\n"
 	else:
 		message += "Wind Speed - Negligible\n"
-	message += f"Visibility - {weather['vis'].replace('10.00', '10')}"
+	message += f"Visibility - {weather['vis'].replace('10.00', '10')}" # type: ignore
 	return message.replace("Fog/Mist", "Foggy")
 
 
@@ -490,18 +566,18 @@ def uncancel(name):
 		cancel_file.writelines(cancels)
 
 
-def get_quote(scan=False):
+def get_quote(scan=None):
 	with open("main_folder/text_files/used_quotes") as used_quotes_file:
 		used_quotes = (used_quotes_file.readlines())
 	with open("main_folder/text_files/quotes") as quotes_file:
 		quote_list = list(set(quotes_file.readlines()))
 	if "" in quote_list:
 		quote_list.remove("")
-	if not scan:
+	message = ""
+	if scan == None:
 		quote = quote_list[0]
 	else:
 		keyword_quotes = [i for i in quote_list if scan in i]
-		message = ""
 		message += f"Total Number of Quotes: {len(quote_list)}\n"
 		message += f"Number of Matching Quotes: {len(keyword_quotes)}\n"
 		if len(keyword_quotes) == 0:
@@ -522,6 +598,53 @@ def get_quote(scan=False):
 	if scan:
 		return message
 	return quote
+
+def date_to_num(date):
+	weight = date.split(":")[1]
+	date = date.split(":")[0].split("/")
+	date = str(int(date[0])*30 + int(date[1]) + int(date[2])*365)
+	return date + ":" + weight
+
+def moving_avg(data, window):
+	avg = []
+	for i in range(window, len(data)):
+		avg.append(np.mean(data[i-window:i]))
+	for i in range(window):
+		avg.insert(0, avg[0])
+	return avg
+
+def create_graph(x, y, data_type):
+	show_points = plot_attributes[data_type]["show_points"]
+	show_regression_line = plot_attributes[data_type]["show_regression_line"]
+	show_moving_avg = plot_attributes[data_type]["show_moving_avg"]
+	window = plot_attributes[data_type]["window_size"]
+	if show_points:
+		plt.scatter(x, y)
+	if show_moving_avg:
+		avg = moving_avg(y, window)
+		plt.plot(x, avg)
+	if show_regression_line:
+		slope, intercept, r, p, std_err = stats.linregress(x, y)
+		def slope_func(x):
+			return slope * x + intercept
+		regression_line = list(map(slope_func, x))
+		plt.plot(x, regression_line)
+	year_position, year = [], []
+	for i in range(int(rn("%y"))-21+1):
+		year_position.append((i+2021)*365)
+		year.append(str(i+21))
+	while min(x) > year_position[1]:
+		year_position.pop(0)
+		year.pop(0)
+	while max(x) < year_position[-1]:
+		year_position.pop(-1)
+		year.pop(-1)
+	plt.grid(axis=plot_attributes[data_type]["grid"])
+	plt.xticks(year_position, year)
+	plt.title(plot_attributes[data_type]["title"])
+	plt.xlabel(plot_attributes[data_type]["xlabel"])
+	plt.ylabel(plot_attributes[data_type]["ylabel"])
+	plt.savefig(plot_attributes[data_type]["filename"], dpi=1000)
 
 
 def daily_funcs():
@@ -550,7 +673,7 @@ def event_loop():
 		if int(rn("%M")) % 5 == 0:
 			with open("main_folder/text_files/event_id") as event_id_file:
 				if int(event_id_file.readline()) != event_id:
-					text_me("duplicate process detected, aborting...")
+					print("duplicate process detected, aborting...")
 					break
 		if rn() == "10:30":
 			if log_command("morning"):
@@ -560,7 +683,7 @@ def event_loop():
 				day_num = int(rn("%d"))
 				suffix = num_suffix(int(rn("%d")[1]))
 				message += f"Today is {rn(f'%A, %B {day_num}{suffix}')}\n"
-				message += f"You move out in {days_until('09/15/2023').days} days\n"
+				message += f"You move out in {days_until('09/15/2023', return_days=True)} days\n"
 				message += "Here's today's weather:\n\t"
 				message += formatted_weather().replace("\n", "\n\t")
 				text_me(message)
@@ -579,11 +702,11 @@ def event_loop():
 			else:
 				text_me(get_quote())
 				time.sleep(50)
-		elif rn("%H") in "0103": # daily operations
+		if rn() == "06:00": # daily operations
 			daily_funcs()
 		time.sleep(5)
 
+threading.Thread(target=event_loop).start()
 
 if __name__ == "__main__":
-	text_me(bday())
 	app.run(host="0.0.0.0", port=port, debug=True)
