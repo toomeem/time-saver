@@ -89,6 +89,11 @@ def text_me(body, media_url=None):
 @app.route("/", methods=["POST"])
 def hook():
 	message = dict(request.values)["Body"]
+	if message.lower().strip() == "kill":
+		kill()
+	if in_conversation():
+		log_response(message)
+		return "200"
 	if " " in message:
 		message = message.split(" ")
 		args = message[1:]
@@ -128,10 +133,9 @@ def hook():
 			commands()
 		case "clean":
 			clean()
-		case "work":
-			schedule_work(args)
 		case "weight":
-			text_me(log_weight(args))
+			log_weight(args[0])
+			text_me("Logged")
 		case "calories":
 			text_me(log_calories(args))
 		case "weight_graph":
@@ -161,8 +165,8 @@ def hook():
 	return "200"
 
 def kill():
-	os._exit(0)
-
+	log = log_command("kill")
+	os.abort()
 
 def rn(target="%H:%M"):
 	now = datetime.now(tz)
@@ -410,8 +414,7 @@ def log_weight(pounds):
 	if log_command("log_weight"):
 		return
 	with open("text_files/weight", "a") as weight_file:
-		weight_file.write(f'''{rn("%m/%d/%Y")}:{pounds[0]}\n''')
-	return "Logged"
+		weight_file.write(f'''{rn("%m/%d/%Y")}:{pounds}\n''')
 
 def send_weight_graph(plot_attributes):
 	if log_command("send_weight_graph"):
@@ -670,12 +673,64 @@ def commands():
 
 
 
+def log_response(response):
+	log_message(response, "evan")
+	if log_command("log_response"):
+		return
+	with open("text_files/response", "w") as message_file:
+		message_file.write(response)
+
+def clear_response():
+	if log_command("clear_response"):
+		return
+	with open("text_files/response", "w") as message_file:
+		message_file.write("")
+
+def get_response():
+	if log_command("get_response"):
+		return
+	start = time.time()
+	while True:
+		with open("text_files/response") as message_file:
+			response = message_file.read().strip()
+		if response != "":
+			return response
+		if time.time() - start > 300:
+			text_me("nvm")
+			return None
+		time.sleep(.2)
+
+def get_weight():
+	if log_command("get_weight"):
+		return
+	text_me("What is your weight?")
+	set_in_conversation(True)
+	response = get_response()
+	set_in_conversation(False)
+	clear_response()
+	if response is None:
+		return
+	log_weight(response)
+	text_me("Got it")
+
+def set_in_conversation(is_in_conversation):
+	if log_command("set_in_conversation"):
+		return
+	with open("text_files/in_conversation", "w") as message_file:
+		message_file.write(str(is_in_conversation))
+
+def in_conversation():
+	if log_command("in_conversation"):
+		return
+	with open("text_files/in_conversation") as message_file:
+		conversation_bool = message_file.read().strip() == "True"
+	return conversation_bool
+
 def log_message(message, sender):
+	if log_command("log_message"):
+		return
 	with open("text_files/conversation_log", "a") as message_file:
 		message_file.write(f"{sender}: {message}\n")
-
-def schedule_work(work):
-	pass
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")
@@ -697,7 +752,6 @@ def error_report(name):
 	else:
 		with open("text_files/errors", "a") as error_list:
 			error_list.write(f"{name}:{time_stamp}\n")
-
 
 def get_weather(data="full"):
 	try:
@@ -877,12 +931,10 @@ def create_graph(x, y, data_type, plot_attributes):
 
 # start of spotify functions
 
-
 def iterations(length, max_request=50):
 	if length % max_request == 0:
 		return int((length/50)-1)
 	return int(str(length/50).split(".")[0])
-
 
 def format_song_name(song_name):
 	song_name = song_name.split(" (")[0]
@@ -893,13 +945,11 @@ def format_song_name(song_name):
 		song_name = song_name[:-1]
 	return song_name
 
-
 def format_artist(artist_dict):
 	del artist_dict["external_urls"]
 	del artist_dict["href"]
 	del artist_dict["uri"]
 	return artist_dict
-
 
 def format_track(song):
 	if "added_at" in song.keys():
@@ -932,7 +982,6 @@ def format_track(song):
 	song["artist_num"] = len(song["artists"])
 	return song
 
-
 def format_podcast(podcast):
 	if "added_at" in podcast.keys():
 		added = podcast["added_at"]
@@ -952,7 +1001,6 @@ def format_podcast(podcast):
 	podcast["show"] = format_podcast_show(podcast["show"])
 	return podcast
 
-
 def format_podcast_show(show):
 	del show["available_markets"]
 	del show["copyrights"]
@@ -964,7 +1012,6 @@ def format_podcast_show(show):
 	del show["languages"]
 	del show["uri"]
 	return show
-
 
 def get_all_songs(spotify_client):
 	raw_data = dict(spotify_client.current_user_saved_tracks(
@@ -978,7 +1025,6 @@ def get_all_songs(spotify_client):
 		data_list.extend([format_track(i) for i in raw_data["items"]])
 	with open("text_files/tracks.json", "w") as data_file:
 		json.dump({"data": data_list}, data_file)
-
 
 def get_genres(spotify_client):
 	with open("text_files/tracks.json") as data_file:
@@ -997,7 +1043,6 @@ def get_genres(spotify_client):
 	with open("text_files/genres.json", "w") as data_file:
 		json.dump(genre_dict, data_file)
 
-
 def podcasts(sp):
 	max_podcast_request = True
 	podcasts = []
@@ -1011,12 +1056,10 @@ def podcasts(sp):
 	with open("text_files/podcasts.json", "w") as podcast_file:
 		json.dump(podcasts, podcast_file)
 
-
 def read_spotify_data():
 	with open("text_files/tracks.json") as data_file:
 		data = list(json.load(data_file)["data"])
 	return data, len(data)
-
 
 def duration_graph_organization(data, bars_per_graph):
 	maxes, durations = [], []
@@ -1040,7 +1083,6 @@ def duration_graph_organization(data, bars_per_graph):
 	shortest = round(int(list(shortest.keys())[0])/1000)
 	return maxes, avg_track, longest, shortest
 
-
 def get_artist_info(data):
 	artist_dict = {}
 	for i in data:
@@ -1050,7 +1092,6 @@ def get_artist_info(data):
 			else:
 				artist_dict.update({artist["name"]: 1})
 	return artist_dict, len(artist_dict)
-
 
 def find_popular(artist_dict, artists_per_graph):
 	values_list = list(artist_dict.values())
@@ -1075,7 +1116,6 @@ def find_popular(artist_dict, artists_per_graph):
 				done = True
 	return most_popular, uses
 
-
 def get_explicits(data):
 	explicits = {"Explicit": 0, "Clean": 0, "Unknown": 0}
 	for item in data:
@@ -1088,7 +1128,6 @@ def get_explicits(data):
 	if explicits["Unknown"] == 0:
 		del explicits["Unknown"]
 	return explicits
-
 
 def genre_data_organization(genres_per_graph=20, genre_num_only=False):
 	with open("text_files/genres.json") as data_file:
@@ -1114,12 +1153,10 @@ def genre_data_organization(genres_per_graph=20, genre_num_only=False):
 			break
 	return most_popular, uses, len(data)
 
-
 def covers(data):
 	names = [i["formatted_name"] for i in data]
 	copies = list(set([i for i in names if list(names).count(i) > 1]))
 	return len(copies)
-
 
 def release_date_data(data, range_only=False):
 	yrs = [int(i["album"]["release_date"][:4]) for i in data]
@@ -1138,24 +1175,20 @@ def release_date_data(data, range_only=False):
 	popularity = dict(sorted(popularity.items(), key=lambda item: item[0]))
 	return list(popularity.keys()), list(popularity.values()), last-first
 
-
 def auto_pct(pct, allvalues):
 	absolute = int(pct / 100.*np.sum(allvalues))
 	return "{:.1f}%\n({:d})".format(pct, absolute)
-
 
 def get_podcast_data():
 	with open("text_files/podcasts.json") as data_file:
 		data = json.load(data_file)
 	return data
 
-
 def get_podcast_duration(data):
 	total = 0
 	for i in data:
 		total += i["duration_ms"]
 	return total
-
 
 def get_show_frequency(data):
 	shows = []
@@ -1165,7 +1198,6 @@ def get_show_frequency(data):
 	for i in shows:
 		show_dict.update({i: shows.count(i)})
 	return show_dict
-
 
 def get_show_durations(data):
 	show_dict = {}
@@ -1204,12 +1236,15 @@ def event_loop():
 	with open("text_files/event_id", "w") as event_id_file:
 		event_id_file.write(str(event_id))
 	while True:
-		if int(rn("%M")) % 5 == 0:
+		if int(rn("%S")) % 10 == 0:
 			with open("text_files/event_id") as event_id_file:
 				if int(event_id_file.readline()) != event_id:
 					print("duplicate process detected, aborting...")
 					break
-		if rn() == "10:30":
+		if rn() == "16:00":
+			get_weight()
+			time.sleep(60)
+		if rn() == "09:30":
 			if log_command("morning"):
 				time.sleep(60)
 			else:
@@ -1230,7 +1265,7 @@ def event_loop():
 					elif len(error_list) > 1000:
 						text_me("Over 1,000 erros, check it out sometime soon.")
 				time.sleep(60)
-		if rn() == "11:00":
+		if rn() == "11:01":
 			if log_command("morning quote"):
 				time.sleep(10)
 			else:
@@ -1242,6 +1277,8 @@ def event_loop():
 
 
 if __name__ == "__main__":
+	clear_response()
+	set_in_conversation(False)
 	threading.Thread(target=event_loop).start()
-	# threading.Thread(target=update_spotify_data).start()
+	threading.Thread(target=update_spotify_data).start()
 	app.run(host="0.0.0.0", port=port, debug=True)
