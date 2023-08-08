@@ -81,6 +81,7 @@ plot_attributes = {
 def text_me(body, media_url=None):
 	try:
 		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
+		log_message(body, "script")
 	except:
 		pass
 
@@ -95,6 +96,7 @@ def hook():
 	else:
 		args = []
 		message = message.lower()
+	log_message(message, "evan")
 	match message:
 		case "kill":
 			kill()
@@ -620,8 +622,6 @@ def send_podcast_runtime_graph():
 	text_me("Here are the podcasts you listen to.", graph_url)
 	os.remove("podcast_runtime_graph.png")
 
-
-
 def desc():
 	if log_command("desc"):
 		return
@@ -670,9 +670,12 @@ def commands():
 
 
 
+def log_message(message, sender):
+	with open("text_files/conversation_log", "a") as message_file:
+		message_file.write(f"{sender}: {message}\n")
+
 def schedule_work(work):
 	pass
-
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")

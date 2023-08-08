@@ -2008,3 +2008,4 @@ send_podcast_runtime_graph
 send_covers_graph
 send_covers_graph
 send_covers_graph
+send_artist_graph
