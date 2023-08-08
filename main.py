@@ -132,14 +132,28 @@ def hook():
 			text_me(log_weight(args))
 		case "calories":
 			text_me(log_calories(args))
-		case "graph":
+		case "weight_graph":
 			send_weight_graph(plot_attributes)
 		case "hi":
 			text_me("Hello!")
-		case "spotify_description":
-			text_me(spotify_data_description())
+		case "spotify":
+			spotify_data_description()
 		case "artists":
 			send_artist_graph()
+		case "durations":
+			send_song_duration_graph()
+		case "genres":
+			send_genre_graph()
+		case "explicit":
+			send_explicit_graph()
+		case "covers":
+			send_covers_graph()
+		case "decades":
+			send_decade_graph()
+		case "episodes":
+			send_episode_graph()
+		case "runtimes":
+			send_podcast_runtime_graph()
 		case _:
 			text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -354,6 +368,42 @@ def today():
 	message = rn(f"Today is %A, %b {day_num}{suffix}") + "\n"
 	text_me(message)
 
+def clean():
+	if log_command("clean"):
+		return
+	daily_funcs()
+	with open("text_files/quotes") as quotes_file:
+		quotes = list(set(quotes_file.readlines()))
+	with open("text_files/used_quotes") as used_quotes_file:
+		used_quotes = list(set(used_quotes_file.readlines()))
+	for i in quotes:
+		if i in used_quotes:
+			quotes.remove(i)
+			used_quotes.append(i)
+	quote_fix = False
+	used_fix = False
+	with open("text_files/quotes") as quotes_file:
+		if quotes != quotes_file.readlines():
+			quote_fix = True
+	with open("text_files/used_quotes") as used_quotes_file:
+		if used_quotes != used_quotes_file.readlines():
+			used_fix = True
+	if quote_fix:
+		with open("text_files/quotes", "w") as quotes_file:
+			quotes_file.writelines(quotes)
+	if used_fix:
+		with open("text_files/used_quotes", "w") as used_quotes_file:
+			used_quotes_file.writelines(used_quotes)
+	with open("text_files/alarm") as alarm_file:
+		alarm_bool = alarm_file.readline()
+		try:
+			x = int(alarm_bool)
+		except:
+			text_me("error in alarm file")
+			error_report("alarm_file")
+	update_spotify_data()
+	text_me("All Clean!")
+
 def log_weight(pounds):
 	if log_command("log_weight"):
 		return
@@ -422,7 +472,8 @@ def spotify_data_description():
 		f"You have {len(podcast_data)} saved podcast episodes that are collectively {podcast_hours} hours long.",
 		f"Those episodes are from {len(shows.keys())} different shows."
 		]
-	return "\n".join(message)
+	text_me("\n".join(message))
+	update_spotify_data()
 
 def send_artist_graph():
 	if log_command("send_artist_graph"):
@@ -440,8 +491,135 @@ def send_artist_graph():
 		"artist_graph.png",
 		public_id="artist_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here are your top artists", graph_url)
+	text_me("Here are your top artists.", graph_url)
 	os.remove("artist_graph.png")
+
+def send_song_duration_graph():
+	if log_command("send_song_duration_graph"):
+		return
+	data, track_num = read_spotify_data()
+	durations, avg_track_len, longest, shortest = duration_graph_organization(
+		data, 20)
+	duration_names = [list(i.values())[0] for i in durations][::-1]
+	duration_values = [list(i.keys())[0]/(60*1000) for i in durations][::-1]
+	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
+	plt.yticks(fontsize=8)
+	plt.title("Longest Songs")
+	plt.xlabel("Song Duration (minutes)")
+	plt.barh(duration_names, duration_values)
+	plt.savefig("song_duration_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"song_duration_graph.png",
+		public_id="song_duration_graph",
+		overwrite=True)["secure_url"]
+	text_me("Here are your longest songs.", graph_url)
+	os.remove("song_duration_graph.png")
+
+def send_genre_graph():
+	if log_command("send_genre_graph"):
+		return
+	data, track_num = read_spotify_data()
+	popular_genres, genres_uses, genre_num = genre_data_organization(20)
+	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
+	plt.yticks(fontsize=8)
+	plt.title("Most Popular Genres")
+	plt.xlabel("Number of Liked Genres")
+	plt.barh(popular_genres[::-1], genres_uses[::-1])
+	plt.savefig("genre_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"genre_graph.png",
+		public_id="genre_graph",
+		overwrite=True)["secure_url"]
+	text_me("Here are your top genres.", graph_url)
+	os.remove("genre_graph.png")
+
+def send_explicit_graph():
+	if log_command("send_explicit_graph"):
+		return
+	data, track_num = read_spotify_data()
+	explicits = get_explicits(data)
+	plt.figure(figsize=(10, 10), dpi=dpi)
+	plt.title("Number of Explicit Songs(Aproximate)", pad=40)
+	plt.pie(x=explicits.values(), labels=list(explicits.keys()), radius=1.3,
+					autopct=lambda pct: auto_pct(pct, list(explicits.values())),)
+	plt.savefig("explicit_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"explicit_graph.png",
+		public_id="explicit_graph",
+		overwrite=True)["secure_url"]
+	text_me("Here is the ratio of explicit songs in your library.", graph_url)
+	os.remove("explicit_graph.png")
+
+def send_covers_graph():
+	if log_command("send_covers_graph"):
+		return
+	data, track_num = read_spotify_data()
+	cover_num = covers(data)
+	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
+	plt.title("Number of Covers (Aproximate)")
+	plt.pie(x=[len(data)-cover_num, cover_num], labels=["Original Songs", "Covers"], pctdistance=.85,
+					autopct=lambda pct: auto_pct(pct, [len(data)-cover_num, cover_num]))
+	plt.savefig("covers_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"covers_graph.png",
+		public_id="covers_graph",
+		overwrite=True)["secure_url"]
+	text_me("Here is the ratio of covers in your library.", graph_url)
+	os.remove("covers_graph.png")
+
+def send_decade_graph():
+	if log_command("send_decade_graph"):
+		return
+	data, track_num = read_spotify_data()
+	release_decades, release_nums, release_range = release_date_data(data)
+	plt.figure(figsize=(10, 10), dpi=dpi)
+	plt.title("Songs from Each Decade", pad=40, fontdict={'fontsize': 20})
+	plt.pie(x=release_nums, labels=release_decades, autopct=lambda pct: auto_pct(pct, release_nums),
+					pctdistance=.85, labeldistance=1.05)
+	plt.savefig("decade_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"decade_graph.png",
+		public_id="decade_graph",
+		overwrite=True)["secure_url"]
+	text_me("Here are the decades your songs were released in.", graph_url)
+	os.remove("decade_graph.png")
+
+def send_episode_graph():
+	if log_command("send_episode_graph"):
+		return
+	data, track_num = read_spotify_data()
+	podcast_data = get_podcast_data()
+	shows = get_show_frequency(podcast_data)
+	plt.figure(figsize=(10, 10), dpi=dpi)
+	plt.title(f"Number of Episodes (total {sum(shows.values())})")
+	plt.pie(x=shows.values(), labels=list(shows.keys()),
+					autopct=lambda pct: auto_pct(pct, list(shows.values())))
+	plt.savefig("episode_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"episode_graph.png",
+		public_id="episode_graph",
+		overwrite=True)["secure_url"]
+	text_me("Here are the podcasts you listen to.", graph_url)
+	os.remove("episode_graph.png")
+
+def send_podcast_runtime_graph():
+	if log_command("send_podcast_runtime_graph"):
+		return
+	data, track_num = read_spotify_data()
+	podcast_data = get_podcast_data()
+	show_duration_dict = get_show_durations(podcast_data)
+	plt.figure(figsize=(10, 10), dpi=dpi)
+	plt.title("Runtime (minutes)")
+	plt.pie(x=show_duration_dict.values(), labels=list(show_duration_dict.keys()),
+					autopct=lambda pct: auto_pct(pct, list(show_duration_dict.values())))
+	plt.savefig("podcast_runtime_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"podcast_runtime_graph.png",
+		public_id="podcast_runtime_graph",
+		overwrite=True)["secure_url"]
+	text_me("Here are the podcasts you listen to.", graph_url)
+	os.remove("podcast_runtime_graph.png")
+
 
 
 def desc():
@@ -454,7 +632,6 @@ def desc():
 	Have an amazing day :)
 	'''
 	text_me(message)
-
 
 def commands():
 	if log_command("commands"):
@@ -470,6 +647,17 @@ def commands():
 		, "bday -> sends 5 famous people that were born today"
 		, "today -> sends the day of the month, week, and school cycle"
 		, "clean -> performs some functions that keep this bot running"
+		, "weight ___-> logs your weight"
+		, "weight_graph -> sends a graph of your weight over time"
+		, "spotify -> sends some data about your spotify account"
+		, "artists -> sends a graph of your top artists"
+		, "durations -> sends a graph of your longest songs"
+		, "genres -> sends a graph of your top genres"
+		, "explicit -> sends a graph of the ratio of explicit songs in your library"
+		, "covers -> sends a graph of the ratio of covers in your library"
+		, "decades -> sends a graph of the decades your songs were released in"
+		, "episodes -> sends a graph of the podcasts you listen to"
+		, "runtimes -> sends a graph of the runtimes of the podcasts you listen to"
 		, "desc -> sends a description of this bot"
 		, "commands -> sends this"]
 	length = len(command_lst)
@@ -480,41 +668,6 @@ def commands():
 	text_me(message2)
 
 
-def clean():
-	if log_command("clean"):
-		return
-	daily_funcs()
-	with open("text_files/quotes") as quotes_file:
-		quotes = list(set(quotes_file.readlines()))
-	with open("text_files/used_quotes") as used_quotes_file:
-		used_quotes = list(set(used_quotes_file.readlines()))
-	for i in quotes:
-		if i in used_quotes:
-			quotes.remove(i)
-			used_quotes.append(i)
-	quote_fix = False
-	used_fix = False
-	with open("text_files/quotes") as quotes_file:
-		if quotes != quotes_file.readlines():
-			quote_fix = True
-	with open("text_files/used_quotes") as used_quotes_file:
-		if used_quotes != used_quotes_file.readlines():
-			used_fix = True
-	if quote_fix:
-		with open("text_files/quotes", "w") as quotes_file:
-			quotes_file.writelines(quotes)
-	if used_fix:
-		with open("text_files/used_quotes", "w") as used_quotes_file:
-			used_quotes_file.writelines(used_quotes)
-	with open("text_files/alarm") as alarm_file:
-		alarm_bool = alarm_file.readline()
-		try:
-			x = int(alarm_bool)
-		except:
-			text_me("error in alarm file")
-			error_report("alarm_file")
-	update_spotify_data()
-	text_me("All Clean!")
 
 
 def schedule_work(work):
@@ -1087,4 +1240,5 @@ def event_loop():
 
 if __name__ == "__main__":
 	threading.Thread(target=event_loop).start()
+	# threading.Thread(target=update_spotify_data).start()
 	app.run(host="0.0.0.0", port=port, debug=True)
