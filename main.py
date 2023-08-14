@@ -698,7 +698,7 @@ def get_response():
 		if time.time() - start > 300:
 			text_me("nvm")
 			return None
-		time.sleep(.2)
+		time.sleep(.5)
 
 def get_weight():
 	if log_command("get_weight"):
@@ -1269,7 +1269,7 @@ def event_loop():
 			if log_command("morning quote"):
 				time.sleep(10)
 			else:
-				text_me(get_quote())
+				text_me(f"Here's today's quote:\n{get_quote()}")
 				time.sleep(60)
 		if rn() == "06:00": # daily operations
 			daily_funcs()
