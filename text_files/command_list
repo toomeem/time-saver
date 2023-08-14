@@ -2647,3 +2647,9 @@ clear_response
 set_in_conversation
 in_conversation
 log_message
+clear_response
+set_in_conversation
+update_spotify_data
+clear_response
+set_in_conversation
+update_spotify_data
