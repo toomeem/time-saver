@@ -73,7 +73,7 @@ plot_attributes = {
 		"show_moving_avg": True,
 		"show_regression_line": True,
 		"window_size": 7,
-		"bulk_dates":["01/28/2023"],
+		"bulk_dates":["01/29/2023"],
 		"cut_dates":["06/06/2023"]
 	}
 }
@@ -672,6 +672,39 @@ def commands():
 
 
 
+def clear_file(file_name):
+	file = open(file_name, "w")
+	file.close()
+
+def log_excercise(name, sets, reps, weight):
+	if log_command("log_excercise"):
+		return
+	with open("text_files/current_workout") as workout_file:
+		try:
+			exercises = list(json.load(workout_file))
+		except:
+			exercises = []
+	exercises.append({"name": name, "reps": reps, "weight": weight, "sets": sets})
+	with open("text_files/current_workout", "w") as workout_file:
+		json.dump(exercises, workout_file)
+
+
+def log_workout(start, end, day_type):
+	with open("text_files/current_workout") as workout_file:
+		exercises = list(json.load(workout_file))
+	workout_dict = {"exercises": exercises, "start": str(
+		start), "end": end, "day_type": day_type}
+	with open("text_files/workout_log") as workout_file:
+		try:
+			workouts = list(json.load(workout_file))
+		except:
+			workouts = []
+	workouts.append(workout_dict)
+	with open("text_files/workout_log", "w") as workout_file:
+		json.dump(workouts, workout_file)
+	with open("text_files/current_workout", "w") as workout_file:
+		json.dump("", workout_file)
+
 
 def log_response(response):
 	log_message(response, "evan")
@@ -683,8 +716,7 @@ def log_response(response):
 def clear_response():
 	if log_command("clear_response"):
 		return
-	with open("text_files/response", "w") as message_file:
-		message_file.write("")
+	clear_file("text_files/response")
 
 def get_response():
 	if log_command("get_response"):
@@ -1214,8 +1246,7 @@ def get_show_durations(data):
 
 
 def daily_funcs():
-	os.remove("text_files/cancel")
-	open("text_files/cancel", "x")
+	clear_file("text_files/cancel")
 
 
 def num_suffix(num):
@@ -1230,16 +1261,24 @@ def num_suffix(num):
 		return "rd"
 	return "th"
 
+def on_start():
+	clear_response()
+	set_in_conversation(False)
+	threading.Thread(target=event_loop).start()
+	threading.Thread(target=update_spotify_data).start()
+
 
 def event_loop():
 	event_id = int(time.time())
 	with open("text_files/event_id", "w") as event_id_file:
 		event_id_file.write(str(event_id))
 	while True:
-		if int(rn("%S")) % 10 == 0:
+		duplicate_check_frequency = 5
+		if int(rn("%S")) % duplicate_check_frequency == 0:
 			with open("text_files/event_id") as event_id_file:
 				if int(event_id_file.readline()) != event_id:
 					print("duplicate process detected, aborting...")
+					duplicate_check_frequency = 60
 					break
 		if rn() == "16:00":
 			get_weight()
@@ -1277,8 +1316,5 @@ def event_loop():
 
 
 if __name__ == "__main__":
-	clear_response()
-	set_in_conversation(False)
-	threading.Thread(target=event_loop).start()
-	threading.Thread(target=update_spotify_data).start()
+	on_start()
 	app.run(host="0.0.0.0", port=port, debug=True)
