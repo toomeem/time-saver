@@ -688,7 +688,6 @@ def log_excercise(name, sets, reps, weight):
 	with open("text_files/current_workout", "w") as workout_file:
 		json.dump(exercises, workout_file)
 
-
 def log_workout(start, end, day_type):
 	with open("text_files/current_workout") as workout_file:
 		exercises = list(json.load(workout_file))
@@ -704,7 +703,6 @@ def log_workout(start, end, day_type):
 		json.dump(workouts, workout_file)
 	with open("text_files/current_workout", "w") as workout_file:
 		json.dump("", workout_file)
-
 
 def log_response(response):
 	log_message(response, "evan")

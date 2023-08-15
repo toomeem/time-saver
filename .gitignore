@@ -1,3 +1,4 @@
 ngrok.exe
 .env
-text_files/event_id
+text_files\event_id
+

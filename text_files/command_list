@@ -2653,3 +2653,6 @@ update_spotify_data
 clear_response
 set_in_conversation
 update_spotify_data
+in_conversation
+log_message
+log_message
