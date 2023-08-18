@@ -61,7 +61,6 @@ cloudinary.config(
 	api_secret=cloudinary_api_secret
 )
 
-
 plot_attributes = {
 	"weight": {
 		"grid": "y",
@@ -77,6 +76,103 @@ plot_attributes = {
 		"cut_dates":["06/06/2023"]
 	}
 }
+
+gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
+
+
+exercises = ["","Leg Extension", "Leg Press", "Deadlift", "Leg Curl",
+	"Back Extension", "Hip Thrust", "Inner Thigh", "Outer Thigh",
+	"Calf Raise", "Dead Hang", "Bench Press", "Pec Fly",
+	"Incline Dumbell Press", "Cable Lateral Raises", "Dumbell Lateral Raises",
+	"Chest Press", "Rear Delt Fly", "Overhead Press", "Shoulder Press",
+	"Dumbell Bicep Curl", "Cable Bicep Curl", "Dumbell Hammer Curl", "Tricep Extension",
+	"Tricep Pushdown", "Dips", "Lat Pulldown", "Seated Cable Row", "Chin Ups",
+	"Pull Ups", "Barbell Wrist Curl", "Lat Pushdowns", "Shrugs", "Single Arm Row",
+	"Barbell Row", "Cable Crunch", "Plank", "Russian Twist", "Side Plank",
+	"Kettlebell Side Bend", "Cable Crunch", "Hanging Leg Raise"]
+
+exercise_ids = {i:exercises.index(i) for i in exercises}
+
+
+exercise_dict = {
+	"Bench Press": {
+		"primary_muscles": ["Middle Chest"],
+		"secondary_muscles": ["Upper Chest","Lower Chest","Triceps", "Shoulders"],
+		"equipment": ["Barbell", "Bench"],
+		"muscle_group_importance": 1,
+		"exercise_day": "Chest + Shoulders"
+	},
+	"Bicep Curl": {
+		"primary_muscles": ["Biceps"],
+		"secondary_muscles": ["Forearms"],
+		"equipment": ["Dumbell"],
+		"muscle_group_importance": 1,
+		"exercise_day": "Arms"
+	},
+	"Dips":{
+		"primary_muscles": ["Triceps"],
+		"secondary_muscles": ["Lower Chest", "Shoulders"],
+		"equipment": ["Me"],
+		"muscle_group_importance": 2,
+		"exercise_day": "Arms"
+	},
+	"Hammer Curl":{
+		"primary_muscles": ["Biceps"],
+		"secondary_muscles": ["Forearms"],
+		"equipment": ["Dumbell"],
+		"muscle_group_importance": 2,
+		"exercise_day": "Arms"
+	},
+	"Chin Ups":{
+		"primary_muscles": ["Biceps"],
+		"secondary_muscles": ["Forearms", "Lats"],
+		"equipment": ["Me"],
+		"muscle_group_importance": 2,
+		"exercise_day": "Arms"
+	},
+	"Barbell Wrist Curl":{
+		"primary_muscles": ["Forearms"],
+		"secondary_muscles": [],
+		"equipment": ["Barbell"],
+		"muscle_group_importance": 2,
+		"exercise_day": "Arms"
+	},
+	"Tricep Extension":{
+		"primary_muscles": ["Triceps"],
+		"secondary_muscles": [],
+		"equipment": ["Cable"],
+		"muscle_group_importance": 1,
+		"exercise_day": "Arms"
+	},
+	"Dead Hang":{
+		"primary_muscles": ["Forearms"],
+		"secondary_muscles": [],
+		"equipment": ["Me"],
+		"muscle_group_importance": 1,
+		"exercise_day": "Arms"
+	}
+}
+
+class exercise:
+	def __init__(self, num):
+		self.name = exercises[num]
+		self.num = num
+		self.primary_muscles = exercise_dict[self.name]["primary_muscles"]
+		self.secondary_muscles = exercise_dict[self.name]["secondary_muscles"]
+		self.equipment = exercise_dict[self.name]["equipment"]
+		self.muscle_group = exercise_dict[self.name]["muscle_group"]
+		self.muscle_group_importance = exercise_dict[self.name]["muscle_group_importance"]
+		self.exercise_day = exercise_dict[self.name]["exercise_day"]
+
+class exercise_set:
+	def __init__(self, exercise_num, reps, weight, rpe):
+		self.exercise_num = exercise_num
+		self.reps = reps
+		self.weight = weight
+		self.rpe = rpe
+		self.exercise = exercise(exercise_num)
+
+
 
 def text_me(body, media_url=None):
 	try:
@@ -160,6 +256,8 @@ def hook():
 			send_episode_graph()
 		case "runtimes":
 			send_podcast_runtime_graph()
+		case "gym":
+			start_workout()
 		case _:
 			text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -625,6 +723,30 @@ def send_podcast_runtime_graph():
 	text_me("Here are the podcasts you listen to.", graph_url)
 	os.remove("podcast_runtime_graph.png")
 
+def start_workout():
+	workout_dict = {
+		"exercises": {}, "start": time.time(), "end": None,
+		"day_type": gym_schedule[get_gym_day_num()]
+	}
+	with open("text_files/current_workout", "w") as workout_file:
+		json.dump(workout_dict, workout_file)
+	quit_workout = False
+	time.sleep(60)
+	while not quit_workout:
+		exercise_num = get_response(
+			"Pick an exercise(0 to end the workout)", 900, "good choice")
+		if exercise_num == "0":
+			quit_workout = True
+		else:
+			time.sleep(60)
+			log_set(exercise_num, True)
+			another_set = get_response("Another set?", 900)
+			while another_set == "yes":
+				time.sleep(120)
+				log_set(exercise_num)
+				another_set = get_response("Another set?", 900)
+	end_workout()
+
 def desc():
 	if log_command("desc"):
 		return
@@ -672,27 +794,34 @@ def commands():
 
 
 
-def clear_file(file_name):
-	file = open(file_name, "w")
-	file.close()
 
-def log_excercise(name, sets, reps, weight):
-	if log_command("log_excercise"):
+
+
+def log_set(exercise_num, first=False):
+	if log_command("log_set"):
+		return
+	reps = int(get_response("How many reps did you do?", 600))
+	weight = int(get_response("What weight did you use?", 600))
+	rpe = int(get_response("What was your RPE?", 600))
+	with open("text_files/current_workout") as workout_file:
+		workout_dict = dict(json.load(workout_file))
+	if first:
+		workout_dict["exercises"][exercise_num] = {"sets": 1, "reps": [reps], "weight": [weight], "rpe": [rpe]}
+	else:
+		workout_dict["exercises"][exercise_num]["sets"] += 1
+		workout_dict["exercises"][exercise_num]["reps"].append(reps)
+		workout_dict["exercises"][exercise_num]["weight"].append(weight)
+		workout_dict["exercises"][exercise_num]["rpe"].append(rpe)
+	with open("text_files/current_workout", "w") as workout_file:
+		json.dump(workout_dict, workout_file)
+
+def end_workout():
+	if log_command("end_workout"):
 		return
 	with open("text_files/current_workout") as workout_file:
-		try:
-			exercises = list(json.load(workout_file))
-		except:
-			exercises = []
-	exercises.append({"name": name, "reps": reps, "weight": weight, "sets": sets})
-	with open("text_files/current_workout", "w") as workout_file:
-		json.dump(exercises, workout_file)
-
-def log_workout(start, end, day_type):
-	with open("text_files/current_workout") as workout_file:
-		exercises = list(json.load(workout_file))
-	workout_dict = {"exercises": exercises, "start": str(
-		start), "end": end, "day_type": day_type}
+		workout_dict = dict(json.load(workout_file))
+	if workout_dict["end"] == None:
+		workout_dict["end"] = time.time()
 	with open("text_files/workout_log") as workout_file:
 		try:
 			workouts = list(json.load(workout_file))
@@ -701,8 +830,33 @@ def log_workout(start, end, day_type):
 	workouts.append(workout_dict)
 	with open("text_files/workout_log", "w") as workout_file:
 		json.dump(workouts, workout_file)
-	with open("text_files/current_workout", "w") as workout_file:
-		json.dump("", workout_file)
+	text_me("Workout Logged")
+	clear_file("text_files/current_workout")
+	increment_gym_day()
+
+def get_gym_day_num():
+	if log_command("get_gym_day"):
+		return
+	with open("text_files/gym_day") as gym_file:
+		gym_day = int(gym_file.readline().strip())
+	return gym_day
+
+def increment_gym_day(increment=1):
+	if log_command("increment_gym_day"):
+		return
+	gym_day = get_gym_day_num()
+	if gym_day == None:
+		text_me("Error")
+		return
+	gym_day += increment
+	if gym_day >= len(gym_schedule):
+		gym_day = 0
+	with open("text_files/gym_day", "w") as gym_file:
+		gym_file.write(str(gym_day))
+
+def clear_file(file_name):
+	file = open(file_name, "w")
+	file.close()
 
 def log_response(response):
 	log_message(response, "evan")
@@ -716,36 +870,39 @@ def clear_response():
 		return
 	clear_file("text_files/response")
 
-def get_response():
+def get_response(question, wait_time, confirmation=None):
 	if log_command("get_response"):
 		return
+	text_me(question)
+	set_in_conversation(True)
 	start = time.time()
 	while True:
 		with open("text_files/response") as message_file:
 			response = message_file.read().strip()
 		if response != "":
+			set_in_conversation(False)
+			if confirmation != None:
+				text_me(confirmation)
 			return response
-		if time.time() - start > 300:
+		if time.time() - start > wait_time:
 			text_me("nvm")
+			set_in_conversation(False)
 			return None
 		time.sleep(.5)
 
 def get_weight():
 	if log_command("get_weight"):
 		return
-	text_me("What is your weight?")
-	set_in_conversation(True)
-	response = get_response()
-	set_in_conversation(False)
-	clear_response()
+	response = get_response("What is your weight?", 300, "Got It")
 	if response is None:
 		return
 	log_weight(response)
-	text_me("Got it")
 
 def set_in_conversation(is_in_conversation):
 	if log_command("set_in_conversation"):
 		return
+	if not is_in_conversation:
+		clear_response()
 	with open("text_files/in_conversation", "w") as message_file:
 		message_file.write(str(is_in_conversation))
 
@@ -1260,7 +1417,6 @@ def num_suffix(num):
 	return "th"
 
 def on_start():
-	clear_response()
 	set_in_conversation(False)
 	threading.Thread(target=event_loop).start()
 	threading.Thread(target=update_spotify_data).start()
@@ -1281,15 +1437,21 @@ def event_loop():
 		if rn() == "16:00":
 			get_weight()
 			time.sleep(60)
-		if rn() == "09:30":
+		if rn() == "09:00":
 			if log_command("morning"):
 				time.sleep(60)
 			else:
 				message = "Good Morning!\n"
 				day_num = int(rn("%d"))
 				suffix = num_suffix(int(rn("%d")[1]))
+				gym_day_num = get_gym_day_num()
 				message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
-				message += f'''You move out in {days_until("09/15/2023", return_days=True)} days\n'''
+				if day_num == 1:
+					message += "It's the first of the month!\n"
+				if gym_day_num == 1:
+					message+="It's leg day :(\n"
+				message += f'''You are hitting {gym_schedule[gym_day_num].lower()} today!\n'''
+				message += f'''You move out in {days_until("09/15/2023", return_days=True)-1} days\n'''
 				message += "Here's today's weather:\n\t"
 				message += formatted_weather().replace("\n", "\n\t")
 				text_me(message)
@@ -1306,7 +1468,7 @@ def event_loop():
 			if log_command("morning quote"):
 				time.sleep(10)
 			else:
-				text_me(f"Here's today's quote:\n{get_quote()}")
+				text_me(f"Here's today's quote:\n\n{get_quote()}")
 				time.sleep(60)
 		if rn() == "06:00": # daily operations
 			daily_funcs()
