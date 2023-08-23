@@ -72,7 +72,7 @@ plot_attributes = {
 		"show_moving_avg": True,
 		"show_regression_line": True,
 		"window_size": 7,
-		"bulk_dates":["01/29/2023"],
+		"bulk_dates":["01/29/2023", "08/22/2023"],
 		"cut_dates":["06/06/2023"]
 	}
 }
@@ -1423,14 +1423,14 @@ def on_start():
 
 
 def event_loop():
-	event_id = int(time.time())
+	event_id = time.time()
 	with open("text_files/event_id", "w") as event_id_file:
 		event_id_file.write(str(event_id))
 	while True:
 		duplicate_check_frequency = 5
 		if int(rn("%S")) % duplicate_check_frequency == 0:
 			with open("text_files/event_id") as event_id_file:
-				if int(event_id_file.readline()) != event_id:
+				if event_id_file.readline() != event_id:
 					print("duplicate process detected, aborting...")
 					duplicate_check_frequency = 60
 					break

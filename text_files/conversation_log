@@ -325,3 +325,67 @@ Here's today's weather:
 	Humidity - High
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
+evan: hi
+script: Hello!
+evan: bdays
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: bday
+script: Famous Birthdays Today:
+Patrick Swayze(1952-2009): Actor
+Christian Slater(1970-?): Actor
+Edward Norton(1970-?): Actor
+Roberto Clemente(1934-1972): Baseball player
+Robert Redford(1937-?): Actor
+Virginia Dare(1587-?): First English child born in America
+Meriwether Lewis(1774-?): Explorer of the America west with Clark
+Franz Joseph I(1830-?): Emperor of Austria
+Malcom-Jamal Warner(1970-?): Actor
+Andy Samberg(1979-?): TV Actor
+evan: hi
+script: Hello!
+evan: artists
+script: Here are your top artists.
+evan: spotify
+script: Your playlist is 2907 songs long and it is 194.3 hours long.
+It spans 79 years of music.
+Your playlist consisted of 1316 artists that represented 673 different genres.
+The songs were an average of 4 minutes and 1 seconds long.
+The longest song was 23 minutes and 41 seconds long.
+The shortest song was 0 minute and 56 seconds long.
+There were around 93 cover songs.
+About 27.1% of the songs were explicit.
+You have 112 saved podcast episodes that are collectively 79.0 hours long.
+Those episodes are from 13 different shows.
+evan: durations
+evan: commands
+script: alarm -> toggles all alarms
+temp -> sends the current temperature
+spam ___ -> spams any message
+weather -> sends the current weather conditions
+quote -> sends a random quote
+school -> sends how much school is left
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month, week, and school cycle
+clean -> performs some functions that keep this bot running
+weight ___-> logs your weight
+script: weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: artists
+script: Here are your top artists.
+evan: hi
+script: Hello!
+evan: hi
+script: Hello!
