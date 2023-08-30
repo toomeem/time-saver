@@ -79,19 +79,12 @@ plot_attributes = {
 
 gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 
+leg_exercises = ["Leg Extension", "Leg Press", "Deadlift", "Leg Curl", "Hip Thrust", "Inner Thigh", "Outer Thigh", "Calf Raise"]
+chest_shoulders_exercises = ["Bench Press", "Pec Fly", "Incline Dumbell Press", "Cable Lateral Raises", "Dumbell Lateral Raises", "Chest Press", "Rear Delt Fly"]
+arm_exercises = ["Dumbell Bicep Curl", "Cable Bicep Curl", "Dumbell Hammer Curl", "Tricep Extension", "Tricep Pushdown", "Dips"]
+back_ab_exercises = ["Lat Pulldown", "Seated Cable Row", "Chin Ups", "Pull Ups", "Barbell Wrist Curl", "Lat Pushdowns", "Shrugs", "Single Arm Row", "Barbell Row", "Cable Crunch", "Plank", "Russian Twist", "Side Plank", "Kettlebell Side Bend", "Cable Crunch", "Hanging Leg Raise"]
 
-exercises = ["","Leg Extension", "Leg Press", "Deadlift", "Leg Curl",
-	"Back Extension", "Hip Thrust", "Inner Thigh", "Outer Thigh",
-	"Calf Raise", "Dead Hang", "Bench Press", "Pec Fly",
-	"Incline Dumbell Press", "Cable Lateral Raises", "Dumbell Lateral Raises",
-	"Chest Press", "Rear Delt Fly", "Overhead Press", "Shoulder Press",
-	"Dumbell Bicep Curl", "Cable Bicep Curl", "Dumbell Hammer Curl", "Tricep Extension",
-	"Tricep Pushdown", "Dips", "Lat Pulldown", "Seated Cable Row", "Chin Ups",
-	"Pull Ups", "Barbell Wrist Curl", "Lat Pushdowns", "Shrugs", "Single Arm Row",
-	"Barbell Row", "Cable Crunch", "Plank", "Russian Twist", "Side Plank",
-	"Kettlebell Side Bend", "Cable Crunch", "Hanging Leg Raise"]
-
-exercise_ids = {i:exercises.index(i) for i in exercises}
+exercises = [leg_exercises, chest_shoulders_exercises, arm_exercises, back_ab_exercises]
 
 
 exercise_dict = {
@@ -284,7 +277,7 @@ def days_until(target, start=None, return_days=False):
 		return "error"
 	target = target.split("/")
 	target = date(year=int(target[2]), month=int(target[0]), day=int(target[1]))
-	if start == None:
+	if start is None:
 		start = date.today()
 	else:
 		start = start.split("/")
@@ -724,25 +717,30 @@ def send_podcast_runtime_graph():
 	os.remove("podcast_runtime_graph.png")
 
 def start_workout():
+	if log_command("start_workout"):
+		return
+	day_type_num = get_gym_day_num()
 	workout_dict = {
 		"exercises": {}, "start": time.time(), "end": None,
-		"day_type": gym_schedule[get_gym_day_num()]
+		"day_type": gym_schedule[day_type_num]
 	}
 	with open("text_files/current_workout", "w") as workout_file:
-		json.dump(workout_dict, workout_file)
+		json.dump(workout_dict, workout_file, indent=2)
 	quit_workout = False
-	time.sleep(60)
+	time.sleep(5)
 	while not quit_workout:
-		exercise_num = get_response(
-			"Pick an exercise(0 to end the workout)", 900, "good choice")
+		text_me("Pick an exercise(0 to end the workout)")
+		todays_exercises = exercises[day_type_num]
+		exercise_num = get_response("\n".join(todays_exercises), 900)
 		if exercise_num == "0":
 			quit_workout = True
 		else:
+			text_me("good choice")
 			time.sleep(60)
 			log_set(exercise_num, True)
 			another_set = get_response("Another set?", 900)
 			while another_set == "yes":
-				time.sleep(120)
+				time.sleep(10)
 				log_set(exercise_num)
 				another_set = get_response("Another set?", 900)
 	end_workout()
@@ -796,6 +794,15 @@ def commands():
 
 
 
+def search_exercises(name):
+	if log_command("search_exercises"):
+		return
+	with open("text_files/exercises") as exercise_file:
+		exercise_dict = json.load(exercise_file)
+	try:
+		return exercise_dict[name]
+	except:
+		return
 
 def log_set(exercise_num, first=False):
 	if log_command("log_set"):
@@ -813,14 +820,14 @@ def log_set(exercise_num, first=False):
 		workout_dict["exercises"][exercise_num]["weight"].append(weight)
 		workout_dict["exercises"][exercise_num]["rpe"].append(rpe)
 	with open("text_files/current_workout", "w") as workout_file:
-		json.dump(workout_dict, workout_file)
+		json.dump(workout_dict, workout_file, indent=2)
 
 def end_workout():
 	if log_command("end_workout"):
 		return
 	with open("text_files/current_workout") as workout_file:
 		workout_dict = dict(json.load(workout_file))
-	if workout_dict["end"] == None:
+	if workout_dict["end"] is None:
 		workout_dict["end"] = time.time()
 	with open("text_files/workout_log") as workout_file:
 		try:
@@ -829,7 +836,7 @@ def end_workout():
 			workouts = []
 	workouts.append(workout_dict)
 	with open("text_files/workout_log", "w") as workout_file:
-		json.dump(workouts, workout_file)
+		json.dump(workouts, workout_file, indent=2)
 	text_me("Workout Logged")
 	clear_file("text_files/current_workout")
 	increment_gym_day()
@@ -845,7 +852,7 @@ def increment_gym_day(increment=1):
 	if log_command("increment_gym_day"):
 		return
 	gym_day = get_gym_day_num()
-	if gym_day == None:
+	if gym_day is None:
 		text_me("Error")
 		return
 	gym_day += increment
@@ -873,7 +880,8 @@ def clear_response():
 def get_response(question, wait_time, confirmation=None):
 	if log_command("get_response"):
 		return
-	text_me(question)
+	if question != "":
+		text_me(question)
 	set_in_conversation(True)
 	start = time.time()
 	while True:
@@ -887,13 +895,13 @@ def get_response(question, wait_time, confirmation=None):
 		if time.time() - start > wait_time:
 			text_me("nvm")
 			set_in_conversation(False)
-			return None
+			return
 		time.sleep(.5)
 
 def get_weight():
 	if log_command("get_weight"):
 		return
-	response = get_response("What is your weight?", 300, "Got It")
+	response = get_response("What's your weight?", 600, "thanks")
 	if response is None:
 		return
 	log_weight(response)
@@ -1044,7 +1052,7 @@ def get_quote(scan=None):
 	if "" in quote_list:
 		quote_list.remove("")
 	message = ""
-	if scan == None:
+	if scan is None:
 		quote = quote_list[0]
 	else:
 		keyword_quotes = [i for i in quote_list if scan in i]
@@ -1211,7 +1219,7 @@ def get_all_songs(spotify_client):
 			limit=50, market="US", offset=offset))
 		data_list.extend([format_track(i) for i in raw_data["items"]])
 	with open("text_files/tracks.json", "w") as data_file:
-		json.dump({"data": data_list}, data_file)
+		json.dump({"data": data_list}, data_file, indent=2)
 
 def get_genres(spotify_client):
 	with open("text_files/tracks.json") as data_file:
@@ -1228,7 +1236,7 @@ def get_genres(spotify_client):
 			genre_list.extend(artist["genres"])
 	genre_dict = dict(Counter(genre_list))
 	with open("text_files/genres.json", "w") as data_file:
-		json.dump(genre_dict, data_file)
+		json.dump(genre_dict, data_file, indent=2)
 
 def podcasts(sp):
 	max_podcast_request = True
@@ -1423,16 +1431,14 @@ def on_start():
 
 
 def event_loop():
-	event_id = time.time()
+	event_id = str(time.time())
 	with open("text_files/event_id", "w") as event_id_file:
-		event_id_file.write(str(event_id))
+		event_id_file.write(event_id)
 	while True:
-		duplicate_check_frequency = 5
-		if int(rn("%S")) % duplicate_check_frequency == 0:
+		if int(rn("%S")) % 10 == 0:
 			with open("text_files/event_id") as event_id_file:
-				if event_id_file.readline() != event_id:
+				if event_id_file.readline().strip() != event_id:
 					print("duplicate process detected, aborting...")
-					duplicate_check_frequency = 60
 					break
 		if rn() == "16:00":
 			get_weight()

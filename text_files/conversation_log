@@ -389,3 +389,35 @@ evan: hi
 script: Hello!
 evan: hi
 script: Hello!
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: 0
+script: good choice
+script: Workout Logged
+evan: update
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: clean
+script: All Clean!
+evan: artists
+script: Here are your top artists.
+evan: hi
+script: Hello!
+script: Good Morning!
+Today is Tuesday, August 29th
+You are hitting back + abs today!
+You move out in 16 days
+Here's today's weather:
+	Temperature - 68°
+	Conditions - Overcast
+	Humidity - Above Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+
+Taxation is the price we pay for failing to build a civilized society. The higher the tax level, the greater the failure. A centrally planned totalitarian state represents a complete defeat for the civilized world, while a totally voluntary society represents its ultimate success.
+
+script: What is your weight?
+script: nvm
+evan: artists
+script: Here are your top artists.
