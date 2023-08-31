@@ -421,3 +421,19 @@ script: What is your weight?
 script: nvm
 evan: artists
 script: Here are your top artists.
+script: Good Morning!
+Today is Wednesday, August 30th
+You are hitting legs today!
+You move out in 15 days
+Here's today's weather:
+	Temperature - 70°
+	Conditions -  Light Rain
+	Humidity - Above Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+
+Don't waste time on jealousy. Sometimes you're ahead, sometimes you're behind.
+
+script: What's your weight?
+script: nvm

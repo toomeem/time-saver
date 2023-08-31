@@ -32,7 +32,7 @@ load_dotenv()
 
 app = Flask(__name__)
 port = 5000
-dpi =500
+dpi = 500
 twilio_account_sid = os.getenv("TWILIO_ACCOUNT_SID")
 twilio_auth_token = os.getenv("TWILIO_AUTH_TOKEN")
 client = Client(twilio_account_sid, twilio_auth_token)
@@ -79,93 +79,8 @@ plot_attributes = {
 
 gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 
-leg_exercises = ["Leg Extension", "Leg Press", "Deadlift", "Leg Curl", "Hip Thrust", "Inner Thigh", "Outer Thigh", "Calf Raise"]
-chest_shoulders_exercises = ["Bench Press", "Pec Fly", "Incline Dumbell Press", "Cable Lateral Raises", "Dumbell Lateral Raises", "Chest Press", "Rear Delt Fly"]
-arm_exercises = ["Dumbell Bicep Curl", "Cable Bicep Curl", "Dumbell Hammer Curl", "Tricep Extension", "Tricep Pushdown", "Dips"]
-back_ab_exercises = ["Lat Pulldown", "Seated Cable Row", "Chin Ups", "Pull Ups", "Barbell Wrist Curl", "Lat Pushdowns", "Shrugs", "Single Arm Row", "Barbell Row", "Cable Crunch", "Plank", "Russian Twist", "Side Plank", "Kettlebell Side Bend", "Cable Crunch", "Hanging Leg Raise"]
 
-exercises = [leg_exercises, chest_shoulders_exercises, arm_exercises, back_ab_exercises]
-
-
-exercise_dict = {
-	"Bench Press": {
-		"primary_muscles": ["Middle Chest"],
-		"secondary_muscles": ["Upper Chest","Lower Chest","Triceps", "Shoulders"],
-		"equipment": ["Barbell", "Bench"],
-		"muscle_group_importance": 1,
-		"exercise_day": "Chest + Shoulders"
-	},
-	"Bicep Curl": {
-		"primary_muscles": ["Biceps"],
-		"secondary_muscles": ["Forearms"],
-		"equipment": ["Dumbell"],
-		"muscle_group_importance": 1,
-		"exercise_day": "Arms"
-	},
-	"Dips":{
-		"primary_muscles": ["Triceps"],
-		"secondary_muscles": ["Lower Chest", "Shoulders"],
-		"equipment": ["Me"],
-		"muscle_group_importance": 2,
-		"exercise_day": "Arms"
-	},
-	"Hammer Curl":{
-		"primary_muscles": ["Biceps"],
-		"secondary_muscles": ["Forearms"],
-		"equipment": ["Dumbell"],
-		"muscle_group_importance": 2,
-		"exercise_day": "Arms"
-	},
-	"Chin Ups":{
-		"primary_muscles": ["Biceps"],
-		"secondary_muscles": ["Forearms", "Lats"],
-		"equipment": ["Me"],
-		"muscle_group_importance": 2,
-		"exercise_day": "Arms"
-	},
-	"Barbell Wrist Curl":{
-		"primary_muscles": ["Forearms"],
-		"secondary_muscles": [],
-		"equipment": ["Barbell"],
-		"muscle_group_importance": 2,
-		"exercise_day": "Arms"
-	},
-	"Tricep Extension":{
-		"primary_muscles": ["Triceps"],
-		"secondary_muscles": [],
-		"equipment": ["Cable"],
-		"muscle_group_importance": 1,
-		"exercise_day": "Arms"
-	},
-	"Dead Hang":{
-		"primary_muscles": ["Forearms"],
-		"secondary_muscles": [],
-		"equipment": ["Me"],
-		"muscle_group_importance": 1,
-		"exercise_day": "Arms"
-	}
-}
-
-class exercise:
-	def __init__(self, num):
-		self.name = exercises[num]
-		self.num = num
-		self.primary_muscles = exercise_dict[self.name]["primary_muscles"]
-		self.secondary_muscles = exercise_dict[self.name]["secondary_muscles"]
-		self.equipment = exercise_dict[self.name]["equipment"]
-		self.muscle_group = exercise_dict[self.name]["muscle_group"]
-		self.muscle_group_importance = exercise_dict[self.name]["muscle_group_importance"]
-		self.exercise_day = exercise_dict[self.name]["exercise_day"]
-
-class exercise_set:
-	def __init__(self, exercise_num, reps, weight, rpe):
-		self.exercise_num = exercise_num
-		self.reps = reps
-		self.weight = weight
-		self.rpe = rpe
-		self.exercise = exercise(exercise_num)
-
-
+exercise_list = json.load(open("text_files/exercises.json"))
 
 def text_me(body, media_url=None):
 	try:
@@ -524,7 +439,6 @@ def send_weight_graph(plot_attributes):
 	text_me("Here is your weight graph", graph_url)
 	os.remove("weight.png")
 
-
 def log_calories(cals):
 	if log_command("log_calories"):
 		return
@@ -532,14 +446,12 @@ def log_calories(cals):
 		calories_file.write(f'''{rn("%m/%d/%Y")}:{cals[0]}\n''')
 	return "Logged"
 
-
 def update_spotify_data():
 	if log_command("update_spotify_data"):
 		return
 	threading.Thread(target=podcasts, args=(spotify_client,)).start()
 	threading.Thread(target=get_genres, args=(spotify_client,)).start()
 	get_all_songs(spotify_client)
-
 
 def spotify_data_description():
 	data, track_num = read_spotify_data()
@@ -730,8 +642,11 @@ def start_workout():
 	time.sleep(5)
 	while not quit_workout:
 		text_me("Pick an exercise(0 to end the workout)")
-		todays_exercises = exercises[day_type_num]
-		exercise_num = get_response("\n".join(todays_exercises), 900)
+		todays_exercises = get_day_exercises(day_type_num)
+		for i in range(len(todays_exercises)):
+			todays_exercises = f'''{todays_exercises[i]["num"]}: {todays_exercises[i]["name"]}'''
+		text_me("\n".join(todays_exercises))
+		exercise_num = get_response(wait_time=900)
 		if exercise_num == "0":
 			quit_workout = True
 		else:
@@ -793,16 +708,34 @@ def commands():
 
 
 
+def check_for_duplicate_event(id):
+	with open("text_files/event_id") as event_id_file:
+		file_id = event_id_file.readline().strip()
+	if file_id != id:
+		print("duplicate process detected, aborting...")
+		return True
+	return False
 
-def search_exercises(name):
+def get_day_exercises(day_num):
+	if log_command("get_day_exercises"):
+		return
+	todays_exercises = [i for i in exercise_list if i["exercise_day"] == gym_schedule[day_num]]
+	return todays_exercises
+
+def search_exercises(name=None, num=None):
 	if log_command("search_exercises"):
 		return
-	with open("text_files/exercises") as exercise_file:
-		exercise_dict = json.load(exercise_file)
-	try:
-		return exercise_dict[name]
-	except:
-		return
+	with open("text_files/exercise_data.json") as exercise_file:
+		exercise_list = json.load(exercise_file)
+	if name is not None:
+		for i in exercise_list:
+			if exercise_list[i]["name"] == name:
+				return i
+		return None
+	if num is not None:
+		for i in exercise_list:
+			if i["num"] == num:
+				return i
 
 def log_set(exercise_num, first=False):
 	if log_command("log_set"):
@@ -810,6 +743,7 @@ def log_set(exercise_num, first=False):
 	reps = int(get_response("How many reps did you do?", 600))
 	weight = int(get_response("What weight did you use?", 600))
 	rpe = int(get_response("What was your RPE?", 600))
+	name = search_exercises(num=exercise_num)
 	with open("text_files/current_workout") as workout_file:
 		workout_dict = dict(json.load(workout_file))
 	if first:
@@ -877,10 +811,10 @@ def clear_response():
 		return
 	clear_file("text_files/response")
 
-def get_response(question, wait_time, confirmation=None):
+def get_response(question=None, wait_time=300, confirmation=None):
 	if log_command("get_response"):
 		return
-	if question != "":
+	if question is not None:
 		text_me(question)
 	set_in_conversation(True)
 	start = time.time()
@@ -1435,11 +1369,8 @@ def event_loop():
 	with open("text_files/event_id", "w") as event_id_file:
 		event_id_file.write(event_id)
 	while True:
-		if int(rn("%S")) % 10 == 0:
-			with open("text_files/event_id") as event_id_file:
-				if event_id_file.readline().strip() != event_id:
-					print("duplicate process detected, aborting...")
-					break
+		if check_for_duplicate_event(event_id):
+			return
 		if rn() == "16:00":
 			get_weight()
 			time.sleep(60)

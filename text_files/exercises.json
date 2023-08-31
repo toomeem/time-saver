@@ -1,0 +1,505 @@
+[
+  {
+    "num": 1,
+    "name": "Leg Extension",
+    "primary_muscles": [
+      "Quadriceps"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Legs"
+    ]
+  },
+  {
+    "num": 2,
+    "name": "Leg Press",
+    "primary_muscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondary_muscles": [
+      "Hamstrings"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Legs"
+    ]
+  },
+  {
+    "num": 3,
+    "name": "Deadlift",
+    "primary_muscles": [
+      "Lower Back",
+      "Glutes",
+      "Hamstrings"
+    ],
+    "secondary_muscles": [
+      "Forearms"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 4,
+    "name": "Leg Curl",
+    "primary_muscles": [
+      "Hamstrings"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Legs"
+    ]
+  },
+  {
+    "num": 5,
+    "name": "Hip Thrust",
+    "primary_muscles": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "secondary_muscles": [
+      "Lower Back"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Legs"
+    ]
+  },
+  {
+    "num": 6,
+    "name": "Inner Thigh",
+    "primary_muscles": [
+      "Adductors"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Legs"
+    ]
+  },
+  {
+    "num": 7,
+    "name": "Outer Thigh",
+    "primary_muscles": [
+      "Abductors"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Legs"
+    ]
+  },
+  {
+    "num": 8,
+    "name": "Calf Raise",
+    "primary_muscles": [
+      "Calves"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Legs"
+    ]
+  },
+  {
+    "num": 9,
+    "name": "Bench Press",
+    "primary_muscles": [
+      "Upper Chest",
+      "Middle Chest",
+      "Lower Chest"
+    ],
+    "secondary_muscles": [
+      "Front Delts",
+      "Triceps"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Chest + Shoulders"
+    ]
+  },
+  {
+    "num": 10,
+    "name": "Pec Fly",
+    "primary_muscles": [
+      "Upper Chest",
+      "Middle Chest",
+      "Lower Chest"
+    ],
+    "secondary_muscles": [
+      "Front Delts"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Chest + Shoulders"
+    ]
+  },
+  {
+    "num": 11,
+    "name": "Incline Dumbbell Press",
+    "primary_muscles": [
+      "Upper Chest"
+    ],
+    "secondary_muscles": [
+      "Front Delts",
+      "Triceps"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Chest + Shoulders"
+    ]
+  },
+  {
+    "num": 12,
+    "name": "Cable Lateral Raises",
+    "primary_muscles": [
+      "Side Delts"
+    ],
+    "secondary_muscles": [
+      "Traps"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Chest + Shoulders"
+    ]
+  },
+  {
+    "num": 13,
+    "name": "Dumbbell Lateral Raises",
+    "primary_muscles": [
+      "Side Delts"
+    ],
+    "secondary_muscles": [
+      "Traps"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Chest + Shoulders"
+    ]
+  },
+  {
+    "num": 14,
+    "name": "Chest Press",
+    "primary_muscles": [
+      "Upper Chest",
+      "Middle Chest",
+      "Lower Chest"
+    ],
+    "secondary_muscles": [
+      "Front Delts",
+      "Triceps"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Chest + Shoulders"
+    ]
+  },
+  {
+    "num": 15,
+    "name": "Rear Delt Fly",
+    "primary_muscles": [
+      "Rear Delts"
+    ],
+    "secondary_muscles": [
+      "Upper Back"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Chest + Shoulders"
+    ]
+  },
+  {
+    "num": 16,
+    "name": "Dumbbell Bicep Curl",
+    "primary_muscles": [
+      "Biceps"
+    ],
+    "secondary_muscles": [
+      "Forearms"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Arms"
+    ]
+  },
+  {
+    "num": 18,
+    "name": "Dumbbell Hammer Curl",
+    "primary_muscles": [
+      "Biceps"
+    ],
+    "secondary_muscles": [
+      "Forearms"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Arms"
+    ]
+  },
+  {
+    "num": 19,
+    "name": "Tricep Extension",
+    "primary_muscles": [
+      "Triceps"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Arms"
+    ]
+  },
+  {
+    "num": 20,
+    "name": "Tricep Pushdown",
+    "primary_muscles": [
+      "Triceps"
+    ],
+    "secondary_muscles": [
+      "Forearms"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Arms"
+    ]
+  },
+  {
+    "num": 21,
+    "name": "Dips",
+    "primary_muscles": [
+      "Triceps",
+      "Chest"
+    ],
+    "secondary_muscles": [
+      "Front Delts"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Arms"
+    ]
+  },
+  {
+    "num": 22,
+    "name": "Lat Pulldown",
+    "primary_muscles": [
+      "Lats"
+    ],
+    "secondary_muscles": [
+      "Biceps"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 23,
+    "name": "Seated Cable Row",
+    "primary_muscles": [
+      "Middle Back"
+    ],
+    "secondary_muscles": [
+      "Biceps",
+      "Lats"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 24,
+    "name": "Chin Ups",
+    "primary_muscles": [
+      "Biceps",
+      "Lats"
+    ],
+    "secondary_muscles": [
+      "Forearms"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 25,
+    "name": "Pull Ups",
+    "primary_muscles": [
+      "Lats"
+    ],
+    "secondary_muscles": [
+      "Biceps"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 26,
+    "name": "Barbell Wrist Curl",
+    "primary_muscles": [
+      "Forearms"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Arms"
+    ]
+  },
+  {
+    "num": 27,
+    "name": "Lat Pushdowns",
+    "primary_muscles": [
+      "Lats"
+    ],
+    "secondary_muscles": [
+      "Triceps"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 28,
+    "name": "Shrugs",
+    "primary_muscles": [
+      "Upper Back",
+      "Upper Traps"
+    ],
+    "secondary_muscles": [
+      "Neck"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 29,
+    "name": "Single Arm Row",
+    "primary_muscles": [
+      "Middle Back",
+      "Lats"
+    ],
+    "secondary_muscles": [
+      "Biceps"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 30,
+    "name": "Barbell Row",
+    "primary_muscles": [
+      "Middle Back",
+      "Lats"
+    ],
+    "secondary_muscles": [
+      "Biceps"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 31,
+    "name": "Cable Crunch",
+    "primary_muscles": [
+      "Abs"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 32,
+    "name": "Plank",
+    "primary_muscles": [
+      "Abs"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 33,
+    "name": "Russian Twist",
+    "primary_muscles": [
+      "Abs",
+      "Obliques"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 34,
+    "name": "Side Plank",
+    "primary_muscles": [
+      "Obliques"
+    ],
+    "secondary_muscles": [
+      "Abs"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 35,
+    "name": "Kettlebell Side Bend",
+    "primary_muscles": [
+      "Obliques"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 36,
+    "name": "Hanging Leg Raise",
+    "primary_muscles": [
+      "Abs"
+    ],
+    "secondary_muscles": [
+      "Hip Flexors"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+      "Back + Abs"
+    ]
+  },
+  {
+    "num": 37,
+    "name": "Dead Hang",
+    "primary_muscles": [
+      "Forearms"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 1,
+    "exercise_day": [
+			"Legs",
+			"Chest + Shoulders",
+			"Arms",
+      "Back + Abs"
+    ]
+  }
+]
