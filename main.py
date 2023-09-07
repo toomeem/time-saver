@@ -83,6 +83,8 @@ gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 exercise_list = json.load(open("text_files/exercises.json"))
 
 def text_me(body, media_url=None):
+	if body in ["", None]:
+		return
 	try:
 		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 		log_message(body, "script")
@@ -645,13 +647,15 @@ def start_workout():
 		todays_exercises = get_day_exercises(day_type_num)
 		for i in range(len(todays_exercises)):
 			todays_exercises = f'''{todays_exercises[i]["num"]}: {todays_exercises[i]["name"]}'''
-		text_me("\n".join(todays_exercises))
+		today_exercises = "\n".join(todays_exercises)
+		pprint(today_exercises)
+		text_me(today_exercises)
 		exercise_num = get_response(wait_time=900)
 		if exercise_num == "0":
 			quit_workout = True
 		else:
 			text_me("good choice")
-			time.sleep(60)
+			time.sleep(10)
 			log_set(exercise_num, True)
 			another_set = get_response("Another set?", 900)
 			while another_set == "yes":
@@ -1405,7 +1409,7 @@ def event_loop():
 			if log_command("morning quote"):
 				time.sleep(10)
 			else:
-				text_me(f"Here's today's quote:\n\n{get_quote()}")
+				text_me(f"Here's today's quote:\n\n\t{get_quote()}")
 				time.sleep(60)
 		if rn() == "06:00": # daily operations
 			daily_funcs()

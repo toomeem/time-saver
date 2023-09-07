@@ -437,3 +437,109 @@ Don't waste time on jealousy. Sometimes you're ahead, sometimes you're behind.
 
 script: What's your weight?
 script: nvm
+script: Good Morning!
+Today is Thursday, August 31st
+It's leg day :(
+You are hitting chest + shoulders today!
+You move out in 14 days
+Here's today's weather:
+	Temperature - 66°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Windy
+	Visibility - 10 mi
+script: Here's today's quote:
+
+There's only one thing worse than a man who doesn't have strong likes and dislikes, and that's a man who has strong likes and dislikes without the courage to voice them.
+
+script: What's your weight?
+evan: 149.4
+script: thanks
+script: Good Morning!
+Today is Friday, September 1st
+It's the first of the month!
+It's leg day :(
+You are hitting chest + shoulders today!
+You move out in 13 days
+Here's today's weather:
+	Temperature - 65°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Windy
+	Visibility - 10 mi
+script: Here's today's quote:
+
+There's only one thing worse than a man who doesn't have strong likes and dislikes, and that's a man who has strong likes and dislikes without the courage to voice them.
+
+script: What's your weight?
+script: nvm
+evan: artists
+script: Here are your top artists.
+evan: clean
+script: All Clean!
+evan: artists
+script: Here are your top artists.
+script: Good Morning!
+Today is Saturday, September 2nd
+It's leg day :(
+You are hitting chest + shoulders today!
+You move out in 12 days
+Here's today's weather:
+	Temperature - 56°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+
+I was that weird kid that checked out all of the non-fiction paranormal studies books from the library. I've always been fascinated by the supernatural, particularly movies and TV shows that manage to blend humor with the horror - 'Supernatural', 'Buffy', 'Angel.'
+
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Sunday, September 3rd
+It's leg day :(
+You are hitting chest + shoulders today!
+You move out in 11 days
+Here's today's weather:
+	Temperature - 72°
+	Conditions - Fair
+	Humidity - Above Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+
+I was that weird kid that checked out all of the non-fiction paranormal studies books from the library. I've always been fascinated by the supernatural, particularly movies and TV shows that manage to blend humor with the horror - 'Supernatural', 'Buffy', 'Angel.'
+
+script: What's your weight?
+evan: 152
+script: thanks
+script: Good Morning!
+Today is Monday, September 4th
+It's leg day :(
+You are hitting chest + shoulders today!
+You move out in 10 days
+Here's today's weather:
+	Temperature - 78°
+	Conditions - Fair
+	Humidity - Above Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+
+English language is the most universal language in history, way more than the Latin of Julius Caesar. It's the most punderful language because its vocabulary has a certain critical mass that makes a lingo good for punning.
+
+script: What's your weight?
+script: nvm
+evan: hi
+script: Hello!
+evan: weight_graph
+script: Here is your weight graph
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: 0
+script: Workout Logged
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: hi
+script: Hello!
