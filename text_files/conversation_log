@@ -543,3 +543,184 @@ evan: gym
 script: Pick an exercise(0 to end the workout)
 evan: hi
 script: Hello!
+script: Good Morning!
+Today is Thursday, September 7th
+You are hitting back + abs today!
+You move out in 7 days
+Here's today's weather:
+	Temperature - 80°
+	Conditions - A Few Clouds
+	Humidity - High
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+
+	There is good in everything; it's just how you choose to look at it. Everything that's worth it has a price. For me to be a model - I had to leave my family. Do you think I liked that? No! There are sacrifices. Life is meant to be a challenge, because challenges are what make you grow.
+
+script: What's your weight?
+script: nvm
+evan: artists
+script: Here are your top artists.
+script: Good Morning!
+Today is Friday, September 8th
+You are hitting back + abs today!
+You move out in 6 days
+Here's today's weather:
+	Temperature - 75°
+	Conditions - Overcast
+	Humidity - Above Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+
+	I'm not afraid of death, but I resent it. I think it's unfair and irritating. Every time I see something beautiful, I not only want to return to it, but it makes me want to see other beautiful things. I know I'm not going to get to all the places I want to go.
+
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Saturday, September 9th
+You are hitting back + abs today!
+You move out in 5 days
+Here's today's weather:
+	Temperature - 70°
+	Conditions -  Fog
+	Humidity - Above Average
+	Wind Speed - Light Breeze
+	Visibility - 0.25 mi
+script: Here's today's quote:
+
+	I'm not afraid of death, but I resent it. I think it's unfair and irritating. Every time I see something beautiful, I not only want to return to it, but it makes me want to see other beautiful things. I know I'm not going to get to all the places I want to go.
+
+script: What's your weight?
+script: nvm
+evan: weight_graph
+script: Here is your weight graph
+evan: artists
+script: Here are your top artists.
+evan: commands
+script: alarm -> toggles all alarms
+temp -> sends the current temperature
+spam ___ -> spams any message
+weather -> sends the current weather conditions
+quote -> sends a random quote
+school -> sends how much school is left
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month, week, and school cycle
+clean -> performs some functions that keep this bot running
+weight ___-> logs your weight
+script: weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+script: Good Morning!
+Today is Sunday, September 10th
+You are hitting back + abs today!
+You move out in 4 days
+Here's today's weather:
+	Temperature - 68°
+	Conditions -  Rain Foggy
+	Humidity - Above Average
+	Wind Speed - Negligible
+	Visibility - 4.00 mi
+script: Here's today's quote:
+
+	Life is pleasant. Death is peaceful. It's the transition that's troublesome.
+
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Monday, September 11st
+You are hitting back + abs today!
+You move out in 3 days
+Here's today's weather:
+	Temperature - 72°
+	Conditions - Mostly Cloudy
+	Humidity - Above Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+
+	Life is pleasant. Death is peaceful. It's the transition that's troublesome.
+
+script: What's your weight?
+evan: 152.6
+script: thanks
+script: Good Morning!
+Today is Tuesday, September 12nd
+You are hitting back + abs today!
+You move out in 2 days
+Here's today's weather:
+	Temperature - 71°
+	Conditions - Fair
+	Humidity - Above Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+
+	If you look at the paintings that I love in art history, these are the paintings where great, powerful men are being celebrated on the big walls of museums throughout the world. What feels really strange is not to be able to see a reflection of myself in that world.
+
+script: What's your weight?
+evan: 152
+script: thanks
+evan: artists
+script: Here are your top artists.
+evan: hi
+script: Hello!
+evan: desc
+script: I am Evan's personal bot.
+	If I am going crazy and you need to terminate me, text "kill".
+	If you would like to see my commands, text "commands".
+	I will pass all suggestions along to my developer.
+	Have an amazing day :)
+	
+evan: commands
+script: alarm -> toggles all alarms
+temp -> sends the current temperature
+spam ___ -> spams any message
+weather -> sends the current weather conditions
+quote -> sends a random quote
+school -> sends how much school is left
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month, week, and school cycle
+clean -> performs some functions that keep this bot running
+weight ___-> logs your weight
+script: weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: spotify
+script: Your playlist is 3000 songs long and it is 200.5 hours long.
+It spans 70 years of music.
+Your playlist consisted of 1331 artists that represented 674 different genres.
+The songs were an average of 4 minutes and 1 seconds long.
+The longest song was 23 minutes and 41 seconds long.
+The shortest song was 0 minute and 56 seconds long.
+There were around 93 cover songs.
+About 27.8% of the songs were explicit.
+You have 113 saved podcast episodes that are collectively 87.4 hours long.
+Those episodes are from 15 different shows.
+evan: today
+script: Today is Sunday, Sep 17th
+
+evan: weight_graph
+script: Here is your weight graph

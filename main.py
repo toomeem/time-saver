@@ -116,8 +116,6 @@ def hook():
 		case "temp":
 			if not log_command("temp"):
 				text_me(f'''{get_weather("temp")}°''')
-		case "spam":
-			spam(args)
 		case "weather":
 			if not log_command("weather"):
 				text_me(formatted_weather())
@@ -180,7 +178,6 @@ def rn(target="%H:%M"):
 	now = datetime.now(tz)
 	return now.strftime(target)
 
-
 def log_command(name):
 	with open("text_files/command_list", "a") as command_file:
 		command_file.write(f"{name}\n")
@@ -204,7 +201,6 @@ def days_until(target, start=None, return_days=False):
 		return int(difference.days)
 	return difference
 
-
 def alarm():
 	if log_command("alarm"):
 		return
@@ -218,113 +214,17 @@ def alarm():
 		alarm_state = "off" if alarm_on else "on"
 		return(f"Your alarm is now {alarm_state}")
 
-
-def spam(message):
-	if log_command("spam"):
-		return
-	for i in range(5):
-		text_me(message)
-		time.sleep(2)
-
-
 def school():
 	if log_command("school"):
 		return
 	try:
-		left = days_until("09/15/2023", return_days=True)
-		total = days_until("09/15/2023", "06/15/2023", return_days=True)
+		left = days_until("06/15/2024", return_days=True)
+		total = days_until("06/15/2024", "09/15/2023", return_days=True)
 		message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n" # type: ignore
-		message += f"Days until I move out - {left}"
+		message += f"School ends in {left} days"
 		text_me(message)
 	except:
 		text_me("Error")
-
-
-def bday_famousbirthdays():
-	if log_command("bday_famousbirthdays"):
-		return
-	month = rn("%B").lower()
-	day = str(int(rn("%d")))
-	url = f"https://www.famousbirthdays.com/{month}{day}.html"
-	bday_page = requests.get(url, headers=request_header)
-	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
-	raw_bday_list = list(
-		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
-	for i in range(len(raw_bday_list)):
-		try:
-			not_used = int(raw_bday_list[i])
-			raw_bday_list.remove(raw_bday_list[i])
-		except:
-			pass
-	fake_famous = [
-		"TikTok Star", "Reality Star", "Gospel Singer",
-		"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
-		"Family Member", "Dubsmash Star", "Twitch Star", "Stylist",
-		"eSports Player", "Cat", "Dog", "Rugby Player", "Soap Opera Actress",
-		"World Music Singer"
-	]
-	bday_list = []
-	name = None
-	birth = None
-	death = None
-	job = None
-	for i in range(len(raw_bday_list)):
-		if i % 2 == 0:
-			if raw_bday_list[i].count(",") > 1:
-				name = ",".join(raw_bday_list[i].split(",")[:-1])
-				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
-				death = "?"
-				if int(rn("%Y")) - birth < 18:
-					continue
-			elif raw_bday_list[i].count(",") == 1:
-				name = raw_bday_list[i].split(",")[0]
-				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
-				death = "?"
-				if int(rn("%Y")) - birth < 18:
-					continue
-			else:
-				name = raw_bday_list[i].split("(")[0]
-				birth = int(raw_bday_list[i].split("(")[-1].split("-")[0])
-				death = int(raw_bday_list[i].split("(")[-1].replace(")", "").split("-")[-1])
-			job = raw_bday_list[i+1]
-			bday_list.append({"name":name.strip().replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"famousbirthdays"})
-	final_bday_list = []
-	for i in range(len(bday_list)):
-		makes_list = False
-		if bday_list[i]["death"] != "?":
-			makes_list = True
-		if not bday_list[i]["job"] in fake_famous:
-			makes_list = True
-		if makes_list:
-			final_bday_list.append(bday_list[i])
-	return final_bday_list
-
-
-def bday_ducksters():
-	month = rn("%B").lower()
-	day = str(int(rn("%d")))
-	url = f"https://www.ducksters.com/history/{month}birthdays.php?day={day}"
-	bday_page = requests.get(url, headers=request_header)
-	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
-	bday_text = ("".join(bday_soup.get_text().split("Birthdays: \n")[1])).split("Archive:\n")[0].split("\xa0")
-	for i in range(bday_text.count("")):
-		bday_text.remove("")
-	for i in range(len(bday_text)):
-		bday_text[i] = bday_text[i].replace("\n", "")
-	bday_list = []
-	name = bday_text[1].split("(")[0].strip()
-	birth = int(bday_text[0].strip())
-	death = "?"
-	job = bday_text[1].split("(")[-1].split(")")[0].strip()
-	bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
-	for i in range(2, len(bday_text)):
-		name = bday_text[i].split("(")[0].strip()
-		birth = int(bday_text[i-1].split(")")[-1].strip())
-		death = "?"
-		job = bday_text[i].split("(")[-1].split(")")[0].strip()
-		bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
-	return(bday_list)
-
 
 def bday():
 	if log_command("bday"):
@@ -474,9 +374,9 @@ def spotify_data_description():
 		f"Your playlist is {track_num} songs long and it is {hours} hours long.",
 		f"It spans {release_range} years of music.",
 		f"Your playlist consisted of {artist_num} artists that represented {genre_num} different genres.",
-		f"The songs were an average of "+str(int(avg_track_len//60)) + " minutes and "+str(int(avg_track_len % 60))+" seconds long.",
-		f"The longest song was "+str(longest//60) + " minutes and "+str(longest % 60)+" seconds long.",
-		f"The shortest song was "+str(shortest//60) + " minute and "+str(shortest % 60)+" seconds long.",
+		f"The songs were an average of {min_sec(avg_track_len)} long.",
+		f"The longest song was {min_sec(longest)} long.",
+		f"The shortest song was {min_sec(shortest)} long.",
 		f"There were around {cover_num} cover songs.",
 		f'''About {round((explicits["Explicit"]/track_num)*100, 1)}% of the songs were explicit.''',
 		f"You have {len(podcast_data)} saved podcast episodes that are collectively {podcast_hours} hours long.",
@@ -681,7 +581,6 @@ def commands():
 	command_lst = [
 		"alarm -> toggles all alarms"
 		, "temp -> sends the current temperature"
-		, "spam ___ -> spams any message"
 		, "weather -> sends the current weather conditions"
 		, "quote -> sends a random quote"
 		, "school -> sends how much school is left"
@@ -711,6 +610,21 @@ def commands():
 
 
 
+
+
+
+def min_sec(total_seconds):
+	minutes = int(total_seconds//60)
+	seconds = int(round(total_seconds % 60))
+	min_string = "minutes"
+	sec_string = "seconds"
+	if minutes == 1:
+		minute_string = "minute"
+	if seconds == 1:
+		sec_string = "second"
+	if minutes == 0:
+		return f"{seconds} {sec_string}"
+	return f"{minutes} {min_string} and {seconds} {sec_string}"
 
 def check_for_duplicate_event(id):
 	with open("text_files/event_id") as event_id_file:
@@ -864,6 +778,90 @@ def log_message(message, sender):
 		return
 	with open("text_files/conversation_log", "a") as message_file:
 		message_file.write(f"{sender}: {message}\n")
+
+def bday_famousbirthdays():
+	if log_command("bday_famousbirthdays"):
+		return
+	month = rn("%B").lower()
+	day = str(int(rn("%d")))
+	url = f"https://www.famousbirthdays.com/{month}{day}.html"
+	bday_page = requests.get(url, headers=request_header)
+	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
+	raw_bday_list = list(
+		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
+	for i in range(len(raw_bday_list)):
+		try:
+			not_used = int(raw_bday_list[i])
+			raw_bday_list.remove(raw_bday_list[i])
+		except:
+			pass
+	fake_famous = [
+		"TikTok Star", "Reality Star", "Gospel Singer",
+		"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
+		"Family Member", "Dubsmash Star", "Twitch Star", "Stylist",
+		"eSports Player", "Cat", "Dog", "Rugby Player", "Soap Opera Actress",
+		"World Music Singer"
+	]
+	bday_list = []
+	name = None
+	birth = None
+	death = None
+	job = None
+	for i in range(len(raw_bday_list)):
+		if i % 2 == 0:
+			if raw_bday_list[i].count(",") > 1:
+				name = ",".join(raw_bday_list[i].split(",")[:-1])
+				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
+				death = "?"
+				if int(rn("%Y")) - birth < 18:
+					continue
+			elif raw_bday_list[i].count(",") == 1:
+				name = raw_bday_list[i].split(",")[0]
+				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
+				death = "?"
+				if int(rn("%Y")) - birth < 18:
+					continue
+			else:
+				name = raw_bday_list[i].split("(")[0]
+				birth = int(raw_bday_list[i].split("(")[-1].split("-")[0])
+				death = int(raw_bday_list[i].split("(")[-1].replace(")", "").split("-")[-1])
+			job = raw_bday_list[i+1]
+			bday_list.append({"name":name.strip().replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"famousbirthdays"})
+	final_bday_list = []
+	for i in range(len(bday_list)):
+		makes_list = False
+		if bday_list[i]["death"] != "?":
+			makes_list = True
+		if not bday_list[i]["job"] in fake_famous:
+			makes_list = True
+		if makes_list:
+			final_bday_list.append(bday_list[i])
+	return final_bday_list
+
+def bday_ducksters():
+	month = rn("%B").lower()
+	day = str(int(rn("%d")))
+	url = f"https://www.ducksters.com/history/{month}birthdays.php?day={day}"
+	bday_page = requests.get(url, headers=request_header)
+	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
+	bday_text = ("".join(bday_soup.get_text().split("Birthdays: \n")[1])).split("Archive:\n")[0].split("\xa0")
+	for i in range(bday_text.count("")):
+		bday_text.remove("")
+	for i in range(len(bday_text)):
+		bday_text[i] = bday_text[i].replace("\n", "")
+	bday_list = []
+	name = bday_text[1].split("(")[0].strip()
+	birth = int(bday_text[0].strip())
+	death = "?"
+	job = bday_text[1].split("(")[-1].split(")")[0].strip()
+	bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
+	for i in range(2, len(bday_text)):
+		name = bday_text[i].split("(")[0].strip()
+		birth = int(bday_text[i-1].split(")")[-1].strip())
+		death = "?"
+		job = bday_text[i].split("(")[-1].split(")")[0].strip()
+		bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
+	return(bday_list)
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")
@@ -1349,7 +1347,6 @@ def get_show_durations(data):
 def daily_funcs():
 	clear_file("text_files/cancel")
 
-
 def num_suffix(num):
 	num = str(int(num))
 	if len(num) > 2:
@@ -1387,12 +1384,14 @@ def event_loop():
 				suffix = num_suffix(int(rn("%d")[1]))
 				gym_day_num = get_gym_day_num()
 				message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
-				if day_num == 1:
-					message += "It's the first of the month!\n"
-				if gym_day_num == 1:
+				if gym_day_num == 0:
 					message+="It's leg day :(\n"
-				message += f'''You are hitting {gym_schedule[gym_day_num].lower()} today!\n'''
-				message += f'''You move out in {days_until("09/15/2023", return_days=True)-1} days\n'''
+				elif gym_day_num == 1:
+					message+="It's chest + shoulders day\n"
+				elif gym_day_num == 2:
+					message+="It's arm day!\n"
+				elif gym_day_num == 3:
+					message+="It's back + abs day\n"
 				message += "Here's today's weather:\n\t"
 				message += formatted_weather().replace("\n", "\n\t")
 				text_me(message)
@@ -1409,7 +1408,9 @@ def event_loop():
 			if log_command("morning quote"):
 				time.sleep(10)
 			else:
-				text_me(f"Here's today's quote:\n\n\t{get_quote()}")
+				text_me(f"Here's today's quote:")
+				time.sleep(1)
+				text_me(get_quote())
 				time.sleep(60)
 		if rn() == "06:00": # daily operations
 			daily_funcs()
