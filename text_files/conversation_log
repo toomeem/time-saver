@@ -724,3 +724,671 @@ script: Today is Sunday, Sep 17th
 
 evan: weight_graph
 script: Here is your weight graph
+script: Good Morning!
+Today is Sunday, September 17th
+It's leg day :(
+Here's today's weather:
+	Temperature - 64°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+script: Black History Month must be more than just a month of remembrance; it should be a tribute to our history and reminder of the work that lies in the months and years ahead.
+
+script: What's your weight?
+script: nvm
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: good choice
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: Pick an exercise(0 to end the workout)
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: good choice
+script: How many reps did you do?
+evan: 5
+script: What weight did you use?
+evan: 200
+script: What was your RPE?
+evan: 8
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 10
+script: What was your RPE?
+evan: 9
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 200
+script: What was your RPE?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 100
+script: What was your RPE?
+evan: 9
+evan: commands
+script: alarm -> toggles all alarms
+temp -> sends the current temperature
+weather -> sends the current weather conditions
+quote -> sends a random quote
+school -> sends how much school is left
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month, week, and school cycle
+clean -> performs some functions that keep this bot running
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+script: spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: wait
+script: done
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 10
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 10
+script: What was your RPE?
+evan: 10
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 10
+script: What was your RPE?
+evan: 10
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 10
+script: Good choice
+evan: 10
+script: That command does not exist.
+To see a list of all commands, text "commands".
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 10
+script: What was your RPE?
+evan: 10
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 100
+script: What was your RPE?
+evan: 9
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 100
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 100
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: no
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 0
+script: Workout Logged
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 10
+script: Another set?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 100
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+script: 1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: gym
+script: Pick an exercise(0 to end the workout)
+1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 200
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 200
+script: What was your RPE?
+evan: 9
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 1
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 200
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 200
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: no
+script: Pick an exercise(0 to end the workout)
+
+1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 8
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 8
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: no
+script: Pick an exercise(0 to end the workout)
+
+1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 0
+script: Workout Logged
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: no
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 10
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 150
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: no
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 9
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: no
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 10
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 150
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: no
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 8
+script: What weight did you use?
+evan: 140
+script: What was your RPE?
+evan: 10
+script: Another set?
+evan: no
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 0
+script: Workout Logged

@@ -80,17 +80,16 @@ plot_attributes = {
 gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 
 
-exercise_list = json.load(open("text_files/exercises.json"))
+exercise_list = list(json.load(open("text_files/exercises.json")))
 
 def text_me(body, media_url=None):
-	if body in ["", None]:
+	if not isinstance(body, str):
 		return
 	try:
-		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 		log_message(body, "script")
+		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 	except:
 		pass
-
 
 @app.route("/", methods=["POST"])
 def hook():
@@ -165,7 +164,7 @@ def hook():
 		case "runtimes":
 			send_podcast_runtime_graph()
 		case "gym":
-			start_workout()
+			start_workout(exercise_list)
 		case _:
 			text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -530,7 +529,7 @@ def send_podcast_runtime_graph():
 	text_me("Here are the podcasts you listen to.", graph_url)
 	os.remove("podcast_runtime_graph.png")
 
-def start_workout():
+def start_workout(all_exercises):
 	if log_command("start_workout"):
 		return
 	day_type_num = get_gym_day_num()
@@ -541,25 +540,23 @@ def start_workout():
 	with open("text_files/current_workout", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
 	quit_workout = False
-	time.sleep(5)
 	while not quit_workout:
-		text_me("Pick an exercise(0 to end the workout)")
-		todays_exercises = get_day_exercises(day_type_num)
-		for i in range(len(todays_exercises)):
-			todays_exercises = f'''{todays_exercises[i]["num"]}: {todays_exercises[i]["name"]}'''
-		today_exercises = "\n".join(todays_exercises)
-		pprint(today_exercises)
-		text_me(today_exercises)
-		exercise_num = get_response(wait_time=900)
-		if exercise_num == "0":
+		raw_todays_exercises = get_day_exercises(all_exercises)
+		todays_exercises = []
+		for i in raw_todays_exercises:
+			todays_exercises.append(f'''{i["num"]}: {i["name"]}''')
+		todays_exercises ="\n".join(todays_exercises)
+		text_me("Pick an exercise(0 to end the workout)\n\n"+todays_exercises)
+		exercise_num = int(get_response(wait_time=900))
+		if exercise_num == 0:
 			quit_workout = True
 		else:
-			text_me("good choice")
-			time.sleep(10)
-			log_set(exercise_num, True)
+			text_me("Good choice")
+			time.sleep(210)
+			log_set(exercise_num, is_first_set(exercise_num))
 			another_set = get_response("Another set?", 900)
 			while another_set == "yes":
-				time.sleep(10)
+				time.sleep(210)
 				log_set(exercise_num)
 				another_set = get_response("Another set?", 900)
 	end_workout()
@@ -570,7 +567,6 @@ def desc():
 	message = '''I am Evan's personal bot.
 	If I am going crazy and you need to terminate me, text "kill".
 	If you would like to see my commands, text "commands".
-	I will pass all suggestions along to my developer.
 	Have an amazing day :)
 	'''
 	text_me(message)
@@ -613,13 +609,18 @@ def commands():
 
 
 
+def is_first_set(num):
+	with open("text_files/current_workout") as workout_file:
+		exercises = dict(json.load(workout_file))["exercises"]
+	return not search_exercises(num) in list(exercises.keys())
+
 def min_sec(total_seconds):
 	minutes = int(total_seconds//60)
 	seconds = int(round(total_seconds % 60))
 	min_string = "minutes"
 	sec_string = "seconds"
 	if minutes == 1:
-		minute_string = "minute"
+		min_string = "minute"
 	if seconds == 1:
 		sec_string = "second"
 	if minutes == 0:
@@ -630,30 +631,24 @@ def check_for_duplicate_event(id):
 	with open("text_files/event_id") as event_id_file:
 		file_id = event_id_file.readline().strip()
 	if file_id != id:
-		print("duplicate process detected, aborting...")
 		return True
 	return False
 
-def get_day_exercises(day_num):
+def get_day_exercises(all_exercises):
 	if log_command("get_day_exercises"):
 		return
-	todays_exercises = [i for i in exercise_list if i["exercise_day"] == gym_schedule[day_num]]
+	day_num = get_gym_day_num()
+	todays_exercises = [i for i in all_exercises if gym_schedule[day_num] in i["exercise_day"]]
 	return todays_exercises
 
-def search_exercises(name=None, num=None):
+def search_exercises(num):
 	if log_command("search_exercises"):
 		return
-	with open("text_files/exercise_data.json") as exercise_file:
-		exercise_list = json.load(exercise_file)
-	if name is not None:
-		for i in exercise_list:
-			if exercise_list[i]["name"] == name:
-				return i
-		return None
-	if num is not None:
-		for i in exercise_list:
-			if i["num"] == num:
-				return i
+	with open("text_files/exercises.json") as exercise_file:
+		exercise_list = list(json.load(exercise_file))
+	for i in exercise_list:
+		if int(i["num"]) == num:
+			return i["name"]
 
 def log_set(exercise_num, first=False):
 	if log_command("log_set"):
@@ -661,16 +656,16 @@ def log_set(exercise_num, first=False):
 	reps = int(get_response("How many reps did you do?", 600))
 	weight = int(get_response("What weight did you use?", 600))
 	rpe = int(get_response("What was your RPE?", 600))
-	name = search_exercises(num=exercise_num)
+	name = search_exercises(exercise_num)
 	with open("text_files/current_workout") as workout_file:
 		workout_dict = dict(json.load(workout_file))
 	if first:
-		workout_dict["exercises"][exercise_num] = {"sets": 1, "reps": [reps], "weight": [weight], "rpe": [rpe]}
+		workout_dict["exercises"][name] = {"sets": 1, "reps": [reps], "weight": [weight], "rpe": [rpe]}
 	else:
-		workout_dict["exercises"][exercise_num]["sets"] += 1
-		workout_dict["exercises"][exercise_num]["reps"].append(reps)
-		workout_dict["exercises"][exercise_num]["weight"].append(weight)
-		workout_dict["exercises"][exercise_num]["rpe"].append(rpe)
+		workout_dict["exercises"][name]["sets"] += 1
+		workout_dict["exercises"][name]["reps"].append(reps)
+		workout_dict["exercises"][name]["weight"].append(weight)
+		workout_dict["exercises"][name]["rpe"].append(rpe)
 	with open("text_files/current_workout", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
 
@@ -967,7 +962,6 @@ def formatted_weather():
 	message += f'''Visibility - {weather["vis"].replace("10.00", "10")}''' # type: ignore
 	return message.replace("Fog/Mist", "Foggy")
 
-
 def uncancel(name):
 	with open("text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
@@ -978,7 +972,6 @@ def uncancel(name):
 		return
 	with open("text_files/cancel", "w") as cancel_file:
 		cancel_file.writelines(cancels)
-
 
 def get_quote(scan=None):
 	with open("text_files/used_quotes") as used_quotes_file:
@@ -1361,6 +1354,8 @@ def num_suffix(num):
 
 def on_start():
 	set_in_conversation(False)
+	clear_file("text_files/cancel")
+	clear_file("text_files/current_workout")
 	threading.Thread(target=event_loop).start()
 	threading.Thread(target=update_spotify_data).start()
 
@@ -1415,7 +1410,6 @@ def event_loop():
 		if rn() == "06:00": # daily operations
 			daily_funcs()
 		time.sleep(5)
-
 
 if __name__ == "__main__":
 	on_start()
