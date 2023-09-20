@@ -1392,3 +1392,38 @@ script: Pick an exercise(0 to end the workout)
 37: Dead Hang
 evan: 0
 script: Workout Logged
+script: Good Morning!
+Today is Monday, September 18th
+It's leg day :(
+Here's today's weather:
+	Temperature - 64°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: You either have chemistry or you don't, but a lot of what attracts me is a guy's mind and humor and talent. I need to get to know all those things before I fall for someone.
+
+script: What's your weight?
+script: nvm
+evan: durations
+script: Here are your longest songs.
+script: Good Morning!
+Today is Tuesday, September 19th
+It's leg day :(
+Here's today's weather:
+	Temperature - 62°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: You either have chemistry or you don't, but a lot of what attracts me is a guy's mind and humor and talent. I need to get to know all those things before I fall for someone.
+
+script: What's your weight?
+script: nvm
+evan: artists
+script: Here are your top artists.
+evan: weight
+evan: weight_graph
+script: Here is your weight graph

@@ -3,30 +3,30 @@ all dates are in month/day/year
 
 '''
 
-from flask import Flask, request
-from pprint import pprint
 import json
-import requests
-import time
-from datetime import datetime, date
-import pytz
-import random
 import os
-import numpy as np
-from bs4 import BeautifulSoup
+import random
 import re
-from twilio.rest import Client
-from dotenv import load_dotenv
-import pandas as pd
-import matplotlib.pyplot as plt
-import cloudinary.uploader
-from scipy import stats
 import threading
-import openai
-import spotipy
-from spotipy import SpotifyOAuth
+import time
 from collections import Counter
+from datetime import date, datetime
+from pprint import pprint
 
+import cloudinary.uploader
+import matplotlib.pyplot as plt
+import numpy as np
+import openai
+import pandas as pd
+import pytz
+import requests
+import spotipy
+from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+from flask import Flask, request
+from scipy import stats
+from spotipy import SpotifyOAuth
+from twilio.rest import Client
 
 load_dotenv()
 
@@ -93,19 +93,12 @@ def text_me(body, media_url=None):
 
 @app.route("/", methods=["POST"])
 def hook():
-	message = dict(request.values)["Body"]
-	if message.lower().strip() == "kill":
+	message = dict(request.values)["Body"].lower()
+	if message.strip() == "kill":
 		kill()
 	if in_conversation():
 		log_response(message)
 		return "200"
-	if " " in message:
-		message = message.split(" ")
-		args = message[1:]
-		message = message[0].lower()
-	else:
-		args = []
-		message = message.lower()
 	log_message(message, "evan")
 	match message:
 		case "kill":
@@ -125,7 +118,10 @@ def hook():
 			school()
 		case "scan":
 			if not log_command("scan"):
-				text_me(get_quote(args[0]))
+				if " " not in message:
+					text_me("You forgot to include a keyword")
+				else:
+					text_me(get_quote(message.split(" ")[1]))
 		case "bday":
 			text_me(bday())
 		case "today":
@@ -137,10 +133,16 @@ def hook():
 		case "clean":
 			clean()
 		case "weight":
-			log_weight(args[0])
+			if " " not in message:
+				text_me("You forgot to include a number")
+			else:
+				log_weight(message.split(" ")[1])
 			text_me("Logged")
 		case "calories":
-			text_me(log_calories(args))
+			if " " not in message:
+				text_me("You forgot to include a number")
+			else:
+				text_me(log_calories(message.split(" ")[1]))
 		case "weight_graph":
 			send_weight_graph(plot_attributes)
 		case "hi":
@@ -219,7 +221,7 @@ def school():
 	try:
 		left = days_until("06/15/2024", return_days=True)
 		total = days_until("06/15/2024", "09/15/2023", return_days=True)
-		message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n" # type: ignore
+		message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n"
 		message += f"School ends in {left} days"
 		text_me(message)
 	except:
@@ -928,38 +930,38 @@ def get_weather(data="full"):
 def formatted_weather():
 	weather = get_weather()
 	try:
-		conditions = weather["conditions"] # type: ignore
-		temp = weather["temp"] # type: ignore
-		humidity = weather["humidity"] # type: ignore
-		wind_speed = weather["wind_speed"] # type: ignore
-		dewpoint = weather["dewpoint"] # type: ignore
+		conditions = weather["conditions"]
+		temp = weather["temp"]
+		humidity = weather["humidity"]
+		wind_speed = weather["wind_speed"]
+		dewpoint = weather["dewpoint"]
 	except:
 		error_report("formatted_weather")
 		return "error"
 	message = ""
 	message += f"Temperature - {temp}°\n"
 	message += f"Conditions - {conditions}\n"
-	if 62 <dewpoint<69: # type: ignore
+	if 62 <dewpoint<69:
 		message += "Humidity - Above Average\n"
-	elif 69<=dewpoint: # type: ignore
+	elif 69<=dewpoint:
 		message += "Humidity - High\n"
-	elif humidity<=30: # type: ignore
+	elif humidity<=30:
 		message += "Humidity - Very Low\n"
-	elif humidity<=45: # type: ignore
+	elif humidity<=45:
 		message += "Humidity - Low\n"
 	else:
 		message += "Humidity - Average\n"
-	if wind_speed>=25: # type: ignore
+	if wind_speed>=25:
 		message += "Wind Speed - Extremely High\n"
-	elif 17<=wind_speed<25: # type: ignore
+	elif 17<=wind_speed<25:
 		message += "Wind Speed - Very High\n"
-	elif 10<=wind_speed<17: # type: ignore
+	elif 10<=wind_speed<17:
 		message += "Wind Speed - Windy\n"
-	elif 5<=wind_speed<10: # type: ignore
+	elif 5<=wind_speed<10:
 		message += "Wind Speed - Light Breeze\n"
 	else:
 		message += "Wind Speed - Negligible\n"
-	message += f'''Visibility - {weather["vis"].replace("10.00", "10")}''' # type: ignore
+	message += f'''Visibility - {weather["vis"].replace("10.00", "10")}'''
 	return message.replace("Fog/Mist", "Foggy")
 
 def uncancel(name):
