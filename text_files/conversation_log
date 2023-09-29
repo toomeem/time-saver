@@ -1427,3 +1427,306 @@ script: Here are your top artists.
 evan: weight
 evan: weight_graph
 script: Here is your weight graph
+script: Good Morning!
+Today is Wednesday, September 20th
+It's leg day :(
+Here's today's weather:
+	Temperature - 60°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: The possession of arbitrary power has always, the world over, tended irresistibly to destroy humane sensibility, magnanimity, and truth.
+
+script: What's your weight?
+script: nvm
+evan: hi
+script: Hello!
+script: Good Morning!
+Today is Thursday, September 21st
+It's leg day :(
+Here's today's weather:
+	Temperature - 61°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: The possession of arbitrary power has always, the world over, tended irresistibly to destroy humane sensibility, magnanimity, and truth.
+
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Friday, September 22nd
+It's leg day :(
+Here's today's weather:
+	Temperature - 60°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: True security is based on people's welfare - on a thriving economy, on strong public health and education programmes, and on fundamental respect for our common humanity. Development, peace, disarmament, reconciliation and justice are not separate from security; they help to underpin it.
+
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 0
+script: Workout Logged
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 0
+script: Workout Logged
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+16: Dumbbell Bicep Curl
+18: Dumbbell Hammer Curl
+19: Tricep Extension
+20: Tricep Pushdown
+21: Dips
+26: Barbell Wrist Curl
+37: Dead Hang
+evan: 0
+script: Workout Logged
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+3: Deadlift
+22: Lat Pulldown
+23: Seated Cable Row
+24: Chin Ups
+25: Pull Ups
+27: Lat Pushdowns
+28: Shrugs
+29: Single Arm Row
+30: Barbell Row
+31: Cable Crunch
+32: Plank
+33: Russian Twist
+34: Side Plank
+35: Kettlebell Side Bend
+36: Hanging Leg Raise
+37: Dead Hang
+evan: h
+evan: hi
+script: Hello!
+evan: 0
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+3: Deadlift
+22: Lat Pulldown
+23: Seated Cable Row
+24: Chin Ups
+25: Pull Ups
+27: Lat Pushdowns
+28: Shrugs
+29: Single Arm Row
+30: Barbell Row
+31: Cable Crunch
+32: Plank
+33: Russian Twist
+34: Side Plank
+35: Kettlebell Side Bend
+36: Hanging Leg Raise
+37: Dead Hang
+script: nvm
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Saturday, September 23rd
+It's back + abs day
+Here's today's weather:
+	Temperature - 56°
+	Conditions -  Light Rain
+	Humidity - Average
+	Wind Speed - Very High
+	Visibility - 8.00 mi
+script: Here's today's quote:
+script: True security is based on people's welfare - on a thriving economy, on strong public health and education programmes, and on fundamental respect for our common humanity. Development, peace, disarmament, reconciliation and justice are not separate from security; they help to underpin it.
+
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Sunday, September 24th
+It's back + abs day
+Here's today's weather:
+	Temperature - 62°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Very High
+	Visibility - 10 mi
+script: Here's today's quote:
+script: Future generations are not going to ask us what political party were you in. They are going to ask what did you do about it, when you knew the glaciers were melting.
+
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Monday, September 25th
+It's back + abs day
+Here's today's weather:
+	Temperature - 61°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: Future generations are not going to ask us what political party were you in. They are going to ask what did you do about it, when you knew the glaciers were melting.
+
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Tuesday, September 26th
+It's back + abs day
+Here's today's weather:
+	Temperature - 58°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Very High
+	Visibility - 10 mi
+script: Here's today's quote:
+script: I love dark humor that crosses the line and makes you say, 'That's so wrong!' And that's 'Family Guy' to me.
+
+script: What's your weight?
+script: nvm
+script: Good Morning!
+Today is Wednesday, September 27th
+It's back + abs day
+Here's today's weather:
+	Temperature - 53°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+evan: hi
+script: Hello!
+evan: hi
+script: Hello!
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+evan: 2
+script: Good choice
+script: How many reps did you do?
+evan: 10
+script: What weight did you use?
+evan: 320
+script: What was your RPE?
+evan: 6
+script: Another set?
+evan: yes
+script: How many reps did you do?
+script: nvm
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: hi
+script: Hello!
+script: Good Morning!
+Today is Thursday, September 28th
+It's leg day :(
+Here's today's weather:
+	Temperature - 54°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: Thanks to television, for the first time the young are seeing history made before it is censored by their elders.
+
+script: What's your weight?
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph
+evan: weight_graph
+script: Here is your weight graph

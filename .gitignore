@@ -1,3 +1,4 @@
 ngrok.exe
 .env
 event_id
+.cache

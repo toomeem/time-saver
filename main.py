@@ -33,6 +33,9 @@ load_dotenv()
 app = Flask(__name__)
 port = 5000
 dpi = 500
+height = 68
+underwight = 122
+overweight = 164
 twilio_account_sid = os.getenv("TWILIO_ACCOUNT_SID")
 twilio_auth_token = os.getenv("TWILIO_AUTH_TOKEN")
 client = Client(twilio_account_sid, twilio_auth_token)
@@ -72,8 +75,7 @@ plot_attributes = {
 		"show_moving_avg": True,
 		"show_regression_line": True,
 		"window_size": 7,
-		"bulk_dates":["01/29/2023", "08/22/2023"],
-		"cut_dates":["06/06/2023"]
+		"bulk/cut_dates": {"01/29/2023": "bulk", "08/22/2023": "bulk", "06/06/2023": "cut"}
 	}
 }
 
@@ -330,7 +332,7 @@ def send_weight_graph(plot_attributes):
 		return
 	with open("text_files/weight") as f:
 		raw_weights = f.readlines()
-	data = [date_to_num(i).split(":") for i in raw_weights]
+	data = [weight_date_format(i).split(":") for i in raw_weights]
 	data = sorted(data)
 	x = [int(i[0]) for i in data]
 	y = [float(i[1]) for i in data]
@@ -548,8 +550,12 @@ def start_workout(all_exercises):
 		for i in raw_todays_exercises:
 			todays_exercises.append(f'''{i["num"]}: {i["name"]}''')
 		todays_exercises ="\n".join(todays_exercises)
-		text_me("Pick an exercise(0 to end the workout)\n\n"+todays_exercises)
-		exercise_num = int(get_response(wait_time=900))
+		exercise_list = "Pick an exercise(0 to end the workout)\n\n"+todays_exercises
+		exercise_num = get_response(exercise_list, wait_time=900)
+		if exercise_num is None:
+			clear_file("text_files/current_workout")
+			return
+		exercise_num = int(exercise_num)
 		if exercise_num == 0:
 			quit_workout = True
 		else:
@@ -566,9 +572,10 @@ def start_workout(all_exercises):
 def desc():
 	if log_command("desc"):
 		return
-	message = '''I am Evan's personal bot.
+	message = '''
+	I am Evan's personal bot.
 	If I am going crazy and you need to terminate me, text "kill".
-	If you would like to see my commands, text "commands".
+	If you would like to see my commands, text "commands".\n
 	Have an amazing day :)
 	'''
 	text_me(message)
@@ -610,6 +617,12 @@ def commands():
 
 
 
+
+def one_rep_max(reps, weight, rpe=10):
+	if log_command("one_rep_max"):
+		return
+	reps += 10-rpe
+	return round(weight/(1.0278-(0.0278*reps)))
 
 def is_first_set(num):
 	with open("text_files/current_workout") as workout_file:
@@ -655,10 +668,16 @@ def search_exercises(num):
 def log_set(exercise_num, first=False):
 	if log_command("log_set"):
 		return
-	reps = int(get_response("How many reps did you do?", 600))
-	weight = int(get_response("What weight did you use?", 600))
-	rpe = int(get_response("What was your RPE?", 600))
+	reps = get_response("How many reps did you do?", 600)
+	weight = get_response("What weight did you use?", 600)
+	rpe = get_response("What was your RPE?", 600)
 	name = search_exercises(exercise_num)
+	if name is None or reps is None or weight is None or rpe is None:
+		end_workout()
+		return
+	reps = int(reps)
+	weight = float(weight)
+	rpe = float(rpe)
 	with open("text_files/current_workout") as workout_file:
 		workout_dict = dict(json.load(workout_file))
 	if first:
@@ -733,19 +752,21 @@ def get_response(question=None, wait_time=300, confirmation=None):
 		text_me(question)
 	set_in_conversation(True)
 	start = time.time()
-	while True:
+	time_left = start + wait_time - time.time()
+	while time_left > 0:
 		with open("text_files/response") as message_file:
 			response = message_file.read().strip()
 		if response != "":
 			set_in_conversation(False)
 			if confirmation != None:
 				text_me(confirmation)
+			if response.lower() == "pass":
+				return
 			return response
-		if time.time() - start > wait_time:
-			text_me("nvm")
-			set_in_conversation(False)
-			return
 		time.sleep(.5)
+	text_me("nvm")
+	set_in_conversation(False)
+
 
 def get_weight():
 	if log_command("get_weight"):
@@ -1008,11 +1029,15 @@ def get_quote(scan=None):
 		return message
 	return quote
 
+def weight_date_format(line):
+	date = line.split(":")[0]
+	weight = line.split(":")[1]
+	return f"{date_to_num(date)}:{weight}"
+
 def date_to_num(date):
-	weight = date.split(":")[1]
-	date = date.split(":")[0].split("/")
+	date = date.split("/")
 	date = str(int(date[0])*30 + int(date[1]) + int(date[2])*365)
-	return date + ":" + weight
+	return date
 
 def moving_avg(data, window):
 	avg = []
@@ -1022,14 +1047,39 @@ def moving_avg(data, window):
 		avg.insert(0, avg[0])
 	return avg
 
+def closest_num(num, lst):
+	closest = 0
+	num = int(num)
+	for i in range(len(lst)):
+		if abs(lst[i]-num) < abs(lst[closest]-num):
+			closest = i
+	return closest
+
 def create_graph(x, y, data_type, plot_attributes):
-	show_points = plot_attributes[data_type]["show_points"]
-	show_regression_line = plot_attributes[data_type]["show_regression_line"]
-	show_moving_avg = plot_attributes[data_type]["show_moving_avg"]
-	window = plot_attributes[data_type]["window_size"]
+	plot_attributes = plot_attributes[data_type]
+	show_points = plot_attributes["show_points"]
+	show_regression_line = plot_attributes["show_regression_line"]
+	show_moving_avg = plot_attributes["show_moving_avg"]
+	window = plot_attributes["window_size"]
 	if show_points:
 		plt.scatter(x, y)
-	if show_moving_avg:
+	if show_moving_avg and data_type == "weight":
+		avg = moving_avg(y, window)
+		bulk_cut_dates = [date_to_num(i) for i in plot_attributes["bulk/cut_dates"].keys()]
+		bulk_cut_dates.sort()
+		gym_start = closest_num(bulk_cut_dates[0], x)
+		plt.plot(x[:gym_start], avg[:gym_start], color="#4063c2")
+		for i in range(len(bulk_cut_dates)):
+			start = closest_num(bulk_cut_dates[i], x)
+			color = "#b81414"
+			if i%2==0:
+				color = "#109410"
+			if i == len(bulk_cut_dates)-1:
+				plt.plot(x[start:], avg[start:], color=color)
+				continue
+			end = closest_num(bulk_cut_dates[i+1], x)
+			plt.plot(x[start:end], avg[start:end], color=color)
+	elif show_moving_avg:
 		avg = moving_avg(y, window)
 		plt.plot(x, avg)
 	if show_regression_line:
@@ -1037,7 +1087,7 @@ def create_graph(x, y, data_type, plot_attributes):
 		def slope_func(x):
 			return slope * x + intercept
 		regression_line = list(map(slope_func, x))
-		plt.plot(x, regression_line)
+		plt.plot(x, regression_line, color="#3b3b3b")
 	year_position, year = [], []
 	for i in range(int(rn("%y"))-21+1):
 		year_position.append((i+2021)*365)
@@ -1048,12 +1098,13 @@ def create_graph(x, y, data_type, plot_attributes):
 	while max(x) < year_position[-1]:
 		year_position.pop(-1)
 		year.pop(-1)
-	plt.grid(axis=plot_attributes[data_type]["grid"])
+	plt.grid(axis=plot_attributes["grid"])
 	plt.xticks(year_position, year)
-	plt.title(plot_attributes[data_type]["title"])
-	plt.xlabel(plot_attributes[data_type]["xlabel"])
-	plt.ylabel(plot_attributes[data_type]["ylabel"])
-	plt.savefig(plot_attributes[data_type]["filename"], dpi=dpi)
+	plt.title(plot_attributes["title"])
+	plt.xlabel(plot_attributes["xlabel"])
+	plt.ylabel(plot_attributes["ylabel"])
+	plt.legend(["Eating like shit", "Bulk", "Cut"])
+	plt.savefig(plot_attributes["filename"], dpi=dpi)
 
 # start of spotify functions
 
