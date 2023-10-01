@@ -10,7 +10,7 @@ import re
 import threading
 import time
 from collections import Counter
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pprint import pprint
 
 import cloudinary.uploader
@@ -285,41 +285,8 @@ def today():
 	message = rn(f"Today is %A, %b {day_num}{suffix}") + "\n"
 	text_me(message)
 
-def clean():
-	if log_command("clean"):
-		return
-	daily_funcs()
-	with open("text_files/quotes") as quotes_file:
-		quotes = list(set(quotes_file.readlines()))
-	with open("text_files/used_quotes") as used_quotes_file:
-		used_quotes = list(set(used_quotes_file.readlines()))
-	for i in quotes:
-		if i in used_quotes:
-			quotes.remove(i)
-			used_quotes.append(i)
-	quote_fix = False
-	used_fix = False
-	with open("text_files/quotes") as quotes_file:
-		if quotes != quotes_file.readlines():
-			quote_fix = True
-	with open("text_files/used_quotes") as used_quotes_file:
-		if used_quotes != used_quotes_file.readlines():
-			used_fix = True
-	if quote_fix:
-		with open("text_files/quotes", "w") as quotes_file:
-			quotes_file.writelines(quotes)
-	if used_fix:
-		with open("text_files/used_quotes", "w") as used_quotes_file:
-			used_quotes_file.writelines(used_quotes)
-	with open("text_files/alarm") as alarm_file:
-		alarm_bool = alarm_file.readline()
-		try:
-			x = int(alarm_bool)
-		except:
-			text_me("error in alarm file")
-			error_report("alarm_file")
-	update_spotify_data()
-	text_me("All Clean!")
+def clean_text():
+	clean()
 
 def log_weight(pounds):
 	if log_command("log_weight"):
@@ -616,7 +583,67 @@ def commands():
 
 
 
+def clean():
+	if log_command("clean"):
+		return
+	daily_funcs()
+	with open("text_files/quotes") as quotes_file:
+		quotes = list(set(quotes_file.readlines()))
+	with open("text_files/used_quotes") as used_quotes_file:
+		used_quotes = list(set(used_quotes_file.readlines()))
+	for i in quotes:
+		if i in used_quotes:
+			quotes.remove(i)
+			used_quotes.append(i)
+	quote_fix = False
+	used_fix = False
+	with open("text_files/quotes") as quotes_file:
+		if quotes != quotes_file.readlines():
+			quote_fix = True
+	with open("text_files/used_quotes") as used_quotes_file:
+		if used_quotes != used_quotes_file.readlines():
+			used_fix = True
+	if quote_fix:
+		with open("text_files/quotes", "w") as quotes_file:
+			quotes_file.writelines(quotes)
+	if used_fix:
+		with open("text_files/used_quotes", "w") as used_quotes_file:
+			used_quotes_file.writelines(used_quotes)
+	with open("text_files/brentford") as f:
+		games = f.readlines()
+	today = datetime.now(tz)
+	for i in range(len(games)):
+		games[i] = games[i].strip().split(":")
+		games[i][0] = games[i][0].split("/")
+		games[i] = [games[i][0][0], games[i][0][1], games[i][0][2], games[i][1], games[i][2]]
+		games[i] = [int(i) for i in games[i]]
+		games[i] = datetime(games[i][2], games[i][0], games[i][1], games[i][3], games[i][4], tzinfo=tz)
+		if (today-games[i]).total_seconds() > 0:
+			games[i] = "past"
+	upcoming_games = [i for i in games if i != "past"]
+	for i in range(len(upcoming_games)):
+		upcoming_games[i] = upcoming_games[i].strftime("%m/%d/%Y:%H:%M\n")
+	with open("text_files/brentford", "w") as f:
+		f.writelines(upcoming_games)
+	with open("text_files/alarm") as alarm_file:
+		alarm_bool = alarm_file.readline()
+		try:
+			x = int(alarm_bool)
+		except:
+			error_report("alarm_file")
+			return("error in alarm file")
+	update_spotify_data()
+	return("All Clean!")
 
+def brentford_plays_today():
+	if log_command("brentford_plays_today"):
+		return
+	with open("text_files/brentford") as brentford_file:
+		games = brentford_file.readlines()
+	today = rn("%m/%d/%Y")
+	for i in games:
+		if today in i:
+			return i.strip().split(":")[1]
 
 def one_rep_max(reps, weight, rpe=10):
 	if log_command("one_rep_max"):
@@ -1431,15 +1458,10 @@ def event_loop():
 				day_num = int(rn("%d"))
 				suffix = num_suffix(int(rn("%d")[1]))
 				gym_day_num = get_gym_day_num()
+				brentford_game = brentford_plays_today()
 				message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
-				if gym_day_num == 0:
-					message+="It's leg day :(\n"
-				elif gym_day_num == 1:
-					message+="It's chest + shoulders day\n"
-				elif gym_day_num == 2:
-					message+="It's arm day!\n"
-				elif gym_day_num == 3:
-					message+="It's back + abs day\n"
+				if isinstance(brentford_game, str):
+					message += f"Brentford plays at {brentford_game} today!\n"
 				message += "Here's today's weather:\n\t"
 				message += formatted_weather().replace("\n", "\n\t")
 				text_me(message)
@@ -1454,7 +1476,7 @@ def event_loop():
 				time.sleep(60)
 		if rn() == "11:01":
 			if log_command("morning quote"):
-				time.sleep(10)
+				time.sleep(60)
 			else:
 				text_me(f"Here's today's quote:")
 				time.sleep(1)

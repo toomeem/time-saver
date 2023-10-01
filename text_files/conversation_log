@@ -1730,3 +1730,44 @@ evan: weight_graph
 script: Here is your weight graph
 evan: weight_graph
 script: Here is your weight graph
+script: Good Morning!
+Today is Friday, September 29th
+It's chest + shoulders day
+Here's today's weather:
+	Temperature - 60°
+	Conditions -  Rain Foggy
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 3.00 mi
+script: Good Morning!
+Today is Saturday, September 30th
+It's chest + shoulders day
+Here's today's weather:
+	Temperature - 60°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: God used beautiful mathematics in creating the world.
+
+script: What's your weight?
+evan: pass
+script: thanks
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
