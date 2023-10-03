@@ -3,36 +3,39 @@ all dates are in month/day/year
 
 '''
 
-from flask import Flask, request
-from pprint import pprint
 import json
-import requests
-import time
-from datetime import datetime, date
-import pytz
-import random
 import os
-import numpy as np
-from bs4 import BeautifulSoup
+import random
 import re
-from twilio.rest import Client
-from dotenv import load_dotenv
-import pandas as pd
-import matplotlib.pyplot as plt
-import cloudinary.uploader
-from scipy import stats
 import threading
-import openai
-import spotipy
-from spotipy import SpotifyOAuth
+import time
 from collections import Counter
+from datetime import date, datetime, timedelta
+from pprint import pprint
 
+import cloudinary.uploader
+import matplotlib.pyplot as plt
+import numpy as np
+import openai
+import pandas as pd
+import pytz
+import requests
+import spotipy
+from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+from flask import Flask, request
+from scipy import stats
+from spotipy import SpotifyOAuth
+from twilio.rest import Client
 
 load_dotenv()
 
 app = Flask(__name__)
 port = 5000
-dpi =500
+dpi = 500
+height = 68
+underwight = 122
+overweight = 164
 twilio_account_sid = os.getenv("TWILIO_ACCOUNT_SID")
 twilio_auth_token = os.getenv("TWILIO_AUTH_TOKEN")
 client = Client(twilio_account_sid, twilio_auth_token)
@@ -61,7 +64,6 @@ cloudinary.config(
 	api_secret=cloudinary_api_secret
 )
 
-
 plot_attributes = {
 	"weight": {
 		"grid": "y",
@@ -73,34 +75,32 @@ plot_attributes = {
 		"show_moving_avg": True,
 		"show_regression_line": True,
 		"window_size": 7,
-		"bulk_dates":["01/29/2023"],
-		"cut_dates":["06/06/2023"]
+		"bulk/cut_dates": {"01/29/2023": "bulk", "08/22/2023": "bulk", "06/06/2023": "cut"}
 	}
 }
 
+gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
+
+
+exercise_list = list(json.load(open("text_files/exercises.json")))
+
 def text_me(body, media_url=None):
+	if not isinstance(body, str):
+		return
 	try:
-		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 		log_message(body, "script")
+		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 	except:
 		pass
 
-
 @app.route("/", methods=["POST"])
 def hook():
-	message = dict(request.values)["Body"]
-	if message.lower().strip() == "kill":
+	message = dict(request.values)["Body"].lower()
+	if message.strip() == "kill":
 		kill()
 	if in_conversation():
 		log_response(message)
 		return "200"
-	if " " in message:
-		message = message.split(" ")
-		args = message[1:]
-		message = message[0].lower()
-	else:
-		args = []
-		message = message.lower()
 	log_message(message, "evan")
 	match message:
 		case "kill":
@@ -110,8 +110,6 @@ def hook():
 		case "temp":
 			if not log_command("temp"):
 				text_me(f'''{get_weather("temp")}°''')
-		case "spam":
-			spam(args)
 		case "weather":
 			if not log_command("weather"):
 				text_me(formatted_weather())
@@ -122,7 +120,10 @@ def hook():
 			school()
 		case "scan":
 			if not log_command("scan"):
-				text_me(get_quote(args[0]))
+				if " " not in message:
+					text_me("You forgot to include a keyword")
+				else:
+					text_me(get_quote(message.split(" ")[1]))
 		case "bday":
 			text_me(bday())
 		case "today":
@@ -134,10 +135,16 @@ def hook():
 		case "clean":
 			clean()
 		case "weight":
-			log_weight(args[0])
+			if " " not in message:
+				text_me("You forgot to include a number")
+			else:
+				log_weight(message.split(" ")[1])
 			text_me("Logged")
 		case "calories":
-			text_me(log_calories(args))
+			if " " not in message:
+				text_me("You forgot to include a number")
+			else:
+				text_me(log_calories(message.split(" ")[1]))
 		case "weight_graph":
 			send_weight_graph(plot_attributes)
 		case "hi":
@@ -160,6 +167,8 @@ def hook():
 			send_episode_graph()
 		case "runtimes":
 			send_podcast_runtime_graph()
+		case "gym":
+			start_workout(exercise_list)
 		case _:
 			text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -171,7 +180,6 @@ def kill():
 def rn(target="%H:%M"):
 	now = datetime.now(tz)
 	return now.strftime(target)
-
 
 def log_command(name):
 	with open("text_files/command_list", "a") as command_file:
@@ -186,7 +194,7 @@ def days_until(target, start=None, return_days=False):
 		return "error"
 	target = target.split("/")
 	target = date(year=int(target[2]), month=int(target[0]), day=int(target[1]))
-	if start == None:
+	if start is None:
 		start = date.today()
 	else:
 		start = start.split("/")
@@ -195,7 +203,6 @@ def days_until(target, start=None, return_days=False):
 	if return_days:
 		return int(difference.days)
 	return difference
-
 
 def alarm():
 	if log_command("alarm"):
@@ -210,113 +217,17 @@ def alarm():
 		alarm_state = "off" if alarm_on else "on"
 		return(f"Your alarm is now {alarm_state}")
 
-
-def spam(message):
-	if log_command("spam"):
-		return
-	for i in range(5):
-		text_me(message)
-		time.sleep(2)
-
-
 def school():
 	if log_command("school"):
 		return
 	try:
-		left = days_until("09/15/2023", return_days=True)
-		total = days_until("09/15/2023", "06/15/2023", return_days=True)
-		message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n" # type: ignore
-		message += f"Days until I move out - {left}"
+		left = days_until("06/15/2024", return_days=True)
+		total = days_until("06/15/2024", "09/15/2023", return_days=True)
+		message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n"
+		message += f"School ends in {left} days"
 		text_me(message)
 	except:
 		text_me("Error")
-
-
-def bday_famousbirthdays():
-	if log_command("bday_famousbirthdays"):
-		return
-	month = rn("%B").lower()
-	day = str(int(rn("%d")))
-	url = f"https://www.famousbirthdays.com/{month}{day}.html"
-	bday_page = requests.get(url, headers=request_header)
-	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
-	raw_bday_list = list(
-		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
-	for i in range(len(raw_bday_list)):
-		try:
-			not_used = int(raw_bday_list[i])
-			raw_bday_list.remove(raw_bday_list[i])
-		except:
-			pass
-	fake_famous = [
-		"TikTok Star", "Reality Star", "Gospel Singer",
-		"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
-		"Family Member", "Dubsmash Star", "Twitch Star", "Stylist",
-		"eSports Player", "Cat", "Dog", "Rugby Player", "Soap Opera Actress",
-		"World Music Singer"
-	]
-	bday_list = []
-	name = None
-	birth = None
-	death = None
-	job = None
-	for i in range(len(raw_bday_list)):
-		if i % 2 == 0:
-			if raw_bday_list[i].count(",") > 1:
-				name = ",".join(raw_bday_list[i].split(",")[:-1])
-				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
-				death = "?"
-				if int(rn("%Y")) - birth < 18:
-					continue
-			elif raw_bday_list[i].count(",") == 1:
-				name = raw_bday_list[i].split(",")[0]
-				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
-				death = "?"
-				if int(rn("%Y")) - birth < 18:
-					continue
-			else:
-				name = raw_bday_list[i].split("(")[0]
-				birth = int(raw_bday_list[i].split("(")[-1].split("-")[0])
-				death = int(raw_bday_list[i].split("(")[-1].replace(")", "").split("-")[-1])
-			job = raw_bday_list[i+1]
-			bday_list.append({"name":name.strip().replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"famousbirthdays"})
-	final_bday_list = []
-	for i in range(len(bday_list)):
-		makes_list = False
-		if bday_list[i]["death"] != "?":
-			makes_list = True
-		if not bday_list[i]["job"] in fake_famous:
-			makes_list = True
-		if makes_list:
-			final_bday_list.append(bday_list[i])
-	return final_bday_list
-
-
-def bday_ducksters():
-	month = rn("%B").lower()
-	day = str(int(rn("%d")))
-	url = f"https://www.ducksters.com/history/{month}birthdays.php?day={day}"
-	bday_page = requests.get(url, headers=request_header)
-	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
-	bday_text = ("".join(bday_soup.get_text().split("Birthdays: \n")[1])).split("Archive:\n")[0].split("\xa0")
-	for i in range(bday_text.count("")):
-		bday_text.remove("")
-	for i in range(len(bday_text)):
-		bday_text[i] = bday_text[i].replace("\n", "")
-	bday_list = []
-	name = bday_text[1].split("(")[0].strip()
-	birth = int(bday_text[0].strip())
-	death = "?"
-	job = bday_text[1].split("(")[-1].split(")")[0].strip()
-	bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
-	for i in range(2, len(bday_text)):
-		name = bday_text[i].split("(")[0].strip()
-		birth = int(bday_text[i-1].split(")")[-1].strip())
-		death = "?"
-		job = bday_text[i].split("(")[-1].split(")")[0].strip()
-		bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
-	return(bday_list)
-
 
 def bday():
 	if log_command("bday"):
@@ -374,41 +285,8 @@ def today():
 	message = rn(f"Today is %A, %b {day_num}{suffix}") + "\n"
 	text_me(message)
 
-def clean():
-	if log_command("clean"):
-		return
-	daily_funcs()
-	with open("text_files/quotes") as quotes_file:
-		quotes = list(set(quotes_file.readlines()))
-	with open("text_files/used_quotes") as used_quotes_file:
-		used_quotes = list(set(used_quotes_file.readlines()))
-	for i in quotes:
-		if i in used_quotes:
-			quotes.remove(i)
-			used_quotes.append(i)
-	quote_fix = False
-	used_fix = False
-	with open("text_files/quotes") as quotes_file:
-		if quotes != quotes_file.readlines():
-			quote_fix = True
-	with open("text_files/used_quotes") as used_quotes_file:
-		if used_quotes != used_quotes_file.readlines():
-			used_fix = True
-	if quote_fix:
-		with open("text_files/quotes", "w") as quotes_file:
-			quotes_file.writelines(quotes)
-	if used_fix:
-		with open("text_files/used_quotes", "w") as used_quotes_file:
-			used_quotes_file.writelines(used_quotes)
-	with open("text_files/alarm") as alarm_file:
-		alarm_bool = alarm_file.readline()
-		try:
-			x = int(alarm_bool)
-		except:
-			text_me("error in alarm file")
-			error_report("alarm_file")
-	update_spotify_data()
-	text_me("All Clean!")
+def clean_text():
+	clean()
 
 def log_weight(pounds):
 	if log_command("log_weight"):
@@ -421,7 +299,7 @@ def send_weight_graph(plot_attributes):
 		return
 	with open("text_files/weight") as f:
 		raw_weights = f.readlines()
-	data = [date_to_num(i).split(":") for i in raw_weights]
+	data = [weight_date_format(i).split(":") for i in raw_weights]
 	data = sorted(data)
 	x = [int(i[0]) for i in data]
 	y = [float(i[1]) for i in data]
@@ -433,7 +311,6 @@ def send_weight_graph(plot_attributes):
 	text_me("Here is your weight graph", graph_url)
 	os.remove("weight.png")
 
-
 def log_calories(cals):
 	if log_command("log_calories"):
 		return
@@ -441,14 +318,12 @@ def log_calories(cals):
 		calories_file.write(f'''{rn("%m/%d/%Y")}:{cals[0]}\n''')
 	return "Logged"
 
-
 def update_spotify_data():
 	if log_command("update_spotify_data"):
 		return
 	threading.Thread(target=podcasts, args=(spotify_client,)).start()
 	threading.Thread(target=get_genres, args=(spotify_client,)).start()
 	get_all_songs(spotify_client)
-
 
 def spotify_data_description():
 	data, track_num = read_spotify_data()
@@ -469,9 +344,9 @@ def spotify_data_description():
 		f"Your playlist is {track_num} songs long and it is {hours} hours long.",
 		f"It spans {release_range} years of music.",
 		f"Your playlist consisted of {artist_num} artists that represented {genre_num} different genres.",
-		f"The songs were an average of "+str(int(avg_track_len//60)) + " minutes and "+str(int(avg_track_len % 60))+" seconds long.",
-		f"The longest song was "+str(longest//60) + " minutes and "+str(longest % 60)+" seconds long.",
-		f"The shortest song was "+str(shortest//60) + " minute and "+str(shortest % 60)+" seconds long.",
+		f"The songs were an average of {min_sec(avg_track_len)} long.",
+		f"The longest song was {min_sec(longest)} long.",
+		f"The shortest song was {min_sec(shortest)} long.",
 		f"There were around {cover_num} cover songs.",
 		f'''About {round((explicits["Explicit"]/track_num)*100, 1)}% of the songs were explicit.''',
 		f"You have {len(podcast_data)} saved podcast episodes that are collectively {podcast_hours} hours long.",
@@ -625,13 +500,49 @@ def send_podcast_runtime_graph():
 	text_me("Here are the podcasts you listen to.", graph_url)
 	os.remove("podcast_runtime_graph.png")
 
+def start_workout(all_exercises):
+	if log_command("start_workout"):
+		return
+	day_type_num = get_gym_day_num()
+	workout_dict = {
+		"exercises": {}, "start": time.time(), "end": None,
+		"day_type": gym_schedule[day_type_num]
+	}
+	with open("text_files/current_workout", "w") as workout_file:
+		json.dump(workout_dict, workout_file, indent=2)
+	quit_workout = False
+	while not quit_workout:
+		raw_todays_exercises = get_day_exercises(all_exercises)
+		todays_exercises = []
+		for i in raw_todays_exercises:
+			todays_exercises.append(f'''{i["num"]}: {i["name"]}''')
+		todays_exercises ="\n".join(todays_exercises)
+		exercise_list = "Pick an exercise(0 to end the workout)\n\n"+todays_exercises
+		exercise_num = get_response(exercise_list, wait_time=900)
+		if exercise_num is None:
+			clear_file("text_files/current_workout")
+			return
+		exercise_num = int(exercise_num)
+		if exercise_num == 0:
+			quit_workout = True
+		else:
+			text_me("Good choice")
+			time.sleep(180)
+			log_set(exercise_num, is_first_set(exercise_num))
+			another_set = get_response("Another set?", 900)
+			while another_set == "yes":
+				time.sleep(180)
+				log_set(exercise_num)
+				another_set = get_response("Another set?", 900)
+	end_workout()
+
 def desc():
 	if log_command("desc"):
 		return
-	message = '''I am Evan's personal bot.
+	message = '''
+	I am Evan's personal bot.
 	If I am going crazy and you need to terminate me, text "kill".
-	If you would like to see my commands, text "commands".
-	I will pass all suggestions along to my developer.
+	If you would like to see my commands, text "commands".\n
 	Have an amazing day :)
 	'''
 	text_me(message)
@@ -642,7 +553,6 @@ def commands():
 	command_lst = [
 		"alarm -> toggles all alarms"
 		, "temp -> sends the current temperature"
-		, "spam ___ -> spams any message"
 		, "weather -> sends the current weather conditions"
 		, "quote -> sends a random quote"
 		, "school -> sends how much school is left"
@@ -672,37 +582,199 @@ def commands():
 
 
 
+
+def clean():
+	if log_command("clean"):
+		return
+	daily_funcs()
+	with open("text_files/quotes") as quotes_file:
+		quotes = list(set(quotes_file.readlines()))
+	with open("text_files/used_quotes") as used_quotes_file:
+		used_quotes = list(set(used_quotes_file.readlines()))
+	for i in quotes:
+		if i in used_quotes:
+			quotes.remove(i)
+			used_quotes.append(i)
+	quote_fix = False
+	used_fix = False
+	with open("text_files/quotes") as quotes_file:
+		if quotes != quotes_file.readlines():
+			quote_fix = True
+	with open("text_files/used_quotes") as used_quotes_file:
+		if used_quotes != used_quotes_file.readlines():
+			used_fix = True
+	if quote_fix:
+		with open("text_files/quotes", "w") as quotes_file:
+			quotes_file.writelines(quotes)
+	if used_fix:
+		with open("text_files/used_quotes", "w") as used_quotes_file:
+			used_quotes_file.writelines(used_quotes)
+	with open("text_files/brentford") as f:
+		games = f.readlines()
+	today = datetime.now(tz)
+	for i in range(len(games)):
+		games[i] = games[i].strip().split(":")
+		games[i][0] = games[i][0].split("/")
+		games[i] = [games[i][0][0], games[i][0][1], games[i][0][2], games[i][1], games[i][2]]
+		games[i] = [int(i) for i in games[i]]
+		games[i] = datetime(games[i][2], games[i][0], games[i][1], games[i][3], games[i][4], tzinfo=tz)
+		if (today-games[i]).total_seconds() > 0:
+			games[i] = "past"
+	upcoming_games = [i for i in games if i != "past"]
+	for i in range(len(upcoming_games)):
+		upcoming_games[i] = upcoming_games[i].strftime("%m/%d/%Y:%H:%M\n")
+	with open("text_files/brentford", "w") as f:
+		f.writelines(upcoming_games)
+	with open("text_files/alarm") as alarm_file:
+		alarm_bool = alarm_file.readline()
+		try:
+			x = int(alarm_bool)
+		except:
+			error_report("alarm_file")
+			return("error in alarm file")
+	update_spotify_data()
+	return("All Clean!")
+
+def brentford_plays_today():
+	if log_command("brentford_plays_today"):
+		return False
+	with open("text_files/brentford") as brentford_file:
+		games = brentford_file.readlines()
+	today = rn("%m/%d/%Y")
+	for i in games:
+		if today in i:
+			return i.strip().split(":")[1]
+	return False
+
+def one_rep_max(reps, weight, rpe=10):
+	if log_command("one_rep_max"):
+		return
+	reps += 10-abs(rpe)
+	return round(weight/(1.0278-(0.0278*reps)))
+
+def is_first_set(num):
+	with open("text_files/current_workout") as workout_file:
+		exercises = dict(json.load(workout_file))["exercises"]
+	return not search_exercises(num) in list(exercises.keys())
+
+def min_sec(total_seconds):
+	minutes = int(total_seconds//60)
+	seconds = int(round(total_seconds % 60))
+	min_string = "minutes"
+	sec_string = "seconds"
+	if minutes == 1:
+		min_string = "minute"
+	if seconds == 1:
+		sec_string = "second"
+	if minutes == 0:
+		return f"{seconds} {sec_string}"
+	return f"{minutes} {min_string} and {seconds} {sec_string}"
+
+def check_for_duplicate_event(id):
+	with open("text_files/event_id") as event_id_file:
+		file_id = event_id_file.readline().strip()
+	if file_id != id:
+		return True
+	return False
+
+def get_day_exercises(all_exercises):
+	if log_command("get_day_exercises"):
+		return
+	day_num = get_gym_day_num()
+	todays_exercises = [i for i in all_exercises if gym_schedule[day_num] in i["exercise_day"]]
+	return todays_exercises
+
+def search_exercises(num):
+	if log_command("search_exercises"):
+		return
+	with open("text_files/exercises.json") as exercise_file:
+		exercise_list = list(json.load(exercise_file))
+	for i in exercise_list:
+		if int(i["num"]) == num:
+			return i["name"]
+
+def log_set(exercise_num, first=False):
+	if log_command("log_set"):
+		return
+	reps, weight, rpe = None, None, None
+	while not isinstance(reps, int):
+		try:
+			reps = int(get_response("How many reps did you do?", 600))
+		except:
+			pass
+	while not isinstance(weight, float):
+		try:
+			weight = float(get_response("How much weight did you use?", 600))
+		except:
+			pass
+	while not isinstance(rpe, float):
+		try:
+			rpe = float(get_response("What was the RPE?", 600))
+		except:
+			pass
+	name = search_exercises(exercise_num)
+	if name is None or reps is None or weight is None or rpe is None:
+		end_workout()
+		return
+	with open("text_files/current_workout") as workout_file:
+		workout_dict = dict(json.load(workout_file))
+	if first:
+		workout_dict["exercises"][name] = {"sets": 1, "reps": [reps], "weight": [weight], "rpe": [rpe]}
+	else:
+		workout_dict["exercises"][name]["sets"] += 1
+		workout_dict["exercises"][name]["reps"].append(reps)
+		workout_dict["exercises"][name]["weight"].append(weight)
+		workout_dict["exercises"][name]["rpe"].append(rpe)
+	with open("text_files/current_workout", "w") as workout_file:
+		json.dump(workout_dict, workout_file, indent=2)
+
+def end_workout(start=False):
+	if log_command("end_workout"):
+		return
+	try:
+		with open("text_files/current_workout") as workout_file:
+			workout_dict = dict(json.load(workout_file))
+		if workout_dict["end"] is None:
+			workout_dict["end"] = time.time()
+			workout_dict["DNF"] = not start
+		with open("text_files/workout_log") as workout_file:
+			try:
+				workouts = list(json.load(workout_file))
+			except:
+				workouts = []
+		workouts.append(workout_dict)
+		with open("text_files/workout_log", "w") as workout_file:
+			json.dump(workouts, workout_file, indent=2)
+		if not start:
+			text_me("Workout Logged")
+		increment_gym_day()
+	except:
+		pass
+	clear_file("text_files/current_workout")
+
+def get_gym_day_num():
+	if log_command("get_gym_day"):
+		return
+	with open("text_files/gym_day") as gym_file:
+		gym_day = int(gym_file.readline().strip())
+	return gym_day
+
+def increment_gym_day(increment=1):
+	if log_command("increment_gym_day"):
+		return
+	gym_day = get_gym_day_num()
+	if gym_day is None:
+		text_me("Error")
+		return
+	gym_day += increment
+	if gym_day >= len(gym_schedule):
+		gym_day = 0
+	with open("text_files/gym_day", "w") as gym_file:
+		gym_file.write(str(gym_day))
+
 def clear_file(file_name):
 	file = open(file_name, "w")
 	file.close()
-
-def log_excercise(name, sets, reps, weight):
-	if log_command("log_excercise"):
-		return
-	with open("text_files/current_workout") as workout_file:
-		try:
-			exercises = list(json.load(workout_file))
-		except:
-			exercises = []
-	exercises.append({"name": name, "reps": reps, "weight": weight, "sets": sets})
-	with open("text_files/current_workout", "w") as workout_file:
-		json.dump(exercises, workout_file)
-
-def log_workout(start, end, day_type):
-	with open("text_files/current_workout") as workout_file:
-		exercises = list(json.load(workout_file))
-	workout_dict = {"exercises": exercises, "start": str(
-		start), "end": end, "day_type": day_type}
-	with open("text_files/workout_log") as workout_file:
-		try:
-			workouts = list(json.load(workout_file))
-		except:
-			workouts = []
-	workouts.append(workout_dict)
-	with open("text_files/workout_log", "w") as workout_file:
-		json.dump(workouts, workout_file)
-	with open("text_files/current_workout", "w") as workout_file:
-		json.dump("", workout_file)
 
 def log_response(response):
 	log_message(response, "evan")
@@ -716,36 +788,42 @@ def clear_response():
 		return
 	clear_file("text_files/response")
 
-def get_response():
+def get_response(question=None, wait_time=300, confirmation=None):
 	if log_command("get_response"):
 		return
+	if question is not None:
+		text_me(question)
+	set_in_conversation(True)
 	start = time.time()
-	while True:
+	time_left = start + wait_time - time.time()
+	while time_left > 0:
 		with open("text_files/response") as message_file:
 			response = message_file.read().strip()
 		if response != "":
+			set_in_conversation(False)
+			if confirmation != None:
+				text_me(confirmation)
+			if response.lower() == "pass":
+				return
 			return response
-		if time.time() - start > 300:
-			text_me("nvm")
-			return None
 		time.sleep(.5)
+	text_me("nvm")
+	set_in_conversation(False)
+
 
 def get_weight():
 	if log_command("get_weight"):
 		return
-	text_me("What is your weight?")
-	set_in_conversation(True)
-	response = get_response()
-	set_in_conversation(False)
-	clear_response()
+	response = get_response("What's your weight?", 600, "thanks")
 	if response is None:
 		return
 	log_weight(response)
-	text_me("Got it")
 
 def set_in_conversation(is_in_conversation):
 	if log_command("set_in_conversation"):
 		return
+	if not is_in_conversation:
+		clear_response()
 	with open("text_files/in_conversation", "w") as message_file:
 		message_file.write(str(is_in_conversation))
 
@@ -761,6 +839,90 @@ def log_message(message, sender):
 		return
 	with open("text_files/conversation_log", "a") as message_file:
 		message_file.write(f"{sender}: {message}\n")
+
+def bday_famousbirthdays():
+	if log_command("bday_famousbirthdays"):
+		return
+	month = rn("%B").lower()
+	day = str(int(rn("%d")))
+	url = f"https://www.famousbirthdays.com/{month}{day}.html"
+	bday_page = requests.get(url, headers=request_header)
+	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
+	raw_bday_list = list(
+		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
+	for i in range(len(raw_bday_list)):
+		try:
+			not_used = int(raw_bday_list[i])
+			raw_bday_list.remove(raw_bday_list[i])
+		except:
+			pass
+	fake_famous = [
+		"TikTok Star", "Reality Star", "Gospel Singer",
+		"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
+		"Family Member", "Dubsmash Star", "Twitch Star", "Stylist",
+		"eSports Player", "Cat", "Dog", "Rugby Player", "Soap Opera Actress",
+		"World Music Singer"
+	]
+	bday_list = []
+	name = None
+	birth = None
+	death = None
+	job = None
+	for i in range(len(raw_bday_list)):
+		if i % 2 == 0:
+			if raw_bday_list[i].count(",") > 1:
+				name = ",".join(raw_bday_list[i].split(",")[:-1])
+				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
+				death = "?"
+				if int(rn("%Y")) - birth < 18:
+					continue
+			elif raw_bday_list[i].count(",") == 1:
+				name = raw_bday_list[i].split(",")[0]
+				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
+				death = "?"
+				if int(rn("%Y")) - birth < 18:
+					continue
+			else:
+				name = raw_bday_list[i].split("(")[0]
+				birth = int(raw_bday_list[i].split("(")[-1].split("-")[0])
+				death = int(raw_bday_list[i].split("(")[-1].replace(")", "").split("-")[-1])
+			job = raw_bday_list[i+1]
+			bday_list.append({"name":name.strip().replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"famousbirthdays"})
+	final_bday_list = []
+	for i in range(len(bday_list)):
+		makes_list = False
+		if bday_list[i]["death"] != "?":
+			makes_list = True
+		if not bday_list[i]["job"] in fake_famous:
+			makes_list = True
+		if makes_list:
+			final_bday_list.append(bday_list[i])
+	return final_bday_list
+
+def bday_ducksters():
+	month = rn("%B").lower()
+	day = str(int(rn("%d")))
+	url = f"https://www.ducksters.com/history/{month}birthdays.php?day={day}"
+	bday_page = requests.get(url, headers=request_header)
+	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
+	bday_text = ("".join(bday_soup.get_text().split("Birthdays: \n")[1])).split("Archive:\n")[0].split("\xa0")
+	for i in range(bday_text.count("")):
+		bday_text.remove("")
+	for i in range(len(bday_text)):
+		bday_text[i] = bday_text[i].replace("\n", "")
+	bday_list = []
+	name = bday_text[1].split("(")[0].strip()
+	birth = int(bday_text[0].strip())
+	death = "?"
+	job = bday_text[1].split("(")[-1].split(")")[0].strip()
+	bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
+	for i in range(2, len(bday_text)):
+		name = bday_text[i].split("(")[0].strip()
+		birth = int(bday_text[i-1].split(")")[-1].strip())
+		death = "?"
+		job = bday_text[i].split("(")[-1].split(")")[0].strip()
+		bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
+	return(bday_list)
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")
@@ -786,7 +948,7 @@ def error_report(name):
 def get_weather(data="full"):
 	try:
 		weather_page = requests.get(
-			"https://forecast.weather.gov/MapClick.php?lat=40.2549&lon=-75.2429#.YXWhSOvMK02")
+			"https://forecast.weather.gov/MapClick.php?lat=39.95222000000007&lon=-75.16217999999998")
 		weather_soup = BeautifulSoup(weather_page.content, "html.parser")
 		if "Not a current observation" in str(weather_soup):
 			error_report("weather")
@@ -832,40 +994,39 @@ def get_weather(data="full"):
 def formatted_weather():
 	weather = get_weather()
 	try:
-		conditions = weather["conditions"] # type: ignore
-		temp = weather["temp"] # type: ignore
-		humidity = weather["humidity"] # type: ignore
-		wind_speed = weather["wind_speed"] # type: ignore
-		dewpoint = weather["dewpoint"] # type: ignore
+		conditions = weather["conditions"]
+		temp = weather["temp"]
+		humidity = weather["humidity"]
+		wind_speed = weather["wind_speed"]
+		dewpoint = weather["dewpoint"]
 	except:
 		error_report("formatted_weather")
 		return "error"
 	message = ""
 	message += f"Temperature - {temp}°\n"
 	message += f"Conditions - {conditions}\n"
-	if 62 <dewpoint<69: # type: ignore
+	if 62 <dewpoint<69:
 		message += "Humidity - Above Average\n"
-	elif 69<=dewpoint: # type: ignore
+	elif 69<=dewpoint:
 		message += "Humidity - High\n"
-	elif humidity<=30: # type: ignore
+	elif humidity<=30:
 		message += "Humidity - Very Low\n"
-	elif humidity<=45: # type: ignore
+	elif humidity<=45:
 		message += "Humidity - Low\n"
 	else:
 		message += "Humidity - Average\n"
-	if wind_speed>=25: # type: ignore
+	if wind_speed>=25:
 		message += "Wind Speed - Extremely High\n"
-	elif 17<=wind_speed<25: # type: ignore
+	elif 17<=wind_speed<25:
 		message += "Wind Speed - Very High\n"
-	elif 10<=wind_speed<17: # type: ignore
+	elif 10<=wind_speed<17:
 		message += "Wind Speed - Windy\n"
-	elif 5<=wind_speed<10: # type: ignore
+	elif 5<=wind_speed<10:
 		message += "Wind Speed - Light Breeze\n"
 	else:
 		message += "Wind Speed - Negligible\n"
-	message += f'''Visibility - {weather["vis"].replace("10.00", "10")}''' # type: ignore
+	message += f'''Visibility - {weather["vis"].replace("10.00", "10")}'''
 	return message.replace("Fog/Mist", "Foggy")
-
 
 def uncancel(name):
 	with open("text_files/cancel") as cancel_file:
@@ -878,7 +1039,6 @@ def uncancel(name):
 	with open("text_files/cancel", "w") as cancel_file:
 		cancel_file.writelines(cancels)
 
-
 def get_quote(scan=None):
 	with open("text_files/used_quotes") as used_quotes_file:
 		used_quotes = (used_quotes_file.readlines())
@@ -887,7 +1047,7 @@ def get_quote(scan=None):
 	if "" in quote_list:
 		quote_list.remove("")
 	message = ""
-	if scan == None:
+	if scan is None:
 		quote = quote_list[0]
 	else:
 		keyword_quotes = [i for i in quote_list if scan in i]
@@ -912,11 +1072,15 @@ def get_quote(scan=None):
 		return message
 	return quote
 
+def weight_date_format(line):
+	date = line.split(":")[0]
+	weight = line.split(":")[1]
+	return f"{date_to_num(date)}:{weight}"
+
 def date_to_num(date):
-	weight = date.split(":")[1]
-	date = date.split(":")[0].split("/")
+	date = date.split("/")
 	date = str(int(date[0])*30 + int(date[1]) + int(date[2])*365)
-	return date + ":" + weight
+	return date
 
 def moving_avg(data, window):
 	avg = []
@@ -926,14 +1090,39 @@ def moving_avg(data, window):
 		avg.insert(0, avg[0])
 	return avg
 
+def closest_num(num, lst):
+	closest = 0
+	num = int(num)
+	for i in range(len(lst)):
+		if abs(lst[i]-num) < abs(lst[closest]-num):
+			closest = i
+	return closest
+
 def create_graph(x, y, data_type, plot_attributes):
-	show_points = plot_attributes[data_type]["show_points"]
-	show_regression_line = plot_attributes[data_type]["show_regression_line"]
-	show_moving_avg = plot_attributes[data_type]["show_moving_avg"]
-	window = plot_attributes[data_type]["window_size"]
+	plot_attributes = plot_attributes[data_type]
+	show_points = plot_attributes["show_points"]
+	show_regression_line = plot_attributes["show_regression_line"]
+	show_moving_avg = plot_attributes["show_moving_avg"]
+	window = plot_attributes["window_size"]
 	if show_points:
 		plt.scatter(x, y)
-	if show_moving_avg:
+	if show_moving_avg and data_type == "weight":
+		avg = moving_avg(y, window)
+		bulk_cut_dates = [date_to_num(i) for i in plot_attributes["bulk/cut_dates"].keys()]
+		bulk_cut_dates.sort()
+		gym_start = closest_num(bulk_cut_dates[0], x)
+		plt.plot(x[:gym_start], avg[:gym_start], color="#4063c2")
+		for i in range(len(bulk_cut_dates)):
+			start = closest_num(bulk_cut_dates[i], x)
+			color = "#b81414"
+			if i%2==0:
+				color = "#109410"
+			if i == len(bulk_cut_dates)-1:
+				plt.plot(x[start:], avg[start:], color=color)
+				continue
+			end = closest_num(bulk_cut_dates[i+1], x)
+			plt.plot(x[start:end], avg[start:end], color=color)
+	elif show_moving_avg:
 		avg = moving_avg(y, window)
 		plt.plot(x, avg)
 	if show_regression_line:
@@ -941,7 +1130,7 @@ def create_graph(x, y, data_type, plot_attributes):
 		def slope_func(x):
 			return slope * x + intercept
 		regression_line = list(map(slope_func, x))
-		plt.plot(x, regression_line)
+		plt.plot(x, regression_line, color="#3b3b3b")
 	year_position, year = [], []
 	for i in range(int(rn("%y"))-21+1):
 		year_position.append((i+2021)*365)
@@ -952,12 +1141,13 @@ def create_graph(x, y, data_type, plot_attributes):
 	while max(x) < year_position[-1]:
 		year_position.pop(-1)
 		year.pop(-1)
-	plt.grid(axis=plot_attributes[data_type]["grid"])
+	plt.grid(axis=plot_attributes["grid"])
 	plt.xticks(year_position, year)
-	plt.title(plot_attributes[data_type]["title"])
-	plt.xlabel(plot_attributes[data_type]["xlabel"])
-	plt.ylabel(plot_attributes[data_type]["ylabel"])
-	plt.savefig(plot_attributes[data_type]["filename"], dpi=dpi)
+	plt.title(plot_attributes["title"])
+	plt.xlabel(plot_attributes["xlabel"])
+	plt.ylabel(plot_attributes["ylabel"])
+	plt.legend(["Eating like shit", "Bulk", "Cut"])
+	plt.savefig(plot_attributes["filename"], dpi=dpi)
 
 # start of spotify functions
 
@@ -1054,7 +1244,7 @@ def get_all_songs(spotify_client):
 			limit=50, market="US", offset=offset))
 		data_list.extend([format_track(i) for i in raw_data["items"]])
 	with open("text_files/tracks.json", "w") as data_file:
-		json.dump({"data": data_list}, data_file)
+		json.dump({"data": data_list}, data_file, indent=2)
 
 def get_genres(spotify_client):
 	with open("text_files/tracks.json") as data_file:
@@ -1071,7 +1261,7 @@ def get_genres(spotify_client):
 			genre_list.extend(artist["genres"])
 	genre_dict = dict(Counter(genre_list))
 	with open("text_files/genres.json", "w") as data_file:
-		json.dump(genre_dict, data_file)
+		json.dump(genre_dict, data_file, indent=2)
 
 def podcasts(sp):
 	max_podcast_request = True
@@ -1246,7 +1436,6 @@ def get_show_durations(data):
 def daily_funcs():
 	clear_file("text_files/cancel")
 
-
 def num_suffix(num):
 	num = str(int(num))
 	if len(num) > 2:
@@ -1260,36 +1449,34 @@ def num_suffix(num):
 	return "th"
 
 def on_start():
-	clear_response()
 	set_in_conversation(False)
+	clear_file("text_files/cancel")
+	end_workout(True)
 	threading.Thread(target=event_loop).start()
 	threading.Thread(target=update_spotify_data).start()
 
 
 def event_loop():
-	event_id = int(time.time())
+	event_id = str(time.time())
 	with open("text_files/event_id", "w") as event_id_file:
-		event_id_file.write(str(event_id))
+		event_id_file.write(event_id)
 	while True:
-		duplicate_check_frequency = 5
-		if int(rn("%S")) % duplicate_check_frequency == 0:
-			with open("text_files/event_id") as event_id_file:
-				if int(event_id_file.readline()) != event_id:
-					print("duplicate process detected, aborting...")
-					duplicate_check_frequency = 60
-					break
+		if check_for_duplicate_event(event_id):
+			return
 		if rn() == "16:00":
 			get_weight()
 			time.sleep(60)
-		if rn() == "09:30":
+		if rn() == "08:30":
 			if log_command("morning"):
 				time.sleep(60)
 			else:
 				message = "Good Morning!\n"
 				day_num = int(rn("%d"))
 				suffix = num_suffix(int(rn("%d")[1]))
+				brentford_game = brentford_plays_today()
 				message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
-				message += f'''You move out in {days_until("09/15/2023", return_days=True)} days\n'''
+				if isinstance(brentford_game, str):
+					message += f"Brentford plays at {brentford_game} today!\n"
 				message += "Here's today's weather:\n\t"
 				message += formatted_weather().replace("\n", "\n\t")
 				text_me(message)
@@ -1304,14 +1491,15 @@ def event_loop():
 				time.sleep(60)
 		if rn() == "11:01":
 			if log_command("morning quote"):
-				time.sleep(10)
+				time.sleep(60)
 			else:
-				text_me(f"Here's today's quote:\n{get_quote()}")
+				text_me(f"Here's today's quote:")
+				time.sleep(1)
+				text_me(get_quote())
 				time.sleep(60)
 		if rn() == "06:00": # daily operations
 			daily_funcs()
 		time.sleep(5)
-
 
 if __name__ == "__main__":
 	on_start()
