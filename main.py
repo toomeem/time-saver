@@ -527,11 +527,11 @@ def start_workout(all_exercises):
 			quit_workout = True
 		else:
 			text_me("Good choice")
-			time.sleep(210)
+			time.sleep(180)
 			log_set(exercise_num, is_first_set(exercise_num))
 			another_set = get_response("Another set?", 900)
 			while another_set == "yes":
-				time.sleep(210)
+				time.sleep(180)
 				log_set(exercise_num)
 				another_set = get_response("Another set?", 900)
 	end_workout()
@@ -637,18 +637,19 @@ def clean():
 
 def brentford_plays_today():
 	if log_command("brentford_plays_today"):
-		return
+		return False
 	with open("text_files/brentford") as brentford_file:
 		games = brentford_file.readlines()
 	today = rn("%m/%d/%Y")
 	for i in games:
 		if today in i:
 			return i.strip().split(":")[1]
+	return False
 
 def one_rep_max(reps, weight, rpe=10):
 	if log_command("one_rep_max"):
 		return
-	reps += 10-rpe
+	reps += 10-abs(rpe)
 	return round(weight/(1.0278-(0.0278*reps)))
 
 def is_first_set(num):
@@ -695,16 +696,26 @@ def search_exercises(num):
 def log_set(exercise_num, first=False):
 	if log_command("log_set"):
 		return
-	reps = get_response("How many reps did you do?", 600)
-	weight = get_response("What weight did you use?", 600)
-	rpe = get_response("What was your RPE?", 600)
+	reps, weight, rpe = None, None, None
+	while not isinstance(reps, int):
+		try:
+			reps = int(get_response("How many reps did you do?", 600))
+		except:
+			pass
+	while not isinstance(weight, float):
+		try:
+			weight = float(get_response("How much weight did you use?", 600))
+		except:
+			pass
+	while not isinstance(rpe, float):
+		try:
+			rpe = float(get_response("What was the RPE?", 600))
+		except:
+			pass
 	name = search_exercises(exercise_num)
 	if name is None or reps is None or weight is None or rpe is None:
 		end_workout()
 		return
-	reps = int(reps)
-	weight = float(weight)
-	rpe = float(rpe)
 	with open("text_files/current_workout") as workout_file:
 		workout_dict = dict(json.load(workout_file))
 	if first:
@@ -717,24 +728,29 @@ def log_set(exercise_num, first=False):
 	with open("text_files/current_workout", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
 
-def end_workout():
+def end_workout(start=False):
 	if log_command("end_workout"):
 		return
-	with open("text_files/current_workout") as workout_file:
-		workout_dict = dict(json.load(workout_file))
-	if workout_dict["end"] is None:
-		workout_dict["end"] = time.time()
-	with open("text_files/workout_log") as workout_file:
-		try:
-			workouts = list(json.load(workout_file))
-		except:
-			workouts = []
-	workouts.append(workout_dict)
-	with open("text_files/workout_log", "w") as workout_file:
-		json.dump(workouts, workout_file, indent=2)
-	text_me("Workout Logged")
+	try:
+		with open("text_files/current_workout") as workout_file:
+			workout_dict = dict(json.load(workout_file))
+		if workout_dict["end"] is None:
+			workout_dict["end"] = time.time()
+			workout_dict["DNF"] = not start
+		with open("text_files/workout_log") as workout_file:
+			try:
+				workouts = list(json.load(workout_file))
+			except:
+				workouts = []
+		workouts.append(workout_dict)
+		with open("text_files/workout_log", "w") as workout_file:
+			json.dump(workouts, workout_file, indent=2)
+		if not start:
+			text_me("Workout Logged")
+		increment_gym_day()
+	except:
+		pass
 	clear_file("text_files/current_workout")
-	increment_gym_day()
 
 def get_gym_day_num():
 	if log_command("get_gym_day"):
@@ -932,7 +948,7 @@ def error_report(name):
 def get_weather(data="full"):
 	try:
 		weather_page = requests.get(
-			"https://forecast.weather.gov/MapClick.php?lat=40.2549&lon=-75.2429#.YXWhSOvMK02")
+			"https://forecast.weather.gov/MapClick.php?lat=39.95222000000007&lon=-75.16217999999998")
 		weather_soup = BeautifulSoup(weather_page.content, "html.parser")
 		if "Not a current observation" in str(weather_soup):
 			error_report("weather")
@@ -1435,7 +1451,7 @@ def num_suffix(num):
 def on_start():
 	set_in_conversation(False)
 	clear_file("text_files/cancel")
-	clear_file("text_files/current_workout")
+	end_workout(True)
 	threading.Thread(target=event_loop).start()
 	threading.Thread(target=update_spotify_data).start()
 
@@ -1450,14 +1466,13 @@ def event_loop():
 		if rn() == "16:00":
 			get_weight()
 			time.sleep(60)
-		if rn() == "09:00":
+		if rn() == "08:30":
 			if log_command("morning"):
 				time.sleep(60)
 			else:
 				message = "Good Morning!\n"
 				day_num = int(rn("%d"))
 				suffix = num_suffix(int(rn("%d")[1]))
-				gym_day_num = get_gym_day_num()
 				brentford_game = brentford_plays_today()
 				message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
 				if isinstance(brentford_game, str):

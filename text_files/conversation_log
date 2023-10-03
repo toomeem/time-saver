@@ -1771,3 +1771,200 @@ evan: clean
 evan: clean
 evan: clean
 evan: clean
+script: Good Morning!
+Today is Sunday, October 1st
+Brentford plays at 09 today!
+Here's today's weather:
+	Temperature - 60°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: Religion has nothing to do with God. It's a fundamental attitude of human beings, who ask about the origins of life and what happens after death. For many, the answer is a personal god. In my opinion, it's religion that produces God, not the other way round.
+
+script: What's your weight?
+evan: pass
+script: thanks
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 13
+script: Good choice
+script: How many reps did you do?
+evan: 7
+script: What weight did you use?
+evan: 20
+script: What was your RPE?
+evan: 7
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 12
+script: What weight did you use?
+evan: 17.5
+script: What was your RPE?
+evan: 10
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 11
+script: What weight did you use?
+evan: 17.5
+script: What was your RPE?
+evan: 10
+script: Another set?
+evan: nah
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 9
+script: Good choice
+script: How many reps did you do?
+evan: 9
+script: What weight did you use?
+evan: 135
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 7
+script: What weight did you use?
+evan: 140
+script: What was your RPE?
+evan: 9
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 7
+script: What weight did you use?
+evan: 140
+script: What was your RPE?
+evan: 10
+script: Another set?
+evan: nah
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 10
+script: Good choice
+script: How many reps did you do?
+evan: 9
+script: What weight did you use?
+evan: 160
+script: What was your RPE?
+evan: 10
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 6
+script: What weight did you use?
+evan: 160
+script: What was your RPE?
+evan: 10
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 7
+script: What weight did you use?
+evan: 140
+script: What was your RPE?
+evan: 6
+script: Another set?
+evan: n
+script: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+evan: 0
+script: Workout Logged
+script: Good Morning!
+Today is Monday, October 2nd
+Here's today's weather:
+	error
+script: Here's today's quote:
+script: I think being different, going against the grain of society is the greatest thing in the world.
+
+script: What's your weight?
+evan: weather
+script: Temperature - 71°
+Conditions - Mostly Cloudy
+Humidity - Average
+Wind Speed - Light Breeze
+Visibility - 10 mi
+evan: weather
+script: Temperature - 77°
+Conditions - Partly Cloudy
+Humidity - Average
+Wind Speed - Light Breeze
+Visibility - 10 mi
+evan: artists
+script: Here are your top artists.
+evan: artists
+script: Here are your top artists.
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+16: Dumbbell Bicep Curl
+18: Dumbbell Hammer Curl
+19: Tricep Extension
+20: Tricep Pushdown
+21: Dips
+26: Barbell Wrist Curl
+37: Dead Hang
+evan: 16
+script: Good choice
+script: How many reps did you do?
+evan: 11
+script: What weight did you use?
+evan: 25
+script: What was your RPE?
+evan: 8
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: 11
+script: What weight did you use?
+evan: 25
+script: What was your RPE?
+evan: 8
+script: Another set?
+evan: yes
+script: How many reps did you do?
+evan: n
+script: What weight did you use?
+evan: 25
+script: What was your RPE?
+evan: 7
+script: Workout Logged
+evan: hi
+script: Hello!

@@ -1,0 +1,87 @@
+[
+  {
+    "exercises": {
+      "Dumbbell Lateral Raises": {
+        "sets": 3,
+        "reps": [
+          7,
+          12,
+          11
+        ],
+        "weight": [
+          20.0,
+          17.5,
+          17.5
+        ],
+        "rpe": [
+          7.0,
+          10.0,
+          10.0
+        ]
+      },
+      "Bench Press": {
+        "sets": 3,
+        "reps": [
+          9,
+          7,
+          7
+        ],
+        "weight": [
+          135.0,
+          140.0,
+          140.0
+        ],
+        "rpe": [
+          9.0,
+          9.0,
+          10.0
+        ]
+      },
+      "Pec Fly": {
+        "sets": 3,
+        "reps": [
+          9,
+          6,
+          7
+        ],
+        "weight": [
+          160.0,
+          160.0,
+          140.0
+        ],
+        "rpe": [
+          10.0,
+          10.0,
+          6.0
+        ]
+      }
+    },
+    "start": 1696204602.8652394,
+    "end": 1696208425.2642066,
+    "day_type": "Chest + Shoulders",
+    "DNF": false
+  },
+  {
+    "exercises": {
+      "Dumbbell Bicep Curl": {
+        "sets": 2,
+        "reps": [
+          11,
+          11
+        ],
+        "weight": [
+          25.0,
+          25.0
+        ],
+        "rpe": [
+          8.0,
+          8.0
+        ]
+      }
+    },
+    "start": 1696291322.6197243,
+    "end": 1696302927.8386102,
+    "day_type": "Arms",
+    "DNF": true
+  }
+]
