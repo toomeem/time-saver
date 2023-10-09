@@ -1,0 +1,230 @@
+[
+	{
+		"name": "alarm",
+		"description": "Toggles alarms",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "artists",
+		"description": "A graph of your top artists",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "bday",
+		"description": "Famous people that were born today",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "clean",
+		"description": "Performs functions that keep this bot running",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "commands",
+		"description": "This",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "covers",
+		"description": "A graph of the ratio of covers in your library",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "desc",
+		"description": "A description of this bot",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "durations",
+		"description": "A graph of your longest songs",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "episodes",
+		"description": "A graph of the podcasts you listen to",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "explicit",
+		"description": "A graph of the ratio of explicit songs in your library",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "genres",
+		"description": "A graph of your top genres",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "gym",
+		"description": "Starts the exercise protocol",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "hi",
+		"description": "Hello",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "kill",
+		"description": "Ends the program",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "quote",
+		"description": "A random quote",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "runtimes",
+		"description": "A graph of the runtimes of the podcasts you listen to",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "scan",
+		"description": "scan quote database for a quote containing search term",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"scan": {
+					"type": "string",
+					"description": "the search term"
+				}
+			},
+			"required": [
+				"scan"
+			]
+		}
+	},
+	{
+		"name": "school",
+		"description": "How much school is left",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "spotify",
+		"description": "Data about your Spotify account",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "temp",
+		"description": "The current temperature",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "today",
+		"description": "The day of the month and week",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "weather",
+		"description": "The current weather conditions",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "weight",
+		"description": "Logs your weight",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"weight": {
+					"type": "integer",
+					"description": "the Weight to log"
+				}
+			},
+			"required": ["weight"]
+		}
+	},
+	{
+		"name": "weight_graph",
+		"description": "A graph of your weight over time",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	}
+]

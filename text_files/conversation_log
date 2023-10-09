@@ -1968,3 +1968,229 @@ evan: 7
 script: Workout Logged
 evan: hi
 script: Hello!
+evan: hi
+script: Hello!
+script: Good Morning!
+Today is Tuesday, October 3rd
+Here's today's weather:
+	Temperature - 61°
+	Conditions - A Few Clouds
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 7.00 mi
+script: Here's today's quote:
+script: Solar power, wind power, the way forward is to collaborate with nature - it's the only way we are going to get to the other end of the 21st century.
+
+evan: hi
+script: Hello!
+script: What's your weight?
+evan: hi
+script: thanks
+evan: hi
+script: Hello!
+evan: weather
+script: Temperature - 82°
+Conditions - Partly Cloudy
+Humidity - Average
+Wind Speed - Light Breeze
+Visibility - 10 mi
+evan: what is the temperature
+evan: hi
+evan: hi
+evan: hi
+evan: hi
+evan: hi
+evan: hi
+evan: hi
+evan: hi
+evan: hi
+script: Hello!
+evan: what is the temperature
+script: 70°
+evan: what are the commands
+script: alarm -> toggles all alarms
+temp -> sends the current temperature
+weather -> sends the current weather conditions
+quote -> sends a random quote
+school -> sends how much school is left
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month, week, and school cycle
+clean -> performs some functions that keep this bot running
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+script: spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: what famous people were born today
+script: Famous Birthdays Today:
+Alicia Silverstone(1976-?): Actress
+Derrick Rose(1988-?): Basketball Player
+Susan Sarandon(1946-?): Actress
+Rutherford B. Hayes(1822-1893): 19th US President
+Charlton Heston(1924-?): Actor
+Anne Rice(1941-?): Author
+Justin Williams(1981-?): NHL Player
+Christoph Waltz(1956-?): Movie Actor
+Bill Fagerbakke(1957-?): TV Actor
+Russell Simmons(1957-?): Entrepreneur
+Bill Fagerbakke(1957-?): TV Actor
+Russell Simmons(1957-?): Entrepreneur
+evan: hi
+script: Hello!
+evan: what famous people were porn today
+script: Famous Birthdays Today:
+Alicia Silverstone(1976-?): Actress
+Derrick Rose(1988-?): Basketball Player
+Susan Sarandon(1946-?): Actress
+Rutherford B. Hayes(1822-1893): 19th US President
+Charlton Heston(1924-?): Actor
+Anne Rice(1941-?): Author
+Justin Williams(1981-?): NHL Player
+Christoph Waltz(1956-?): Movie Actor
+Bill Fagerbakke(1957-?): TV Actor
+Russell Simmons(1957-?): Entrepreneur
+Bill Fagerbakke(1957-?): TV Actor
+Russell Simmons(1957-?): Entrepreneur
+evan: what famous people were born today
+script: Famous Birthdays Today:
+Alicia Silverstone(1976-?): Actress
+Derrick Rose(1988-?): Basketball Player
+Susan Sarandon(1946-?): Actress
+Rutherford B. Hayes(1822-1893): 19th US President
+Charlton Heston(1924-?): Actor
+Anne Rice(1941-?): Author
+Justin Williams(1981-?): NHL Player
+Christoph Waltz(1956-?): Movie Actor
+Bill Fagerbakke(1957-?): TV Actor
+Russell Simmons(1957-?): Entrepreneur
+Bill Fagerbakke(1957-?): TV Actor
+Russell Simmons(1957-?): Entrepreneur
+evan: what's the weather
+script: Temperature - 80°
+Conditions - A Few Clouds
+Humidity - Above Average
+Wind Speed - Light Breeze
+Visibility - 10 mi
+script: What's your weight?
+evan: what's the weather
+script: Temperature - 79°
+Conditions - Partly Cloudy
+Humidity - Above Average
+Wind Speed - Light Breeze
+Visibility - 10 mi
+evan: what famous people were born today
+script: Famous Birthdays Today:
+Kate Winslet(1975-?): Actress - Titanic
+Chester A. Arthur(1829-1886): 21st US President
+Mario Lemieux(1965-?): Hockey Player
+Grant Hill(1972-?): Basketball Player
+Paul Thomas(1980-?): Musician - Good Charlotte
+Nicky Hilton(1983-?): Heiress
+Ray Kroc(1902-1984): Entrepreneur
+Glynis Johns(1923-?): Movie Actress
+Marjorie Finlay(1928-2003): Family Member
+Michael Morpurgo(1943-?): Children's Author
+Steve Miller(1943-?): Guitarist
+evan: toggle my alarm
+script: Your alarm is now on
+evan: alarm
+script: Your alarm is now off
+evan: graph my top artists
+script: Here are your top artists.
+evan: what commands are there
+script: alarm -> toggles all alarms
+temp -> sends the current temperature
+weather -> sends the current weather conditions
+quote -> sends a random quote
+school -> sends how much school is left
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month, week, and school cycle
+clean -> performs some functions that keep this bot running
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+script: spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: what's the temperature
+script: 79°
+evan: send me a quote
+script: What I want veterans to know is that VA is here to care for them. VA is a good system - health care wise, safety wise - highly comparable to any other system out there. Our oversight reviews tell us that. I'm very comfortable in the quality of our system.
+
+evan: school
+script: Summer completed - 7.3%
+School ends in 254 days
+evan: how much school is left
+script: School completed - 7.3%
+School ends in 254 days
+evan: tell me about today
+script: Today is Thursday, Oct 5th
+
+evan: send me a weight graph
+evan: send me a weight graph
+script: Here is your weight graph
+evan: send me my spotify data
+script: Your playlist is 3109 songs long and it is 206.8 hours long.
+It spans 70 years of music.
+Your playlist consisted of 1356 artists that represented 687 different genres.
+The songs were an average of 3 minutes and 59 seconds long.
+The longest song was 23 minutes and 41 seconds long.
+The shortest song was 56 seconds long.
+There were around 96 cover songs.
+About 29.2% of the songs were explicit.
+You have 145 saved podcast episodes that are collectively 113.5 hours long.
+Those episodes are from 17 different shows.
+evan: graph my longest songs
+script: Here are your longest songs.
+evan: graph my genres
+script: Here are your top genres.
+evan: graph my explicit songs
+script: Here is the ratio of explicit songs in your library.
+evan: graph my cover songs
+script: Here is the ratio of covers in your library.
+evan: graph my songs by decade
+script: I am unsure what function you are reffering to. Please try again.
+evan: send a decade graph
+script: Here are your top genres.
+evan: what's the temperature
+script: 45°
+evan: scan for balls
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: scan balls
+evan: scan balls
+evan: scan my balls
+evan: scan my balls
+evan: scan your balls
+evan: scan something
+evan: scan something
+evan: scan something
+evan: scan something
+evan: scan balls
+evan: scan balls
+evan: scan balls
+script: Total Number of Quotes: 12203
+Number of Matching Quotes: 4
+One of the Matching Quotes: If we had any nerve at all, if we had any real balls as a society, or whatever you need, whatever quality you need, real character, we would make an effort to really address the wrongs in this society, righteously.
+
+evan: send me a graph of my top artists
+script: Here are your top artists.

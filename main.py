@@ -46,6 +46,9 @@ cloudinary_api_key = os.getenv("CLOUDINARY_API_KEY")
 cloudinary_api_secret = os.getenv("CLOUDINARY_API_SECRET")
 spotify_client_id = os.getenv("SPOTIFY_CLIENT_ID")
 spotify_client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
+openai_api_key = os.getenv("OPENAI_API_KEY")
+model = "gpt-3.5-turbo"
+
 tz = pytz.timezone("America/New_York")
 request_header = {
 	"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
@@ -93,20 +96,35 @@ def text_me(body, media_url=None):
 	except:
 		pass
 
+
 @app.route("/", methods=["POST"])
 def hook():
-	message = dict(request.values)["Body"].lower()
-	if message.strip() == "kill":
-		kill()
+	message = dict(request.values)["Body"].lower().strip()
 	if in_conversation():
 		log_response(message)
 		return "200"
 	log_message(message, "evan")
-	match message:
-		case "kill":
-			kill()
+	headers = {
+		"Content-Type": "application/json",
+		"Authorization": "Bearer " + openai_api_key,
+	}
+	messages = [{"role": "user", "content": message}]
+	json_data = {"model": model, "messages": messages, "functions": functions()}
+	response = requests.post(
+			"https://api.openai.com/v1/chat/completions",
+			headers=headers,
+			json=json_data,
+	)
+	response = response.json()["choices"][0]
+	if response["finish_reason"] == "stop":
+		text_me("I am unsure what function you are reffering to. Please try again.")
+		return "200"
+	else:
+		response_text = response["message"]["function_call"]["name"]
+		args = eval(response["message"]["function_call"]["arguments"])
+	match response_text:
 		case "alarm":
-			text_me(alarm())
+			alarm()
 		case "temp":
 			if not log_command("temp"):
 				text_me(f'''{get_weather("temp")}°''')
@@ -119,11 +137,7 @@ def hook():
 		case "school":
 			school()
 		case "scan":
-			if not log_command("scan"):
-				if " " not in message:
-					text_me("You forgot to include a keyword")
-				else:
-					text_me(get_quote(message.split(" ")[1]))
+			scan(args)
 		case "bday":
 			text_me(bday())
 		case "today":
@@ -135,16 +149,8 @@ def hook():
 		case "clean":
 			clean()
 		case "weight":
-			if " " not in message:
-				text_me("You forgot to include a number")
-			else:
-				log_weight(message.split(" ")[1])
+			log_weight(args["weight"])
 			text_me("Logged")
-		case "calories":
-			if " " not in message:
-				text_me("You forgot to include a number")
-			else:
-				text_me(log_calories(message.split(" ")[1]))
 		case "weight_graph":
 			send_weight_graph(plot_attributes)
 		case "hi":
@@ -215,7 +221,7 @@ def alarm():
 		else:
 			alarm_file.write("1")
 		alarm_state = "off" if alarm_on else "on"
-		return(f"Your alarm is now {alarm_state}")
+		text_me(f"Your alarm is now {alarm_state}")
 
 def school():
 	if log_command("school"):
@@ -223,11 +229,17 @@ def school():
 	try:
 		left = days_until("06/15/2024", return_days=True)
 		total = days_until("06/15/2024", "09/15/2023", return_days=True)
-		message = f"Summer completed - {round((1-(left/total))*100, 1)}%\n"
+		message = f"School completed - {round((1-(left/total))*100, 1)}%\n"
 		message += f"School ends in {left} days"
 		text_me(message)
 	except:
 		text_me("Error")
+
+def scan(args):
+	if log_command("scan"):
+		return
+	keyword = eval(args)["scan"]
+	text_me(get_quote(keyword))
 
 def bday():
 	if log_command("bday"):
@@ -582,6 +594,11 @@ def commands():
 
 
 
+
+def functions():
+	with open("functions.json") as f:
+		functions = json.load(f)
+	return functions
 
 def clean():
 	if log_command("clean"):
