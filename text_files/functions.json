@@ -1,7 +1,7 @@
 [
 	{
 		"name": "alarm",
-		"description": "Toggles alarms",
+		"description": "Toggles my alarms on or off",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -10,7 +10,7 @@
 	},
 	{
 		"name": "artists",
-		"description": "A graph of your top artists",
+		"description": "sends a bar chart of my top artists on spotify, graphed by the number of songs I listen to from each artist",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -19,7 +19,7 @@
 	},
 	{
 		"name": "bday",
-		"description": "Famous people that were born today",
+		"description": "sends some info about the famous people that were born today",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -28,7 +28,7 @@
 	},
 	{
 		"name": "clean",
-		"description": "Performs functions that keep this bot running",
+		"description": "runs functions that keep this bot free of bugs and running efficiently",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -37,7 +37,7 @@
 	},
 	{
 		"name": "commands",
-		"description": "This",
+		"description": "sends a description of all the commands this bot can perform",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -46,7 +46,7 @@
 	},
 	{
 		"name": "covers",
-		"description": "A graph of the ratio of covers in your library",
+		"description": "sends a pie chart showing the ratio of covers to original songs in my spotify library",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -55,7 +55,7 @@
 	},
 	{
 		"name": "desc",
-		"description": "A description of this bot",
+		"description": "sends a description of this bot, including what it does and who made it",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -64,7 +64,7 @@
 	},
 	{
 		"name": "durations",
-		"description": "A graph of your longest songs",
+		"description": "sends a bar chart of my longest songs on spotify, graphed by the duration of each song in seconds and it compares that to the average song length of my library",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -73,7 +73,7 @@
 	},
 	{
 		"name": "episodes",
-		"description": "A graph of the podcasts you listen to",
+		"description": "sends a pie chart of the podcasts I listen to graphed by the number of episodes I have saved from each podcast",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -82,7 +82,7 @@
 	},
 	{
 		"name": "explicit",
-		"description": "A graph of the ratio of explicit songs in your library",
+		"description": "sends a pie chart of the ratio of explicit songs to clean songs in my library",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -91,7 +91,7 @@
 	},
 	{
 		"name": "genres",
-		"description": "A graph of your top genres",
+		"description": "sends a bar chart of my top genres",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -100,7 +100,7 @@
 	},
 	{
 		"name": "gym",
-		"description": "Starts the exercise protocol",
+		"description": "Starts a workout",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -109,7 +109,7 @@
 	},
 	{
 		"name": "hi",
-		"description": "Hello",
+		"description": "resonds with a greeting",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -118,7 +118,7 @@
 	},
 	{
 		"name": "kill",
-		"description": "Ends the program",
+		"description": "immediately ends the program",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -127,7 +127,7 @@
 	},
 	{
 		"name": "quote",
-		"description": "A random quote",
+		"description": "sends a random quote",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -136,7 +136,7 @@
 	},
 	{
 		"name": "runtimes",
-		"description": "A graph of the runtimes of the podcasts you listen to",
+		"description": "sends a pie chart of the podcasts I listen to, graphed by the sum of the run times of the episodes",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -145,13 +145,13 @@
 	},
 	{
 		"name": "scan",
-		"description": "scan quote database for a quote containing search term",
+		"description": "scans the quote database for a quote containing the word/phrase to search for",
 		"parameters": {
 			"type": "object",
 			"properties": {
 				"scan": {
 					"type": "string",
-					"description": "the search term"
+					"description": "the word/phrase to search for"
 				}
 			},
 			"required": [
@@ -161,7 +161,7 @@
 	},
 	{
 		"name": "school",
-		"description": "How much school is left",
+		"description": "sends how much school is left",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -170,7 +170,7 @@
 	},
 	{
 		"name": "spotify",
-		"description": "Data about your Spotify account",
+		"description": "sends descriptive data about my Spotify account",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -179,7 +179,7 @@
 	},
 	{
 		"name": "temp",
-		"description": "The current temperature",
+		"description": "sends the current temperature",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -188,7 +188,7 @@
 	},
 	{
 		"name": "today",
-		"description": "The day of the month and week",
+		"description": "sends the day of the month and week and other info",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -197,7 +197,7 @@
 	},
 	{
 		"name": "weather",
-		"description": "The current weather conditions",
+		"description": "sends the current weather conditions in philadelphia",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -206,7 +206,7 @@
 	},
 	{
 		"name": "weight",
-		"description": "Logs your weight",
+		"description": "Logs my weight for the day",
 		"parameters": {
 			"type": "object",
 			"properties": {
@@ -220,7 +220,16 @@
 	},
 	{
 		"name": "weight_graph",
-		"description": "A graph of your weight over time",
+		"description": "A graph of my weight over time with a trendline and labels",
+		"parameters": {
+			"type": "object",
+			"properties": {},
+			"required": []
+		}
+	},
+	{
+		"name": "decades",
+		"description": "A graph(pie chart) of how many songs I have from each decade",
 		"parameters": {
 			"type": "object",
 			"properties": {},

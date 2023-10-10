@@ -2194,3 +2194,24 @@ One of the Matching Quotes: If we had any nerve at all, if we had any real balls
 
 evan: send me a graph of my top artists
 script: Here are your top artists.
+script: Good Morning!
+Today is Monday, October 9th
+Here's today's weather:
+	Temperature - 45°
+	Conditions - A Few Clouds
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: Nothing else so destroys the power to stand alone as the habit of leaning upon others. If you lean, you will never be strong or original. Stand alone or bury your ambition to be somebody in the world.
+
+script: What's your weight?
+evan: episodes
+script: I am unsure what function you are reffering to. Please try again.
+evan: send me a graph of the podcasts i listen to
+script: Here are the podcasts you listen to.
+evan: what's the temperature right now
+script: 53°
+evan: what r my top artists
+evan: what r my top artists
+script: Here are your top artists.

@@ -137,7 +137,7 @@ def hook():
 		case "school":
 			school()
 		case "scan":
-			scan(args)
+			scan(args["scan"])
 		case "bday":
 			text_me(bday())
 		case "today":
@@ -238,7 +238,7 @@ def school():
 def scan(args):
 	if log_command("scan"):
 		return
-	keyword = eval(args)["scan"]
+	keyword = args
 	text_me(get_quote(keyword))
 
 def bday():
@@ -552,7 +552,8 @@ def desc():
 	if log_command("desc"):
 		return
 	message = '''
-	I am Evan's personal bot.
+	I am Jarvis, a chat bot created by Evan Toomey.
+	I am still in development, so please be patient with me.
 	If I am going crazy and you need to terminate me, text "kill".
 	If you would like to see my commands, text "commands".\n
 	Have an amazing day :)
@@ -565,13 +566,13 @@ def commands():
 	command_lst = [
 		"alarm -> toggles all alarms"
 		, "temp -> sends the current temperature"
-		, "weather -> sends the current weather conditions"
+		, "weather -> sends the current weather conditions in Philadelphia"
 		, "quote -> sends a random quote"
 		, "school -> sends how much school is left"
 		, "scan ___ -> searches through all the unused quotes that contain that word/phrase"
 		, "bday -> sends 5 famous people that were born today"
-		, "today -> sends the day of the month, week, and school cycle"
-		, "clean -> performs some functions that keep this bot running"
+		, "today -> sends the day of the month and the weekday"
+		, "clean -> performs some functions that keep this bot running smoothly"
 		, "weight ___-> logs your weight"
 		, "weight_graph -> sends a graph of your weight over time"
 		, "spotify -> sends some data about your spotify account"
@@ -596,7 +597,7 @@ def commands():
 
 
 def functions():
-	with open("functions.json") as f:
+	with open("text_files/functions.json") as f:
 		functions = json.load(f)
 	return functions
 
@@ -1480,9 +1481,6 @@ def event_loop():
 	while True:
 		if check_for_duplicate_event(event_id):
 			return
-		if rn() == "16:00":
-			get_weight()
-			time.sleep(60)
 		if rn() == "08:30":
 			if log_command("morning"):
 				time.sleep(60)
