@@ -66,6 +66,11 @@ cloudinary.config(
 	api_key=cloudinary_api_key,
 	api_secret=cloudinary_api_secret
 )
+gpt_header = {
+	"Content-Type": "application/json",
+	"Authorization": "Bearer " + openai_api_key,
+	}
+
 
 plot_attributes = {
 	"weight": {
@@ -104,18 +109,8 @@ def hook():
 		log_response(message)
 		return "200"
 	log_message(message, "evan")
-	headers = {
-		"Content-Type": "application/json",
-		"Authorization": "Bearer " + openai_api_key,
-	}
-	messages = [{"role": "user", "content": message}]
-	json_data = {"model": model, "messages": messages, "functions": functions()}
-	response = requests.post(
-			"https://api.openai.com/v1/chat/completions",
-			headers=headers,
-			json=json_data,
-	)
-	response = response.json()["choices"][0]
+	response = gpt_request(message, function_call=True)
+	response = response["choices"][0]
 	if response["finish_reason"] == "stop":
 		text_me("I am unsure what function you are reffering to. Please try again.")
 		return "200"
@@ -152,7 +147,8 @@ def hook():
 			log_weight(args["weight"])
 			text_me("Logged")
 		case "weight_graph":
-			send_weight_graph(plot_attributes)
+			text_me("Sorry this function is not available right now.")
+			# send_weight_graph(plot_attributes)
 		case "hi":
 			text_me("Hello!")
 		case "spotify":
@@ -175,6 +171,8 @@ def hook():
 			send_podcast_runtime_graph()
 		case "gym":
 			start_workout(exercise_list)
+		case "train":
+			get_train_schedule(args)
 		case _:
 			text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -548,6 +546,29 @@ def start_workout(all_exercises):
 				another_set = get_response("Another set?", 900)
 	end_workout()
 
+def get_train_schedule(station_json):
+	station1 = station_json["station1"]
+	station2 = station_json["station2"]
+	with open("text_files/station_inputs") as f:
+		station_inputs = f.readlines()
+	prompt = f'''Here is a list of train stations:\n
+	{station_inputs}\n
+	Which stations are these "{station1}" and "{station2}"?\n
+	Only return your answer in this format ["station1", "stations2"]
+	'''
+	gpt_response = gpt_request(prompt)["choices"][0]
+	stations = eval(gpt_response["message"]["content"])
+	station1 = stations[0]
+	station2 = stations[1]
+	septa_headers = {'Accept': 'application/json'}
+	parameters = {'req1': station1, 'req2': station2}
+	response = requests.get(
+		"https://www3.septa.org/api/NextToArrive/index.php",
+		params=parameters, headers=septa_headers).json()
+	departure_time = response[0]["orig_departure_time"]
+	text_me(f'''The next train from {station1} to {station2} leaves at {departure_time}\nReply STOP to end this conversation.''')
+
+
 def desc():
 	if log_command("desc"):
 		return
@@ -596,6 +617,19 @@ def commands():
 
 
 
+def gpt_request(prompt, function_call=False):
+	messages = [{"role": "user", "content": prompt}]
+	if function_call:
+		json_data = {"model": model, "messages": messages, "functions": functions()}
+	else:
+		json_data = {"model": model, "messages": messages}
+	response = requests.post(
+		"https://api.openai.com/v1/chat/completions",
+		headers=gpt_header,
+		json=json_data,
+	)
+	return response.json()
+
 def functions():
 	with open("text_files/functions.json") as f:
 		functions = json.load(f)
@@ -643,6 +677,23 @@ def clean():
 		upcoming_games[i] = upcoming_games[i].strftime("%m/%d/%Y:%H:%M\n")
 	with open("text_files/brentford", "w") as f:
 		f.writelines(upcoming_games)
+	# with open("text_files/weight") as weight_file:
+	# 	weights = weight_file.readlines()
+	# for i in range(len(weights)):
+	# 	weights[i] = weights[i].strip().split(":")
+	# 	weights[i][0] = weights[i][0].split("/")
+	# 	try:
+	# 		nothing = datetime(int(weights[i][0][2]), int(
+	# 			weights[i][0][0]), int(weights[i][0][1]), tzinfo=tz)
+	# 		nothing = float(weights[i][1])
+	# 		weights[i][0] = f"{weights[i][0][2]}/{weights[i][0][0]}/{weights[i][0][1]}"
+	# 		weights[i] = ":".join(weights[i])+"\n"
+	# 	except:
+	# 		weights[i] = "error"
+	# 		pprint("error")
+	# weights = sorted([i for i in weights if i != "error"])
+	# with open("text_files/weight", "w") as weight_file:
+	# 	weight_file.writelines(weights)
 	with open("text_files/alarm") as alarm_file:
 		alarm_bool = alarm_file.readline()
 		try:
@@ -1097,7 +1148,7 @@ def weight_date_format(line):
 
 def date_to_num(date):
 	date = date.split("/")
-	date = str(int(date[0])*30 + int(date[1]) + int(date[2])*365)
+	date = str(int(date[1])*30 + int(date[2]) + int(date[0])*365)
 	return date
 
 def moving_avg(data, window):
@@ -1122,6 +1173,7 @@ def create_graph(x, y, data_type, plot_attributes):
 	show_regression_line = plot_attributes["show_regression_line"]
 	show_moving_avg = plot_attributes["show_moving_avg"]
 	window = plot_attributes["window_size"]
+	plt.clf()
 	if show_points:
 		plt.scatter(x, y)
 	if show_moving_avg and data_type == "weight":

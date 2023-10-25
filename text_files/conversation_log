@@ -2215,3 +2215,164 @@ script: 53°
 evan: what r my top artists
 evan: what r my top artists
 script: Here are your top artists.
+script: Good Morning!
+Today is Tuesday, October 10th
+Here's today's weather:
+	Temperature - 52°
+	Conditions - Mostly Cloudy
+	Humidity - Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+script: Why fear death? It is the most beautiful adventure in life.
+
+evan: what's the weather right now
+script: Temperature - 65°
+Conditions - Partly Cloudy
+Humidity - Average
+Wind Speed - Windy
+Visibility - 10 mi
+script: Good Morning!
+Today is Wednesday, October 11st
+Here's today's weather:
+	Temperature - 52°
+	Conditions - A Few Clouds
+	Humidity - Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+evan: what's the weather
+script: Temperature - 57°
+Conditions - Partly Cloudy
+Humidity - Average
+Wind Speed - Light Breeze
+Visibility - 10 mi
+script: Good Morning!
+Today is Friday, October 13rd
+Here's today's weather:
+	Temperature - 52°
+	Conditions - A Few Clouds
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: If you do not think about your future, you cannot have one.
+
+evan: what are my top artists
+script: Here are your top artists.
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: send me a song duration graph
+script: Here are your longest songs.
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: clean
+evan: send me my weight graph
+evan: send me my weight graph
+script: Here is your weight graph
+evan: clean
+evan: send me my weight graph
+evan: send me my weight graph
+evan: send me my weight graph
+script: Here is your weight graph
+evan: clean
+evan: send me my weight graph
+evan: send me my weight graph
+evan: clean
+evan: send me my weight graph
+script: Here is your weight graph
+script: Good Morning!
+Today is Sunday, October 15th
+Here's today's weather:
+	Temperature - 46°
+	Conditions - Mostly Cloudy
+	Humidity - Average
+	Wind Speed - Windy
+	Visibility - 10 mi
+script: Here's today's quote:
+script: When we change the way we communicate, we change society.
+
+evan: gym
+script: Pick an exercise(0 to end the workout)
+
+3: Deadlift
+22: Lat Pulldown
+23: Seated Cable Row
+24: Chin Ups
+25: Pull Ups
+27: Lat Pushdowns
+28: Shrugs
+29: Single Arm Row
+30: Barbell Row
+31: Cable Crunch
+32: Plank
+33: Russian Twist
+34: Side Plank
+35: Kettlebell Side Bend
+36: Hanging Leg Raise
+37: Dead Hang
+script: Good Morning!
+Today is Monday, October 16th
+Here's today's weather:
+	Temperature - 44°
+	Conditions - A Few Clouds
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Good Morning!
+Today is Tuesday, October 17th
+Here's today's weather:
+	Temperature - 52°
+	Conditions - Mostly Cloudy
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: My family is from the south of Italy in this little place called Calabria. It's a big part of my family, the Italian culture. I grew up around it. My parents speak Italian, and I speak Italian.
+
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+evan: when is the next train from 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
+evan: when is the next train from 30th street to pennbrook
+script: hi
+evan: when is the next train from 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
+evan: when is the next train from 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
+Reply STOP to end this conversation.

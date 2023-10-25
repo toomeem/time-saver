@@ -235,5 +235,22 @@
 			"properties": {},
 			"required": []
 		}
+	},
+	{
+		"name": "train",
+		"description": "check the next train times for the septa regional rail line",
+		"parameters":{
+			"type": "object",
+			"properties": {
+				"station1": {
+					"type": "string",
+					"description": "the starting station"
+				},
+				"station2": {
+					"type": "string",
+					"description": "the ending station"
+				}
+			}
+		}
 	}
 ]
