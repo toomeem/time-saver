@@ -1,5 +1,5 @@
 '''
-all dates are in month/day/year
+all dates are in year/month/day
 
 '''
 
@@ -57,7 +57,7 @@ cloudinary.config(
 )
 gpt_header = {
 	"Content-Type": "application/json",
-	"Authorization": "Bearer " + openai_api_key,
+	"Authorization": "Bearer " + str(openai_api_key),
 	}
 
 
@@ -72,7 +72,7 @@ plot_attributes = {
 		"show_moving_avg": True,
 		"show_regression_line": True,
 		"window_size": 7,
-		"bulk/cut_dates": {"01/29/2023": "bulk", "08/22/2023": "bulk", "06/06/2023": "cut"}
+		"bulk/cut_dates": {"2023/1/29": "bulk", "2023/8/22": "bulk", "2023/6/6": "cut"}
 	}
 }
 
@@ -86,8 +86,9 @@ def message_user(body, media_url=None):
 		return
 	try:
 		log_message(body, "script")
-		print(body)
-		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
+		print("")
+		print(f"Bot: {body}\n")
+		# message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 	except:
 		pass
 
@@ -107,8 +108,6 @@ def hook(message):
 		response_text = response["message"]["function_call"]["name"]
 		args = eval(response["message"]["function_call"]["arguments"])
 	match response_text:
-		case "alarm":
-			alarm()
 		case "temp":
 			if not log_command("temp"):
 				message_user(f'''{get_weather("temp")}°''')
@@ -136,8 +135,8 @@ def hook(message):
 			log_weight(args["weight"])
 			message_user("Logged")
 		case "weight_graph":
-			message_user("Sorry this function is not available right now.")
-			# send_weight_graph(plot_attributes)
+			# message_user("Sorry this function is not available right now.")
+			send_weight_graph(plot_attributes)
 		case "hi":
 			message_user("Hello!")
 		case "spotify":
@@ -186,36 +185,23 @@ def days_until(target, start=None, return_days=False):
 	if log_command("days_until"):
 		return "error"
 	target = target.split("/")
-	target = date(year=int(target[2]), month=int(target[0]), day=int(target[1]))
+	target = date(year=int(target[0]), month=int(target[1]), day=int(target[2]))
 	if start is None:
 		start = date.today()
 	else:
 		start = start.split("/")
-		start = date(year=int(start[2]), month=int(start[0]), day=int(start[1]))
+		start = date(year=int(start[0]), month=int(start[1]), day=int(start[2]))
 	difference = target - start
 	if return_days:
 		return int(difference.days)
 	return difference
 
-def alarm():
-	if log_command("alarm"):
-		return
-	with open("text_files/alarm") as alarm_file:
-		alarm_on = bool(int(alarm_file.readline()))
-	with open("text_files/alarm", "w") as alarm_file:
-		if alarm_on:
-			alarm_file.write("0")
-		else:
-			alarm_file.write("1")
-		alarm_state = "off" if alarm_on else "on"
-		message_user(f"Your alarm is now {alarm_state}")
-
 def school():
 	if log_command("school"):
 		return
 	try:
-		left = days_until("06/15/2024", return_days=True)
-		total = days_until("06/15/2024", "09/15/2023", return_days=True)
+		left = days_until("2024/06/15", return_days=True)
+		total = days_until("2024/06/15", "2023/09/15", return_days=True)
 		message = f"School completed - {round((1-(left/total))*100, 1)}%\n"
 		message += f"School ends in {left} days"
 		message_user(message)
@@ -291,7 +277,7 @@ def log_weight(pounds):
 	if log_command("log_weight"):
 		return
 	with open("text_files/weight", "a") as weight_file:
-		weight_file.write(f'''{rn("%m/%d/%Y")}:{pounds}\n''')
+		weight_file.write(f'''{rn("%Y/%m/%d")}:{pounds}\n''')
 
 def send_weight_graph(plot_attributes):
 	if log_command("send_weight_graph"):
@@ -303,19 +289,12 @@ def send_weight_graph(plot_attributes):
 	x = [int(i[0]) for i in data]
 	y = [float(i[1]) for i in data]
 	create_graph(x, y, "weight", plot_attributes)
-	graph_url = cloudinary.uploader.upload(
-		"weight.png",
-		public_id="weight_graph",
-		overwrite=True)["secure_url"]
-	message_user("Here is your weight graph", graph_url)
-	os.remove("weight.png")
-
-def log_calories(cals):
-	if log_command("log_calories"):
-		return
-	with open("text_files/calories", "a") as calories_file:
-		calories_file.write(f'''{rn("%m/%d/%Y")}:{cals[0]}\n''')
-	return "Logged"
+	# graph_url = cloudinary.uploader.upload(
+	# 	"weight.png",
+	# 	public_id="weight_graph",
+	# 	overwrite=True)["secure_url"]
+	message_user("Here is your weight graph")#, graph_url)
+	# os.remove("weight.png")
 
 def update_spotify_data():
 	if log_command("update_spotify_data"):
@@ -574,8 +553,7 @@ def commands():
 	if log_command("commands"):
 		return
 	command_lst = [
-		"alarm -> toggles all alarms"
-		, "temp -> sends the current temperature"
+		"temp -> sends the current temperature"
 		, "weather -> sends the current weather conditions in Philadelphia"
 		, "quote -> sends a random quote"
 		, "school -> sends how much school is left"
@@ -675,38 +653,31 @@ def clean():
 		games[i][0] = games[i][0].split("/")
 		games[i] = [games[i][0][0], games[i][0][1], games[i][0][2], games[i][1], games[i][2]]
 		games[i] = [int(i) for i in games[i]]
-		games[i] = datetime(games[i][2], games[i][0], games[i][1], games[i][3], games[i][4], tzinfo=tz)
+		games[i] = datetime(games[i][0], games[i][1], games[i][2], games[i][3], games[i][4], tzinfo=tz)
 		if (today-games[i]).total_seconds() > 0:
 			games[i] = "past"
 	upcoming_games = [i for i in games if i != "past"]
 	for i in range(len(upcoming_games)):
-		upcoming_games[i] = upcoming_games[i].strftime("%m/%d/%Y:%H:%M\n")
+		upcoming_games[i] = upcoming_games[i].strftime("%Y/%m/%d:%H:%M\n")
 	with open("text_files/brentford", "w") as f:
 		f.writelines(upcoming_games)
-	# with open("text_files/weight") as weight_file:
-	# 	weights = weight_file.readlines()
-	# for i in range(len(weights)):
-	# 	weights[i] = weights[i].strip().split(":")
-	# 	weights[i][0] = weights[i][0].split("/")
-	# 	try:
-	# 		nothing = datetime(int(weights[i][0][2]), int(
-	# 			weights[i][0][0]), int(weights[i][0][1]), tzinfo=tz)
-	# 		nothing = float(weights[i][1])
-	# 		weights[i][0] = f"{weights[i][0][2]}/{weights[i][0][0]}/{weights[i][0][1]}"
-	# 		weights[i] = ":".join(weights[i])+"\n"
-	# 	except:
-	# 		weights[i] = "error"
-	# 		pprint("error")
-	# weights = sorted([i for i in weights if i != "error"])
-	# with open("text_files/weight", "w") as weight_file:
-	# 	weight_file.writelines(weights)
-	with open("text_files/alarm") as alarm_file:
-		alarm_bool = alarm_file.readline()
+	with open("text_files/weight") as weight_file:
+		weights = weight_file.readlines()
+	for i in range(len(weights)):
+		weights[i] = weights[i].strip().split(":")
+		weights[i][0] = weights[i][0].split("/")
 		try:
-			x = int(alarm_bool)
+			nothing = datetime(int(weights[i][0][2]), int(
+				weights[i][0][0]), int(weights[i][0][1]), tzinfo=tz)
+			nothing = float(weights[i][1])
+			weights[i][0] = f"{weights[i][0][2]}/{weights[i][0][0]}/{weights[i][0][1]}"
+			weights[i] = ":".join(weights[i])+"\n"
 		except:
-			error_report("alarm_file")
-			return("error in alarm file")
+			weights[i] = "error"
+			pprint("error")
+	weights = sorted([i for i in weights if i != "error"])
+	with open("text_files/weight", "w") as weight_file:
+		weight_file.writelines(weights)
 	update_spotify_data()
 	return("All Clean!")
 
@@ -715,7 +686,7 @@ def brentford_plays_today():
 		return False
 	with open("text_files/brentford") as brentford_file:
 		games = brentford_file.readlines()
-	today = rn("%m/%d/%Y")
+	today = rn("%Y/%m/%d")
 	for i in games:
 		if today in i:
 			return i.strip().split(":")[1]
@@ -1222,7 +1193,8 @@ def create_graph(x, y, data_type, plot_attributes):
 	plt.xlabel(plot_attributes["xlabel"])
 	plt.ylabel(plot_attributes["ylabel"])
 	plt.legend(["Eating like shit", "Bulk", "Cut"])
-	plt.savefig(plot_attributes["filename"], dpi=dpi)
+	plt.show()
+	# plt.savefig(plot_attributes["filename"], dpi=dpi)
 
 # start of spotify functions
 
@@ -1556,6 +1528,7 @@ if __name__ == "__main__":
 	on_start()
 	# app.run(host="0.0.0.0", port=port, debug=True)
 print("Hello!")
+print("How can I help you today?")
 
 while True:
 	hook(input())

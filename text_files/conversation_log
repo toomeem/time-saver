@@ -2376,3 +2376,42 @@ script: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
 evan: when is the next train from 30th street to pennbrook
 script: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
 Reply STOP to end this conversation.
+evan: what functions do you have
+script: alarm -> toggles all alarms
+temp -> sends the current temperature
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+clean -> performs some functions that keep this bot running smoothly
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+script: spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: show me a graph of my weight
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: clean yourself
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: send me a graph of my weight
+evan: send me a graph of my weight
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: clean
