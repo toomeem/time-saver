@@ -10,14 +10,12 @@ import re
 import threading
 import time
 from collections import Counter
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 from pprint import pprint
 
 import cloudinary.uploader
 import matplotlib.pyplot as plt
 import numpy as np
-import openai
-import pandas as pd
 import pytz
 import requests
 import spotipy
@@ -26,21 +24,12 @@ from dotenv import load_dotenv
 from flask import Flask, request
 from scipy import stats
 from spotipy import SpotifyOAuth
-from twilio.rest import Client
 
 load_dotenv()
 
 app = Flask(__name__)
 port = 5000
 dpi = 500
-height = 68
-underwight = 122
-overweight = 164
-twilio_account_sid = os.getenv("TWILIO_ACCOUNT_SID")
-twilio_auth_token = os.getenv("TWILIO_AUTH_TOKEN")
-client = Client(twilio_account_sid, twilio_auth_token)
-bot_num = os.getenv("TWILIO_PHONE_NUMBER")
-my_num = os.getenv("MY_PHONE_NUMBER")
 cloudinary_cloud_name = os.getenv("CLOUDINARY_CLOUD_NAME")
 cloudinary_api_key = os.getenv("CLOUDINARY_API_KEY")
 cloudinary_api_secret = os.getenv("CLOUDINARY_API_SECRET")
@@ -92,7 +81,7 @@ gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 
 exercise_list = list(json.load(open("text_files/exercises.json")))
 
-def text_me(body, media_url=None):
+def message_user(body, media_url=None):
 	if not isinstance(body, str):
 		return
 	try:
@@ -112,7 +101,7 @@ def hook(message):
 	response = gpt_request(message, function_call=True)
 	response = response["choices"][0]
 	if response["finish_reason"] == "stop":
-		text_me("I am unsure what function you are reffering to. Please try again.")
+		message_user("I am unsure what function you are reffering to. Please try again.")
 		return "200"
 	else:
 		response_text = response["message"]["function_call"]["name"]
@@ -122,19 +111,19 @@ def hook(message):
 			alarm()
 		case "temp":
 			if not log_command("temp"):
-				text_me(f'''{get_weather("temp")}°''')
+				message_user(f'''{get_weather("temp")}°''')
 		case "weather":
 			if not log_command("weather"):
-				text_me(formatted_weather())
+				message_user(formatted_weather())
 		case "quote":
 			if not log_command("quote"):
-				text_me(get_quote())
+				message_user(get_quote())
 		case "school":
 			school()
 		case "scan":
 			scan(args["scan"])
 		case "bday":
-			text_me(bday())
+			message_user(bday())
 		case "today":
 			today()
 		case "desc":
@@ -145,12 +134,12 @@ def hook(message):
 			clean()
 		case "weight":
 			log_weight(args["weight"])
-			text_me("Logged")
+			message_user("Logged")
 		case "weight_graph":
-			text_me("Sorry this function is not available right now.")
+			message_user("Sorry this function is not available right now.")
 			# send_weight_graph(plot_attributes)
 		case "hi":
-			text_me("Hello!")
+			message_user("Hello!")
 		case "spotify":
 			spotify_data_description()
 		case "artists":
@@ -174,7 +163,7 @@ def hook(message):
 		case "train":
 			get_train_schedule(args)
 		case _:
-			text_me("That command does not exist.\nTo see a list of all commands, text \"commands\".")
+			message_user("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
 
 def kill():
@@ -219,7 +208,7 @@ def alarm():
 		else:
 			alarm_file.write("1")
 		alarm_state = "off" if alarm_on else "on"
-		text_me(f"Your alarm is now {alarm_state}")
+		message_user(f"Your alarm is now {alarm_state}")
 
 def school():
 	if log_command("school"):
@@ -229,15 +218,15 @@ def school():
 		total = days_until("06/15/2024", "09/15/2023", return_days=True)
 		message = f"School completed - {round((1-(left/total))*100, 1)}%\n"
 		message += f"School ends in {left} days"
-		text_me(message)
+		message_user(message)
 	except:
-		text_me("Error")
+		message_user("Error")
 
 def scan(args):
 	if log_command("scan"):
 		return
 	keyword = args
-	text_me(get_quote(keyword))
+	message_user(get_quote(keyword))
 
 def bday():
 	if log_command("bday"):
@@ -293,7 +282,7 @@ def today():
 	day_num = int(rn("%d"))
 	suffix = num_suffix(int(rn("%d")[1]))
 	message = rn(f"Today is %A, %b {day_num}{suffix}") + "\n"
-	text_me(message)
+	message_user(message)
 
 def clean_text():
 	clean()
@@ -318,7 +307,7 @@ def send_weight_graph(plot_attributes):
 		"weight.png",
 		public_id="weight_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here is your weight graph", graph_url)
+	message_user("Here is your weight graph", graph_url)
 	os.remove("weight.png")
 
 def log_calories(cals):
@@ -362,7 +351,7 @@ def spotify_data_description():
 		f"You have {len(podcast_data)} saved podcast episodes that are collectively {podcast_hours} hours long.",
 		f"Those episodes are from {len(shows.keys())} different shows."
 		]
-	text_me("\n".join(message))
+	message_user("\n".join(message))
 	update_spotify_data()
 
 def send_artist_graph():
@@ -381,7 +370,7 @@ def send_artist_graph():
 		"artist_graph.png",
 		public_id="artist_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here are your top artists.", graph_url)
+	message_user("Here are your top artists.", graph_url)
 	os.remove("artist_graph.png")
 
 def send_song_duration_graph():
@@ -402,7 +391,7 @@ def send_song_duration_graph():
 		"song_duration_graph.png",
 		public_id="song_duration_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here are your longest songs.", graph_url)
+	message_user("Here are your longest songs.", graph_url)
 	os.remove("song_duration_graph.png")
 
 def send_genre_graph():
@@ -420,7 +409,7 @@ def send_genre_graph():
 		"genre_graph.png",
 		public_id="genre_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here are your top genres.", graph_url)
+	message_user("Here are your top genres.", graph_url)
 	os.remove("genre_graph.png")
 
 def send_explicit_graph():
@@ -437,7 +426,7 @@ def send_explicit_graph():
 		"explicit_graph.png",
 		public_id="explicit_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here is the ratio of explicit songs in your library.", graph_url)
+	message_user("Here is the ratio of explicit songs in your library.", graph_url)
 	os.remove("explicit_graph.png")
 
 def send_covers_graph():
@@ -454,7 +443,7 @@ def send_covers_graph():
 		"covers_graph.png",
 		public_id="covers_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here is the ratio of covers in your library.", graph_url)
+	message_user("Here is the ratio of covers in your library.", graph_url)
 	os.remove("covers_graph.png")
 
 def send_decade_graph():
@@ -471,7 +460,7 @@ def send_decade_graph():
 		"decade_graph.png",
 		public_id="decade_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here are the decades your songs were released in.", graph_url)
+	message_user("Here are the decades your songs were released in.", graph_url)
 	os.remove("decade_graph.png")
 
 def send_episode_graph():
@@ -489,7 +478,7 @@ def send_episode_graph():
 		"episode_graph.png",
 		public_id="episode_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here are the podcasts you listen to.", graph_url)
+	message_user("Here are the podcasts you listen to.", graph_url)
 	os.remove("episode_graph.png")
 
 def send_podcast_runtime_graph():
@@ -507,7 +496,7 @@ def send_podcast_runtime_graph():
 		"podcast_runtime_graph.png",
 		public_id="podcast_runtime_graph",
 		overwrite=True)["secure_url"]
-	text_me("Here are the podcasts you listen to.", graph_url)
+	message_user("Here are the podcasts you listen to.", graph_url)
 	os.remove("podcast_runtime_graph.png")
 
 def start_workout(all_exercises):
@@ -536,7 +525,7 @@ def start_workout(all_exercises):
 		if exercise_num == 0:
 			quit_workout = True
 		else:
-			text_me("Good choice")
+			message_user("Good choice")
 			time.sleep(180)
 			log_set(exercise_num, is_first_set(exercise_num))
 			another_set = get_response("Another set?", 900)
@@ -566,7 +555,7 @@ def get_train_schedule(station_json):
 		"https://www3.septa.org/api/NextToArrive/index.php",
 		params=parameters, headers=septa_headers).json()
 	departure_time = response[0]["orig_departure_time"]
-	text_me(f'''The next train from {station1} to {station2} leaves at {departure_time}\nReply STOP to end this conversation.''')
+	message_user(f'''The next train from {station1} to {station2} leaves at {departure_time}\nReply STOP to end this conversation.''')
 
 
 def desc():
@@ -579,7 +568,7 @@ def desc():
 	If you would like to see my commands, text "commands".\n
 	Have an amazing day :)
 	'''
-	text_me(message)
+	message_user(message)
 
 def commands():
 	if log_command("commands"):
@@ -611,11 +600,28 @@ def commands():
 	message1 = "\n".join(command_lst[:length//2])
 	message2 = "\n".join(command_lst[length//2:])
 	message2 += "\nI also have a few other surprises ;)"
-	text_me(message1)
-	text_me(message2)
+	message_user(message1)
+	message_user(message2)
 
 
 
+
+
+def error_count_notify():
+	with open("text_files/errors") as errors:
+		error_list = list(errors.readlines())
+# return how many errors there are in the past 24 hours
+def morning_message():
+	message = "Good Morning!\n"
+	day_num = int(rn("%d"))
+	suffix = num_suffix(int(rn("%d")[1]))
+	brentford_game = brentford_plays_today()
+	message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
+	if isinstance(brentford_game, str):
+		message += f"Brentford plays at {brentford_game} today!\n"
+	message += "Here's today's weather:\n\t"
+	message += formatted_weather().replace("\n", "\n\t")
+	return(message)
 
 def gpt_request(prompt, function_call=False):
 	messages = [{"role": "user", "content": prompt}]
@@ -815,7 +821,7 @@ def end_workout(start=False):
 		with open("text_files/workout_log", "w") as workout_file:
 			json.dump(workouts, workout_file, indent=2)
 		if not start:
-			text_me("Workout Logged")
+			message_user("Workout Logged")
 		increment_gym_day()
 	except:
 		pass
@@ -833,7 +839,7 @@ def increment_gym_day(increment=1):
 		return
 	gym_day = get_gym_day_num()
 	if gym_day is None:
-		text_me("Error")
+		message_user("Error")
 		return
 	gym_day += increment
 	if gym_day >= len(gym_schedule):
@@ -861,7 +867,7 @@ def get_response(question=None, wait_time=300, confirmation=None):
 	if log_command("get_response"):
 		return
 	if question is not None:
-		text_me(question)
+		message_user(question)
 	set_in_conversation(True)
 	start = time.time()
 	time_left = start + wait_time - time.time()
@@ -871,12 +877,12 @@ def get_response(question=None, wait_time=300, confirmation=None):
 		if response != "":
 			set_in_conversation(False)
 			if confirmation != None:
-				text_me(confirmation)
+				message_user(confirmation)
 			if response.lower() == "pass":
 				return
 			return response
 		time.sleep(.5)
-	text_me("nvm")
+	message_user("nvm")
 	set_in_conversation(False)
 
 
@@ -920,11 +926,8 @@ def bday_famousbirthdays():
 	raw_bday_list = list(
 		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
 	for i in range(len(raw_bday_list)):
-		try:
-			not_used = int(raw_bday_list[i])
+		if isinstance(raw_bday_list[i], int):
 			raw_bday_list.remove(raw_bday_list[i])
-		except:
-			pass
 	fake_famous = [
 		"TikTok Star", "Reality Star", "Gospel Singer",
 		"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
@@ -1053,8 +1056,10 @@ def get_weather(data="full"):
 			return dewpoint
 		elif data == "vis":
 			return vis
-		weather_data = {"conditions":weather_conditions,"temp":temp,"humidity":humidity,
-									"wind_speed": wind_speed, "dewpoint":dewpoint,"vis":vis}
+		weather_data = {
+			"conditions":weather_conditions,"temp":temp,"humidity":humidity,
+			"wind_speed": wind_speed, "dewpoint":dewpoint,"vis":vis
+			}
 		return weather_data
 	except:
 		error_report("get_weather")
@@ -1531,40 +1536,19 @@ def event_loop():
 	with open("text_files/event_id", "w") as event_id_file:
 		event_id_file.write(event_id)
 	while True:
-		if check_for_duplicate_event(event_id):
-			return
-		if rn() == "08:30":
-			if log_command("morning"):
-				time.sleep(60)
-			else:
-				message = "Good Morning!\n"
-				day_num = int(rn("%d"))
-				suffix = num_suffix(int(rn("%d")[1]))
-				brentford_game = brentford_plays_today()
-				message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
-				if isinstance(brentford_game, str):
-					message += f"Brentford plays at {brentford_game} today!\n"
-				message += "Here's today's weather:\n\t"
-				message += formatted_weather().replace("\n", "\n\t")
-				text_me(message)
-				with open("text_files/errors") as errors:
-					error_list = list(errors.readlines())
-					if len(error_list) > 100000:
-						text_me("OVER 100,000 ERRORS, FIX IMMEDIATELY!")
-					elif len(error_list) > 10000:
-						text_me("Over 10,000 errors, fix it soon.")
-					elif len(error_list) > 1000:
-						text_me("Over 1,000 erros, check it out sometime soon.")
-				time.sleep(60)
-		if rn() == "11:01":
-			if log_command("morning quote"):
-				time.sleep(60)
-			else:
-				text_me(f"Here's today's quote:")
-				time.sleep(1)
-				text_me(get_quote())
-				time.sleep(60)
-		if rn() == "06:00": # daily operations
+		if rn() == "08:30" and log_command("morning"):
+			time.sleep(60)
+		elif rn() == "08:30":
+			message_user(morning_message)
+			time.sleep(60)
+		elif rn() == "11:01" and log_command("morning quote"):
+			time.sleep(60)
+		elif rn() == "11:01":
+			message_user(f"Here's today's quote:")
+			time.sleep(1)
+			message_user(get_quote())
+			time.sleep(60)
+		elif rn() == "06:00": # daily operations
 			daily_funcs()
 		time.sleep(5)
 
