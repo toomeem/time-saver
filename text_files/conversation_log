@@ -2417,3 +2417,105 @@ script: Here is your weight graph
 evan: clean
 evan: when is the next train from 30th street to pennbrook
 evan: when is the next train from 30th street to pennbrook
+evan: what famous people were born today
+script: error
+evan: what famous people were born today
+script: error
+evan: what famous people were born today
+script: error
+evan: tell me about my spotify data
+script: Your playlist is 3199 songs long and it is 212.7 hours long.
+It spans 70 years of music.
+Your playlist consisted of 1389 artists that represented 693 different genres.
+The songs were an average of 3 minutes and 59 seconds long.
+The longest song was 23 minutes and 41 seconds long.
+The shortest song was 56 seconds long.
+There were around 102 cover songs.
+About 29.8% of the songs were explicit.
+You have 73 saved podcast episodes that are collectively 98.5 hours long.
+Those episodes are from 14 different shows.
+evan: show me a graph of my spotify artists
+script: Here are your top artists.
+evan: show me a graph of my spotify artists
+script: Here are your top artists.
+evan: what other functions do you have
+script: temp -> sends the current temperature
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+script: artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: whats the temperature
+script: 62°
+evan: what commands do you have
+script: temp -> sends the current temperature
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: send me a weight graph
+script: Here is your weight graph
+evan: whens the next train from pennbrook to 30th street
+script: The next train from 30th Street Station to Pennbrook leaves at 1:04PM
+Reply STOP to end this conversation.
+evan: when is the next train fromm 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 1:04PM.
+evan: when is the next train from 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 1:04PM.
+evan: when is the next train from pennbrook to 30th street
+script: The next train from 30th Street Station to Pennbrook leaves at 1:04PM and arrives at 2:00PM.
+evan: what commands do you have
+script: temp -> sends the current temperature
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: send a graph of my spotify decade data
+script: Here are the decades your songs were released in.
