@@ -129,8 +129,6 @@ def hook(message):
 			desc()
 		case "commands":
 			commands()
-		case "clean":
-			clean()
 		case "weight":
 			log_weight(args["weight"])
 			message_user("Logged")
@@ -269,9 +267,6 @@ def today():
 	suffix = num_suffix(int(rn("%d")[1]))
 	message = rn(f"Today is %A, %b {day_num}{suffix}") + "\n"
 	message_user(message)
-
-def clean_text():
-	clean()
 
 def log_weight(pounds):
 	if log_command("log_weight"):
@@ -533,6 +528,9 @@ def get_train_schedule(station_json):
 	response = requests.get(
 		"https://www3.septa.org/api/NextToArrive/index.php",
 		params=parameters, headers=septa_headers).json()
+	if response == []:
+		message_user("There are no upcoming trains between those stations.")
+		return
 	departure_time = response[0]["orig_departure_time"]
 	message_user(f'''The next train from {station1} to {station2} leaves at {departure_time}\nReply STOP to end this conversation.''')
 
@@ -541,7 +539,7 @@ def desc():
 	if log_command("desc"):
 		return
 	message = '''
-	I am Jarvis, a chat bot created by Evan Toomey.
+	I am a chat bot created by Evan Toomey.
 	I am still in development, so please be patient with me.
 	If I am going crazy and you need to terminate me, text "kill".
 	If you would like to see my commands, text "commands".\n
@@ -556,11 +554,10 @@ def commands():
 		"temp -> sends the current temperature"
 		, "weather -> sends the current weather conditions in Philadelphia"
 		, "quote -> sends a random quote"
-		, "school -> sends how much school is left"
+		, "school -> sends how much school is left for the year"
 		, "scan ___ -> searches through all the unused quotes that contain that word/phrase"
 		, "bday -> sends 5 famous people that were born today"
 		, "today -> sends the day of the month and the weekday"
-		, "clean -> performs some functions that keep this bot running smoothly"
 		, "weight ___-> logs your weight"
 		, "weight_graph -> sends a graph of your weight over time"
 		, "spotify -> sends some data about your spotify account"
@@ -679,7 +676,6 @@ def clean():
 	with open("text_files/weight", "w") as weight_file:
 		weight_file.writelines(weights)
 	update_spotify_data()
-	return("All Clean!")
 
 def brentford_plays_today():
 	if log_command("brentford_plays_today"):

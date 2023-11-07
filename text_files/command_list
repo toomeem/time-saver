@@ -8001,3 +8001,16 @@ clear_response
 end_workout
 in_conversation
 log_message
+set_in_conversation
+clear_response
+end_workout
+in_conversation
+log_message
+set_in_conversation
+clear_response
+end_workout
+set_in_conversation
+clear_response
+end_workout
+in_conversation
+log_message

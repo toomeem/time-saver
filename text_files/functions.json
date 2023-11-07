@@ -1,14 +1,5 @@
 [
 	{
-		"name": "alarm",
-		"description": "Toggles my alarms on or off",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
-	},
-	{
 		"name": "artists",
 		"description": "sends a bar chart of my top artists on spotify, graphed by the number of songs I listen to from each artist",
 		"parameters": {
@@ -20,15 +11,6 @@
 	{
 		"name": "bday",
 		"description": "sends some info about the famous people that were born today",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
-	},
-	{
-		"name": "clean",
-		"description": "runs functions that keep this bot free of bugs and running efficiently",
 		"parameters": {
 			"type": "object",
 			"properties": {},
@@ -109,7 +91,7 @@
 	},
 	{
 		"name": "hi",
-		"description": "resonds with a greeting",
+		"description": "resonds with a greeting, only if the user sends a greeting similar to hi, hello, hey, etc.",
 		"parameters": {
 			"type": "object",
 			"properties": {},
