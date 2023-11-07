@@ -97,14 +97,14 @@ def text_me(body, media_url=None):
 		return
 	try:
 		log_message(body, "script")
+		print(body)
 		message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 	except:
 		pass
 
 
-@app.route("/", methods=["POST"])
-def hook():
-	message = dict(request.values)["Body"].lower().strip()
+def hook(message):
+	# message = dict(request.values)["Body"].lower().strip()
 	if in_conversation():
 		log_response(message)
 		return "200"
@@ -1522,8 +1522,8 @@ def on_start():
 	set_in_conversation(False)
 	clear_file("text_files/cancel")
 	end_workout(True)
-	threading.Thread(target=event_loop).start()
-	threading.Thread(target=update_spotify_data).start()
+	# threading.Thread(target=event_loop).start()
+	# threading.Thread(target=update_spotify_data).start()
 
 
 def event_loop():
@@ -1570,4 +1570,8 @@ def event_loop():
 
 if __name__ == "__main__":
 	on_start()
-	app.run(host="0.0.0.0", port=port, debug=True)
+	# app.run(host="0.0.0.0", port=port, debug=True)
+print("Hello!")
+
+while True:
+	hook(input())
