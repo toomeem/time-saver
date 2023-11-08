@@ -90,7 +90,9 @@ def message_user(body, media_url=None):
 		if media_url is not None:
 			im = Image.open(media_url)
 			im.show()
-		print("User:", end=" ")
+			print("User:", end=" ")
+		else:
+			print("User:", end=" ")
 		# message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 	except:
 		pass
@@ -105,11 +107,10 @@ def hook(message):
 	response = gpt_request(message, function_call=True)
 	response = response["choices"][0]
 	if response["finish_reason"] == "stop":
-		message_user("I am unsure what function you are reffering to. Please try again.")
+		message_user(response["message"]["content"])
 		return "200"
-	else:
-		response_text = response["message"]["function_call"]["name"]
-		args = eval(response["message"]["function_call"]["arguments"])
+	response_text = response["message"]["function_call"]["name"]
+	args = eval(response["message"]["function_call"]["arguments"])
 	match response_text:
 		case "temp":
 			if not log_command("temp"):
@@ -268,7 +269,8 @@ def today():
 		return
 	day_num = int(rn("%d"))
 	suffix = num_suffix(int(rn("%d")[1]))
-	message = rn(f"Today is %A, %b {day_num}{suffix}") + "\n"
+	message = rn(f"Today is %A, %b {day_num}{suffix}\n")
+	message += f"Today's word of the day is '{get_todays_word().capitalize()}'"
 	message_user(message)
 
 def log_weight(pounds):
@@ -520,7 +522,8 @@ def get_train_schedule(station_json):
 	prompt = f'''Here is a list of train stations:\n
 	{station_inputs}\n
 	Which stations are these "{station1}" and "{station2}"?\n
-	Only return your answer in this format ["station1", "stations2"]
+	Your answer will be in this format ["station1", "stations2"].
+	Only return that format, nothing else.
 	'''
 	gpt_response = gpt_request(prompt)["choices"][0]
 	stations = eval(gpt_response["message"]["content"])
@@ -536,7 +539,11 @@ def get_train_schedule(station_json):
 		return
 	departure_time = response[0]["orig_departure_time"]
 	arrival_time = response[0]["orig_arrival_time"]
-	message_user(f'''The next train from {station1} to {station2} leaves at {departure_time} and arrives at {arrival_time}.''')
+	delay = response[0]["orig_delay"]
+	delay_str = ""
+	if delay != "On time":
+		delay_str = f" with a delay of {delay}"
+	message_user(f'''The next train from {station1} to {station2} leaves at {departure_time} and arrives at {arrival_time}{delay_str}.''')
 
 def desc():
 	if log_command("desc"):
@@ -580,6 +587,16 @@ def commands():
 
 
 
+
+def get_todays_word():
+	if log_command("get_todays_word"):
+		return
+	url = f"https://www.dictionary.com/"
+	page = requests.get(url, headers=request_header)
+	soup = BeautifulSoup(page.content, "html.parser")
+	element = soup.find_all("a", class_="hJCqtPGYwMx5z04f6y2o")
+	word = element[0].text
+	return word
 
 def delete_file(file_name):
 	if log_command("delete_file"):
@@ -1527,9 +1544,9 @@ def event_loop():
 			daily_funcs()
 		time.sleep(5)
 
-if __name__ == "__main__":
-	on_start()
-	# app.run(host="0.0.0.0", port=port, debug=True)
+# if __name__ == "__main__":
+# 	on_start()
+# 	# app.run(host="0.0.0.0", port=port, debug=True)
 print("\nBot: Hello! How may I help you today?")
 print("User:", end=" ")
 

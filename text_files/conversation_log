@@ -2519,3 +2519,100 @@ commands -> sends this
 I also have a few other surprises ;)
 evan: send a graph of my spotify decade data
 script: Here are the decades your songs were released in.
+evan: when is the next train from pennbrook to 30th street
+script: The next train from Pennbrook to 30th Street Station leaves at 4:41PM and arrives at 5:39PM.
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: what commands do you have
+script: temp -> sends the current temperature in Philadelphia
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: send me a graph of my spotify artists
+script: Here are your top artists.
+evan: send me a random quote
+script: Stop treating Muslims as if they're some kind of foreign, alien entity rather than part of the fabric of Canadian society or American society or British society.
+
+evan: send me a quote
+script: Stop treating Muslims as if they're some kind of foreign, alien entity rather than part of the fabric of Canadian society or American society or British society.
+
+evan: send me a quote
+script: No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
+
+evan: when is the next train from pennbrook to 30th street
+script: The next train from Pennbrook to 30th Street Station leaves at 4:41PM and arrives at 5:39PM.
+evan: when is the next train from chestnuy hill east to wayne junction
+script: The next train from Chestnut Hill East to Wayne Jct leaves at 5:01PM and arrives at 5:23PM.
+evan: when is the next train from wayne junction to chestnut hill east
+script: The next train from Wayne Jct to Chestnut Hill East leaves at 4:18PM and arrives at 4:41PM.
+evan: when is the next train from wayne junction to chestnut hill east
+evan: when is the next train from wayne junction to chestnut hill east
+script: The next train from Wayne Jct to Chestnut Hill East leaves at 5:16PM and arrives at 5:40PM with a delay of 7 mins.
+evan: what does the word semaphore mean
+script: I am unsure what function you are reffering to. Please try again.
+evan: what is a semaphore
+evan: what is a semaphore
+script: A semaphore is a synchronization object that controls access to a shared resource in a concurrent system. It allows multiple threads or processes to access a shared resource with mutual exclusion, meaning that only one thread or process can access the resource at a time. Semaphores can be used to prevent race conditions and ensure that critical sections of code are executed in a controlled manner. They maintain a count that can be incremented or decremented by threads or processes to control access to the shared resource.
+evan: what commands do you have
+script: temp -> sends the current temperature in Philadelphia
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: terminate this program
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: terminate this program
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: kill this program
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: kill
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: kill
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: today
+script: Today is Tuesday, Nov 7th
+Today's word of the day is semaphore
+evan: today
+script: Today is Tuesday, Nov 7th
+Today's word of the day is semaphore
+evan: today
+script: Today is Tuesday, Nov 7th
+Today's word of the day is 'Semaphore'

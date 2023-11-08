@@ -100,7 +100,7 @@
 	},
 	{
 		"name": "kill",
-		"description": "immediately ends the program",
+		"description": "immediately ends the program, may also be reffereed to as 'die' or 'end' or 'terminate'",
 		"parameters": {
 			"type": "object",
 			"properties": {},
