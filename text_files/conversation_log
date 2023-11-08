@@ -2616,3 +2616,34 @@ Today's word of the day is semaphore
 evan: today
 script: Today is Tuesday, Nov 7th
 Today's word of the day is 'Semaphore'
+evan: send me a graph of the genres of my spotify artists
+script: Here are your top genres.
+evan: send a graph of my explicit songs
+script: Here is the ratio of explicit songs in your library.
+evan: send me a graph of my cover songs
+script: Here is the ratio of covers in your library.
+evan: send me a graph of the decades of my songs
+script: Here are the decades your songs were released in.
+evan: send me a graph of my saved podcast episodes
+script: Here are the podcasts you listen to.
+evan: send me a graph of the runtimes of the podcasts I have saved
+script: Here are the podcasts you listen to.
+evan: terminate this program
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: kill this bot
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: end
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: kill
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: terminate
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: terminate this program
+script: That command does not exist.
+To see a list of all commands, text "commands".
+evan: terminate this program

@@ -112,6 +112,8 @@ def hook(message):
 	response_text = response["message"]["function_call"]["name"]
 	args = eval(response["message"]["function_call"]["arguments"])
 	match response_text:
+		case "kill":
+			kill()
 		case "temp":
 			if not log_command("temp"):
 				message_user(f'''{get_weather("temp")}°''')
@@ -168,8 +170,12 @@ def hook(message):
 	return "200"
 
 def kill():
-	log = log_command("kill")
-	os.abort()
+	try:
+		log = log_command("kill")
+	except:
+		pass
+	finally:
+		os.abort()
 
 def rn(target="%H:%M"):
 	now = datetime.now(tz)
@@ -607,8 +613,23 @@ def delete_file(file_name):
 		pass
 
 def error_count_notify():
+	now = datetime.now(tz)
 	with open("text_files/errors") as errors:
 		error_list = list(errors.readlines())
+	if len(error_list) == 0:
+		return 0
+	error_count = []
+	error_list = error_list[::-1]
+	for i in range(len(error_list)):
+		timestamp = error_list[i].strip().split(":")[1]
+		name = error_list[i].strip().split(":")[0]
+		timestamp = [int(i) for i in timestamp.split("/")]
+		timestamp = datetime(timestamp[0], timestamp[1], timestamp[2], timestamp[3], timestamp[4], tzinfo=tz)
+		if (now-timestamp).total_seconds() < 86400:
+			error_count.append(name)
+	return(Counter(error_count))
+
+
 # return how many errors there are in the past 24 hours
 def morning_message():
 	message = "Good Morning!\n"
@@ -1520,7 +1541,7 @@ def on_start():
 	clear_file("text_files/cancel")
 	end_workout(True)
 	# threading.Thread(target=event_loop).start()
-	# threading.Thread(target=update_spotify_data).start()
+	threading.Thread(target=update_spotify_data).start()
 
 
 def event_loop():
@@ -1544,11 +1565,9 @@ def event_loop():
 			daily_funcs()
 		time.sleep(5)
 
-# if __name__ == "__main__":
-# 	on_start()
-# 	# app.run(host="0.0.0.0", port=port, debug=True)
+
+on_start()
 print("\nBot: Hello! How may I help you today?")
 print("User:", end=" ")
-
 while True:
 	hook(input())
