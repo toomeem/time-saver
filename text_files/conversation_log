@@ -1,185 +1,185 @@
-evan: artists
-script: Here are your top artists.
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-evan: convo
-script: What is your weight?
-evan: 145
-script: That command does not exist.
+user: artists
+bot: Here are your top artists.
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+user: convo
+bot: What is your weight?
+user: 145
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: What is your weight?
-script: What is your weight?
-script: nvm
-script: nvm
-evan: kill
-evan: kill
-script: What is your weight?
-script: What is your weight?
-script: What is your weight?
-evan: kill
-evan: hi
-script: Hello!
-evan: hi
-script: Hello!
-script: What is your weight?
-script: What is your weight?
-evan: 145
-script: Got it
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: Got it
-script: What is your weight?
-script: What is your weight?
-evan: 145
-script: Got it
-script: Got it
-script: What is your weight?
-evan: 145
-script: Got it
-script: Good Morning!
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: What is your weight?
+bot: What is your weight?
+bot: nvm
+bot: nvm
+user: kill
+user: kill
+bot: What is your weight?
+bot: What is your weight?
+bot: What is your weight?
+user: kill
+user: hi
+bot: Hello!
+user: hi
+bot: Hello!
+bot: What is your weight?
+bot: What is your weight?
+user: 145
+bot: Got it
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: Got it
+bot: What is your weight?
+bot: What is your weight?
+user: 145
+bot: Got it
+bot: Got it
+bot: What is your weight?
+user: 145
+bot: Got it
+bot: Good Morning!
 Today is Tuesday, August 8th
 You move out in 38 days
 Here's today's weather:
-	Temperature - 72°
+	Temperature - 72ï¿½
 	Conditions - Overcast
 	Humidity - Above Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: America has the best doctors, the best nurses, the best hospitals, the best medical technology, the best medical breakthrough medicines in the world. There is absolutely no reason we should not have in this country the best health care in the world.
+bot: America has the best doctors, the best nurses, the best hospitals, the best medical technology, the best medical breakthrough medicines in the world. There is absolutely no reason we should not have in this country the best health care in the world.
 
-script: What is your weight?
-evan: 149
-script: Got it
-evan: hi
-script: Hello!
-evan: clean
-script: All Clean!
-evan: artists
-script: Here are your top artists.
-evan: hi
-script: Hello!
-evan: hi
-script: Hello!
-evan: clean
-script: All Clean!
-script: Good Morning!
+bot: What is your weight?
+user: 149
+bot: Got it
+user: hi
+bot: Hello!
+user: clean
+bot: All Clean!
+user: artists
+bot: Here are your top artists.
+user: hi
+bot: Hello!
+user: hi
+bot: Hello!
+user: clean
+bot: All Clean!
+bot: Good Morning!
 Today is Saturday, August 12nd
 You move out in 34 days
 Here's today's weather:
-	Temperature - 72°
+	Temperature - 72ï¿½
 	Conditions - Fair
 	Humidity - Above Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: I don't believe in regrets; I believe your future is in your tomorrows.
+bot: I don't believe in regrets; I believe your future is in your tomorrows.
 
-script: What is your weight?
-script: nvm
-evan: artists
-script: Here are your top artists.
-evan: hi
-script: Hello!
-script: Good Morning!
+bot: What is your weight?
+bot: nvm
+user: artists
+bot: Here are your top artists.
+user: hi
+bot: Hello!
+bot: Good Morning!
 Today is Sunday, August 13rd
 You move out in 33 days
 Here's today's weather:
-	Temperature - 75°
+	Temperature - 75ï¿½
 	Conditions - Mostly Cloudy
 	Humidity - High
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: If you look at the movie 'Belly,' I identify with Sincere the most. I am a gangster. I love my lady to death. I'm not in the game for the wrong reasons. I'm not in the game for the glory. I'm in the game to survive so the people that I love could be straight. I'm a highly intelligent individual.
+bot: If you look at the movie 'Belly,' I identify with Sincere the most. I am a gangster. I love my lady to death. I'm not in the game for the wrong reasons. I'm not in the game for the glory. I'm in the game to survive so the people that I love could be straight. I'm a highly intelligent individual.
 
-script: What is your weight?
-script: nvm
-evan: artists
-script: Here are your top artists.
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: h
-script: That command does not exist.
+bot: What is your weight?
+bot: nvm
+user: artists
+bot: Here are your top artists.
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: h
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: hi
-script: Hello!
-script: Good Morning!
+user: hi
+bot: Hello!
+bot: Good Morning!
 Today is Tuesday, August 15th
 You move out in 31 days
 Here's today's weather:
-	Temperature - 77°
+	Temperature - 77ï¿½
 	Conditions - Mostly Cloudy
 	Humidity - High
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 Never forget: This very moment, we can change our lives. There never was a moment, and never will be, when we are without the power to alter our destiny. This second, we can turn the tables on Resistance. This second, we can sit down and do our work.
 
-script: What is your weight?
-evan: 148
-script: Got it
-evan: commands
-script: alarm -> toggles all alarms
+bot: What is your weight?
+user: 148
+bot: Got it
+user: commands
+bot: alarm -> toggles all alarms
 temp -> sends the current temperature
 spam ___ -> spams any message
 weather -> sends the current weather conditions
@@ -190,7 +190,7 @@ bday -> sends 5 famous people that were born today
 today -> sends the day of the month, week, and school cycle
 clean -> performs some functions that keep this bot running
 weight ___-> logs your weight
-script: weight_graph -> sends a graph of your weight over time
+bot: weight_graph -> sends a graph of your weight over time
 spotify -> sends some data about your spotify account
 artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
@@ -203,8 +203,8 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: spotify
-script: Your playlist is 2886 songs long and it is 192.9 hours long.
+user: spotify
+bot: Your playlist is 2886 songs long and it is 192.9 hours long.
 It spans 79 years of music.
 Your playlist consisted of 1311 artists that represented 674 different genres.
 The songs were an average of 4 minutes and 1 seconds long.
@@ -214,124 +214,124 @@ There were around 90 cover songs.
 About 26.9% of the songs were explicit.
 You have 108 saved podcast episodes that are collectively 75.4 hours long.
 Those episodes are from 13 different shows.
-evan: hi
-script: Hello!
-evan: hi
-script: Hello!
-evan: hi
-script: Hello!
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: gym
-evan: hi
-script: Hello!
-evan: artists
-script: Here are your top artists.
-evan: hi
-script: Hello!
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: 1
-script: good choice
-script: How many reps did you do?
-evan: 5
-script: bet
-script: What weight did you use?
-evan: 135
-script: bet
-script: What was your RPE?
-evan: 9
-script: bet
-script: Another set?
-evan: yes
-script: alr
-script: How many reps did you do?
-evan: 5
-script: bet
-script: What weight did you use?
-evan: 135
-script: bet
-script: What was your RPE?
-evan: 9
-script: bet
-script: Another set?
-evan: yes
-script: alr
-script: How many reps did you do?
-evan: 5
-script: bet
-script: What weight did you use?
-evan: 135
-script: bet
-script: What was your RPE?
-evan: 9
-script: bet
-script: Another set?
-evan: no
-script: alr
-script: Pick an exercise(0 to end the workout)
-evan: 2
-script: good choice
-script: How many reps did you do?
-evan: 5
-script: bet
-script: What weight did you use?
-evan: 135
-script: bet
-script: What was your RPE?
-evan: 9
-script: bet
-script: Another set?
-evan: yes
-script: alr
-script: How many reps did you do?
-evan: 10
-script: bet
-script: What weight did you use?
-evan: 45
-script: bet
-script: What was your RPE?
-evan: 5
-script: bet
-script: Another set?
-evan: no
-script: alr
-script: Pick an exercise(0 to end the workout)
-evan: 0
-script: good choice
-script: Workout Logged
-script: How many reps did you do?
-script: Good Morning!
+user: hi
+bot: Hello!
+user: hi
+bot: Hello!
+user: hi
+bot: Hello!
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: gym
+user: hi
+bot: Hello!
+user: artists
+bot: Here are your top artists.
+user: hi
+bot: Hello!
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: 1
+bot: good choice
+bot: How many reps did you do?
+user: 5
+bot: bet
+bot: What weight did you use?
+user: 135
+bot: bet
+bot: What was your RPE?
+user: 9
+bot: bet
+bot: Another set?
+user: yes
+bot: alr
+bot: How many reps did you do?
+user: 5
+bot: bet
+bot: What weight did you use?
+user: 135
+bot: bet
+bot: What was your RPE?
+user: 9
+bot: bet
+bot: Another set?
+user: yes
+bot: alr
+bot: How many reps did you do?
+user: 5
+bot: bet
+bot: What weight did you use?
+user: 135
+bot: bet
+bot: What was your RPE?
+user: 9
+bot: bet
+bot: Another set?
+user: no
+bot: alr
+bot: Pick an exercise(0 to end the workout)
+user: 2
+bot: good choice
+bot: How many reps did you do?
+user: 5
+bot: bet
+bot: What weight did you use?
+user: 135
+bot: bet
+bot: What was your RPE?
+user: 9
+bot: bet
+bot: Another set?
+user: yes
+bot: alr
+bot: How many reps did you do?
+user: 10
+bot: bet
+bot: What weight did you use?
+user: 45
+bot: bet
+bot: What was your RPE?
+user: 5
+bot: bet
+bot: Another set?
+user: no
+bot: alr
+bot: Pick an exercise(0 to end the workout)
+user: 0
+bot: good choice
+bot: Workout Logged
+bot: How many reps did you do?
+bot: Good Morning!
 Today is Friday, August 18th
 It's Arms day!
 You move out in 27 days
 Here's today's weather:
-	Temperature - 75°
+	Temperature - 75ï¿½
 	Conditions - Overcast
 	Humidity - High
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Good Morning!
+bot: Good Morning!
 Today is Friday, August 18th
 It's Arms day!
 You move out in 27 days
 Here's today's weather:
-	Temperature - 75°
+	Temperature - 75ï¿½
 	Conditions - Overcast
 	Humidity - High
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-evan: hi
-script: Hello!
-evan: bdays
-script: That command does not exist.
+user: hi
+bot: Hello!
+user: bdays
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: bday
-script: Famous Birthdays Today:
+user: bday
+bot: Famous Birthdays Today:
 Patrick Swayze(1952-2009): Actor
 Christian Slater(1970-?): Actor
 Edward Norton(1970-?): Actor
@@ -342,12 +342,12 @@ Meriwether Lewis(1774-?): Explorer of the America west with Clark
 Franz Joseph I(1830-?): Emperor of Austria
 Malcom-Jamal Warner(1970-?): Actor
 Andy Samberg(1979-?): TV Actor
-evan: hi
-script: Hello!
-evan: artists
-script: Here are your top artists.
-evan: spotify
-script: Your playlist is 2907 songs long and it is 194.3 hours long.
+user: hi
+bot: Hello!
+user: artists
+bot: Here are your top artists.
+user: spotify
+bot: Your playlist is 2907 songs long and it is 194.3 hours long.
 It spans 79 years of music.
 Your playlist consisted of 1316 artists that represented 673 different genres.
 The songs were an average of 4 minutes and 1 seconds long.
@@ -357,9 +357,9 @@ There were around 93 cover songs.
 About 27.1% of the songs were explicit.
 You have 112 saved podcast episodes that are collectively 79.0 hours long.
 Those episodes are from 13 different shows.
-evan: durations
-evan: commands
-script: alarm -> toggles all alarms
+user: durations
+user: commands
+bot: alarm -> toggles all alarms
 temp -> sends the current temperature
 spam ___ -> spams any message
 weather -> sends the current weather conditions
@@ -370,7 +370,7 @@ bday -> sends 5 famous people that were born today
 today -> sends the day of the month, week, and school cycle
 clean -> performs some functions that keep this bot running
 weight ___-> logs your weight
-script: weight_graph -> sends a graph of your weight over time
+bot: weight_graph -> sends a graph of your weight over time
 spotify -> sends some data about your spotify account
 artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
@@ -383,222 +383,222 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: artists
-script: Here are your top artists.
-evan: hi
-script: Hello!
-evan: hi
-script: Hello!
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: 0
-script: good choice
-script: Workout Logged
-evan: update
-script: That command does not exist.
+user: artists
+bot: Here are your top artists.
+user: hi
+bot: Hello!
+user: hi
+bot: Hello!
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: 0
+bot: good choice
+bot: Workout Logged
+user: update
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: clean
-script: All Clean!
-evan: artists
-script: Here are your top artists.
-evan: hi
-script: Hello!
-script: Good Morning!
+user: clean
+bot: All Clean!
+user: artists
+bot: Here are your top artists.
+user: hi
+bot: Hello!
+bot: Good Morning!
 Today is Tuesday, August 29th
 You are hitting back + abs today!
 You move out in 16 days
 Here's today's weather:
-	Temperature - 68°
+	Temperature - 68ï¿½
 	Conditions - Overcast
 	Humidity - Above Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 Taxation is the price we pay for failing to build a civilized society. The higher the tax level, the greater the failure. A centrally planned totalitarian state represents a complete defeat for the civilized world, while a totally voluntary society represents its ultimate success.
 
-script: What is your weight?
-script: nvm
-evan: artists
-script: Here are your top artists.
-script: Good Morning!
+bot: What is your weight?
+bot: nvm
+user: artists
+bot: Here are your top artists.
+bot: Good Morning!
 Today is Wednesday, August 30th
 You are hitting legs today!
 You move out in 15 days
 Here's today's weather:
-	Temperature - 70°
+	Temperature - 70ï¿½
 	Conditions -  Light Rain
 	Humidity - Above Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 Don't waste time on jealousy. Sometimes you're ahead, sometimes you're behind.
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Thursday, August 31st
 It's leg day :(
 You are hitting chest + shoulders today!
 You move out in 14 days
 Here's today's weather:
-	Temperature - 66°
+	Temperature - 66ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Windy
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 There's only one thing worse than a man who doesn't have strong likes and dislikes, and that's a man who has strong likes and dislikes without the courage to voice them.
 
-script: What's your weight?
-evan: 149.4
-script: thanks
-script: Good Morning!
+bot: What's your weight?
+user: 149.4
+bot: thanks
+bot: Good Morning!
 Today is Friday, September 1st
 It's the first of the month!
 It's leg day :(
 You are hitting chest + shoulders today!
 You move out in 13 days
 Here's today's weather:
-	Temperature - 65°
+	Temperature - 65ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Windy
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 There's only one thing worse than a man who doesn't have strong likes and dislikes, and that's a man who has strong likes and dislikes without the courage to voice them.
 
-script: What's your weight?
-script: nvm
-evan: artists
-script: Here are your top artists.
-evan: clean
-script: All Clean!
-evan: artists
-script: Here are your top artists.
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+user: artists
+bot: Here are your top artists.
+user: clean
+bot: All Clean!
+user: artists
+bot: Here are your top artists.
+bot: Good Morning!
 Today is Saturday, September 2nd
 It's leg day :(
 You are hitting chest + shoulders today!
 You move out in 12 days
 Here's today's weather:
-	Temperature - 56°
+	Temperature - 56ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 I was that weird kid that checked out all of the non-fiction paranormal studies books from the library. I've always been fascinated by the supernatural, particularly movies and TV shows that manage to blend humor with the horror - 'Supernatural', 'Buffy', 'Angel.'
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Sunday, September 3rd
 It's leg day :(
 You are hitting chest + shoulders today!
 You move out in 11 days
 Here's today's weather:
-	Temperature - 72°
+	Temperature - 72ï¿½
 	Conditions - Fair
 	Humidity - Above Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 I was that weird kid that checked out all of the non-fiction paranormal studies books from the library. I've always been fascinated by the supernatural, particularly movies and TV shows that manage to blend humor with the horror - 'Supernatural', 'Buffy', 'Angel.'
 
-script: What's your weight?
-evan: 152
-script: thanks
-script: Good Morning!
+bot: What's your weight?
+user: 152
+bot: thanks
+bot: Good Morning!
 Today is Monday, September 4th
 It's leg day :(
 You are hitting chest + shoulders today!
 You move out in 10 days
 Here's today's weather:
-	Temperature - 78°
+	Temperature - 78ï¿½
 	Conditions - Fair
 	Humidity - Above Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 English language is the most universal language in history, way more than the Latin of Julius Caesar. It's the most punderful language because its vocabulary has a certain critical mass that makes a lingo good for punning.
 
-script: What's your weight?
-script: nvm
-evan: hi
-script: Hello!
-evan: weight_graph
-script: Here is your weight graph
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: 0
-script: Workout Logged
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: hi
-script: Hello!
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+user: hi
+bot: Hello!
+user: weight_graph
+bot: Here is your weight graph
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: 0
+bot: Workout Logged
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: hi
+bot: Hello!
+bot: Good Morning!
 Today is Thursday, September 7th
 You are hitting back + abs today!
 You move out in 7 days
 Here's today's weather:
-	Temperature - 80°
+	Temperature - 80ï¿½
 	Conditions - A Few Clouds
 	Humidity - High
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 	There is good in everything; it's just how you choose to look at it. Everything that's worth it has a price. For me to be a model - I had to leave my family. Do you think I liked that? No! There are sacrifices. Life is meant to be a challenge, because challenges are what make you grow.
 
-script: What's your weight?
-script: nvm
-evan: artists
-script: Here are your top artists.
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+user: artists
+bot: Here are your top artists.
+bot: Good Morning!
 Today is Friday, September 8th
 You are hitting back + abs today!
 You move out in 6 days
 Here's today's weather:
-	Temperature - 75°
+	Temperature - 75ï¿½
 	Conditions - Overcast
 	Humidity - Above Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 	I'm not afraid of death, but I resent it. I think it's unfair and irritating. Every time I see something beautiful, I not only want to return to it, but it makes me want to see other beautiful things. I know I'm not going to get to all the places I want to go.
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Saturday, September 9th
 You are hitting back + abs today!
 You move out in 5 days
 Here's today's weather:
-	Temperature - 70°
+	Temperature - 70ï¿½
 	Conditions -  Fog
 	Humidity - Above Average
 	Wind Speed - Light Breeze
 	Visibility - 0.25 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 	I'm not afraid of death, but I resent it. I think it's unfair and irritating. Every time I see something beautiful, I not only want to return to it, but it makes me want to see other beautiful things. I know I'm not going to get to all the places I want to go.
 
-script: What's your weight?
-script: nvm
-evan: weight_graph
-script: Here is your weight graph
-evan: artists
-script: Here are your top artists.
-evan: commands
-script: alarm -> toggles all alarms
+bot: What's your weight?
+bot: nvm
+user: weight_graph
+bot: Here is your weight graph
+user: artists
+bot: Here are your top artists.
+user: commands
+bot: alarm -> toggles all alarms
 temp -> sends the current temperature
 spam ___ -> spams any message
 weather -> sends the current weather conditions
@@ -609,7 +609,7 @@ bday -> sends 5 famous people that were born today
 today -> sends the day of the month, week, and school cycle
 clean -> performs some functions that keep this bot running
 weight ___-> logs your weight
-script: weight_graph -> sends a graph of your weight over time
+bot: weight_graph -> sends a graph of your weight over time
 spotify -> sends some data about your spotify account
 artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
@@ -622,69 +622,69 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-script: Good Morning!
+bot: Good Morning!
 Today is Sunday, September 10th
 You are hitting back + abs today!
 You move out in 4 days
 Here's today's weather:
-	Temperature - 68°
+	Temperature - 68ï¿½
 	Conditions -  Rain Foggy
 	Humidity - Above Average
 	Wind Speed - Negligible
 	Visibility - 4.00 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 	Life is pleasant. Death is peaceful. It's the transition that's troublesome.
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Monday, September 11st
 You are hitting back + abs today!
 You move out in 3 days
 Here's today's weather:
-	Temperature - 72°
+	Temperature - 72ï¿½
 	Conditions - Mostly Cloudy
 	Humidity - Above Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 	Life is pleasant. Death is peaceful. It's the transition that's troublesome.
 
-script: What's your weight?
-evan: 152.6
-script: thanks
-script: Good Morning!
+bot: What's your weight?
+user: 152.6
+bot: thanks
+bot: Good Morning!
 Today is Tuesday, September 12nd
 You are hitting back + abs today!
 You move out in 2 days
 Here's today's weather:
-	Temperature - 71°
+	Temperature - 71ï¿½
 	Conditions - Fair
 	Humidity - Above Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
+bot: Here's today's quote:
 
 	If you look at the paintings that I love in art history, these are the paintings where great, powerful men are being celebrated on the big walls of museums throughout the world. What feels really strange is not to be able to see a reflection of myself in that world.
 
-script: What's your weight?
-evan: 152
-script: thanks
-evan: artists
-script: Here are your top artists.
-evan: hi
-script: Hello!
-evan: desc
-script: I am Evan's personal bot.
+bot: What's your weight?
+user: 152
+bot: thanks
+user: artists
+bot: Here are your top artists.
+user: hi
+bot: Hello!
+user: desc
+bot: I am Evan's personal bot.
 	If I am going crazy and you need to terminate me, text "kill".
 	If you would like to see my commands, text "commands".
 	I will pass all suggestions along to my developer.
 	Have an amazing day :)
-	
-evan: commands
-script: alarm -> toggles all alarms
+
+user: commands
+bot: alarm -> toggles all alarms
 temp -> sends the current temperature
 spam ___ -> spams any message
 weather -> sends the current weather conditions
@@ -695,7 +695,7 @@ bday -> sends 5 famous people that were born today
 today -> sends the day of the month, week, and school cycle
 clean -> performs some functions that keep this bot running
 weight ___-> logs your weight
-script: weight_graph -> sends a graph of your weight over time
+bot: weight_graph -> sends a graph of your weight over time
 spotify -> sends some data about your spotify account
 artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
@@ -708,8 +708,8 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: spotify
-script: Your playlist is 3000 songs long and it is 200.5 hours long.
+user: spotify
+bot: Your playlist is 3000 songs long and it is 200.5 hours long.
 It spans 70 years of music.
 Your playlist consisted of 1331 artists that represented 674 different genres.
 The songs were an average of 4 minutes and 1 seconds long.
@@ -719,48 +719,48 @@ There were around 93 cover songs.
 About 27.8% of the songs were explicit.
 You have 113 saved podcast episodes that are collectively 87.4 hours long.
 Those episodes are from 15 different shows.
-evan: today
-script: Today is Sunday, Sep 17th
+user: today
+bot: Today is Sunday, Sep 17th
 
-evan: weight_graph
-script: Here is your weight graph
-script: Good Morning!
+user: weight_graph
+bot: Here is your weight graph
+bot: Good Morning!
 Today is Sunday, September 17th
 It's leg day :(
 Here's today's weather:
-	Temperature - 64°
+	Temperature - 64ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: Here's today's quote:
-script: Black History Month must be more than just a month of remembrance; it should be a tribute to our history and reminder of the work that lies in the months and years ahead.
+bot: Here's today's quote:
+bot: Black History Month must be more than just a month of remembrance; it should be a tribute to our history and reminder of the work that lies in the months and years ahead.
 
-script: What's your weight?
-script: nvm
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: good choice
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: Pick an exercise(0 to end the workout)
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+bot: What's your weight?
+bot: nvm
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: good choice
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -768,17 +768,17 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: good choice
-script: How many reps did you do?
-evan: 5
-script: What weight did you use?
-evan: 200
-script: What was your RPE?
-evan: 8
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: good choice
+bot: How many reps did you do?
+user: 5
+bot: What weight did you use?
+user: 200
+bot: What was your RPE?
+user: 8
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -786,17 +786,17 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 10
-script: What was your RPE?
-evan: 9
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 10
+bot: What was your RPE?
+user: 9
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -804,16 +804,16 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 200
-script: What was your RPE?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 200
+bot: What was your RPE?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -821,16 +821,16 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 100
-script: What was your RPE?
-evan: 9
-evan: commands
-script: alarm -> toggles all alarms
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 100
+bot: What was your RPE?
+user: 9
+user: commands
+bot: alarm -> toggles all alarms
 temp -> sends the current temperature
 weather -> sends the current weather conditions
 quote -> sends a random quote
@@ -841,7 +841,7 @@ today -> sends the day of the month, week, and school cycle
 clean -> performs some functions that keep this bot running
 weight ___-> logs your weight
 weight_graph -> sends a graph of your weight over time
-script: spotify -> sends some data about your spotify account
+bot: spotify -> sends some data about your spotify account
 artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
 genres -> sends a graph of your top genres
@@ -853,11 +853,11 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: wait
-script: done
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: wait
+bot: done
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -865,15 +865,15 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 10
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 10
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -881,17 +881,17 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 10
-script: What was your RPE?
-evan: 10
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 10
+bot: What was your RPE?
+user: 10
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -899,17 +899,17 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 10
-script: What was your RPE?
-evan: 10
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 10
+bot: What was your RPE?
+user: 10
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -917,20 +917,20 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 10
-script: Good choice
-evan: 10
-script: That command does not exist.
+user: 10
+bot: Good choice
+user: 10
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 10
-script: What was your RPE?
-evan: 10
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 10
+bot: What was your RPE?
+user: 10
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -938,17 +938,17 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 100
-script: What was your RPE?
-evan: 9
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 100
+bot: What was your RPE?
+user: 9
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -956,18 +956,18 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 100
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 100
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -975,18 +975,18 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 100
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: no
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 100
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: no
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -994,11 +994,11 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 0
-script: Workout Logged
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 9: Bench Press
+user: 0
+bot: Workout Logged
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 9: Bench Press
 10: Pec Fly
 11: Incline Dumbbell Press
 12: Cable Lateral Raises
@@ -1006,18 +1006,18 @@ script: 9: Bench Press
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 10
-script: Another set?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 9: Bench Press
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 10
+bot: Another set?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 9: Bench Press
 10: Pec Fly
 11: Incline Dumbbell Press
 12: Cable Lateral Raises
@@ -1025,18 +1025,18 @@ script: 9: Bench Press
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 9: Bench Press
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 9: Bench Press
 10: Pec Fly
 11: Incline Dumbbell Press
 12: Cable Lateral Raises
@@ -1044,18 +1044,18 @@ script: 9: Bench Press
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 100
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 9: Bench Press
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 100
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 9: Bench Press
 10: Pec Fly
 11: Incline Dumbbell Press
 12: Cable Lateral Raises
@@ -1063,18 +1063,18 @@ script: 9: Bench Press
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 9: Bench Press
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 9: Bench Press
 10: Pec Fly
 11: Incline Dumbbell Press
 12: Cable Lateral Raises
@@ -1082,18 +1082,18 @@ script: 9: Bench Press
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 9: Bench Press
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 9: Bench Press
 10: Pec Fly
 11: Incline Dumbbell Press
 12: Cable Lateral Raises
@@ -1101,18 +1101,18 @@ script: 9: Bench Press
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 9: Bench Press
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 9: Bench Press
 10: Pec Fly
 11: Incline Dumbbell Press
 12: Cable Lateral Raises
@@ -1120,18 +1120,18 @@ script: 9: Bench Press
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: gym
-script: Pick an exercise(0 to end the workout)
-script: 1: Leg Extension
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: gym
+bot: Pick an exercise(0 to end the workout)
+bot: 1: Leg Extension
 2: Leg Press
 4: Leg Curl
 5: Hip Thrust
@@ -1139,8 +1139,8 @@ script: 1: Leg Extension
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
 1: Leg Extension
 2: Leg Press
 4: Leg Curl
@@ -1149,52 +1149,24 @@ script: Pick an exercise(0 to end the workout)
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 200
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 200
-script: What was your RPE?
-evan: 9
-evan: gym
-script: Pick an exercise(0 to end the workout)
-
-1: Leg Extension
-2: Leg Press
-4: Leg Curl
-5: Hip Thrust
-6: Inner Thigh
-7: Outer Thigh
-8: Calf Raise
-37: Dead Hang
-evan: 1
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 200
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 200
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: no
-script: Pick an exercise(0 to end the workout)
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 200
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 200
+bot: What was your RPE?
+user: 9
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 1: Leg Extension
 2: Leg Press
@@ -1204,25 +1176,25 @@ script: Pick an exercise(0 to end the workout)
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 8
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 8
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: no
-script: Pick an exercise(0 to end the workout)
+user: 1
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 200
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 200
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: no
+bot: Pick an exercise(0 to end the workout)
 
 1: Leg Extension
 2: Leg Press
@@ -1232,10 +1204,38 @@ script: Pick an exercise(0 to end the workout)
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 0
-script: Workout Logged
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: 8
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 8
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: no
+bot: Pick an exercise(0 to end the workout)
+
+1: Leg Extension
+2: Leg Press
+4: Leg Curl
+5: Hip Thrust
+6: Inner Thigh
+7: Outer Thigh
+8: Calf Raise
+37: Dead Hang
+user: 0
+bot: Workout Logged
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1245,17 +1245,17 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: no
-script: Pick an exercise(0 to end the workout)
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: no
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1265,17 +1265,17 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 10
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 150
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: no
-script: Pick an exercise(0 to end the workout)
+user: 10
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 150
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: no
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1285,15 +1285,15 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1303,16 +1303,16 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1322,25 +1322,25 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 9
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: no
-script: Pick an exercise(0 to end the workout)
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 9
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: no
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1350,17 +1350,17 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 10
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 150
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: no
-script: Pick an exercise(0 to end the workout)
+user: 10
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 150
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: no
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1370,17 +1370,17 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 8
-script: What weight did you use?
-evan: 140
-script: What was your RPE?
-evan: 10
-script: Another set?
-evan: no
-script: Pick an exercise(0 to end the workout)
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 8
+bot: What weight did you use?
+user: 140
+bot: What was your RPE?
+user: 10
+bot: Another set?
+user: no
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1390,87 +1390,87 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 0
-script: Workout Logged
-script: Good Morning!
+user: 0
+bot: Workout Logged
+bot: Good Morning!
 Today is Monday, September 18th
 It's leg day :(
 Here's today's weather:
-	Temperature - 64°
+	Temperature - 64ï¿½
 	Conditions - Overcast
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: You either have chemistry or you don't, but a lot of what attracts me is a guy's mind and humor and talent. I need to get to know all those things before I fall for someone.
+bot: Here's today's quote:
+bot: You either have chemistry or you don't, but a lot of what attracts me is a guy's mind and humor and talent. I need to get to know all those things before I fall for someone.
 
-script: What's your weight?
-script: nvm
-evan: durations
-script: Here are your longest songs.
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+user: durations
+bot: Here are your longest songs.
+bot: Good Morning!
 Today is Tuesday, September 19th
 It's leg day :(
 Here's today's weather:
-	Temperature - 62°
+	Temperature - 62ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: You either have chemistry or you don't, but a lot of what attracts me is a guy's mind and humor and talent. I need to get to know all those things before I fall for someone.
+bot: Here's today's quote:
+bot: You either have chemistry or you don't, but a lot of what attracts me is a guy's mind and humor and talent. I need to get to know all those things before I fall for someone.
 
-script: What's your weight?
-script: nvm
-evan: artists
-script: Here are your top artists.
-evan: weight
-evan: weight_graph
-script: Here is your weight graph
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+user: artists
+bot: Here are your top artists.
+user: weight
+user: weight_graph
+bot: Here is your weight graph
+bot: Good Morning!
 Today is Wednesday, September 20th
 It's leg day :(
 Here's today's weather:
-	Temperature - 60°
+	Temperature - 60ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: The possession of arbitrary power has always, the world over, tended irresistibly to destroy humane sensibility, magnanimity, and truth.
+bot: Here's today's quote:
+bot: The possession of arbitrary power has always, the world over, tended irresistibly to destroy humane sensibility, magnanimity, and truth.
 
-script: What's your weight?
-script: nvm
-evan: hi
-script: Hello!
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+user: hi
+bot: Hello!
+bot: Good Morning!
 Today is Thursday, September 21st
 It's leg day :(
 Here's today's weather:
-	Temperature - 61°
+	Temperature - 61ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: The possession of arbitrary power has always, the world over, tended irresistibly to destroy humane sensibility, magnanimity, and truth.
+bot: Here's today's quote:
+bot: The possession of arbitrary power has always, the world over, tended irresistibly to destroy humane sensibility, magnanimity, and truth.
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Friday, September 22nd
 It's leg day :(
 Here's today's weather:
-	Temperature - 60°
+	Temperature - 60ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: True security is based on people's welfare - on a thriving economy, on strong public health and education programmes, and on fundamental respect for our common humanity. Development, peace, disarmament, reconciliation and justice are not separate from security; they help to underpin it.
+bot: Here's today's quote:
+bot: True security is based on people's welfare - on a thriving economy, on strong public health and education programmes, and on fundamental respect for our common humanity. Development, peace, disarmament, reconciliation and justice are not separate from security; they help to underpin it.
 
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 1: Leg Extension
 2: Leg Press
@@ -1480,10 +1480,10 @@ script: Pick an exercise(0 to end the workout)
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 0
-script: Workout Logged
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: 0
+bot: Workout Logged
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1493,10 +1493,10 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 0
-script: Workout Logged
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: 0
+bot: Workout Logged
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 16: Dumbbell Bicep Curl
 18: Dumbbell Hammer Curl
@@ -1505,10 +1505,10 @@ script: Pick an exercise(0 to end the workout)
 21: Dips
 26: Barbell Wrist Curl
 37: Dead Hang
-evan: 0
-script: Workout Logged
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: 0
+bot: Workout Logged
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 3: Deadlift
 22: Lat Pulldown
@@ -1526,14 +1526,14 @@ script: Pick an exercise(0 to end the workout)
 35: Kettlebell Side Bend
 36: Hanging Leg Raise
 37: Dead Hang
-evan: h
-evan: hi
-script: Hello!
-evan: 0
-script: That command does not exist.
+user: h
+user: hi
+bot: Hello!
+user: 0
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 3: Deadlift
 22: Lat Pulldown
@@ -1551,80 +1551,80 @@ script: Pick an exercise(0 to end the workout)
 35: Kettlebell Side Bend
 36: Hanging Leg Raise
 37: Dead Hang
-script: nvm
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: nvm
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Saturday, September 23rd
 It's back + abs day
 Here's today's weather:
-	Temperature - 56°
+	Temperature - 56ï¿½
 	Conditions -  Light Rain
 	Humidity - Average
 	Wind Speed - Very High
 	Visibility - 8.00 mi
-script: Here's today's quote:
-script: True security is based on people's welfare - on a thriving economy, on strong public health and education programmes, and on fundamental respect for our common humanity. Development, peace, disarmament, reconciliation and justice are not separate from security; they help to underpin it.
+bot: Here's today's quote:
+bot: True security is based on people's welfare - on a thriving economy, on strong public health and education programmes, and on fundamental respect for our common humanity. Development, peace, disarmament, reconciliation and justice are not separate from security; they help to underpin it.
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Sunday, September 24th
 It's back + abs day
 Here's today's weather:
-	Temperature - 62°
+	Temperature - 62ï¿½
 	Conditions - Overcast
 	Humidity - Average
 	Wind Speed - Very High
 	Visibility - 10 mi
-script: Here's today's quote:
-script: Future generations are not going to ask us what political party were you in. They are going to ask what did you do about it, when you knew the glaciers were melting.
+bot: Here's today's quote:
+bot: Future generations are not going to ask us what political party were you in. They are going to ask what did you do about it, when you knew the glaciers were melting.
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Monday, September 25th
 It's back + abs day
 Here's today's weather:
-	Temperature - 61°
+	Temperature - 61ï¿½
 	Conditions - Overcast
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: Future generations are not going to ask us what political party were you in. They are going to ask what did you do about it, when you knew the glaciers were melting.
+bot: Here's today's quote:
+bot: Future generations are not going to ask us what political party were you in. They are going to ask what did you do about it, when you knew the glaciers were melting.
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Tuesday, September 26th
 It's back + abs day
 Here's today's weather:
-	Temperature - 58°
+	Temperature - 58ï¿½
 	Conditions - Overcast
 	Humidity - Average
 	Wind Speed - Very High
 	Visibility - 10 mi
-script: Here's today's quote:
-script: I love dark humor that crosses the line and makes you say, 'That's so wrong!' And that's 'Family Guy' to me.
+bot: Here's today's quote:
+bot: I love dark humor that crosses the line and makes you say, 'That's so wrong!' And that's 'Family Guy' to me.
 
-script: What's your weight?
-script: nvm
-script: Good Morning!
+bot: What's your weight?
+bot: nvm
+bot: Good Morning!
 Today is Wednesday, September 27th
 It's back + abs day
 Here's today's weather:
-	Temperature - 53°
+	Temperature - 53ï¿½
 	Conditions - Overcast
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-evan: hi
-script: Hello!
-evan: hi
-script: Hello!
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: hi
+bot: Hello!
+user: hi
+bot: Hello!
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 1: Leg Extension
 2: Leg Press
@@ -1634,196 +1634,160 @@ script: Pick an exercise(0 to end the workout)
 7: Outer Thigh
 8: Calf Raise
 37: Dead Hang
-evan: 2
-script: Good choice
-script: How many reps did you do?
-evan: 10
-script: What weight did you use?
-evan: 320
-script: What was your RPE?
-evan: 6
-script: Another set?
-evan: yes
-script: How many reps did you do?
-script: nvm
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: hi
-script: Hello!
-script: Good Morning!
+user: 2
+bot: Good choice
+bot: How many reps did you do?
+user: 10
+bot: What weight did you use?
+user: 320
+bot: What was your RPE?
+user: 6
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+bot: nvm
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: hi
+bot: Hello!
+bot: Good Morning!
 Today is Thursday, September 28th
 It's leg day :(
 Here's today's weather:
-	Temperature - 54°
+	Temperature - 54ï¿½
 	Conditions - Overcast
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: Thanks to television, for the first time the young are seeing history made before it is censored by their elders.
+bot: Here's today's quote:
+bot: Thanks to television, for the first time the young are seeing history made before it is censored by their elders.
 
-script: What's your weight?
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-evan: weight_graph
-script: Here is your weight graph
-script: Good Morning!
+bot: What's your weight?
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+user: weight_graph
+bot: Here is your weight graph
+bot: Good Morning!
 Today is Friday, September 29th
 It's chest + shoulders day
 Here's today's weather:
-	Temperature - 60°
+	Temperature - 60ï¿½
 	Conditions -  Rain Foggy
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 3.00 mi
-script: Good Morning!
+bot: Good Morning!
 Today is Saturday, September 30th
 It's chest + shoulders day
 Here's today's weather:
-	Temperature - 60°
+	Temperature - 60ï¿½
 	Conditions - Overcast
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: God used beautiful mathematics in creating the world.
+bot: Here's today's quote:
+bot: God used beautiful mathematics in creating the world.
 
-script: What's your weight?
-evan: pass
-script: thanks
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-script: Good Morning!
+bot: What's your weight?
+user: pass
+bot: thanks
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+bot: Good Morning!
 Today is Sunday, October 1st
 Brentford plays at 09 today!
 Here's today's weather:
-	Temperature - 60°
+	Temperature - 60ï¿½
 	Conditions - Fair
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: Religion has nothing to do with God. It's a fundamental attitude of human beings, who ask about the origins of life and what happens after death. For many, the answer is a personal god. In my opinion, it's religion that produces God, not the other way round.
+bot: Here's today's quote:
+bot: Religion has nothing to do with God. It's a fundamental attitude of human beings, who ask about the origins of life and what happens after death. For many, the answer is a personal god. In my opinion, it's religion that produces God, not the other way round.
 
-script: What's your weight?
-evan: pass
-script: thanks
-evan: gym
-script: Pick an exercise(0 to end the workout)
-
-9: Bench Press
-10: Pec Fly
-11: Incline Dumbbell Press
-12: Cable Lateral Raises
-13: Dumbbell Lateral Raises
-14: Chest Press
-15: Rear Delt Fly
-37: Dead Hang
-evan: 13
-script: Good choice
-script: How many reps did you do?
-evan: 7
-script: What weight did you use?
-evan: 20
-script: What was your RPE?
-evan: 7
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 12
-script: What weight did you use?
-evan: 17.5
-script: What was your RPE?
-evan: 10
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 11
-script: What weight did you use?
-evan: 17.5
-script: What was your RPE?
-evan: 10
-script: Another set?
-evan: nah
-script: Pick an exercise(0 to end the workout)
+bot: What's your weight?
+user: pass
+bot: thanks
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1833,33 +1797,33 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 9
-script: Good choice
-script: How many reps did you do?
-evan: 9
-script: What weight did you use?
-evan: 135
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 7
-script: What weight did you use?
-evan: 140
-script: What was your RPE?
-evan: 9
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 7
-script: What weight did you use?
-evan: 140
-script: What was your RPE?
-evan: 10
-script: Another set?
-evan: nah
-script: Pick an exercise(0 to end the workout)
+user: 13
+bot: Good choice
+bot: How many reps did you do?
+user: 7
+bot: What weight did you use?
+user: 20
+bot: What was your RPE?
+user: 7
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 12
+bot: What weight did you use?
+user: 17.5
+bot: What was your RPE?
+user: 10
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 11
+bot: What weight did you use?
+user: 17.5
+bot: What was your RPE?
+user: 10
+bot: Another set?
+user: nah
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1869,33 +1833,33 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 10
-script: Good choice
-script: How many reps did you do?
-evan: 9
-script: What weight did you use?
-evan: 160
-script: What was your RPE?
-evan: 10
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 6
-script: What weight did you use?
-evan: 160
-script: What was your RPE?
-evan: 10
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 7
-script: What weight did you use?
-evan: 140
-script: What was your RPE?
-evan: 6
-script: Another set?
-evan: n
-script: Pick an exercise(0 to end the workout)
+user: 9
+bot: Good choice
+bot: How many reps did you do?
+user: 9
+bot: What weight did you use?
+user: 135
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 7
+bot: What weight did you use?
+user: 140
+bot: What was your RPE?
+user: 9
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 7
+bot: What weight did you use?
+user: 140
+bot: What was your RPE?
+user: 10
+bot: Another set?
+user: nah
+bot: Pick an exercise(0 to end the workout)
 
 9: Bench Press
 10: Pec Fly
@@ -1905,34 +1869,70 @@ script: Pick an exercise(0 to end the workout)
 14: Chest Press
 15: Rear Delt Fly
 37: Dead Hang
-evan: 0
-script: Workout Logged
-script: Good Morning!
+user: 10
+bot: Good choice
+bot: How many reps did you do?
+user: 9
+bot: What weight did you use?
+user: 160
+bot: What was your RPE?
+user: 10
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 6
+bot: What weight did you use?
+user: 160
+bot: What was your RPE?
+user: 10
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 7
+bot: What weight did you use?
+user: 140
+bot: What was your RPE?
+user: 6
+bot: Another set?
+user: n
+bot: Pick an exercise(0 to end the workout)
+
+9: Bench Press
+10: Pec Fly
+11: Incline Dumbbell Press
+12: Cable Lateral Raises
+13: Dumbbell Lateral Raises
+14: Chest Press
+15: Rear Delt Fly
+37: Dead Hang
+user: 0
+bot: Workout Logged
+bot: Good Morning!
 Today is Monday, October 2nd
 Here's today's weather:
 	error
-script: Here's today's quote:
-script: I think being different, going against the grain of society is the greatest thing in the world.
+bot: Here's today's quote:
+bot: I think being different, going against the grain of society is the greatest thing in the world.
 
-script: What's your weight?
-evan: weather
-script: Temperature - 71°
+bot: What's your weight?
+user: weather
+bot: Temperature - 71ï¿½
 Conditions - Mostly Cloudy
 Humidity - Average
 Wind Speed - Light Breeze
 Visibility - 10 mi
-evan: weather
-script: Temperature - 77°
+user: weather
+bot: Temperature - 77ï¿½
 Conditions - Partly Cloudy
 Humidity - Average
 Wind Speed - Light Breeze
 Visibility - 10 mi
-evan: artists
-script: Here are your top artists.
-evan: artists
-script: Here are your top artists.
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: artists
+bot: Here are your top artists.
+user: artists
+bot: Here are your top artists.
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 16: Dumbbell Bicep Curl
 18: Dumbbell Hammer Curl
@@ -1941,74 +1941,74 @@ script: Pick an exercise(0 to end the workout)
 21: Dips
 26: Barbell Wrist Curl
 37: Dead Hang
-evan: 16
-script: Good choice
-script: How many reps did you do?
-evan: 11
-script: What weight did you use?
-evan: 25
-script: What was your RPE?
-evan: 8
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: 11
-script: What weight did you use?
-evan: 25
-script: What was your RPE?
-evan: 8
-script: Another set?
-evan: yes
-script: How many reps did you do?
-evan: n
-script: What weight did you use?
-evan: 25
-script: What was your RPE?
-evan: 7
-script: Workout Logged
-evan: hi
-script: Hello!
-evan: hi
-script: Hello!
-script: Good Morning!
+user: 16
+bot: Good choice
+bot: How many reps did you do?
+user: 11
+bot: What weight did you use?
+user: 25
+bot: What was your RPE?
+user: 8
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: 11
+bot: What weight did you use?
+user: 25
+bot: What was your RPE?
+user: 8
+bot: Another set?
+user: yes
+bot: How many reps did you do?
+user: n
+bot: What weight did you use?
+user: 25
+bot: What was your RPE?
+user: 7
+bot: Workout Logged
+user: hi
+bot: Hello!
+user: hi
+bot: Hello!
+bot: Good Morning!
 Today is Tuesday, October 3rd
 Here's today's weather:
-	Temperature - 61°
+	Temperature - 61ï¿½
 	Conditions - A Few Clouds
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 7.00 mi
-script: Here's today's quote:
-script: Solar power, wind power, the way forward is to collaborate with nature - it's the only way we are going to get to the other end of the 21st century.
+bot: Here's today's quote:
+bot: Solar power, wind power, the way forward is to collaborate with nature - it's the only way we are going to get to the other end of the 21st century.
 
-evan: hi
-script: Hello!
-script: What's your weight?
-evan: hi
-script: thanks
-evan: hi
-script: Hello!
-evan: weather
-script: Temperature - 82°
+user: hi
+bot: Hello!
+bot: What's your weight?
+user: hi
+bot: thanks
+user: hi
+bot: Hello!
+user: weather
+bot: Temperature - 82ï¿½
 Conditions - Partly Cloudy
 Humidity - Average
 Wind Speed - Light Breeze
 Visibility - 10 mi
-evan: what is the temperature
-evan: hi
-evan: hi
-evan: hi
-evan: hi
-evan: hi
-evan: hi
-evan: hi
-evan: hi
-evan: hi
-script: Hello!
-evan: what is the temperature
-script: 70°
-evan: what are the commands
-script: alarm -> toggles all alarms
+user: what is the temperature
+user: hi
+user: hi
+user: hi
+user: hi
+user: hi
+user: hi
+user: hi
+user: hi
+user: hi
+bot: Hello!
+user: what is the temperature
+bot: 70ï¿½
+user: what are the commands
+bot: alarm -> toggles all alarms
 temp -> sends the current temperature
 weather -> sends the current weather conditions
 quote -> sends a random quote
@@ -2019,7 +2019,7 @@ today -> sends the day of the month, week, and school cycle
 clean -> performs some functions that keep this bot running
 weight ___-> logs your weight
 weight_graph -> sends a graph of your weight over time
-script: spotify -> sends some data about your spotify account
+bot: spotify -> sends some data about your spotify account
 artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
 genres -> sends a graph of your top genres
@@ -2031,8 +2031,8 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: what famous people were born today
-script: Famous Birthdays Today:
+user: what famous people were born today
+bot: Famous Birthdays Today:
 Alicia Silverstone(1976-?): Actress
 Derrick Rose(1988-?): Basketball Player
 Susan Sarandon(1946-?): Actress
@@ -2045,10 +2045,10 @@ Bill Fagerbakke(1957-?): TV Actor
 Russell Simmons(1957-?): Entrepreneur
 Bill Fagerbakke(1957-?): TV Actor
 Russell Simmons(1957-?): Entrepreneur
-evan: hi
-script: Hello!
-evan: what famous people were porn today
-script: Famous Birthdays Today:
+user: hi
+bot: Hello!
+user: what famous people were porn today
+bot: Famous Birthdays Today:
 Alicia Silverstone(1976-?): Actress
 Derrick Rose(1988-?): Basketball Player
 Susan Sarandon(1946-?): Actress
@@ -2061,8 +2061,8 @@ Bill Fagerbakke(1957-?): TV Actor
 Russell Simmons(1957-?): Entrepreneur
 Bill Fagerbakke(1957-?): TV Actor
 Russell Simmons(1957-?): Entrepreneur
-evan: what famous people were born today
-script: Famous Birthdays Today:
+user: what famous people were born today
+bot: Famous Birthdays Today:
 Alicia Silverstone(1976-?): Actress
 Derrick Rose(1988-?): Basketball Player
 Susan Sarandon(1946-?): Actress
@@ -2075,21 +2075,21 @@ Bill Fagerbakke(1957-?): TV Actor
 Russell Simmons(1957-?): Entrepreneur
 Bill Fagerbakke(1957-?): TV Actor
 Russell Simmons(1957-?): Entrepreneur
-evan: what's the weather
-script: Temperature - 80°
+user: what's the weather
+bot: Temperature - 80ï¿½
 Conditions - A Few Clouds
 Humidity - Above Average
 Wind Speed - Light Breeze
 Visibility - 10 mi
-script: What's your weight?
-evan: what's the weather
-script: Temperature - 79°
+bot: What's your weight?
+user: what's the weather
+bot: Temperature - 79ï¿½
 Conditions - Partly Cloudy
 Humidity - Above Average
 Wind Speed - Light Breeze
 Visibility - 10 mi
-evan: what famous people were born today
-script: Famous Birthdays Today:
+user: what famous people were born today
+bot: Famous Birthdays Today:
 Kate Winslet(1975-?): Actress - Titanic
 Chester A. Arthur(1829-1886): 21st US President
 Mario Lemieux(1965-?): Hockey Player
@@ -2101,14 +2101,14 @@ Glynis Johns(1923-?): Movie Actress
 Marjorie Finlay(1928-2003): Family Member
 Michael Morpurgo(1943-?): Children's Author
 Steve Miller(1943-?): Guitarist
-evan: toggle my alarm
-script: Your alarm is now on
-evan: alarm
-script: Your alarm is now off
-evan: graph my top artists
-script: Here are your top artists.
-evan: what commands are there
-script: alarm -> toggles all alarms
+user: toggle my alarm
+bot: Your alarm is now on
+user: alarm
+bot: Your alarm is now off
+user: graph my top artists
+bot: Here are your top artists.
+user: what commands are there
+bot: alarm -> toggles all alarms
 temp -> sends the current temperature
 weather -> sends the current weather conditions
 quote -> sends a random quote
@@ -2119,7 +2119,7 @@ today -> sends the day of the month, week, and school cycle
 clean -> performs some functions that keep this bot running
 weight ___-> logs your weight
 weight_graph -> sends a graph of your weight over time
-script: spotify -> sends some data about your spotify account
+bot: spotify -> sends some data about your spotify account
 artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
 genres -> sends a graph of your top genres
@@ -2131,25 +2131,25 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: what's the temperature
-script: 79°
-evan: send me a quote
-script: What I want veterans to know is that VA is here to care for them. VA is a good system - health care wise, safety wise - highly comparable to any other system out there. Our oversight reviews tell us that. I'm very comfortable in the quality of our system.
+user: what's the temperature
+bot: 79ï¿½
+user: send me a quote
+bot: What I want veterans to know is that VA is here to care for them. VA is a good system - health care wise, safety wise - highly comparable to any other system out there. Our oversight reviews tell us that. I'm very comfortable in the quality of our system.
 
-evan: school
-script: Summer completed - 7.3%
+user: school
+bot: Summer completed - 7.3%
 School ends in 254 days
-evan: how much school is left
-script: School completed - 7.3%
+user: how much school is left
+bot: School completed - 7.3%
 School ends in 254 days
-evan: tell me about today
-script: Today is Thursday, Oct 5th
+user: tell me about today
+bot: Today is Thursday, Oct 5th
 
-evan: send me a weight graph
-evan: send me a weight graph
-script: Here is your weight graph
-evan: send me my spotify data
-script: Your playlist is 3109 songs long and it is 206.8 hours long.
+user: send me a weight graph
+user: send me a weight graph
+bot: Here is your weight graph
+user: send me my spotify data
+bot: Your playlist is 3109 songs long and it is 206.8 hours long.
 It spans 70 years of music.
 Your playlist consisted of 1356 artists that represented 687 different genres.
 The songs were an average of 3 minutes and 59 seconds long.
@@ -2159,159 +2159,159 @@ There were around 96 cover songs.
 About 29.2% of the songs were explicit.
 You have 145 saved podcast episodes that are collectively 113.5 hours long.
 Those episodes are from 17 different shows.
-evan: graph my longest songs
-script: Here are your longest songs.
-evan: graph my genres
-script: Here are your top genres.
-evan: graph my explicit songs
-script: Here is the ratio of explicit songs in your library.
-evan: graph my cover songs
-script: Here is the ratio of covers in your library.
-evan: graph my songs by decade
-script: I am unsure what function you are reffering to. Please try again.
-evan: send a decade graph
-script: Here are your top genres.
-evan: what's the temperature
-script: 45°
-evan: scan for balls
-script: That command does not exist.
+user: graph my longest songs
+bot: Here are your longest songs.
+user: graph my genres
+bot: Here are your top genres.
+user: graph my explicit songs
+bot: Here is the ratio of explicit songs in your library.
+user: graph my cover songs
+bot: Here is the ratio of covers in your library.
+user: graph my songs by decade
+bot: I am unsure what function you are reffering to. Please try again.
+user: send a decade graph
+bot: Here are your top genres.
+user: what's the temperature
+bot: 45ï¿½
+user: scan for balls
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: scan balls
-evan: scan balls
-evan: scan my balls
-evan: scan my balls
-evan: scan your balls
-evan: scan something
-evan: scan something
-evan: scan something
-evan: scan something
-evan: scan balls
-evan: scan balls
-evan: scan balls
-script: Total Number of Quotes: 12203
+user: scan balls
+user: scan balls
+user: scan my balls
+user: scan my balls
+user: scan your balls
+user: scan something
+user: scan something
+user: scan something
+user: scan something
+user: scan balls
+user: scan balls
+user: scan balls
+bot: Total Number of Quotes: 12203
 Number of Matching Quotes: 4
 One of the Matching Quotes: If we had any nerve at all, if we had any real balls as a society, or whatever you need, whatever quality you need, real character, we would make an effort to really address the wrongs in this society, righteously.
 
-evan: send me a graph of my top artists
-script: Here are your top artists.
-script: Good Morning!
+user: send me a graph of my top artists
+bot: Here are your top artists.
+bot: Good Morning!
 Today is Monday, October 9th
 Here's today's weather:
-	Temperature - 45°
+	Temperature - 45ï¿½
 	Conditions - A Few Clouds
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: Nothing else so destroys the power to stand alone as the habit of leaning upon others. If you lean, you will never be strong or original. Stand alone or bury your ambition to be somebody in the world.
+bot: Here's today's quote:
+bot: Nothing else so destroys the power to stand alone as the habit of leaning upon others. If you lean, you will never be strong or original. Stand alone or bury your ambition to be somebody in the world.
 
-script: What's your weight?
-evan: episodes
-script: I am unsure what function you are reffering to. Please try again.
-evan: send me a graph of the podcasts i listen to
-script: Here are the podcasts you listen to.
-evan: what's the temperature right now
-script: 53°
-evan: what r my top artists
-evan: what r my top artists
-script: Here are your top artists.
-script: Good Morning!
+bot: What's your weight?
+user: episodes
+bot: I am unsure what function you are reffering to. Please try again.
+user: send me a graph of the podcasts i listen to
+bot: Here are the podcasts you listen to.
+user: what's the temperature right now
+bot: 53ï¿½
+user: what r my top artists
+user: what r my top artists
+bot: Here are your top artists.
+bot: Good Morning!
 Today is Tuesday, October 10th
 Here's today's weather:
-	Temperature - 52°
+	Temperature - 52ï¿½
 	Conditions - Mostly Cloudy
 	Humidity - Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-script: Here's today's quote:
-script: Why fear death? It is the most beautiful adventure in life.
+bot: Here's today's quote:
+bot: Why fear death? It is the most beautiful adventure in life.
 
-evan: what's the weather right now
-script: Temperature - 65°
+user: what's the weather right now
+bot: Temperature - 65ï¿½
 Conditions - Partly Cloudy
 Humidity - Average
 Wind Speed - Windy
 Visibility - 10 mi
-script: Good Morning!
+bot: Good Morning!
 Today is Wednesday, October 11st
 Here's today's weather:
-	Temperature - 52°
+	Temperature - 52ï¿½
 	Conditions - A Few Clouds
 	Humidity - Average
 	Wind Speed - Negligible
 	Visibility - 10 mi
-evan: what's the weather
-script: Temperature - 57°
+user: what's the weather
+bot: Temperature - 57ï¿½
 Conditions - Partly Cloudy
 Humidity - Average
 Wind Speed - Light Breeze
 Visibility - 10 mi
-script: Good Morning!
+bot: Good Morning!
 Today is Friday, October 13rd
 Here's today's weather:
-	Temperature - 52°
+	Temperature - 52ï¿½
 	Conditions - A Few Clouds
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: If you do not think about your future, you cannot have one.
+bot: Here's today's quote:
+bot: If you do not think about your future, you cannot have one.
 
-evan: what are my top artists
-script: Here are your top artists.
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: send me a song duration graph
-script: Here are your longest songs.
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: clean
-evan: send me my weight graph
-evan: send me my weight graph
-script: Here is your weight graph
-evan: clean
-evan: send me my weight graph
-evan: send me my weight graph
-evan: send me my weight graph
-script: Here is your weight graph
-evan: clean
-evan: send me my weight graph
-evan: send me my weight graph
-evan: clean
-evan: send me my weight graph
-script: Here is your weight graph
-script: Good Morning!
+user: what are my top artists
+bot: Here are your top artists.
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: send me a song duration graph
+bot: Here are your longest songs.
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: clean
+user: send me my weight graph
+user: send me my weight graph
+bot: Here is your weight graph
+user: clean
+user: send me my weight graph
+user: send me my weight graph
+user: send me my weight graph
+bot: Here is your weight graph
+user: clean
+user: send me my weight graph
+user: send me my weight graph
+user: clean
+user: send me my weight graph
+bot: Here is your weight graph
+bot: Good Morning!
 Today is Sunday, October 15th
 Here's today's weather:
-	Temperature - 46°
+	Temperature - 46ï¿½
 	Conditions - Mostly Cloudy
 	Humidity - Average
 	Wind Speed - Windy
 	Visibility - 10 mi
-script: Here's today's quote:
-script: When we change the way we communicate, we change society.
+bot: Here's today's quote:
+bot: When we change the way we communicate, we change society.
 
-evan: gym
-script: Pick an exercise(0 to end the workout)
+user: gym
+bot: Pick an exercise(0 to end the workout)
 
 3: Deadlift
 22: Lat Pulldown
@@ -2329,55 +2329,55 @@ script: Pick an exercise(0 to end the workout)
 35: Kettlebell Side Bend
 36: Hanging Leg Raise
 37: Dead Hang
-script: Good Morning!
+bot: Good Morning!
 Today is Monday, October 16th
 Here's today's weather:
-	Temperature - 44°
+	Temperature - 44ï¿½
 	Conditions - A Few Clouds
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Good Morning!
+bot: Good Morning!
 Today is Tuesday, October 17th
 Here's today's weather:
-	Temperature - 52°
+	Temperature - 52ï¿½
 	Conditions - Mostly Cloudy
 	Humidity - Average
 	Wind Speed - Light Breeze
 	Visibility - 10 mi
-script: Here's today's quote:
-script: My family is from the south of Italy in this little place called Calabria. It's a big part of my family, the Italian culture. I grew up around it. My parents speak Italian, and I speak Italian.
+bot: Here's today's quote:
+bot: My family is from the south of Italy in this little place called Calabria. It's a big part of my family, the Italian culture. I grew up around it. My parents speak Italian, and I speak Italian.
 
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-script: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
-evan: when is the next train from 30th street to pennbrook
-script: hi
-evan: when is the next train from 30th street to pennbrook
-script: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
-evan: when is the next train from 30th street to pennbrook
-script: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+bot: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
+user: when is the next train from 30th street to pennbrook
+bot: hi
+user: when is the next train from 30th street to pennbrook
+bot: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
+user: when is the next train from 30th street to pennbrook
+bot: The next train from 30th Street Station to Pennbrook leaves at 4:48PM
 Reply STOP to end this conversation.
-evan: what functions do you have
-script: alarm -> toggles all alarms
+user: what functions do you have
+bot: alarm -> toggles all alarms
 temp -> sends the current temperature
 weather -> sends the current weather conditions in Philadelphia
 quote -> sends a random quote
@@ -2388,7 +2388,7 @@ today -> sends the day of the month and the weekday
 clean -> performs some functions that keep this bot running smoothly
 weight ___-> logs your weight
 weight_graph -> sends a graph of your weight over time
-script: spotify -> sends some data about your spotify account
+bot: spotify -> sends some data about your spotify account
 artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
 genres -> sends a graph of your top genres
@@ -2400,31 +2400,31 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: show me a graph of my weight
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: clean yourself
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: send me a graph of my weight
-evan: send me a graph of my weight
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: clean
-evan: when is the next train from 30th street to pennbrook
-evan: when is the next train from 30th street to pennbrook
-evan: what famous people were born today
-script: error
-evan: what famous people were born today
-script: error
-evan: what famous people were born today
-script: error
-evan: tell me about my spotify data
-script: Your playlist is 3199 songs long and it is 212.7 hours long.
+user: show me a graph of my weight
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: clean yourself
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: send me a graph of my weight
+user: send me a graph of my weight
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: clean
+user: when is the next train from 30th street to pennbrook
+user: when is the next train from 30th street to pennbrook
+user: what famous people were born today
+bot: error
+user: what famous people were born today
+bot: error
+user: what famous people were born today
+bot: error
+user: tell me about my spotify data
+bot: Your playlist is 3199 songs long and it is 212.7 hours long.
 It spans 70 years of music.
 Your playlist consisted of 1389 artists that represented 693 different genres.
 The songs were an average of 3 minutes and 59 seconds long.
@@ -2434,12 +2434,12 @@ There were around 102 cover songs.
 About 29.8% of the songs were explicit.
 You have 73 saved podcast episodes that are collectively 98.5 hours long.
 Those episodes are from 14 different shows.
-evan: show me a graph of my spotify artists
-script: Here are your top artists.
-evan: show me a graph of my spotify artists
-script: Here are your top artists.
-evan: what other functions do you have
-script: temp -> sends the current temperature
+user: show me a graph of my spotify artists
+bot: Here are your top artists.
+user: show me a graph of my spotify artists
+bot: Here are your top artists.
+user: what other functions do you have
+bot: temp -> sends the current temperature
 weather -> sends the current weather conditions in Philadelphia
 quote -> sends a random quote
 school -> sends how much school is left for the year
@@ -2449,7 +2449,7 @@ today -> sends the day of the month and the weekday
 weight ___-> logs your weight
 weight_graph -> sends a graph of your weight over time
 spotify -> sends some data about your spotify account
-script: artists -> sends a graph of your top artists
+bot: artists -> sends a graph of your top artists
 durations -> sends a graph of your longest songs
 genres -> sends a graph of your top genres
 explicit -> sends a graph of the ratio of explicit songs in your library
@@ -2460,10 +2460,10 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: whats the temperature
-script: 62°
-evan: what commands do you have
-script: temp -> sends the current temperature
+user: whats the temperature
+bot: 62ï¿½
+user: what commands do you have
+bot: temp -> sends the current temperature
 weather -> sends the current weather conditions in Philadelphia
 quote -> sends a random quote
 school -> sends how much school is left for the year
@@ -2484,19 +2484,19 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: send me a weight graph
-script: Here is your weight graph
-evan: whens the next train from pennbrook to 30th street
-script: The next train from 30th Street Station to Pennbrook leaves at 1:04PM
+user: send me a weight graph
+bot: Here is your weight graph
+user: whens the next train from pennbrook to 30th street
+bot: The next train from 30th Street Station to Pennbrook leaves at 1:04PM
 Reply STOP to end this conversation.
-evan: when is the next train fromm 30th street to pennbrook
-script: The next train from 30th Street Station to Pennbrook leaves at 1:04PM.
-evan: when is the next train from 30th street to pennbrook
-script: The next train from 30th Street Station to Pennbrook leaves at 1:04PM.
-evan: when is the next train from pennbrook to 30th street
-script: The next train from 30th Street Station to Pennbrook leaves at 1:04PM and arrives at 2:00PM.
-evan: what commands do you have
-script: temp -> sends the current temperature
+user: when is the next train fromm 30th street to pennbrook
+bot: The next train from 30th Street Station to Pennbrook leaves at 1:04PM.
+user: when is the next train from 30th street to pennbrook
+bot: The next train from 30th Street Station to Pennbrook leaves at 1:04PM.
+user: when is the next train from pennbrook to 30th street
+bot: The next train from 30th Street Station to Pennbrook leaves at 1:04PM and arrives at 2:00PM.
+user: what commands do you have
+bot: temp -> sends the current temperature
 weather -> sends the current weather conditions in Philadelphia
 quote -> sends a random quote
 school -> sends how much school is left for the year
@@ -2517,14 +2517,14 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: send a graph of my spotify decade data
-script: Here are the decades your songs were released in.
-evan: when is the next train from pennbrook to 30th street
-script: The next train from Pennbrook to 30th Street Station leaves at 4:41PM and arrives at 5:39PM.
-evan: send me a graph of my weight
-script: Here is your weight graph
-evan: what commands do you have
-script: temp -> sends the current temperature in Philadelphia
+user: send a graph of my spotify decade data
+bot: Here are the decades your songs were released in.
+user: when is the next train from pennbrook to 30th street
+bot: The next train from Pennbrook to 30th Street Station leaves at 4:41PM and arrives at 5:39PM.
+user: send me a graph of my weight
+bot: Here is your weight graph
+user: what commands do you have
+bot: temp -> sends the current temperature in Philadelphia
 weather -> sends the current weather conditions in Philadelphia
 quote -> sends a random quote
 school -> sends how much school is left for the year
@@ -2545,33 +2545,33 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: send me a graph of my spotify artists
-script: Here are your top artists.
-evan: send me a random quote
-script: Stop treating Muslims as if they're some kind of foreign, alien entity rather than part of the fabric of Canadian society or American society or British society.
+user: send me a graph of my spotify artists
+bot: Here are your top artists.
+user: send me a random quote
+bot: Stop treating Muslims as if they're some kind of foreign, alien entity rather than part of the fabric of Canadian society or American society or British society.
 
-evan: send me a quote
-script: Stop treating Muslims as if they're some kind of foreign, alien entity rather than part of the fabric of Canadian society or American society or British society.
+user: send me a quote
+bot: Stop treating Muslims as if they're some kind of foreign, alien entity rather than part of the fabric of Canadian society or American society or British society.
 
-evan: send me a quote
-script: No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
+user: send me a quote
+bot: No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
 
-evan: when is the next train from pennbrook to 30th street
-script: The next train from Pennbrook to 30th Street Station leaves at 4:41PM and arrives at 5:39PM.
-evan: when is the next train from chestnuy hill east to wayne junction
-script: The next train from Chestnut Hill East to Wayne Jct leaves at 5:01PM and arrives at 5:23PM.
-evan: when is the next train from wayne junction to chestnut hill east
-script: The next train from Wayne Jct to Chestnut Hill East leaves at 4:18PM and arrives at 4:41PM.
-evan: when is the next train from wayne junction to chestnut hill east
-evan: when is the next train from wayne junction to chestnut hill east
-script: The next train from Wayne Jct to Chestnut Hill East leaves at 5:16PM and arrives at 5:40PM with a delay of 7 mins.
-evan: what does the word semaphore mean
-script: I am unsure what function you are reffering to. Please try again.
-evan: what is a semaphore
-evan: what is a semaphore
-script: A semaphore is a synchronization object that controls access to a shared resource in a concurrent system. It allows multiple threads or processes to access a shared resource with mutual exclusion, meaning that only one thread or process can access the resource at a time. Semaphores can be used to prevent race conditions and ensure that critical sections of code are executed in a controlled manner. They maintain a count that can be incremented or decremented by threads or processes to control access to the shared resource.
-evan: what commands do you have
-script: temp -> sends the current temperature in Philadelphia
+user: when is the next train from pennbrook to 30th street
+bot: The next train from Pennbrook to 30th Street Station leaves at 4:41PM and arrives at 5:39PM.
+user: when is the next train from chestnuy hill east to wayne junction
+bot: The next train from Chestnut Hill East to Wayne Jct leaves at 5:01PM and arrives at 5:23PM.
+user: when is the next train from wayne junction to chestnut hill east
+bot: The next train from Wayne Jct to Chestnut Hill East leaves at 4:18PM and arrives at 4:41PM.
+user: when is the next train from wayne junction to chestnut hill east
+user: when is the next train from wayne junction to chestnut hill east
+bot: The next train from Wayne Jct to Chestnut Hill East leaves at 5:16PM and arrives at 5:40PM with a delay of 7 mins.
+user: what does the word semaphore mean
+bot: I am unsure what function you are reffering to. Please try again.
+user: what is a semaphore
+user: what is a semaphore
+bot: A semaphore is a synchronization object that controls access to a shared resource in a concurrent system. It allows multiple threads or processes to access a shared resource with mutual exclusion, meaning that only one thread or process can access the resource at a time. Semaphores can be used to prevent race conditions and ensure that critical sections of code are executed in a controlled manner. They maintain a count that can be incremented or decremented by threads or processes to control access to the shared resource.
+user: what commands do you have
+bot: temp -> sends the current temperature in Philadelphia
 weather -> sends the current weather conditions in Philadelphia
 quote -> sends a random quote
 school -> sends how much school is left for the year
@@ -2592,63 +2592,63 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: terminate this program
-script: That command does not exist.
+user: terminate this program
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: terminate this program
-script: That command does not exist.
+user: terminate this program
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: kill this program
-script: That command does not exist.
+user: kill this program
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: kill
-script: That command does not exist.
+user: kill
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: kill
-script: That command does not exist.
+user: kill
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: today
-script: Today is Tuesday, Nov 7th
+user: today
+bot: Today is Tuesday, Nov 7th
 Today's word of the day is semaphore
-evan: today
-script: Today is Tuesday, Nov 7th
+user: today
+bot: Today is Tuesday, Nov 7th
 Today's word of the day is semaphore
-evan: today
-script: Today is Tuesday, Nov 7th
+user: today
+bot: Today is Tuesday, Nov 7th
 Today's word of the day is 'Semaphore'
-evan: send me a graph of the genres of my spotify artists
-script: Here are your top genres.
-evan: send a graph of my explicit songs
-script: Here is the ratio of explicit songs in your library.
-evan: send me a graph of my cover songs
-script: Here is the ratio of covers in your library.
-evan: send me a graph of the decades of my songs
-script: Here are the decades your songs were released in.
-evan: send me a graph of my saved podcast episodes
-script: Here are the podcasts you listen to.
-evan: send me a graph of the runtimes of the podcasts I have saved
-script: Here are the podcasts you listen to.
-evan: terminate this program
-script: That command does not exist.
+user: send me a graph of the genres of my spotify artists
+bot: Here are your top genres.
+user: send a graph of my explicit songs
+bot: Here is the ratio of explicit songs in your library.
+user: send me a graph of my cover songs
+bot: Here is the ratio of covers in your library.
+user: send me a graph of the decades of my songs
+bot: Here are the decades your songs were released in.
+user: send me a graph of my saved podcast episodes
+bot: Here are the podcasts you listen to.
+user: send me a graph of the runtimes of the podcasts I have saved
+bot: Here are the podcasts you listen to.
+user: terminate this program
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: kill this bot
-script: That command does not exist.
+user: kill this bot
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: end
-script: That command does not exist.
+user: end
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: kill
-script: That command does not exist.
+user: kill
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: terminate
-script: That command does not exist.
+user: terminate
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: terminate this program
-script: That command does not exist.
+user: terminate this program
+bot: That command does not exist.
 To see a list of all commands, text "commands".
-evan: terminate this program
-evan: what commands do you have?
-script: temp -> sends the current temperature in Philadelphia
+user: terminate this program
+user: what commands do you have?
+bot: temp -> sends the current temperature in Philadelphia
 weather -> sends the current weather conditions in Philadelphia
 quote -> sends a random quote
 school -> sends how much school is left for the year
@@ -2669,10 +2669,10 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-evan: what the current temp
-script: 41°
-evan: & C:/Users/etoom/AppData/Local/Programs/Python/Python310/python.exe c:/Users/etoom/coding/time-saver/main.py
-script: temp -> sends the current temperature in Philadelphia
+user: what the current temp
+bot: 41ï¿½
+user: & C:/Users/etoom/AppData/Local/Programs/Python/Python310/python.exe c:/Users/etoom/coding/time-saver/main.py
+bot: temp -> sends the current temperature in Philadelphia
 weather -> sends the current weather conditions in Philadelphia
 quote -> sends a random quote
 school -> sends how much school is left for the year
@@ -2693,11 +2693,11 @@ runtimes -> sends a graph of the runtimes of the podcasts you listen to
 desc -> sends a description of this bot
 commands -> sends this
 I also have a few other surprises ;)
-script: It is currently 05:07 in Paris.
-script: It is currently 23:08 in Peru.
-evan: what time is it in paris right now
-script: It is currently 05:11 in Paris.
-evan: what time is it in philadelphia
-script: It is currently 11:13 PM in Philadelphia.
-evan: what time is it in haifa
-script: It is currently 06:14 AM in Haifa.
+bot: It is currently 05:07 in Paris.
+bot: It is currently 23:08 in Peru.
+user: what time is it in paris right now
+bot: It is currently 05:11 in Paris.
+user: what time is it in philadelphia
+bot: It is currently 11:13 PM in Philadelphia.
+user: what time is it in haifa
+bot: It is currently 06:14 AM in Haifa.

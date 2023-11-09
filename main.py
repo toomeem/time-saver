@@ -599,6 +599,98 @@ def commands():
 
 
 
+def check_file_timestamps(filename, strf_format="%Y/%m/%d/%H/%M", remove_past=False):
+	if log_command("check_file_timestamps"):
+		return
+	with open("text_files/"+filename) as f:
+		lines = f.readlines()
+	now = datetime.now(tz)
+	for i in range(len(lines)):
+		try:
+			timestamp = lines[i].strip().split(":")[0]
+			date_obj = datetime.strptime(timestamp, strf_format)
+			date_obj = date_obj.replace(tzinfo=tz)
+			if not remove_past:
+				continue
+			if (now-date_obj).total_seconds() > 0:
+				lines[i] = None
+		except:
+			lines[i] = None
+	lines = [i for i in lines if i is not None]
+	return lines
+
+def check_brentford_file():
+	if log_command("check_brentford_file"):
+		return
+	games = check_file_timestamps("brentford", remove_past=True)
+	for i in range(len(games)):
+		games[i] = games[i].strip().split(":")
+		games[i][1] = games[i][1].title()
+		games[i] = ":".join(games[i])+"\n"
+	with open("text_files/brentford", "w") as brentford_file:
+		brentford_file.writelines(sorted(games))
+
+def check_weight_file():
+	if log_command("check_weight_file"):
+		return
+	weights = check_file_timestamps("weight", strf_format="%Y/%m/%d")
+	for i in range(len(weights)):
+		try:
+			weights[i] = weights[i].strip().split(":")
+			weights[i][1] = str(float(weights[i][1]))
+			weights[i] = ":".join(weights[i])+"\n"
+		except:
+			weights[i] = None
+	weights = [i for i in weights if i is not None]
+	with open("text_files/weight", "w") as weight_file:
+		weight_file.writelines(sorted(weights))
+
+def check_error_file():
+	if log_command("check_error_file"):
+		return
+	errors = check_file_timestamps("errors", "%Y/%m/%d/%H/%M/%S")
+	if errors is None:
+		return
+	with open("text_files/errors", "w") as error_file:
+		error_file.writelines(sorted(errors))
+
+def check_quote_file():
+	if log_command("check_quote_file"):
+		return
+	with open("text_files/quotes") as quotes_file:
+		quotes = list(set(quotes_file.readlines()))
+	with open("text_files/used_quotes") as used_quotes_file:
+		used_quotes = list(set(used_quotes_file.readlines()))
+	for i in quotes:
+		if i in used_quotes:
+			quotes.remove(i)
+			used_quotes.append(i)
+	quote_fix = False
+	used_fix = False
+	with open("text_files/quotes") as quotes_file:
+		if quotes != quotes_file.readlines():
+			quote_fix = True
+	with open("text_files/used_quotes") as used_quotes_file:
+		if used_quotes != used_quotes_file.readlines():
+			used_fix = True
+	if quote_fix:
+		with open("text_files/quotes", "w") as quotes_file:
+			quotes_file.writelines(quotes)
+	if used_fix:
+		with open("text_files/used_quotes", "w") as used_quotes_file:
+			used_quotes_file.writelines(used_quotes)
+
+def clean(updates=True):
+	if log_command("clean"):
+		return
+	if updates:
+		threading.Thread(target=update_spotify_data).start()
+	clear_file("text_files/cancel")
+	check_quote_file()
+	check_brentford_file()
+	check_weight_file()
+	check_error_file()
+
 def get_time(args):
 	if log_command("get_time"):
 		return
@@ -678,67 +770,6 @@ def functions():
 	with open("text_files/functions.json") as f:
 		functions = json.load(f)
 	return functions
-
-def clean():
-	if log_command("clean"):
-		return
-	daily_funcs()
-	with open("text_files/quotes") as quotes_file:
-		quotes = list(set(quotes_file.readlines()))
-	with open("text_files/used_quotes") as used_quotes_file:
-		used_quotes = list(set(used_quotes_file.readlines()))
-	for i in quotes:
-		if i in used_quotes:
-			quotes.remove(i)
-			used_quotes.append(i)
-	quote_fix = False
-	used_fix = False
-	with open("text_files/quotes") as quotes_file:
-		if quotes != quotes_file.readlines():
-			quote_fix = True
-	with open("text_files/used_quotes") as used_quotes_file:
-		if used_quotes != used_quotes_file.readlines():
-			used_fix = True
-	if quote_fix:
-		with open("text_files/quotes", "w") as quotes_file:
-			quotes_file.writelines(quotes)
-	if used_fix:
-		with open("text_files/used_quotes", "w") as used_quotes_file:
-			used_quotes_file.writelines(used_quotes)
-	with open("text_files/brentford") as f:
-		games = f.readlines()
-	today = datetime.now(tz)
-	for i in range(len(games)):
-		games[i] = games[i].strip().split(":")
-		games[i][0] = games[i][0].split("/")
-		games[i] = [games[i][0][0], games[i][0][1], games[i][0][2], games[i][1], games[i][2]]
-		games[i] = [int(i) for i in games[i]]
-		games[i] = datetime(games[i][0], games[i][1], games[i][2], games[i][3], games[i][4], tzinfo=tz)
-		if (today-games[i]).total_seconds() > 0:
-			games[i] = "past"
-	upcoming_games = [i for i in games if i != "past"]
-	for i in range(len(upcoming_games)):
-		upcoming_games[i] = upcoming_games[i].strftime("%Y/%m/%d:%H:%M\n")
-	with open("text_files/brentford", "w") as f:
-		f.writelines(upcoming_games)
-	with open("text_files/weight") as weight_file:
-		weights = weight_file.readlines()
-	for i in range(len(weights)):
-		weights[i] = weights[i].strip().split(":")
-		weights[i][0] = weights[i][0].split("/")
-		try:
-			nothing = datetime(int(weights[i][0][2]), int(
-				weights[i][0][0]), int(weights[i][0][1]), tzinfo=tz)
-			nothing = float(weights[i][1])
-			weights[i][0] = f"{weights[i][0][2]}/{weights[i][0][0]}/{weights[i][0][1]}"
-			weights[i] = ":".join(weights[i])+"\n"
-		except:
-			weights[i] = "error"
-			pprint("error")
-	weights = sorted([i for i in weights if i != "error"])
-	with open("text_files/weight", "w") as weight_file:
-		weight_file.writelines(weights)
-	update_spotify_data()
 
 def brentford_plays_today():
 	if log_command("brentford_plays_today"):
@@ -1538,9 +1569,6 @@ def get_show_durations(data):
 # end of spotify functions
 
 
-def daily_funcs():
-	clear_file("text_files/cancel")
-
 def num_suffix(num):
 	num = str(int(num))
 	if len(num) > 2:
@@ -1555,10 +1583,9 @@ def num_suffix(num):
 
 def on_start():
 	set_in_conversation(False)
-	clear_file("text_files/cancel")
 	end_workout(True)
+	clean(False)
 	# threading.Thread(target=event_loop).start()
-	threading.Thread(target=update_spotify_data).start()
 
 
 def event_loop():
@@ -1579,11 +1606,10 @@ def event_loop():
 			message_user(get_quote())
 			time.sleep(60)
 		elif rn() == "06:00": # daily operations
-			daily_funcs()
+			clean()
 		time.sleep(5)
 
 
-on_start()
 print("\nBot: Hello! How may I help you today?")
 print("User:", end=" ")
 while True:
