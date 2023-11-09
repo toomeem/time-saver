@@ -169,6 +169,27 @@
 		}
 	},
 	{
+		"name":"time",
+		"description": "sends the current time in any city/country in the world",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"tz_info": {
+					"type": "string",
+					"description": "return the ISO tz identifier"
+				},
+				"place": {
+					"type": "string",
+					"description": "the name of the city/country to get the time for"
+				}
+			},
+			"required": [
+				"tz_info",
+				"place"
+			]
+		}
+	},
+	{
 		"name": "today",
 		"description": "sends the day of the month and week and other info",
 		"parameters": {

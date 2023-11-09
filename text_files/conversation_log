@@ -2647,3 +2647,57 @@ evan: terminate this program
 script: That command does not exist.
 To see a list of all commands, text "commands".
 evan: terminate this program
+evan: what commands do you have?
+script: temp -> sends the current temperature in Philadelphia
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: what the current temp
+script: 41°
+evan: & C:/Users/etoom/AppData/Local/Programs/Python/Python310/python.exe c:/Users/etoom/coding/time-saver/main.py
+script: temp -> sends the current temperature in Philadelphia
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+script: It is currently 05:07 in Paris.
+script: It is currently 23:08 in Peru.
+evan: what time is it in paris right now
+script: It is currently 05:11 in Paris.
+evan: what time is it in philadelphia
+script: It is currently 11:13 PM in Philadelphia.
+evan: what time is it in haifa
+script: It is currently 06:14 AM in Haifa.

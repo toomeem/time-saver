@@ -165,6 +165,8 @@ def hook(message):
 			start_workout(exercise_list)
 		case "train":
 			get_train_schedule(args)
+		case "time":
+			get_time(args)
 		case _:
 			message_user("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -585,6 +587,9 @@ def commands():
 		, "decades -> sends a graph of the decades your songs were released in"
 		, "episodes -> sends a graph of the podcasts you listen to"
 		, "runtimes -> sends a graph of the runtimes of the podcasts you listen to"
+		, "gym -> starts a workout"
+		, "train -> sends the next train between two stations"
+		, "time -> sends the cuurent time in a city of your choice"
 		, "desc -> sends a description of this bot"
 		, "commands -> sends this"]
 	message = "\n".join(command_lst)
@@ -593,6 +598,15 @@ def commands():
 
 
 
+
+def get_time(args):
+	if log_command("get_time"):
+		return
+	tz_str = args["tz_info"]
+	place = args["place"]
+	tz_obj = pytz.timezone(tz_str)
+	now = datetime.now(tz_obj)
+	message_user(f'''It is currently {now.strftime("%I:%M %p")} in {place}.''')
 
 def get_todays_word():
 	if log_command("get_todays_word"):
@@ -613,6 +627,8 @@ def delete_file(file_name):
 		pass
 
 def error_count_notify():
+	if log_command("error_count_notify"):
+		return
 	now = datetime.now(tz)
 	with open("text_files/errors") as errors:
 		error_list = list(errors.readlines())
@@ -629,9 +645,9 @@ def error_count_notify():
 			error_count.append(name)
 	return(Counter(error_count))
 
-
-# return how many errors there are in the past 24 hours
 def morning_message():
+	if log_command("morning_message"):
+		return
 	message = "Good Morning!\n"
 	day_num = int(rn("%d"))
 	suffix = num_suffix(int(rn("%d")[1]))
@@ -644,6 +660,8 @@ def morning_message():
 	return(message)
 
 def gpt_request(prompt, function_call=False):
+	if log_command("gpt_request"):
+		return
 	messages = [{"role": "user", "content": prompt}]
 	if function_call:
 		json_data = {"model": model, "messages": messages, "functions": functions()}
@@ -896,7 +914,6 @@ def get_response(question=None, wait_time=300, confirmation=None):
 		time.sleep(.5)
 	message_user("nvm")
 	set_in_conversation(False)
-
 
 def get_weight():
 	if log_command("get_weight"):
