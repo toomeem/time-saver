@@ -2701,3 +2701,89 @@ user: what time is it in philadelphia
 bot: It is currently 11:13 PM in Philadelphia.
 user: what time is it in haifa
 bot: It is currently 06:14 AM in Haifa.
+evan: when is the next train from 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 9:04PM and arrives at 10:00PM with a delay of 2 mins.
+evan: nigger
+script: I'm sorry, but I can't respond to that comment.
+evan: niggers
+script: I'm sorry, but I'm unable to assist with that request.
+evan: what commands do you have
+script: temp -> sends the current temperature in Philadelphia
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+gym -> starts a workout
+train -> sends the next train between two stations
+time -> sends the cuurent time in a city of your choice
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: what can you do
+script: temp -> sends the current temperature in Philadelphia
+weather -> sends the current weather conditions in Philadelphia
+quote -> sends a random quote
+school -> sends how much school is left for the year
+scan ___ -> searches through all the unused quotes that contain that word/phrase
+bday -> sends 5 famous people that were born today
+today -> sends the day of the month and the weekday
+weight ___-> logs your weight
+weight_graph -> sends a graph of your weight over time
+spotify -> sends some data about your spotify account
+artists -> sends a graph of your top artists
+durations -> sends a graph of your longest songs
+genres -> sends a graph of your top genres
+explicit -> sends a graph of the ratio of explicit songs in your library
+covers -> sends a graph of the ratio of covers in your library
+decades -> sends a graph of the decades your songs were released in
+episodes -> sends a graph of the podcasts you listen to
+runtimes -> sends a graph of the runtimes of the podcasts you listen to
+gym -> starts a workout
+train -> sends the next train between two stations
+time -> sends the cuurent time in a city of your choice
+desc -> sends a description of this bot
+commands -> sends this
+I also have a few other surprises ;)
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: send me a graph of my top artists
+script: Here are your top artists.
+evan: when is the next train from 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 2:38PM and arrives at 3:34PM.
+evan: what time is it in paris right now
+evan: send me a graph of my top spotify artists
+script: Here are your top artists.
+evan: what time is it in london
+script: It is currently 02:56 AM in London.
+evan: send me a graph of my weight
+script: Here is your weight graph
+evan: send me a description of my spotify data
+script: Your playlist is 3542 songs long and it is 234.7 hours long.
+It spans 70 years of music.
+Your playlist consisted of 1482 artists that represented 722 different genres.
+The songs were an average of 3 minutes and 59 seconds long.
+The longest song was 23 minutes and 41 seconds long.
+The shortest song was 55 seconds long.
+There were around 118 cover songs.
+About 31.3% of the songs were explicit.
+You have 56 saved podcast episodes that are collectively 82.9 hours long.
+Those episodes are from 15 different shows.
+evan: send me a graph of my top artists
+script: Here are your top artists.
+evan: send me a graph of my top artists on spotify
+script: Here are your top artists.
+evan: send me a graph of my top artists
+script: Here are your top artists.

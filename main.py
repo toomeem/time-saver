@@ -2,7 +2,8 @@
 all dates are in year/month/day
 
 '''
-from PIL import Image
+
+import concurrent.futures
 import json
 import os
 import random
@@ -22,12 +23,12 @@ import spotipy
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from flask import Flask, request
+from PIL import Image
 from scipy import stats
 from spotipy import SpotifyOAuth
 
 load_dotenv()
 
-app = Flask(__name__)
 port = 5000
 dpi = 500
 cloudinary_cloud_name = os.getenv("CLOUDINARY_CLOUD_NAME")
@@ -39,7 +40,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 model = "gpt-3.5-turbo"
 
 tz = pytz.timezone("America/New_York")
-request_header = {
+http_request_header = {
 	"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
 }
 auth_manager = SpotifyOAuth(
@@ -47,9 +48,10 @@ auth_manager = SpotifyOAuth(
 	client_secret=spotify_client_secret,
 	redirect_uri="http://www.evantoomey.com/",
 	open_browser=True,
-	scope="user-library-read",
+	scope=["user-library-read","playlist-modify-public"],
 )
 spotify_client = spotipy.Spotify(oauth_manager=auth_manager)
+
 cloudinary.config(
 	cloud_name=cloudinary_cloud_name,
 	api_key=cloudinary_api_key,
@@ -307,12 +309,14 @@ def send_weight_graph(plot_attributes):
 def update_spotify_data():
 	if log_command("update_spotify_data"):
 		return
-	threading.Thread(target=podcasts, args=(spotify_client,)).start()
 	threading.Thread(target=get_genres, args=(spotify_client,)).start()
+	threading.Thread(target=podcasts, args=(spotify_client,)).start()
 	get_all_songs(spotify_client)
+	clear_suggestions_playlist(spotify_client)
 
 def spotify_data_description():
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
+	track_num = len(data)
 	artist_dict, artist_num = get_artist_info(data)
 	durations, avg_track_len, longest, shortest = duration_graph_organization(
 		data, 20)
@@ -344,7 +348,7 @@ def spotify_data_description():
 def send_artist_graph():
 	if log_command("send_artist_graph"):
 		return
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
 	artist_dict, artist_num = get_artist_info(data)
 	popular_artists, artist_uses = find_popular(artist_dict, 20)
 	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
@@ -363,7 +367,7 @@ def send_artist_graph():
 def send_song_duration_graph():
 	if log_command("send_song_duration_graph"):
 		return
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
 	durations, avg_track_len, longest, shortest = duration_graph_organization(
 		data, 20)
 	duration_names = [list(i.values())[0] for i in durations][::-1]
@@ -384,7 +388,7 @@ def send_song_duration_graph():
 def send_genre_graph():
 	if log_command("send_genre_graph"):
 		return
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
 	popular_genres, genres_uses, genre_num = genre_data_organization(20)
 	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
 	plt.yticks(fontsize=8)
@@ -402,7 +406,7 @@ def send_genre_graph():
 def send_explicit_graph():
 	if log_command("send_explicit_graph"):
 		return
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
 	explicits = get_explicits(data)
 	plt.figure(figsize=(10, 10), dpi=dpi)
 	plt.title("Number of Explicit Songs(Aproximate)", pad=40)
@@ -419,7 +423,7 @@ def send_explicit_graph():
 def send_covers_graph():
 	if log_command("send_covers_graph"):
 		return
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
 	cover_num = covers(data)
 	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
 	plt.title("Number of Covers (Aproximate)")
@@ -436,7 +440,7 @@ def send_covers_graph():
 def send_decade_graph():
 	if log_command("send_decade_graph"):
 		return
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
 	release_decades, release_nums, release_range = release_date_data(data)
 	plt.figure(figsize=(10, 10), dpi=dpi)
 	plt.title("Songs from Each Decade", pad=40, fontdict={'fontsize': 20})
@@ -453,7 +457,7 @@ def send_decade_graph():
 def send_episode_graph():
 	if log_command("send_episode_graph"):
 		return
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
 	podcast_data = get_podcast_data()
 	shows = get_show_frequency(podcast_data)
 	plt.figure(figsize=(10, 10), dpi=dpi)
@@ -471,7 +475,7 @@ def send_episode_graph():
 def send_podcast_runtime_graph():
 	if log_command("send_podcast_runtime_graph"):
 		return
-	data, track_num = read_spotify_data()
+	data = read_spotify_data()
 	podcast_data = get_podcast_data()
 	show_duration_dict = get_show_durations(podcast_data)
 	plt.figure(figsize=(10, 10), dpi=dpi)
@@ -598,6 +602,34 @@ def commands():
 
 
 
+def search_tracks(id):
+	if log_command("search_tracks"):
+		return
+	data = read_spotify_data()
+	for track in data:
+		try:
+			if track["linked_from"]["id"] == id:
+				return track
+		except KeyError:
+			pass
+		if track["id"] == id:
+			return track
+	return False
+
+def clear_suggestions_playlist(sp):
+	playlist_id = "3fLihqliQSQqnSU9Jj48Xf"
+	limit = 100
+	playlist = dict(sp.playlist(playlist_id))["tracks"]
+	if int(playlist["total"]) == 0:
+		return
+	playlist = playlist["items"]
+	liked_tracks = [i["track"]["id"] for i in playlist if search_tracks(i["track"]["id"])]
+	if len(playlist) > limit:
+		for i in range(iterations(len(playlist)-limit, limit)):
+			track_batch = dict(sp.playlist_items(playlist_id, offset=i*limit, limit=limit))
+			liked_tracks.extend([i["track"]["id"] for i in track_batch if search_tracks(i["track"]["id"])])
+	for i in liked_tracks:
+		sp.playlist_remove_all_occurrences_of_items(playlist_id, [i])
 
 def check_file_timestamps(filename, strf_format="%Y/%m/%d/%H/%M", remove_past=False):
 	if log_command("check_file_timestamps"):
@@ -704,7 +736,7 @@ def get_todays_word():
 	if log_command("get_todays_word"):
 		return
 	url = f"https://www.dictionary.com/"
-	page = requests.get(url, headers=request_header)
+	page = requests.get(url, headers=http_request_header)
 	soup = BeautifulSoup(page.content, "html.parser")
 	element = soup.find_all("a", class_="hJCqtPGYwMx5z04f6y2o")
 	word = element[0].text
@@ -981,7 +1013,7 @@ def bday_famousbirthdays():
 	month = rn("%B").lower()
 	day = str(int(rn("%d")))
 	url = f"https://www.famousbirthdays.com/{month}{day}.html"
-	bday_page = requests.get(url, headers=request_header)
+	bday_page = requests.get(url, headers=http_request_header)
 	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
 	raw_bday_list = list(
 		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
@@ -1035,7 +1067,7 @@ def bday_ducksters():
 	month = rn("%B").lower()
 	day = str(int(rn("%d")))
 	url = f"https://www.ducksters.com/history/{month}birthdays.php?day={day}"
-	bday_page = requests.get(url, headers=request_header)
+	bday_page = requests.get(url, headers=http_request_header)
 	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
 	bday_text = ("".join(bday_soup.get_text().split("Birthdays: \n")[1])).split("Archive:\n")[0].split("\xa0")
 	for i in range(bday_text.count("")):
@@ -1289,8 +1321,8 @@ def create_graph(x, y, data_type, plot_attributes):
 
 def iterations(length, max_request=50):
 	if length % max_request == 0:
-		return int((length/50)-1)
-	return int(str(length/50).split(".")[0])
+		return int((length/max_request)-1)
+	return int(str(length/max_request).split(".")[0])
 
 def format_song_name(song_name):
 	song_name = song_name.split(" (")[0]
@@ -1307,7 +1339,7 @@ def format_artist(artist_dict):
 	del artist_dict["uri"]
 	return artist_dict
 
-def format_track(song):
+def format_track(song, track_num):
 	if "added_at" in song.keys():
 		added = song["added_at"]
 		song = dict(song["track"])
@@ -1336,6 +1368,8 @@ def format_track(song):
 	del song["preview_url"]
 	del song["uri"]
 	song["artist_num"] = len(song["artists"])
+	song["album_track_number"] = song["track_number"]
+	song["track_number"] = int(track_num)
 	return song
 
 def format_podcast(podcast):
@@ -1369,22 +1403,49 @@ def format_podcast_show(show):
 	del show["uri"]
 	return show
 
-def get_all_songs(spotify_client):
-	raw_data = dict(spotify_client.current_user_saved_tracks(
-		limit=50, market="US", offset=0))
+def requests_per_thread_func(thread_count, playlist_len, max_request):
+	total_requests = (playlist_len//max_request)-1
+	if playlist_len % max_request != 0:
+		total_requests += 1
+	requests_per_thread = []
+	for i in range(thread_count):
+		requests_per_thread.append(total_requests//thread_count)
+	for i in range(total_requests % thread_count):
+		requests_per_thread[i] += 1
+	return requests_per_thread[::-1]
+
+def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len):
+	data_list = []
+	for request in range(requests_per_thread[thread_num]):
+		offset = (sum(requests_per_thread[:thread_num])+request+1)*max_request+1
+		raw_data = dict(sp.current_user_saved_tracks(
+			limit=50, market="US", offset=offset))["items"]
+		data_list.extend([format_track(raw_data[i], playlist_len-(offset+i)-1) for i in range(len(raw_data))])
+	return data_list
+
+def get_all_songs(sp):
+	strt = time.time()
+	max_request = 50
+	raw_data = dict(sp.current_user_saved_tracks(
+		limit=max_request, market="US", offset=0))
 	playlist_len = int(raw_data["total"])
-	data_list = [format_track(i) for i in raw_data["items"]]
-	for i in range(iterations(playlist_len)):
-		offset = i*50+51
-		raw_data = dict(spotify_client.current_user_saved_tracks(
-			limit=50, market="US", offset=offset))
-		data_list.extend([format_track(i) for i in raw_data["items"]])
+	raw_data = raw_data["items"]
+	data_list = [format_track(raw_data[i], playlist_len-i-1) for i in range(len(raw_data))]
+	thread_count = 10
+	requests_per_thread = requests_per_thread_func(thread_count, playlist_len, max_request)
+	with concurrent.futures.ThreadPoolExecutor(max_workers=thread_count) as executor:
+		futures = [executor.submit(get_song_data,sp, thread_num, requests_per_thread, max_request, playlist_len) for thread_num in range(len(requests_per_thread))]
+		results = [futures.result() for futures in concurrent.futures.as_completed(futures)]
+	for i in results:
+		data_list.extend(i)
+	data_list.sort(key=lambda x: x["track_number"], reverse=True)
 	with open("text_files/tracks.json", "w") as data_file:
 		json.dump({"data": data_list}, data_file, indent=2)
 
 def get_genres(spotify_client):
 	with open("text_files/tracks.json") as data_file:
 		data = dict(json.load(data_file))["data"]
+	max_request = 50
 	genre_list = []
 	artist_ids = []
 	for song in data:
@@ -1392,7 +1453,7 @@ def get_genres(spotify_client):
 			artist_ids.append(artist["id"])
 	artist_ids = list(set(artist_ids))
 	for i in range(iterations(len(artist_ids))):
-		batch_genres = dict(spotify_client.artists(artist_ids[i*50:(i+1)*50]))
+		batch_genres = dict(spotify_client.artists(artist_ids[i*max_request:(i+1)*max_request]))
 		for artist in batch_genres["artists"]:
 			genre_list.extend(artist["genres"])
 	genre_dict = dict(Counter(genre_list))
@@ -1415,7 +1476,7 @@ def podcasts(sp):
 def read_spotify_data():
 	with open("text_files/tracks.json") as data_file:
 		data = list(json.load(data_file)["data"])
-	return data, len(data)
+	return data
 
 def duration_graph_organization(data, bars_per_graph):
 	maxes, durations = [], []
@@ -1584,8 +1645,8 @@ def num_suffix(num):
 def on_start():
 	set_in_conversation(False)
 	end_workout(True)
-	clean(False)
-	# threading.Thread(target=event_loop).start()
+	threading.Thread(target=clean).start()
+	threading.Thread(target=event_loop).start()
 
 
 def event_loop():
@@ -1610,6 +1671,7 @@ def event_loop():
 		time.sleep(5)
 
 
+# threading.Thread(target=on_start).start()
 print("\nBot: Hello! How may I help you today?")
 print("User:", end=" ")
 while True:
