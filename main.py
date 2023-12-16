@@ -129,9 +129,6 @@ def hook(message):
 			school()
 		case "scan":
 			scan(args["scan"])
-		case "bday":
-			message_user("Sorry this function is not available right now.")
-			# message_user(bday())
 		case "today":
 			today()
 		case "desc":
@@ -225,54 +222,6 @@ def scan(args):
 		return
 	keyword = args
 	message_user(get_quote(keyword))
-
-def bday():
-	if log_command("bday"):
-		return "error"
-	try:
-		big_list = bday_famousbirthdays() + bday_ducksters()
-		merged_list = []
-		for i in big_list:
-			if merged_list == []:
-				merged_list.append(i)
-				continue
-			in_list = False
-			for k in merged_list:
-				if i["name"] == k["name"]:
-					in_list = True
-					if i["death"] != "?" and k["death"] == "?":
-						k["death"] = i["death"]
-					if k["source"] == "famousbirthdays":
-						k["source"] = "both"
-						k["job"] = i["job"]
-			if not in_list:
-				merged_list.append(i)
-		top_ten = []
-		for i in merged_list:
-			if i["source"] == "both":
-				top_ten.append(i)
-		if len(top_ten) < 10:
-			for i in merged_list:
-				if i["source"] == "ducksters":
-					top_ten.append(i)
-		births = []
-		if len(top_ten) < 10:
-			for i in merged_list:
-				if i["source"] == "famousbirthdays":
-					births.append(i["birth"])
-		births.sort()
-		births = births[:10-len(top_ten)]
-		for i in births:
-			for k in merged_list:
-				if k["birth"] == i:
-					top_ten.append(k)
-		message = ["Famous Birthdays Today:"]
-		for i in top_ten:
-			message.append(f'''{i["name"]}({i["birth"]}-{i["death"]}): {i["job"]}''')
-		return "\n".join(message)
-	except:
-		error_report("bday")
-		return "error"
 
 def today():
 	if log_command("today"):
@@ -578,7 +527,6 @@ def commands():
 		, "quote -> sends a random quote"
 		, "school -> sends how much school is left for the year"
 		, "scan ___ -> searches through all the unused quotes that contain that word/phrase"
-		, "bday -> sends 5 famous people that were born today"
 		, "today -> sends the day of the month and the weekday"
 		, "weight ___-> logs your weight"
 		, "weight_graph -> sends a graph of your weight over time"
@@ -1006,87 +954,6 @@ def log_message(message, sender):
 		return
 	with open("text_files/conversation_log", "a") as message_file:
 		message_file.write(f"{sender}: {message}\n")
-
-def bday_famousbirthdays():
-	if log_command("bday_famousbirthdays"):
-		return
-	month = rn("%B").lower()
-	day = str(int(rn("%d")))
-	url = f"https://www.famousbirthdays.com/{month}{day}.html"
-	bday_page = requests.get(url, headers=http_request_header)
-	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
-	raw_bday_list = list(
-		filter(lambda x: x != "", bday_soup.text.split("\n")))[7:-9]
-	for i in range(len(raw_bday_list)):
-		if isinstance(raw_bday_list[i], int):
-			raw_bday_list.remove(raw_bday_list[i])
-	fake_famous = [
-		"TikTok Star", "Reality Star", "Gospel Singer",
-		"YouTube Star", "Cricket Player", "Instagram Star", "Snapchat Star",
-		"Family Member", "Dubsmash Star", "Twitch Star", "Stylist",
-		"eSports Player", "Cat", "Dog", "Rugby Player", "Soap Opera Actress",
-		"World Music Singer"
-	]
-	bday_list = []
-	name = None
-	birth = None
-	death = None
-	job = None
-	for i in range(len(raw_bday_list)):
-		if i % 2 == 0:
-			if raw_bday_list[i].count(",") > 1:
-				name = ",".join(raw_bday_list[i].split(",")[:-1])
-				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
-				death = "?"
-				if int(rn("%Y")) - birth < 18:
-					continue
-			elif raw_bday_list[i].count(",") == 1:
-				name = raw_bday_list[i].split(",")[0]
-				birth = int(rn("%Y")) - int(raw_bday_list[i].split(",")[-1].strip())
-				death = "?"
-				if int(rn("%Y")) - birth < 18:
-					continue
-			else:
-				name = raw_bday_list[i].split("(")[0]
-				birth = int(raw_bday_list[i].split("(")[-1].split("-")[0])
-				death = int(raw_bday_list[i].split("(")[-1].replace(")", "").split("-")[-1])
-			job = raw_bday_list[i+1]
-			bday_list.append({"name":name.strip().replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"famousbirthdays"})
-	final_bday_list = []
-	for i in range(len(bday_list)):
-		makes_list = False
-		if bday_list[i]["death"] != "?":
-			makes_list = True
-		if not bday_list[i]["job"] in fake_famous:
-			makes_list = True
-		if makes_list:
-			final_bday_list.append(bday_list[i])
-	return final_bday_list
-
-def bday_ducksters():
-	month = rn("%B").lower()
-	day = str(int(rn("%d")))
-	url = f"https://www.ducksters.com/history/{month}birthdays.php?day={day}"
-	bday_page = requests.get(url, headers=http_request_header)
-	bday_soup = BeautifulSoup(bday_page.content, "html.parser")
-	bday_text = ("".join(bday_soup.get_text().split("Birthdays: \n")[1])).split("Archive:\n")[0].split("\xa0")
-	for i in range(bday_text.count("")):
-		bday_text.remove("")
-	for i in range(len(bday_text)):
-		bday_text[i] = bday_text[i].replace("\n", "")
-	bday_list = []
-	name = bday_text[1].split("(")[0].strip()
-	birth = int(bday_text[0].strip())
-	death = "?"
-	job = bday_text[1].split("(")[-1].split(")")[0].strip()
-	bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
-	for i in range(2, len(bday_text)):
-		name = bday_text[i].split("(")[0].strip()
-		birth = int(bday_text[i-1].split(")")[-1].strip())
-		death = "?"
-		job = bday_text[i].split("(")[-1].split(")")[0].strip()
-		bday_list.append({"name":name.replace("Í", "i"), "birth":birth,"death":death, "job":job, "source":"ducksters"})
-	return(bday_list)
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")
@@ -1672,7 +1539,7 @@ def event_loop():
 
 
 # threading.Thread(target=on_start).start()
-print("\nBot: Hello! How may I help you today?")
-print("User:", end=" ")
-while True:
-	hook(input())
+# print("\nBot: Hello! How may I help you today?")
+# print("User:", end=" ")
+# while True:
+# 	hook(input())
