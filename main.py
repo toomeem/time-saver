@@ -19,10 +19,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pytz
 import requests
-import spotipy
+from spotipy import Spotify
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-from flask import Flask, request
+# from flask import Flask, request
 from PIL import Image
 from scipy import stats
 from spotipy import SpotifyOAuth
@@ -37,8 +37,7 @@ cloudinary_api_secret = os.getenv("CLOUDINARY_API_SECRET")
 spotify_client_id = os.getenv("SPOTIFY_CLIENT_ID")
 spotify_client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
 openai_api_key = os.getenv("OPENAI_API_KEY")
-model = "gpt-3.5-turbo"
-
+gpt_model = "gpt-3.5-turbo"
 tz = pytz.timezone("America/New_York")
 http_request_header = {
 	"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
@@ -50,7 +49,7 @@ auth_manager = SpotifyOAuth(
 	open_browser=True,
 	scope=["user-library-read","playlist-modify-public"],
 )
-spotify_client = spotipy.Spotify(oauth_manager=auth_manager)
+spotify_client = Spotify(oauth_manager=auth_manager)
 
 cloudinary.config(
 	cloud_name=cloudinary_cloud_name,
@@ -61,7 +60,6 @@ gpt_header = {
 	"Content-Type": "application/json",
 	"Authorization": "Bearer " + str(openai_api_key),
 	}
-
 
 plot_attributes = {
 	"weight": {
@@ -84,17 +82,15 @@ gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 exercise_list = list(json.load(open("text_files/exercises.json")))
 
 def message_user(body, media_url=None):
-	if not isinstance(body, str):
+	if not body:
 		return
 	try:
 		log_message(body, "script")
 		print(f"Bot: {body}")
-		if media_url is not None:
+		if media_url:
 			im = Image.open(media_url)
 			im.show()
-			print("User:", end=" ")
-		else:
-			print("User:", end=" ")
+		print("User:", end=" ")
 		# message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
 	except:
 		pass
@@ -107,6 +103,9 @@ def hook(message):
 		return "200"
 	log_message(message, "evan")
 	response = gpt_request(message, function_call=True)
+	if not response:
+		message_user("Error\nPlease try again.")
+		return "200"
 	response = response["choices"][0]
 	if response["finish_reason"] == "stop":
 		message_user(response["message"]["content"])
@@ -172,7 +171,7 @@ def hook(message):
 
 def kill():
 	try:
-		log = log_command("kill")
+		log_command("kill")
 	except:
 		pass
 	finally:
@@ -187,15 +186,14 @@ def log_command(name):
 		command_file.write(f"{name}\n")
 	with open("text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
-	return(name in cancels)
-
+	return name in cancels
 
 def days_until(target, start=None, return_days=False):
 	if log_command("days_until"):
 		return "error"
 	target = target.split("/")
 	target = date(year=int(target[0]), month=int(target[1]), day=int(target[2]))
-	if start is None:
+	if not start:
 		start = date.today()
 	else:
 		start = start.split("/")
@@ -266,9 +264,8 @@ def update_spotify_data():
 def spotify_data_description():
 	data = read_spotify_data()
 	track_num = len(data)
-	artist_dict, artist_num = get_artist_info(data)
-	durations, avg_track_len, longest, shortest = duration_graph_organization(
-		data, 20)
+	_, artist_num = get_artist_info(data)
+	_, avg_track_len, longest, shortest = duration_graph_organization(data, 20)
 	all_durations = sum([i["duration_ms"] for i in data])
 	hours = float(round((all_durations/(60*1000))/60, 1))
 	explicits = get_explicits(data)
@@ -298,7 +295,7 @@ def send_artist_graph():
 	if log_command("send_artist_graph"):
 		return
 	data = read_spotify_data()
-	artist_dict, artist_num = get_artist_info(data)
+	artist_dict, _ = get_artist_info(data)
 	popular_artists, artist_uses = find_popular(artist_dict, 20)
 	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
 	plt.yticks(fontsize=8)
@@ -317,7 +314,7 @@ def send_song_duration_graph():
 	if log_command("send_song_duration_graph"):
 		return
 	data = read_spotify_data()
-	durations, avg_track_len, longest, shortest = duration_graph_organization(
+	durations, *_ = duration_graph_organization(
 		data, 20)
 	duration_names = [list(i.values())[0] for i in durations][::-1]
 	duration_values = [list(i.keys())[0]/(60*1000) for i in durations][::-1]
@@ -337,8 +334,7 @@ def send_song_duration_graph():
 def send_genre_graph():
 	if log_command("send_genre_graph"):
 		return
-	data = read_spotify_data()
-	popular_genres, genres_uses, genre_num = genre_data_organization(20)
+	popular_genres, genres_uses, _ = genre_data_organization(20)
 	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
 	plt.yticks(fontsize=8)
 	plt.title("Most Popular Genres")
@@ -390,7 +386,7 @@ def send_decade_graph():
 	if log_command("send_decade_graph"):
 		return
 	data = read_spotify_data()
-	release_decades, release_nums, release_range = release_date_data(data)
+	release_decades, release_nums, _ = release_date_data(data)
 	plt.figure(figsize=(10, 10), dpi=dpi)
 	plt.title("Songs from Each Decade", pad=40, fontdict={'fontsize': 20})
 	plt.pie(x=release_nums, labels=release_decades, autopct=lambda pct: auto_pct(pct, release_nums),
@@ -406,7 +402,6 @@ def send_decade_graph():
 def send_episode_graph():
 	if log_command("send_episode_graph"):
 		return
-	data = read_spotify_data()
 	podcast_data = get_podcast_data()
 	shows = get_show_frequency(podcast_data)
 	plt.figure(figsize=(10, 10), dpi=dpi)
@@ -424,7 +419,6 @@ def send_episode_graph():
 def send_podcast_runtime_graph():
 	if log_command("send_podcast_runtime_graph"):
 		return
-	data = read_spotify_data()
 	podcast_data = get_podcast_data()
 	show_duration_dict = get_show_durations(podcast_data)
 	plt.figure(figsize=(10, 10), dpi=dpi)
@@ -458,11 +452,11 @@ def start_workout(all_exercises):
 		todays_exercises ="\n".join(todays_exercises)
 		exercise_list = "Pick an exercise(0 to end the workout)\n\n"+todays_exercises
 		exercise_num = get_response(exercise_list, wait_time=900)
-		if exercise_num is None:
+		if not exercise_num:
 			clear_file("text_files/current_workout")
 			return
 		exercise_num = int(exercise_num)
-		if exercise_num == 0:
+		if not exercise_num:
 			quit_workout = True
 		else:
 			message_user("Good choice")
@@ -495,7 +489,7 @@ def get_train_schedule(station_json):
 	response = requests.get(
 		"https://www3.septa.org/api/NextToArrive/index.php",
 		params=parameters, headers=septa_headers).json()
-	if response == []:
+	if not response:
 		message_user("There are no upcoming trains between those stations.")
 		return
 	departure_time = response[0]["orig_departure_time"]
@@ -568,7 +562,7 @@ def clear_suggestions_playlist(sp):
 	playlist_id = "3fLihqliQSQqnSU9Jj48Xf"
 	limit = 100
 	playlist = dict(sp.playlist(playlist_id))["tracks"]
-	if int(playlist["total"]) == 0:
+	if not int(playlist["total"]):
 		return
 	playlist = playlist["items"]
 	liked_tracks = [i["track"]["id"] for i in playlist if search_tracks(i["track"]["id"])]
@@ -593,10 +587,10 @@ def check_file_timestamps(filename, strf_format="%Y/%m/%d/%H/%M", remove_past=Fa
 			if not remove_past:
 				continue
 			if (now-date_obj).total_seconds() > 0:
-				lines[i] = None
+				lines[i] = False
 		except:
-			lines[i] = None
-	lines = [i for i in lines if i is not None]
+			lines[i] = False
+	lines = [i for i in lines if i]
 	return lines
 
 def check_brentford_file():
@@ -620,8 +614,8 @@ def check_weight_file():
 			weights[i][1] = str(float(weights[i][1]))
 			weights[i] = ":".join(weights[i])+"\n"
 		except:
-			weights[i] = None
-	weights = [i for i in weights if i is not None]
+			weights[i] = False
+	weights = [i for i in weights if i]
 	with open("text_files/weight", "w") as weight_file:
 		weight_file.writelines(sorted(weights))
 
@@ -629,7 +623,7 @@ def check_error_file():
 	if log_command("check_error_file"):
 		return
 	errors = check_file_timestamps("errors", "%Y/%m/%d/%H/%M/%S")
-	if errors is None:
+	if not errors:
 		return
 	with open("text_files/errors", "w") as error_file:
 		error_file.writelines(sorted(errors))
@@ -704,7 +698,7 @@ def error_count_notify():
 	now = datetime.now(tz)
 	with open("text_files/errors") as errors:
 		error_list = list(errors.readlines())
-	if len(error_list) == 0:
+	if not error_list:
 		return 0
 	error_count = []
 	error_list = error_list[::-1]
@@ -725,7 +719,7 @@ def morning_message():
 	suffix = num_suffix(int(rn("%d")[1]))
 	brentford_game = brentford_plays_today()
 	message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
-	if isinstance(brentford_game, str):
+	if brentford_game:
 		message += f"Brentford plays at {brentford_game} today!\n"
 	message += "Here's today's weather:\n\t"
 	message += formatted_weather().replace("\n", "\n\t")
@@ -735,10 +729,9 @@ def gpt_request(prompt, function_call=False):
 	if log_command("gpt_request"):
 		return
 	messages = [{"role": "user", "content": prompt}]
+	json_data = {"model": gpt_model, "messages": messages}
 	if function_call:
-		json_data = {"model": model, "messages": messages, "functions": functions()}
-	else:
-		json_data = {"model": model, "messages": messages}
+		json_data = {"model": gpt_model, "messages": messages, "functions": functions()}
 	response = requests.post(
 		"https://api.openai.com/v1/chat/completions",
 		headers=gpt_header,
@@ -782,16 +775,14 @@ def min_sec(total_seconds):
 		min_string = "minute"
 	if seconds == 1:
 		sec_string = "second"
-	if minutes == 0:
+	if not minutes:
 		return f"{seconds} {sec_string}"
 	return f"{minutes} {min_string} and {seconds} {sec_string}"
 
 def check_for_duplicate_event(id):
 	with open("text_files/event_id") as event_id_file:
 		file_id = event_id_file.readline().strip()
-	if file_id != id:
-		return True
-	return False
+	return file_id != id
 
 def get_day_exercises(all_exercises):
 	if log_command("get_day_exercises"):
@@ -829,7 +820,7 @@ def log_set(exercise_num, first=False):
 		except:
 			pass
 	name = search_exercises(exercise_num)
-	if name is None or reps is None or weight is None or rpe is None:
+	if name or reps or weight or rpe:
 		end_workout()
 		return
 	with open("text_files/current_workout") as workout_file:
@@ -850,7 +841,7 @@ def end_workout(start=False):
 	try:
 		with open("text_files/current_workout") as workout_file:
 			workout_dict = dict(json.load(workout_file))
-		if workout_dict["end"] is None:
+		if not workout_dict["end"]:
 			workout_dict["end"] = time.time()
 			workout_dict["DNF"] = not start
 		with open("text_files/workout_log") as workout_file:
@@ -870,18 +861,17 @@ def end_workout(start=False):
 
 def get_gym_day_num():
 	if log_command("get_gym_day"):
-		return
+		return 0
 	with open("text_files/gym_day") as gym_file:
-		gym_day = int(gym_file.readline().strip())
-	return gym_day
+		gym_day = gym_file.readline().strip()
+	if not gym_day:
+		return 0
+	return int(gym_day)
 
 def increment_gym_day(increment=1):
 	if log_command("increment_gym_day"):
 		return
 	gym_day = get_gym_day_num()
-	if gym_day is None:
-		message_user("Error")
-		return
 	gym_day += increment
 	if gym_day >= len(gym_schedule):
 		gym_day = 0
@@ -907,7 +897,7 @@ def clear_response():
 def get_response(question=None, wait_time=300, confirmation=None):
 	if log_command("get_response"):
 		return
-	if question is not None:
+	if question:
 		message_user(question)
 	set_in_conversation(True)
 	start = time.time()
@@ -915,14 +905,15 @@ def get_response(question=None, wait_time=300, confirmation=None):
 	while time_left > 0:
 		with open("text_files/response") as message_file:
 			response = message_file.read().strip()
-		if response != "":
-			set_in_conversation(False)
-			if confirmation != None:
-				message_user(confirmation)
-			if response.lower() == "pass":
-				return
-			return response
-		time.sleep(.5)
+		if not response:
+			time.sleep(.5)
+			continue
+		set_in_conversation(False)
+		if confirmation != None:
+			message_user(confirmation)
+		if response.lower() == "pass":
+			return
+		return response
 	message_user("nvm")
 	set_in_conversation(False)
 
@@ -930,7 +921,7 @@ def get_weight():
 	if log_command("get_weight"):
 		return
 	response = get_response("What's your weight?", 600, "thanks")
-	if response is None:
+	if (not response) or response.lower() == "error":
 		return
 	log_weight(response)
 
@@ -946,8 +937,8 @@ def in_conversation():
 	if log_command("in_conversation"):
 		return
 	with open("text_files/in_conversation") as message_file:
-		conversation_bool = message_file.read().strip() == "True"
-	return conversation_bool
+		conversation_bool = message_file.read().strip()
+	return conversation_bool == "True"
 
 def log_message(message, sender):
 	if log_command("log_message"):
@@ -957,14 +948,16 @@ def log_message(message, sender):
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")
+	with open("text_files/errors", "a") as error_list:
+		error_list.write(f"{name}:{time_stamp}\n")
 	with open("text_files/errors") as error_file:
 		errors = error_file.readlines()
 	if len(errors) >=40:
-			errors = errors[30:]
+		errors = errors[30:]
 	elif len(errors)>=10:
 		errors=errors[10:]
 	elif len(errors)>=5:
-			errors = errors[5:]
+		errors = errors[5:]
 	if len(errors) >5 and errors.count(errors[0])==len(errors):
 		with open("text_files/cancel") as cancel_file:
 			cancels = cancel_file.readlines()
@@ -972,9 +965,6 @@ def error_report(name):
 		cancels = list(set(cancels))
 		with open("text_files/cancel", "w") as cancel_file:
 			cancel_file.writelines(cancels)
-	else:
-		with open("text_files/errors", "a") as error_list:
-			error_list.write(f"{name}:{time_stamp}\n")
 
 def get_weather(data="full"):
 	try:
@@ -1035,9 +1025,7 @@ def formatted_weather():
 	except:
 		error_report("formatted_weather")
 		return "error"
-	message = ""
-	message += f"Temperature - {temp}°\n"
-	message += f"Conditions - {conditions}\n"
+	message = f"Temperature - {temp}°\nConditions - {conditions}\n"
 	if 62 <dewpoint<69:
 		message += "Humidity - Above Average\n"
 	elif 69<=dewpoint:
@@ -1065,10 +1053,9 @@ def uncancel(name):
 	with open("text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
 	name += "\n"
-	if name in cancels:
-		cancels.remove(name)
-	else:
+	if not (name in cancels):
 		return
+	cancels.remove(name)
 	with open("text_files/cancel", "w") as cancel_file:
 		cancel_file.writelines(cancels)
 
@@ -1080,13 +1067,13 @@ def get_quote(scan=None):
 	if "" in quote_list:
 		quote_list.remove("")
 	message = ""
-	if scan is None:
+	if not scan:
 		quote = quote_list[0]
 	else:
 		keyword_quotes = [i for i in quote_list if scan in i]
 		message += f"Total Number of Quotes: {len(quote_list)}\n"
 		message += f"Number of Matching Quotes: {len(keyword_quotes)}\n"
-		if len(keyword_quotes) == 0:
+		if not keyword_quotes:
 			return "No matching quotes"
 		random.shuffle(keyword_quotes)
 		while keyword_quotes[0] in used_quotes:
@@ -1161,8 +1148,7 @@ def create_graph(x, y, data_type, plot_attributes):
 		plt.plot(x, avg)
 	if show_regression_line:
 		slope, intercept, r, p, std_err = stats.linregress(x, y)
-		def slope_func(x):
-			return slope * x + intercept
+		slope_func = lambda x: slope * x + intercept
 		regression_line = list(map(slope_func, x))
 		plt.plot(x, regression_line, color="#3b3b3b")
 	year_position, year = [], []
@@ -1207,11 +1193,10 @@ def format_artist(artist_dict):
 	return artist_dict
 
 def format_track(song, track_num):
+	added = None
 	if "added_at" in song.keys():
 		added = song["added_at"]
 		song = dict(song["track"])
-	else:
-		added = None
 	song["added_at"] = added
 	song["formatted_name"] = format_song_name(song["name"])
 	try:
@@ -1225,10 +1210,6 @@ def format_track(song, track_num):
 	song["album"]["artists"] = [
 		format_artist(i) for i in song["album"]["artists"]]
 	song["artists"] = [format_artist(i) for i in song["artists"]]
-	try:
-		song["available_markets"]
-	except KeyError:
-		pass
 	del song["external_ids"]
 	del song["external_urls"]
 	del song["href"]
@@ -1240,11 +1221,10 @@ def format_track(song, track_num):
 	return song
 
 def format_podcast(podcast):
+	added = None
 	if "added_at" in podcast.keys():
 		added = podcast["added_at"]
 		podcast = dict(podcast["episode"])
-	else:
-		added = None
 	podcast["added_at"] = added
 	del podcast["audio_preview_url"]
 	del podcast["external_urls"]
@@ -1291,7 +1271,6 @@ def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len)
 	return data_list
 
 def get_all_songs(sp):
-	strt = time.time()
 	max_request = 50
 	raw_data = dict(sp.current_user_saved_tracks(
 		limit=max_request, market="US", offset=0))
@@ -1346,21 +1325,25 @@ def read_spotify_data():
 	return data
 
 def duration_graph_organization(data, bars_per_graph):
+	if log_command("duration_graph_organization"):
+		return
 	maxes, durations = [], []
 	shortest = {data[0]["duration_ms"]: data[0]["formatted_name"]}
 	for i in data:
 		duration = i["duration_ms"]
+		durations.append(duration)
 		if len(maxes) < bars_per_graph:
 			maxes.append({duration: i["formatted_name"]})
 		maxes_min = min([list(i.keys())[0] for i in maxes])
-		if duration > maxes_min:
-			for j in range(len(maxes)):
-				if list(maxes[j].keys())[0] == maxes_min:
-					maxes[j] = {duration: i["formatted_name"]}
-					break
+		if duration >= list(shortest.keys())[0] and duration <= maxes_min:
+			continue
 		if duration < list(shortest.keys())[0]:
 			shortest = {duration: i["formatted_name"]}
-		durations.append(duration)
+			continue
+		for j in range(len(maxes)):
+			if list(maxes[j].keys())[0] == maxes_min:
+				maxes[j] = {duration: i["formatted_name"]}
+				break
 	avg_track = round(np.mean(a=durations)/1000)
 	maxes.sort(key=lambda x: list(x.keys())[0], reverse=True)
 	longest = round(int(list(maxes[0].keys())[0])/1000)
@@ -1409,7 +1392,7 @@ def get_explicits(data):
 			explicits["Clean"] += 1
 		else:
 			explicits["Unknown"] += 1
-	if explicits["Unknown"] == 0:
+	if not explicits["Unknown"]:
 		del explicits["Unknown"]
 	return explicits
 
@@ -1510,10 +1493,10 @@ def num_suffix(num):
 	return "th"
 
 def on_start():
+	threading.Thread(target=clean).start()
+	threading.Thread(target=event_loop, daemon=True).start()
 	set_in_conversation(False)
 	end_workout(True)
-	threading.Thread(target=clean).start()
-	threading.Thread(target=event_loop).start()
 
 
 def event_loop():
@@ -1538,8 +1521,8 @@ def event_loop():
 		time.sleep(5)
 
 
-# threading.Thread(target=on_start).start()
-# print("\nBot: Hello! How may I help you today?")
-# print("User:", end=" ")
-# while True:
-# 	hook(input())
+threading.Thread(target=on_start).start()
+print("\nBot: Hello! How may I help you today?")
+print("User:", end=" ")
+while True:
+	hook(input())

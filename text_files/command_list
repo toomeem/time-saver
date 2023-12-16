@@ -8899,3 +8899,9 @@ bday
 bday_famousbirthdays
 bday
 bday_famousbirthdays
+in_conversation
+log_message
+gpt_request
+send_song_duration_graph
+log_message
+delete_file

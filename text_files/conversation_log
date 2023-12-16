@@ -2787,3 +2787,5 @@ evan: send me a graph of my top artists on spotify
 script: Here are your top artists.
 evan: send me a graph of my top artists
 script: Here are your top artists.
+evan: send me a graph of the duration of my spotify songs
+script: Here are your longest songs.
