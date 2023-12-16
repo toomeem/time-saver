@@ -22,13 +22,14 @@ import requests
 from spotipy import Spotify
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-# from flask import Flask, request
+from flask import Flask, request
 from PIL import Image
 from scipy import stats
 from spotipy import SpotifyOAuth
 
 load_dotenv()
 
+app = Flask(__name__)
 port = 5000
 dpi = 500
 cloudinary_cloud_name = os.getenv("CLOUDINARY_CLOUD_NAME")
@@ -37,6 +38,8 @@ cloudinary_api_secret = os.getenv("CLOUDINARY_API_SECRET")
 spotify_client_id = os.getenv("SPOTIFY_CLIENT_ID")
 spotify_client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
 openai_api_key = os.getenv("OPENAI_API_KEY")
+telegram_api_key = os.getenv("TELEGRAM_API_KEY")
+telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
 gpt_model = "gpt-3.5-turbo"
 tz = pytz.timezone("America/New_York")
 http_request_header = {
@@ -60,7 +63,6 @@ gpt_header = {
 	"Content-Type": "application/json",
 	"Authorization": "Bearer " + str(openai_api_key),
 	}
-
 plot_attributes = {
 	"weight": {
 		"grid": "y",
@@ -75,29 +77,28 @@ plot_attributes = {
 		"bulk/cut_dates": {"2023/1/29": "bulk", "2023/8/22": "bulk", "2023/6/6": "cut"}
 	}
 }
-
 gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
-
-
 exercise_list = list(json.load(open("text_files/exercises.json")))
+
 
 def message_user(body, media_url=None):
 	if not body:
 		return
 	try:
 		log_message(body, "script")
-		print(f"Bot: {body}")
+		api_url = f"https://api.telegram.org/bot{telegram_api_key}/"
+		method = "sendMessage"
 		if media_url:
-			im = Image.open(media_url)
-			im.show()
-		print("User:", end=" ")
-		# message = client.messages.create(body=body, from_=bot_num, to=my_num, media_url=media_url)
+			method = "sendPhoto"
+			response = requests.get(api_url+method, params={"chat_id": telegram_chat_id, "photo":media_url})
+			time.sleep(.2)
+		response = requests.get(api_url+method, params={"chat_id": telegram_chat_id, "text":body})
 	except:
 		pass
 
-
-def hook(message):
-	# message = dict(request.values)["Body"].lower().strip()
+@app.route("/", methods=["GET","POST"])
+def hook():
+	message = request.json["message"]["text"]
 	if in_conversation():
 		log_response(message)
 		return "200"
@@ -246,11 +247,11 @@ def send_weight_graph(plot_attributes):
 	x = [int(i[0]) for i in data]
 	y = [float(i[1]) for i in data]
 	create_graph(x, y, "weight", plot_attributes)
-	# graph_url = cloudinary.uploader.upload(
-	# 	"weight.png",
-	# 	public_id="weight_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here is your weight graph", "weight.png")
+	graph_url = cloudinary.uploader.upload(
+		"weight.png",
+		public_id="weight_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here is your weight graph", graph_url)
 	delete_file("weight.png")
 
 def update_spotify_data():
@@ -303,11 +304,11 @@ def send_artist_graph():
 	plt.xlabel("Number of Liked Songs")
 	plt.barh(popular_artists[::-1], artist_uses[::-1])
 	plt.savefig("artist_graph.png")
-	# graph_url = cloudinary.uploader.upload(
-	# 	"artist_graph.png",
-	# 	public_id="artist_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here are your top artists.", "artist_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"artist_graph.png",
+		public_id="artist_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here are your top artists.", graph_url)
 	delete_file("artist_graph.png")
 
 def send_song_duration_graph():
@@ -324,11 +325,11 @@ def send_song_duration_graph():
 	plt.xlabel("Song Duration (minutes)")
 	plt.barh(duration_names, duration_values)
 	plt.savefig("song_duration_graph.png")
-	# graph_url = cloudinary.uploader.upload(
-	# 	"song_duration_graph.png",
-	# 	public_id="song_duration_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here are your longest songs.", "song_duration_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"song_duration_graph.png",
+		public_id="song_duration_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here are your longest songs.", graph_url)
 	delete_file("song_duration_graph.png")
 
 def send_genre_graph():
@@ -341,11 +342,11 @@ def send_genre_graph():
 	plt.xlabel("Number of Liked Genres")
 	plt.barh(popular_genres[::-1], genres_uses[::-1])
 	plt.savefig("genre_graph.png")
-	# graph_url = cloudinary.uploader.upload(
-	# 	"genre_graph.png",
-	# 	public_id="genre_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here are your top genres.", "genre_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"genre_graph.png",
+		public_id="genre_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here are your top genres.", graph_url)
 	delete_file("genre_graph.png")
 
 def send_explicit_graph():
@@ -358,11 +359,11 @@ def send_explicit_graph():
 	plt.pie(x=explicits.values(), labels=list(explicits.keys()), radius=1.3,
 					autopct=lambda pct: auto_pct(pct, list(explicits.values())),)
 	plt.savefig("explicit_graph.png")
-	# graph_url = cloudinary.uploader.upload(
-	# 	"explicit_graph.png",
-	# 	public_id="explicit_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here is the ratio of explicit songs in your library.", "explicit_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"explicit_graph.png",
+		public_id="explicit_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here is the ratio of explicit songs in your library.", graph_url)
 	delete_file("explicit_graph.png")
 
 def send_covers_graph():
@@ -375,11 +376,11 @@ def send_covers_graph():
 	plt.pie(x=[len(data)-cover_num, cover_num], labels=["Original Songs", "Covers"], pctdistance=.85,
 					autopct=lambda pct: auto_pct(pct, [len(data)-cover_num, cover_num]))
 	plt.savefig("covers_graph.png")
-	# graph_url = cloudinary.uploader.upload(
-	# 	"covers_graph.png",
-	# 	public_id="covers_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here is the ratio of covers in your library.", "covers_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"covers_graph.png",
+		public_id="covers_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here is the ratio of covers in your library.", graph_url)
 	delete_file("covers_graph.png")
 
 def send_decade_graph():
@@ -392,11 +393,11 @@ def send_decade_graph():
 	plt.pie(x=release_nums, labels=release_decades, autopct=lambda pct: auto_pct(pct, release_nums),
 					pctdistance=.85, labeldistance=1.05)
 	plt.savefig("decade_graph.png")
-	# graph_url = cloudinary.uploader.upload(
-	# 	"decade_graph.png",
-	# 	public_id="decade_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here are the decades your songs were released in.", "decade_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"decade_graph.png",
+		public_id="decade_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here are the decades your songs were released in.", graph_url)
 	delete_file("decade_graph.png")
 
 def send_episode_graph():
@@ -409,11 +410,11 @@ def send_episode_graph():
 	plt.pie(x=shows.values(), labels=list(shows.keys()),
 					autopct=lambda pct: auto_pct(pct, list(shows.values())))
 	plt.savefig("episode_graph.png")
-	# graph_url = cloudinary.uploader.upload(
-	# 	"episode_graph.png",
-	# 	public_id="episode_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here are the podcasts you listen to.", "episode_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"episode_graph.png",
+		public_id="episode_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here are the podcasts you listen to.", graph_url)
 	delete_file("episode_graph.png")
 
 def send_podcast_runtime_graph():
@@ -426,11 +427,11 @@ def send_podcast_runtime_graph():
 	plt.pie(x=show_duration_dict.values(), labels=list(show_duration_dict.keys()),
 					autopct=lambda pct: auto_pct(pct, list(show_duration_dict.values())))
 	plt.savefig("podcast_runtime_graph.png")
-	# graph_url = cloudinary.uploader.upload(
-	# 	"podcast_runtime_graph.png",
-	# 	public_id="podcast_runtime_graph",
-	# 	overwrite=True)["secure_url"]
-	message_user("Here are the podcasts you listen to.", "podcast_runtime_graph.png")
+	graph_url = cloudinary.uploader.upload(
+		"podcast_runtime_graph.png",
+		public_id="podcast_runtime_graph",
+		overwrite=True)["secure_url"]
+	message_user("Here are the podcasts you listen to.", graph_url)
 	delete_file("podcast_runtime_graph.png")
 
 def start_workout(all_exercises):
@@ -1167,8 +1168,7 @@ def create_graph(x, y, data_type, plot_attributes):
 	plt.xlabel(plot_attributes["xlabel"])
 	plt.ylabel(plot_attributes["ylabel"])
 	plt.legend(["Eating like shit", "Bulk", "Cut"])
-	plt.show()
-	# plt.savefig(plot_attributes["filename"], dpi=dpi)
+	plt.savefig(plot_attributes["filename"], dpi=dpi)
 
 # start of spotify functions
 
@@ -1521,8 +1521,6 @@ def event_loop():
 		time.sleep(5)
 
 
-threading.Thread(target=on_start).start()
-print("\nBot: Hello! How may I help you today?")
-print("User:", end=" ")
-while True:
-	hook(input())
+# threading.Thread(target=on_start).start()
+if __name__ == "__main__":
+	app.run(debug=True)

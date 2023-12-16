@@ -2789,3 +2789,17 @@ evan: send me a graph of my top artists
 script: Here are your top artists.
 evan: send me a graph of the duration of my spotify songs
 script: Here are your longest songs.
+evan: send me a graph of my top artists
+script: Here are your top artists.
+evan: what time is it in london right now
+script: It is currently 07:31 PM in London.
+evan: send me a graph of my top artists on spotify
+script: Here are your top artists.
+evan: send me a graph of my spotify artists
+script: Here are your top artists.
+evan: send me a graph of my spotify data
+script: Here are your top artists.
+evan: send me a graph of my spotify artists
+script: Here are your top artists.
+evan: send me a graph of my weight
+script: Here is your weight graph

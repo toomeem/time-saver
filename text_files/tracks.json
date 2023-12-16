@@ -2,6 +2,276 @@
   "data": [
     {
       "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "70gP6Ry4Uo0Yx6uzPIdaiJ",
+            "name": "Bas",
+            "type": "artist"
+          }
+        ],
+        "id": "6sDQacCej53Q43vZF9PJ8i",
+        "is_playable": true,
+        "name": "Milky Way",
+        "release_date": "2018-08-24",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "type": "album"
+      },
+      "artists": [
+        {
+          "id": "70gP6Ry4Uo0Yx6uzPIdaiJ",
+          "name": "Bas",
+          "type": "artist"
+        },
+        {
+          "id": "6l3HvQ5sa6mXTsMTB19rO5",
+          "name": "J. Cole",
+          "type": "artist"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 238053,
+      "explicit": true,
+      "id": "0YAQnYt2oB8OdoaeqnHyTI",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Tribe (with J. Cole)",
+      "popularity": 68,
+      "track_number": 3548,
+      "type": "track",
+      "added_at": "2023-12-16T17:13:45Z",
+      "formatted_name": "Tribe",
+      "artist_num": 2,
+      "album_track_number": 3
+    },
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "id": "7c0XG5cIJTrrAgEC3ULPiq",
+            "name": "Ty Dolla $ign",
+            "type": "artist"
+          }
+        ],
+        "id": "5tcLbrane4ipoQy0liSuNH",
+        "is_playable": true,
+        "name": "Purple Emoji (feat. J. Cole)",
+        "release_date": "2019-05-20",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album"
+      },
+      "artists": [
+        {
+          "id": "7c0XG5cIJTrrAgEC3ULPiq",
+          "name": "Ty Dolla $ign",
+          "type": "artist"
+        },
+        {
+          "id": "6l3HvQ5sa6mXTsMTB19rO5",
+          "name": "J. Cole",
+          "type": "artist"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 163754,
+      "explicit": false,
+      "id": "3OJ4LEE50iFELaHiZ09zif",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Purple Emoji (feat. J. Cole)",
+      "popularity": 57,
+      "track_number": 3547,
+      "type": "track",
+      "added_at": "2023-12-16T17:12:25Z",
+      "formatted_name": "Purple Emoji",
+      "artist_num": 2,
+      "album_track_number": 1
+    },
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "id": "6C1ohJrd5VydigQtaGy5Wa",
+            "name": "Joyner Lucas",
+            "type": "artist"
+          },
+          {
+            "id": "6l3HvQ5sa6mXTsMTB19rO5",
+            "name": "J. Cole",
+            "type": "artist"
+          }
+        ],
+        "id": "1VKFaHoIvkZTzsSRad2jDZ",
+        "is_playable": true,
+        "name": "Your Heart",
+        "release_date": "2021-09-24",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album"
+      },
+      "artists": [
+        {
+          "id": "6C1ohJrd5VydigQtaGy5Wa",
+          "name": "Joyner Lucas",
+          "type": "artist"
+        },
+        {
+          "id": "6l3HvQ5sa6mXTsMTB19rO5",
+          "name": "J. Cole",
+          "type": "artist"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 198620,
+      "explicit": true,
+      "id": "2DTpP3caqX3QdJIEoS83mD",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Your Heart",
+      "popularity": 68,
+      "track_number": 3546,
+      "type": "track",
+      "added_at": "2023-12-16T17:12:06Z",
+      "formatted_name": "Your Heart",
+      "artist_num": 2,
+      "album_track_number": 1
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "4DdkRBBYG6Yk9Ka8tdJ9BW",
+            "name": "Offset",
+            "type": "artist"
+          }
+        ],
+        "id": "6bPpXqJRpjwy0hLyUGtzYc",
+        "is_playable": true,
+        "name": "FATHER OF 4",
+        "release_date": "2019-02-22",
+        "release_date_precision": "day",
+        "total_tracks": 16,
+        "type": "album"
+      },
+      "artists": [
+        {
+          "id": "4DdkRBBYG6Yk9Ka8tdJ9BW",
+          "name": "Offset",
+          "type": "artist"
+        },
+        {
+          "id": "6l3HvQ5sa6mXTsMTB19rO5",
+          "name": "J. Cole",
+          "type": "artist"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 276794,
+      "explicit": true,
+      "id": "32iPykTXUNZ9oGyACGUybq",
+      "is_local": false,
+      "is_playable": true,
+      "name": "How Did I Get Here (feat. J. Cole)",
+      "popularity": 55,
+      "track_number": 3545,
+      "type": "track",
+      "added_at": "2023-12-16T17:11:59Z",
+      "formatted_name": "How Did I Get Here",
+      "artist_num": 2,
+      "album_track_number": 2
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "4LG4Bs1Gadht7TCrMytQUO",
+            "name": "The Shins",
+            "type": "artist"
+          }
+        ],
+        "id": "5XmhHMj5LZLWo32aA6ntKE",
+        "is_playable": true,
+        "name": "Oh, Inverted World (20th Anniversary Remaster)",
+        "release_date": "2001-06-19",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album"
+      },
+      "artists": [
+        {
+          "id": "4LG4Bs1Gadht7TCrMytQUO",
+          "name": "The Shins",
+          "type": "artist"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 230866,
+      "explicit": false,
+      "id": "0NslHuacjxQYfUTOW3HCIV",
+      "is_local": false,
+      "is_playable": true,
+      "name": "New Slang - 2021 Remaster",
+      "popularity": 76,
+      "track_number": 3544,
+      "type": "track",
+      "added_at": "2023-12-16T16:59:45Z",
+      "formatted_name": "New Slang",
+      "artist_num": 1,
+      "album_track_number": 6
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "id": "0hCNtLu0JehylgoiP8L4Gh",
+            "name": "Nicki Minaj",
+            "type": "artist"
+          }
+        ],
+        "id": "2bYCNZfxZrTUv1CHXkz2d2",
+        "is_playable": true,
+        "name": "Pink Friday 2",
+        "release_date": "2023-12-08",
+        "release_date_precision": "day",
+        "total_tracks": 22,
+        "type": "album"
+      },
+      "artists": [
+        {
+          "id": "0hCNtLu0JehylgoiP8L4Gh",
+          "name": "Nicki Minaj",
+          "type": "artist"
+        },
+        {
+          "id": "1RyvyyTE3xzB2ZywiAwp0i",
+          "name": "Future",
+          "type": "artist"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 264347,
+      "explicit": true,
+      "id": "0EUi22tHkqKsZqohlRemto",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Nicki Hendrix (feat. Future)",
+      "popularity": 74,
+      "track_number": 3543,
+      "type": "track",
+      "added_at": "2023-12-16T16:55:24Z",
+      "formatted_name": "Nicki Hendrix",
+      "artist_num": 2,
+      "album_track_number": 19
+    },
+    {
+      "album": {
         "album_type": "single",
         "artists": [
           {
@@ -32,7 +302,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "The General",
-      "popularity": 64,
+      "popularity": 65,
       "track_number": 3542,
       "type": "track",
       "added_at": "2023-12-15T16:08:58Z",
@@ -242,7 +512,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Mony Mony - Downtown Mix / Remastered 2001",
-      "popularity": 61,
+      "popularity": 62,
       "track_number": 3537,
       "type": "track",
       "added_at": "2023-12-14T07:32:21Z",
@@ -1883,56 +2153,6 @@
           "type": "artist"
         },
         {
-          "id": "7pbDxGE6nQSZVfiFdq9lOL",
-          "name": "Rex Orange County",
-          "type": "artist"
-        },
-        {
-          "id": "1mSJCvDX0W7Dn7S9C6vmvI",
-          "name": "Anna of the North",
-          "type": "artist"
-        }
-      ],
-      "disc_number": 1,
-      "duration_ms": 320720,
-      "explicit": true,
-      "id": "5WNYg3usc6H8N3MBEp4zVk",
-      "is_local": false,
-      "is_playable": true,
-      "name": "Boredom (feat. Rex Orange County & Anna of the North)",
-      "popularity": 71,
-      "track_number": 3498,
-      "type": "track",
-      "added_at": "2023-12-09T23:22:11Z",
-      "formatted_name": "Boredom",
-      "artist_num": 3,
-      "album_track_number": 8
-    },
-    {
-      "album": {
-        "album_type": "album",
-        "artists": [
-          {
-            "id": "4V8LLVI7PbaPR0K2TGSxFF",
-            "name": "Tyler, The Creator",
-            "type": "artist"
-          }
-        ],
-        "id": "2nkto6YNI4rUYTLqEwWJ3o",
-        "is_playable": true,
-        "name": "Flower Boy",
-        "release_date": "2017-07-21",
-        "release_date_precision": "day",
-        "total_tracks": 14,
-        "type": "album"
-      },
-      "artists": [
-        {
-          "id": "4V8LLVI7PbaPR0K2TGSxFF",
-          "name": "Tyler, The Creator",
-          "type": "artist"
-        },
-        {
           "id": "5T0MSzX9RC5NA6gAI6irSn",
           "name": "Estelle",
           "type": "artist"
@@ -1945,7 +2165,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Garden Shed (feat. Estelle)",
-      "popularity": 66,
+      "popularity": 67,
       "track_number": 3497,
       "type": "track",
       "added_at": "2023-12-09T23:18:38Z",
@@ -2127,6 +2347,56 @@
       "formatted_name": "Jungle",
       "artist_num": 1,
       "album_track_number": 16
+    },
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "id": "2y8Jo9CKhJvtfeKOsYzRdT",
+            "name": "Rod Stewart",
+            "type": "artist"
+          },
+          {
+            "id": "6eLbRJP12OhyvUv4ntto4e",
+            "name": "Jools Holland",
+            "type": "artist"
+          }
+        ],
+        "id": "0Nh59ZpVKxw8TM7nHNEOYk",
+        "is_playable": true,
+        "name": "Almost Like Being in Love",
+        "release_date": "2023-12-05",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album"
+      },
+      "artists": [
+        {
+          "id": "2y8Jo9CKhJvtfeKOsYzRdT",
+          "name": "Rod Stewart",
+          "type": "artist"
+        },
+        {
+          "id": "6eLbRJP12OhyvUv4ntto4e",
+          "name": "Jools Holland",
+          "type": "artist"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 159680,
+      "explicit": false,
+      "id": "3qizV4OtxenPpgi4GIGR2U",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Almost Like Being in Love",
+      "popularity": 52,
+      "track_number": 3492,
+      "type": "track",
+      "added_at": "2023-12-08T09:20:04Z",
+      "formatted_name": "Almost Like Being in Love",
+      "artist_num": 2,
+      "album_track_number": 1
     },
     {
       "album": {
@@ -4140,7 +4410,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Jodeci Freestyle (feat. J. Cole)",
-      "popularity": 55,
+      "popularity": 56,
       "track_number": 3442,
       "type": "track",
       "added_at": "2023-11-20T21:41:42Z",
@@ -4690,7 +4960,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Playing God",
-      "popularity": 68,
+      "popularity": 69,
       "track_number": 3429,
       "type": "track",
       "added_at": "2023-11-20T21:00:18Z",
@@ -4944,7 +5214,7 @@
         "uri": "spotify:track:4t8tx6o7oM6Ax66ZUU361y"
       },
       "name": "I\u2019ll Have to Say I Love You in a Song",
-      "popularity": 63,
+      "popularity": 64,
       "track_number": 3423,
       "type": "track",
       "added_at": "2023-11-19T09:15:05Z",
@@ -5418,7 +5688,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "AT THE PARTY (feat. Pharrell Williams & Travis Scott)",
-      "popularity": 59,
+      "popularity": 58,
       "track_number": 3412,
       "type": "track",
       "added_at": "2023-11-18T07:41:05Z",
@@ -6658,7 +6928,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Who's Gonna Hear Their Wish?",
-      "popularity": 46,
+      "popularity": 47,
       "track_number": 3382,
       "type": "track",
       "added_at": "2023-11-18T02:20:08Z",
@@ -6698,7 +6968,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Longthorne Freestyle",
-      "popularity": 49,
+      "popularity": 50,
       "track_number": 3381,
       "type": "track",
       "added_at": "2023-11-18T02:18:17Z",
@@ -6783,7 +7053,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "NFL",
-      "popularity": 68,
+      "popularity": 67,
       "track_number": 3379,
       "type": "track",
       "added_at": "2023-11-18T02:13:43Z",
@@ -6833,7 +7103,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Presha (with Lil Wayne)",
-      "popularity": 50,
+      "popularity": 49,
       "track_number": 3378,
       "type": "track",
       "added_at": "2023-11-18T02:13:38Z",
@@ -6873,7 +7143,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Mirror",
-      "popularity": 42,
+      "popularity": 41,
       "track_number": 3377,
       "type": "track",
       "added_at": "2023-11-18T01:53:13Z",
@@ -6963,7 +7233,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Call Me Revenge - Call of Duty: Modern Warfare 3",
-      "popularity": 73,
+      "popularity": 72,
       "track_number": 3375,
       "type": "track",
       "added_at": "2023-11-18T01:50:38Z",
@@ -8092,7 +8362,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Come Home (feat. Andr\u00e9 3000)",
-      "popularity": 59,
+      "popularity": 58,
       "track_number": 3348,
       "type": "track",
       "added_at": "2023-11-13T15:03:38Z",
@@ -10794,7 +11064,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Wild Irish Roses",
-      "popularity": 69,
+      "popularity": 68,
       "track_number": 3288,
       "type": "track",
       "added_at": "2023-10-25T00:39:00Z",
@@ -11979,7 +12249,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Angelz [Feat. Karriem Riggins]",
-      "popularity": 50,
+      "popularity": 51,
       "track_number": 3261,
       "type": "track",
       "added_at": "2023-10-20T19:18:04Z",
@@ -12074,7 +12344,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Hood Gone Love It (feat. Kendrick Lamar)",
-      "popularity": 70,
+      "popularity": 71,
       "track_number": 3259,
       "type": "track",
       "added_at": "2023-10-20T19:02:45Z",
@@ -12644,7 +12914,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Why You're Here (And I'm Not)",
-      "popularity": 21,
+      "popularity": 22,
       "track_number": 3245,
       "type": "track",
       "added_at": "2023-10-20T06:41:52Z",
@@ -13188,7 +13458,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Happiness is a butterfly",
-      "popularity": 80,
+      "popularity": 79,
       "track_number": 3232,
       "type": "track",
       "added_at": "2023-10-20T05:39:35Z",
@@ -13513,7 +13783,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Inclination Compass (Tenderness)",
-      "popularity": 60,
+      "popularity": 59,
       "track_number": 3224,
       "type": "track",
       "added_at": "2023-10-20T05:02:47Z",
@@ -13553,7 +13823,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Can\u2019t Go Back",
-      "popularity": 58,
+      "popularity": 57,
       "track_number": 3223,
       "type": "track",
       "added_at": "2023-10-20T05:02:31Z",
@@ -14773,7 +15043,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Sweepstakes (feat. Mos Def and Hypnotic Brass Ensemble)",
-      "popularity": 48,
+      "popularity": 49,
       "track_number": 3194,
       "type": "track",
       "added_at": "2023-10-17T05:38:07Z",
@@ -17496,7 +17766,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Another Late Night (feat. Lil Yachty)",
-      "popularity": 78,
+      "popularity": 77,
       "track_number": 3130,
       "type": "track",
       "added_at": "2023-10-09T03:19:07Z",
@@ -17756,7 +18026,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "All The Parties (feat. Chief Keef)",
-      "popularity": 76,
+      "popularity": 75,
       "track_number": 3124,
       "type": "track",
       "added_at": "2023-10-09T02:27:53Z",
@@ -19214,7 +19484,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Rollin Stone",
-      "popularity": 17,
+      "popularity": 18,
       "track_number": 3089,
       "type": "track",
       "added_at": "2023-09-26T05:12:46Z",
@@ -20262,7 +20532,7 @@
         "uri": "spotify:track:1yxgsra98r3qAtxqiGZPiX"
       },
       "name": "BUTTERFLY EFFECT",
-      "popularity": 83,
+      "popularity": 84,
       "track_number": 3065,
       "type": "track",
       "added_at": "2023-09-26T01:16:55Z",
@@ -20382,7 +20652,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "News Flash",
-      "popularity": 51,
+      "popularity": 52,
       "track_number": 3062,
       "type": "track",
       "added_at": "2023-09-26T01:16:43Z",
@@ -25488,7 +25758,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "PUPPET",
-      "popularity": 69,
+      "popularity": 70,
       "track_number": 2943,
       "type": "track",
       "added_at": "2023-08-28T03:33:11Z",
@@ -26008,7 +26278,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Low Lights",
-      "popularity": 60,
+      "popularity": 61,
       "track_number": 2930,
       "type": "track",
       "added_at": "2023-08-26T03:35:05Z",
@@ -29195,7 +29465,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Robbery",
-      "popularity": 82,
+      "popularity": 83,
       "track_number": 2853,
       "type": "track",
       "added_at": "2023-08-09T19:56:00Z",
@@ -30005,7 +30275,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Blood On The Leaves",
-      "popularity": 67,
+      "popularity": 68,
       "track_number": 2835,
       "type": "track",
       "added_at": "2023-08-09T07:12:00Z",
@@ -30615,7 +30885,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Jukebox Joints (feat. Joe Fox & Kanye West)",
-      "popularity": 75,
+      "popularity": 76,
       "track_number": 2822,
       "type": "track",
       "added_at": "2023-08-07T05:58:24Z",
@@ -32434,7 +32704,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Carry On",
-      "popularity": 60,
+      "popularity": 61,
       "track_number": 2781,
       "type": "track",
       "added_at": "2023-08-06T21:07:08Z",
@@ -34522,7 +34792,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "HiiiPower",
-      "popularity": 69,
+      "popularity": 70,
       "track_number": 2732,
       "type": "track",
       "added_at": "2023-08-03T05:21:30Z",
@@ -38697,7 +38967,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Sirius",
-      "popularity": 68,
+      "popularity": 69,
       "track_number": 2633,
       "type": "track",
       "added_at": "2023-07-25T06:18:16Z",
@@ -48758,7 +49028,7 @@
         "uri": "spotify:track:2ASuMUhd9FFGKoEXbARpWH"
       },
       "name": "Rap Niggas",
-      "popularity": 53,
+      "popularity": 54,
       "track_number": 2403,
       "type": "track",
       "added_at": "2023-06-05T04:41:08Z",
@@ -48807,7 +49077,7 @@
         "uri": "spotify:track:7ya7Gr1dMpPIa4zXM6M5bd"
       },
       "name": "Big Stepper",
-      "popularity": 61,
+      "popularity": 62,
       "track_number": 2402,
       "type": "track",
       "added_at": "2023-06-05T04:38:36Z",
@@ -48856,7 +49126,7 @@
         "uri": "spotify:track:3lHh3EJvE0BMD7L3Kxvu5d"
       },
       "name": "Mr.Trouble",
-      "popularity": 59,
+      "popularity": 61,
       "track_number": 2401,
       "type": "track",
       "added_at": "2023-06-05T04:38:27Z",
@@ -54488,7 +54758,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Annie's Song",
-      "popularity": 73,
+      "popularity": 72,
       "track_number": 2275,
       "type": "track",
       "added_at": "2023-04-25T02:45:21Z",
@@ -55315,7 +55585,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Crazy On You",
-      "popularity": 73,
+      "popularity": 72,
       "track_number": 2256,
       "type": "track",
       "added_at": "2023-04-23T06:30:17Z",
@@ -56277,7 +56547,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Bad Company - 2015 Remaster",
-      "popularity": 65,
+      "popularity": 66,
       "track_number": 2234,
       "type": "track",
       "added_at": "2023-04-18T20:02:47Z",
@@ -56397,7 +56667,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "mr. sunshine",
-      "popularity": 57,
+      "popularity": 56,
       "track_number": 2231,
       "type": "track",
       "added_at": "2023-04-11T21:43:21Z",
@@ -57052,7 +57322,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "ROCKSTAR P",
-      "popularity": 54,
+      "popularity": 55,
       "track_number": 2215,
       "type": "track",
       "added_at": "2023-04-05T02:20:57Z",
@@ -58305,7 +58575,7 @@
         "uri": "spotify:track:1FJrsh1NbV9eRw5JQt3M4e"
       },
       "name": "Twenty Eight",
-      "popularity": 59,
+      "popularity": 60,
       "track_number": 2186,
       "type": "track",
       "added_at": "2023-04-02T03:32:13Z",
@@ -62375,7 +62645,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "The Last Thing on My Mind",
-      "popularity": 28,
+      "popularity": 27,
       "track_number": 2090,
       "type": "track",
       "added_at": "2023-02-21T21:05:05Z",
@@ -62795,7 +63065,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Raindrops (Insane) [with Travis Scott]",
-      "popularity": 79,
+      "popularity": 80,
       "track_number": 2081,
       "type": "track",
       "added_at": "2023-02-21T16:14:03Z",
@@ -65621,7 +65891,7 @@
         "uri": "spotify:track:5tBOUuobgWkSoGEBPjB56E"
       },
       "name": "New Day",
-      "popularity": 53,
+      "popularity": 54,
       "track_number": 2016,
       "type": "track",
       "added_at": "2023-02-07T14:30:25Z",
@@ -66306,7 +66576,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Russian Cream",
-      "popularity": 77,
+      "popularity": 76,
       "track_number": 1999,
       "type": "track",
       "added_at": "2023-01-31T15:33:03Z",
@@ -70854,7 +71124,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "L.A.",
-      "popularity": 52,
+      "popularity": 51,
       "track_number": 1890,
       "type": "track",
       "added_at": "2023-01-17T03:03:54Z",
@@ -71643,7 +71913,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Dance With The Devil",
-      "popularity": 69,
+      "popularity": 70,
       "track_number": 1871,
       "type": "track",
       "added_at": "2023-01-12T21:19:40Z",
@@ -71772,7 +72042,7 @@
         "uri": "spotify:track:6oV5zsbz9V2nZ79PYam9yC"
       },
       "name": "Shotta Flow 2",
-      "popularity": 61,
+      "popularity": 62,
       "track_number": 1868,
       "type": "track",
       "added_at": "2023-01-12T19:24:53Z",
@@ -73590,7 +73860,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Style",
-      "popularity": 79,
+      "popularity": 78,
       "track_number": 1824,
       "type": "track",
       "added_at": "2022-12-19T04:07:43Z",
@@ -78653,7 +78923,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "We Only Come Out At Night - Remastered 2012",
-      "popularity": 43,
+      "popularity": 42,
       "track_number": 1704,
       "type": "track",
       "added_at": "2022-10-26T03:38:45Z",
@@ -79707,7 +79977,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "It Ain't Over 'Til It's Over",
-      "popularity": 77,
+      "popularity": 76,
       "track_number": 1678,
       "type": "track",
       "added_at": "2022-10-11T01:06:31Z",
@@ -80212,7 +80482,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Everyday (feat. Rod Stewart, Miguel & Mark Ronson)",
-      "popularity": 78,
+      "popularity": 79,
       "track_number": 1666,
       "type": "track",
       "added_at": "2022-10-02T22:36:05Z",
@@ -82104,7 +82374,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Brown Eyed Girl",
-      "popularity": 45,
+      "popularity": 44,
       "track_number": 1621,
       "type": "track",
       "added_at": "2022-09-14T14:15:22Z",
@@ -85011,7 +85281,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Season of the Witch",
-      "popularity": 63,
+      "popularity": 62,
       "track_number": 1552,
       "type": "track",
       "added_at": "2022-08-15T06:12:45Z",
@@ -86751,7 +87021,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Moonlight Sonata (First Movement from Piano Sonata No. 14, Op. 27 No. 2)",
-      "popularity": 57,
+      "popularity": 58,
       "track_number": 1510,
       "type": "track",
       "added_at": "2022-08-08T20:08:21Z",
@@ -87227,7 +87497,7 @@
         "uri": "spotify:track:0cTwMCvozZBj8jCq6o27nk"
       },
       "name": "Come Dancing",
-      "popularity": 49,
+      "popularity": 50,
       "track_number": 1499,
       "type": "track",
       "added_at": "2022-08-08T17:46:31Z",
@@ -89576,7 +89846,7 @@
         "uri": "spotify:track:4qSk2aeaE2dh5ZOP0JdaV3"
       },
       "name": "Waterloo Sunset",
-      "popularity": 62,
+      "popularity": 63,
       "track_number": 1443,
       "type": "track",
       "added_at": "2022-07-16T22:48:05Z",
@@ -89781,7 +90051,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Nothin' but a 'G' Thang (Originally Performed By Dr. Dre feat. Snoop Dogg) [Instrumental Version]",
-      "popularity": 30,
+      "popularity": 29,
       "track_number": 1438,
       "type": "track",
       "added_at": "2022-07-16T22:15:29Z",
@@ -91862,7 +92132,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Hold My Hand",
-      "popularity": 64,
+      "popularity": 63,
       "track_number": 1388,
       "type": "track",
       "added_at": "2022-06-26T21:25:50Z",
@@ -92582,7 +92852,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "The Book Of Love",
-      "popularity": 44,
+      "popularity": 45,
       "track_number": 1370,
       "type": "track",
       "added_at": "2022-06-09T20:51:15Z",
@@ -92862,7 +93132,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Good Golly, Miss Molly",
-      "popularity": 37,
+      "popularity": 36,
       "track_number": 1363,
       "type": "track",
       "added_at": "2022-06-06T04:30:08Z",
@@ -94763,7 +95033,7 @@
         "uri": "spotify:track:20r0ATpabmn3POnSNXnUJ2"
       },
       "name": "Puttin' on the Ritz",
-      "popularity": 64,
+      "popularity": 63,
       "track_number": 1317,
       "type": "track",
       "added_at": "2022-05-14T05:31:47Z",
@@ -95794,7 +96064,7 @@
         "uri": "spotify:track:5yrsBzgHkfu2idkl2ILQis"
       },
       "name": "You Don't Mess Around with Jim",
-      "popularity": 60,
+      "popularity": 61,
       "track_number": 1293,
       "type": "track",
       "added_at": "2022-05-06T19:48:24Z",
@@ -96581,7 +96851,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "No Hard Feelings",
-      "popularity": 56,
+      "popularity": 55,
       "track_number": 1274,
       "type": "track",
       "added_at": "2022-04-29T13:14:31Z",
@@ -97688,7 +97958,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "We Are The World",
-      "popularity": 69,
+      "popularity": 70,
       "track_number": 1247,
       "type": "track",
       "added_at": "2022-04-22T18:32:54Z",
@@ -98960,7 +99230,7 @@
         "uri": "spotify:track:4UrgDocbHywDZv2f3mBhCq"
       },
       "name": "I'd Do Anything For Love (But I Won't Do That)",
-      "popularity": 44,
+      "popularity": 45,
       "track_number": 1216,
       "type": "track",
       "added_at": "2022-04-20T12:49:50Z",
@@ -102372,10 +102642,13 @@
           }
         ],
         "id": "3kdp1PnxkKlshMP3qG2CUG",
-        "is_playable": true,
+        "is_playable": false,
         "name": "Cruisin'",
         "release_date": "1978",
         "release_date_precision": "year",
+        "restrictions": {
+          "reason": "market"
+        },
         "total_tracks": 6,
         "type": "album"
       },
@@ -103662,7 +103935,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Panama - 2015 Remaster",
-      "popularity": 76,
+      "popularity": 77,
       "track_number": 1103,
       "type": "track",
       "added_at": "2022-02-27T05:30:48Z",
@@ -107104,7 +107377,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Ride Wit Me",
-      "popularity": 78,
+      "popularity": 79,
       "track_number": 1020,
       "type": "track",
       "added_at": "2022-01-15T03:46:19Z",
@@ -108294,7 +108567,7 @@
         "uri": "spotify:track:3YnqEDXU7djXRkQmPENU3G"
       },
       "name": "Rockin' All Over The World",
-      "popularity": 46,
+      "popularity": 47,
       "track_number": 992,
       "type": "track",
       "added_at": "2022-01-03T13:36:57Z",
@@ -109457,7 +109730,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Brown Eyed Girl",
-      "popularity": 83,
+      "popularity": 82,
       "track_number": 965,
       "type": "track",
       "added_at": "2021-12-21T05:27:20Z",
@@ -109945,7 +110218,7 @@
         "uri": "spotify:track:5IK2FtuC0qmHHam9sWFxUI"
       },
       "name": "Who's Crying Now (2022 Remaster)",
-      "popularity": 53,
+      "popularity": 54,
       "track_number": 954,
       "type": "track",
       "added_at": "2021-12-17T12:31:57Z",
@@ -114379,7 +114652,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Apache",
-      "popularity": 50,
+      "popularity": 51,
       "track_number": 847,
       "type": "track",
       "added_at": "2021-10-05T18:14:11Z",
@@ -114588,7 +114861,7 @@
         "uri": "spotify:track:0hGQ36LokYcYHbEeLB1sYP"
       },
       "name": "Nightswimming",
-      "popularity": 64,
+      "popularity": 63,
       "track_number": 842,
       "type": "track",
       "added_at": "2021-10-01T01:33:06Z",
@@ -117711,7 +117984,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Convoy",
-      "popularity": 61,
+      "popularity": 62,
       "track_number": 766,
       "type": "track",
       "added_at": "2021-08-02T05:30:52Z",
@@ -118511,7 +118784,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Turn! Turn! Turn!",
-      "popularity": 32,
+      "popularity": 31,
       "track_number": 747,
       "type": "track",
       "added_at": "2021-07-21T20:56:33Z",
@@ -121208,7 +121481,7 @@
         "uri": "spotify:track:5w4jBDFePf19XrftHEXSZ5"
       },
       "name": "Better Things (Single Version)",
-      "popularity": 29,
+      "popularity": 30,
       "track_number": 682,
       "type": "track",
       "added_at": "2021-06-13T02:20:18Z",
@@ -121488,7 +121761,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Back In The High Life Again",
-      "popularity": 57,
+      "popularity": 56,
       "track_number": 675,
       "type": "track",
       "added_at": "2021-06-09T20:54:47Z",
@@ -124176,7 +124449,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Bullet With Butterfly Wings - Remastered 2012",
-      "popularity": 76,
+      "popularity": 77,
       "track_number": 611,
       "type": "track",
       "added_at": "2021-05-07T03:42:56Z",
@@ -124425,7 +124698,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Bring Me To Life",
-      "popularity": 87,
+      "popularity": 86,
       "track_number": 605,
       "type": "track",
       "added_at": "2021-05-01T21:34:19Z",
@@ -124914,7 +125187,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "All The Small Things",
-      "popularity": 85,
+      "popularity": 84,
       "track_number": 593,
       "type": "track",
       "added_at": "2021-04-19T17:24:40Z",
@@ -126125,7 +126398,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Life's Been Good",
-      "popularity": 67,
+      "popularity": 68,
       "track_number": 564,
       "type": "track",
       "added_at": "2021-04-09T12:28:53Z",
@@ -126205,7 +126478,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Bennie And The Jets - Remastered 2014",
-      "popularity": 76,
+      "popularity": 75,
       "track_number": 562,
       "type": "track",
       "added_at": "2021-04-09T03:12:12Z",
@@ -126504,7 +126777,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Forever Young",
-      "popularity": 61,
+      "popularity": 60,
       "track_number": 555,
       "type": "track",
       "added_at": "2021-04-02T19:01:08Z",
@@ -129793,7 +130066,7 @@
         "uri": "spotify:track:4bHsxqR3GMrXTxEPLuK5ue"
       },
       "name": "Don't Stop Believin' (2022 Remaster)",
-      "popularity": 73,
+      "popularity": 74,
       "track_number": 477,
       "type": "track",
       "added_at": "2021-01-09T18:29:39Z",
@@ -129913,7 +130186,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Me and Bobby McGee",
-      "popularity": 72,
+      "popularity": 71,
       "track_number": 474,
       "type": "track",
       "added_at": "2021-01-09T18:27:56Z",
@@ -132724,7 +132997,7 @@
         "uri": "spotify:track:2xYlyywNgefLCRDG8hlxZq"
       },
       "name": "Take Me Home, Country Roads",
-      "popularity": 77,
+      "popularity": 76,
       "track_number": 407,
       "type": "track",
       "added_at": "2020-12-07T18:18:40Z",
@@ -133403,13 +133676,10 @@
           }
         ],
         "id": "63k57x0qOkUWEMR0dkMivh",
-        "is_playable": false,
+        "is_playable": true,
         "name": "Rumours",
         "release_date": "1977-02-04",
         "release_date_precision": "day",
-        "restrictions": {
-          "reason": "market"
-        },
         "total_tracks": 11,
         "type": "album"
       },
@@ -134134,7 +134404,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Ghostbusters",
-      "popularity": 72,
+      "popularity": 71,
       "track_number": 374,
       "type": "track",
       "added_at": "2020-11-22T21:55:56Z",
@@ -139421,7 +139691,7 @@
         "uri": "spotify:track:0gzqZ9d1jIKo9psEIthwXe"
       },
       "name": "Beautiful Day",
-      "popularity": 68,
+      "popularity": 67,
       "track_number": 247,
       "type": "track",
       "added_at": "2020-07-17T20:27:36Z",
@@ -141616,7 +141886,7 @@
       "id": "43GS3mtezoIFiuIZCLLiDY",
       "is_local": false,
       "is_playable": true,
-      "name": "Every Rose Has Its Thorn - Remastered 2003",
+      "name": "Every Rose Has Its Thorn - 2003 Remaster",
       "popularity": 73,
       "track_number": 195,
       "type": "track",
@@ -142053,7 +142323,7 @@
         "uri": "spotify:track:1O0xeZrBDbq7HPREdmYUYK"
       },
       "name": "Bad, Bad Leroy Brown",
-      "popularity": 64,
+      "popularity": 65,
       "track_number": 185,
       "type": "track",
       "added_at": "2020-07-17T20:24:39Z",
@@ -142934,7 +143204,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Takin' Care Of Business",
-      "popularity": 66,
+      "popularity": 67,
       "track_number": 164,
       "type": "track",
       "added_at": "2020-07-17T20:24:10Z",
@@ -144176,7 +144446,7 @@
         "uri": "spotify:track:7KmRz1oKEwgj9qpfn72OfO"
       },
       "name": "Can't Buy Me Love - Remastered 2009",
-      "popularity": 69,
+      "popularity": 68,
       "track_number": 134,
       "type": "track",
       "added_at": "2020-07-17T20:23:24Z",
@@ -147712,7 +147982,7 @@
         "uri": "spotify:track:7GhIk7Il098yCjg4BQjzvb"
       },
       "name": "Never Gonna Give You Up",
-      "popularity": 78,
+      "popularity": 79,
       "track_number": 48,
       "type": "track",
       "added_at": "2020-07-17T20:21:02Z",
@@ -149530,7 +149800,7 @@
       "is_local": false,
       "is_playable": true,
       "name": "Runnin' Down A Dream",
-      "popularity": 49,
+      "popularity": 48,
       "track_number": 3,
       "type": "track",
       "added_at": "2020-06-19T14:37:22Z",
