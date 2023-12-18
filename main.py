@@ -20,13 +20,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pytz
 import requests
-from spotipy import Spotify
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from flask import Flask, request
-from PIL import Image
 from scipy import stats
-from spotipy import SpotifyOAuth
+from spotipy import Spotify, SpotifyOAuth
 
 load_dotenv()
 
@@ -92,9 +90,9 @@ def message_user(body, media_url=None):
 		method = "sendMessage"
 		if media_url:
 			method = "sendPhoto"
-			response = requests.get(api_url+method, params={"chat_id": telegram_chat_id, "photo":media_url})
+			requests.get(api_url+method, params={"chat_id": telegram_chat_id, "photo":media_url})
 			time.sleep(.2)
-		response = requests.get(api_url+method, params={"chat_id": telegram_chat_id, "text":body})
+		requests.get(api_url+method, params={"chat_id": telegram_chat_id, "text":body})
 	except:
 		pass
 
@@ -709,7 +707,7 @@ def get_time(args):
 def get_todays_word():
 	if log_command("get_todays_word"):
 		return
-	url = f"https://www.dictionary.com/"
+	url = "https://www.dictionary.com/"
 	page = requests.get(url, headers=http_request_header)
 	soup = BeautifulSoup(page.content, "html.parser")
 	element = soup.find_all("a", class_="hJCqtPGYwMx5z04f6y2o")
@@ -795,7 +793,7 @@ def one_rep_max(reps, weight):
 def is_first_set(num):
 	with open("text_files/current_workout") as workout_file:
 		exercises = dict(json.load(workout_file))["exercises"]
-	return not search_exercises(num) in list(exercises.keys())
+	return search_exercises(num) not in list(exercises.keys())
 
 def min_sec(total_seconds):
 	minutes = int(total_seconds//60)
@@ -934,7 +932,7 @@ def get_response(question=None, wait_time=300, confirmation=None):
 			time.sleep(.5)
 			continue
 		set_in_conversation(False)
-		if confirmation != None:
+		if not confirmation:
 			message_user(confirmation)
 		if response.lower() == "pass":
 			return
@@ -1090,7 +1088,7 @@ def uncancel(name):
 	with open("text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
 	name += "\n"
-	if not (name in cancels):
+	if name not in cancels:
 		return
 	cancels.remove(name)
 	with open("text_files/cancel", "w") as cancel_file:
@@ -1155,6 +1153,9 @@ def closest_num(num, lst):
 			closest = i
 	return closest
 
+def slope(m , x, b):
+	return m*x+b
+
 def create_graph(x, y, data_type, plot_attributes):
 	plot_attributes = plot_attributes[data_type]
 	show_points = plot_attributes["show_points"]
@@ -1185,8 +1186,7 @@ def create_graph(x, y, data_type, plot_attributes):
 		plt.plot(x, avg)
 	if show_regression_line:
 		slope, intercept, r, p, std_err = stats.linregress(x, y)
-		slope_func = lambda x: slope * x + intercept
-		regression_line = list(map(slope_func, x))
+		regression_line = list(map(slope, slope, x, intercept))
 		plt.plot(x, regression_line, color="#3b3b3b")
 	year_position, year = [], []
 	for i in range(int(rn("%y"))-21+1):
@@ -1299,8 +1299,8 @@ def requests_per_thread_func(thread_count, playlist_len, max_request):
 
 def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len):
 	data_list = []
-	for request in range(requests_per_thread[thread_num]):
-		offset = (sum(requests_per_thread[:thread_num])+request+1)*max_request+1
+	for i in range(requests_per_thread[thread_num]):
+		offset = (sum(requests_per_thread[:thread_num])+i+1)*max_request+1
 		raw_data = dict(sp.current_user_saved_tracks(
 			limit=50, market="US", offset=offset))["items"]
 		data_list.extend([format_track(raw_data[i], playlist_len-(offset+i)-1) for i in range(len(raw_data))])

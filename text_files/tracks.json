@@ -5,6 +5,46 @@
         "album_type": "album",
         "artists": [
           {
+            "id": "1HY2Jd0NmPuamShAr6KMms",
+            "name": "Lady Gaga",
+            "type": "artist"
+          }
+        ],
+        "id": "1jpUMnKpRlng1OJN7LJauV",
+        "is_playable": true,
+        "name": "The Fame",
+        "release_date": "2008-01-01",
+        "release_date_precision": "day",
+        "total_tracks": 15,
+        "type": "album"
+      },
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga",
+          "type": "artist"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 208306,
+      "explicit": false,
+      "id": "7Hqig8kp32q2Ire3ECQvWM",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Paparazzi",
+      "popularity": 75,
+      "track_number": 3564,
+      "type": "track",
+      "added_at": "2023-12-18T15:45:29Z",
+      "formatted_name": "Paparazzi",
+      "artist_num": 1,
+      "album_track_number": 3
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
             "id": "5SXuuuRpukkTvsLuUknva1",
             "name": "Baby Keem",
             "type": "artist"
@@ -2149,40 +2189,40 @@
         "album_type": "album",
         "artists": [
           {
-            "id": "5mxB08ktCukEhGMg2YZeEv",
-            "name": "Colin Hay",
+            "id": "45TgXXqMDdF8BkjA83OM7z",
+            "name": "Rod Wave",
             "type": "artist"
           }
         ],
-        "id": "6ooDMq5QxVHFeMootZ7D7m",
+        "id": "7m3LlqH5j3aGBaJ6M6anIm",
         "is_playable": true,
-        "name": "Transcendental Highway",
-        "release_date": "2009-04-21",
+        "name": "PTSD",
+        "release_date": "2019-06-14",
         "release_date_precision": "day",
-        "total_tracks": 13,
+        "total_tracks": 12,
         "type": "album"
       },
       "artists": [
         {
-          "id": "5mxB08ktCukEhGMg2YZeEv",
-          "name": "Colin Hay",
+          "id": "45TgXXqMDdF8BkjA83OM7z",
+          "name": "Rod Wave",
           "type": "artist"
         }
       ],
       "disc_number": 1,
-      "duration_ms": 328560,
-      "explicit": false,
-      "id": "2IR01O6kw4IB68hcV9FWYN",
+      "duration_ms": 159669,
+      "explicit": true,
+      "id": "591ks2A0o7ratTpiRdI7M6",
       "is_local": false,
       "is_playable": true,
-      "name": "I Just Don't Think I'll Ever Get Over You",
-      "popularity": 48,
-      "track_number": 3514,
+      "name": "Heart On Ice",
+      "popularity": 74,
+      "track_number": 3513,
       "type": "track",
-      "added_at": "2023-12-14T01:36:30Z",
-      "formatted_name": "I Just Don't Think I'll Ever Get Over You",
+      "added_at": "2023-12-14T01:36:25Z",
+      "formatted_name": "Heart On Ice",
       "artist_num": 1,
-      "album_track_number": 12
+      "album_track_number": 4
     },
     {
       "album": {
