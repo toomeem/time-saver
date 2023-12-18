@@ -2803,3 +2803,16 @@ evan: send me a graph of my spotify artists
 script: Here are your top artists.
 evan: send me a graph of my weight
 script: Here is your weight graph
+script: <function morning_message at 0x000002332A0D3400>
+script: Good Morning!
+Today is Sunday, December 17th
+Brentford plays at Aston Villa today!
+Here's today's weather:
+	Temperature - 46°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 8.00 mi
+script: Here's today's quote:
+script: To this day, I've found that it doesn't matter what a guy looks like if he's really funny. His sense of humor makes him attractive. On the other hand, you don't hear men saying, 'No she's not pretty, but is she ever funny!'
+

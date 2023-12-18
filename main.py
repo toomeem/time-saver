@@ -13,6 +13,7 @@ import time
 from collections import Counter
 from datetime import date, datetime
 from pprint import pprint
+from statistics import mean
 
 import cloudinary.uploader
 import matplotlib.pyplot as plt
@@ -40,6 +41,7 @@ spotify_client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
 openai_api_key = os.getenv("OPENAI_API_KEY")
 telegram_api_key = os.getenv("TELEGRAM_API_KEY")
 telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
+suggestion_playlist_id = os.getenv("SUGGESTION_PLAYLIST_ID")
 gpt_model = "gpt-3.5-turbo"
 tz = pytz.timezone("America/New_York")
 http_request_header = {
@@ -260,7 +262,7 @@ def update_spotify_data():
 	threading.Thread(target=get_genres, args=(spotify_client,)).start()
 	threading.Thread(target=podcasts, args=(spotify_client,)).start()
 	get_all_songs(spotify_client)
-	clear_suggestions_playlist(spotify_client)
+	clear_suggestions_playlist(spotify_client, suggestion_playlist_id)
 
 def spotify_data_description():
 	data = read_spotify_data()
@@ -544,6 +546,36 @@ def commands():
 	message_user(message)
 
 
+def set_max(set):
+	if log_command("set_max"):
+		return
+	reps = mean(set["reps"])
+	weight = mean(set["weight"])
+	return one_rep_max(reps, weight)
+
+def exercise_maxes():
+	if log_command("exercise_maxes"):
+		return
+	try:
+		with open("text_files/workout_log") as f:
+			workouts = list(json.load(f))
+	except:
+		return None
+	exercise_maxes = {}
+	for workout in workouts:
+		for name in workout["exercises"].keys():
+			if name in exercise_maxes.keys():
+				exercise_maxes[name][workout["start"]] = set_max(workout["exercises"][name])
+			else:
+				exercise_maxes[name] = {workout["start"]: set_max(workout["exercises"][name])}
+	return exercise_maxes
+
+def get_exercise_log():
+	if log_command("get_exercise_log"):
+		return
+	with open("text_files/workout_log") as workout_file:
+		workout_log = list(json.load(workout_file))
+	return workout_log
 
 def search_tracks(id):
 	if log_command("search_tracks"):
@@ -559,8 +591,7 @@ def search_tracks(id):
 			return track
 	return False
 
-def clear_suggestions_playlist(sp):
-	playlist_id = "3fLihqliQSQqnSU9Jj48Xf"
+def clear_suggestions_playlist(sp, playlist_id):
 	limit = 100
 	playlist = dict(sp.playlist(playlist_id))["tracks"]
 	if not int(playlist["total"]):
@@ -756,10 +787,9 @@ def brentford_plays_today():
 			return i.strip().split(":")[1]
 	return False
 
-def one_rep_max(reps, weight, rpe=10):
+def one_rep_max(reps, weight):
 	if log_command("one_rep_max"):
 		return
-	reps += 10-abs(rpe)
 	return round(weight/(1.0278-(0.0278*reps)))
 
 def is_first_set(num):
@@ -804,7 +834,7 @@ def search_exercises(num):
 def log_set(exercise_num, first=False):
 	if log_command("log_set"):
 		return
-	reps, weight, rpe = None, None, None
+	reps, weight = None, None
 	while not isinstance(reps, int):
 		try:
 			reps = int(get_response("How many reps did you do?", 600))
@@ -815,24 +845,18 @@ def log_set(exercise_num, first=False):
 			weight = float(get_response("How much weight did you use?", 600))
 		except:
 			pass
-	while not isinstance(rpe, float):
-		try:
-			rpe = float(get_response("What was the RPE?", 600))
-		except:
-			pass
 	name = search_exercises(exercise_num)
-	if name or reps or weight or rpe:
+	if not (name and reps and weight):
 		end_workout()
 		return
 	with open("text_files/current_workout") as workout_file:
 		workout_dict = dict(json.load(workout_file))
 	if first:
-		workout_dict["exercises"][name] = {"sets": 1, "reps": [reps], "weight": [weight], "rpe": [rpe]}
+		workout_dict["exercises"][name] = {"sets": 1, "reps": [reps], "weight": [weight]}
 	else:
 		workout_dict["exercises"][name]["sets"] += 1
 		workout_dict["exercises"][name]["reps"].append(reps)
 		workout_dict["exercises"][name]["weight"].append(weight)
-		workout_dict["exercises"][name]["rpe"].append(rpe)
 	with open("text_files/current_workout", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
 
@@ -966,6 +990,18 @@ def error_report(name):
 		cancels = list(set(cancels))
 		with open("text_files/cancel", "w") as cancel_file:
 			cancel_file.writelines(cancels)
+
+def num_suffix(num):
+	num = str(int(num))
+	if len(num) > 2:
+		num = num[len(num)-2:]
+	if num in ["1", "21","31"]:
+		return "st"
+	if num in ["2","22","32"]:
+		return "nd"
+	if num in ["3","23","33"]:
+		return "rd"
+	return "th"
 
 def get_weather(data="full"):
 	try:
@@ -1479,48 +1515,5 @@ def get_show_durations(data):
 
 # end of spotify functions
 
-
-def num_suffix(num):
-	num = str(int(num))
-	if len(num) > 2:
-		num = num[len(num)-2:]
-	if num in ["1", "21","31"]:
-		return "st"
-	if num in ["2","22","32"]:
-		return "nd"
-	if num in ["3","23","33"]:
-		return "rd"
-	return "th"
-
-def on_start():
-	threading.Thread(target=clean).start()
-	threading.Thread(target=event_loop, daemon=True).start()
-	set_in_conversation(False)
-	end_workout(True)
-
-
-def event_loop():
-	event_id = str(time.time())
-	with open("text_files/event_id", "w") as event_id_file:
-		event_id_file.write(event_id)
-	while True:
-		if rn() == "08:30" and log_command("morning"):
-			time.sleep(60)
-		elif rn() == "08:30":
-			message_user(morning_message)
-			time.sleep(60)
-		elif rn() == "11:01" and log_command("morning quote"):
-			time.sleep(60)
-		elif rn() == "11:01":
-			message_user(f"Here's today's quote:")
-			time.sleep(1)
-			message_user(get_quote())
-			time.sleep(60)
-		elif rn() == "06:00": # daily operations
-			clean()
-		time.sleep(5)
-
-
-# threading.Thread(target=on_start).start()
 if __name__ == "__main__":
 	app.run(debug=True)
