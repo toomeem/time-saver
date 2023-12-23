@@ -27,7 +27,6 @@ from scipy import stats
 from spotipy import Spotify, SpotifyOAuth
 
 load_dotenv()
-
 app = Flask(__name__)
 port = 5000
 dpi = 500
@@ -471,35 +470,43 @@ def start_workout(all_exercises):
 	end_workout()
 
 def get_train_schedule(station_json):
-	station1 = station_json["station1"]
-	station2 = station_json["station2"]
-	with open("text_files/station_inputs") as f:
-		station_inputs = f.readlines()
+	station1 = station_json["starting station"]
+	station2 = station_json["destination station"]
+	with open("text_files/station_inputs.json") as f:
+		station_inputs = list(json.load(f).keys())
 	prompt = f'''Here is a list of train stations:\n
 	{station_inputs}\n
 	Which stations are these "{station1}" and "{station2}"?\n
-	Your answer will be in this format ["station1", "stations2"].
-	Only return that format, nothing else.
+	Your answer will be in this format ["first station", "second station"].
+	Only return that list format, nothing else.
+	Make sure to include the quotation marks.
 	'''
 	gpt_response = gpt_request(prompt)["choices"][0]
-	stations = eval(gpt_response["message"]["content"])
+	try:
+		stations = eval(gpt_response["message"]["content"])
+	except:
+		pprint(gpt_response["message"]["content"])
+		return
 	station1 = stations[0]
 	station2 = stations[1]
 	septa_headers = {'Accept': 'application/json'}
 	parameters = {'req1': station1, 'req2': station2}
-	response = requests.get(
+	septa_response = requests.get(
 		"https://www3.septa.org/api/NextToArrive/index.php",
 		params=parameters, headers=septa_headers).json()
-	if not response:
+	if not septa_response:
 		message_user("There are no upcoming trains between those stations.")
 		return
-	departure_time = response[0]["orig_departure_time"]
-	arrival_time = response[0]["orig_arrival_time"]
-	delay = response[0]["orig_delay"]
-	delay_str = ""
+	departure_time = septa_response[0]["orig_departure_time"][:-2]
+	arrival_time = septa_response[0]["orig_arrival_time"][:-2]
+	delay = septa_response[0]["orig_delay"]
+	price = get_train_price(septa_response[0], station1, station2)
+	message = f'''The next train from {station1} to {station2} leaves at {departure_time} and arrives at {arrival_time}.'''
 	if delay != "On time":
-		delay_str = f" with a delay of {delay}"
-	message_user(f'''The next train from {station1} to {station2} leaves at {departure_time} and arrives at {arrival_time}{delay_str}.''')
+		message += f"\nIt is currently delayed {delay}"
+	if price is not None:
+		message += f'''\nIt will cost ${"{:.2f}".format(price)}.'''
+	message_user(message)
 
 def desc():
 	if log_command("desc"):
@@ -543,6 +550,91 @@ def commands():
 	message += "\nI also have a few other surprises ;)"
 	message_user(message)
 
+
+
+def get_train_price(response, station1, station2):
+	if log_command("get_train_price"):
+		return
+	city_weekday = {
+		0: 3.75,
+		1: 3.75,
+		2: 4.75,
+		3: 5.75,
+		4: 6.50,
+		5: 8.25,
+	}
+	city_weekend = {
+		0: 3.75,
+		1: 3.75,
+		2: 4.25,
+		3: 5.25,
+		4: 5.25,
+		5: 8.25,
+	}
+	local_price = 3.75
+	extended_price = 6.5
+	airport_price = 6.5
+	airport_to_eastwick = 3.75
+	zone1 = get_station_zone(station1)
+	zone2 = get_station_zone(station2)
+	if "Terminal" in station1:
+		if station2 == "Eastwick Station":
+			return airport_to_eastwick
+		return airport_price
+	if "Terminal" in station2:
+		if station1 == "Eastwick Station":
+			return airport_to_eastwick
+		return airport_price
+	if response["isdirect"] == "false" and get_station_zone(response["Connection"]) == 0:
+		if zone1 != 0 and zone2 != 0:
+			return extended_price
+	if zone1>0 and zone2<0:
+		return extended_price
+	if zone1<0 and zone2>0:
+		return extended_price
+	if zone1<0 and zone2<0:
+		return local_price
+	if zone1>0 and zone2>0:
+		return local_price
+	now = datetime.now(tz)
+	departure = response["orig_departure_time"]
+	if now.weekday() < 5 and not is_septa_holiday():
+		if not ("PM" in departure and int(departure.split(":")[0]) >= 7):
+			if zone1 == 0:
+				return city_weekday[zone2]
+			return city_weekday[zone1]
+	if zone1 == 0:
+		return city_weekend[zone2]
+	return city_weekend[zone1]
+
+def get_station_zone(station):
+	with open("text_files/station_inputs.json") as f:
+		station_inputs = dict(json.load(f))
+	return int(station_inputs[station])
+
+def is_septa_holiday():
+	if log_command("is_septa_holiday"):
+		return
+	now = datetime.now(tz)
+	if rn("%m/%d") == "01/01": #New Year's Day
+		return True
+	if rn("%m/%d") == "07/04": #Independence Day
+		return True
+	if rn("%m/%d") == "12/25": #Christmas
+		return True
+	if now.weekday() == 0 and now.month == 5 and now.day >= 25: #Memorial Day
+		return True
+	if now.weekday() == 0 and now.month == 9 and now.day <= 7: #Labor Day
+		return True
+	if now.month == 11: #Thanksgiving
+		first = date(now.year, 11, 1)
+		thurs = 1 + (7 - (first.weekday() - 3))
+		if thurs > 7:
+			thurs -= 7
+		thurs += 21
+		if now.day == thurs:
+			return True
+	return False
 
 def set_max(set):
 	if log_command("set_max"):
@@ -1237,7 +1329,7 @@ def format_track(song, track_num):
 	song["formatted_name"] = format_song_name(song["name"])
 	try:
 		del song["album"]["available_markets"]
-	except KeyError:
+	except:
 		pass
 	del song["album"]["external_urls"]
 	del song["album"]["href"]
@@ -1299,31 +1391,46 @@ def requests_per_thread_func(thread_count, playlist_len, max_request):
 
 def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len):
 	data_list = []
-	for i in range(requests_per_thread[thread_num]):
-		offset = (sum(requests_per_thread[:thread_num])+i+1)*max_request+1
-		raw_data = dict(sp.current_user_saved_tracks(
-			limit=50, market="US", offset=offset))["items"]
-		data_list.extend([format_track(raw_data[i], playlist_len-(offset+i)-1) for i in range(len(raw_data))])
+	wait_time = 0
+	i = 0
+	while i < requests_per_thread[thread_num]:
+		try:
+			time.sleep(wait_time)
+			offset = (sum(requests_per_thread[:thread_num])+i+1)*max_request+1
+			raw_data = dict(sp.current_user_saved_tracks(
+				limit=50, market="US", offset=offset))["items"]
+			data_list.extend([format_track(raw_data[i], playlist_len-(offset+i)-1) for i in range(len(raw_data))])
+			i += 1
+		except:
+			error_report("get_song_data")
+			wait_time += 1
 	return data_list
 
 def get_all_songs(sp):
-	max_request = 50
-	raw_data = dict(sp.current_user_saved_tracks(
-		limit=max_request, market="US", offset=0))
-	playlist_len = int(raw_data["total"])
-	raw_data = raw_data["items"]
-	data_list = [format_track(raw_data[i], playlist_len-i-1) for i in range(len(raw_data))]
-	thread_count = 10
-	requests_per_thread = requests_per_thread_func(thread_count, playlist_len, max_request)
-	with concurrent.futures.ThreadPoolExecutor(max_workers=thread_count) as executor:
-		futures = [executor.submit(get_song_data,sp, thread_num, requests_per_thread, max_request, playlist_len) for thread_num in range(len(requests_per_thread))]
-		results = [futures.result() for futures in concurrent.futures.as_completed(futures)]
-	for i in results:
-		data_list.extend(i)
-	data_list.sort(key=lambda x: x["track_number"], reverse=True)
-	with open("text_files/tracks.json", "w") as data_file:
-		json.dump({"data": data_list}, data_file, indent=2)
-
+	if log_command("get_all_songs"):
+		return
+	try:
+		max_request = 50
+		raw_data = dict(sp.current_user_saved_tracks(
+			limit=max_request, market="US", offset=0))
+		playlist_len = int(raw_data["total"])
+		raw_data = raw_data["items"]
+		data_list = [format_track(raw_data[i], playlist_len-i-1) for i in range(len(raw_data))]
+		thread_count = 10
+		requests_per_thread = requests_per_thread_func(thread_count, playlist_len, max_request)
+		wait_time = 0
+		with concurrent.futures.ThreadPoolExecutor(max_workers=thread_count) as executor:
+			futures = [
+				executor.submit(get_song_data,sp, thread_num, requests_per_thread, max_request, playlist_len)
+				for thread_num in range(len(requests_per_thread))]
+			results = [futures.result() for futures in concurrent.futures.as_completed(futures)]
+		for i in results:
+			data_list.extend(i)
+		data_list.sort(key=lambda x: x["track_number"], reverse=True)
+		with open("text_files/tracks.json", "w") as data_file:
+			json.dump({"data": data_list}, data_file, indent=2)
+	except:
+		error_report("get_all_songs")
 def get_genres(spotify_client):
 	with open("text_files/tracks.json") as data_file:
 		data = dict(json.load(data_file))["data"]

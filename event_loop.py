@@ -1,5 +1,5 @@
 import time
-
+import threading
 from main import *
 
 
@@ -20,12 +20,14 @@ def event_loop():
 		elif rn() == "11:00" and log_command("morning quote"):
 			time.sleep(60)
 		elif rn() == "11:00":
-			message_user(f"Here's today's quote:")
+			message_user("Here's today's quote:")
 			time.sleep(1)
 			message_user(get_quote())
 			time.sleep(60)
-		elif rn("%M") == "00":
+		elif rn("%M") == "00" and not int(rn("%H")) % 6:
+			print(f"{rn()}:Cleaning...")
 			clean()
+			time.sleep(55)
 		time.sleep(5)
-
+print("\nRunning...")
 event_loop()

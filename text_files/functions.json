@@ -241,17 +241,17 @@
 	},
 	{
 		"name": "train",
-		"description": "check the next train times for the septa regional rail line",
+		"description": "This checks the next train times for the septa regional rail line between two stations. Be extremely careful not to mix up the start and the destination.",
 		"parameters":{
 			"type": "object",
 			"properties": {
-				"station1": {
+				"starting station": {
 					"type": "string",
 					"description": "the starting station"
 				},
-				"station2": {
+				"destination station": {
 					"type": "string",
-					"description": "the ending station"
+					"description": "the desination station"
 				}
 			}
 		}

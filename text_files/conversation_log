@@ -2818,3 +2818,145 @@ script: To this day, I've found that it doesn't matter what a guy looks like if 
 
 evan: send me a graph of my spotify artists
 script: Here are your top artists.
+script: Here's today's quote:
+script: If you look back, Mozart, Haydn and Beethoven were mixing music and humor all the time.
+
+script: Good Morning!
+Today is Wednesday, December 20th
+Here's today's weather:
+	Temperature - 31°
+	Conditions - Fair
+	Humidity - Average
+	Wind Speed - Negligible
+	Visibility - 10 mi
+script: Here's today's quote:
+script: Give a little love to a child, and you get a great deal back.
+
+script: Good Morning!
+Today is Thursday, December 21st
+Here's today's weather:
+	Temperature - 33°
+	Conditions - Partly Cloudy
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: The principal factors which influenced my life are 1) nonviolent tactics; 2) constitutional means; 3) democratic procedures; 4) respect for human personality; 5) a belief that all people are one.
+
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from 30th Street Station to Pennbrook leaves at 4:12PM and arrives at 5:04PM.
+evan: when’s the next train from 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 4:12PM and arrives at 5:04PM.
+script: Good Morning!
+Today is Friday, December 22nd
+Here's today's weather:
+	Temperature - 24°
+	Conditions - Mostly Cloudy
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: We know what we are, but know not what we may be.
+
+evan: when is the next train from pennbrook to 30th street
+script: The next train from Pennbrook to 30th Street Station leaves at 1:41PM and arrives at 2:39PM with a delay of 3 mins.
+evan: when is the next train from 30th street to pennbrook
+script: The next train from 30th Street Station to Pennbrook leaves at 2:04PM and arrives at 3:00PM.
+evan: when is the next train from elwyn to darby
+script: The next train from Elwyn Station to Darby leaves at 6:13PM and arrives at 6:52PM with a delay of 3 mins.
+evan: when is the next train from elwyn to darby
+script: The next train from Elwyn Station to Darby leaves at 7:13PM and arrives at 7:52PM.
+evan: when’s the next train from thorndale to eastwick
+evan: when’s the next train from thorndale to eastwick
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Eastwick Station to Thorndale leaves at 6:45PM and arrives at 7:00PM.
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 7:11PM and arrives at 8:15PM.
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 7:11PM and arrives at 8:15PM.
+script: Good Morning!
+Today is Saturday, December 23rd
+Here's today's weather:
+	Temperature - 31°
+	Conditions - Overcast
+	Humidity - Average
+	Wind Speed - Light Breeze
+	Visibility - 10 mi
+script: Here's today's quote:
+script: A desire to be in charge of our own lives, a need for control, is born in each of us. It is essential to our mental health, and our success, that we take control.
+
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from Pennbrook to 30th Street Station leaves at 12:59PM and arrives at 1:55PM.
+evan: copy
+script: Sure, I can help you with that. What would you like me to copy?
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from 30th Street Station to Pennbrook leaves at 1:38PM and arrives at 2:30PM.
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 2:31PM and arrives at 3:38PM.
+evan: when’s the next train from pennbrook to 30th street
+script: 
+		The next train from Pennbrook to 30th Street Station leaves at 3:59PM and arrives at 4:55PM.
+		
+It will cost $5.25.
+		
+evan: when’s the next train from thorndale to eastwick
+script: 
+		The next train from Eastwick Station to Thorndale leaves at 2:15PM and arrives at 2:30PM.
+		
+It will cost $3.75.
+		
+evan: when’s the next train from thorndale to eastwick
+script: 
+		The next train from Thorndale to Eastwick Station leaves at 2:31 and arrives at 3:38.
+		It will cost $3.75.
+		
+evan: when’s the next train from thorndale to eastwick
+script: 
+		The next train from Eastwick Station to Thorndale leaves at 3:15 and arrives at 3:30.
+		It will cost $3.75.
+		
+evan: when’s the next train from thorndale to eastwick
+script: 
+		The next train from Thorndale to Eastwick Station leaves at 2:31 and arrives at 3:38.
+		It will cost $6.5.
+		
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 2:31 and arrives at 3:38 with a delay of 1 min.
+It will cost $6.5.
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 6:31 and arrives at 7:38.
+It will cost $6.56.50.
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 6:31 and arrives at 7:38.
+It will cost $6.50.
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from 30th Street Station to Pennbrook leaves at 2:38 and arrives at 3:30 with a delay of 1 min.
+It will cost $5.25.
+evan: when’s the next train from thorndale to eastwick
+evan: when’s the next train from thorndale to eastwick
+evan: when’s the next train from thorndale to eastwick
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 6:31 and arrives at 7:38.
+It will cost $6.50.
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 6:31 and arrives at 7:38.
+It will cost $6.50.
+evan: when’s the next train from thorndale to eastwick
+script: The next train from Thorndale to Eastwick Station leaves at 6:31 and arrives at 7:38.
+It will cost $6.50.
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from 30th Street Station to Pennbrook leaves at 3:38 and arrives at 4:30.
+It is currently delayed 4 mins
+It will cost $5.25.
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from Pennbrook to 30th Street Station leaves at 3:59 and arrives at 4:55.
+It will cost $5.25.
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from Pennbrook to 30th Street Station leaves at 3:59 and arrives at 4:55.
+It will cost $5.25.
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from Pennbrook to 30th Street Station leaves at 3:59 and arrives at 4:55.
+It will cost $5.25.
+evan: when’s the next train from pennbrook to 30th street
+script: The next train from Pennbrook to 30th Street Station leaves at 3:59 and arrives at 4:55.
+It will cost $5.25.
