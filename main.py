@@ -101,7 +101,7 @@ def hook():
 	if in_conversation():
 		log_response(message)
 		return "200"
-	log_message(message, "evan")
+	log_message(message, "user")
 	response = gpt_request(message, function_call=True)
 	if not response:
 		message_user("Error\nPlease try again.")
@@ -470,8 +470,8 @@ def start_workout(all_exercises):
 	end_workout()
 
 def get_train_schedule(station_json):
-	station1 = station_json["starting station"]
-	station2 = station_json["destination station"]
+	station1 = station_json["starting station"].replace("Jefferson", "Market East")
+	station2 = station_json["destination station"].replace("Jefferson", "Market East")
 	with open("text_files/station_inputs.json") as f:
 		station_inputs = list(json.load(f).keys())
 	prompt = f'''Here is a list of train stations:\n
@@ -497,10 +497,17 @@ def get_train_schedule(station_json):
 	if not septa_response:
 		message_user("There are no upcoming trains between those stations.")
 		return
-	departure_time = septa_response[0]["orig_departure_time"][:-2]
-	arrival_time = septa_response[0]["orig_arrival_time"][:-2]
-	delay = septa_response[0]["orig_delay"]
+	try:
+		departure_time = septa_response[0]["orig_departure_time"][:-2]
+		arrival_time = septa_response[0]["orig_arrival_time"][:-2]
+		delay = septa_response[0]["orig_delay"]
+	except:
+		message_user("There are no upcoming trains between those stations.")
+		pprint(septa_response)
+		return
 	price = get_train_price(septa_response[0], station1, station2)
+	station1 = station1.replace("Market East", "Jefferson")
+	station2 = station2.replace("Market East", "Jefferson")
 	message = f'''The next train from {station1} to {station2} leaves at {departure_time} and arrives at {arrival_time}.'''
 	if delay != "On time":
 		message += f"\nIt is currently delayed {delay}"
@@ -998,7 +1005,7 @@ def clear_file(file_name):
 	file.close()
 
 def log_response(response):
-	log_message(response, "evan")
+	log_message(response, "user")
 	if log_command("log_response"):
 		return
 	with open("text_files/response", "w") as message_file:
@@ -1058,8 +1065,10 @@ def in_conversation():
 def log_message(message, sender):
 	if log_command("log_message"):
 		return
-	with open("text_files/conversation_log", "a") as message_file:
-		message_file.write(f"{sender}: {message}\n")
+	with open("text_files/conversation_log.json") as message_file:
+		log = list(json.load(message_file))
+	with open("text_files/conversation_log.json", "a") as message_file:
+		json.dump(log + [{"message": message, "sender": sender, "sent_at":time.time}], message_file, indent=2)
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")
