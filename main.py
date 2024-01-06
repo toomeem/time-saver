@@ -84,14 +84,14 @@ def message_user(body, media_url=None):
 	if not body:
 		return
 	try:
-		log_message(body, "script")
+		log_message(body, "script", image=bool(media_url))
 		api_url = f"https://api.telegram.org/bot{telegram_api_key}/"
 		method = "sendMessage"
+		requests.get(api_url+method, params={"chat_id": telegram_chat_id, "text":body})
 		if media_url:
 			method = "sendPhoto"
-			requests.get(api_url+method, params={"chat_id": telegram_chat_id, "photo":media_url})
 			time.sleep(.2)
-		requests.get(api_url+method, params={"chat_id": telegram_chat_id, "text":body})
+			requests.get(api_url+method, params={"chat_id": telegram_chat_id, "photo":media_url})
 	except:
 		pass
 
@@ -1062,13 +1062,17 @@ def in_conversation():
 		conversation_bool = message_file.read().strip()
 	return conversation_bool == "True"
 
-def log_message(message, sender):
+def log_message(message, sender, image=False):
 	if log_command("log_message"):
 		return
 	with open("text_files/conversation_log.json") as message_file:
 		log = list(json.load(message_file))
+	clear_file("text_files/conversation_log.json")
 	with open("text_files/conversation_log.json", "a") as message_file:
-		json.dump(log + [{"message": message, "sender": sender, "sent_at":time.time}], message_file, indent=2)
+		json.dump(
+			log + [{"message": message, "sender": sender, "sent_at":str(time.time()), "image": image}],
+			message_file, indent=2
+		)
 
 def error_report(name):
 	time_stamp = rn("%y/%m/%d/%H/%M/%S")
@@ -1355,6 +1359,26 @@ def format_track(song, track_num):
 	song["artist_num"] = len(song["artists"])
 	song["album_track_number"] = song["track_number"]
 	song["track_number"] = int(track_num)
+	for i in song["artists"]:
+		if i["name"] == "Andr\u00e9 Benjamin":
+			i["name"] = "Andr\u00e9 3000"
+		elif i["name"] in [
+			"King Geedorah", "MF Doom", "Viktor Vaughn", "Zev Love X", "Doom", "DOOM",
+			"Metal Fingers", "KMD", "JJ DOOM", "Danger Doom", "Madvillain",
+			]:
+			i["name"] = "MF DOOM"
+		elif i["name"] == "Passengers":
+			i["name"] = "U2"
+		elif i["name"] == "The Network":
+			i["name"] = "Green Day"
+		elif i["name"] == "Larry Lurex":
+			i["name"] = "Queen"
+		elif i["name"] == "Los Unidades":
+			i["name"] = "Coldplay"
+		elif i["name"] == "The Desert Sessions":
+			i["name"] = "Queens of the Stone Age"
+		elif i["name"] == "Chris Gaines":
+			i["name"] = "Garth Brooks"
 	return song
 
 def format_podcast(podcast):

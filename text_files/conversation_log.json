@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "message": "send me a graph of my top artists",
+    "sender": "user",
+    "sent_at": "1704503735.9568434",
+    "image": false
+  },
+  {
+    "message": "Here are your top artists.",
+    "sender": "script",
+    "sent_at": "1704503739.025151",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my top artists",
+    "sender": "user",
+    "sent_at": "1704503834.5037696",
+    "image": false
+  },
+  {
+    "message": "Here are your top artists.",
+    "sender": "script",
+    "sent_at": "1704503838.1478498",
+    "image": true
+  }
+]
