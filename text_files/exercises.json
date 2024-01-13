@@ -7,9 +7,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Legs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Legs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 2,
@@ -22,9 +25,12 @@
       "Hamstrings"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Legs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Legs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 3,
@@ -38,9 +44,12 @@
       "Forearms"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 4,
@@ -50,9 +59,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Legs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Legs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 5,
@@ -65,9 +77,12 @@
       "Lower Back"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Legs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Legs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 6,
@@ -77,9 +92,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Legs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Legs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 7,
@@ -89,9 +107,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Legs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Legs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 8,
@@ -101,9 +122,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Legs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Legs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 9,
@@ -118,9 +142,12 @@
       "Triceps"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Chest + Shoulders"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Chest + Shoulders"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 10,
@@ -134,9 +161,12 @@
       "Front Delts"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Chest + Shoulders"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Chest + Shoulders"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 11,
@@ -149,9 +179,12 @@
       "Triceps"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Chest + Shoulders"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Chest + Shoulders"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 12,
@@ -163,9 +196,12 @@
       "Traps"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Chest + Shoulders"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Chest + Shoulders"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 13,
@@ -177,9 +213,12 @@
       "Traps"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Chest + Shoulders"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Chest + Shoulders"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 14,
@@ -194,9 +233,12 @@
       "Triceps"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Chest + Shoulders"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Chest + Shoulders"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 15,
@@ -208,9 +250,12 @@
       "Upper Back"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Chest + Shoulders"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Chest + Shoulders"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 16,
@@ -222,9 +267,12 @@
       "Forearms"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Arms"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Arms"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 18,
@@ -236,9 +284,12 @@
       "Forearms"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Arms"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Arms"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 19,
@@ -248,9 +299,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Arms"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Arms"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 20,
@@ -262,9 +316,12 @@
       "Forearms"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Arms"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Arms"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 21,
@@ -277,9 +334,12 @@
       "Front Delts"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Arms"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Arms"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 22,
@@ -291,9 +351,12 @@
       "Biceps"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 23,
@@ -306,9 +369,12 @@
       "Lats"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 24,
@@ -321,9 +387,12 @@
       "Forearms"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 25,
@@ -335,9 +404,12 @@
       "Biceps"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 26,
@@ -347,9 +419,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Arms"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Arms"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 27,
@@ -361,9 +436,12 @@
       "Triceps"
     ],
     "muscle_group_importance": 2,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 28,
@@ -376,9 +454,12 @@
       "Neck"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 29,
@@ -391,9 +472,12 @@
       "Biceps"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 30,
@@ -406,9 +490,12 @@
       "Biceps"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 31,
@@ -418,9 +505,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 32,
@@ -430,9 +520,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 33,
@@ -443,9 +536,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 34,
@@ -457,9 +553,12 @@
       "Abs"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 35,
@@ -469,9 +568,12 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 36,
@@ -483,9 +585,12 @@
       "Hip Flexors"
     ],
     "muscle_group_importance": 1,
-    "exercise_day": [
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   },
   {
     "num": 37,
@@ -495,11 +600,14 @@
     ],
     "secondary_muscles": [],
     "muscle_group_importance": 1,
-    "exercise_day": [
-			"Legs",
-			"Chest + Shoulders",
-			"Arms",
-      "Back + Abs"
-    ]
+    "exercise_day": {
+      "bro_split": [
+        "Legs",
+        "Chest + Shoulders",
+        "Arms",
+        "Back + Abs"
+      ],
+      "ppl": []
+    }
   }
 ]

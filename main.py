@@ -25,6 +25,7 @@ from dotenv import load_dotenv
 from flask import Flask, request
 from scipy import stats
 from spotipy import Spotify, SpotifyOAuth
+from werkzeug.serving import run_simple
 
 load_dotenv()
 app = Flask(__name__)
@@ -76,9 +77,16 @@ plot_attributes = {
 		"bulk/cut_dates": {"2023/1/29": "bulk", "2023/8/22": "bulk", "2023/6/6": "cut"}
 	}
 }
-gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
+# gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
+gym_schedule = ["Legs", "Pull", "Push"]
 exercise_list = list(json.load(open("text_files/exercises.json")))
 
+
+def set_webhook_url(url="https://actual-immune-cub.ngrok-free.app/"):
+	api_url = f"https://api.telegram.org/bot{telegram_api_key}/"
+	method = "setWebhook"
+	response = requests.get(api_url+method, params={"url": url})
+	pprint(response.json())
 
 def message_user(body, media_url=None):
 	if not body:
@@ -94,6 +102,12 @@ def message_user(body, media_url=None):
 			requests.get(api_url+method, params={"chat_id": telegram_chat_id, "photo":media_url})
 	except:
 		pass
+
+@app.route("/websitehttps://actual-immune-cub.ngrok-free.app/website", methods=["GET"])
+def website_hook():
+	message = request
+	pprint(str(message))
+	return "Hello World!"
 
 @app.route("/", methods=["GET","POST"])
 def hook():
@@ -494,8 +508,10 @@ def get_train_schedule(station_json):
 	septa_response = requests.get(
 		"https://www3.septa.org/api/NextToArrive/index.php",
 		params=parameters, headers=septa_headers).json()
+	price = get_train_price(station1, station2, septa_response[0])
 	if not septa_response:
 		message_user("There are no upcoming trains between those stations.")
+		message_user(f"A ride between those stations will cost about ${'{:.2f}'.format(price)} depending on the time of day.")
 		return
 	try:
 		departure_time = septa_response[0]["orig_departure_time"][:-2]
@@ -505,7 +521,7 @@ def get_train_schedule(station_json):
 		message_user("There are no upcoming trains between those stations.")
 		pprint(septa_response)
 		return
-	price = get_train_price(septa_response[0], station1, station2)
+	price = get_train_price(station1, station2, septa_response[0])
 	station1 = station1.replace("Market East", "Jefferson")
 	station2 = station2.replace("Market East", "Jefferson")
 	message = f'''The next train from {station1} to {station2} leaves at {departure_time} and arrives at {arrival_time}.'''
@@ -559,7 +575,7 @@ def commands():
 
 
 
-def get_train_price(response, station1, station2):
+def get_train_price(station1, station2, response=None):
 	if log_command("get_train_price"):
 		return
 	city_weekday = {
@@ -592,8 +608,8 @@ def get_train_price(response, station1, station2):
 		if station1 == "Eastwick Station":
 			return airport_to_eastwick
 		return airport_price
-	if response["isdirect"] == "false" and get_station_zone(response["Connection"]) == 0:
-		if zone1 != 0 and zone2 != 0:
+	if response and zone1 != 0 and zone2 != 0:
+		if response["isdirect"] == "false" and get_station_zone(response["Connection"]) == 0:
 			return extended_price
 	if zone1>0 and zone2<0:
 		return extended_price
@@ -604,7 +620,10 @@ def get_train_price(response, station1, station2):
 	if zone1>0 and zone2>0:
 		return local_price
 	now = datetime.now(tz)
-	departure = response["orig_departure_time"]
+	if not response:
+		departure = now.strftime("%I:%M %p")
+	else:
+		departure = response["orig_departure_time"]
 	if now.weekday() < 5 and not is_septa_holiday():
 		if not ("PM" in departure and int(departure.split(":")[0]) >= 7):
 			if zone1 == 0:
@@ -1291,7 +1310,8 @@ def create_graph(x, y, data_type, plot_attributes):
 		plt.plot(x, avg)
 	if show_regression_line:
 		slope, intercept, r, p, std_err = stats.linregress(x, y)
-		regression_line = list(map(slope, slope, x, intercept))
+		slope_func = lambda x: slope * x + intercept
+		regression_line = list(map(slope_func, x))
 		plt.plot(x, regression_line, color="#3b3b3b")
 	year_position, year = [], []
 	for i in range(int(rn("%y"))-21+1):
@@ -1655,5 +1675,5 @@ def get_show_durations(data):
 
 # end of spotify functions
 
-if __name__ == "__main__":
-	app.run(debug=True)
+if __name__ == '__main__':
+	run_simple('localhost', 5000, app)
