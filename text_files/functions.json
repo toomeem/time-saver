@@ -1,129 +1,59 @@
 [
 	{
 		"name": "artists",
-		"description": "sends a bar chart of my top artists on spotify, graphed by the number of songs I listen to from each artist",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a bar chart of my top artists on spotify, graphed by the number of songs I listen to from each artist"
 	},
 	{
 		"name": "bday",
-		"description": "sends some info about the famous people that were born today",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends some info about the famous people that were born today"
 	},
 	{
 		"name": "commands",
-		"description": "sends a description of all the commands this bot can perform",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a description of all the commands this bot can perform"
 	},
 	{
 		"name": "covers",
-		"description": "sends a pie chart showing the ratio of covers to original songs in my spotify library",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a pie chart showing the ratio of covers to original songs in my spotify library"
 	},
 	{
 		"name": "desc",
-		"description": "sends a description of this bot, including what it does and who made it",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a description of this bot, including what it does and who made it"
 	},
 	{
 		"name": "durations",
-		"description": "sends a bar chart of my longest songs on spotify, graphed by the duration of each song in seconds and it compares that to the average song length of my library",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a bar chart of my longest songs on spotify, graphed by the duration of each song in seconds and it compares that to the average song length of my library"
 	},
 	{
 		"name": "episodes",
-		"description": "sends a pie chart of the podcasts I listen to graphed by the number of episodes I have saved from each podcast",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a pie chart of the podcasts I listen to graphed by the number of episodes I have saved from each podcast"
 	},
 	{
 		"name": "explicit",
-		"description": "sends a pie chart of the ratio of explicit songs to clean songs in my library",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a pie chart of the ratio of explicit songs to clean songs in my library"
 	},
 	{
 		"name": "genres",
-		"description": "sends a bar chart of my top genres",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a bar chart of my top genres"
 	},
 	{
 		"name": "gym",
-		"description": "Starts a workout",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "Starts a workout"
 	},
 	{
 		"name": "hi",
-		"description": "resonds with a greeting, only if the user sends a greeting similar to hi, hello, hey, etc.",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "resonds with a greeting, only if the user sends a greeting similar to hi, hello, hey, etc."
 	},
 	{
 		"name": "kill",
-		"description": "immediately ends the program/bot, may also be reffereed to as die or end or terminate",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "immediately ends the program/bot, may also be reffereed to as die or end or terminate"
 	},
 	{
 		"name": "quote",
-		"description": "sends a random quote",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a random quote"
 	},
 	{
 		"name": "runtimes",
-		"description": "sends a pie chart of the podcasts I listen to, graphed by the sum of the run times of the episodes",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends a pie chart of the podcasts I listen to, graphed by the sum of the run times of the episodes"
 	},
 	{
 		"name": "scan",
@@ -143,30 +73,15 @@
 	},
 	{
 		"name": "school",
-		"description": "sends how much school is left",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends how much school is left"
 	},
 	{
 		"name": "spotify",
-		"description": "sends descriptive data about my Spotify account",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends descriptive data about my Spotify account"
 	},
 	{
 		"name": "temp",
-		"description": "sends the current temperature",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends the current temperature"
 	},
 	{
 		"name":"time",
@@ -191,21 +106,11 @@
 	},
 	{
 		"name": "today",
-		"description": "sends the day of the month and week and other info",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends the day of the month and week and other info"
 	},
 	{
 		"name": "weather",
-		"description": "sends the current weather conditions in philadelphia",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "sends the current weather conditions in philadelphia"
 	},
 	{
 		"name": "weight",
@@ -215,7 +120,7 @@
 			"properties": {
 				"weight": {
 					"type": "integer",
-					"description": "the Weight to log"
+					"description": "the weight to log"
 				}
 			},
 			"required": ["weight"]
@@ -223,21 +128,11 @@
 	},
 	{
 		"name": "weight_graph",
-		"description": "A graph of my weight over time with a trendline and labels",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "A graph of my weight over time with a trendline and labels"
 	},
 	{
 		"name": "decades",
-		"description": "A graph(pie chart) of how many songs I have from each decade",
-		"parameters": {
-			"type": "object",
-			"properties": {},
-			"required": []
-		}
+		"description": "A graph(pie chart) of how many songs I have from each decade"
 	},
 	{
 		"name": "train",
@@ -255,5 +150,22 @@
 				}
 			}
 		}
+	},
+	{
+		"name": "set_gym_day",
+		"description": "sets what day it is in the gym"
+	},
+	{
+		"name": "toggle_workout_split",
+		"description": "toggles the workout split between push/pull/legs and a bro split"
+	},
+	{
+		"name": "get_gym_day",
+		"description": "sends the workout for the day"
+	},
+	{
+		"name": "get_current_workout_split",
+		"description": "sends the workout split"
 	}
+
 ]

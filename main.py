@@ -77,8 +77,12 @@ plot_attributes = {
 		"bulk/cut_dates": {"2023/1/29": "bulk", "2023/8/22": "bulk", "2023/6/6": "cut"}
 	}
 }
-# gym_schedule = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
-gym_schedule = ["Legs", "Pull", "Push"]
+bro_split = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
+ppl = ["Legs", "Pull", "Push"]
+workout_splits = {
+	"bro_split": bro_split,
+	"ppl": ppl
+}
 exercise_list = list(json.load(open("text_files/exercises.json")))
 
 
@@ -103,15 +107,15 @@ def message_user(body, media_url=None):
 	except:
 		pass
 
-@app.route("/websitehttps://actual-immune-cub.ngrok-free.app/website", methods=["GET"])
+@app.route("/website", methods=["GET"])
 def website_hook():
-	message = request
-	pprint(str(message))
-	return "Hello World!"
+	return hook("whats is the weather in philadelphia?")
 
 @app.route("/", methods=["GET","POST"])
-def hook():
-	message = request.json["message"]["text"]
+def webhook():
+	return hook(request.json["message"]["text"])
+
+def hook(message):
 	if in_conversation():
 		log_response(message)
 		return "200"
@@ -179,6 +183,14 @@ def hook():
 			get_train_schedule(args)
 		case "time":
 			get_time(args)
+		case "set_gym_day":
+			set_gym_day()
+		case "toggle_workout_split":
+			toggle_workout_split()
+		case "get_current_workout_split":
+			respond_with_current_workout_split()
+		case "get_gym_day":
+			respond_with_gym_day()
 		case _:
 			message_user("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -186,8 +198,6 @@ def hook():
 def kill():
 	try:
 		log_command("kill")
-	except:
-		pass
 	finally:
 		os.abort()
 
@@ -531,6 +541,44 @@ def get_train_schedule(station_json):
 		message += f'''\nIt will cost ${"{:.2f}".format(price)}.'''
 	message_user(message)
 
+def set_gym_day():
+	if log_command("set_gym_day"):
+		return
+	current_split = workout_splits[get_current_workout_split()]
+	current_day = current_split[get_gym_day_num()]
+	message = f'''
+		Current gym day is {current_day}
+		What day would you like to set it to?(respond with a number)'''
+	for i in range(len(current_split)):
+		message += f"\n{i}: {current_split[i]}"
+	day_num = get_response(message)
+	if not day_num:
+		return
+	with open("text_files/gym_day", "w") as gym_day_file:
+		gym_day_file.write(str(day_num))
+
+def respond_with_current_workout_split():
+	if log_command("respond_with_current_workout_split"):
+		return
+	message_user(f"Current workout split is {get_current_workout_split()}")
+
+def toggle_workout_split():
+	if log_command("toggle_workout_split"):
+		return
+	current_split = get_current_workout_split()
+	if current_split == "bro_split":
+		set_workout_split("ppl")
+		message_user("Workout split set to PPL")
+	else:
+		set_workout_split("bro_split")
+		message_user("Workout split set to Bro Split")
+
+def respond_with_gym_day():
+	if log_command("respond_with_gym_day"):
+		return
+	day = workout_splits[get_current_workout_split()][get_gym_day_num()]
+	message_user(f"Current gym day: {day}")
+
 def desc():
 	if log_command("desc"):
 		return
@@ -573,7 +621,20 @@ def commands():
 	message += "\nI also have a few other surprises ;)"
 	message_user(message)
 
+# end of commands, start of helper functions
 
+def set_workout_split(split):
+	if log_command("set_workout_split"):
+		return
+	with open("text_files/workout_split", "w") as workout_split_file:
+		workout_split_file.write(split)
+
+def get_current_workout_split():
+	if log_command("get_current_wourkout_split"):
+		return
+	with open("text_files/workout_split") as workout_split_file:
+		split = workout_split_file.readline()
+	return split.strip()
 
 def get_train_price(station1, station2, response=None):
 	if log_command("get_train_price"):
@@ -926,11 +987,6 @@ def min_sec(total_seconds):
 		return f"{seconds} {sec_string}"
 	return f"{minutes} {min_string} and {seconds} {sec_string}"
 
-def check_for_duplicate_event(id):
-	with open("text_files/event_id") as event_id_file:
-		file_id = event_id_file.readline().strip()
-	return file_id != id
-
 def get_day_exercises(all_exercises):
 	if log_command("get_day_exercises"):
 		return
@@ -1016,8 +1072,7 @@ def increment_gym_day(increment=1):
 	gym_day += increment
 	if gym_day >= len(gym_schedule):
 		gym_day = 0
-	with open("text_files/gym_day", "w") as gym_file:
-		gym_file.write(str(gym_day))
+	set_gym_day(gym_day)
 
 def clear_file(file_name):
 	file = open(file_name, "w")

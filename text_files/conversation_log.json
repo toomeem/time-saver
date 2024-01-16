@@ -454,5 +454,65 @@
     "sender": "script",
     "sent_at": "1705118785.3062308",
     "image": true
+  },
+  {
+    "message": "Good Morning!\nToday is Saturday, January 13rd\nHere's today's weather:\n\tTemperature - 49\u00b0\n\tConditions - Mostly Cloudy\n\tHumidity - Average\n\tWind Speed - Very High\n\tVisibility - 10 mi",
+    "sender": "script",
+    "sent_at": "1705152605.4215896",
+    "image": false
+  },
+  {
+    "message": "Here's today's quote:",
+    "sender": "script",
+    "sent_at": "1705161600.2193732",
+    "image": false
+  },
+  {
+    "message": "I was dating someone and wanted to get married to him. But just because casting couch exists in TFI and I work here, he didn't respect me.\n",
+    "sender": "script",
+    "sent_at": "1705161601.8372421",
+    "image": false
+  },
+  {
+    "message": "start workout",
+    "sender": "user",
+    "sent_at": "1705181915.48942",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n",
+    "sender": "script",
+    "sent_at": "1705181916.2807832",
+    "image": false
+  },
+  {
+    "message": "start workout",
+    "sender": "user",
+    "sent_at": "1705203777.7203798",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n",
+    "sender": "script",
+    "sent_at": "1705203778.4339445",
+    "image": false
+  },
+  {
+    "message": "Good Morning!\nToday is Sunday, January 14th\nHere's today's weather:\n\tTemperature - 24\u00b0\n\tConditions - A Few Clouds\n\tHumidity - Average\n\tWind Speed - Windy\n\tVisibility - 10 mi",
+    "sender": "script",
+    "sent_at": "1705239004.691554",
+    "image": false
+  },
+  {
+    "message": "Here's today's quote:",
+    "sender": "script",
+    "sent_at": "1705248000.1291106",
+    "image": false
+  },
+  {
+    "message": "I have not been that wise. Health I have taken for granted. Love I have demanded, perhaps too much and too often. As for money, I have only realized its true worth when I didn't have it.\n",
+    "sender": "script",
+    "sent_at": "1705248001.7165573",
+    "image": false
   }
 ]
