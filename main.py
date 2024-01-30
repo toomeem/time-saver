@@ -11,7 +11,7 @@ import re
 import threading
 import time
 from collections import Counter
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pprint import pprint
 from statistics import mean
 
@@ -40,8 +40,12 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 telegram_api_key = os.getenv("TELEGRAM_API_KEY")
 telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
 suggestion_playlist_id = os.getenv("SUGGESTION_PLAYLIST_ID")
+ngrok_url = os.getenv("NGROK_URL")
 gpt_model = "gpt-3.5-turbo"
 tz = pytz.timezone("America/New_York")
+first_day_of_school = "2023/09/15"
+last_day_of_school = "2024/06/15"
+in_school = True
 http_request_header = {
 	"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
 }
@@ -67,8 +71,8 @@ plot_attributes = {
 	"weight": {
 		"grid": "y",
 		"title":"Weight Over Time",
-		"xlabel": "Year",
-		"ylabel": "Weight(lbs)",
+		"x_label": "Year",
+		"y_label": "Weight(lbs)",
 		"filename": "weight.png",
 		"show_points": False,
 		"show_moving_avg": True,
@@ -86,7 +90,7 @@ workout_splits = {
 exercise_list = list(json.load(open("text_files/exercises.json")))
 
 
-def set_webhook_url(url="https://actual-immune-cub.ngrok-free.app/"):
+def set_webhook_url(url=ngrok_url):
 	api_url = f"https://api.telegram.org/bot{telegram_api_key}/"
 	method = "setWebhook"
 	response = requests.get(api_url+method, params={"url": url})
@@ -107,16 +111,13 @@ def message_user(body, media_url=None):
 	except:
 		pass
 
-@app.route("/website", methods=["GET"])
-def website_hook():
-	return hook("whats is the weather in philadelphia?")
 
 @app.route("/", methods=["GET","POST"])
-def webhook():
-	return hook(request.json["message"]["text"])
-
-def hook(message):
+def hook():
+	message = request.json["message"]["text"]
+	pprint(request.json["message"])
 	if in_conversation():
+		pprint(message)
 		log_response(message)
 		return "200"
 	log_message(message, "user")
@@ -153,8 +154,7 @@ def hook(message):
 		case "commands":
 			commands()
 		case "weight":
-			log_weight(args["weight"])
-			message_user("Logged")
+			log_weight(args["weight"], args["day_offset"])
 		case "weight_graph":
 			send_weight_graph(plot_attributes)
 		case "hi":
@@ -175,7 +175,7 @@ def hook(message):
 			send_decade_graph()
 		case "episodes":
 			send_episode_graph()
-		case "runtimes":
+		case "run_times":
 			send_podcast_runtime_graph()
 		case "gym":
 			start_workout(exercise_list)
@@ -203,11 +203,13 @@ def kill():
 
 def rn(target="%H:%M"):
 	now = datetime.now(tz)
+	if target == "date":
+		return now
 	return now.strftime(target)
 
 def log_command(name):
 	with open("text_files/command_list", "a") as command_file:
-		command_file.write(f"{name}\n")
+		command_file.write(f'''{rn("date").timestamp()}:{name}\n''')
 	with open("text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
 	return name in cancels
@@ -215,13 +217,13 @@ def log_command(name):
 def days_until(target, start=None, return_days=False):
 	if log_command("days_until"):
 		return "error"
-	target = target.split("/")
-	target = date(year=int(target[0]), month=int(target[1]), day=int(target[2]))
+	target = to_datetime(target)
 	if not start:
 		start = date.today()
 	else:
-		start = start.split("/")
-		start = date(year=int(start[0]), month=int(start[1]), day=int(start[2]))
+		start = to_datetime(start)
+	if not target or not start:
+		return "error"
 	difference = target - start
 	if return_days:
 		return int(difference.days)
@@ -231,8 +233,8 @@ def school():
 	if log_command("school"):
 		return
 	try:
-		left = days_until("2024/06/15", return_days=True)
-		total = days_until("2024/06/15", "2023/09/15", return_days=True)
+		left = days_until(first_day_of_school, return_days=True)
+		total = days_until(first_day_of_school, last_day_of_school, return_days=True)
 		message = f"School completed - {round((1-(left/total))*100, 1)}%\n"
 		message += f"School ends in {left} days"
 		message_user(message)
@@ -254,17 +256,20 @@ def today():
 	message += f"Today's word of the day is '{get_todays_word().capitalize()}'"
 	message_user(message)
 
-def log_weight(pounds):
+def log_weight(pounds, day_offset=0):
 	if log_command("log_weight"):
 		return
+	now = datetime.now(tz) - timedelta(days=day_offset)
 	with open("text_files/weight", "a") as weight_file:
-		weight_file.write(f'''{rn("%Y/%m/%d")}:{pounds}\n''')
+		weight_file.write(f'''{now.strftime("%Y/%m/%d")}:{pounds}\n''')
+	message_user("Weight logged")
 
 def send_weight_graph(plot_attributes):
 	if log_command("send_weight_graph"):
 		return
 	with open("text_files/weight") as f:
 		raw_weights = f.readlines()
+	raw_weights = [i for i in raw_weights if i != "\n"]
 	data = [weight_date_format(i).split(":") for i in raw_weights]
 	data = sorted(data)
 	x = [int(i[0]) for i in data]
@@ -378,7 +383,7 @@ def send_explicit_graph():
 	data = read_spotify_data()
 	explicits = get_explicits(data)
 	plt.figure(figsize=(10, 10), dpi=dpi)
-	plt.title("Number of Explicit Songs(Aproximate)", pad=40)
+	plt.title("Number of Explicit Songs(Approximate)", pad=40)
 	plt.pie(x=explicits.values(), labels=list(explicits.keys()), radius=1.3,
 					autopct=lambda pct: auto_pct(pct, list(explicits.values())),)
 	plt.savefig("explicit_graph.png")
@@ -395,7 +400,7 @@ def send_covers_graph():
 	data = read_spotify_data()
 	cover_num = covers(data)
 	plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
-	plt.title("Number of Covers (Aproximate)")
+	plt.title("Number of Covers (Approximate)")
 	plt.pie(x=[len(data)-cover_num, cover_num], labels=["Original Songs", "Covers"], pctdistance=.85,
 					autopct=lambda pct: auto_pct(pct, [len(data)-cover_num, cover_num]))
 	plt.savefig("covers_graph.png")
@@ -457,13 +462,15 @@ def send_podcast_runtime_graph():
 	message_user("Here are the podcasts you listen to.", graph_url)
 	delete_file("podcast_runtime_graph.png")
 
+# TODO: need to use threading or something because it takes too long and telegram times out
 def start_workout(all_exercises):
 	if log_command("start_workout"):
 		return
-	day_type_num = get_gym_day_num()
+	day_type = workout_splits[get_current_workout_split()][get_gym_day_num()]
+	wait_between_sets = 60 * 2.5
 	workout_dict = {
-		"exercises": {}, "start": time.time(), "end": None,
-		"day_type": gym_schedule[day_type_num]
+		"exercises": {}, "start": time.time(), "end": None,"day_type": day_type,
+		"split": get_current_workout_split()
 	}
 	with open("text_files/current_workout", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
@@ -484,11 +491,11 @@ def start_workout(all_exercises):
 			quit_workout = True
 		else:
 			message_user("Good choice")
-			time.sleep(180)
+			time.sleep(wait_between_sets)
 			log_set(exercise_num, is_first_set(exercise_num))
 			another_set = get_response("Another set?", 900)
 			while another_set == "yes":
-				time.sleep(180)
+				time.sleep(wait_between_sets)
 				log_set(exercise_num)
 				another_set = get_response("Another set?", 900)
 	end_workout()
@@ -595,33 +602,53 @@ def commands():
 	if log_command("commands"):
 		return
 	command_lst = [
-		"temp -> sends the current temperature in Philadelphia"
-		, "weather -> sends the current weather conditions in Philadelphia"
-		, "quote -> sends a random quote"
-		, "school -> sends how much school is left for the year"
-		, "scan ___ -> searches through all the unused quotes that contain that word/phrase"
-		, "today -> sends the day of the month and the weekday"
-		, "weight ___-> logs your weight"
-		, "weight_graph -> sends a graph of your weight over time"
-		, "spotify -> sends some data about your spotify account"
-		, "artists -> sends a graph of your top artists"
-		, "durations -> sends a graph of your longest songs"
-		, "genres -> sends a graph of your top genres"
-		, "explicit -> sends a graph of the ratio of explicit songs in your library"
-		, "covers -> sends a graph of the ratio of covers in your library"
-		, "decades -> sends a graph of the decades your songs were released in"
-		, "episodes -> sends a graph of the podcasts you listen to"
-		, "runtimes -> sends a graph of the runtimes of the podcasts you listen to"
-		, "gym -> starts a workout"
-		, "train -> sends the next train between two stations"
-		, "time -> sends the cuurent time in a city of your choice"
-		, "desc -> sends a description of this bot"
-		, "commands -> sends this"]
+		"get the current temperature in Philadelphia"
+		, "get the current weather conditions in Philadelphia"
+		, "get a random quote"
+		, "gets how much school is left for the year"
+		, "searches through all the unused quotes that contain that word/phrase"
+		, "sends the day of the month and the weekday"
+		, "logs your weight"
+		, "sends a graph of your weight over time"
+		, "sends some data about your spotify account"
+		, "sends a graph of your top artists"
+		, "sends a graph of your longest songs"
+		, "sends a graph of your top genres"
+		, "sends a graph of the ratio of explicit songs in your library"
+		, "sends a graph of the ratio of covers in your library"
+		, "sends a graph of the decades your songs were released in"
+		, "sends a graph of the podcasts you listen to"
+		, "sends a graph of the run times of the podcasts you listen to"
+		, "starts a workout"
+		, "sends the next train between two stations"
+		, "sends the current time in a city of your choice"
+		, "sends a description of this bot"
+		, "sends this"]
 	message = "\n".join(command_lst)
 	message += "\nI also have a few other surprises ;)"
 	message_user(message)
 
 # end of commands, start of helper functions
+def to_datetime(date):
+	if isinstance(date, datetime):
+		return date
+	try:
+		date = float(date)
+		return datetime.fromtimestamp(date)
+	except:
+		pass
+	if isinstance(date, str):
+		match date.count("/"):
+			case 3:
+				return datetime.strptime(date, "%Y/%m/%d")
+			case 4:
+				return datetime.strptime(date, "%Y/%m/%d/%H")
+			case 5:
+				return datetime.strptime(date, "%Y/%m/%d/%H/%M")
+			case 6:
+				return datetime.strptime(date, "%Y/%m/%d/%H/%M/%S")
+			case _:
+				return
 
 def set_workout_split(split):
 	if log_command("set_workout_split"):
@@ -630,9 +657,9 @@ def set_workout_split(split):
 		workout_split_file.write(split)
 
 def get_current_workout_split():
-	if log_command("get_current_wourkout_split"):
+	if log_command("get_current_workout_split"):
 		return
-	with open("text_files/workout_split") as workout_split_file:
+	with open("text_files/current_workout_split") as workout_split_file:
 		split = workout_split_file.readline()
 	return split.strip()
 
@@ -990,8 +1017,9 @@ def min_sec(total_seconds):
 def get_day_exercises(all_exercises):
 	if log_command("get_day_exercises"):
 		return
-	day_num = get_gym_day_num()
-	todays_exercises = [i for i in all_exercises if gym_schedule[day_num] in i["exercise_day"]]
+	current_split = get_current_workout_split()
+	gym_day = workout_splits[current_split][get_gym_day_num()]
+	todays_exercises = [i for i in all_exercises if gym_day in i["exercise_day"][current_split]]
 	return todays_exercises
 
 def search_exercises(num):
@@ -1307,9 +1335,8 @@ def get_quote(scan=None):
 	return quote
 
 def weight_date_format(line):
-	date = line.split(":")[0]
-	weight = line.split(":")[1]
-	return f"{date_to_num(date)}:{weight}"
+	line = line.split(":")
+	return f"{date_to_num(line[0])}:{line[1]}"
 
 def date_to_num(date):
 	date = date.split("/")
@@ -1381,9 +1408,9 @@ def create_graph(x, y, data_type, plot_attributes):
 	plt.grid(axis=plot_attributes["grid"])
 	plt.xticks(year_position, year)
 	plt.title(plot_attributes["title"])
-	plt.xlabel(plot_attributes["xlabel"])
-	plt.ylabel(plot_attributes["ylabel"])
-	plt.legend(["Eating like shit", "Bulk", "Cut"])
+	plt.xlabel(plot_attributes["x_label"])
+	plt.ylabel(plot_attributes["y_label"])
+	plt.legend(["Not Dieting", "Bulking", "Cutting"])
 	plt.savefig(plot_attributes["filename"], dpi=dpi)
 
 # start of spotify functions
@@ -1526,7 +1553,6 @@ def get_all_songs(sp):
 		data_list = [format_track(raw_data[i], playlist_len-i-1) for i in range(len(raw_data))]
 		thread_count = 10
 		requests_per_thread = requests_per_thread_func(thread_count, playlist_len, max_request)
-		wait_time = 0
 		with concurrent.futures.ThreadPoolExecutor(max_workers=thread_count) as executor:
 			futures = [
 				executor.submit(get_song_data,sp, thread_num, requests_per_thread, max_request, playlist_len)
@@ -1693,8 +1719,8 @@ def release_date_data(data, range_only=False):
 	popularity = dict(sorted(popularity.items(), key=lambda item: item[0]))
 	return list(popularity.keys()), list(popularity.values()), last-first
 
-def auto_pct(pct, allvalues):
-	absolute = int(pct / 100.*np.sum(allvalues))
+def auto_pct(pct, all_values):
+	absolute = int(pct / 100.*np.sum(all_values))
 	return "{:.1f}%\n({:d})".format(pct, absolute)
 
 def get_podcast_data():
@@ -1730,5 +1756,16 @@ def get_show_durations(data):
 
 # end of spotify functions
 
+def on_start():
+	if log_command("on_start"):
+		return
+	clear_file("text_files/response")
+	clear_file("text_files/cancel")
+	clear_file("text_files/current_workout")
+	set_in_conversation(False)
+
+
 if __name__ == '__main__':
-	run_simple('localhost', 5000, app)
+	on_start()
+	app.run(host="0.0.0.0", port=port, debug=True)
+	# run_simple('localhost', 5000, app)

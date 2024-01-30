@@ -4,7 +4,7 @@
 		"description": "sends a bar chart of my top artists on spotify, graphed by the number of songs I listen to from each artist"
 	},
 	{
-		"name": "bday",
+		"name": "birthday",
 		"description": "sends some info about the famous people that were born today"
 	},
 	{
@@ -41,18 +41,18 @@
 	},
 	{
 		"name": "hi",
-		"description": "resonds with a greeting, only if the user sends a greeting similar to hi, hello, hey, etc."
+		"description": "responds with a greeting, only if the user sends a greeting similar to hi, hello, hey, etc."
 	},
 	{
 		"name": "kill",
-		"description": "immediately ends the program/bot, may also be reffereed to as die or end or terminate"
+		"description": "immediately ends the program/bot, may also be referred to as die or end or terminate"
 	},
 	{
 		"name": "quote",
 		"description": "sends a random quote"
 	},
 	{
-		"name": "runtimes",
+		"name": "run_times",
 		"description": "sends a pie chart of the podcasts I listen to, graphed by the sum of the run times of the episodes"
 	},
 	{
@@ -114,13 +114,17 @@
 	},
 	{
 		"name": "weight",
-		"description": "Logs my weight for the day",
+		"description": "Logs my weight for a certain day",
 		"parameters": {
 			"type": "object",
 			"properties": {
 				"weight": {
 					"type": "integer",
 					"description": "the weight to log"
+				},
+				"day_offset": {
+					"type": "integer",
+					"description": "the number of days ago to log the weight for"
 				}
 			},
 			"required": ["weight"]
@@ -128,7 +132,7 @@
 	},
 	{
 		"name": "weight_graph",
-		"description": "A graph of my weight over time with a trendline and labels"
+		"description": "A graph of my weight over time with a trend line and labels"
 	},
 	{
 		"name": "decades",

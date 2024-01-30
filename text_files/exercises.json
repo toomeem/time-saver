@@ -11,7 +11,7 @@
       "bro_split": [
         "Legs"
       ],
-      "ppl": []
+      "ppl": ["Legs"]
     }
   },
   {
@@ -29,7 +29,7 @@
       "bro_split": [
         "Legs"
       ],
-      "ppl": []
+      "ppl": ["Legs"]
     }
   },
   {
@@ -48,7 +48,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Legs"]
     }
   },
   {
@@ -63,7 +63,7 @@
       "bro_split": [
         "Legs"
       ],
-      "ppl": []
+      "ppl": ["Legs"]
     }
   },
   {
@@ -81,7 +81,7 @@
       "bro_split": [
         "Legs"
       ],
-      "ppl": []
+      "ppl": ["Legs"]
     }
   },
   {
@@ -96,7 +96,7 @@
       "bro_split": [
         "Legs"
       ],
-      "ppl": []
+      "ppl": ["Legs"]
     }
   },
   {
@@ -111,7 +111,7 @@
       "bro_split": [
         "Legs"
       ],
-      "ppl": []
+      "ppl": ["Legs"]
     }
   },
   {
@@ -126,7 +126,7 @@
       "bro_split": [
         "Legs"
       ],
-      "ppl": []
+      "ppl": ["Legs"]
     }
   },
   {
@@ -146,7 +146,7 @@
       "bro_split": [
         "Chest + Shoulders"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -165,7 +165,7 @@
       "bro_split": [
         "Chest + Shoulders"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -183,7 +183,7 @@
       "bro_split": [
         "Chest + Shoulders"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -200,7 +200,7 @@
       "bro_split": [
         "Chest + Shoulders"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -217,7 +217,7 @@
       "bro_split": [
         "Chest + Shoulders"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -237,7 +237,7 @@
       "bro_split": [
         "Chest + Shoulders"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -254,7 +254,7 @@
       "bro_split": [
         "Chest + Shoulders"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -271,7 +271,7 @@
       "bro_split": [
         "Arms"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -288,7 +288,7 @@
       "bro_split": [
         "Arms"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -303,7 +303,7 @@
       "bro_split": [
         "Arms"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -320,7 +320,7 @@
       "bro_split": [
         "Arms"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -338,7 +338,7 @@
       "bro_split": [
         "Arms"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -355,25 +355,24 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
     "num": 23,
-    "name": "Seated Cable Row",
+    "name": "Cable Row",
     "primary_muscles": [
-      "Middle Back"
+      "Lats"
     ],
     "secondary_muscles": [
-      "Biceps",
-      "Lats"
+      "Biceps"
     ],
     "muscle_group_importance": 1,
     "exercise_day": {
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -391,7 +390,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -408,7 +407,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -423,7 +422,7 @@
       "bro_split": [
         "Arms"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -440,7 +439,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -458,7 +457,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Push"]
     }
   },
   {
@@ -476,7 +475,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -494,7 +493,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -509,7 +508,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -524,7 +523,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -540,7 +539,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -557,7 +556,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -572,7 +571,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -589,7 +588,7 @@
       "bro_split": [
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Pull"]
     }
   },
   {
@@ -607,7 +606,57 @@
         "Arms",
         "Back + Abs"
       ],
-      "ppl": []
+      "ppl": ["Legs", "Pull", "Push"]
+    }
+  },
+  {
+    "num": 38,
+    "name": "Back Extension",
+    "primary_muscles": [
+      "Lower Back"
+    ],
+    "secondary_muscles": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": ["Pull"]
+    }
+  },
+  {
+    "num": 39,
+    "name": "Decline Ab Crunch",
+    "primary_muscles": [
+      "Abs"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 2,
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": ["Pull"]
+    }
+  },
+  {
+    "num": 40,
+    "name": "Suitcase Carry",
+    "primary_muscles": [
+      "Obliques"
+    ],
+    "secondary_muscles": [
+      "Forearms"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": ["Pull"]
     }
   }
 ]
