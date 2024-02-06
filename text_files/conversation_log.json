@@ -844,5 +844,953 @@
     "sender": "script",
     "sent_at": "1706603883.4407167",
     "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647331.2381039",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1706647332.1270447",
+    "image": false
+  },
+  {
+    "message": "get the current temperature in Philadelphia\nget the current weather conditions in Philadelphia\nget a random quote\ngets how much school is left for the year\nsearches through all the unused quotes that contain that word/phrase\nsends the day of the month and the weekday\nlogs your weight\nsends a graph of your weight over time\nsends some data about your spotify account\nsends a graph of your top artists\nsends a graph of your longest songs\nsends a graph of your top genres\nsends a graph of the ratio of explicit songs in your library\nsends a graph of the ratio of covers in your library\nsends a graph of the decades your songs were released in\nsends a graph of the podcasts you listen to\nsends a graph of the run times of the podcasts you listen to\nstarts a workout\nsends the next train between two stations\nsends the current time in a city of your choice\nsends a description of this bot\nsends this\nI also have a few other surprises ;)",
+    "sender": "script",
+    "sent_at": "1706647332.7084813",
+    "image": false
+  },
+  {
+    "message": "when\u2019s the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1705117450.5664756",
+    "image": false
+  },
+  {
+    "message": "The next train from Pennbrook to 30th Street Station leaves at 11:22 and arrives at 12:17.\nIt will cost $5.25.",
+    "sender": "script",
+    "sent_at": "1705117453.0117466",
+    "image": false
+  },
+  {
+    "message": "when\u2019s the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1705117453.8475168",
+    "image": false
+  },
+  {
+    "message": "The next train from Pennbrook to 30th Street Station leaves at 11:22 and arrives at 12:17.\nIt will cost $5.25.",
+    "sender": "script",
+    "sent_at": "1705117457.0002701",
+    "image": false
+  },
+  {
+    "message": "when\u2019s the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1705117458.2476203",
+    "image": false
+  },
+  {
+    "message": "The next train from 30th Street Station to Pennbrook leaves at 10:42 and arrives at 11:32.\nIt is currently delayed 2 mins\nIt will cost $5.25.",
+    "sender": "script",
+    "sent_at": "1705117461.1987002",
+    "image": false
+  },
+  {
+    "message": "when\u2019s the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1705117461.9462042",
+    "image": false
+  },
+  {
+    "message": "The next train from Pennbrook to 30th Street Station leaves at 11:22 and arrives at 12:17.\nIt will cost $5.25.",
+    "sender": "script",
+    "sent_at": "1705117464.6805284",
+    "image": false
+  },
+  {
+    "message": "when\u2019s the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1705117465.418317",
+    "image": false
+  },
+  {
+    "message": "The next train from Pennbrook to 30th Street Station leaves at 11:22 and arrives at 12:17.\nIt will cost $5.25.",
+    "sender": "script",
+    "sent_at": "1705117468.0622582",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117493.1687877",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117495.6260114",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117500.3413413",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117506.8042164",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117517.0345948",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117535.3667703",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117569.8281245",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117636.231652",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117708.632661",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117806.9284585",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117879.6402972",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705117950.8010693",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118017.882332",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118090.9875698",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118153.1580184",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1705118161.992815",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118163.5162022",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1705118166.5486643",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118168.091718",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1705118170.8519838",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118596.2797143",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1705118599.1824021",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118715.7856972",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118717.309381",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118720.493183",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1705118782.6680021",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1705118785.3062308",
+    "image": true
+  },
+  {
+    "message": "Good Morning!\nToday is Saturday, January 13rd\nHere's today's weather:\n\tTemperature - 49\u00b0\n\tConditions - Mostly Cloudy\n\tHumidity - Average\n\tWind Speed - Very High\n\tVisibility - 10 mi",
+    "sender": "script",
+    "sent_at": "1705152605.4215896",
+    "image": false
+  },
+  {
+    "message": "Here's today's quote:",
+    "sender": "script",
+    "sent_at": "1705161600.2193732",
+    "image": false
+  },
+  {
+    "message": "I was dating someone and wanted to get married to him. But just because casting couch exists in TFI and I work here, he didn't respect me.\n",
+    "sender": "script",
+    "sent_at": "1705161601.8372421",
+    "image": false
+  },
+  {
+    "message": "start workout",
+    "sender": "user",
+    "sent_at": "1705181915.48942",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n",
+    "sender": "script",
+    "sent_at": "1705181916.2807832",
+    "image": false
+  },
+  {
+    "message": "start workout",
+    "sender": "user",
+    "sent_at": "1705203777.7203798",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n",
+    "sender": "script",
+    "sent_at": "1705203778.4339445",
+    "image": false
+  },
+  {
+    "message": "Good Morning!\nToday is Sunday, January 14th\nHere's today's weather:\n\tTemperature - 24\u00b0\n\tConditions - A Few Clouds\n\tHumidity - Average\n\tWind Speed - Windy\n\tVisibility - 10 mi",
+    "sender": "script",
+    "sent_at": "1705239004.691554",
+    "image": false
+  },
+  {
+    "message": "Here's today's quote:",
+    "sender": "script",
+    "sent_at": "1705248000.1291106",
+    "image": false
+  },
+  {
+    "message": "I have not been that wise. Health I have taken for granted. Love I have demanded, perhaps too much and too often. As for money, I have only realized its true worth when I didn't have it.\n",
+    "sender": "script",
+    "sent_at": "1705248001.7165573",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706598756.5102153",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706598760.6660376",
+    "image": true
+  },
+  {
+    "message": "i weighed 160 pounds 3 days ago",
+    "sender": "user",
+    "sent_at": "1706598859.0095649",
+    "image": false
+  },
+  {
+    "message": "Weight logged",
+    "sender": "script",
+    "sent_at": "1706598861.1453385",
+    "image": false
+  },
+  {
+    "message": "send a graph of my spotify artists",
+    "sender": "user",
+    "sent_at": "1706598907.7529519",
+    "image": false
+  },
+  {
+    "message": "Here are your top artists.",
+    "sender": "script",
+    "sent_at": "1706598911.7295423",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706600368.2988565",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706600369.7645626",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706600373.722427",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706600609.3524642",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706600725.0648592",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706600910.4216778",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601015.2745125",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601018.0631137",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601020.598757",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601023.1450427",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601024.5551353",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601027.549508",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601028.9944963",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601031.5486042",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601033.0535698",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601035.846241",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601037.4873526",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601039.9444344",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601041.4761488",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601044.2440772",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601064.5371375",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601067.1799142",
+    "image": true
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1706601215.58493",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1706601218.5331237",
+    "image": true
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601513.4634457",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601515.0871024",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601518.673854",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601645.8619351",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601761.4744818",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601853.120925",
+    "image": false
+  },
+  {
+    "message": "Current gym day: Pull",
+    "sender": "script",
+    "sent_at": "1706601854.2055237",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601854.956804",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n",
+    "sender": "script",
+    "sent_at": "1706601861.2143207",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601943.0280852",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601943.334887",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706601943.6427138",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1706601971.5012817",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706602228.5332718",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Seated Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise",
+    "sender": "script",
+    "sent_at": "1706602229.9701223",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706603023.1690938",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706603024.4982338",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706603431.9145384",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706603433.064486",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706603588.9238935",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706603589.9495602",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706603725.137479",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706603726.2490609",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706603882.204406",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706603883.4407167",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647331.2381039",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1706647332.1270447",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706647332.7084813",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1706647644.6437085",
+    "image": false
+  },
+  {
+    "message": "Today is Tuesday, Jan 30th\nToday's word of the day is 'Imponderabilia'",
+    "sender": "script",
+    "sent_at": "1706647645.3190897",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647646.0232375",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1706647647.1318796",
+    "image": false
+  },
+  {
+    "message": "get the current temperature in Philadelphia\nget the current weather conditions in Philadelphia\nget a random quote\ngets how much school is left for the year\nsearches through all the unused quotes that contain that word/phrase\nsends the day of the month and the weekday\nlogs your weight\nsends a graph of your weight over time\nsends some data about your spotify account\nsends a graph of your top artists\nsends a graph of your longest songs\nsends a graph of your top genres\nsends a graph of the ratio of explicit songs in your library\nsends a graph of the ratio of covers in your library\nsends a graph of the decades your songs were released in\nsends a graph of the podcasts you listen to\nsends a graph of the run times of the podcasts you listen to\nstarts a workout\nsends the next train between two stations\nsends the current time in a city of your choice\nsends a description of this bot\nsends this\nI also have a few other surprises ;)",
+    "sender": "script",
+    "sent_at": "1706647647.9681098",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706647648.2365794",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647648.6658528",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647649.8519692",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1706647650.0949624",
+    "image": false
+  },
+  {
+    "message": "Good choice",
+    "sender": "script",
+    "sent_at": "1706647650.2003696",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647650.3358552",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1706647651.1380324",
+    "image": false
+  },
+  {
+    "message": "Error",
+    "sender": "script",
+    "sent_at": "1706647651.7303107",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647652.3878174",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1706647653.7275443",
+    "image": false
+  },
+  {
+    "message": "\n\tI am a chat bot created by Evan Toomey.\n\tI am still in development, so please be patient with me.\n\tIf I am going crazy and you need to terminate me, text \"kill\".\n\tIf you would like to see my commands, text \"commands\".\n\n\tHave an amazing day :)\n\t",
+    "sender": "script",
+    "sent_at": "1706647654.2878058",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647654.9935994",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647655.8438687",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647713.4086413",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706647802.2513704",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1706648045.4131763",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706648046.463812",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1706648061.3507645",
+    "image": false
+  },
+  {
+    "message": "Good choice",
+    "sender": "script",
+    "sent_at": "1706648061.7159617",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1706648212.1865346",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1706648224.200915",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1706648224.4378798",
+    "image": false
+  },
+  {
+    "message": "25",
+    "sender": "user",
+    "sent_at": "1706648229.8738468",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1706648230.0103753",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1706648234.505608",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1706648384.5798552",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1706648397.4190323",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1706648397.8758702",
+    "image": false
+  },
+  {
+    "message": "25",
+    "sender": "user",
+    "sent_at": "1706648400.4201593",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1706648400.8956904",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1706648406.2579823",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1706648556.4772136",
+    "image": false
+  },
+  {
+    "message": "7",
+    "sender": "user",
+    "sent_at": "1706649167.002424",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1706649167.524058",
+    "image": false
+  },
+  {
+    "message": "25",
+    "sender": "user",
+    "sent_at": "1706649168.9059682",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1706649169.0496237",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1706649171.5539644",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1706649172.064733",
+    "image": false
+  },
+  {
+    "message": "22",
+    "sender": "user",
+    "sent_at": "1706649182.0285134",
+    "image": false
+  },
+  {
+    "message": "Good choice",
+    "sender": "script",
+    "sent_at": "1706649182.2105787",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1706649332.6991234",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1706650186.7378616",
+    "image": false
+  },
+  {
+    "message": "get the current temperature in Philadelphia\nget the current weather conditions in Philadelphia\nget a random quote\ngets how much school is left for the year\nsearches through all the unused quotes that contain that word/phrase\nsends the day of the month and the weekday\nlogs your weight\nsends a graph of your weight over time\nsends some data about your spotify account\nsends a graph of your top artists\nsends a graph of your longest songs\nsends a graph of your top genres\nsends a graph of the ratio of explicit songs in your library\nsends a graph of the ratio of covers in your library\nsends a graph of the decades your songs were released in\nsends a graph of the podcasts you listen to\nsends a graph of the run times of the podcasts you listen to\nstarts a workout\nsends the next train between two stations\nsends the current time in a city of your choice\nsends a description of this bot\nsends this\nI also have a few other surprises ;)",
+    "sender": "script",
+    "sent_at": "1706650187.55225",
+    "image": false
+  },
+  {
+    "message": "100",
+    "sender": "user",
+    "sent_at": "1706650254.1176853",
+    "image": false
+  },
+  {
+    "message": "\n\tI am a chat bot created by Evan Toomey.\n\tI am still in development, so please be patient with me.\n\tIf I am going crazy and you need to terminate me, text \"kill\".\n\tIf you would like to see my commands, text \"commands\".\n\n\tHave an amazing day :)\n\t",
+    "sender": "script",
+    "sent_at": "1706650254.6744337",
+    "image": false
   }
 ]
