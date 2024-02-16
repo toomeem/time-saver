@@ -33,14 +33,7 @@ def event_loop_start():
 	end_workout(True)
 
 def workout_loop():
-	# day_type = workout_splits[get_current_workout_split()][get_gym_day_num()]
-	wait_between_sets = 60 * 2.5
-	# workout_dict = {
-	# 	"exercises": {}, "start": time.time(), "end": None,"day_type": day_type,
-	# 	"split": get_current_workout_split()
-	# }
-	# with open("text_files/current_workout") as workout_file:
-	# 	workout_dict = json.load(workout_file)
+	wait_between_sets = 60 * 3
 	quit_workout = False
 	while not quit_workout:
 		print("looping")
@@ -53,7 +46,7 @@ def workout_loop():
 		exercise_num = get_response(exercise_list, wait_time=900)
 		print("got response")
 		if not exercise_num:
-			clear_file("text_files/current_workout")
+			clear_file("text_files/current_workout.json")
 			return
 		exercise_num = int(exercise_num)
 		if not exercise_num:
@@ -70,7 +63,7 @@ def workout_loop():
 	end_workout()
 
 def workout_started():
-	with open("text_files/current_workout") as workout_file:
+	with open("text_files/current_workout.json") as workout_file:
 		workout_check = workout_file.readline()
 	return workout_check != ""
 
@@ -91,7 +84,7 @@ def event_loop():
 			time.sleep(1)
 			message_user(get_quote())
 			time.sleep(60)
-		elif rn("%M") == "00" and not int(rn("%H")) % 6:
+		elif rn("%M") == "00":
 			print(f"{rn()}:Cleaning...")
 			clean()
 			time.sleep(55)

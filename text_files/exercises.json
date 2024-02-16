@@ -658,5 +658,39 @@
       ],
       "ppl": ["Pull"]
     }
+  },
+  {
+    "num": 41,
+    "name": "Farmers Carry",
+    "primary_muscles": [
+      "Forearms"
+    ],
+    "secondary_muscles": [],
+    "muscle_group_importance": 2,
+    "exercise_day": {
+      "bro_split": [
+        "Arms"
+      ],
+      "ppl": ["Pull"]
+    }
+  },
+  {
+    "num": 42,
+    "name": "squat",
+    "primary_muscles": [
+      "Quadriceps"
+    ],
+    "secondary_muscles": [
+      "Lower Back",
+      "Hamstrings",
+      "Glutes"
+    ],
+    "muscle_group_importance": 1,
+    "exercise_day": {
+      "bro_split": [
+        "Legs"
+      ],
+      "ppl": ["Legs"]
+    }
   }
 ]

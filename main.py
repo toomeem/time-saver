@@ -87,7 +87,7 @@ workout_splits = {
 	"ppl": ppl
 }
 exercise_list = list(json.load(open("text_files/exercises.json")))
-
+conversation = []
 
 def set_webhook_url(url=ngrok_url):
 	api_url = f"https://api.telegram.org/bot{telegram_api_key}/"
@@ -115,7 +115,6 @@ def message_user(body, media_url=None):
 def hook():
 	message = request.json["message"]["text"]
 	if in_conversation():
-		pprint(message)
 		log_response(message)
 		return "200"
 	log(message, "user", False, False)
@@ -176,7 +175,7 @@ def hook():
 		case "run_times":
 			send_podcast_runtime_graph()
 		case "gym":
-			start_workout(exercise_list)
+			start_workout()
 		case "train":
 			get_train_schedule(args)
 		case "time":
@@ -227,6 +226,12 @@ def log(message,sender="",contains_image=False,is_command=True):
 			message_file,
 			indent=2,
 		)
+	global conversation
+	if sender == "script":
+		conversation.append({"role": "you", "message": message})
+	conversation.append({"role": sender, "message": message})
+	if len(conversation) > 5:
+		conversation = conversation[-5:]
 
 def days_until(target, start=None, return_days=False):
 	log("days_until")
@@ -482,7 +487,7 @@ def send_podcast_runtime_graph():
 	message_user("Here are the podcasts you listen to.", graph_url)
 	delete_file("podcast_runtime_graph.png")
 
-def start_workout(all_exercises):
+def start_workout():
 	if log("start_workout"):
 		return
 	day_type = workout_splits[get_current_workout_split()][get_gym_day_num()]
@@ -490,7 +495,7 @@ def start_workout(all_exercises):
 		"exercises": {}, "start": time.time(), "end": None,"day_type": day_type,
 		"split": get_current_workout_split()
 	}
-	with open("text_files/current_workout", "w") as workout_file:
+	with open("text_files/current_workout.json", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
 
 
@@ -579,6 +584,11 @@ def respond_with_gym_day():
 	day = workout_splits[get_current_workout_split()][get_gym_day_num()]
 	message_user(f"Current gym day: {day}")
 
+def get_movie_recommendation():
+	if log("get_movie_recommendation"):
+		return
+
+
 def desc():
 	if log("desc"):
 		return
@@ -622,6 +632,7 @@ def commands():
 	message_user(message)
 
 # end of commands, start of helper functions
+
 def to_datetime(date):
 	if isinstance(date, datetime):
 		return date
@@ -956,7 +967,11 @@ def morning_message():
 def gpt_request(prompt, function_call=False):
 	if log("gpt_request"):
 		return
+	global conversation
+	# conversation.extend([{"role": "user", "content": prompt}])
 	messages = [{"role": "user", "content": prompt}]
+	if len(conversation) > 5:
+		conversation = conversation[-5:]
 	json_data = {"model": gpt_model, "messages": messages}
 	if function_call:
 		json_data = {"model": gpt_model, "messages": messages, "functions": functions()}
@@ -989,8 +1004,12 @@ def one_rep_max(reps, weight):
 	return round(weight/(1.0278-(0.0278*reps)))
 
 def is_first_set(num):
-	with open("text_files/current_workout") as workout_file:
-		exercises = dict(json.load(workout_file))["exercises"]
+	with open("text_files/current_workout.json") as workout_file:
+		try:
+			exercises = json.load(workout_file)
+			exercises = dict(exercises)["exercises"]
+		except:
+			return []
 	return search_exercises(num) not in list(exercises.keys())
 
 def min_sec(total_seconds):
@@ -1041,22 +1060,25 @@ def log_set(exercise_num, first=False):
 	if not (name and reps and weight):
 		end_workout()
 		return
-	with open("text_files/current_workout") as workout_file:
-		workout_dict = dict(json.load(workout_file))
+	with open("text_files/current_workout.json") as workout_file:
+		try:
+			workout_dict = dict(json.load(workout_file))
+		except:
+			workout_dict = {}
 	if first:
 		workout_dict["exercises"][name] = {"sets": 1, "reps": [reps], "weight": [weight]}
 	else:
 		workout_dict["exercises"][name]["sets"] += 1
 		workout_dict["exercises"][name]["reps"].append(reps)
 		workout_dict["exercises"][name]["weight"].append(weight)
-	with open("text_files/current_workout", "w") as workout_file:
+	with open("text_files/current_workout.json", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
 
 def end_workout(start=False):
 	if log("end_workout"):
 		return
 	try:
-		with open("text_files/current_workout") as workout_file:
+		with open("text_files/current_workout.json") as workout_file:
 			workout_dict = dict(json.load(workout_file))
 		if not workout_dict["end"]:
 			workout_dict["end"] = time.time()
@@ -1074,7 +1096,7 @@ def end_workout(start=False):
 		increment_gym_day()
 	except:
 		error_report("end_workout")
-	clear_file("text_files/current_workout")
+	clear_file("text_files/current_workout.json")
 
 def get_gym_day_num():
 	if log("get_gym_day"):
@@ -1748,7 +1770,7 @@ def event_loop_start():
 		return
 	clear_file("text_files/response")
 	clear_file("text_files/cancel")
-	clear_file("text_files/current_workout")
+	clear_file("text_files/current_workout.json")
 	set_in_conversation(False)
 
 
