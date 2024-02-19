@@ -22387,3 +22387,5 @@ conversation
 1708326087.063969:in_conversation
 1708326087.089019:gpt_request
 1708326087.958894:get_time
+1708326895.025721:add_movie_to_list
+1708326974.715398:remove_movie_from_list

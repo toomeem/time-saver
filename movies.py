@@ -30,5 +30,5 @@ for i in movie_list:
 	response = response["result"][0]
 	movie_data[i] = response
 
-with open("text_files/movie_data.json", "w") as f:
+with open("text_files/media_data.json", "w") as f:
 	json.dump(movie_data, f, indent=2)

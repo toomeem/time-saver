@@ -170,6 +170,47 @@
 	{
 		"name": "get_current_workout_split",
 		"description": "sends the workout split"
+	},
+	{
+		"name": "add_media",
+		"description": "adds a show, movie, or book to the list of media I haven't watched/read",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"media_type": {
+					"type": "string",
+					"description": "the type of media to add"
+				},
+				"media_name": {
+					"type": "string",
+					"description": "the name of the media to add"
+				}
+			},
+			"required": [
+				"media_type",
+				"media_name"
+			]
+		}
+	},
+	{
+		"name": "remove_media",
+		"description": "removes a show, movie, or book from the list of media I haven't watched/read",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"media_type": {
+					"type": "string",
+					"description": "the type of media to remove"
+				},
+				"media_name": {
+					"type": "string",
+					"description": "the name of the media to remove"
+				}
+			},
+			"required": [
+				"media_type",
+				"media_name"
+			]
+		}
 	}
-
 ]

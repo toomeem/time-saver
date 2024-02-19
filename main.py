@@ -194,6 +194,10 @@ def hook():
 			respond_with_current_workout_split()
 		case "get_gym_day":
 			respond_with_gym_day()
+		case "add_media":
+			add_media_to_list(args["media_type"], args["media_name"])
+		case "remove_media":
+			remove_media_from_list(args["media_type"], args["media_name"])
 		case _:
 			message_user("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -592,10 +596,23 @@ def respond_with_gym_day():
 	day = workout_splits[get_current_workout_split()][get_gym_day_num()]
 	message_user(f"Current gym day: {day}")
 
-def get_movie_recommendation():
-	if log("get_movie_recommendation"):
+def add_media_to_list(type, name):
+	if log("add_movie_to_list"):
 		return
+	with open("text_files/media_list.json") as f:
+		media_list = json.load(f)
+	media_list[type].append(name)
+	with open("text_files/media_list.json", "w") as f:
+		json.dump(media_list, f, indent=2)
 
+def remove_media_from_list(type, name):
+	if log("remove_movie_from_list"):
+		return
+	with open("text_files/media_list.json") as f:
+		media_list = json.load(f)
+	media_list[type].remove(name)
+	with open("text_files/media_list.json", "w") as f:
+		json.dump(media_list, f, indent=2)
 
 def desc():
 	if log("desc"):
@@ -633,6 +650,12 @@ def commands():
 		, "starts a workout"
 		, "sends the next train between two stations"
 		, "sends the current time in a city of your choice"
+		, "sets the day of the week you go to the gym"
+		, "toggles between the bro split and the PPL workout split"
+		, "sends the current workout split"
+		, "sends the day of the week you go to the gym"
+		, "adds a movie/show/book to the list of media to watch/read"
+		, "removes a movie/show/book from the list of media to watch/read"
 		, "sends a description of this bot"
 		, "sends this"]
 	message = "\n".join(command_lst)
@@ -1778,6 +1801,6 @@ def event_loop_start():
 	set_in_conversation(False)
 
 
-if __name__ == '__main__':
-	event_loop_start()
-	app.run(host="0.0.0.0", port=port, debug=True)
+# if __name__ == '__main__':
+# 	event_loop_start()
+# 	app.run(host="0.0.0.0", port=port, debug=True)
