@@ -122,7 +122,13 @@ def hook():
 	if not response:
 		message_user("Error\nPlease try again.")
 		return "200"
-	response = response["choices"][0]
+	try:
+		response = response["choices"][0]
+	except:
+		pprint(response)
+		error_report("hook")
+		message_user("Error\nPlease try again.")
+		return "200"
 	if response["finish_reason"] == "stop":
 		message_user(response["message"]["content"])
 		return "200"
@@ -229,7 +235,9 @@ def log(message,sender="",contains_image=False,is_command=True):
 	global conversation
 	if sender == "script":
 		conversation.append({"role": "you", "message": message})
-	conversation.append({"role": sender, "message": message})
+	else:
+		conversation.append({"role": sender, "message": message})
+	pprint(conversation)
 	if len(conversation) > 5:
 		conversation = conversation[-5:]
 
@@ -968,13 +976,9 @@ def gpt_request(prompt, function_call=False):
 	if log("gpt_request"):
 		return
 	global conversation
-	# conversation.extend([{"role": "user", "content": prompt}])
-	messages = [{"role": "user", "content": prompt}]
-	if len(conversation) > 5:
-		conversation = conversation[-5:]
-	json_data = {"model": gpt_model, "messages": messages}
+	json_data = {"model": gpt_model, "messages": conversation}
 	if function_call:
-		json_data = {"model": gpt_model, "messages": messages, "functions": functions()}
+		json_data = {"model": gpt_model, "messages": [{"role": "user", "content": prompt}], "functions": functions()}
 	response = requests.post(
 		"https://api.openai.com/v1/chat/completions",
 		headers=gpt_header,

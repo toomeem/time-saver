@@ -82,5 +82,102 @@
     "day_type": "Legs",
     "split": "ppl",
     "DNF": false
+  },
+  {
+    "exercises": {
+      "Dumbbell Bicep Curl": {
+        "sets": 4,
+        "reps": [
+          6,
+          8,
+          7,
+          5
+        ],
+        "weight": [
+          27.5,
+          27.5,
+          27.5,
+          27.5
+        ]
+      },
+      "Lat Pulldown": {
+        "sets": 3,
+        "reps": [
+          10,
+          9,
+          8
+        ],
+        "weight": [
+          100.0,
+          100.0,
+          100.0
+        ]
+      },
+      "Single Arm Row": {
+        "sets": 3,
+        "reps": [
+          10,
+          10,
+          10
+        ],
+        "weight": [
+          50.0,
+          50.0,
+          50.0
+        ]
+      },
+      "Dumbbell Hammer Curl": {
+        "sets": 3,
+        "reps": [
+          8,
+          8,
+          12
+        ],
+        "weight": [
+          22.5,
+          25.0,
+          20.0
+        ]
+      },
+      "Cable Row": {
+        "sets": 7,
+        "reps": [
+          8,
+          10,
+          8,
+          13,
+          14,
+          13,
+          14
+        ],
+        "weight": [
+          95.0,
+          95.0,
+          90.0,
+          80.0,
+          70.0,
+          70.0,
+          70.0
+        ]
+      },
+      "Decline Ab Crunch": {
+        "sets": 3,
+        "reps": [
+          10,
+          15,
+          10
+        ],
+        "weight": [
+          45.0,
+          45.0,
+          45.0
+        ]
+      }
+    },
+    "start": 1708131964.2572942,
+    "end": 1708139045.7229862,
+    "day_type": "Pull",
+    "split": "ppl",
+    "DNF": true
   }
 ]
