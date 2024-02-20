@@ -140,7 +140,7 @@
 	},
 	{
 		"name": "train",
-		"description": "This checks the next train times for the septa regional rail line between two stations. Be extremely careful not to mix up the start and the destination.",
+		"description": "This checks the next upcoming train for the septa regional rail line between two stations. Be extremely careful not to mix up the start and the destination.",
 		"parameters":{
 			"type": "object",
 			"properties": {

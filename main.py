@@ -118,13 +118,14 @@ def hook():
 		log_response(message)
 		return "200"
 	log(message, "user", False, False)
-	response = gpt_request(message, function_call=True)
+	response = gpt_request(message, True)
 	if not response:
 		message_user("Error\nPlease try again.")
 		return "200"
 	try:
 		response = response["choices"][0]
 	except:
+		pprint("gpt error")
 		pprint(response)
 		error_report("hook")
 		message_user("Error\nPlease try again.")
@@ -238,10 +239,9 @@ def log(message,sender="",contains_image=False,is_command=True):
 		)
 	global conversation
 	if sender == "script":
-		conversation.append({"role": "you", "message": message})
+		conversation.append({"role": "assistant", "content": message})
 	else:
-		conversation.append({"role": sender, "message": message})
-	pprint(conversation)
+		conversation.append({"role": sender, "content": message})
 	if len(conversation) > 5:
 		conversation = conversation[-5:]
 
@@ -509,7 +509,7 @@ def start_workout():
 	}
 	with open("text_files/current_workout.json", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
-
+	add_job("workout_loop")
 
 def get_train_schedule(station_json):
 	station1 = station_json["starting station"].replace("Jefferson", "Market East")
@@ -517,21 +517,22 @@ def get_train_schedule(station_json):
 	with open("text_files/station_inputs.json") as f:
 		station_inputs = list(json.load(f).keys())
 	prompt = f'''Here is a list of train stations:\n
-	{station_inputs}\n
-	Which stations are these "{station1}" and "{station2}"?\n
+	{station_inputs}\n\n
+	Which stations from the list correspond to these stations, ({station1}, {station2})?\n
 	Your answer will be in this format ["first station", "second station"].
-	Only return that list format, nothing else.
+	Only return that list format, nothing else. This doesn't require any real-time data.
 	Make sure to include the quotation marks.
 	'''
-	gpt_response = gpt_request(prompt)["choices"][0]
+	gpt_response = gpt_request(prompt, no_context=True)
 	try:
-		stations = eval(gpt_response["message"]["content"])
+		stations = eval(gpt_response["choices"][0]["message"]["content"])
 	except:
-		pprint(gpt_response["message"]["content"])
+		pprint("train gpt error")
+		pprint(gpt_response["choices"][0]["message"]["content"])
 		error_report("get_train_schedule")
 		return
-	station1 = stations[0]
-	station2 = stations[1]
+	station1 = stations[0].replace("Market East", "Jefferson")
+	station2 = stations[1].replace("Market East", "Jefferson")
 	septa_headers = {'Accept': 'application/json'}
 	parameters = {'req1': station1, 'req2': station2}
 	septa_response = requests.get(
@@ -663,6 +664,25 @@ def commands():
 	message_user(message)
 
 # end of commands, start of helper functions
+
+def add_job(name, params={}):
+	job = {
+		"name": name,
+		"time": str(time.time()),
+		"params": params
+	}
+	with open("text_files/jobs.json") as f:
+		all_jobs = list(json.load(f))
+	all_jobs.append(job)
+	with open("text_files/jobs.json", "w") as f:
+		json.dump(all_jobs, f, indent=2)
+
+def remove_job(name):
+	with open("text_files/jobs.json") as f:
+		all_jobs = list(json.load(f))
+	all_jobs = [i for i in all_jobs if i["name"] != name]
+	with open("text_files/jobs.json", "w") as f:
+		json.dump(all_jobs, f, indent=2)
 
 def to_datetime(date):
 	if isinstance(date, datetime):
@@ -995,13 +1015,16 @@ def morning_message():
 	message += formatted_weather().replace("\n", "\n\t")
 	return(message)
 
-def gpt_request(prompt, function_call=False):
+def gpt_request(prompt, function_call=False, no_context=False):
 	if log("gpt_request"):
 		return
 	global conversation
-	json_data = {"model": gpt_model, "messages": conversation}
-	if function_call:
+	if no_context:
+		json_data = {"model": gpt_model, "messages": [{"role": "user", "content": prompt}]}
+	elif function_call:
 		json_data = {"model": gpt_model, "messages": [{"role": "user", "content": prompt}], "functions": functions()}
+	else:
+		json_data = {"model": gpt_model, "messages": conversation}
 	response = requests.post(
 		"https://api.openai.com/v1/chat/completions",
 		headers=gpt_header,
@@ -1801,6 +1824,6 @@ def event_loop_start():
 	set_in_conversation(False)
 
 
-# if __name__ == '__main__':
-# 	event_loop_start()
-# 	app.run(host="0.0.0.0", port=port, debug=True)
+if __name__ == '__main__':
+	event_loop_start()
+	app.run(host="0.0.0.0", port=port, debug=True)

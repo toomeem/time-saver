@@ -6,7 +6,7 @@ from main import (check_brentford_file, check_error_file, check_quote_file,
                   check_weight_file, clear_file, end_workout,
                   get_day_exercises, get_quote, get_response, is_first_set,
                   log, log_set, message_user, morning_message, rn,
-                  set_in_conversation, update_spotify_data)
+                  set_in_conversation, update_spotify_data, remove_job, clean)
 
 bro_split = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 ppl = ["Legs", "Pull", "Push"]
@@ -16,23 +16,23 @@ workout_splits = {
 }
 all_exercises = list(json.load(open("text_files/exercises.json")))
 
-def clean(updates=True):
-	if log("clean"):
-		return
-	if updates:
-		threading.Thread(target=update_spotify_data).start()
-	clear_file("text_files/cancel")
-	check_quote_file()
-	check_brentford_file()
-	check_weight_file()
-	check_error_file()
+# def clean(updates=True):
+# 	if log("clean"):
+# 		return
+# 	if updates:
+# 		threading.Thread(target=update_spotify_data).start()
+# 	clear_file("text_files/cancel")
+# 	check_quote_file()
+# 	check_brentford_file()
+# 	check_weight_file()
+# 	check_error_file()
 
 def event_loop_start():
 	threading.Thread(target=clean).start()
 	set_in_conversation(False)
 	end_workout(True)
 
-def workout_loop():
+def workout_loop(params):
 	wait_between_sets = 60 * 3
 	quit_workout = False
 	while not quit_workout:
@@ -62,16 +62,20 @@ def workout_loop():
 				another_set = get_response("Another set?", 900)
 	end_workout()
 
-def workout_started():
-	with open("text_files/current_workout.json") as workout_file:
-		workout_check = workout_file.readline()
-	return workout_check != ""
+def check_for_jobs():
+	with open("text_files/jobs.json") as f:
+		jobs = list(json.load(f))
+	return jobs
 
 def event_loop():
 	event_loop_start()
 	while True:
-		if workout_started():
-			workout_loop()
+		jobs = check_for_jobs()
+		if jobs:
+			for job in jobs:
+				if job["name"] == "start_workout":
+					threading.Thread(target=workout_loop).start()
+				remove_job(job["name"])
 		if rn() == "08:30" and log("morning"):
 			time.sleep(60)
 		elif rn() == "08:30":
