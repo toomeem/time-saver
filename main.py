@@ -40,6 +40,7 @@ telegram_api_key = os.getenv("TELEGRAM_API_KEY")
 telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
 suggestion_playlist_id = os.getenv("SUGGESTION_PLAYLIST_ID")
 ngrok_url = os.getenv("NGROK_URL")
+streaming_availability_api_key = os.getenv("STREAMING_AVAILABILITY_API_KEY")
 gpt_model = "gpt-3.5-turbo"
 tz = pytz.timezone("America/New_York")
 first_day_of_school = "2023/09/15"
@@ -600,19 +601,19 @@ def respond_with_gym_day():
 def add_media_to_list(type, name):
 	if log("add_movie_to_list"):
 		return
-	with open("text_files/media_list.json") as f:
+	with open("text_files/media_data.json") as f:
 		media_list = json.load(f)
-	media_list[type].append(name)
-	with open("text_files/media_list.json", "w") as f:
+	media_list[type].append({"name": name, "needs_data": True})
+	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
 
 def remove_media_from_list(type, name):
 	if log("remove_movie_from_list"):
 		return
-	with open("text_files/media_list.json") as f:
+	with open("text_files/media_data.json") as f:
 		media_list = json.load(f)
 	media_list[type].remove(name)
-	with open("text_files/media_list.json", "w") as f:
+	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
 
 def desc():
@@ -664,6 +665,30 @@ def commands():
 	message_user(message)
 
 # end of commands, start of helper functions
+
+def add_media_data(media_type, media_name):
+	url = "https://streaming-availability.p.rapidapi.com/search/title"
+	headers = {
+		"X-RapidAPI-Key": streaming_availability_api_key,
+		"X-RapidAPI-Host": "streaming-availability.p.rapidapi.com",
+	}
+	querystring = {
+		"title": media_name,
+		"country": "us",
+		"show_type": "all",
+		"output_language": "en",
+	}
+	response = requests.get(url, headers=headers, params=querystring)
+	if response.status_code == 429:
+		return
+	response = response.json()["result"][0]
+	with open("text_files/media_data.json") as f:
+		media_data = json.load(f)
+	media_data[media_type].pop(media_name)
+	media_data[media_type][response["title"]] = response
+	media_data[media_type][response["title"]]["needs_data"] = False
+	with open("text_files/media_data.json", "w") as f:
+		json.dump(media_data, f, indent=2)
 
 def add_job(name, params={}):
 	job = {

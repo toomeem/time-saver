@@ -32,7 +32,7 @@ def event_loop_start():
 	set_in_conversation(False)
 	end_workout(True)
 
-def workout_loop(params):
+def workout_loop():
 	wait_between_sets = 60 * 3
 	quit_workout = False
 	while not quit_workout:

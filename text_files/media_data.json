@@ -272,7 +272,8 @@
       ],
       "directors": [
         "Denzel Washington"
-      ]
+      ],
+      "needs_data": false
     },
     "the imitation game": {
       "type": "movie",
@@ -455,7 +456,8 @@
       ],
       "directors": [
         "Morten Tyldum"
-      ]
+      ],
+      "needs_data": false
     },
     "road house": {
       "type": "movie",
@@ -869,7 +871,8 @@
       ],
       "directors": [
         "Rowdy Herrington"
-      ]
+      ],
+      "needs_data": false
     },
     "reservoir dogs": {
       "type": "movie",
@@ -1043,7 +1046,8 @@
       ],
       "directors": [
         "Quentin Tarantino"
-      ]
+      ],
+      "needs_data": false
     },
     "Psycho": {
       "type": "movie",
@@ -1261,7 +1265,8 @@
       ],
       "directors": [
         "Alfred Hitchcock"
-      ]
+      ],
+      "needs_data": false
     },
     "predestination": {
       "type": "movie",
@@ -1605,7 +1610,8 @@
       "directors": [
         "Michael Spierig",
         "Peter Spierig"
-      ]
+      ],
+      "needs_data": false
     },
     "mulhulland drive": {
       "type": "movie",
@@ -1671,7 +1677,8 @@
       ],
       "directors": [
         "David Lynch"
-      ]
+      ],
+      "needs_data": false
     },
     "night crawler": {
       "type": "movie",
@@ -1703,7 +1710,8 @@
       ],
       "directors": [
         "Benjamin Wilbanks"
-      ]
+      ],
+      "needs_data": false
     },
     "north by northwest": {
       "type": "movie",
@@ -1823,7 +1831,8 @@
       ],
       "directors": [
         "Alfred Hitchcock"
-      ]
+      ],
+      "needs_data": false
     },
     "alien": {
       "type": "movie",
@@ -2024,7 +2033,8 @@
       ],
       "directors": [
         "Ridley Scott"
-      ]
+      ],
+      "needs_data": false
     },
     "one flew over the cuckoo's nest": {
       "type": "movie",
@@ -2117,7 +2127,8 @@
       ],
       "directors": [
         "Milo\u0161 Forman"
-      ]
+      ],
+      "needs_data": false
     },
     "the green mile": {
       "type": "movie",
@@ -2518,7 +2529,8 @@
       ],
       "directors": [
         "Frank Darabont"
-      ]
+      ],
+      "needs_data": false
     },
     "the whale": {
       "type": "movie",
@@ -2660,7 +2672,8 @@
       ],
       "directors": [
         "Darren Aronofsky"
-      ]
+      ],
+      "needs_data": false
     },
     "1984": {
       "type": "movie",
@@ -2883,7 +2896,8 @@
       ],
       "directors": [
         "Michael Radford"
-      ]
+      ],
+      "needs_data": false
     },
     "titanic": {
       "type": "movie",
@@ -3029,7 +3043,8 @@
       ],
       "directors": [
         "James Cameron"
-      ]
+      ],
+      "needs_data": false
     },
     "the hurt locker": {
       "type": "movie",
@@ -3200,7 +3215,8 @@
       ],
       "directors": [
         "Kathryn Bigelow"
-      ]
+      ],
+      "needs_data": false
     },
     "dazed and confused": {
       "type": "movie",
@@ -3285,7 +3301,8 @@
       ],
       "directors": [
         "Richard Linklater"
-      ]
+      ],
+      "needs_data": false
     },
     "Blues Brothers": {
       "type": "movie",
@@ -3467,7 +3484,8 @@
       ],
       "directors": [
         "John Landis"
-      ]
+      ],
+      "needs_data": false
     },
     "uncle buck": {
       "type": "movie",
@@ -3584,7 +3602,8 @@
       ],
       "directors": [
         "John Hughes"
-      ]
+      ],
+      "needs_data": false
     },
     "super 8": {
       "type": "movie",
@@ -3947,7 +3966,8 @@
       ],
       "directors": [
         "J.J. Abrams"
-      ]
+      ],
+      "needs_data": false
     },
     "teen wolf": {
       "type": "series",
@@ -7639,7 +7659,8 @@
             }
           ]
         }
-      ]
+      ],
+      "needs_data": false
     },
     "better off dead": {
       "type": "movie",
@@ -7896,7 +7917,8 @@
       ],
       "directors": [
         "Savage Steve Holland"
-      ]
+      ],
+      "needs_data": false
     },
     "galaxy quest": {
       "type": "movie",
@@ -8017,7 +8039,8 @@
       ],
       "directors": [
         "Dean Parisot"
-      ]
+      ],
+      "needs_data": false
     },
     "say anything": {
       "type": "movie",
@@ -8322,7 +8345,8 @@
       ],
       "directors": [
         "Cameron Crowe"
-      ]
+      ],
+      "needs_data": false
     },
     "once upon a time in america": {
       "type": "movie",
@@ -8354,7 +8378,8 @@
       ],
       "directors": [
         "Sergio Leone"
-      ]
+      ],
+      "needs_data": false
     },
     "little shop of horrors": {
       "type": "movie",
@@ -8443,7 +8468,8 @@
       ],
       "directors": [
         "Frank Oz"
-      ]
+      ],
+      "needs_data": false
     },
     "shawshank redemption": {
       "type": "movie",
@@ -8471,7 +8497,8 @@
       ],
       "directors": [
         "Frank Darabont"
-      ]
+      ],
+      "needs_data": false
     },
     "planes trains and automobiles": {
       "type": "movie",
@@ -8898,7 +8925,8 @@
       ],
       "directors": [
         "John Hughes"
-      ]
+      ],
+      "needs_data": false
     },
     "spinal tap": {
       "type": "movie",
@@ -9018,7 +9046,8 @@
       ],
       "directors": [
         "Rob Reiner"
-      ]
+      ],
+      "needs_data": false
     },
     "best in show": {
       "type": "movie",
@@ -9131,7 +9160,8 @@
       ],
       "directors": [
         "Christopher Guest"
-      ]
+      ],
+      "needs_data": false
     },
     "for your consideration": {
       "type": "movie",
@@ -9239,7 +9269,8 @@
       ],
       "directors": [
         "Christopher Guest"
-      ]
+      ],
+      "needs_data": false
     },
     "48 hours": {
       "type": "movie",
@@ -9617,7 +9648,8 @@
       ],
       "directors": [
         "Walter Hill"
-      ]
+      ],
+      "needs_data": false
     },
     "trading places": {
       "type": "movie",
@@ -9702,7 +9734,8 @@
       ],
       "directors": [
         "John Landis"
-      ]
+      ],
+      "needs_data": false
     },
     "the producers": {
       "type": "movie",
@@ -9734,7 +9767,8 @@
       ],
       "directors": [
         "Mel Brooks"
-      ]
+      ],
+      "needs_data": false
     },
     "a few good men": {
       "type": "movie",
@@ -9823,7 +9857,8 @@
       ],
       "directors": [
         "Rob Reiner"
-      ]
+      ],
+      "needs_data": false
     },
     "it's a wonderful life": {
       "type": "movie",
@@ -10206,7 +10241,8 @@
       ],
       "directors": [
         "Frank Capra"
-      ]
+      ],
+      "needs_data": false
     },
     "Clerks": {
       "type": "movie",
@@ -10323,7 +10359,8 @@
       ],
       "directors": [
         "Kevin Smith"
-      ]
+      ],
+      "needs_data": false
     },
     "casino": {
       "type": "movie",
@@ -10542,7 +10579,8 @@
       ],
       "directors": [
         "Martin Scorsese"
-      ]
+      ],
+      "needs_data": false
     },
     "The Big Lebowski": {
       "type": "movie",
@@ -10694,7 +10732,8 @@
       "directors": [
         "Joel Coen",
         "Ethan Coen"
-      ]
+      ],
+      "needs_data": false
     },
     "The Royal Tennenbaums": {
       "type": "movie",
@@ -10957,7 +10996,8 @@
       ],
       "directors": [
         "Wes Anderson"
-      ]
+      ],
+      "needs_data": false
     },
     "almost famous": {
       "type": "movie",
@@ -11123,7 +11163,8 @@
       ],
       "directors": [
         "Cameron Crowe"
-      ]
+      ],
+      "needs_data": false
     },
     "fast times at ridgemont high": {
       "type": "movie",
@@ -11244,7 +11285,8 @@
       ],
       "directors": [
         "Amy Heckerling"
-      ]
+      ],
+      "needs_data": false
     },
     "zoolander": {
       "type": "movie",
@@ -11518,7 +11560,8 @@
       ],
       "directors": [
         "Ben Stiller"
-      ]
+      ],
+      "needs_data": false
     },
     "django unchained": {
       "type": "movie",
@@ -11676,7 +11719,8 @@
       ],
       "directors": [
         "Quentin Tarantino"
-      ]
+      ],
+      "needs_data": false
     },
     "the untouchables": {
       "type": "movie",
@@ -12206,7 +12250,8 @@
       ],
       "directors": [
         "Brian De Palma"
-      ]
+      ],
+      "needs_data": false
     },
     "se7en": {
       "type": "movie",
@@ -12791,7 +12836,8 @@
       ],
       "directors": [
         "David Fincher"
-      ]
+      ],
+      "needs_data": false
     },
     "there will be blood": {
       "type": "movie",
@@ -12924,7 +12970,8 @@
       ],
       "directors": [
         "Paul Thomas Anderson"
-      ]
+      ],
+      "needs_data": false
     },
     "the prestige": {
       "type": "movie",
@@ -13044,7 +13091,8 @@
       ],
       "directors": [
         "Christopher Nolan"
-      ]
+      ],
+      "needs_data": false
     },
     "the exorcist": {
       "type": "movie",
@@ -13294,7 +13342,8 @@
       ],
       "directors": [
         "William Friedkin"
-      ]
+      ],
+      "needs_data": false
     },
     "annie hall": {
       "type": "movie",
@@ -13406,7 +13455,8 @@
       ],
       "directors": [
         "Woody Allen"
-      ]
+      ],
+      "needs_data": false
     },
     "texas chainsaw massacre": {
       "type": "movie",
@@ -13453,7 +13503,8 @@
       ],
       "directors": [
         "David Blue Garcia"
-      ]
+      ],
+      "needs_data": false
     },
     "the wild bunch": {
       "type": "movie",
@@ -13650,7 +13701,8 @@
       ],
       "directors": [
         "Sam Peckinpah"
-      ]
+      ],
+      "needs_data": false
     },
     "coraline": {
       "type": "movie",
@@ -14063,7 +14115,8 @@
       ],
       "directors": [
         "Henry Selick"
-      ]
+      ],
+      "needs_data": false
     },
     "sleepy hollow": {
       "type": "series",
@@ -18938,7 +18991,8 @@
             }
           ]
         }
-      ]
+      ],
+      "needs_data": false
     },
     "fantastic mr fox": {
       "type": "movie",
@@ -19424,7 +19478,8 @@
       ],
       "directors": [
         "Wes Anderson"
-      ]
+      ],
+      "needs_data": false
     },
     "october sky": {
       "type": "movie",
@@ -19513,7 +19568,8 @@
       ],
       "directors": [
         "Joe Johnston"
-      ]
+      ],
+      "needs_data": false
     },
     "get out": {
       "type": "movie",
@@ -19664,7 +19720,8 @@
       ],
       "directors": [
         "Jordan Peele"
-      ]
+      ],
+      "needs_data": false
     },
     "donnie darko": {
       "type": "movie",
@@ -19832,7 +19889,8 @@
       ],
       "directors": [
         "Richard Kelly"
-      ]
+      ],
+      "needs_data": false
     },
     "eternal sunshine of the spotless mind": {
       "type": "movie",
@@ -19981,7 +20039,8 @@
       ],
       "directors": [
         "Michel Gondry"
-      ]
+      ],
+      "needs_data": false
     },
     "a wrinkle in time": {
       "type": "movie",
@@ -20988,7 +21047,8 @@
       ],
       "directors": [
         "Ava DuVernay"
-      ]
+      ],
+      "needs_data": false
     },
     "unbreakable": {
       "type": "movie",
@@ -21296,7 +21356,8 @@
       ],
       "directors": [
         "M. Night Shyamalan"
-      ]
+      ],
+      "needs_data": false
     },
     "terminator": {
       "type": "movie",
@@ -21637,7 +21698,8 @@
       ],
       "directors": [
         "James Cameron"
-      ]
+      ],
+      "needs_data": false
     },
     "cape fear": {
       "type": "movie",
@@ -21754,7 +21816,8 @@
       ],
       "directors": [
         "Martin Scorsese"
-      ]
+      ],
+      "needs_data": false
     },
     "super bad": {
       "type": "movie",
@@ -21774,7 +21837,8 @@
       ],
       "directors": [
         "Charles E. Cullen"
-      ]
+      ],
+      "needs_data": false
     },
     "the hangover": {
       "type": "movie",
@@ -21886,7 +21950,8 @@
       ],
       "directors": [
         "Todd Phillips"
-      ]
+      ],
+      "needs_data": false
     },
     "rebecca": {
       "type": "movie",
@@ -21922,7 +21987,8 @@
       ],
       "directors": [
         "Alfred Hitchcock"
-      ]
+      ],
+      "needs_data": false
     },
     "the birds": {
       "type": "movie",
@@ -22066,7 +22132,8 @@
       ],
       "directors": [
         "Alfred Hitchcock"
-      ]
+      ],
+      "needs_data": false
     },
     "animal house": {
       "type": "movie",
@@ -22205,7 +22272,8 @@
       ],
       "directors": [
         "John Landis"
-      ]
+      ],
+      "needs_data": false
     },
     "the menu": {
       "type": "movie",
@@ -22440,123 +22508,124 @@
       ],
       "directors": [
         "Mark Mylod"
-      ]
+      ],
+      "needs_data": false
     }
   },
-  "shows": [
-    {
+  "shows": {
+    "mr robot": {
       "name": "mr robot",
       "needs_data": true
     },
-    {
+    "pantheon": {
       "name": "pantheon",
       "needs_data": true
     },
-    {
+    "after life": {
       "name": "after life",
       "needs_data": true
     },
-    {
+    "the goldbergs": {
       "name": "the goldbergs",
       "needs_data": true
     },
-    {
+    "demon slayer": {
       "name": "demon slayer",
       "needs_data": true
     },
-    {
+    "brooklyn nine nine": {
       "name": "brooklyn nine nine",
       "needs_data": true
     },
-    {
+    "smiling friends": {
       "name": "smiling friends",
       "needs_data": true
     },
-    {
+    "bojack": {
       "name": "bojack",
       "needs_data": true
     },
-    {
+    "blackbird": {
       "name": "blackbird",
       "needs_data": true
     },
-    {
+    "freaks and geeks": {
       "name": "freaks and geeks",
       "needs_data": true
     }
-  ],
-  "books": [
-    {
+  },
+  "books": {
+    "atomic habits": {
       "name": "atomic habits",
       "needs_data": true
     },
-    {
+    "clean code": {
       "name": "clean code",
       "needs_data": true
     },
-    {
+    "grokking algorithms": {
       "name": "grokking algorithms",
       "needs_data": true
     },
-    {
+    "democracy for realists": {
       "name": "democracy for realists",
       "needs_data": true
     },
-    {
+    "the book of jewish values": {
       "name": "the book of jewish values",
       "needs_data": true
     },
-    {
+    "how will you measure your life": {
       "name": "how will you measure your life",
       "needs_data": true
     },
-    {
+    "the daily laws": {
       "name": "the daily laws",
       "needs_data": true
     },
-    {
+    "the three body problem": {
       "name": "the three body problem",
       "needs_data": true
     },
-    {
+    "brave new world": {
       "name": "brave new world",
       "needs_data": true
     },
-    {
+    "fahrenheit 451": {
       "name": "fahrenheit 451",
       "needs_data": true
     },
-    {
+    "art of war": {
       "name": "art of war",
       "needs_data": true
     },
-    {
+    "sapiens": {
       "name": "sapiens",
       "needs_data": true
     },
-    {
+    "the stranger": {
       "name": "the stranger",
       "needs_data": true
     },
-    {
+    "the plague": {
       "name": "the plague",
       "needs_data": true
     },
-    {
+    "brothers karamazov": {
       "name": "brothers karamazov",
       "needs_data": true
     },
-    {
+    "meditations": {
       "name": "meditations",
       "needs_data": true
     },
-    {
+    "economics in one lesson": {
       "name": "economics in one lesson",
       "needs_data": true
     },
-    {
+    "rise and triumph of the modern self": {
       "name": "rise and triumph of the modern self",
       "needs_data": true
     }
-  ]
+  }
 }
