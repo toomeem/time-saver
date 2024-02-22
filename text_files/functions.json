@@ -179,7 +179,7 @@
 			"properties": {
 				"media_type": {
 					"type": "string",
-					"description": "the type of media to add"
+					"description": "the type of media it is (show, movie, or book)."
 				},
 				"media_name": {
 					"type": "string",

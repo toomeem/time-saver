@@ -2,11 +2,10 @@ import json
 import threading
 import time
 
-from main import (check_brentford_file, check_error_file, check_quote_file,
-                  check_weight_file, clear_file, end_workout,
-                  get_day_exercises, get_quote, get_response, is_first_set,
-                  log, log_set, message_user, morning_message, rn,
-                  set_in_conversation, update_spotify_data, remove_job, clean)
+from main import (add_media_data, check_for_media_data, clean, clear_file,
+                  end_workout, get_day_exercises, get_quote, get_response,
+                  is_first_set, log, log_set, message_user, morning_message,
+                  remove_job, rn, set_in_conversation)
 
 bro_split = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 ppl = ["Legs", "Pull", "Push"]
@@ -15,17 +14,6 @@ workout_splits = {
 	"ppl": ppl
 }
 all_exercises = list(json.load(open("text_files/exercises.json")))
-
-# def clean(updates=True):
-# 	if log("clean"):
-# 		return
-# 	if updates:
-# 		threading.Thread(target=update_spotify_data).start()
-# 	clear_file("text_files/cancel")
-# 	check_quote_file()
-# 	check_brentford_file()
-# 	check_weight_file()
-# 	check_error_file()
 
 def event_loop_start():
 	threading.Thread(target=clean).start()
@@ -68,13 +56,19 @@ def check_for_jobs():
 	return jobs
 
 def event_loop():
-	event_loop_start()
+	threading.Thread(target=event_loop_start).start()
 	while True:
 		jobs = check_for_jobs()
 		if jobs:
 			for job in jobs:
-				if job["name"] == "start_workout":
-					threading.Thread(target=workout_loop).start()
+				match job["name"]:
+					case "start_workout":
+						threading.Thread(target=workout_loop).start()
+					case "get_media_data":
+						missing_media_data = check_for_media_data()
+						for media_type, media_list in missing_media_data.items():
+							for media in media_list:
+								add_media_data(media_type, media)
 				remove_job(job["name"])
 		if rn() == "08:30" and log("morning"):
 			time.sleep(60)
@@ -90,9 +84,9 @@ def event_loop():
 			time.sleep(60)
 		elif rn("%M") == "00":
 			print(f"{rn()}:Cleaning...")
-			clean()
+			threading.Thread(target=clean).start()
 			time.sleep(55)
-		time.sleep(3)
+		time.sleep(10)
 
 print("\nRunning...")
 event_loop()

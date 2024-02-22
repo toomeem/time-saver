@@ -1,5 +1,5 @@
 {
-  "movies": {
+  "movie": {
     "fences": {
       "type": "movie",
       "title": "Fences",
@@ -22512,7 +22512,7 @@
       "needs_data": false
     }
   },
-  "shows": {
+  "show": {
     "mr robot": {
       "name": "mr robot",
       "needs_data": true
@@ -22554,7 +22554,7 @@
       "needs_data": true
     }
   },
-  "books": {
+  "book": {
     "atomic habits": {
       "name": "atomic habits",
       "needs_data": true

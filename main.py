@@ -135,7 +135,10 @@ def hook():
 		message_user(response["message"]["content"])
 		return "200"
 	response_text = response["message"]["function_call"]["name"]
-	args = eval(response["message"]["function_call"]["arguments"])
+	try:
+		args = dict(json.loads(response["message"]["function_call"]["arguments"]))
+	except:
+		args = {}
 	match response_text:
 		case "kill":
 			kill()
@@ -526,7 +529,7 @@ def get_train_schedule(station_json):
 	'''
 	gpt_response = gpt_request(prompt, no_context=True)
 	try:
-		stations = eval(gpt_response["choices"][0]["message"]["content"])
+		stations = json.loads(gpt_response["choices"][0]["message"]["content"])
 	except:
 		pprint("train gpt error")
 		pprint(gpt_response["choices"][0]["message"]["content"])
@@ -606,6 +609,7 @@ def add_media_to_list(type, name):
 	media_list[type].append({"name": name, "needs_data": True})
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
+	add_job("get_media_data")
 
 def remove_media_from_list(type, name):
 	if log("remove_movie_from_list"):
@@ -666,7 +670,55 @@ def commands():
 
 # end of commands, start of helper functions
 
+def log_rate_limit(domain):
+	if log("log_rate_limit"):
+		return
+	with open("text_files/rate_limit.json") as f:
+		rate_limit_list = list(json.load(f))
+	rate_limit_list = [i for i in rate_limit_list if i["domain"] != domain]
+	rate_limit_list.append({"domain": domain, "time": str(time.time())})
+	with open("text_files/rate_limit.json", "w") as f:
+		json.dump(rate_limit_list, f, indent=2)
+
+def remove_rate_limit(domain):
+	if log("remove_rate_limit"):
+		return
+	with open("text_files/rate_limit.json") as f:
+		rate_limit_list = list(json.load(f))
+	rate_limit_list = [i for i in rate_limit_list if i["domain"] != domain]
+	with open("text_files/rate_limit.json", "w") as f:
+		json.dump(rate_limit_list, f, indent=2)
+
+def is_rate_limited(domain, wait_time):
+	if log("is_rate_limited"):
+		return
+	with open("text_files/rate_limit.json") as f:
+		rate_limit_list = list(json.load(f))
+	if not rate_limit_list:
+		return False
+	rate_limit_list = [i for i in rate_limit_list if i["domain"] == domain]
+	if not rate_limit_list:
+		return False
+	if time.time() - float(rate_limit_list[0]["time"]) > wait_time:
+		remove_rate_limit(domain)
+		return False
+	return True
+
+def check_for_media_data():
+	with open("text_files/media_data.json") as f:
+		media_list = dict(json.load(f))
+	missing_data = {"movies": [], "shows": [], "books": []}
+	for media_type in ["movies", "shows", "books"]:
+		for media_name, media_data in media_list[media_type].items():
+			if media_data["needs_data"]:
+				missing_data[media_type].append(media_name)
+	return missing_data
+
 def add_media_data(media_type, media_name):
+	if log("add_media_data"):
+		return
+	if is_rate_limited("add_media_data", 60*60*2):
+		return
 	url = "https://streaming-availability.p.rapidapi.com/search/title"
 	headers = {
 		"X-RapidAPI-Key": streaming_availability_api_key,
@@ -680,6 +732,7 @@ def add_media_data(media_type, media_name):
 	}
 	response = requests.get(url, headers=headers, params=querystring)
 	if response.status_code == 429:
+		log_rate_limit("add_media_data")
 		return
 	response = response.json()["result"][0]
 	with open("text_files/media_data.json") as f:
@@ -902,9 +955,9 @@ def check_file_timestamps(filename, strf_format="%Y/%m/%d/%H/%M", remove_past=Fa
 			if not remove_past:
 				continue
 			if (now-date_obj).total_seconds() > 0:
-				lines[i] = False
+				lines[i] = ""
 		except:
-			lines[i] = False
+			lines[i] = ""
 	lines = [i for i in lines if i]
 	return lines
 
@@ -1851,4 +1904,4 @@ def event_loop_start():
 
 if __name__ == '__main__':
 	event_loop_start()
-	app.run(host="0.0.0.0", port=port, debug=True)
+	app.run(host="0.0.0.0", port=port)
