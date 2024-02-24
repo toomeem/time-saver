@@ -1,0 +1,3505 @@
+{
+  "apple": {
+    "id": "apple",
+    "name": "Apple TV",
+    "homePage": "https://tv.apple.com/",
+    "themeColorCode": "#000000",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/apple/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/apple/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/apple/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": true,
+      "buy": true,
+      "free": false,
+      "rent": true,
+      "subscription": true
+    },
+    "addons": {
+      "tvs.sbd.10000": {
+        "id": "tvs.sbd.10000",
+        "displayName": "Hulu",
+        "homePage": "https://tv.apple.com/us/channel/hulu/tvs.sbd.10000",
+        "themeColorCode": "#29A869",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10000/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10000/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10000/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10000/white.png"
+        }
+      },
+      "tvs.sbd.1000003": {
+        "id": "tvs.sbd.1000003",
+        "displayName": "Boomerang",
+        "homePage": "https://tv.apple.com/us/channel/boomerang/tvs.sbd.1000003",
+        "themeColorCode": "#7432FC",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000003/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000003/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000003/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000003/white.png"
+        }
+      },
+      "tvs.sbd.1000023": {
+        "id": "tvs.sbd.1000023",
+        "displayName": "Viki",
+        "homePage": "https://tv.apple.com/us/channel/viki/tvs.sbd.1000023",
+        "themeColorCode": "#0c9bff",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000027": {
+        "id": "tvs.sbd.1000027",
+        "displayName": "CNBC",
+        "homePage": "https://tv.apple.com/us/channel/cnbc/tvs.sbd.1000027",
+        "themeColorCode": "#001E5A",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000027.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000027.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000030": {
+        "id": "tvs.sbd.1000030",
+        "displayName": "Philo",
+        "homePage": "https://tv.apple.com/us/channel/philo/tvs.sbd.1000030",
+        "themeColorCode": "#0C92F3",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000030/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000030/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000030/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000030/white.png"
+        }
+      },
+      "tvs.sbd.1000032": {
+        "id": "tvs.sbd.1000032",
+        "displayName": "Funimation",
+        "homePage": "https://tv.apple.com/us/channel/funimation/tvs.sbd.1000032",
+        "themeColorCode": "#5B0BB5",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000051": {
+        "id": "tvs.sbd.1000051",
+        "displayName": "BritBox",
+        "homePage": "https://tv.apple.com/us/channel/britbox/tvs.sbd.1000051",
+        "themeColorCode": "#00202b",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000058": {
+        "id": "tvs.sbd.1000058",
+        "displayName": "Qello Concerts",
+        "homePage": "https://tv.apple.com/us/channel/qello-concerts/tvs.sbd.1000058",
+        "themeColorCode": "#c32dff",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000061": {
+        "id": "tvs.sbd.1000061",
+        "displayName": "F1 TV",
+        "homePage": "https://tv.apple.com/us/channel/f1-tv/tvs.sbd.1000061",
+        "themeColorCode": "#e10600",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000064": {
+        "id": "tvs.sbd.1000064",
+        "displayName": "WATCH OWN",
+        "homePage": "https://tv.apple.com/us/channel/watch-own/tvs.sbd.1000064",
+        "themeColorCode": "#000000",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000091": {
+        "id": "tvs.sbd.1000091",
+        "displayName": "Garage",
+        "homePage": "https://tv.apple.com/us/channel/garage/tvs.sbd.1000091",
+        "themeColorCode": "#0d0e10",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000120": {
+        "id": "tvs.sbd.1000120",
+        "displayName": "FilmRise",
+        "homePage": "https://tv.apple.com/us/channel/filmrise/tvs.sbd.1000120",
+        "themeColorCode": "#c61d3a",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000120/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000120/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000120/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000120/white.png"
+        }
+      },
+      "tvs.sbd.1000158": {
+        "id": "tvs.sbd.1000158",
+        "displayName": "MotorTrend",
+        "homePage": "https://tv.apple.com/us/channel/motortrend/tvs.sbd.1000158",
+        "themeColorCode": "#ED271C",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000185": {
+        "id": "tvs.sbd.1000185",
+        "displayName": "MGM+",
+        "homePage": "https://tv.apple.com/us/channel/mgm/tvs.sbd.1000185",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000185/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000185/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000185/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000185/white.png"
+        }
+      },
+      "tvs.sbd.1000203": {
+        "id": "tvs.sbd.1000203",
+        "displayName": "Showtime",
+        "homePage": "https://tv.apple.com/us/channel/showtime/tvs.sbd.1000203",
+        "themeColorCode": "#A33724",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000204": {
+        "id": "tvs.sbd.1000204",
+        "displayName": "PBS Living",
+        "homePage": "https://tv.apple.com/us/channel/pbs-living/tvs.sbd.1000204",
+        "themeColorCode": "#F47920",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000204/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000204/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000204/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000204/white.png"
+        }
+      },
+      "tvs.sbd.1000206": {
+        "id": "tvs.sbd.1000206",
+        "displayName": "Shudder",
+        "homePage": "https://tv.apple.com/us/channel/shudder/tvs.sbd.1000206",
+        "themeColorCode": "#2F3D53",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000206/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000206/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000206/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000206/white.png"
+        }
+      },
+      "tvs.sbd.1000208": {
+        "id": "tvs.sbd.1000208",
+        "displayName": "Sundance Now",
+        "homePage": "https://tv.apple.com/us/channel/sundance-now/tvs.sbd.1000208",
+        "themeColorCode": "#1D2136",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000208/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000208/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000208/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000208/white.png"
+        }
+      },
+      "tvs.sbd.1000211": {
+        "id": "tvs.sbd.1000211",
+        "displayName": "Tastemade",
+        "homePage": "https://tv.apple.com/us/channel/tastemade/tvs.sbd.1000211",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000211/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000211/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000211/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000211/white.png"
+        }
+      },
+      "tvs.sbd.1000212": {
+        "id": "tvs.sbd.1000212",
+        "displayName": "Acorn TV",
+        "homePage": "https://tv.apple.com/us/channel/acorn-tv/tvs.sbd.1000212",
+        "themeColorCode": "#000000",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000214": {
+        "id": "tvs.sbd.1000214",
+        "displayName": "ALLBLK",
+        "homePage": "https://tv.apple.com/us/channel/allblk/tvs.sbd.1000214",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000214/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000214/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000214/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000214/white.png"
+        }
+      },
+      "tvs.sbd.1000216": {
+        "id": "tvs.sbd.1000216",
+        "displayName": "Disney+",
+        "homePage": "https://tv.apple.com/us/channel/disney/tvs.sbd.1000216",
+        "themeColorCode": "#001899",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000227": {
+        "id": "tvs.sbd.1000227",
+        "displayName": "Curiosity Stream",
+        "homePage": "https://tv.apple.com/us/channel/curiosity-stream/tvs.sbd.1000227",
+        "themeColorCode": "#0C111F",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000227/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000227/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000227/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000227/white.png"
+        }
+      },
+      "tvs.sbd.1000228": {
+        "id": "tvs.sbd.1000228",
+        "displayName": "HISTORY Vault",
+        "homePage": "https://tv.apple.com/us/channel/history-vault/tvs.sbd.1000228",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000228/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000228/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000228/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000228/white.png"
+        }
+      },
+      "tvs.sbd.1000229": {
+        "id": "tvs.sbd.1000229",
+        "displayName": "Lifetime Movie Club",
+        "homePage": "https://tv.apple.com/us/channel/lifetime-movie-club/tvs.sbd.1000229",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000229/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000229/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000229/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000229/white.png"
+        }
+      },
+      "tvs.sbd.1000230": {
+        "id": "tvs.sbd.1000230",
+        "displayName": "Paramount+",
+        "homePage": "https://tv.apple.com/us/channel/paramount/tvs.sbd.1000230",
+        "themeColorCode": "#1764FF",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000230/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000230/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000230/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000230/white.png"
+        }
+      },
+      "tvs.sbd.1000231": {
+        "id": "tvs.sbd.1000231",
+        "displayName": "STARZ",
+        "homePage": "https://tv.apple.com/us/channel/starz/tvs.sbd.1000231",
+        "themeColorCode": "#006576",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000231/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000231/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000231/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000231/white.png"
+        }
+      },
+      "tvs.sbd.1000234": {
+        "id": "tvs.sbd.1000234",
+        "displayName": "Noggin",
+        "homePage": "https://tv.apple.com/us/channel/noggin/tvs.sbd.1000234",
+        "themeColorCode": "#8E53DB",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000234/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000234/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000234/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000234/white.png"
+        }
+      },
+      "tvs.sbd.1000244": {
+        "id": "tvs.sbd.1000244",
+        "displayName": "Cinemax",
+        "homePage": "https://tv.apple.com/us/channel/cinemax/tvs.sbd.1000244",
+        "themeColorCode": "#EDAE41",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000244/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000244/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000244/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000244/white.png"
+        }
+      },
+      "tvs.sbd.1000249": {
+        "id": "tvs.sbd.1000249",
+        "displayName": "MUBI",
+        "homePage": "https://tv.apple.com/us/channel/mubi/tvs.sbd.1000249",
+        "themeColorCode": "#041383",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000249.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000249.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000257": {
+        "id": "tvs.sbd.1000257",
+        "displayName": "UP Faith & Family",
+        "homePage": "https://tv.apple.com/us/channel/up-faith--family/tvs.sbd.1000257",
+        "themeColorCode": "#444443",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000257/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000257/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000257/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000257/white.png"
+        }
+      },
+      "tvs.sbd.1000266": {
+        "id": "tvs.sbd.1000266",
+        "displayName": "OUTtv",
+        "homePage": "https://tv.apple.com/us/channel/outtv/tvs.sbd.1000266",
+        "themeColorCode": "#000000",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000272": {
+        "id": "tvs.sbd.1000272",
+        "displayName": "MGM+",
+        "homePage": "https://tv.apple.com/us/channel/mgm/tvs.sbd.1000272",
+        "themeColorCode": "#9D7F2C",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000272/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000272/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000272/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000272/white.png"
+        }
+      },
+      "tvs.sbd.1000288": {
+        "id": "tvs.sbd.1000288",
+        "displayName": "IFC Films",
+        "homePage": "https://tv.apple.com/us/channel/ifc-films/tvs.sbd.1000288",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000288/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000288/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000288/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000288/white.png"
+        }
+      },
+      "tvs.sbd.1000294": {
+        "id": "tvs.sbd.1000294",
+        "displayName": "BritBox",
+        "homePage": "https://tv.apple.com/us/channel/britbox/tvs.sbd.1000294",
+        "themeColorCode": "#00202b",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000299": {
+        "id": "tvs.sbd.1000299",
+        "displayName": "BET+",
+        "homePage": "https://tv.apple.com/us/channel/bet/tvs.sbd.1000299",
+        "themeColorCode": "#CC00CC",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000299/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000299/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000299/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000299/white.png"
+        }
+      },
+      "tvs.sbd.1000301": {
+        "id": "tvs.sbd.1000301",
+        "displayName": "Eros Now Select",
+        "homePage": "https://tv.apple.com/us/channel/eros-now-select/tvs.sbd.1000301",
+        "themeColorCode": "#FF4013",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000303": {
+        "id": "tvs.sbd.1000303",
+        "displayName": "NAT GEO TV",
+        "homePage": "https://tv.apple.com/us/channel/nat-geo-tv/tvs.sbd.1000303",
+        "themeColorCode": "#020202",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000303/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000303/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000303/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000303/white.png"
+        }
+      },
+      "tvs.sbd.1000332": {
+        "id": "tvs.sbd.1000332",
+        "displayName": "A&E Crime Central",
+        "homePage": "https://tv.apple.com/us/channel/ae-crime-central/tvs.sbd.1000332",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000332/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000332/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000332/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000332/white.png"
+        }
+      },
+      "tvs.sbd.1000350": {
+        "id": "tvs.sbd.1000350",
+        "displayName": "Pantaya",
+        "homePage": "https://tv.apple.com/us/channel/pantaya/tvs.sbd.1000350",
+        "themeColorCode": "",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000355": {
+        "id": "tvs.sbd.1000355",
+        "displayName": "Topic",
+        "homePage": "https://tv.apple.com/us/channel/topic/tvs.sbd.1000355",
+        "themeColorCode": "#000000",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000362": {
+        "id": "tvs.sbd.1000362",
+        "displayName": "Hallmark Movies Now",
+        "homePage": "https://tv.apple.com/us/channel/hallmark-movies-now/tvs.sbd.1000362",
+        "themeColorCode": "#573C81",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000362/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000362/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000362/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000362/white.png"
+        }
+      },
+      "tvs.sbd.1000368": {
+        "id": "tvs.sbd.1000368",
+        "displayName": "BFI Player Classics",
+        "homePage": "https://tv.apple.com/us/channel/bfi-player-classics/tvs.sbd.1000368",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000368/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000368/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000368/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000368/white.png"
+        }
+      },
+      "tvs.sbd.1000371": {
+        "id": "tvs.sbd.1000371",
+        "displayName": "Peacock",
+        "homePage": "https://tv.apple.com/us/channel/peacock/tvs.sbd.1000371",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000371/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000371/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000371/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000371/white.png"
+        }
+      },
+      "tvs.sbd.1000379": {
+        "id": "tvs.sbd.1000379",
+        "displayName": "Plex",
+        "homePage": "https://tv.apple.com/us/channel/plex/tvs.sbd.1000379",
+        "themeColorCode": "#282A2D",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000379/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000379/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000379/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000379/white.png"
+        }
+      },
+      "tvs.sbd.1000383": {
+        "id": "tvs.sbd.1000383",
+        "displayName": "AMC+",
+        "homePage": "https://tv.apple.com/us/channel/amc/tvs.sbd.1000383",
+        "themeColorCode": "#0E1623",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000383/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000383/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000383/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000383/white.png"
+        }
+      },
+      "tvs.sbd.1000384": {
+        "id": "tvs.sbd.1000384",
+        "displayName": "NFL",
+        "homePage": "https://tv.apple.com/us/channel/nfl/tvs.sbd.1000384",
+        "themeColorCode": "#013369",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000384/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000384/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000384/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000384/white.png"
+        }
+      },
+      "tvs.sbd.1000393": {
+        "id": "tvs.sbd.1000393",
+        "displayName": "BET+",
+        "homePage": "https://tv.apple.com/us/channel/bet/tvs.sbd.1000393",
+        "themeColorCode": "#CC00CC",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000393/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000393/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000393/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000393/white.png"
+        }
+      },
+      "tvs.sbd.1000395": {
+        "id": "tvs.sbd.1000395",
+        "displayName": "Hallmark Movies Now",
+        "homePage": "https://tv.apple.com/us/channel/hallmark-movies-now/tvs.sbd.1000395",
+        "themeColorCode": "#563D82",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000395/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000395/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000395/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000395/white.png"
+        }
+      },
+      "tvs.sbd.1000397": {
+        "id": "tvs.sbd.1000397",
+        "displayName": "adult swim",
+        "homePage": "https://tv.apple.com/us/channel/adult-swim/tvs.sbd.1000397",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000397/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000397/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000397/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000397/white.png"
+        }
+      },
+      "tvs.sbd.1000408": {
+        "id": "tvs.sbd.1000408",
+        "displayName": "discovery+",
+        "homePage": "https://tv.apple.com/us/channel/discovery/tvs.sbd.1000408",
+        "themeColorCode": "#121317",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000408/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000408/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000408/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000408/white.png"
+        }
+      },
+      "tvs.sbd.1000415": {
+        "id": "tvs.sbd.1000415",
+        "displayName": "BBC Select",
+        "homePage": "https://tv.apple.com/us/channel/bbc-select/tvs.sbd.1000415",
+        "themeColorCode": "#8FB79D",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000427": {
+        "id": "tvs.sbd.1000427",
+        "displayName": "MagellanTV Documentaries",
+        "homePage": "https://tv.apple.com/us/channel/magellantv-documentaries/tvs.sbd.1000427",
+        "themeColorCode": "#0a1f2d",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000435": {
+        "id": "tvs.sbd.1000435",
+        "displayName": "The Great Courses Signature Collection",
+        "homePage": "https://tv.apple.com/us/channel/the-great-courses-signature-collection/tvs.sbd.1000435",
+        "themeColorCode": "#000000",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000447": {
+        "id": "tvs.sbd.1000447",
+        "displayName": "Univision",
+        "homePage": "https://tv.apple.com/us/channel/univision/tvs.sbd.1000447",
+        "themeColorCode": "#666666",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000447/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000447/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000447/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000447/white.png"
+        }
+      },
+      "tvs.sbd.1000452": {
+        "id": "tvs.sbd.1000452",
+        "displayName": "CBS",
+        "homePage": "https://tv.apple.com/us/channel/cbs/tvs.sbd.1000452",
+        "themeColorCode": "#040C35",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000464": {
+        "id": "tvs.sbd.1000464",
+        "displayName": "ScreenPix",
+        "homePage": "https://tv.apple.com/us/channel/screenpix/tvs.sbd.1000464",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000464/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000464/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000464/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000464/white.png"
+        }
+      },
+      "tvs.sbd.1000473": {
+        "id": "tvs.sbd.1000473",
+        "displayName": "Carnegie Hall+",
+        "homePage": "https://tv.apple.com/us/channel/carnegie-hall/tvs.sbd.1000473",
+        "themeColorCode": "#e42138",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000494": {
+        "id": "tvs.sbd.1000494",
+        "displayName": "MotorTrend",
+        "homePage": "https://tv.apple.com/us/channel/motortrend/tvs.sbd.1000494",
+        "themeColorCode": "#ED3125",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000496": {
+        "id": "tvs.sbd.1000496",
+        "displayName": "Up Faith and Family",
+        "homePage": "https://tv.apple.com/us/channel/up-faith-and-family/tvs.sbd.1000496",
+        "themeColorCode": "#282828",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000496/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000496/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000496/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000496/white.png"
+        }
+      },
+      "tvs.sbd.1000498": {
+        "id": "tvs.sbd.1000498",
+        "displayName": "AMC+",
+        "homePage": "https://tv.apple.com/us/channel/amc/tvs.sbd.1000498",
+        "themeColorCode": "#0E1623",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000498/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000498/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000498/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000498/white.png"
+        }
+      },
+      "tvs.sbd.1000503": {
+        "id": "tvs.sbd.1000503",
+        "displayName": "Amazon Freevee",
+        "homePage": "https://tv.apple.com/us/channel/amazon-freevee/tvs.sbd.1000503",
+        "themeColorCode": "#32155A",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000503/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000503/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000503/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000503/white.png"
+        }
+      },
+      "tvs.sbd.1000511": {
+        "id": "tvs.sbd.1000511",
+        "displayName": "Smithsonian Channel",
+        "homePage": "https://tv.apple.com/us/channel/smithsonian-channel/tvs.sbd.1000511",
+        "themeColorCode": "#DB2C2C",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000511/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000511/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000511/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000511/white.png"
+        }
+      },
+      "tvs.sbd.1000529": {
+        "id": "tvs.sbd.1000529",
+        "displayName": "Gaia",
+        "homePage": "https://tv.apple.com/us/channel/gaia/tvs.sbd.1000529",
+        "themeColorCode": "#01B4B4",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000529/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000529/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000529/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000529/white.png"
+        }
+      },
+      "tvs.sbd.1000543": {
+        "id": "tvs.sbd.1000543",
+        "displayName": "ViX",
+        "homePage": "https://tv.apple.com/us/channel/vix/tvs.sbd.1000543",
+        "themeColorCode": "#666666",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000543.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000543.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000547": {
+        "id": "tvs.sbd.1000547",
+        "displayName": "CJ ENM Selects",
+        "homePage": "https://tv.apple.com/us/channel/cj-enm-selects/tvs.sbd.1000547",
+        "themeColorCode": "#FF5A00",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.1000566": {
+        "id": "tvs.sbd.1000566",
+        "displayName": "Max",
+        "homePage": "https://tv.apple.com/us/channel/max/tvs.sbd.1000566",
+        "themeColorCode": "#002BE7",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000566/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000566/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000566/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.1000566/white.png"
+        }
+      },
+      "tvs.sbd.1000569": {
+        "id": "tvs.sbd.1000569",
+        "displayName": "Marquee TV",
+        "homePage": "https://tv.apple.com/us/channel/marquee-tv/tvs.sbd.1000569",
+        "themeColorCode": "#ff87c3",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.10020": {
+        "id": "tvs.sbd.10020",
+        "displayName": "SHOWTIME",
+        "homePage": "https://tv.apple.com/us/channel/showtime/tvs.sbd.10020",
+        "themeColorCode": "#B10000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10020/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10020/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10020/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10020/white.png"
+        }
+      },
+      "tvs.sbd.10021": {
+        "id": "tvs.sbd.10021",
+        "displayName": "Showtime Anytime",
+        "homePage": "https://tv.apple.com/us/channel/showtime-anytime/tvs.sbd.10021",
+        "themeColorCode": "#B10000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10021/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10021/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10021/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10021/white.png"
+        }
+      },
+      "tvs.sbd.10060": {
+        "id": "tvs.sbd.10060",
+        "displayName": "FXNOW",
+        "homePage": "https://tv.apple.com/us/channel/fxnow/tvs.sbd.10060",
+        "themeColorCode": "#121212",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10060/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10060/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10060/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10060/white.png"
+        }
+      },
+      "tvs.sbd.10080": {
+        "id": "tvs.sbd.10080",
+        "displayName": "PBS Video",
+        "homePage": "https://tv.apple.com/us/channel/pbs-video/tvs.sbd.10080",
+        "themeColorCode": "#2638C4",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10080/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10080/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10080/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10080/white.png"
+        }
+      },
+      "tvs.sbd.10081": {
+        "id": "tvs.sbd.10081",
+        "displayName": "PBS KIDS Video",
+        "homePage": "https://tv.apple.com/us/channel/pbs-kids-video/tvs.sbd.10081",
+        "themeColorCode": "#E5296B",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10081.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10081.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.10100": {
+        "id": "tvs.sbd.10100",
+        "displayName": "DisneyNOW",
+        "homePage": "https://tv.apple.com/us/channel/disneynow/tvs.sbd.10100",
+        "themeColorCode": "#C40431",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10100/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10100/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10100/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10100/white.png"
+        }
+      },
+      "tvs.sbd.10120": {
+        "id": "tvs.sbd.10120",
+        "displayName": "Paramount+",
+        "homePage": "https://tv.apple.com/us/channel/paramount/tvs.sbd.10120",
+        "themeColorCode": "#1764FF",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10120/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10120/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10120/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10120/white.png"
+        }
+      },
+      "tvs.sbd.10180": {
+        "id": "tvs.sbd.10180",
+        "displayName": "ABC",
+        "homePage": "https://tv.apple.com/us/channel/abc/tvs.sbd.10180",
+        "themeColorCode": "#0A1320",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10180/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10180/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10180/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10180/white.png"
+        }
+      },
+      "tvs.sbd.10200": {
+        "id": "tvs.sbd.10200",
+        "displayName": "STARZ",
+        "homePage": "https://tv.apple.com/us/channel/starz/tvs.sbd.10200",
+        "themeColorCode": "#333333",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10200/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10200/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10200/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10200/white.png"
+        }
+      },
+      "tvs.sbd.10220": {
+        "id": "tvs.sbd.10220",
+        "displayName": "NBC",
+        "homePage": "https://tv.apple.com/us/channel/nbc/tvs.sbd.10220",
+        "themeColorCode": "#4078D0",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10220/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10220/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10220/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10220/white.png"
+        }
+      },
+      "tvs.sbd.10241": {
+        "id": "tvs.sbd.10241",
+        "displayName": "A&E",
+        "homePage": "https://tv.apple.com/us/channel/ae/tvs.sbd.10241",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10241.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10241.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.10260": {
+        "id": "tvs.sbd.10260",
+        "displayName": "HISTORY",
+        "homePage": "https://tv.apple.com/us/channel/history/tvs.sbd.10260",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10260/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10260/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10260/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10260/white.png"
+        }
+      },
+      "tvs.sbd.10280": {
+        "id": "tvs.sbd.10280",
+        "displayName": "Travel Channel",
+        "homePage": "https://tv.apple.com/us/channel/travel-channel/tvs.sbd.10280",
+        "themeColorCode": "#242424",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.10282": {
+        "id": "tvs.sbd.10282",
+        "displayName": "Food Network",
+        "homePage": "https://tv.apple.com/us/channel/food-network/tvs.sbd.10282",
+        "themeColorCode": "#c41f40",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.10300": {
+        "id": "tvs.sbd.10300",
+        "displayName": "Lifetime",
+        "homePage": "https://tv.apple.com/us/channel/lifetime/tvs.sbd.10300",
+        "themeColorCode": "#f51a51",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10300/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10300/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10300/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10300/white.png"
+        }
+      },
+      "tvs.sbd.10302": {
+        "id": "tvs.sbd.10302",
+        "displayName": "FYI TV",
+        "homePage": "https://tv.apple.com/us/channel/fyi-tv/tvs.sbd.10302",
+        "themeColorCode": "",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10302/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10302/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10302/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10302/white.svg"
+        }
+      },
+      "tvs.sbd.10304": {
+        "id": "tvs.sbd.10304",
+        "displayName": "Cooking Channel",
+        "homePage": "https://tv.apple.com/us/channel/cooking-channel/tvs.sbd.10304",
+        "themeColorCode": "#242424",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.10400": {
+        "id": "tvs.sbd.10400",
+        "displayName": "Comedy Central",
+        "homePage": "https://tv.apple.com/us/channel/comedy-central/tvs.sbd.10400",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10400/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10400/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10400/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10400/white.png"
+        }
+      },
+      "tvs.sbd.10420": {
+        "id": "tvs.sbd.10420",
+        "displayName": "MTV",
+        "homePage": "https://tv.apple.com/us/channel/mtv/tvs.sbd.10420",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10420/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10420/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10420/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10420/white.png"
+        }
+      },
+      "tvs.sbd.10520": {
+        "id": "tvs.sbd.10520",
+        "displayName": "HGTV",
+        "homePage": "https://tv.apple.com/us/channel/hgtv/tvs.sbd.10520",
+        "themeColorCode": "#4eabc1",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.10540": {
+        "id": "tvs.sbd.10540",
+        "displayName": "Sundance Now",
+        "homePage": "https://tv.apple.com/us/channel/sundance-now/tvs.sbd.10540",
+        "themeColorCode": "#1c2136",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10540/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10540/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10540/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10540/white.png"
+        }
+      },
+      "tvs.sbd.10600": {
+        "id": "tvs.sbd.10600",
+        "displayName": "Shudder",
+        "homePage": "https://tv.apple.com/us/channel/shudder/tvs.sbd.10600",
+        "themeColorCode": "#2F3D53",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10600/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10600/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10600/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10600/white.png"
+        }
+      },
+      "tvs.sbd.10620": {
+        "id": "tvs.sbd.10620",
+        "displayName": "Bravo",
+        "homePage": "https://tv.apple.com/us/channel/bravo/tvs.sbd.10620",
+        "themeColorCode": "#679197",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10620/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10620/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10620/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10620/white.png"
+        }
+      },
+      "tvs.sbd.10640": {
+        "id": "tvs.sbd.10640",
+        "displayName": "E!",
+        "homePage": "https://tv.apple.com/us/channel/e/tvs.sbd.10640",
+        "themeColorCode": "#0089A8",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10640/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10640/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10640/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10640/white.png"
+        }
+      },
+      "tvs.sbd.10642": {
+        "id": "tvs.sbd.10642",
+        "displayName": "Telemundo",
+        "homePage": "https://tv.apple.com/us/channel/telemundo/tvs.sbd.10642",
+        "themeColorCode": "#1F2127",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10642/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10642/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10642/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10642/white.png"
+        }
+      },
+      "tvs.sbd.10664": {
+        "id": "tvs.sbd.10664",
+        "displayName": "Syfy",
+        "homePage": "https://tv.apple.com/us/channel/syfy/tvs.sbd.10664",
+        "themeColorCode": "#635762",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10664/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10664/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10664/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10664/white.png"
+        }
+      },
+      "tvs.sbd.10680": {
+        "id": "tvs.sbd.10680",
+        "displayName": "USA",
+        "homePage": "https://tv.apple.com/us/channel/usa/tvs.sbd.10680",
+        "themeColorCode": "#FF3B30",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10680/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10680/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10680/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10680/white.png"
+        }
+      },
+      "tvs.sbd.10760": {
+        "id": "tvs.sbd.10760",
+        "displayName": "CBS News",
+        "homePage": "https://tv.apple.com/us/channel/cbs-news/tvs.sbd.10760",
+        "themeColorCode": "#212121",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10760/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10760/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10760/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10760/white.png"
+        }
+      },
+      "tvs.sbd.10800": {
+        "id": "tvs.sbd.10800",
+        "displayName": "VH1",
+        "homePage": "https://tv.apple.com/us/channel/vh1/tvs.sbd.10800",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10800/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10800/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10800/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10800/white.png"
+        }
+      },
+      "tvs.sbd.10920": {
+        "id": "tvs.sbd.10920",
+        "displayName": "HISTORY Vault",
+        "homePage": "https://tv.apple.com/us/channel/history-vault/tvs.sbd.10920",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10920/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10920/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10920/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10920/white.png"
+        }
+      },
+      "tvs.sbd.10940": {
+        "id": "tvs.sbd.10940",
+        "displayName": "CNN",
+        "homePage": "https://tv.apple.com/us/channel/cnn/tvs.sbd.10940",
+        "themeColorCode": "#CD2126",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10940/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10940/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10940/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.10940/white.png"
+        }
+      },
+      "tvs.sbd.10960": {
+        "id": "tvs.sbd.10960",
+        "displayName": "Hopster",
+        "homePage": "https://tv.apple.com/us/channel/hopster/tvs.sbd.10960",
+        "themeColorCode": "#ed2676",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11000": {
+        "id": "tvs.sbd.11000",
+        "displayName": "AMC",
+        "homePage": "https://tv.apple.com/us/channel/amc/tvs.sbd.11000",
+        "themeColorCode": "#2C5D97",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11000/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11000/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11000/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11000/white.png"
+        }
+      },
+      "tvs.sbd.11120": {
+        "id": "tvs.sbd.11120",
+        "displayName": "The CW",
+        "homePage": "https://tv.apple.com/us/channel/the-cw/tvs.sbd.11120",
+        "themeColorCode": "#2BA9A5",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11160": {
+        "id": "tvs.sbd.11160",
+        "displayName": "Crunchyroll",
+        "homePage": "https://tv.apple.com/us/channel/crunchyroll/tvs.sbd.11160",
+        "themeColorCode": "#F47521",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11180": {
+        "id": "tvs.sbd.11180",
+        "displayName": "Hallmark TV",
+        "homePage": "https://tv.apple.com/us/channel/hallmark-tv/tvs.sbd.11180",
+        "themeColorCode": "#0A7FA6",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11180/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11180/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11180/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11180/white.png"
+        }
+      },
+      "tvs.sbd.11220": {
+        "id": "tvs.sbd.11220",
+        "displayName": "TNT",
+        "homePage": "https://tv.apple.com/us/channel/tnt/tvs.sbd.11220",
+        "themeColorCode": "#232323",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11220/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11220/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11220/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11220/white.png"
+        }
+      },
+      "tvs.sbd.11221": {
+        "id": "tvs.sbd.11221",
+        "displayName": "TBS",
+        "homePage": "https://tv.apple.com/us/channel/tbs/tvs.sbd.11221",
+        "themeColorCode": "#A93D78",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11221/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11221/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11221/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11221/white.png"
+        }
+      },
+      "tvs.sbd.11222": {
+        "id": "tvs.sbd.11222",
+        "displayName": "Cartoon Network",
+        "homePage": "https://tv.apple.com/us/channel/cartoon-network/tvs.sbd.11222",
+        "themeColorCode": "#000000",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11240": {
+        "id": "tvs.sbd.11240",
+        "displayName": "MUBI",
+        "homePage": "https://tv.apple.com/us/channel/mubi/tvs.sbd.11240",
+        "themeColorCode": "#001489",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11240.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11240.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11320": {
+        "id": "tvs.sbd.11320",
+        "displayName": "CuriosityStream",
+        "homePage": "https://tv.apple.com/us/channel/curiositystream/tvs.sbd.11320",
+        "themeColorCode": "#161F37",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11360": {
+        "id": "tvs.sbd.11360",
+        "displayName": "BET",
+        "homePage": "https://tv.apple.com/us/channel/bet/tvs.sbd.11360",
+        "themeColorCode": "#E05B4E",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11360/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11360/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11360/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11360/white.png"
+        }
+      },
+      "tvs.sbd.11361": {
+        "id": "tvs.sbd.11361",
+        "displayName": "BBC America",
+        "homePage": "https://tv.apple.com/us/channel/bbc-america/tvs.sbd.11361",
+        "themeColorCode": "#FA1C1C",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11361.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11361.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11480": {
+        "id": "tvs.sbd.11480",
+        "displayName": "Paramount Network",
+        "homePage": "https://tv.apple.com/us/channel/paramount-network/tvs.sbd.11480",
+        "themeColorCode": "#0166A4",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11560": {
+        "id": "tvs.sbd.11560",
+        "displayName": "Discovery",
+        "homePage": "https://tv.apple.com/us/channel/discovery/tvs.sbd.11560",
+        "themeColorCode": "#1c6693",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11561": {
+        "id": "tvs.sbd.11561",
+        "displayName": "TLC",
+        "homePage": "https://tv.apple.com/us/channel/tlc/tvs.sbd.11561",
+        "themeColorCode": "#e81f2e",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11580": {
+        "id": "tvs.sbd.11580",
+        "displayName": "Animal Planet",
+        "homePage": "https://tv.apple.com/us/channel/animal-planet/tvs.sbd.11580",
+        "themeColorCode": "#0073ff",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11581": {
+        "id": "tvs.sbd.11581",
+        "displayName": "Investigation Discovery",
+        "homePage": "https://tv.apple.com/us/channel/investigation-discovery/tvs.sbd.11581",
+        "themeColorCode": "#F2231A",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11582": {
+        "id": "tvs.sbd.11582",
+        "displayName": "Science Channel",
+        "homePage": "https://tv.apple.com/us/channel/science-channel/tvs.sbd.11582",
+        "themeColorCode": "#5c9cd4",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11760": {
+        "id": "tvs.sbd.11760",
+        "displayName": "Univision Now",
+        "homePage": "https://tv.apple.com/us/channel/univision-now/tvs.sbd.11760",
+        "themeColorCode": "#666666",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11760.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11760.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.11860": {
+        "id": "tvs.sbd.11860",
+        "displayName": "Freeform",
+        "homePage": "https://tv.apple.com/us/channel/freeform/tvs.sbd.11860",
+        "themeColorCode": "#1981F5",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11860/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11860/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11860/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11860/white.png"
+        }
+      },
+      "tvs.sbd.11880": {
+        "id": "tvs.sbd.11880",
+        "displayName": "truTV",
+        "homePage": "https://tv.apple.com/us/channel/trutv/tvs.sbd.11880",
+        "themeColorCode": "#4138FF",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11880/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11880/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11880/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11880/white.png"
+        }
+      },
+      "tvs.sbd.11900": {
+        "id": "tvs.sbd.11900",
+        "displayName": "Lifetime Movie Club",
+        "homePage": "https://tv.apple.com/us/channel/lifetime-movie-club/tvs.sbd.11900",
+        "themeColorCode": "#f51a51",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11900/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11900/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11900/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.11900/white.png"
+        }
+      },
+      "tvs.sbd.12304": {
+        "id": "tvs.sbd.12304",
+        "displayName": "AHC GO",
+        "homePage": "https://tv.apple.com/us/channel/ahc-go/tvs.sbd.12304",
+        "themeColorCode": "#1a4278",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.12305": {
+        "id": "tvs.sbd.12305",
+        "displayName": "Destination America GO",
+        "homePage": "https://tv.apple.com/us/channel/destination-america-go/tvs.sbd.12305",
+        "themeColorCode": "#1c2739",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.12306": {
+        "id": "tvs.sbd.12306",
+        "displayName": "Discovery Life GO",
+        "homePage": "https://tv.apple.com/us/channel/discovery-life-go/tvs.sbd.12306",
+        "themeColorCode": "#74a9d0",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.12307": {
+        "id": "tvs.sbd.12307",
+        "displayName": "MotorTrend GO",
+        "homePage": "https://tv.apple.com/us/channel/motortrend-go/tvs.sbd.12307",
+        "themeColorCode": "#ee3220",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12307/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12307/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12307/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12307/white.png"
+        }
+      },
+      "tvs.sbd.12381": {
+        "id": "tvs.sbd.12381",
+        "displayName": "Sling TV",
+        "homePage": "https://tv.apple.com/us/channel/sling-tv/tvs.sbd.12381",
+        "themeColorCode": "",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12381/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12381/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12381/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12381/white.svg"
+        }
+      },
+      "tvs.sbd.12442": {
+        "id": "tvs.sbd.12442",
+        "displayName": "Pluto TV",
+        "homePage": "https://tv.apple.com/us/channel/pluto-tv/tvs.sbd.12442",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12442/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12442/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12442/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12442/white.png"
+        }
+      },
+      "tvs.sbd.12482": {
+        "id": "tvs.sbd.12482",
+        "displayName": "Classix",
+        "homePage": "https://tv.apple.com/us/channel/classix/tvs.sbd.12482",
+        "themeColorCode": "#1D1D1E",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.12521": {
+        "id": "tvs.sbd.12521",
+        "displayName": "Oxygen",
+        "homePage": "https://tv.apple.com/us/channel/oxygen/tvs.sbd.12521",
+        "themeColorCode": "#9A4BA0",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12521/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12521/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12521/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12521/white.png"
+        }
+      },
+      "tvs.sbd.12740": {
+        "id": "tvs.sbd.12740",
+        "displayName": "Acorn TV",
+        "homePage": "https://tv.apple.com/us/channel/acorn-tv/tvs.sbd.12740",
+        "themeColorCode": "#0B1733",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12740.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12740.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.12741": {
+        "id": "tvs.sbd.12741",
+        "displayName": "ALLBLK",
+        "homePage": "https://tv.apple.com/us/channel/allblk/tvs.sbd.12741",
+        "themeColorCode": "#080808",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12741/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12741/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12741/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12741/white.png"
+        }
+      },
+      "tvs.sbd.12880": {
+        "id": "tvs.sbd.12880",
+        "displayName": "FlixLatino",
+        "homePage": "https://tv.apple.com/us/channel/flixlatino/tvs.sbd.12880",
+        "themeColorCode": "#B13432",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12880/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12880/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12880/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.12880/white.png"
+        }
+      },
+      "tvs.sbd.12962": {
+        "id": "tvs.sbd.12962",
+        "displayName": "Prime Video",
+        "homePage": "https://tv.apple.com/us/channel/prime-video/tvs.sbd.12962",
+        "themeColorCode": "#1a98FF",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.12980": {
+        "id": "tvs.sbd.12980",
+        "displayName": "Red Bull TV",
+        "homePage": "https://tv.apple.com/us/channel/red-bull-tv/tvs.sbd.12980",
+        "themeColorCode": "#001E3C",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.13160": {
+        "id": "tvs.sbd.13160",
+        "displayName": "Tubi TV",
+        "homePage": "https://tv.apple.com/us/channel/tubi-tv/tvs.sbd.13160",
+        "themeColorCode": "#10141F",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.13180": {
+        "id": "tvs.sbd.13180",
+        "displayName": "Fox News",
+        "homePage": "https://tv.apple.com/us/channel/fox-news/tvs.sbd.13180",
+        "themeColorCode": "#244291",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.13180/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.13180/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.13180/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.13180/white.png"
+        }
+      },
+      "tvs.sbd.13270": {
+        "id": "tvs.sbd.13270",
+        "displayName": "Globoplay",
+        "homePage": "https://tv.apple.com/us/channel/globoplay/tvs.sbd.13270",
+        "themeColorCode": "#FB0234",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.13621": {
+        "id": "tvs.sbd.13621",
+        "displayName": "PlayKids",
+        "homePage": "https://tv.apple.com/us/channel/playkids/tvs.sbd.13621",
+        "themeColorCode": "#9c227d",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.2000": {
+        "id": "tvs.sbd.2000",
+        "displayName": "Music",
+        "homePage": "https://tv.apple.com/us/channel/music/tvs.sbd.2000",
+        "themeColorCode": "",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.3000": {
+        "id": "tvs.sbd.3000",
+        "displayName": "Apple TV",
+        "homePage": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.3000",
+        "themeColorCode": "#000000",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "tvs.sbd.30061": {
+        "id": "tvs.sbd.30061",
+        "displayName": "ESPN",
+        "homePage": "https://tv.apple.com/us/channel/espn/tvs.sbd.30061",
+        "themeColorCode": "#EF4135",
+        "image": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.30061/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.30061/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.30061/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/apple/us/addons/tvs.sbd.30061/white.png"
+        }
+      },
+      "tvs.sbd.9000": {
+        "id": "tvs.sbd.9000",
+        "displayName": "Netflix",
+        "homePage": "https://tv.apple.com/us/channel/netflix/tvs.sbd.9000",
+        "themeColorCode": "",
+        "image": "",
+        "images": {
+          "lightThemeImage": "",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      }
+    }
+  },
+  "britbox": {
+    "id": "britbox",
+    "name": "BritBox",
+    "homePage": "https://www.britbox.com/us",
+    "themeColorCode": "#4ba0b8",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/britbox/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/britbox/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/britbox/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  },
+  "curiosity": {
+    "id": "curiosity",
+    "name": "Curiosity Stream",
+    "homePage": "https://curiositystream.com/",
+    "themeColorCode": "#eea83d",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/curiosity/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/curiosity/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/curiosity/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  },
+  "disney": {
+    "id": "disney",
+    "name": "Disney+",
+    "homePage": "https://www.disneyplus.com/",
+    "themeColorCode": "#01137c",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/disney/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/disney/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/disney/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  },
+  "hbo": {
+    "id": "hbo",
+    "name": "Max",
+    "homePage": "https://play.max.com/",
+    "themeColorCode": "#002be7",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/max/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/max/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/max/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  },
+  "hulu": {
+    "id": "hulu",
+    "name": "Hulu",
+    "homePage": "https://www.hulu.com",
+    "themeColorCode": "#1ce783",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/hulu/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/hulu/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/hulu/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": true,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {
+      "cinemax": {
+        "id": "cinemax",
+        "displayName": "Cinemax",
+        "homePage": "https://www.hulu.com/network/cinemax-e53daca2-6aed-48b8-8d73-e87cc3ccc5b3",
+        "themeColorCode": "#010101",
+        "image": "https://media.movieofthenight.com/services/hulu/us/addons/cinemax/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/hulu/us/addons/cinemax/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/hulu/us/addons/cinemax/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/hulu/us/addons/cinemax/white.svg"
+        }
+      },
+      "max": {
+        "id": "max",
+        "displayName": "Max",
+        "homePage": "https://www.hulu.com/network/hbo-max-1b3523c1-3090-4c27-a1e8-a04d33867c34",
+        "themeColorCode": "#002be7",
+        "image": "https://media.movieofthenight.com/services/hulu/us/addons/max/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/hulu/us/addons/max/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/hulu/us/addons/max/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/hulu/us/addons/max/white.svg"
+        }
+      },
+      "showtime": {
+        "id": "showtime",
+        "displayName": "Paramount+ with Showtime",
+        "homePage": "https://www.hulu.com/network/showtime-f160e912-83eb-4bea-b6f6-a7fddc103757",
+        "themeColorCode": "#ff1f2c",
+        "image": "https://media.movieofthenight.com/services/hulu/us/addons/showtime/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/hulu/us/addons/showtime/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/hulu/us/addons/showtime/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/hulu/us/addons/showtime/white.svg"
+        }
+      },
+      "starz": {
+        "id": "starz",
+        "displayName": "Starz",
+        "homePage": "https://www.hulu.com/network/starz-162fd1ad-4b28-401a-a195-2103f57eb0de",
+        "themeColorCode": "#006576",
+        "image": "https://media.movieofthenight.com/services/hulu/us/addons/starz/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/hulu/us/addons/starz/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/hulu/us/addons/starz/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/hulu/us/addons/starz/white.svg"
+        }
+      }
+    }
+  },
+  "mubi": {
+    "id": "mubi",
+    "name": "Mubi",
+    "homePage": "https://mubi.com",
+    "themeColorCode": "#001588",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/mubi/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/mubi/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/mubi/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  },
+  "netflix": {
+    "id": "netflix",
+    "name": "Netflix",
+    "homePage": "https://www.netflix.com",
+    "themeColorCode": "#E50914",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/netflix/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/netflix/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/netflix/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  },
+  "paramount": {
+    "id": "paramount",
+    "name": "Paramount+",
+    "homePage": "https://www.paramountplus.com",
+    "themeColorCode": "#0064FF",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/paramount/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/paramount/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/paramount/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": true,
+      "buy": false,
+      "free": true,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {
+      "showtime": {
+        "id": "showtime",
+        "displayName": "Showtime",
+        "homePage": "https://www.paramountplus.com/brands/showtime/",
+        "themeColorCode": "#ff1f2c",
+        "image": "https://media.movieofthenight.com/services/paramount/us/addons/showtime/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/paramount/us/addons/showtime/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/paramount/us/addons/showtime/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/paramount/us/addons/showtime/white.svg"
+        }
+      }
+    }
+  },
+  "peacock": {
+    "id": "peacock",
+    "name": "Peacock",
+    "homePage": "https://www.peacocktv.com",
+    "themeColorCode": "#000000",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/peacock/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/peacock/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/peacock/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": true,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  },
+  "prime": {
+    "id": "prime",
+    "name": "Prime Video",
+    "homePage": "https://www.amazon.com/gp/video/storefront/",
+    "themeColorCode": "#00A8E1",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/prime/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/prime/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/prime/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": true,
+      "buy": true,
+      "free": false,
+      "rent": true,
+      "subscription": true
+    },
+    "addons": {
+      "acaciatv": {
+        "id": "acaciatv",
+        "displayName": "AcaciaTV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=acaciatv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/acaciatv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/acaciatv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/acaciatv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/acaciatv/white.png"
+        }
+      },
+      "acorn": {
+        "id": "acorn",
+        "displayName": "acorn",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=acorn",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/acorn/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/acorn/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/acorn/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/acorn/white.svg"
+        }
+      },
+      "aetncrimecentral": {
+        "id": "aetncrimecentral",
+        "displayName": "A&#38;E Crime Central",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=aetncrimecentral",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/aetncrimecentral/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/aetncrimecentral/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/aetncrimecentral/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/aetncrimecentral/white.svg"
+        }
+      },
+      "amcplus": {
+        "id": "amcplus",
+        "displayName": "AMC+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=amcplus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/amcplus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/amcplus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/amcplus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/amcplus/white.png"
+        }
+      },
+      "amebatv": {
+        "id": "amebatv",
+        "displayName": "Ameba",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=amebatv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/amebatv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/amebatv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/amebatv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/amebatv/white.svg"
+        }
+      },
+      "aspireTVus": {
+        "id": "aspireTVus",
+        "displayName": "aspireTVus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=aspireTVus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/aspireTVus/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/aspireTVus/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/aspireTVus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/aspireTVus/white.svg"
+        }
+      },
+      "bbcselect": {
+        "id": "bbcselect",
+        "displayName": "bbcselect",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bbcselect",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/bbcselect/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bbcselect/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bbcselect/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/bbcselect/white.png"
+        }
+      },
+      "befit": {
+        "id": "befit",
+        "displayName": "BeFiT",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=befit",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/befit/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/befit/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/befit/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/befit/white.svg"
+        }
+      },
+      "bestevertv": {
+        "id": "bestevertv",
+        "displayName": "Best TV Ever",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bestevertv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/bestevertv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bestevertv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bestevertv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/bestevertv/white.svg"
+        }
+      },
+      "bestofbritish": {
+        "id": "bestofbritish",
+        "displayName": "Best of British Television",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bestofbritish",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/bestofbritish/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bestofbritish/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bestofbritish/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/bestofbritish/white.png"
+        }
+      },
+      "bestwesternsever": {
+        "id": "bestwesternsever",
+        "displayName": "Best Westerns Ever",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bestwesternsever",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/bestwesternsever/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bestwesternsever/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bestwesternsever/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/bestwesternsever/white.svg"
+        }
+      },
+      "betplus": {
+        "id": "betplus",
+        "displayName": "BET+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=betplus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/betplus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/betplus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/betplus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/betplus/white.png"
+        }
+      },
+      "bfiplayer": {
+        "id": "bfiplayer",
+        "displayName": "BFI Player Classics",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bfiplayer",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/bfiplayer/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bfiplayer/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/bfiplayer/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/bfiplayer/white.svg"
+        }
+      },
+      "boomerang": {
+        "id": "boomerang",
+        "displayName": "boomerang",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=boomerang",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/boomerang/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/boomerang/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/boomerang/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/boomerang/white.svg"
+        }
+      },
+      "britbox": {
+        "id": "britbox",
+        "displayName": "britbox",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=britbox",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/britbox/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/britbox/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/britbox/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/britbox/white.svg"
+        }
+      },
+      "broadwayhd": {
+        "id": "broadwayhd",
+        "displayName": "BroadwayHD",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=broadwayhd",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/broadwayhd/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/broadwayhd/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/broadwayhd/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/broadwayhd/white.svg"
+        }
+      },
+      "brownsugar": {
+        "id": "brownsugar",
+        "displayName": "Brown Sugar",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=brownsugar",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/brownsugar/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/brownsugar/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/brownsugar/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/brownsugar/white.svg"
+        }
+      },
+      "carnegiehallplusus": {
+        "id": "carnegiehallplusus",
+        "displayName": "Carnegie Hall+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=carnegiehallplusus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/carnegiehallplusus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/carnegiehallplusus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/carnegiehallplusus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/carnegiehallplusus/white.svg"
+        }
+      },
+      "cbsaacf": {
+        "id": "cbsaacf",
+        "displayName": "Paramount+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=cbsaacf",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/cbsaacf/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/cbsaacf/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/cbsaacf/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/cbsaacf/white.svg"
+        }
+      },
+      "cinemax": {
+        "id": "cinemax",
+        "displayName": "Cinemax",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=cinemax",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/cinemax/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/cinemax/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/cinemax/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/cinemax/white.svg"
+        }
+      },
+      "codacollection": {
+        "id": "codacollection",
+        "displayName": "The Coda Collection",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=codacollection",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/codacollection/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/codacollection/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/codacollection/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/codacollection/white.svg"
+        }
+      },
+      "cohen": {
+        "id": "cohen",
+        "displayName": "Cohen Media Channel",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=cohen",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/cohen/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/cohen/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/cohen/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/cohen/white.svg"
+        }
+      },
+      "contv": {
+        "id": "contv",
+        "displayName": "contv",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=contv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/contv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/contv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/contv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/contv/white.svg"
+        }
+      },
+      "crunchyrollus": {
+        "id": "crunchyrollus",
+        "displayName": "Crunchyroll",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=crunchyrollus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/crunchyrollus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/crunchyrollus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/crunchyrollus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/crunchyrollus/white.png"
+        }
+      },
+      "curiositystreamstandard": {
+        "id": "curiositystreamstandard",
+        "displayName": "curiositystreamstandard",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=curiositystreamstandard",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/curiositystreamstandard/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/curiositystreamstandard/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/curiositystreamstandard/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/curiositystreamstandard/white.svg"
+        }
+      },
+      "daringdocs": {
+        "id": "daringdocs",
+        "displayName": "Daring Docs",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=daringdocs",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/daringdocs/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/daringdocs/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/daringdocs/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/daringdocs/white.svg"
+        }
+      },
+      "dekkoo": {
+        "id": "dekkoo",
+        "displayName": "dekkoo",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=dekkoo",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/dekkoo/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/dekkoo/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/dekkoo/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/dekkoo/white.svg"
+        }
+      },
+      "discoveryplus": {
+        "id": "discoveryplus",
+        "displayName": "discoveryplus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=discoveryplus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/discoveryplus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/discoveryplus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/discoveryplus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/discoveryplus/white.png"
+        }
+      },
+      "docclub": {
+        "id": "docclub",
+        "displayName": "Sundance Now",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=docclub",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/docclub/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/docclub/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/docclub/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/docclub/white.svg"
+        }
+      },
+      "docubay": {
+        "id": "docubay",
+        "displayName": "Docubay",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=docubay",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/docubay/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/docubay/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/docubay/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/docubay/white.svg"
+        }
+      },
+      "docuramaFilms": {
+        "id": "docuramaFilms",
+        "displayName": "Docurama",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=docuramaFilms",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/docuramaFilms/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/docuramaFilms/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/docuramaFilms/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/docuramaFilms/white.png"
+        }
+      },
+      "dove": {
+        "id": "dove",
+        "displayName": "Dove Channel",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=dove",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/dove/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/dove/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/dove/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/dove/white.svg"
+        }
+      },
+      "dox": {
+        "id": "dox",
+        "displayName": "Dox",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=dox",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/dox/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/dox/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/dox/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/dox/white.svg"
+        }
+      },
+      "echoboom": {
+        "id": "echoboom",
+        "displayName": "Echoboom Sports",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=echoboom",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/echoboom.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/echoboom.png",
+          "darkThemeImage": "",
+          "whiteImage": ""
+        }
+      },
+      "epix": {
+        "id": "epix",
+        "displayName": "MGM+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=epix",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/epix/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/epix/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/epix/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/epix/white.png"
+        }
+      },
+      "erosnow": {
+        "id": "erosnow",
+        "displayName": "Eros Now",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=erosnow",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/erosnow/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/erosnow/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/erosnow/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/erosnow/white.svg"
+        }
+      },
+      "fandor": {
+        "id": "fandor",
+        "displayName": "Fandor",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fandor",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/fandor/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fandor/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fandor/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/fandor/white.svg"
+        }
+      },
+      "fearfactory": {
+        "id": "fearfactory",
+        "displayName": "Fear Factory",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fearfactory",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/fearfactory/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fearfactory/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fearfactory/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/fearfactory/white.svg"
+        }
+      },
+      "filmbox": {
+        "id": "filmbox",
+        "displayName": "Filmbox Live",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=filmbox",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/filmbox/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/filmbox/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/filmbox/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/filmbox/white.svg"
+        }
+      },
+      "filmmovementus": {
+        "id": "filmmovementus",
+        "displayName": "Film Movement Plus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=filmmovementus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/filmmovementus/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/filmmovementus/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/filmmovementus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/filmmovementus/white.svg"
+        }
+      },
+      "fitfusion": {
+        "id": "fitfusion",
+        "displayName": "Fitfusion by Jillian Michaels",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fitfusion",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/fitfusion/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fitfusion/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fitfusion/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/fitfusion/white.svg"
+        }
+      },
+      "flixlatino": {
+        "id": "flixlatino",
+        "displayName": "flixlatino",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=flixlatino",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/flixlatino/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/flixlatino/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/flixlatino/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/flixlatino/white.svg"
+        }
+      },
+      "foodmatters": {
+        "id": "foodmatters",
+        "displayName": "foodmatters",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=foodmatters",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/foodmatters/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/foodmatters/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/foodmatters/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/foodmatters/white.png"
+        }
+      },
+      "france_channel": {
+        "id": "france_channel",
+        "displayName": "France Channel",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=france_channel",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/france_channel/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/france_channel/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/france_channel/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/france_channel/white.svg"
+        }
+      },
+      "fullmoon": {
+        "id": "fullmoon",
+        "displayName": "Full Moon",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fullmoon",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/fullmoon/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fullmoon/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fullmoon/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/fullmoon/white.png"
+        }
+      },
+      "fuse": {
+        "id": "fuse",
+        "displayName": "Fuse+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fuse",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/fuse/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fuse/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/fuse/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/fuse/white.svg"
+        }
+      },
+      "gaia": {
+        "id": "gaia",
+        "displayName": "gaia",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=gaia",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/gaia/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/gaia/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/gaia/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/gaia/white.svg"
+        }
+      },
+      "gaiamtv": {
+        "id": "gaiamtv",
+        "displayName": "gaiamtv",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=gaiamtv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/gaiamtv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/gaiamtv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/gaiamtv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/gaiamtv/white.svg"
+        }
+      },
+      "hallmark": {
+        "id": "hallmark",
+        "displayName": "Hallmark Movies Now",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hallmark",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/hallmark/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hallmark/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hallmark/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/hallmark/white.svg"
+        }
+      },
+      "hbomaxus": {
+        "id": "hbomaxus",
+        "displayName": "hbomaxus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hbomaxus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/hbomaxus/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hbomaxus/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hbomaxus/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/hbomaxus/white.svg"
+        }
+      },
+      "heretv": {
+        "id": "heretv",
+        "displayName": "Here TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=heretv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/heretv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/heretv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/heretv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/heretv/white.svg"
+        }
+      },
+      "hidiveus": {
+        "id": "hidiveus",
+        "displayName": "hidiveus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hidiveus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/hidiveus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hidiveus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hidiveus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/hidiveus/white.svg"
+        }
+      },
+      "historyvault": {
+        "id": "historyvault",
+        "displayName": "HISTORY Vault",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=historyvault",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/historyvault/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/historyvault/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/historyvault/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/historyvault/white.svg"
+        }
+      },
+      "hiyah": {
+        "id": "hiyah",
+        "displayName": "Hi-YAH!",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hiyah",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/hiyah/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hiyah/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hiyah/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/hiyah/white.svg"
+        }
+      },
+      "hopsterus": {
+        "id": "hopsterus",
+        "displayName": "hopsterus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hopsterus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/hopsterus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hopsterus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/hopsterus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/hopsterus/white.svg"
+        }
+      },
+      "ifcunlimited": {
+        "id": "ifcunlimited",
+        "displayName": "IFC Films Unlimited",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=ifcunlimited",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/ifcunlimited/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/ifcunlimited/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/ifcunlimited/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/ifcunlimited/white.svg"
+        }
+      },
+      "indieclub": {
+        "id": "indieclub",
+        "displayName": "Indie Club",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=indieclub",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/indieclub/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/indieclub/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/indieclub/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/indieclub/white.png"
+        }
+      },
+      "indieflix": {
+        "id": "indieflix",
+        "displayName": "IndieFlix Shorts",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=indieflix",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/indieflix/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/indieflix/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/indieflix/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/indieflix/white.svg"
+        }
+      },
+      "indiepix": {
+        "id": "indiepix",
+        "displayName": "IndiePix Unlimited",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=indiepix",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/indiepix/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/indiepix/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/indiepix/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/indiepix/white.svg"
+        }
+      },
+      "insideoutside": {
+        "id": "insideoutside",
+        "displayName": "insideoutside",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=insideoutside",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/insideoutside/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/insideoutside/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/insideoutside/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/insideoutside/white.svg"
+        }
+      },
+      "jedge": {
+        "id": "jedge",
+        "displayName": "jedge",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=jedge",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/jedge/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/jedge/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/jedge/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/jedge/white.svg"
+        }
+      },
+      "kcpglobalus": {
+        "id": "kcpglobalus",
+        "displayName": "kcpglobalus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=kcpglobalus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/kcpglobalus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/kcpglobalus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/kcpglobalus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/kcpglobalus/white.svg"
+        }
+      },
+      "kidgenius": {
+        "id": "kidgenius",
+        "displayName": "Kartoon Channel",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=kidgenius",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/kidgenius/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/kidgenius/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/kidgenius/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/kidgenius/white.svg"
+        }
+      },
+      "kidstream": {
+        "id": "kidstream",
+        "displayName": "kidstream",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=kidstream",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/kidstream/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/kidstream/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/kidstream/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/kidstream/white.svg"
+        }
+      },
+      "kinofilmcollectionus": {
+        "id": "kinofilmcollectionus",
+        "displayName": "Kino Film Collection",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=kinofilmcollectionus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/kinofilmcollectionus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/kinofilmcollectionus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/kinofilmcollectionus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/kinofilmcollectionus/white.svg"
+        }
+      },
+      "lifetimemovieclub": {
+        "id": "lifetimemovieclub",
+        "displayName": "Lifetime Movie Club",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=lifetimemovieclub",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/lifetimemovieclub/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/lifetimemovieclub/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/lifetimemovieclub/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/lifetimemovieclub/white.svg"
+        }
+      },
+      "magnoliaselects": {
+        "id": "magnoliaselects",
+        "displayName": "Magnolia Selects",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=magnoliaselects",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/magnoliaselects/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/magnoliaselects/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/magnoliaselects/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/magnoliaselects/white.svg"
+        }
+      },
+      "mandn": {
+        "id": "mandn",
+        "displayName": "Monsters and Nightmares",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=mandn",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/mandn/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/mandn/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/mandn/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/mandn/white.svg"
+        }
+      },
+      "marqueetvus": {
+        "id": "marqueetvus",
+        "displayName": "Marquee TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=marqueetvus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/marqueetvus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/marqueetvus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/marqueetvus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/marqueetvus/white.svg"
+        }
+      },
+      "masterpiece": {
+        "id": "masterpiece",
+        "displayName": "PBS Masterpiece",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=masterpiece",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/masterpiece/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/masterpiece/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/masterpiece/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/masterpiece/white.svg"
+        }
+      },
+      "mhzchoice": {
+        "id": "mhzchoice",
+        "displayName": "mhzchoice",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=mhzchoice",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/mhzchoice/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/mhzchoice/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/mhzchoice/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/mhzchoice/white.svg"
+        }
+      },
+      "motv": {
+        "id": "motv",
+        "displayName": "motv",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=motv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/motv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/motv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/motv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/motv/white.svg"
+        }
+      },
+      "mtod": {
+        "id": "mtod",
+        "displayName": "mtod",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=mtod",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/mtod/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/mtod/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/mtod/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/mtod/white.svg"
+        }
+      },
+      "mubi": {
+        "id": "mubi",
+        "displayName": "MUBI",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=mubi",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/mubi/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/mubi/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/mubi/dark-theme.svg",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/mubi/white.svg"
+        }
+      },
+      "nbalp": {
+        "id": "nbalp",
+        "displayName": "NBA League Pass",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=nbalp",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/nbalp/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/nbalp/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/nbalp/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/nbalp/white.png"
+        }
+      },
+      "nbatv": {
+        "id": "nbatv",
+        "displayName": "NBA TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=nbatv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/nbatv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/nbatv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/nbatv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/nbatv/white.png"
+        }
+      },
+      "newdocclub": {
+        "id": "newdocclub",
+        "displayName": "Doc Club",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=newdocclub",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/newdocclub/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/newdocclub/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/newdocclub/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/newdocclub/white.svg"
+        }
+      },
+      "noggin": {
+        "id": "noggin",
+        "displayName": "Noggin",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=noggin",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/noggin/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/noggin/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/noggin/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/noggin/white.svg"
+        }
+      },
+      "outside": {
+        "id": "outside",
+        "displayName": "Outside TV Features",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=outside",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/outside/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/outside/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/outside/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/outside/white.svg"
+        }
+      },
+      "outtvus": {
+        "id": "outtvus",
+        "displayName": "OUTtv",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=outtvus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/outtvus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/outtvus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/outtvus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/outtvus/white.svg"
+        }
+      },
+      "paramountpremium": {
+        "id": "paramountpremium",
+        "displayName": "Paramount+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=paramountpremium",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/paramountpremium/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/paramountpremium/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/paramountpremium/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/paramountpremium/white.png"
+        }
+      },
+      "passionflix": {
+        "id": "passionflix",
+        "displayName": "Passionflix",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=passionflix",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/passionflix/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/passionflix/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/passionflix/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/passionflix/white.svg"
+        }
+      },
+      "pbo": {
+        "id": "pbo",
+        "displayName": "Pinoy Box Office",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pbo",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/pbo/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pbo/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pbo/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/pbo/white.svg"
+        }
+      },
+      "pbsdoc": {
+        "id": "pbsdoc",
+        "displayName": "PBS Documentaries",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pbsdoc",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/pbsdoc/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pbsdoc/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pbsdoc/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/pbsdoc/white.svg"
+        }
+      },
+      "pbskids": {
+        "id": "pbskids",
+        "displayName": "PBS KIDS",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pbskids",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/pbskids/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pbskids/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pbskids/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/pbskids/white.svg"
+        }
+      },
+      "pbsliving": {
+        "id": "pbsliving",
+        "displayName": "PBS Living",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pbsliving",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/pbsliving/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pbsliving/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pbsliving/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/pbsliving/white.svg"
+        }
+      },
+      "pixl": {
+        "id": "pixl",
+        "displayName": "PixL",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pixl",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/pixl/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pixl/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pixl/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/pixl/white.svg"
+        }
+      },
+      "pongalo": {
+        "id": "pongalo",
+        "displayName": "Pongalo Next",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pongalo",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/pongalo/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pongalo/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pongalo/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/pongalo/white.svg"
+        }
+      },
+      "pureflixus1": {
+        "id": "pureflixus1",
+        "displayName": "Great American Pure Flix",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pureflixus1",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/pureflixus1/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pureflixus1/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/pureflixus1/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/pureflixus1/white.svg"
+        }
+      },
+      "qelloconcerts": {
+        "id": "qelloconcerts",
+        "displayName": "Qello Concerts",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=qelloconcerts",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/qelloconcerts/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/qelloconcerts/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/qelloconcerts/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/qelloconcerts/white.png"
+        }
+      },
+      "reelz": {
+        "id": "reelz",
+        "displayName": "reelz",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=reelz",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/reelz/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/reelz/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/reelz/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/reelz/white.svg"
+        }
+      },
+      "revry": {
+        "id": "revry",
+        "displayName": "Revry",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=revry",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/revry/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/revry/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/revry/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/revry/white.svg"
+        }
+      },
+      "ryanfriends": {
+        "id": "ryanfriends",
+        "displayName": "ryanfriends",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=ryanfriends",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/ryanfriends/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/ryanfriends/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/ryanfriends/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/ryanfriends/white.svg"
+        }
+      },
+      "screambox": {
+        "id": "screambox",
+        "displayName": "Screambox",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=screambox",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/screambox/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/screambox/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/screambox/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/screambox/white.svg"
+        }
+      },
+      "screenpix": {
+        "id": "screenpix",
+        "displayName": "ScreenPix",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=screenpix",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/screenpix/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/screenpix/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/screenpix/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/screenpix/white.svg"
+        }
+      },
+      "sensicalus": {
+        "id": "sensicalus",
+        "displayName": "Sensical",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=sensicalus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/sensicalus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/sensicalus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/sensicalus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/sensicalus/white.svg"
+        }
+      },
+      "shortstvus": {
+        "id": "shortstvus",
+        "displayName": "Shorts TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=shortstvus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/shortstvus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/shortstvus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/shortstvus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/shortstvus/white.svg"
+        }
+      },
+      "shoutfactory": {
+        "id": "shoutfactory",
+        "displayName": "Shout! Factory TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=shoutfactory",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/shoutfactory/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/shoutfactory/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/shoutfactory/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/shoutfactory/white.svg"
+        }
+      },
+      "shuddertv": {
+        "id": "shuddertv",
+        "displayName": "Shudder",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=shuddertv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/shuddertv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/shuddertv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/shuddertv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/shuddertv/white.svg"
+        }
+      },
+      "squashtvus": {
+        "id": "squashtvus",
+        "displayName": "squashtvus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=squashtvus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/squashtvus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/squashtvus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/squashtvus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/squashtvus/white.png"
+        }
+      },
+      "starzSub": {
+        "id": "starzSub",
+        "displayName": "STARZ",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=starzSub",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/starzSub/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/starzSub/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/starzSub/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/starzSub/white.png"
+        }
+      },
+      "stingraydjazz": {
+        "id": "stingraydjazz",
+        "displayName": "Stingray Djazz",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=stingraydjazz",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/stingraydjazz/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/stingraydjazz/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/stingraydjazz/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/stingraydjazz/white.svg"
+        }
+      },
+      "stingraykaraoke": {
+        "id": "stingraykaraoke",
+        "displayName": "Stingray Karaoke",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=stingraykaraoke",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/stingraykaraoke/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/stingraykaraoke/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/stingraykaraoke/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/stingraykaraoke/white.png"
+        }
+      },
+      "strandreleasing": {
+        "id": "strandreleasing",
+        "displayName": "Strand Releasing",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=strandreleasing",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/strandreleasing/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/strandreleasing/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/strandreleasing/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/strandreleasing/white.svg"
+        }
+      },
+      "tastemade": {
+        "id": "tastemade",
+        "displayName": "tastemade",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=tastemade",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/tastemade/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/tastemade/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/tastemade/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/tastemade/white.svg"
+        }
+      },
+      "theafricachannelus": {
+        "id": "theafricachannelus",
+        "displayName": "Demand Africa",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=theafricachannelus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/theafricachannelus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/theafricachannelus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/theafricachannelus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/theafricachannelus/white.png"
+        }
+      },
+      "thegreatcourses": {
+        "id": "thegreatcourses",
+        "displayName": "The Great Courses Signature Collection",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=thegreatcourses",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/thegreatcourses/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/thegreatcourses/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/thegreatcourses/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/thegreatcourses/white.svg"
+        }
+      },
+      "thesurfnetwork": {
+        "id": "thesurfnetwork",
+        "displayName": "The Surf Network",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=thesurfnetwork",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/thesurfnetwork/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/thesurfnetwork/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/thesurfnetwork/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/thesurfnetwork/white.svg"
+        }
+      },
+      "toku": {
+        "id": "toku",
+        "displayName": "toku",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=toku",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/toku/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/toku/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/toku/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/toku/white.png"
+        }
+      },
+      "topic": {
+        "id": "topic",
+        "displayName": "Topic",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=topic",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/topic/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/topic/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/topic/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/topic/white.svg"
+        }
+      },
+      "tribecashortlist": {
+        "id": "tribecashortlist",
+        "displayName": "MovieSphere",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=tribecashortlist",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/tribecashortlist/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/tribecashortlist/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/tribecashortlist/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/tribecashortlist/white.png"
+        }
+      },
+      "trueroyalty": {
+        "id": "trueroyalty",
+        "displayName": "True Royalty",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=trueroyalty",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/trueroyalty/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/trueroyalty/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/trueroyalty/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/trueroyalty/white.svg"
+        }
+      },
+      "umc": {
+        "id": "umc",
+        "displayName": "ALLBLK",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=umc",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/umc/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/umc/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/umc/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/umc/white.svg"
+        }
+      },
+      "upfaithfamily": {
+        "id": "upfaithfamily",
+        "displayName": "upfaithfamily",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=upfaithfamily",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/upfaithfamily/light-theme.svg",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/upfaithfamily/light-theme.svg",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/upfaithfamily/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/upfaithfamily/white.svg"
+        }
+      },
+      "vaporvue": {
+        "id": "vaporvue",
+        "displayName": "FUEL TV+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vaporvue",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/vaporvue/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vaporvue/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vaporvue/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/vaporvue/white.png"
+        }
+      },
+      "vdppokuspdzypnep15k": {
+        "id": "vdppokuspdzypnep15k",
+        "displayName": "Pok\u00e9mon",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vdppokuspdzypnep15k",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/vdppokuspdzypnep15k/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vdppokuspdzypnep15k/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vdppokuspdzypnep15k/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/vdppokuspdzypnep15k/white.png"
+        }
+      },
+      "vemoxcine": {
+        "id": "vemoxcine",
+        "displayName": "Vemox Cine",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vemoxcine",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/vemoxcine/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vemoxcine/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vemoxcine/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/vemoxcine/white.svg"
+        }
+      },
+      "viewster": {
+        "id": "viewster",
+        "displayName": "RetroCrush",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=viewster",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/viewster/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/viewster/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/viewster/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/viewster/white.svg"
+        }
+      },
+      "vixplusus": {
+        "id": "vixplusus",
+        "displayName": "ViX Premium",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vixplusus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/vixplusus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vixplusus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vixplusus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/vixplusus/white.png"
+        }
+      },
+      "vixus": {
+        "id": "vixus",
+        "displayName": "ads on ViX Gratis",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vixus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/vixus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vixus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/vixus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/vixus/white.png"
+        }
+      },
+      "wag": {
+        "id": "wag",
+        "displayName": "Warriors &#38; Gangsters",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=wag",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/wag/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/wag/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/wag/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/wag/white.svg"
+        }
+      },
+      "xivetv": {
+        "id": "xivetv",
+        "displayName": "XiveTV Documentaries",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=xivetv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/xivetv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/xivetv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/xivetv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/xivetv/white.svg"
+        }
+      },
+      "xltv": {
+        "id": "xltv",
+        "displayName": "XLTV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=xltv",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/xltv/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/xltv/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/xltv/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/xltv/white.svg"
+        }
+      },
+      "yippeetvus": {
+        "id": "yippeetvus",
+        "displayName": "yippeetvus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=yippeetvus",
+        "themeColorCode": "#000000",
+        "image": "https://media.movieofthenight.com/services/prime/us/addons/yippeetvus/light-theme.png",
+        "images": {
+          "lightThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/yippeetvus/light-theme.png",
+          "darkThemeImage": "https://media.movieofthenight.com/services/prime/us/addons/yippeetvus/dark-theme.png",
+          "whiteImage": "https://media.movieofthenight.com/services/prime/us/addons/yippeetvus/white.svg"
+        }
+      }
+    }
+  },
+  "starz": {
+    "id": "starz",
+    "name": "Starz",
+    "homePage": "https://www.starz.com",
+    "themeColorCode": "#006576",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/starz/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/starz/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/starz/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  },
+  "zee5": {
+    "id": "zee5",
+    "name": "Zee5",
+    "homePage": "https://www.zee5.com/global",
+    "themeColorCode": "#8230c6",
+    "images": {
+      "lightThemeImage": "https://media.movieofthenight.com/services/zee5/logo-light-theme.svg",
+      "darkThemeImage": "https://media.movieofthenight.com/services/zee5/logo-dark-theme.svg",
+      "whiteImage": "https://media.movieofthenight.com/services/zee5/logo-white.svg"
+    },
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {}
+  }
+}

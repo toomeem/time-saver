@@ -1,16 +1,19 @@
 [
 	{
 		"name": "hulu",
+		"subscription": true,
 		"level": "base",
 		"addons": []
 	},
 	{
 		"name": "paramount plus",
+		"subscription": true,
 		"level": "base",
 		"addons": []
 	},
 	{
 		"name": "peacock",
+		"subscription": true,
 		"level": "base",
 		"addons": []
 	}

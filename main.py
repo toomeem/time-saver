@@ -89,6 +89,7 @@ workout_splits = {
 }
 exercise_list = list(json.load(open("text_files/exercises.json")))
 conversation = []
+all_streaming_services = ["netflix", "hulu", "disney", "hbo", "prime", "apple", "paramount", "peacock", "starz", "showtime", "britbox"]
 
 def set_webhook_url(url=ngrok_url):
 	api_url = f"https://api.telegram.org/bot{telegram_api_key}/"
@@ -606,7 +607,7 @@ def add_media_to_list(type, name):
 		return
 	with open("text_files/media_data.json") as f:
 		media_list = json.load(f)
-	media_list[type].append({"name": name, "needs_data": True})
+	media_list[type].update({name: {"name": name, "needs_data": True}})
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
 	add_job("get_media_data")
@@ -707,8 +708,8 @@ def is_rate_limited(domain, wait_time):
 def check_for_media_data():
 	with open("text_files/media_data.json") as f:
 		media_list = dict(json.load(f))
-	missing_data = {"movies": [], "shows": [], "books": []}
-	for media_type in ["movies", "shows", "books"]:
+	missing_data = {"movie": [], "show": [], "book": []}
+	for media_type in ["movie", "show", "book"]:
 		for media_name, media_data in media_list[media_type].items():
 			if media_data["needs_data"]:
 				missing_data[media_type].append(media_name)
