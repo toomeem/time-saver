@@ -20,6 +20,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pytz
 import requests
+import tmdbsimple as tmdb
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from flask import Flask, request
@@ -89,7 +90,6 @@ workout_splits = {
 }
 exercise_list = list(json.load(open("text_files/exercises.json")))
 conversation = []
-all_streaming_services = ["netflix", "hulu", "disney", "hbo", "prime", "apple", "paramount", "peacock", "starz", "showtime", "britbox"]
 
 def set_webhook_url(url=ngrok_url):
 	api_url = f"https://api.telegram.org/bot{telegram_api_key}/"
@@ -617,7 +617,10 @@ def remove_media_from_list(type, name):
 		return
 	with open("text_files/media_data.json") as f:
 		media_list = json.load(f)
-	media_list[type].remove(name)
+	if "name" in media_list[type].keys():
+		del media_list[type][name]
+	else:
+		return
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
 
@@ -671,6 +674,40 @@ def commands():
 
 # end of commands, start of helper functions
 
+def get_available_streaming_services():
+	with open("text_files/streaming_services.json") as f:
+		services = json.load(f)
+	available = {k: v["my_plan"] for k,v in services.items() if v["my_plan"]["type"]}
+	return available
+
+def get_available_media(media_type, genre=None):
+	if log("get_available_media"):
+		return
+	with open("text_files/media_data.json") as f:
+		media_dict = json.load(f)
+	media_dict = media_dict[media_type]
+	if genre and "genres":
+		media_dict = {k:v for k,v in media_dict.items() if "genres" in v.keys() and genre in v["genres"]}
+	services = get_available_streaming_services()
+	available_media = {}
+	for media in media_dict.values():
+		if "streamingInfo" not in media.keys():
+			continue
+		for service_data in media["streamingInfo"]:
+				service = service_data["service"]
+				if service_data["streamingType"] == "free":
+					pass
+				elif (service_data["service"] not in services.keys()) or (services[service]["type"] != service_data["streamingType"]):
+					continue
+				elif services[service]["type"] == "addon" and services[service]["addon"] != service_data["addon"]:
+					continue
+				if media["title"] in available_media.keys():
+					available_media[media["title"]].append(service)
+				else:
+					available_media[media["title"]] = [service]
+				break
+	return available_media
+
 def log_rate_limit(domain):
 	if log("log_rate_limit"):
 		return
@@ -705,7 +742,9 @@ def is_rate_limited(domain, wait_time):
 		return False
 	return True
 
-def check_for_media_data():
+def get_missing_media_data():
+	if log("check_for_media_data"):
+		return
 	with open("text_files/media_data.json") as f:
 		media_list = dict(json.load(f))
 	missing_data = {"movie": [], "show": [], "book": []}
@@ -735,12 +774,26 @@ def add_media_data(media_type, media_name):
 	if response.status_code == 429:
 		log_rate_limit("add_media_data")
 		return
-	response = response.json()["result"][0]
+	response = response.json()["result"]
+	for i in response:
+		if i["type"] == media_type.replace("show", "series"):
+			response = i
+			break
 	with open("text_files/media_data.json") as f:
 		media_data = json.load(f)
 	media_data[media_type].pop(media_name)
 	media_data[media_type][response["title"]] = response
 	media_data[media_type][response["title"]]["needs_data"] = False
+	media_data[media_type][response["title"]]["last_updated"] = round(time.time())
+	media_data[media_type][response["title"]]["streamingInfo"] = media_data[media_type][response["title"]]["streamingInfo"]["us"]
+	for i in range(len(media_data[media_type][response["title"]]["streamingInfo"])):
+		media_data[media_type][response["title"]]["streamingInfo"] = {
+			"service": media_data[media_type][response["title"]]["streamingInfo"][i]["service"],
+			"streamingType": media_data[media_type][response["title"]]["streamingInfo"][i]["streamingType"],
+			"leaving": media_data[media_type][response["title"]]["streamingInfo"][i]["leaving"],
+			"availableSince": media_data[media_type][response["title"]]["streamingInfo"][i]["availableSince"],
+		}
+
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_data, f, indent=2)
 
@@ -1676,7 +1729,7 @@ def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len)
 			i += 1
 		except:
 			error_report("get_song_data")
-			wait_time += 1
+			wait_time = wait_time*2 + 1
 	return data_list
 
 def get_all_songs(sp):

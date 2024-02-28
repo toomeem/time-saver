@@ -2,10 +2,10 @@ import json
 import threading
 import time
 
-from main import (add_media_data, check_for_media_data, clean, clear_file,
-                  end_workout, get_day_exercises, get_quote, get_response,
-                  is_first_set, log, log_set, message_user, morning_message,
-                  remove_job, rn, set_in_conversation)
+from main import (add_media_data, clean, clear_file, end_workout,
+                  get_day_exercises, get_missing_media_data, get_quote,
+                  get_response, is_first_set, log, log_set, message_user,
+                  morning_message, remove_job, rn, set_in_conversation)
 
 bro_split = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 ppl = ["Legs", "Pull", "Push"]
@@ -59,17 +59,17 @@ def event_loop():
 	threading.Thread(target=event_loop_start).start()
 	while True:
 		jobs = check_for_jobs()
-		if jobs:
-			for job in jobs:
-				match job["name"]:
-					case "start_workout":
-						threading.Thread(target=workout_loop).start()
-					case "get_media_data":
-						missing_media_data = check_for_media_data()
-						for media_type, media_list in missing_media_data.items():
-							for media in media_list:
+		for job in jobs:
+			match job["name"]:
+				case "start_workout":
+					threading.Thread(target=workout_loop).start()
+				case "get_media_data":
+					missing_media_data = get_missing_media_data()
+					for media_type, media_list in missing_media_data.items():
+						for media in media_list:
+							if media_type != "book": # TODO: Add book support
 								add_media_data(media_type, media)
-				remove_job(job["name"])
+			remove_job(job["name"])
 		if rn() == "08:30" and log("morning"):
 			time.sleep(60)
 		elif rn() == "08:30":
@@ -83,7 +83,7 @@ def event_loop():
 			message_user(get_quote())
 			time.sleep(60)
 		elif rn("%M") == "00":
-			print(f"{rn()}:Cleaning...")
+			print(f"{rn()}: Cleaning...")
 			threading.Thread(target=clean).start()
 			time.sleep(55)
 		time.sleep(10)

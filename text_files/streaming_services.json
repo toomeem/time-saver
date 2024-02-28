@@ -1,20 +1,1582 @@
-[
-	{
-		"name": "hulu",
-		"subscription": true,
-		"level": "base",
-		"addons": []
-	},
-	{
-		"name": "paramount plus",
-		"subscription": true,
-		"level": "base",
-		"addons": []
-	},
-	{
-		"name": "peacock",
-		"subscription": true,
-		"level": "base",
-		"addons": []
-	}
-]
+{
+  "apple": {
+    "id": "apple",
+    "name": "Apple TV",
+    "homePage": "https://tv.apple.com/",
+    "supportedStreamingTypes": {
+      "addon": true,
+      "buy": true,
+      "free": false,
+      "rent": true,
+      "subscription": true
+    },
+    "addons": {
+      "tvs.sbd.10000": {
+        "id": "tvs.sbd.10000",
+        "displayName": "Hulu",
+        "homePage": "https://tv.apple.com/us/channel/hulu/tvs.sbd.10000"
+      },
+      "tvs.sbd.1000003": {
+        "id": "tvs.sbd.1000003",
+        "displayName": "Boomerang",
+        "homePage": "https://tv.apple.com/us/channel/boomerang/tvs.sbd.1000003"
+      },
+      "tvs.sbd.1000023": {
+        "id": "tvs.sbd.1000023",
+        "displayName": "Viki",
+        "homePage": "https://tv.apple.com/us/channel/viki/tvs.sbd.1000023"
+      },
+      "tvs.sbd.1000027": {
+        "id": "tvs.sbd.1000027",
+        "displayName": "CNBC",
+        "homePage": "https://tv.apple.com/us/channel/cnbc/tvs.sbd.1000027"
+      },
+      "tvs.sbd.1000030": {
+        "id": "tvs.sbd.1000030",
+        "displayName": "Philo",
+        "homePage": "https://tv.apple.com/us/channel/philo/tvs.sbd.1000030"
+      },
+      "tvs.sbd.1000032": {
+        "id": "tvs.sbd.1000032",
+        "displayName": "Funimation",
+        "homePage": "https://tv.apple.com/us/channel/funimation/tvs.sbd.1000032"
+      },
+      "tvs.sbd.1000051": {
+        "id": "tvs.sbd.1000051",
+        "displayName": "BritBox",
+        "homePage": "https://tv.apple.com/us/channel/britbox/tvs.sbd.1000051"
+      },
+      "tvs.sbd.1000058": {
+        "id": "tvs.sbd.1000058",
+        "displayName": "Qello Concerts",
+        "homePage": "https://tv.apple.com/us/channel/qello-concerts/tvs.sbd.1000058"
+      },
+      "tvs.sbd.1000061": {
+        "id": "tvs.sbd.1000061",
+        "displayName": "F1 TV",
+        "homePage": "https://tv.apple.com/us/channel/f1-tv/tvs.sbd.1000061"
+      },
+      "tvs.sbd.1000064": {
+        "id": "tvs.sbd.1000064",
+        "displayName": "WATCH OWN",
+        "homePage": "https://tv.apple.com/us/channel/watch-own/tvs.sbd.1000064"
+      },
+      "tvs.sbd.1000091": {
+        "id": "tvs.sbd.1000091",
+        "displayName": "Garage",
+        "homePage": "https://tv.apple.com/us/channel/garage/tvs.sbd.1000091"
+      },
+      "tvs.sbd.1000120": {
+        "id": "tvs.sbd.1000120",
+        "displayName": "FilmRise",
+        "homePage": "https://tv.apple.com/us/channel/filmrise/tvs.sbd.1000120"
+      },
+      "tvs.sbd.1000158": {
+        "id": "tvs.sbd.1000158",
+        "displayName": "MotorTrend",
+        "homePage": "https://tv.apple.com/us/channel/motortrend/tvs.sbd.1000158"
+      },
+      "tvs.sbd.1000185": {
+        "id": "tvs.sbd.1000185",
+        "displayName": "MGM+",
+        "homePage": "https://tv.apple.com/us/channel/mgm/tvs.sbd.1000185"
+      },
+      "tvs.sbd.1000203": {
+        "id": "tvs.sbd.1000203",
+        "displayName": "Showtime",
+        "homePage": "https://tv.apple.com/us/channel/showtime/tvs.sbd.1000203"
+      },
+      "tvs.sbd.1000204": {
+        "id": "tvs.sbd.1000204",
+        "displayName": "PBS Living",
+        "homePage": "https://tv.apple.com/us/channel/pbs-living/tvs.sbd.1000204"
+      },
+      "tvs.sbd.1000206": {
+        "id": "tvs.sbd.1000206",
+        "displayName": "Shudder",
+        "homePage": "https://tv.apple.com/us/channel/shudder/tvs.sbd.1000206"
+      },
+      "tvs.sbd.1000208": {
+        "id": "tvs.sbd.1000208",
+        "displayName": "Sundance Now",
+        "homePage": "https://tv.apple.com/us/channel/sundance-now/tvs.sbd.1000208"
+      },
+      "tvs.sbd.1000211": {
+        "id": "tvs.sbd.1000211",
+        "displayName": "Tastemade",
+        "homePage": "https://tv.apple.com/us/channel/tastemade/tvs.sbd.1000211"
+      },
+      "tvs.sbd.1000212": {
+        "id": "tvs.sbd.1000212",
+        "displayName": "Acorn TV",
+        "homePage": "https://tv.apple.com/us/channel/acorn-tv/tvs.sbd.1000212"
+      },
+      "tvs.sbd.1000214": {
+        "id": "tvs.sbd.1000214",
+        "displayName": "ALLBLK",
+        "homePage": "https://tv.apple.com/us/channel/allblk/tvs.sbd.1000214"
+      },
+      "tvs.sbd.1000216": {
+        "id": "tvs.sbd.1000216",
+        "displayName": "Disney+",
+        "homePage": "https://tv.apple.com/us/channel/disney/tvs.sbd.1000216"
+      },
+      "tvs.sbd.1000227": {
+        "id": "tvs.sbd.1000227",
+        "displayName": "Curiosity Stream",
+        "homePage": "https://tv.apple.com/us/channel/curiosity-stream/tvs.sbd.1000227"
+      },
+      "tvs.sbd.1000228": {
+        "id": "tvs.sbd.1000228",
+        "displayName": "HISTORY Vault",
+        "homePage": "https://tv.apple.com/us/channel/history-vault/tvs.sbd.1000228"
+      },
+      "tvs.sbd.1000229": {
+        "id": "tvs.sbd.1000229",
+        "displayName": "Lifetime Movie Club",
+        "homePage": "https://tv.apple.com/us/channel/lifetime-movie-club/tvs.sbd.1000229"
+      },
+      "tvs.sbd.1000230": {
+        "id": "tvs.sbd.1000230",
+        "displayName": "Paramount+",
+        "homePage": "https://tv.apple.com/us/channel/paramount/tvs.sbd.1000230"
+      },
+      "tvs.sbd.1000231": {
+        "id": "tvs.sbd.1000231",
+        "displayName": "STARZ",
+        "homePage": "https://tv.apple.com/us/channel/starz/tvs.sbd.1000231"
+      },
+      "tvs.sbd.1000234": {
+        "id": "tvs.sbd.1000234",
+        "displayName": "Noggin",
+        "homePage": "https://tv.apple.com/us/channel/noggin/tvs.sbd.1000234"
+      },
+      "tvs.sbd.1000244": {
+        "id": "tvs.sbd.1000244",
+        "displayName": "Cinemax",
+        "homePage": "https://tv.apple.com/us/channel/cinemax/tvs.sbd.1000244"
+      },
+      "tvs.sbd.1000249": {
+        "id": "tvs.sbd.1000249",
+        "displayName": "MUBI",
+        "homePage": "https://tv.apple.com/us/channel/mubi/tvs.sbd.1000249"
+      },
+      "tvs.sbd.1000257": {
+        "id": "tvs.sbd.1000257",
+        "displayName": "UP Faith & Family",
+        "homePage": "https://tv.apple.com/us/channel/up-faith--family/tvs.sbd.1000257"
+      },
+      "tvs.sbd.1000266": {
+        "id": "tvs.sbd.1000266",
+        "displayName": "OUTtv",
+        "homePage": "https://tv.apple.com/us/channel/outtv/tvs.sbd.1000266"
+      },
+      "tvs.sbd.1000272": {
+        "id": "tvs.sbd.1000272",
+        "displayName": "MGM+",
+        "homePage": "https://tv.apple.com/us/channel/mgm/tvs.sbd.1000272"
+      },
+      "tvs.sbd.1000288": {
+        "id": "tvs.sbd.1000288",
+        "displayName": "IFC Films",
+        "homePage": "https://tv.apple.com/us/channel/ifc-films/tvs.sbd.1000288"
+      },
+      "tvs.sbd.1000294": {
+        "id": "tvs.sbd.1000294",
+        "displayName": "BritBox",
+        "homePage": "https://tv.apple.com/us/channel/britbox/tvs.sbd.1000294"
+      },
+      "tvs.sbd.1000299": {
+        "id": "tvs.sbd.1000299",
+        "displayName": "BET+",
+        "homePage": "https://tv.apple.com/us/channel/bet/tvs.sbd.1000299"
+      },
+      "tvs.sbd.1000301": {
+        "id": "tvs.sbd.1000301",
+        "displayName": "Eros Now Select",
+        "homePage": "https://tv.apple.com/us/channel/eros-now-select/tvs.sbd.1000301"
+      },
+      "tvs.sbd.1000303": {
+        "id": "tvs.sbd.1000303",
+        "displayName": "NAT GEO TV",
+        "homePage": "https://tv.apple.com/us/channel/nat-geo-tv/tvs.sbd.1000303"
+      },
+      "tvs.sbd.1000332": {
+        "id": "tvs.sbd.1000332",
+        "displayName": "A&E Crime Central",
+        "homePage": "https://tv.apple.com/us/channel/ae-crime-central/tvs.sbd.1000332"
+      },
+      "tvs.sbd.1000350": {
+        "id": "tvs.sbd.1000350",
+        "displayName": "Pantaya",
+        "homePage": "https://tv.apple.com/us/channel/pantaya/tvs.sbd.1000350"
+      },
+      "tvs.sbd.1000355": {
+        "id": "tvs.sbd.1000355",
+        "displayName": "Topic",
+        "homePage": "https://tv.apple.com/us/channel/topic/tvs.sbd.1000355"
+      },
+      "tvs.sbd.1000362": {
+        "id": "tvs.sbd.1000362",
+        "displayName": "Hallmark Movies Now",
+        "homePage": "https://tv.apple.com/us/channel/hallmark-movies-now/tvs.sbd.1000362"
+      },
+      "tvs.sbd.1000368": {
+        "id": "tvs.sbd.1000368",
+        "displayName": "BFI Player Classics",
+        "homePage": "https://tv.apple.com/us/channel/bfi-player-classics/tvs.sbd.1000368"
+      },
+      "tvs.sbd.1000371": {
+        "id": "tvs.sbd.1000371",
+        "displayName": "Peacock",
+        "homePage": "https://tv.apple.com/us/channel/peacock/tvs.sbd.1000371"
+      },
+      "tvs.sbd.1000379": {
+        "id": "tvs.sbd.1000379",
+        "displayName": "Plex",
+        "homePage": "https://tv.apple.com/us/channel/plex/tvs.sbd.1000379"
+      },
+      "tvs.sbd.1000383": {
+        "id": "tvs.sbd.1000383",
+        "displayName": "AMC+",
+        "homePage": "https://tv.apple.com/us/channel/amc/tvs.sbd.1000383"
+      },
+      "tvs.sbd.1000384": {
+        "id": "tvs.sbd.1000384",
+        "displayName": "NFL",
+        "homePage": "https://tv.apple.com/us/channel/nfl/tvs.sbd.1000384"
+      },
+      "tvs.sbd.1000393": {
+        "id": "tvs.sbd.1000393",
+        "displayName": "BET+",
+        "homePage": "https://tv.apple.com/us/channel/bet/tvs.sbd.1000393"
+      },
+      "tvs.sbd.1000395": {
+        "id": "tvs.sbd.1000395",
+        "displayName": "Hallmark Movies Now",
+        "homePage": "https://tv.apple.com/us/channel/hallmark-movies-now/tvs.sbd.1000395"
+      },
+      "tvs.sbd.1000397": {
+        "id": "tvs.sbd.1000397",
+        "displayName": "adult swim",
+        "homePage": "https://tv.apple.com/us/channel/adult-swim/tvs.sbd.1000397"
+      },
+      "tvs.sbd.1000408": {
+        "id": "tvs.sbd.1000408",
+        "displayName": "discovery+",
+        "homePage": "https://tv.apple.com/us/channel/discovery/tvs.sbd.1000408"
+      },
+      "tvs.sbd.1000415": {
+        "id": "tvs.sbd.1000415",
+        "displayName": "BBC Select",
+        "homePage": "https://tv.apple.com/us/channel/bbc-select/tvs.sbd.1000415"
+      },
+      "tvs.sbd.1000427": {
+        "id": "tvs.sbd.1000427",
+        "displayName": "MagellanTV Documentaries",
+        "homePage": "https://tv.apple.com/us/channel/magellantv-documentaries/tvs.sbd.1000427"
+      },
+      "tvs.sbd.1000435": {
+        "id": "tvs.sbd.1000435",
+        "displayName": "The Great Courses Signature Collection",
+        "homePage": "https://tv.apple.com/us/channel/the-great-courses-signature-collection/tvs.sbd.1000435"
+      },
+      "tvs.sbd.1000447": {
+        "id": "tvs.sbd.1000447",
+        "displayName": "Univision",
+        "homePage": "https://tv.apple.com/us/channel/univision/tvs.sbd.1000447"
+      },
+      "tvs.sbd.1000452": {
+        "id": "tvs.sbd.1000452",
+        "displayName": "CBS",
+        "homePage": "https://tv.apple.com/us/channel/cbs/tvs.sbd.1000452"
+      },
+      "tvs.sbd.1000464": {
+        "id": "tvs.sbd.1000464",
+        "displayName": "ScreenPix",
+        "homePage": "https://tv.apple.com/us/channel/screenpix/tvs.sbd.1000464"
+      },
+      "tvs.sbd.1000473": {
+        "id": "tvs.sbd.1000473",
+        "displayName": "Carnegie Hall+",
+        "homePage": "https://tv.apple.com/us/channel/carnegie-hall/tvs.sbd.1000473"
+      },
+      "tvs.sbd.1000494": {
+        "id": "tvs.sbd.1000494",
+        "displayName": "MotorTrend",
+        "homePage": "https://tv.apple.com/us/channel/motortrend/tvs.sbd.1000494"
+      },
+      "tvs.sbd.1000496": {
+        "id": "tvs.sbd.1000496",
+        "displayName": "Up Faith and Family",
+        "homePage": "https://tv.apple.com/us/channel/up-faith-and-family/tvs.sbd.1000496"
+      },
+      "tvs.sbd.1000498": {
+        "id": "tvs.sbd.1000498",
+        "displayName": "AMC+",
+        "homePage": "https://tv.apple.com/us/channel/amc/tvs.sbd.1000498"
+      },
+      "tvs.sbd.1000503": {
+        "id": "tvs.sbd.1000503",
+        "displayName": "Amazon Freevee",
+        "homePage": "https://tv.apple.com/us/channel/amazon-freevee/tvs.sbd.1000503"
+      },
+      "tvs.sbd.1000511": {
+        "id": "tvs.sbd.1000511",
+        "displayName": "Smithsonian Channel",
+        "homePage": "https://tv.apple.com/us/channel/smithsonian-channel/tvs.sbd.1000511"
+      },
+      "tvs.sbd.1000529": {
+        "id": "tvs.sbd.1000529",
+        "displayName": "Gaia",
+        "homePage": "https://tv.apple.com/us/channel/gaia/tvs.sbd.1000529"
+      },
+      "tvs.sbd.1000543": {
+        "id": "tvs.sbd.1000543",
+        "displayName": "ViX",
+        "homePage": "https://tv.apple.com/us/channel/vix/tvs.sbd.1000543"
+      },
+      "tvs.sbd.1000547": {
+        "id": "tvs.sbd.1000547",
+        "displayName": "CJ ENM Selects",
+        "homePage": "https://tv.apple.com/us/channel/cj-enm-selects/tvs.sbd.1000547"
+      },
+      "tvs.sbd.1000566": {
+        "id": "tvs.sbd.1000566",
+        "displayName": "Max",
+        "homePage": "https://tv.apple.com/us/channel/max/tvs.sbd.1000566"
+      },
+      "tvs.sbd.1000569": {
+        "id": "tvs.sbd.1000569",
+        "displayName": "Marquee TV",
+        "homePage": "https://tv.apple.com/us/channel/marquee-tv/tvs.sbd.1000569"
+      },
+      "tvs.sbd.10020": {
+        "id": "tvs.sbd.10020",
+        "displayName": "SHOWTIME",
+        "homePage": "https://tv.apple.com/us/channel/showtime/tvs.sbd.10020"
+      },
+      "tvs.sbd.10021": {
+        "id": "tvs.sbd.10021",
+        "displayName": "Showtime Anytime",
+        "homePage": "https://tv.apple.com/us/channel/showtime-anytime/tvs.sbd.10021"
+      },
+      "tvs.sbd.10060": {
+        "id": "tvs.sbd.10060",
+        "displayName": "FXNOW",
+        "homePage": "https://tv.apple.com/us/channel/fxnow/tvs.sbd.10060"
+      },
+      "tvs.sbd.10080": {
+        "id": "tvs.sbd.10080",
+        "displayName": "PBS Video",
+        "homePage": "https://tv.apple.com/us/channel/pbs-video/tvs.sbd.10080"
+      },
+      "tvs.sbd.10081": {
+        "id": "tvs.sbd.10081",
+        "displayName": "PBS KIDS Video",
+        "homePage": "https://tv.apple.com/us/channel/pbs-kids-video/tvs.sbd.10081"
+      },
+      "tvs.sbd.10100": {
+        "id": "tvs.sbd.10100",
+        "displayName": "DisneyNOW",
+        "homePage": "https://tv.apple.com/us/channel/disneynow/tvs.sbd.10100"
+      },
+      "tvs.sbd.10120": {
+        "id": "tvs.sbd.10120",
+        "displayName": "Paramount+",
+        "homePage": "https://tv.apple.com/us/channel/paramount/tvs.sbd.10120"
+      },
+      "tvs.sbd.10180": {
+        "id": "tvs.sbd.10180",
+        "displayName": "ABC",
+        "homePage": "https://tv.apple.com/us/channel/abc/tvs.sbd.10180"
+      },
+      "tvs.sbd.10200": {
+        "id": "tvs.sbd.10200",
+        "displayName": "STARZ",
+        "homePage": "https://tv.apple.com/us/channel/starz/tvs.sbd.10200"
+      },
+      "tvs.sbd.10220": {
+        "id": "tvs.sbd.10220",
+        "displayName": "NBC",
+        "homePage": "https://tv.apple.com/us/channel/nbc/tvs.sbd.10220"
+      },
+      "tvs.sbd.10241": {
+        "id": "tvs.sbd.10241",
+        "displayName": "A&E",
+        "homePage": "https://tv.apple.com/us/channel/ae/tvs.sbd.10241"
+      },
+      "tvs.sbd.10260": {
+        "id": "tvs.sbd.10260",
+        "displayName": "HISTORY",
+        "homePage": "https://tv.apple.com/us/channel/history/tvs.sbd.10260"
+      },
+      "tvs.sbd.10280": {
+        "id": "tvs.sbd.10280",
+        "displayName": "Travel Channel",
+        "homePage": "https://tv.apple.com/us/channel/travel-channel/tvs.sbd.10280"
+      },
+      "tvs.sbd.10282": {
+        "id": "tvs.sbd.10282",
+        "displayName": "Food Network",
+        "homePage": "https://tv.apple.com/us/channel/food-network/tvs.sbd.10282"
+      },
+      "tvs.sbd.10300": {
+        "id": "tvs.sbd.10300",
+        "displayName": "Lifetime",
+        "homePage": "https://tv.apple.com/us/channel/lifetime/tvs.sbd.10300"
+      },
+      "tvs.sbd.10302": {
+        "id": "tvs.sbd.10302",
+        "displayName": "FYI TV",
+        "homePage": "https://tv.apple.com/us/channel/fyi-tv/tvs.sbd.10302"
+      },
+      "tvs.sbd.10304": {
+        "id": "tvs.sbd.10304",
+        "displayName": "Cooking Channel",
+        "homePage": "https://tv.apple.com/us/channel/cooking-channel/tvs.sbd.10304"
+      },
+      "tvs.sbd.10400": {
+        "id": "tvs.sbd.10400",
+        "displayName": "Comedy Central",
+        "homePage": "https://tv.apple.com/us/channel/comedy-central/tvs.sbd.10400"
+      },
+      "tvs.sbd.10420": {
+        "id": "tvs.sbd.10420",
+        "displayName": "MTV",
+        "homePage": "https://tv.apple.com/us/channel/mtv/tvs.sbd.10420"
+      },
+      "tvs.sbd.10520": {
+        "id": "tvs.sbd.10520",
+        "displayName": "HGTV",
+        "homePage": "https://tv.apple.com/us/channel/hgtv/tvs.sbd.10520"
+      },
+      "tvs.sbd.10540": {
+        "id": "tvs.sbd.10540",
+        "displayName": "Sundance Now",
+        "homePage": "https://tv.apple.com/us/channel/sundance-now/tvs.sbd.10540"
+      },
+      "tvs.sbd.10600": {
+        "id": "tvs.sbd.10600",
+        "displayName": "Shudder",
+        "homePage": "https://tv.apple.com/us/channel/shudder/tvs.sbd.10600"
+      },
+      "tvs.sbd.10620": {
+        "id": "tvs.sbd.10620",
+        "displayName": "Bravo",
+        "homePage": "https://tv.apple.com/us/channel/bravo/tvs.sbd.10620"
+      },
+      "tvs.sbd.10640": {
+        "id": "tvs.sbd.10640",
+        "displayName": "E!",
+        "homePage": "https://tv.apple.com/us/channel/e/tvs.sbd.10640"
+      },
+      "tvs.sbd.10642": {
+        "id": "tvs.sbd.10642",
+        "displayName": "Telemundo",
+        "homePage": "https://tv.apple.com/us/channel/telemundo/tvs.sbd.10642"
+      },
+      "tvs.sbd.10664": {
+        "id": "tvs.sbd.10664",
+        "displayName": "Syfy",
+        "homePage": "https://tv.apple.com/us/channel/syfy/tvs.sbd.10664"
+      },
+      "tvs.sbd.10680": {
+        "id": "tvs.sbd.10680",
+        "displayName": "USA",
+        "homePage": "https://tv.apple.com/us/channel/usa/tvs.sbd.10680"
+      },
+      "tvs.sbd.10760": {
+        "id": "tvs.sbd.10760",
+        "displayName": "CBS News",
+        "homePage": "https://tv.apple.com/us/channel/cbs-news/tvs.sbd.10760"
+      },
+      "tvs.sbd.10800": {
+        "id": "tvs.sbd.10800",
+        "displayName": "VH1",
+        "homePage": "https://tv.apple.com/us/channel/vh1/tvs.sbd.10800"
+      },
+      "tvs.sbd.10920": {
+        "id": "tvs.sbd.10920",
+        "displayName": "HISTORY Vault",
+        "homePage": "https://tv.apple.com/us/channel/history-vault/tvs.sbd.10920"
+      },
+      "tvs.sbd.10940": {
+        "id": "tvs.sbd.10940",
+        "displayName": "CNN",
+        "homePage": "https://tv.apple.com/us/channel/cnn/tvs.sbd.10940"
+      },
+      "tvs.sbd.10960": {
+        "id": "tvs.sbd.10960",
+        "displayName": "Hopster",
+        "homePage": "https://tv.apple.com/us/channel/hopster/tvs.sbd.10960"
+      },
+      "tvs.sbd.11000": {
+        "id": "tvs.sbd.11000",
+        "displayName": "AMC",
+        "homePage": "https://tv.apple.com/us/channel/amc/tvs.sbd.11000"
+      },
+      "tvs.sbd.11120": {
+        "id": "tvs.sbd.11120",
+        "displayName": "The CW",
+        "homePage": "https://tv.apple.com/us/channel/the-cw/tvs.sbd.11120"
+      },
+      "tvs.sbd.11160": {
+        "id": "tvs.sbd.11160",
+        "displayName": "Crunchyroll",
+        "homePage": "https://tv.apple.com/us/channel/crunchyroll/tvs.sbd.11160"
+      },
+      "tvs.sbd.11180": {
+        "id": "tvs.sbd.11180",
+        "displayName": "Hallmark TV",
+        "homePage": "https://tv.apple.com/us/channel/hallmark-tv/tvs.sbd.11180"
+      },
+      "tvs.sbd.11220": {
+        "id": "tvs.sbd.11220",
+        "displayName": "TNT",
+        "homePage": "https://tv.apple.com/us/channel/tnt/tvs.sbd.11220"
+      },
+      "tvs.sbd.11221": {
+        "id": "tvs.sbd.11221",
+        "displayName": "TBS",
+        "homePage": "https://tv.apple.com/us/channel/tbs/tvs.sbd.11221"
+      },
+      "tvs.sbd.11222": {
+        "id": "tvs.sbd.11222",
+        "displayName": "Cartoon Network",
+        "homePage": "https://tv.apple.com/us/channel/cartoon-network/tvs.sbd.11222"
+      },
+      "tvs.sbd.11240": {
+        "id": "tvs.sbd.11240",
+        "displayName": "MUBI",
+        "homePage": "https://tv.apple.com/us/channel/mubi/tvs.sbd.11240"
+      },
+      "tvs.sbd.11320": {
+        "id": "tvs.sbd.11320",
+        "displayName": "CuriosityStream",
+        "homePage": "https://tv.apple.com/us/channel/curiositystream/tvs.sbd.11320"
+      },
+      "tvs.sbd.11360": {
+        "id": "tvs.sbd.11360",
+        "displayName": "BET",
+        "homePage": "https://tv.apple.com/us/channel/bet/tvs.sbd.11360"
+      },
+      "tvs.sbd.11361": {
+        "id": "tvs.sbd.11361",
+        "displayName": "BBC America",
+        "homePage": "https://tv.apple.com/us/channel/bbc-america/tvs.sbd.11361"
+      },
+      "tvs.sbd.11480": {
+        "id": "tvs.sbd.11480",
+        "displayName": "Paramount Network",
+        "homePage": "https://tv.apple.com/us/channel/paramount-network/tvs.sbd.11480"
+      },
+      "tvs.sbd.11560": {
+        "id": "tvs.sbd.11560",
+        "displayName": "Discovery",
+        "homePage": "https://tv.apple.com/us/channel/discovery/tvs.sbd.11560"
+      },
+      "tvs.sbd.11561": {
+        "id": "tvs.sbd.11561",
+        "displayName": "TLC",
+        "homePage": "https://tv.apple.com/us/channel/tlc/tvs.sbd.11561"
+      },
+      "tvs.sbd.11580": {
+        "id": "tvs.sbd.11580",
+        "displayName": "Animal Planet",
+        "homePage": "https://tv.apple.com/us/channel/animal-planet/tvs.sbd.11580"
+      },
+      "tvs.sbd.11581": {
+        "id": "tvs.sbd.11581",
+        "displayName": "Investigation Discovery",
+        "homePage": "https://tv.apple.com/us/channel/investigation-discovery/tvs.sbd.11581"
+      },
+      "tvs.sbd.11582": {
+        "id": "tvs.sbd.11582",
+        "displayName": "Science Channel",
+        "homePage": "https://tv.apple.com/us/channel/science-channel/tvs.sbd.11582"
+      },
+      "tvs.sbd.11760": {
+        "id": "tvs.sbd.11760",
+        "displayName": "Univision Now",
+        "homePage": "https://tv.apple.com/us/channel/univision-now/tvs.sbd.11760"
+      },
+      "tvs.sbd.11860": {
+        "id": "tvs.sbd.11860",
+        "displayName": "Freeform",
+        "homePage": "https://tv.apple.com/us/channel/freeform/tvs.sbd.11860"
+      },
+      "tvs.sbd.11880": {
+        "id": "tvs.sbd.11880",
+        "displayName": "truTV",
+        "homePage": "https://tv.apple.com/us/channel/trutv/tvs.sbd.11880"
+      },
+      "tvs.sbd.11900": {
+        "id": "tvs.sbd.11900",
+        "displayName": "Lifetime Movie Club",
+        "homePage": "https://tv.apple.com/us/channel/lifetime-movie-club/tvs.sbd.11900"
+      },
+      "tvs.sbd.12304": {
+        "id": "tvs.sbd.12304",
+        "displayName": "AHC GO",
+        "homePage": "https://tv.apple.com/us/channel/ahc-go/tvs.sbd.12304"
+      },
+      "tvs.sbd.12305": {
+        "id": "tvs.sbd.12305",
+        "displayName": "Destination America GO",
+        "homePage": "https://tv.apple.com/us/channel/destination-america-go/tvs.sbd.12305"
+      },
+      "tvs.sbd.12306": {
+        "id": "tvs.sbd.12306",
+        "displayName": "Discovery Life GO",
+        "homePage": "https://tv.apple.com/us/channel/discovery-life-go/tvs.sbd.12306"
+      },
+      "tvs.sbd.12307": {
+        "id": "tvs.sbd.12307",
+        "displayName": "MotorTrend GO",
+        "homePage": "https://tv.apple.com/us/channel/motortrend-go/tvs.sbd.12307"
+      },
+      "tvs.sbd.12381": {
+        "id": "tvs.sbd.12381",
+        "displayName": "Sling TV",
+        "homePage": "https://tv.apple.com/us/channel/sling-tv/tvs.sbd.12381"
+      },
+      "tvs.sbd.12442": {
+        "id": "tvs.sbd.12442",
+        "displayName": "Pluto TV",
+        "homePage": "https://tv.apple.com/us/channel/pluto-tv/tvs.sbd.12442"
+      },
+      "tvs.sbd.12482": {
+        "id": "tvs.sbd.12482",
+        "displayName": "Classix",
+        "homePage": "https://tv.apple.com/us/channel/classix/tvs.sbd.12482"
+      },
+      "tvs.sbd.12521": {
+        "id": "tvs.sbd.12521",
+        "displayName": "Oxygen",
+        "homePage": "https://tv.apple.com/us/channel/oxygen/tvs.sbd.12521"
+      },
+      "tvs.sbd.12740": {
+        "id": "tvs.sbd.12740",
+        "displayName": "Acorn TV",
+        "homePage": "https://tv.apple.com/us/channel/acorn-tv/tvs.sbd.12740"
+      },
+      "tvs.sbd.12741": {
+        "id": "tvs.sbd.12741",
+        "displayName": "ALLBLK",
+        "homePage": "https://tv.apple.com/us/channel/allblk/tvs.sbd.12741"
+      },
+      "tvs.sbd.12880": {
+        "id": "tvs.sbd.12880",
+        "displayName": "FlixLatino",
+        "homePage": "https://tv.apple.com/us/channel/flixlatino/tvs.sbd.12880"
+      },
+      "tvs.sbd.12962": {
+        "id": "tvs.sbd.12962",
+        "displayName": "Prime Video",
+        "homePage": "https://tv.apple.com/us/channel/prime-video/tvs.sbd.12962"
+      },
+      "tvs.sbd.12980": {
+        "id": "tvs.sbd.12980",
+        "displayName": "Red Bull TV",
+        "homePage": "https://tv.apple.com/us/channel/red-bull-tv/tvs.sbd.12980"
+      },
+      "tvs.sbd.13160": {
+        "id": "tvs.sbd.13160",
+        "displayName": "Tubi TV",
+        "homePage": "https://tv.apple.com/us/channel/tubi-tv/tvs.sbd.13160"
+      },
+      "tvs.sbd.13180": {
+        "id": "tvs.sbd.13180",
+        "displayName": "Fox News",
+        "homePage": "https://tv.apple.com/us/channel/fox-news/tvs.sbd.13180"
+      },
+      "tvs.sbd.13270": {
+        "id": "tvs.sbd.13270",
+        "displayName": "Globoplay",
+        "homePage": "https://tv.apple.com/us/channel/globoplay/tvs.sbd.13270"
+      },
+      "tvs.sbd.13621": {
+        "id": "tvs.sbd.13621",
+        "displayName": "PlayKids",
+        "homePage": "https://tv.apple.com/us/channel/playkids/tvs.sbd.13621"
+      },
+      "tvs.sbd.2000": {
+        "id": "tvs.sbd.2000",
+        "displayName": "Music",
+        "homePage": "https://tv.apple.com/us/channel/music/tvs.sbd.2000"
+      },
+      "tvs.sbd.3000": {
+        "id": "tvs.sbd.3000",
+        "displayName": "Apple TV",
+        "homePage": "https://tv.apple.com/us/channel/apple-tv/tvs.sbd.3000"
+      },
+      "tvs.sbd.30061": {
+        "id": "tvs.sbd.30061",
+        "displayName": "ESPN",
+        "homePage": "https://tv.apple.com/us/channel/espn/tvs.sbd.30061"
+      },
+      "tvs.sbd.9000": {
+        "id": "tvs.sbd.9000",
+        "displayName": "Netflix",
+        "homePage": "https://tv.apple.com/us/channel/netflix/tvs.sbd.9000"
+      }
+    },
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "britbox": {
+    "id": "britbox",
+    "name": "BritBox",
+    "homePage": "https://www.britbox.com/us",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "curiosity": {
+    "id": "curiosity",
+    "name": "Curiosity Stream",
+    "homePage": "https://curiositystream.com/",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "disney": {
+    "id": "disney",
+    "name": "Disney+",
+    "homePage": "https://www.disneyplus.com/",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "hbo": {
+    "id": "hbo",
+    "name": "Max",
+    "homePage": "https://play.max.com/",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "hulu": {
+    "id": "hulu",
+    "name": "Hulu",
+    "homePage": "https://www.hulu.com",
+    "supportedStreamingTypes": {
+      "addon": true,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {
+      "cinemax": {
+        "id": "cinemax",
+        "displayName": "Cinemax",
+        "homePage": "https://www.hulu.com/network/cinemax-e53daca2-6aed-48b8-8d73-e87cc3ccc5b3"
+      },
+      "max": {
+        "id": "max",
+        "displayName": "Max",
+        "homePage": "https://www.hulu.com/network/hbo-max-1b3523c1-3090-4c27-a1e8-a04d33867c34"
+      },
+      "showtime": {
+        "id": "showtime",
+        "displayName": "Paramount+ with Showtime",
+        "homePage": "https://www.hulu.com/network/showtime-f160e912-83eb-4bea-b6f6-a7fddc103757"
+      },
+      "starz": {
+        "id": "starz",
+        "displayName": "Starz",
+        "homePage": "https://www.hulu.com/network/starz-162fd1ad-4b28-401a-a195-2103f57eb0de"
+      }
+    },
+    "my_plan": {
+      "type": "subscription",
+      "addon": null
+    }
+  },
+  "mubi": {
+    "id": "mubi",
+    "name": "Mubi",
+    "homePage": "https://mubi.com",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "netflix": {
+    "id": "netflix",
+    "name": "Netflix",
+    "homePage": "https://www.netflix.com",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "paramount": {
+    "id": "paramount",
+    "name": "Paramount+",
+    "homePage": "https://www.paramountplus.com",
+    "supportedStreamingTypes": {
+      "addon": true,
+      "buy": false,
+      "free": true,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {
+      "showtime": {
+        "id": "showtime",
+        "displayName": "Showtime",
+        "homePage": "https://www.paramountplus.com/brands/showtime/"
+      }
+    },
+    "my_plan": {
+      "type": "subscription",
+      "addon": null
+    }
+  },
+  "peacock": {
+    "id": "peacock",
+    "name": "Peacock",
+    "homePage": "https://www.peacocktv.com",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": true,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": "subscription",
+      "addon": null
+    }
+  },
+  "prime": {
+    "id": "prime",
+    "name": "Prime Video",
+    "homePage": "https://www.amazon.com/gp/video/storefront/",
+    "supportedStreamingTypes": {
+      "addon": true,
+      "buy": true,
+      "free": false,
+      "rent": true,
+      "subscription": true
+    },
+    "addons": {
+      "acaciatv": {
+        "id": "acaciatv",
+        "displayName": "AcaciaTV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=acaciatv"
+      },
+      "acorn": {
+        "id": "acorn",
+        "displayName": "acorn",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=acorn"
+      },
+      "aetncrimecentral": {
+        "id": "aetncrimecentral",
+        "displayName": "A&#38;E Crime Central",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=aetncrimecentral"
+      },
+      "amcplus": {
+        "id": "amcplus",
+        "displayName": "AMC+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=amcplus"
+      },
+      "amebatv": {
+        "id": "amebatv",
+        "displayName": "Ameba",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=amebatv"
+      },
+      "aspireTVus": {
+        "id": "aspireTVus",
+        "displayName": "aspireTVus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=aspireTVus"
+      },
+      "bbcselect": {
+        "id": "bbcselect",
+        "displayName": "bbcselect",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bbcselect"
+      },
+      "befit": {
+        "id": "befit",
+        "displayName": "BeFiT",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=befit"
+      },
+      "bestevertv": {
+        "id": "bestevertv",
+        "displayName": "Best TV Ever",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bestevertv"
+      },
+      "bestofbritish": {
+        "id": "bestofbritish",
+        "displayName": "Best of British Television",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bestofbritish"
+      },
+      "bestwesternsever": {
+        "id": "bestwesternsever",
+        "displayName": "Best Westerns Ever",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bestwesternsever"
+      },
+      "betplus": {
+        "id": "betplus",
+        "displayName": "BET+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=betplus"
+      },
+      "bfiplayer": {
+        "id": "bfiplayer",
+        "displayName": "BFI Player Classics",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=bfiplayer"
+      },
+      "boomerang": {
+        "id": "boomerang",
+        "displayName": "boomerang",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=boomerang"
+      },
+      "britbox": {
+        "id": "britbox",
+        "displayName": "britbox",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=britbox"
+      },
+      "broadwayhd": {
+        "id": "broadwayhd",
+        "displayName": "BroadwayHD",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=broadwayhd"
+      },
+      "brownsugar": {
+        "id": "brownsugar",
+        "displayName": "Brown Sugar",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=brownsugar"
+      },
+      "carnegiehallplusus": {
+        "id": "carnegiehallplusus",
+        "displayName": "Carnegie Hall+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=carnegiehallplusus"
+      },
+      "cbsaacf": {
+        "id": "cbsaacf",
+        "displayName": "Paramount+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=cbsaacf"
+      },
+      "cinemax": {
+        "id": "cinemax",
+        "displayName": "Cinemax",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=cinemax"
+      },
+      "codacollection": {
+        "id": "codacollection",
+        "displayName": "The Coda Collection",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=codacollection"
+      },
+      "cohen": {
+        "id": "cohen",
+        "displayName": "Cohen Media Channel",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=cohen"
+      },
+      "contv": {
+        "id": "contv",
+        "displayName": "contv",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=contv"
+      },
+      "crunchyrollus": {
+        "id": "crunchyrollus",
+        "displayName": "Crunchyroll",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=crunchyrollus"
+      },
+      "curiositystreamstandard": {
+        "id": "curiositystreamstandard",
+        "displayName": "curiositystreamstandard",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=curiositystreamstandard"
+      },
+      "daringdocs": {
+        "id": "daringdocs",
+        "displayName": "Daring Docs",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=daringdocs"
+      },
+      "dekkoo": {
+        "id": "dekkoo",
+        "displayName": "dekkoo",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=dekkoo"
+      },
+      "discoveryplus": {
+        "id": "discoveryplus",
+        "displayName": "discoveryplus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=discoveryplus"
+      },
+      "docclub": {
+        "id": "docclub",
+        "displayName": "Sundance Now",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=docclub"
+      },
+      "docubay": {
+        "id": "docubay",
+        "displayName": "Docubay",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=docubay"
+      },
+      "docuramaFilms": {
+        "id": "docuramaFilms",
+        "displayName": "Docurama",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=docuramaFilms"
+      },
+      "dove": {
+        "id": "dove",
+        "displayName": "Dove Channel",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=dove"
+      },
+      "dox": {
+        "id": "dox",
+        "displayName": "Dox",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=dox"
+      },
+      "echoboom": {
+        "id": "echoboom",
+        "displayName": "Echoboom Sports",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=echoboom"
+      },
+      "epix": {
+        "id": "epix",
+        "displayName": "MGM+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=epix"
+      },
+      "erosnow": {
+        "id": "erosnow",
+        "displayName": "Eros Now",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=erosnow"
+      },
+      "fandor": {
+        "id": "fandor",
+        "displayName": "Fandor",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fandor"
+      },
+      "fearfactory": {
+        "id": "fearfactory",
+        "displayName": "Fear Factory",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fearfactory"
+      },
+      "filmbox": {
+        "id": "filmbox",
+        "displayName": "Filmbox Live",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=filmbox"
+      },
+      "filmmovementus": {
+        "id": "filmmovementus",
+        "displayName": "Film Movement Plus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=filmmovementus"
+      },
+      "fitfusion": {
+        "id": "fitfusion",
+        "displayName": "Fitfusion by Jillian Michaels",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fitfusion"
+      },
+      "flixlatino": {
+        "id": "flixlatino",
+        "displayName": "flixlatino",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=flixlatino"
+      },
+      "foodmatters": {
+        "id": "foodmatters",
+        "displayName": "foodmatters",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=foodmatters"
+      },
+      "france_channel": {
+        "id": "france_channel",
+        "displayName": "France Channel",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=france_channel"
+      },
+      "fullmoon": {
+        "id": "fullmoon",
+        "displayName": "Full Moon",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fullmoon"
+      },
+      "fuse": {
+        "id": "fuse",
+        "displayName": "Fuse+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=fuse"
+      },
+      "gaia": {
+        "id": "gaia",
+        "displayName": "gaia",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=gaia"
+      },
+      "gaiamtv": {
+        "id": "gaiamtv",
+        "displayName": "gaiamtv",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=gaiamtv"
+      },
+      "hallmark": {
+        "id": "hallmark",
+        "displayName": "Hallmark Movies Now",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hallmark"
+      },
+      "hbomaxus": {
+        "id": "hbomaxus",
+        "displayName": "hbomaxus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hbomaxus"
+      },
+      "heretv": {
+        "id": "heretv",
+        "displayName": "Here TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=heretv"
+      },
+      "hidiveus": {
+        "id": "hidiveus",
+        "displayName": "hidiveus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hidiveus"
+      },
+      "historyvault": {
+        "id": "historyvault",
+        "displayName": "HISTORY Vault",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=historyvault"
+      },
+      "hiyah": {
+        "id": "hiyah",
+        "displayName": "Hi-YAH!",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hiyah"
+      },
+      "hopsterus": {
+        "id": "hopsterus",
+        "displayName": "hopsterus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=hopsterus"
+      },
+      "ifcunlimited": {
+        "id": "ifcunlimited",
+        "displayName": "IFC Films Unlimited",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=ifcunlimited"
+      },
+      "indieclub": {
+        "id": "indieclub",
+        "displayName": "Indie Club",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=indieclub"
+      },
+      "indieflix": {
+        "id": "indieflix",
+        "displayName": "IndieFlix Shorts",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=indieflix"
+      },
+      "indiepix": {
+        "id": "indiepix",
+        "displayName": "IndiePix Unlimited",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=indiepix"
+      },
+      "insideoutside": {
+        "id": "insideoutside",
+        "displayName": "insideoutside",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=insideoutside"
+      },
+      "jedge": {
+        "id": "jedge",
+        "displayName": "jedge",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=jedge"
+      },
+      "kcpglobalus": {
+        "id": "kcpglobalus",
+        "displayName": "kcpglobalus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=kcpglobalus"
+      },
+      "kidgenius": {
+        "id": "kidgenius",
+        "displayName": "Kartoon Channel",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=kidgenius"
+      },
+      "kidstream": {
+        "id": "kidstream",
+        "displayName": "kidstream",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=kidstream"
+      },
+      "kinofilmcollectionus": {
+        "id": "kinofilmcollectionus",
+        "displayName": "Kino Film Collection",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=kinofilmcollectionus"
+      },
+      "lifetimemovieclub": {
+        "id": "lifetimemovieclub",
+        "displayName": "Lifetime Movie Club",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=lifetimemovieclub"
+      },
+      "magnoliaselects": {
+        "id": "magnoliaselects",
+        "displayName": "Magnolia Selects",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=magnoliaselects"
+      },
+      "mandn": {
+        "id": "mandn",
+        "displayName": "Monsters and Nightmares",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=mandn"
+      },
+      "marqueetvus": {
+        "id": "marqueetvus",
+        "displayName": "Marquee TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=marqueetvus"
+      },
+      "masterpiece": {
+        "id": "masterpiece",
+        "displayName": "PBS Masterpiece",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=masterpiece"
+      },
+      "mhzchoice": {
+        "id": "mhzchoice",
+        "displayName": "mhzchoice",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=mhzchoice"
+      },
+      "motv": {
+        "id": "motv",
+        "displayName": "motv",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=motv"
+      },
+      "mtod": {
+        "id": "mtod",
+        "displayName": "mtod",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=mtod"
+      },
+      "mubi": {
+        "id": "mubi",
+        "displayName": "MUBI",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=mubi"
+      },
+      "nbalp": {
+        "id": "nbalp",
+        "displayName": "NBA League Pass",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=nbalp"
+      },
+      "nbatv": {
+        "id": "nbatv",
+        "displayName": "NBA TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=nbatv"
+      },
+      "newdocclub": {
+        "id": "newdocclub",
+        "displayName": "Doc Club",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=newdocclub"
+      },
+      "noggin": {
+        "id": "noggin",
+        "displayName": "Noggin",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=noggin"
+      },
+      "outside": {
+        "id": "outside",
+        "displayName": "Outside TV Features",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=outside"
+      },
+      "outtvus": {
+        "id": "outtvus",
+        "displayName": "OUTtv",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=outtvus"
+      },
+      "paramountpremium": {
+        "id": "paramountpremium",
+        "displayName": "Paramount+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=paramountpremium"
+      },
+      "passionflix": {
+        "id": "passionflix",
+        "displayName": "Passionflix",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=passionflix"
+      },
+      "pbo": {
+        "id": "pbo",
+        "displayName": "Pinoy Box Office",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pbo"
+      },
+      "pbsdoc": {
+        "id": "pbsdoc",
+        "displayName": "PBS Documentaries",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pbsdoc"
+      },
+      "pbskids": {
+        "id": "pbskids",
+        "displayName": "PBS KIDS",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pbskids"
+      },
+      "pbsliving": {
+        "id": "pbsliving",
+        "displayName": "PBS Living",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pbsliving"
+      },
+      "pixl": {
+        "id": "pixl",
+        "displayName": "PixL",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pixl"
+      },
+      "pongalo": {
+        "id": "pongalo",
+        "displayName": "Pongalo Next",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pongalo"
+      },
+      "pureflixus1": {
+        "id": "pureflixus1",
+        "displayName": "Great American Pure Flix",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=pureflixus1"
+      },
+      "qelloconcerts": {
+        "id": "qelloconcerts",
+        "displayName": "Qello Concerts",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=qelloconcerts"
+      },
+      "reelz": {
+        "id": "reelz",
+        "displayName": "reelz",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=reelz"
+      },
+      "revry": {
+        "id": "revry",
+        "displayName": "Revry",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=revry"
+      },
+      "ryanfriends": {
+        "id": "ryanfriends",
+        "displayName": "ryanfriends",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=ryanfriends"
+      },
+      "screambox": {
+        "id": "screambox",
+        "displayName": "Screambox",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=screambox"
+      },
+      "screenpix": {
+        "id": "screenpix",
+        "displayName": "ScreenPix",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=screenpix"
+      },
+      "sensicalus": {
+        "id": "sensicalus",
+        "displayName": "Sensical",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=sensicalus"
+      },
+      "shortstvus": {
+        "id": "shortstvus",
+        "displayName": "Shorts TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=shortstvus"
+      },
+      "shoutfactory": {
+        "id": "shoutfactory",
+        "displayName": "Shout! Factory TV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=shoutfactory"
+      },
+      "shuddertv": {
+        "id": "shuddertv",
+        "displayName": "Shudder",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=shuddertv"
+      },
+      "squashtvus": {
+        "id": "squashtvus",
+        "displayName": "squashtvus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=squashtvus"
+      },
+      "starzSub": {
+        "id": "starzSub",
+        "displayName": "STARZ",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=starzSub"
+      },
+      "stingraydjazz": {
+        "id": "stingraydjazz",
+        "displayName": "Stingray Djazz",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=stingraydjazz"
+      },
+      "stingraykaraoke": {
+        "id": "stingraykaraoke",
+        "displayName": "Stingray Karaoke",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=stingraykaraoke"
+      },
+      "strandreleasing": {
+        "id": "strandreleasing",
+        "displayName": "Strand Releasing",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=strandreleasing"
+      },
+      "tastemade": {
+        "id": "tastemade",
+        "displayName": "tastemade",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=tastemade"
+      },
+      "theafricachannelus": {
+        "id": "theafricachannelus",
+        "displayName": "Demand Africa",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=theafricachannelus"
+      },
+      "thegreatcourses": {
+        "id": "thegreatcourses",
+        "displayName": "The Great Courses Signature Collection",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=thegreatcourses"
+      },
+      "thesurfnetwork": {
+        "id": "thesurfnetwork",
+        "displayName": "The Surf Network",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=thesurfnetwork"
+      },
+      "toku": {
+        "id": "toku",
+        "displayName": "toku",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=toku"
+      },
+      "topic": {
+        "id": "topic",
+        "displayName": "Topic",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=topic"
+      },
+      "tribecashortlist": {
+        "id": "tribecashortlist",
+        "displayName": "MovieSphere",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=tribecashortlist"
+      },
+      "trueroyalty": {
+        "id": "trueroyalty",
+        "displayName": "True Royalty",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=trueroyalty"
+      },
+      "umc": {
+        "id": "umc",
+        "displayName": "ALLBLK",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=umc"
+      },
+      "upfaithfamily": {
+        "id": "upfaithfamily",
+        "displayName": "upfaithfamily",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=upfaithfamily"
+      },
+      "vaporvue": {
+        "id": "vaporvue",
+        "displayName": "FUEL TV+",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vaporvue"
+      },
+      "vdppokuspdzypnep15k": {
+        "id": "vdppokuspdzypnep15k",
+        "displayName": "Pok\u00e9mon",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vdppokuspdzypnep15k"
+      },
+      "vemoxcine": {
+        "id": "vemoxcine",
+        "displayName": "Vemox Cine",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vemoxcine"
+      },
+      "viewster": {
+        "id": "viewster",
+        "displayName": "RetroCrush",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=viewster"
+      },
+      "vixplusus": {
+        "id": "vixplusus",
+        "displayName": "ViX Premium",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vixplusus"
+      },
+      "vixus": {
+        "id": "vixus",
+        "displayName": "ads on ViX Gratis",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=vixus"
+      },
+      "wag": {
+        "id": "wag",
+        "displayName": "Warriors &#38; Gangsters",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=wag"
+      },
+      "xivetv": {
+        "id": "xivetv",
+        "displayName": "XiveTV Documentaries",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=xivetv"
+      },
+      "xltv": {
+        "id": "xltv",
+        "displayName": "XLTV",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=xltv"
+      },
+      "yippeetvus": {
+        "id": "yippeetvus",
+        "displayName": "yippeetvus",
+        "homePage": "https://www.amazon.com/gp/video/storefront?benefitId=yippeetvus"
+      }
+    },
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "starz": {
+    "id": "starz",
+    "name": "Starz",
+    "homePage": "https://www.starz.com",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  },
+  "zee5": {
+    "id": "zee5",
+    "name": "Zee5",
+    "homePage": "https://www.zee5.com/global",
+    "supportedStreamingTypes": {
+      "addon": false,
+      "buy": false,
+      "free": false,
+      "rent": false,
+      "subscription": true
+    },
+    "addons": {},
+    "my_plan": {
+      "type": null,
+      "addon": null
+    }
+  }
+}
