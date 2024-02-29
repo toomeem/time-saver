@@ -2,12 +2,12 @@
 all dates are in year/month/day
 
 '''
-
 import concurrent.futures
 import json
 import os
 import random
 import re
+import sys
 import threading
 import time
 from collections import Counter
@@ -42,6 +42,7 @@ telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
 suggestion_playlist_id = os.getenv("SUGGESTION_PLAYLIST_ID")
 ngrok_url = os.getenv("NGROK_URL")
 streaming_availability_api_key = os.getenv("STREAMING_AVAILABILITY_API_KEY")
+tmdb.API_KEY = os.getenv("TMDB_API_KEY")
 gpt_model = "gpt-3.5-turbo"
 tz = pytz.timezone("America/New_York")
 first_day_of_school = "2023/09/15"
@@ -58,7 +59,6 @@ auth_manager = SpotifyOAuth(
 	scope=["user-library-read","playlist-modify-public"],
 )
 spotify_client = Spotify(oauth_manager=auth_manager)
-
 cloudinary.config(
 	cloud_name=cloudinary_cloud_name,
 	api_key=cloudinary_api_key,
@@ -603,11 +603,11 @@ def respond_with_gym_day():
 	message_user(f"Current gym day: {day}")
 
 def add_media_to_list(type, name):
-	if log("add_movie_to_list"):
+	if log("add_media_to_list"):
 		return
 	with open("text_files/media_data.json") as f:
 		media_list = json.load(f)
-	media_list[type].update({name: {"name": name, "needs_data": True}})
+	media_list[type].update({name: {"name": name, "needs_data": True, "type": type}})
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
 	add_job("get_media_data")
@@ -623,6 +623,22 @@ def remove_media_from_list(type, name):
 		return
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
+
+def get_media_suggestions(media_type, genre=None):
+	if log("get_media_suggestions"):
+		return
+	available = get_available_media(media_type, genre)
+	if not available and genre:
+		return f"There are no available {media_type}s that match the criteria."
+	if not available:
+		return f"There are no available {media_type}s."
+	if genre:
+		message = f"Available {genre.lower()} {media_type}s:\n"
+	else:
+		message = f"Avaiable {media_type}s:\n"
+	for media, services in available.items():
+		message += f"{media} - {', '.join(services)}\n"
+	message_user(message)
 
 def desc():
 	if log("desc"):
@@ -694,7 +710,11 @@ def get_available_media(media_type, genre=None):
 		if "streamingInfo" not in media.keys():
 			continue
 		for service_data in media["streamingInfo"]:
-				service = service_data["service"]
+				try:
+					service = service_data["service"]
+				except:
+					# print(service_data)
+					continue
 				if service_data["streamingType"] == "free":
 					pass
 				elif (service_data["service"] not in services.keys()) or (services[service]["type"] != service_data["streamingType"]):
@@ -779,21 +799,47 @@ def add_media_data(media_type, media_name):
 		if i["type"] == media_type.replace("show", "series"):
 			response = i
 			break
+	if response["title"] == "Once Upon a Time in America":
+		pprint(response)
+		sys.exit()
+	tmdb_id = int(response["tmdbId"])
+	if response["type"] == "movie":
+		tmdb_data = tmdb.Movies(tmdb_id).info()
+	else:
+		tmdb_data = tmdb.TV(tmdb_id).info()
+	response.update(tmdb_data)
+	useless_attributes = ["adult", "backdrop_path", "homepage", "imdbId", "imdb_id", "original_language", "tmdbId",
+		"original_title", "originalTitle", "poster_path", "production_countries", "spoken_languages", "tagline", "video", "year"]
+	if "belongs_to_collection" in response.keys() and response["belongs_to_collection"]:
+		if "backdrop_path" in response["belongs_to_collection"].keys():
+			del response["belongs_to_collection"]["backdrop_path"]
+		if "poster_path" in response["belongs_to_collection"].keys():
+			del response["belongs_to_collection"]["poster_path"]
+	for i in useless_attributes:
+		if i in response.keys():
+			del response[i]
+	response["needs_data"] = False
+	response["last_updated"] = round(time.time())
+	response["release_date"] = response["release_date"].replace("-", "/")
+	try:
+		response["release_date"] = round(to_datetime(response["release_date"]).timestamp())
+	except:
+		pass
+	response["genres"] = [i["name"] for i in response["genres"]]
+	response["production_companies"] = [{"name":i["name"], "id":i["id"], "origin_country":i["origin_country"]} for i in response["production_companies"]]
+	try:
+		response["streamingInfo"] = response["streamingInfo"]["us"]
+	except:
+		pprint(response["streamingInfo"])
+		pprint(response["title"])
+	for i in range(len(response["streamingInfo"])):
+		streaming_keys = [k for k in ["price", "availableSince", "addon", "leaving", "quality"] if k in response["streamingInfo"][i].keys()]
+		streaming_keys.extend(["service", "streamingType"])
+		response["streamingInfo"][i] = {k: response["streamingInfo"][i][k] for k in streaming_keys}
 	with open("text_files/media_data.json") as f:
 		media_data = json.load(f)
 	media_data[media_type].pop(media_name)
 	media_data[media_type][response["title"]] = response
-	media_data[media_type][response["title"]]["needs_data"] = False
-	media_data[media_type][response["title"]]["last_updated"] = round(time.time())
-	media_data[media_type][response["title"]]["streamingInfo"] = media_data[media_type][response["title"]]["streamingInfo"]["us"]
-	for i in range(len(media_data[media_type][response["title"]]["streamingInfo"])):
-		media_data[media_type][response["title"]]["streamingInfo"] = {
-			"service": media_data[media_type][response["title"]]["streamingInfo"][i]["service"],
-			"streamingType": media_data[media_type][response["title"]]["streamingInfo"][i]["streamingType"],
-			"leaving": media_data[media_type][response["title"]]["streamingInfo"][i]["leaving"],
-			"availableSince": media_data[media_type][response["title"]]["streamingInfo"][i]["availableSince"],
-		}
-
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_data, f, indent=2)
 
@@ -820,21 +866,20 @@ def to_datetime(date):
 	if isinstance(date, datetime):
 		return date
 	try:
-		date = float(date)
-		return datetime.fromtimestamp(date)
+		return datetime.fromtimestamp(float(date))
 	except:
 		pass
 	if isinstance(date, str):
 		match date.count("/"):
-			case 3:
+			case 2:
 				return datetime.strptime(date, "%Y/%m/%d")
-			case 4:
+			case 3:
 				return datetime.strptime(date, "%Y/%m/%d/%H")
-			case 5:
+			case 4:
 				return datetime.strptime(date, "%Y/%m/%d/%H/%M")
-			case 6:
+			case 5:
 				return datetime.strptime(date, "%Y/%m/%d/%H/%M/%S")
-		return
+		return date
 
 def set_workout_split(split):
 	if log("set_workout_split"):
@@ -1086,6 +1131,8 @@ def clean(updates=True):
 	check_brentford_file()
 	check_weight_file()
 	check_error_file()
+	if get_missing_media_data():
+		add_job("get_media_data")
 
 def get_time(args):
 	if log("get_time"):

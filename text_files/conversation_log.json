@@ -4630,5 +4630,17 @@
     "sender": "user",
     "sent_at": "1708636694.2694354",
     "image": false
+  },
+  {
+    "message": "Avaiable movies:\nThe Menu - hulu\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\n",
+    "sender": "script",
+    "sent_at": "1709189046.3200798",
+    "image": false
+  },
+  {
+    "message": "Available drama movies:\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\n48 Hrs. - paramount\nDonnie Darko - peacock\n",
+    "sender": "script",
+    "sent_at": "1709189104.751345",
+    "image": false
   }
 ]
