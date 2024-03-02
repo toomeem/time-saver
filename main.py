@@ -116,6 +116,9 @@ def message_user(body, media_url=None):
 @app.route("/", methods=["GET","POST"])
 def hook():
 	message = request.json["message"]["text"]
+	if message.lower() == "kill":
+		kill()
+		return "200"
 	if in_conversation():
 		log_response(message)
 		return "200"
@@ -204,6 +207,8 @@ def hook():
 			add_media_to_list(args["media_type"], args["media_name"])
 		case "remove_media":
 			remove_media_from_list(args["media_type"], args["media_name"])
+		case "get_available_media":
+			get_media_suggestions(args)
 		case _:
 			message_user("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
@@ -624,18 +629,15 @@ def remove_media_from_list(type, name):
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
 
-def get_media_suggestions(media_type, genre=None):
+def get_media_suggestions(args):
 	if log("get_media_suggestions"):
 		return
-	available = get_available_media(media_type, genre)
-	if not available and genre:
-		return f"There are no available {media_type}s that match the criteria."
+	media_type = args["media_type"]
+	available = get_available_media(args)
 	if not available:
-		return f"There are no available {media_type}s."
-	if genre:
-		message = f"Available {genre.lower()} {media_type}s:\n"
+		return f"There are no available {media_type}s that match the criteria."
 	else:
-		message = f"Avaiable {media_type}s:\n"
+		message = f"Available {media_type}s:\n"
 	for media, services in available.items():
 		message += f"{media} - {', '.join(services)}\n"
 	message_user(message)
@@ -696,14 +698,38 @@ def get_available_streaming_services():
 	available = {k: v["my_plan"] for k,v in services.items() if v["my_plan"]["type"]}
 	return available
 
-def get_available_media(media_type, genre=None):
+def get_available_media(args):
 	if log("get_available_media"):
 		return
+	media_type = args["media_type"]
 	with open("text_files/media_data.json") as f:
 		media_dict = json.load(f)
 	media_dict = media_dict[media_type]
-	if genre and "genres":
+	if "genres" in args.keys():
+		genre = args["genres"]
 		media_dict = {k:v for k,v in media_dict.items() if "genres" in v.keys() and genre in v["genres"]}
+	if "runtime" in args.keys():
+		runtime = args["runtime"]
+		media_dict = {k:v for k,v in media_dict.items() if "runtime" in v.keys() and v["runtime"] <= runtime}
+	if "quality" in args.keys():
+		quality_scale = {"sd": 0, "hd": 1, "uhd": 2}
+		quality = quality_scale[args["quality"]]
+		media_dict = {k:v for k,v in media_dict.items() if "quality" in v.keys() and quality_scale[v["quality"]] >= quality}
+	if "actors_to_include" in args.keys():
+		actors = args["actors_to_include"]
+		media_dict = {k:v for k,v in media_dict.items() if "actors" in v.keys() and all((i in v["actors"]) for i in actors)}
+	if "actors_to_exclude" in args.keys():
+		actors = args["actors_to_exclude"]
+		media_dict = {k:v for k,v in media_dict.items() if "actors" in v.keys() and not any((i in v["actors"]) for i in actors)}
+	if "directors_to_include" in args.keys():
+		directors = args["directors_to_include"]
+		media_dict = {k:v for k,v in media_dict.items() if "directors" in v.keys() and all((i in v["directors"]) for i in directors)}
+	if "directors_to_exclude" in args.keys():
+		directors = args["directors_to_exclude"]
+		media_dict = {k:v for k,v in media_dict.items() if "directors" in v.keys() and not any((i in v["directors"]) for i in directors)}
+	if "budget" in args.keys():
+		budget = int(args["budget"])
+		media_dict = {k:v for k,v in media_dict.items() if "budget" in v.keys() and int(v["budget"]) <= budget}
 	services = get_available_streaming_services()
 	available_media = {}
 	for media in media_dict.values():
@@ -796,7 +822,10 @@ def add_media_data(media_type, media_name):
 		return
 	response = response.json()["result"]
 	for i in response:
-		if i["type"] == media_type.replace("show", "series"):
+		if i["type"] == "movie" and media_type == "movie":
+			response = i
+			break
+		elif i["type"].lower() in ["miniseries", "scripted", "series"] and media_type == "show":
 			response = i
 			break
 	if response["title"] == "Once Upon a Time in America":
@@ -807,7 +836,7 @@ def add_media_data(media_type, media_name):
 		tmdb_data = tmdb.Movies(tmdb_id).info()
 	else:
 		tmdb_data = tmdb.TV(tmdb_id).info()
-	response.update(tmdb_data)
+	response = response | tmdb_data
 	useless_attributes = ["adult", "backdrop_path", "homepage", "imdbId", "imdb_id", "original_language", "tmdbId",
 		"original_title", "originalTitle", "poster_path", "production_countries", "spoken_languages", "tagline", "video", "year"]
 	if "belongs_to_collection" in response.keys() and response["belongs_to_collection"]:
@@ -820,18 +849,18 @@ def add_media_data(media_type, media_name):
 			del response[i]
 	response["needs_data"] = False
 	response["last_updated"] = round(time.time())
-	response["release_date"] = response["release_date"].replace("-", "/")
+	if "release_date" in response.keys():
+		response["release_date"] = response["release_date"].replace("-", "/")
+	else:
+		response["release_date"] = None
 	try:
 		response["release_date"] = round(to_datetime(response["release_date"]).timestamp())
 	except:
 		pass
 	response["genres"] = [i["name"] for i in response["genres"]]
 	response["production_companies"] = [{"name":i["name"], "id":i["id"], "origin_country":i["origin_country"]} for i in response["production_companies"]]
-	try:
+	if "us" in response["streamingInfo"].keys():
 		response["streamingInfo"] = response["streamingInfo"]["us"]
-	except:
-		pprint(response["streamingInfo"])
-		pprint(response["title"])
 	for i in range(len(response["streamingInfo"])):
 		streaming_keys = [k for k in ["price", "availableSince", "addon", "leaving", "quality"] if k in response["streamingInfo"][i].keys()]
 		streaming_keys.extend(["service", "streamingType"])
@@ -1872,7 +1901,7 @@ def get_artist_info(data):
 			if artist["name"] in artist_dict.keys():
 				artist_dict[artist["name"]] += 1
 			else:
-				artist_dict.update({artist["name"]: 1})
+				artist_dict[artist["name"]] = 1
 	return artist_dict, len(artist_dict)
 
 def find_popular(artist_dict, artists_per_graph):
@@ -1882,7 +1911,7 @@ def find_popular(artist_dict, artists_per_graph):
 	uses = []
 	for i in values_list:
 		if i not in popularity.keys():
-			popularity.update({i: 1})
+			popularity[i] = 1
 		else:
 			popularity[i] += 1
 	use_nums = sorted(popularity.keys(), reverse=True)
@@ -1922,7 +1951,7 @@ def genre_data_organization(genres_per_graph=20, genre_num_only=False):
 	uses = []
 	for i in values_list:
 		if i not in popularity.keys():
-			popularity.update({i: 1})
+			popularity[i] = 1
 		else:
 			popularity[i] += 1
 	use_nums = sorted(popularity.keys(), reverse=True)
@@ -1951,7 +1980,7 @@ def release_date_data(data, range_only=False):
 	popularity = {}
 	for i in yrs:
 		if i not in popularity.keys():
-			popularity.update({i: 1})
+			popularity[i] = 1
 		else:
 			popularity[i] += 1
 	popularity = dict(sorted(popularity.items(), key=lambda item: item[0]))
@@ -1978,7 +2007,7 @@ def get_show_frequency(data):
 	for i in data:
 		shows.append(i["show"]["name"])
 	for i in shows:
-		show_dict.update({i: shows.count(i)})
+		show_dict[i] = shows.count(i)
 	return show_dict
 
 def get_show_durations(data):
@@ -1989,7 +2018,7 @@ def get_show_durations(data):
 		if show_name in show_dict.keys():
 			show_dict[show_name] = show_dict[show_name] + duration
 		else:
-			show_dict.update({show_name: duration})
+			show_dict[show_name] = duration
 	return show_dict
 
 # end of spotify functions

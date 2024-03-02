@@ -82,7 +82,9 @@ def event_loop():
 			time.sleep(1)
 			message_user(get_quote())
 			time.sleep(60)
-		elif rn("%M") == "00":
+		elif int(rn("%H")) % 4 == 0 and rn("%M") == "00":
+			if log("clean"):
+				continue
 			print(f"{rn()}: Cleaning...")
 			threading.Thread(target=clean).start()
 			time.sleep(55)

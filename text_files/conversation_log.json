@@ -4642,5 +4642,125 @@
     "sender": "script",
     "sent_at": "1709189104.751345",
     "image": false
+  },
+  {
+    "message": "send me a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709253027.8718674",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1709253028.2404473",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1709253055.514128",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1709253055.767877",
+    "image": false
+  },
+  {
+    "message": "kill",
+    "sender": "user",
+    "sent_at": "1709253060.317045",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1709253060.5293598",
+    "image": false
+  },
+  {
+    "message": "terminate",
+    "sender": "user",
+    "sent_at": "1709253071.6176522",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1709253071.8741994",
+    "image": false
+  },
+  {
+    "message": "what\u2019s the weather",
+    "sender": "user",
+    "sent_at": "1709253127.4432662",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1709253127.6994715",
+    "image": false
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709271269.4491296",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1709271271.700583",
+    "image": true
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709271274.038134",
+    "image": false
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709271276.1303432",
+    "image": false
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709271280.7481763",
+    "image": false
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709271286.7951298",
+    "image": false
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709271313.330425",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1709271315.5223122",
+    "image": true
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709271316.85886",
+    "image": false
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1709271319.227373",
+    "image": false
   }
 ]
