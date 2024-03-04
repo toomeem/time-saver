@@ -4762,5 +4762,431 @@
     "sender": "user",
     "sent_at": "1709271319.227373",
     "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1709420112.6837778",
+    "image": false
+  },
+  {
+    "message": "what\u2019s the weather",
+    "sender": "user",
+    "sent_at": "1709420137.9048471",
+    "image": false
+  },
+  {
+    "message": "Temperature - 53\u00b0\nConditions -  Foggy\nHumidity - Average\nWind Speed - Light Breeze\nVisibility - 1.25 mi",
+    "sender": "script",
+    "sent_at": "1709420139.9546936",
+    "image": false
+  },
+  {
+    "message": "what movies can i watch",
+    "sender": "user",
+    "sent_at": "1709544102.9366882",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544104.701635",
+    "image": false
+  },
+  {
+    "message": "what shows can i watch",
+    "sender": "user",
+    "sent_at": "1709544114.0170038",
+    "image": false
+  },
+  {
+    "message": "Available shows:\nThe Goldbergs - hulu\nDemon Slayer: Kimetsu no Yaiba - hulu\nBrooklyn Nine-Nine - peacock\nFreaks and Geeks - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544115.2543085",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544170.1986153",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544171.7443361",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544236.383494",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544237.7697113",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544239.001465",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544270.7070715",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544275.5103588",
+    "image": false
+  },
+  {
+    "message": "what\u2019s the weather",
+    "sender": "user",
+    "sent_at": "1709544284.759748",
+    "image": false
+  },
+  {
+    "message": "Temperature - 47\u00b0\nConditions - Overcast\nHumidity - Average\nWind Speed - Negligible\nVisibility - 10 mi",
+    "sender": "script",
+    "sent_at": "1709544285.9815335",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544289.9064598",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544425.930965",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in hd",
+    "sender": "user",
+    "sent_at": "1709544521.591468",
+    "image": false
+  },
+  {
+    "message": "There are no available movies that match the criteria.",
+    "sender": "script",
+    "sent_at": "1709544522.4706604",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in sd",
+    "sender": "user",
+    "sent_at": "1709544533.9006505",
+    "image": false
+  },
+  {
+    "message": "To see the movies on your list that are available in SD quality, please provide me with the type of media you would like to filter (show, movie), and I will generate the list for you.",
+    "sender": "script",
+    "sent_at": "1709544535.3318784",
+    "image": false
+  },
+  {
+    "message": "movie",
+    "sender": "user",
+    "sent_at": "1709544547.1199799",
+    "image": false
+  },
+  {
+    "message": "Please specify whether you would like to add or remove a movie from the list of media you haven't watched/read yet.",
+    "sender": "script",
+    "sent_at": "1709544548.2208347",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in sd",
+    "sender": "user",
+    "sent_at": "1709544558.8960571",
+    "image": false
+  },
+  {
+    "message": "There are no available movies that match the criteria.",
+    "sender": "script",
+    "sent_at": "1709544559.9359941",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available in uhd",
+    "sender": "user",
+    "sent_at": "1709544592.620016",
+    "image": false
+  },
+  {
+    "message": "There are no available movies that match the criteria.",
+    "sender": "script",
+    "sent_at": "1709544593.3380916",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are shorter than 2hrs",
+    "sender": "user",
+    "sent_at": "1709544700.59782",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544701.7745333",
+    "image": false
+  },
+  {
+    "message": "what movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709544737.773384",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544738.6697466",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709544895.8530736",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544896.705029",
+    "image": false
+  },
+  {
+    "message": "what comedy movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709544908.902441",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544909.7816916",
+    "image": false
+  },
+  {
+    "message": "what action movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709544917.5587177",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544918.4308853",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709544973.4596171",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544974.3780146",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709544980.8066397",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709544981.898959",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709544982.784287",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545037.7555828",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709545038.7436533",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545074.8507702",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\nSuper 8 - paramount\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nDonnie Darko - peacock\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709545075.694951",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545191.6416495",
+    "image": false
+  },
+  {
+    "message": "There are no available movies that match the criteria.",
+    "sender": "script",
+    "sent_at": "1709545192.8665314",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545221.8257143",
+    "image": false
+  },
+  {
+    "message": "There are no available movies that match the criteria.",
+    "sender": "script",
+    "sent_at": "1709545222.835902",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545252.6006775",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545254.153306",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545383.266671",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\n48 Hrs. - paramount\nDonnie Darko - peacock\n",
+    "sender": "script",
+    "sent_at": "1709545384.5897007",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545385.2876308",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\n48 Hrs. - paramount\nDonnie Darko - peacock\n",
+    "sender": "script",
+    "sent_at": "1709545386.1023514",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545386.7655694",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\n48 Hrs. - paramount\nDonnie Darko - peacock\n",
+    "sender": "script",
+    "sent_at": "1709545388.0044563",
+    "image": false
+  },
+  {
+    "message": "what drama movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545388.6827238",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nThe Whale - paramount\nTitanic - paramount\nUncle Buck - peacock\n48 Hrs. - paramount\nDonnie Darko - peacock\n",
+    "sender": "script",
+    "sent_at": "1709545389.5672948",
+    "image": false
+  },
+  {
+    "message": "what action movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545421.657419",
+    "image": false
+  },
+  {
+    "message": "Available movies:\n48 Hrs. - paramount\n",
+    "sender": "script",
+    "sent_at": "1709545422.5916445",
+    "image": false
+  },
+  {
+    "message": "what comedy movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545428.1831484",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nUncle Buck - peacock\nBetter Off Dead... - paramount\n48 Hrs. - paramount\nClerks - paramount\nZoolander - paramount\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709545428.9767628",
+    "image": false
+  },
+  {
+    "message": "what romance movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545438.5157044",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nTitanic - paramount\nBetter Off Dead... - paramount\n",
+    "sender": "script",
+    "sent_at": "1709545439.4512415",
+    "image": false
+  },
+  {
+    "message": "what thriller movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545459.371139",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nSuper 8 - paramount\n48 Hrs. - paramount\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709545460.3899105",
+    "image": false
+  },
+  {
+    "message": "what horror movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709545468.2051938",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nAlien - hulu\nThe Menu - hulu\n",
+    "sender": "script",
+    "sent_at": "1709545470.7983987",
+    "image": false
   }
 ]

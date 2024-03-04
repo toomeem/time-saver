@@ -221,7 +221,8 @@
 			"properties": {
 				"media_type": {
 					"type": "string",
-					"description": "the type of media to filter by"
+					"description": "the type of media to filter by",
+					"enum": ["show", "movie", "book"]
 				},
 				"genre": {
 					"type": "string",
@@ -231,47 +232,6 @@
 				"runtime": {
 					"type": "integer",
 					"description": "the maximum runtime of the media to filter by, in minutes"
-				},
-				"quality": {
-					"type": "string",
-					"description": "the quality of the media to filter by",
-					"enum": ["SD", "HD", "UHD"]
-				},
-				"actors_to_include": {
-					"type": "array",
-					"items": {
-						"type": "string",
-						"description": "the actors that must be in the media"
-					},
-					"description": "the actors that must be in the media"
-				},
-				"actors_to_exclude": {
-					"type": "array",
-					"items": {
-						"type": "string",
-						"description": "the actors that must not be in the media"
-					},
-					"description": "the actors that must not be in the media"
-				},
-				"directors_to_include": {
-					"type": "array",
-					"items": {
-						"type": "string",
-						"description": "the directors that must be in the media"
-					},
-					"description": "the directors that must be in the media"
-				},
-				"directors_to_exclude": {
-					"type": "array",
-					"items": {
-						"type": "string",
-						"description": "the directors that must not be in the media"
-					},
-					"description": "the directors that must not be in the media"
-				},
-				"budget": {
-					"type": "integer",
-					"description": "the maximum budget of the media to filter by"
 				}
 			},
 			"required": [

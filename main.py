@@ -257,11 +257,11 @@ def log(message,sender="",contains_image=False,is_command=True):
 
 def days_until(target, start=None, return_days=False):
 	log("days_until")
-	target = to_datetime(target)
+	target = to_timestamp(target)
 	if not start:
 		start = date.today()
 	else:
-		start = to_datetime(start)
+		start = to_timestamp(start)
 	if not target or not start:
 		error_report("days_until")
 		return "error"
@@ -635,7 +635,8 @@ def get_media_suggestions(args):
 	media_type = args["media_type"]
 	available = get_available_media(args)
 	if not available:
-		return f"There are no available {media_type}s that match the criteria."
+		message_user(f"There are no available {media_type}s that match the criteria.")
+		return
 	else:
 		message = f"Available {media_type}s:\n"
 	for media, services in available.items():
@@ -705,31 +706,16 @@ def get_available_media(args):
 	with open("text_files/media_data.json") as f:
 		media_dict = json.load(f)
 	media_dict = media_dict[media_type]
-	if "genres" in args.keys():
-		genre = args["genres"]
-		media_dict = {k:v for k,v in media_dict.items() if "genres" in v.keys() and genre in v["genres"]}
+	media_dict = {k:v for k,v in media_dict.items() if not v["needs_data"]}
+	media_dict = {k:v for k,v in media_dict.items() if v["status"] in ["Released", "Returning Series", "Ended", "Canceled"]}
+	if "genre" in args.keys():
+		genre = args["genre"]
+		media_dict = {k:v for k,v in media_dict.items() if "genres" in v.keys() and genre in [i.lower() for i in v["genres"]]}# todo remove extra list comprehension in like a week
 	if "runtime" in args.keys():
 		runtime = args["runtime"]
 		media_dict = {k:v for k,v in media_dict.items() if "runtime" in v.keys() and v["runtime"] <= runtime}
-	if "quality" in args.keys():
-		quality_scale = {"sd": 0, "hd": 1, "uhd": 2}
-		quality = quality_scale[args["quality"]]
-		media_dict = {k:v for k,v in media_dict.items() if "quality" in v.keys() and quality_scale[v["quality"]] >= quality}
-	if "actors_to_include" in args.keys():
-		actors = args["actors_to_include"]
-		media_dict = {k:v for k,v in media_dict.items() if "actors" in v.keys() and all((i in v["actors"]) for i in actors)}
-	if "actors_to_exclude" in args.keys():
-		actors = args["actors_to_exclude"]
-		media_dict = {k:v for k,v in media_dict.items() if "actors" in v.keys() and not any((i in v["actors"]) for i in actors)}
-	if "directors_to_include" in args.keys():
-		directors = args["directors_to_include"]
-		media_dict = {k:v for k,v in media_dict.items() if "directors" in v.keys() and all((i in v["directors"]) for i in directors)}
-	if "directors_to_exclude" in args.keys():
-		directors = args["directors_to_exclude"]
-		media_dict = {k:v for k,v in media_dict.items() if "directors" in v.keys() and not any((i in v["directors"]) for i in directors)}
-	if "budget" in args.keys():
-		budget = int(args["budget"])
-		media_dict = {k:v for k,v in media_dict.items() if "budget" in v.keys() and int(v["budget"]) <= budget}
+	if media_dict == {}:
+		return {}
 	services = get_available_streaming_services()
 	available_media = {}
 	for media in media_dict.values():
@@ -739,7 +725,6 @@ def get_available_media(args):
 				try:
 					service = service_data["service"]
 				except:
-					# print(service_data)
 					continue
 				if service_data["streamingType"] == "free":
 					pass
@@ -796,7 +781,7 @@ def get_missing_media_data():
 	missing_data = {"movie": [], "show": [], "book": []}
 	for media_type in ["movie", "show", "book"]:
 		for media_name, media_data in media_list[media_type].items():
-			if media_data["needs_data"]:
+			if media_data["needs_data"] or int(media_data["last_updated"]) < (time.time() - 60*60*24*0):
 				missing_data[media_type].append(media_name)
 	return missing_data
 
@@ -828,9 +813,6 @@ def add_media_data(media_type, media_name):
 		elif i["type"].lower() in ["miniseries", "scripted", "series"] and media_type == "show":
 			response = i
 			break
-	if response["title"] == "Once Upon a Time in America":
-		pprint(response)
-		sys.exit()
 	tmdb_id = int(response["tmdbId"])
 	if response["type"] == "movie":
 		tmdb_data = tmdb.Movies(tmdb_id).info()
@@ -854,10 +836,10 @@ def add_media_data(media_type, media_name):
 	else:
 		response["release_date"] = None
 	try:
-		response["release_date"] = round(to_datetime(response["release_date"]).timestamp())
+		response["release_date"] = round(to_datetime(response["release_date"]))
 	except:
 		pass
-	response["genres"] = [i["name"] for i in response["genres"]]
+	response["genres"] = [i["name"].lower() for i in response["genres"]]
 	response["production_companies"] = [{"name":i["name"], "id":i["id"], "origin_country":i["origin_country"]} for i in response["production_companies"]]
 	if "us" in response["streamingInfo"].keys():
 		response["streamingInfo"] = response["streamingInfo"]["us"]
@@ -891,23 +873,37 @@ def remove_job(name):
 	with open("text_files/jobs.json", "w") as f:
 		json.dump(all_jobs, f, indent=2)
 
-def to_datetime(date):
+def to_negative_timestamp(date):
+	date = [int(i) for i in date.split("/")]
+	total_year_seconds = 1970 - date[0] * 365.25 * 24 * 60 * 60
+	partial_year_seconds = datetime(1970, date[1], date[2], date[3], date[4], date[5]).timestamp()
+	return (total_year_seconds - partial_year_seconds) * -1
+
+def to_timestamp(date):
 	if isinstance(date, datetime):
-		return date
+		return date.timestamp()
 	try:
-		return datetime.fromtimestamp(float(date))
-	except:
+		date = float(date)
+	except ValueError:
 		pass
 	if isinstance(date, str):
 		match date.count("/"):
 			case 2:
-				return datetime.strptime(date, "%Y/%m/%d")
+				if int(date.split("/")[0]) < 1970:
+					return to_negative_timestamp(date+"/00/00/00")
+				return datetime.strptime(date, "%Y/%m/%d").timestamp()
 			case 3:
-				return datetime.strptime(date, "%Y/%m/%d/%H")
+				if int(date.split("/")[0]) < 1970:
+					return to_negative_timestamp(date+"/00/00")
+				return datetime.strptime(date, "%Y/%m/%d/%H").timestamp()
 			case 4:
-				return datetime.strptime(date, "%Y/%m/%d/%H/%M")
+				if int(date.split("/")[0]) < 1970:
+					return to_negative_timestamp(date+"/00")
+				return datetime.strptime(date, "%Y/%m/%d/%H/%M").timestamp()
 			case 5:
-				return datetime.strptime(date, "%Y/%m/%d/%H/%M/%S")
+				if int(date.split("/")[0]) < 1970:
+					return to_negative_timestamp(date)
+				return datetime.strptime(date, "%Y/%m/%d/%H/%M/%S").timestamp()
 		return date
 
 def set_workout_split(split):
@@ -1160,8 +1156,7 @@ def clean(updates=True):
 	check_brentford_file()
 	check_weight_file()
 	check_error_file()
-	if get_missing_media_data():
-		add_job("get_media_data")
+	add_job("get_media_data")
 
 def get_time(args):
 	if log("get_time"):
