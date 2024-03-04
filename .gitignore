@@ -1,3 +1,5 @@
 ngrok.exe
 .env
 .cache
+.mypy_cache
+__pycache__
