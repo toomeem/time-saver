@@ -7,7 +7,6 @@ import json
 import os
 import random
 import re
-import sys
 import threading
 import time
 from collections import Counter
@@ -548,19 +547,22 @@ def get_train_schedule(station_json):
 	septa_response = requests.get(
 		"https://www3.septa.org/api/NextToArrive/index.php",
 		params=parameters, headers=septa_headers).json()
-	price = get_train_price(station1, station2, septa_response[0])
 	if not septa_response:
 		message_user("There are no upcoming trains between those stations.")
-		message_user(f"A ride between those stations will cost about ${'{:.2f}'.format(price)} depending on the time of day.")
-		return
+		try:
+			price = get_train_price(station1, station2, septa_response[0])
+			message_user(f"A ride between those stations will cost about ${'{:.2f}'.format(price)} depending on the time of day.")
+			return
+		except:
+			return
 	try:
+		price = get_train_price(station1, station2, septa_response[0])
 		departure_time = septa_response[0]["orig_departure_time"][:-2]
 		arrival_time = septa_response[0]["orig_arrival_time"][:-2]
 		delay = septa_response[0]["orig_delay"]
 	except:
 		message_user("There are no upcoming trains between those stations.")
 		return
-	price = get_train_price(station1, station2, septa_response[0])
 	station1 = station1.replace("Market East", "Jefferson")
 	station2 = station2.replace("Market East", "Jefferson")
 	message = f'''The next train from {station1} to {station2} leaves at {departure_time} and arrives at {arrival_time}.'''

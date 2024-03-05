@@ -5188,5 +5188,179 @@
     "sender": "script",
     "sent_at": "1709545470.7983987",
     "image": false
+  },
+  {
+    "message": "what horror movies on my list are available",
+    "sender": "user",
+    "sent_at": "1709619523.3819966",
+    "image": false
+  },
+  {
+    "message": "Available movies:\nThe Menu - hulu\nAlien - hulu\n",
+    "sender": "script",
+    "sent_at": "1709619524.5913842",
+    "image": false
+  },
+  {
+    "message": "what shows are available",
+    "sender": "user",
+    "sent_at": "1709619547.535114",
+    "image": false
+  },
+  {
+    "message": "Available shows:\nFreaks and Geeks - hulu\nThe Goldbergs - hulu\nDemon Slayer: Kimetsu no Yaiba - hulu\nBrooklyn Nine-Nine - peacock\n",
+    "sender": "script",
+    "sent_at": "1709619548.3444445",
+    "image": false
+  },
+  {
+    "message": "what comedy shows are available",
+    "sender": "user",
+    "sent_at": "1709619585.2818053",
+    "image": false
+  },
+  {
+    "message": "Available shows:\nFreaks and Geeks - hulu\nThe Goldbergs - hulu\nBrooklyn Nine-Nine - peacock\n",
+    "sender": "script",
+    "sent_at": "1709619586.580672",
+    "image": false
+  },
+  {
+    "message": "what thriller movies are available",
+    "sender": "user",
+    "sent_at": "1709619606.4137628",
+    "image": false
+  },
+  {
+    "message": "Available movies:\n48 Hrs. - paramount\nThe Menu - hulu\nThe Imitation Game - hulu\n",
+    "sender": "script",
+    "sent_at": "1709619607.2511165",
+    "image": false
+  },
+  {
+    "message": "give me a quote that contains the word \u201cballs\u201d",
+    "sender": "user",
+    "sent_at": "1709619929.8080695",
+    "image": false
+  },
+  {
+    "message": "Total Number of Quotes: 12168\nNumber of Matching Quotes: 3\nOne of the Matching Quotes: Politics - I still think it's a bunch of liars and a bunch of self-interest. It's not about the people: it's about themselves and their rise to power. They are voting on things based on whether they will have the support of the people when they vote next time. They don't have the balls to say, 'I believe in this. I don't care what happens.'\n",
+    "sender": "script",
+    "sent_at": "1709619930.71469",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709620437.8981116",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709620440.6422198",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709620444.8970704",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709623871.097107",
+    "image": false
+  },
+  {
+    "message": "There are no upcoming trains between those stations.",
+    "sender": "script",
+    "sent_at": "1709623872.6858075",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709623873.39742",
+    "image": false
+  },
+  {
+    "message": "There are no upcoming trains between those stations.",
+    "sender": "script",
+    "sent_at": "1709623874.968825",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709623875.6824841",
+    "image": false
+  },
+  {
+    "message": "There are no upcoming trains between those stations.",
+    "sender": "script",
+    "sent_at": "1709623877.623764",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709623878.334959",
+    "image": false
+  },
+  {
+    "message": "There are no upcoming trains between those stations.",
+    "sender": "script",
+    "sent_at": "1709623880.0780153",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709623880.767978",
+    "image": false
+  },
+  {
+    "message": "There are no upcoming trains between those stations.",
+    "sender": "script",
+    "sent_at": "1709623882.8588939",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709623883.563602",
+    "image": false
+  },
+  {
+    "message": "There are no upcoming trains between those stations.",
+    "sender": "script",
+    "sent_at": "1709623885.0068421",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709623885.7042427",
+    "image": false
+  },
+  {
+    "message": "There are no upcoming trains between those stations.",
+    "sender": "script",
+    "sent_at": "1709623887.6321719",
+    "image": false
+  },
+  {
+    "message": "when is the next train from pennbrook to 30th street",
+    "sender": "user",
+    "sent_at": "1709623888.326442",
+    "image": false
+  },
+  {
+    "message": "There are no upcoming trains between those stations.",
+    "sender": "script",
+    "sent_at": "1709623889.7629027",
+    "image": false
   }
 ]
