@@ -67,8 +67,7 @@ def event_loop():
 					missing_media_data = get_missing_media_data()
 					for media_type, media_list in missing_media_data.items():
 						for media in media_list:
-							if media_type != "book": # TODO: Add book support
-								add_media_data(media_type, media)
+							add_media_data(media_type, media)
 			remove_job(job["name"])
 		if rn() == "08:30" and log("morning"):
 			time.sleep(60)

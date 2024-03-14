@@ -145,9 +145,6 @@ def hook():
 	match response_text:
 		case "kill":
 			kill()
-		case "temp":
-			if not log("temp"):
-				message_user(f'''{get_weather("temp")}°''')
 		case "weather":
 			if not log("weather"):
 				message_user(formatted_weather())
@@ -661,8 +658,7 @@ def commands():
 	if log("commands"):
 		return
 	command_lst = [
-		"get the current temperature in Philadelphia"
-		, "get the current weather conditions in Philadelphia"
+		"get the current weather conditions in Philadelphia"
 		, "get a random quote"
 		, "gets how much school is left for the year"
 		, "searches through all the unused quotes that contain that word/phrase"
@@ -685,8 +681,8 @@ def commands():
 		, "toggles between the bro split and the PPL workout split"
 		, "sends the current workout split"
 		, "sends the day of the week you go to the gym"
-		, "adds a movie/show/book to the list of media to watch/read"
-		, "removes a movie/show/book from the list of media to watch/read"
+		, "adds a movie/show to the list of media to watch"
+		, "removes a movie/show from the list of media to watch"
 		, "sends a description of this bot"
 		, "sends this"]
 	message = "\n".join(command_lst)
@@ -723,7 +719,7 @@ def get_available_media(args):
 	for media in media_dict.values():
 		if "streamingInfo" not in media.keys():
 			continue
-		for service_data in media["streamingInfo"]:
+		for service_data in media["streamingInfo"]["us"]:
 				try:
 					service = service_data["service"]
 				except:
@@ -780,10 +776,10 @@ def get_missing_media_data():
 		return
 	with open("text_files/media_data.json") as f:
 		media_list = dict(json.load(f))
-	missing_data = {"movie": [], "show": [], "book": []}
-	for media_type in ["movie", "show", "book"]:
+	missing_data = {"movie": [], "show": []}
+	for media_type in ["movie", "show"]:
 		for media_name, media_data in media_list[media_type].items():
-			if media_data["needs_data"] or int(media_data["last_updated"]) < (time.time() - 60*60*24*0):
+			if media_data["needs_data"] or int(media_data["last_updated"]) < (time.time() - 60*60*24*7):
 				missing_data[media_type].append(media_name)
 	return missing_data
 
@@ -838,17 +834,19 @@ def add_media_data(media_type, media_name):
 	else:
 		response["release_date"] = None
 	try:
-		response["release_date"] = round(to_datetime(response["release_date"]))
+		response["release_date"] = round(to_timestamp(response["release_date"]))
 	except:
 		pass
 	response["genres"] = [i["name"].lower() for i in response["genres"]]
 	response["production_companies"] = [{"name":i["name"], "id":i["id"], "origin_country":i["origin_country"]} for i in response["production_companies"]]
 	if "us" in response["streamingInfo"].keys():
-		response["streamingInfo"] = response["streamingInfo"]["us"]
-	for i in range(len(response["streamingInfo"])):
-		streaming_keys = [k for k in ["price", "availableSince", "addon", "leaving", "quality"] if k in response["streamingInfo"][i].keys()]
+		response["streamingInfo"] = {"us": response["streamingInfo"]["us"]}
+	else:
+		response["streamingInfo"] = response["streamingInfo"] | {"us": []}
+	for i in range(len(response["streamingInfo"]["us"])):
+		streaming_keys = [k for k in ["price", "availableSince", "addon", "leaving", "quality"] if k in response["streamingInfo"]["us"][i].keys()]
 		streaming_keys.extend(["service", "streamingType"])
-		response["streamingInfo"][i] = {k: response["streamingInfo"][i][k] for k in streaming_keys}
+		response["streamingInfo"]["us"][i] = {k: response["streamingInfo"]["us"][i][k] for k in streaming_keys}
 	with open("text_files/media_data.json") as f:
 		media_data = json.load(f)
 	media_data[media_type].pop(media_name)

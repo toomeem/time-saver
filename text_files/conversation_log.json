@@ -5362,5 +5362,371 @@
     "sender": "script",
     "sent_at": "1709623889.7629027",
     "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1709687314.0192435",
+    "image": false
+  },
+  {
+    "message": "what\u2019s the weather",
+    "sender": "user",
+    "sent_at": "1709687333.4558766",
+    "image": false
+  },
+  {
+    "message": "Temperature - 45\u00b0\nConditions - Overcast\nHumidity - Average\nWind Speed - Windy\nVisibility - 10 mi",
+    "sender": "script",
+    "sent_at": "1709687334.7984967",
+    "image": false
+  },
+  {
+    "message": "what day at the gym is it",
+    "sender": "user",
+    "sent_at": "1710026490.626821",
+    "image": false
+  },
+  {
+    "message": "Current gym day: Push",
+    "sender": "script",
+    "sent_at": "1710026492.010084",
+    "image": false
+  },
+  {
+    "message": "set the gym day to pull",
+    "sender": "user",
+    "sent_at": "1710026502.9098918",
+    "image": false
+  },
+  {
+    "message": "\n\t\tCurrent gym day is Push\n\t\tWhat day would you like to set it to?(respond with a number)\n0: Legs\n1: Pull\n2: Push",
+    "sender": "script",
+    "sent_at": "1710026503.5727375",
+    "image": false
+  },
+  {
+    "message": "set the gym day to pull",
+    "sender": "user",
+    "sent_at": "1710026562.9253993",
+    "image": false
+  },
+  {
+    "message": "1",
+    "sender": "user",
+    "sent_at": "1710026563.176309",
+    "image": false
+  },
+  {
+    "message": "get the current weather conditions in Philadelphia\nget a random quote\ngets how much school is left for the year\nsearches through all the unused quotes that contain that word/phrase\nsends the day of the month and the weekday\nlogs your weight\nsends a graph of your weight over time\nsends some data about your spotify account\nsends a graph of your top artists\nsends a graph of your longest songs\nsends a graph of your top genres\nsends a graph of the ratio of explicit songs in your library\nsends a graph of the ratio of covers in your library\nsends a graph of the decades your songs were released in\nsends a graph of the podcasts you listen to\nsends a graph of the run times of the podcasts you listen to\nstarts a workout\nsends the next train between two stations\nsends the current time in a city of your choice\nsets the day of the week you go to the gym\ntoggles between the bro split and the PPL workout split\nsends the current workout split\nsends the day of the week you go to the gym\nadds a movie/show to the list of media to watch\nremoves a movie/show from the list of media to watch\nsends a description of this bot\nsends this\nI also have a few other surprises ;)",
+    "sender": "script",
+    "sent_at": "1710026563.784986",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026564.5132203",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026565.3892527",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026568.0709867",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026572.9810932",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026582.444609",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026599.5513299",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026632.4133673",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026697.2281036",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026797.11903",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026862.9680178",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710026953.6479225",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027030.890819",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027126.4066262",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027242.2965024",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027328.5590138",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027395.5944705",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027498.4082732",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027575.279072",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027660.0025327",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027727.9711592",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027838.7039866",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710027956.569547",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028050.493942",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028168.6774611",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028255.2346325",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028317.083067",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028394.8410032",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028470.7371473",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028532.6113327",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028620.4486344",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028739.088607",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028823.2063663",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710028932.0489728",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029045.9099019",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029135.7766364",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029231.6258848",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029330.319524",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029449.8016512",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029562.6652527",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029671.519773",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029733.3109834",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029850.1761808",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710029928.875615",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710030009.7968535",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710030086.6861236",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710030182.9213316",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710030282.4416614",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710030347.2729938",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710030467.8074837",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1710030555.6890767",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1710030556.5495448",
+    "image": false
   }
 ]
