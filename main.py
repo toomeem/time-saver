@@ -192,7 +192,7 @@ def hook():
 		case "time":
 			get_time(args)
 		case "set_gym_day":
-			user_set_gym_day()
+			user_set_gym_day(args)
 		case "toggle_workout_split":
 			toggle_workout_split()
 		case "get_current_workout_split":
@@ -583,6 +583,7 @@ def user_set_gym_day():
 	if not day_num:
 		return
 	set_gym_day(day_num)
+	message_user(f"Gym day set to {current_split[day_num]}")
 
 def respond_with_current_workout_split():
 	if log("respond_with_current_workout_split"):

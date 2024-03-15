@@ -13,7 +13,7 @@ workout_splits = {
 	"bro_split": bro_split,
 	"ppl": ppl
 }
-all_exercises = list(json.load(open("text_files/exercises.json")))
+all_exercises = list(json.load(open("text_files/exercises.json", "r")))
 
 def event_loop_start():
 	threading.Thread(target=clean).start()
@@ -21,7 +21,7 @@ def event_loop_start():
 	end_workout(True)
 
 def workout_loop():
-	wait_between_sets = 60 * 3
+	wait_between_sets = 60 * 2
 	quit_workout = False
 	while not quit_workout:
 		print("looping")
