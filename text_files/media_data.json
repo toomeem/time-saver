@@ -7382,506 +7382,80 @@
       "vote_count": 929,
       "needs_data": false,
       "last_updated": 1710384723
+    },
+    "Come and See": {
+      "type": "movie",
+      "title": "Come and See",
+      "overview": "The invasion of a village in Byelorussia by German forces sends young Florya into the forest to join the weary Resistance fighters, against his family's wishes. There he meets a girl, Glasha, who accompanies him back to his village. On returning home, Florya finds his family and fellow peasants massacred. His continued survival amidst the brutal debris of war becomes increasingly nightmarish, a battle between despair and hope.",
+      "streamingInfo": {
+        "us": [
+          {
+            "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1679593523,
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "14.99",
+              "currency": "USD",
+              "formatted": "14.99 USD"
+            },
+            "availableSince": 1679593523,
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "buy"
+          }
+        ]
+      },
+      "cast": [
+        "Aleksei Kravchenko",
+        "Olga Mironova",
+        "Liubomiras Laucevicius",
+        "Vladas Bagdonas",
+        "J\u00fcri Lumiste",
+        "Viktors Lorencs",
+        "Kazimir Rabetsky"
+      ],
+      "genres": [
+        "drama",
+        "war"
+      ],
+      "directors": [
+        "Elem Klimov"
+      ],
+      "belongs_to_collection": null,
+      "budget": 0,
+      "id": 25237,
+      "popularity": 36.616,
+      "production_companies": [
+        {
+          "name": "Belarusfilm",
+          "id": 12617,
+          "origin_country": "SU"
+        },
+        {
+          "name": "Mosfilm",
+          "id": 344,
+          "origin_country": "SU"
+        }
+      ],
+      "release_date": 498369600,
+      "revenue": 168817,
+      "runtime": 142,
+      "status": "Released",
+      "vote_average": 8.269,
+      "vote_count": 1329,
+      "needs_data": false,
+      "last_updated": 1710910181
     }
   },
   "show": {
-    "BoJack Horseman": {
-      "type": "Scripted",
-      "title": "BoJack Horseman",
-      "overview": "Meet the most beloved sitcom horse of the 90s - 20 years later. BoJack Horseman was the star of the hit TV show \"Horsin' Around,\" but today he's washed up, living in Hollywood, complaining about everything, and wearing colorful sweaters.",
-      "streamingInfo": {
-        "us": [
-          {
-            "availableSince": 1648617277,
-            "quality": "hd",
-            "service": "netflix",
-            "streamingType": "subscription"
-          }
-        ]
-      },
-      "cast": [
-        "Will Arnett",
-        "Aaron Paul",
-        "Alison Brie",
-        "Amy Sedaris",
-        "Paul F. Tompkins",
-        "Adam Conover",
-        "Keith Olbermann"
-      ],
-      "firstAirYear": 2014,
-      "lastAirYear": 2020,
-      "genres": [
-        "animation",
-        "comedy",
-        "drama"
-      ],
-      "creators": [
-        "Raphael Bob-Waksberg"
-      ],
-      "status": "Ended",
-      "seasonCount": 6,
-      "episodeCount": 76,
-      "seasons": [
-        {
-          "air_date": "2014-12-19",
-          "episode_count": 6,
-          "id": 63867,
-          "name": "Specials",
-          "overview": "",
-          "poster_path": "/tOqQErdiDNJIa4qBjJWWvRzkyUS.jpg",
-          "season_number": 0,
-          "vote_average": 0.0
-        },
-        {
-          "air_date": "2014-08-22",
-          "episode_count": 12,
-          "id": 62359,
-          "name": "Season 1",
-          "overview": "Once the star of the hit sitcom \"Horsin' Around,\" today BoJack's washed up, just hanging around Hollywood complaining, and wearing colorful sweaters.",
-          "poster_path": "/6pM9MxC1H8jFJjhQY8TmoSRgYB1.jpg",
-          "season_number": 1,
-          "vote_average": 7.5
-        },
-        {
-          "air_date": "2015-07-17",
-          "episode_count": 12,
-          "id": 66995,
-          "name": "Season 2",
-          "overview": "With his memoir a bestseller and the movie role of his dreams, BoJack's ready to jump-start his career and his life. Unless he messes it all up.",
-          "poster_path": "/nB8ktUjdeLb8mUSMVhq4JSRyDVq.jpg",
-          "season_number": 2,
-          "vote_average": 8.0
-        },
-        {
-          "air_date": "2016-07-22",
-          "episode_count": 12,
-          "id": 78422,
-          "name": "Season 3",
-          "overview": "\"Secretariat\" is a huge success, and BoJack's finally feeling his oats. But when it comes to his personal life, everything he touches turns to manure.",
-          "poster_path": "/rkBPhzvjLz6IbzkGMOTxtCiRxvA.jpg",
-          "season_number": 3,
-          "vote_average": 8.2
-        },
-        {
-          "air_date": "2017-09-08",
-          "episode_count": 12,
-          "id": 92423,
-          "name": "Season 4",
-          "overview": "While BoJack wrestles with self-loathing and loss, Todd helps Mr. Peanutbutter run for governor of California and Diane gets a job at a hip blog.",
-          "poster_path": "/lirG3udbj4dn6fQK7pWhRJC6NmW.jpg",
-          "season_number": 4,
-          "vote_average": 8.2
-        },
-        {
-          "air_date": "2018-09-14",
-          "episode_count": 12,
-          "id": 106026,
-          "name": "Season 5",
-          "overview": "BoJack's back on screen as the star of \"Philbert,\" a new detective series produced by Princess Carolyn. But his demons are out in full force.",
-          "poster_path": "/a6Vhdhbf5cDXlMPtuAwZ7grJDd3.jpg",
-          "season_number": 5,
-          "vote_average": 8.4
-        },
-        {
-          "air_date": "2019-10-25",
-          "episode_count": 16,
-          "id": 133186,
-          "name": "Season 6",
-          "overview": "BoJack inches his way toward redemption as a stint in rehab forces him to confront his mistakes and start making amends.",
-          "poster_path": "/czEZfIhJdKjYkUX5YVbOI6gu1Nv.jpg",
-          "season_number": 6,
-          "vote_average": 8.4
-        }
-      ],
-      "created_by": [
-        {
-          "id": 1169456,
-          "credit_id": "53f7267ac3a3683403005182",
-          "name": "Raphael Bob-Waksberg",
-          "gender": 2,
-          "profile_path": "/2ktN8lJhecCKG77nlDm3dISbnxk.jpg"
-        }
-      ],
-      "episode_run_time": [
-        25
-      ],
-      "first_air_date": "2014-08-22",
-      "id": 61222,
-      "in_production": false,
-      "languages": [
-        "en"
-      ],
-      "last_air_date": "2020-01-31",
-      "last_episode_to_air": {
-        "id": 2066578,
-        "name": "Nice While It Lasted",
-        "overview": "A celebration brings people together.",
-        "vote_average": 9.0,
-        "vote_count": 20,
-        "air_date": "2020-01-31",
-        "episode_number": 16,
-        "episode_type": "finale",
-        "production_code": "",
-        "runtime": 27,
-        "season_number": 6,
-        "show_id": 61222,
-        "still_path": "/18P31kEav1M8ykJsWbgsjUEK7QO.jpg"
-      },
-      "name": "BoJack Horseman",
-      "next_episode_to_air": null,
-      "networks": [
-        {
-          "id": 213,
-          "logo_path": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png",
-          "name": "Netflix",
-          "origin_country": ""
-        }
-      ],
-      "number_of_episodes": 76,
-      "number_of_seasons": 6,
-      "origin_country": [
-        "US"
-      ],
-      "original_name": "BoJack Horseman",
-      "popularity": 258.567,
-      "production_companies": [
-        {
-          "name": "Tornante Company",
-          "id": 30740,
-          "origin_country": "US"
-        },
-        {
-          "name": "ShadowMachine",
-          "id": 81667,
-          "origin_country": "US"
-        },
-        {
-          "name": "Boxer vs Raptor",
-          "id": 123120,
-          "origin_country": ""
-        }
-      ],
-      "vote_average": 8.6,
-      "vote_count": 2227,
-      "needs_data": false,
-      "last_updated": 1710024309,
-      "release_date": null
-    },
-    "Black Bird": {
-      "type": "Miniseries",
-      "title": "Black Bird",
-      "overview": "As Jimmy Keene begins a 10-year prison sentence, he gets an incredible offer: If he can elicit a confession from suspected killer Larry Hall, Jimmy will be freed. Completing this mission becomes the challenge of a lifetime.",
-      "streamingInfo": {
-        "us": [
-          {
-            "availableSince": 1653873521,
-            "quality": "uhd",
-            "service": "apple",
-            "streamingType": "subscription"
-          }
-        ]
-      },
-      "cast": [
-        "Taron Egerton",
-        "Paul Walter Hauser",
-        "Sepideh Moafi",
-        "Greg Kinnear",
-        "Ray Liotta",
-        "Robert Wisdom",
-        "Laney Stiebing"
-      ],
-      "firstAirYear": 2022,
-      "lastAirYear": 2022,
-      "genres": [
-        "drama",
-        "crime"
-      ],
-      "creators": [
-        "Dennis Lehane"
-      ],
-      "status": "Ended",
-      "seasonCount": 1,
-      "episodeCount": 6,
-      "seasons": [
-        {
-          "air_date": "2022-07-07",
-          "episode_count": 6,
-          "id": 239815,
-          "name": "Miniseries",
-          "overview": "",
-          "poster_path": "/w2shojFb8JZsoh9Ddq52JsHaQoK.jpg",
-          "season_number": 1,
-          "vote_average": 8.0
-        }
-      ],
-      "created_by": [
-        {
-          "id": 4722,
-          "credit_id": "62474e1525a536004e84338d",
-          "name": "Dennis Lehane",
-          "gender": 2,
-          "profile_path": "/9pY4fW3bCG0q6vilEvvswIAbAK0.jpg"
-        }
-      ],
-      "episode_run_time": [],
-      "first_air_date": "2022-07-07",
-      "id": 155537,
-      "in_production": false,
-      "languages": [
-        "en"
-      ],
-      "last_air_date": "2022-08-04",
-      "last_episode_to_air": {
-        "id": 3636887,
-        "name": "You Promised",
-        "overview": "Jimmy reaches his breaking point. Larry becomes suspicious. McCauley and Miller talk to an important person in Larry\u2019s life.",
-        "vote_average": 8.3,
-        "vote_count": 14,
-        "air_date": "2022-08-04",
-        "episode_number": 6,
-        "episode_type": "finale",
-        "production_code": "",
-        "runtime": 60,
-        "season_number": 1,
-        "show_id": 155537,
-        "still_path": "/aPQzt8cF7ccLsw8Zy3m7DnkqJ9L.jpg"
-      },
-      "name": "Black Bird",
-      "next_episode_to_air": null,
-      "networks": [
-        {
-          "id": 2552,
-          "logo_path": "/4KAy34EHvRM25Ih8wb82AuGU7zJ.png",
-          "name": "Apple TV+",
-          "origin_country": ""
-        }
-      ],
-      "number_of_episodes": 6,
-      "number_of_seasons": 1,
-      "origin_country": [
-        "US"
-      ],
-      "original_name": "Black Bird",
-      "popularity": 55.629,
-      "production_companies": [
-        {
-          "name": "Imperative Entertainment",
-          "id": 81121,
-          "origin_country": "US"
-        },
-        {
-          "name": "EDEN Productions",
-          "id": 152551,
-          "origin_country": "US"
-        },
-        {
-          "name": "EMJAG Productions",
-          "id": 14654,
-          "origin_country": "US"
-        },
-        {
-          "name": "Crime Story Media",
-          "id": 156311,
-          "origin_country": "US"
-        },
-        {
-          "name": "Hans Bubby",
-          "id": 181707,
-          "origin_country": "US"
-        }
-      ],
-      "vote_average": 8.128,
-      "vote_count": 520,
-      "needs_data": false,
-      "last_updated": 1710024311,
-      "release_date": null
-    },
-    "Freaks and Geeks": {
-      "type": "Scripted",
-      "title": "Freaks and Geeks",
-      "overview": "High school mathlete Lindsay Weir rebels and begins hanging out with a crowd of burnouts (the \"freaks\"), while her brother Sam Weir navigates a different part of the social universe with his nerdy friends (the \"geeks\").",
-      "streamingInfo": {
-        "us": [
-          {
-            "availableSince": 1648530611,
-            "leaving": 1737964740,
-            "quality": "hd",
-            "service": "hulu",
-            "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1654526017,
-            "addon": "tvs.sbd.1000230",
-            "quality": "hd",
-            "service": "apple",
-            "streamingType": "addon"
-          },
-          {
-            "availableSince": 1652493983,
-            "service": "paramount",
-            "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1662822578,
-            "service": "paramount",
-            "streamingType": "free"
-          },
-          {
-            "availableSince": 1694503556,
-            "addon": "tvs.sbd.12962",
-            "quality": "hd",
-            "service": "apple",
-            "streamingType": "addon"
-          },
-          {
-            "availableSince": 1694503556,
-            "addon": "tvs.sbd.10120",
-            "quality": "hd",
-            "service": "apple",
-            "streamingType": "addon"
-          },
-          {
-            "availableSince": 1694503556,
-            "addon": "tvs.sbd.10000",
-            "service": "apple",
-            "streamingType": "addon"
-          },
-          {
-            "availableSince": 1694503556,
-            "addon": "tvs.sbd.12442",
-            "service": "apple",
-            "streamingType": "addon"
-          },
-          {
-            "availableSince": 1648531487,
-            "leaving": 1737964740,
-            "quality": "hd",
-            "service": "hulu",
-            "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1690194881,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1690194881,
-            "addon": "cbsaacf",
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "addon"
-          }
-        ]
-      },
-      "cast": [
-        "John Francis Daley",
-        "Linda Cardellini",
-        "James Franco",
-        "Samm Levine",
-        "Martin Starr",
-        "Jason Segel",
-        "Seth Rogen"
-      ],
-      "firstAirYear": 1999,
-      "lastAirYear": 2000,
-      "genres": [
-        "drama",
-        "comedy"
-      ],
-      "creators": [
-        "Paul Feig"
-      ],
-      "status": "Canceled",
-      "seasonCount": 1,
-      "episodeCount": 18,
-      "seasons": [
-        {
-          "air_date": null,
-          "episode_count": 30,
-          "id": 7427,
-          "name": "Specials",
-          "overview": "",
-          "poster_path": "/u6HZ1JAQHLId3aOX5YtOWuyZwNU.jpg",
-          "season_number": 0,
-          "vote_average": 0.0
-        },
-        {
-          "air_date": "1999-09-25",
-          "episode_count": 18,
-          "id": 7426,
-          "name": "Season 1",
-          "overview": "",
-          "poster_path": "/nO67euLVrjig0m9ZPNNwVtogm6J.jpg",
-          "season_number": 1,
-          "vote_average": 8.3
-        }
-      ],
-      "created_by": [
-        {
-          "id": 116805,
-          "credit_id": "555619b6c3a368777e002d8a",
-          "name": "Paul Feig",
-          "gender": 2,
-          "profile_path": "/lcD0BkGKWKynUwtPSEDLAsFdIJX.jpg"
-        }
-      ],
-      "episode_run_time": [
-        60,
-        44
-      ],
-      "first_air_date": "1999-09-25",
-      "id": 2382,
-      "in_production": false,
-      "languages": [
-        "en"
-      ],
-      "last_air_date": "2000-10-17",
-      "last_episode_to_air": {
-        "id": 178925,
-        "name": "Noshing and Moshing",
-        "overview": "Neal wrestles with the dilemma of whether to tell his mother about his father's affair. Lindsay is given detention after coming to the aid of a girl being attacked by a boy. Daniel deals with pressures at home and with Kim. He escapes from his problems through punk music.",
-        "vote_average": 8.3,
-        "vote_count": 7,
-        "air_date": "2000-10-17",
-        "episode_number": 18,
-        "episode_type": "finale",
-        "production_code": "",
-        "runtime": 44,
-        "season_number": 1,
-        "show_id": 2382,
-        "still_path": "/nt7cnJ7HCJZICsnYgApqLHE8TDw.jpg"
-      },
-      "name": "Freaks and Geeks",
-      "next_episode_to_air": null,
-      "networks": [
-        {
-          "id": 6,
-          "logo_path": "/cm111bsDVlYaC1foL0itvEI4yLG.png",
-          "name": "NBC",
-          "origin_country": "US"
-        }
-      ],
-      "number_of_episodes": 18,
-      "number_of_seasons": 1,
-      "origin_country": [
-        "US"
-      ],
-      "original_name": "Freaks and Geeks",
-      "popularity": 75.054,
-      "production_companies": [
-        {
-          "name": "Apatow Productions",
-          "id": 10105,
-          "origin_country": "US"
-        }
-      ],
-      "vote_average": 8.139,
-      "vote_count": 675,
-      "needs_data": false,
-      "last_updated": 1710024311,
-      "release_date": null
-    },
     "Mr. Robot": {
       "type": "Scripted",
       "title": "Mr. Robot",
@@ -9331,6 +8905,503 @@
       "vote_count": 102,
       "needs_data": false,
       "last_updated": 1710384731,
+      "release_date": null
+    },
+    "BoJack Horseman": {
+      "type": "Scripted",
+      "title": "BoJack Horseman",
+      "overview": "Meet the most beloved sitcom horse of the 90s - 20 years later. BoJack Horseman was the star of the hit TV show \"Horsin' Around,\" but today he's washed up, living in Hollywood, complaining about everything, and wearing colorful sweaters.",
+      "streamingInfo": {
+        "us": [
+          {
+            "availableSince": 1648617277,
+            "quality": "hd",
+            "service": "netflix",
+            "streamingType": "subscription"
+          }
+        ]
+      },
+      "cast": [
+        "Will Arnett",
+        "Aaron Paul",
+        "Alison Brie",
+        "Amy Sedaris",
+        "Paul F. Tompkins",
+        "Adam Conover",
+        "Keith Olbermann"
+      ],
+      "firstAirYear": 2014,
+      "lastAirYear": 2020,
+      "genres": [
+        "animation",
+        "comedy",
+        "drama"
+      ],
+      "creators": [
+        "Raphael Bob-Waksberg"
+      ],
+      "status": "Ended",
+      "seasonCount": 6,
+      "episodeCount": 76,
+      "seasons": [
+        {
+          "air_date": "2014-12-19",
+          "episode_count": 6,
+          "id": 63867,
+          "name": "Specials",
+          "overview": "",
+          "poster_path": "/tOqQErdiDNJIa4qBjJWWvRzkyUS.jpg",
+          "season_number": 0,
+          "vote_average": 0.0
+        },
+        {
+          "air_date": "2014-08-22",
+          "episode_count": 12,
+          "id": 62359,
+          "name": "Season 1",
+          "overview": "Once the star of the hit sitcom \"Horsin' Around,\" today BoJack's washed up, just hanging around Hollywood complaining, and wearing colorful sweaters.",
+          "poster_path": "/6pM9MxC1H8jFJjhQY8TmoSRgYB1.jpg",
+          "season_number": 1,
+          "vote_average": 7.5
+        },
+        {
+          "air_date": "2015-07-17",
+          "episode_count": 12,
+          "id": 66995,
+          "name": "Season 2",
+          "overview": "With his memoir a bestseller and the movie role of his dreams, BoJack's ready to jump-start his career and his life. Unless he messes it all up.",
+          "poster_path": "/nB8ktUjdeLb8mUSMVhq4JSRyDVq.jpg",
+          "season_number": 2,
+          "vote_average": 8.0
+        },
+        {
+          "air_date": "2016-07-22",
+          "episode_count": 12,
+          "id": 78422,
+          "name": "Season 3",
+          "overview": "\"Secretariat\" is a huge success, and BoJack's finally feeling his oats. But when it comes to his personal life, everything he touches turns to manure.",
+          "poster_path": "/rkBPhzvjLz6IbzkGMOTxtCiRxvA.jpg",
+          "season_number": 3,
+          "vote_average": 8.1
+        },
+        {
+          "air_date": "2017-09-08",
+          "episode_count": 12,
+          "id": 92423,
+          "name": "Season 4",
+          "overview": "While BoJack wrestles with self-loathing and loss, Todd helps Mr. Peanutbutter run for governor of California and Diane gets a job at a hip blog.",
+          "poster_path": "/lirG3udbj4dn6fQK7pWhRJC6NmW.jpg",
+          "season_number": 4,
+          "vote_average": 8.2
+        },
+        {
+          "air_date": "2018-09-14",
+          "episode_count": 12,
+          "id": 106026,
+          "name": "Season 5",
+          "overview": "BoJack's back on screen as the star of \"Philbert,\" a new detective series produced by Princess Carolyn. But his demons are out in full force.",
+          "poster_path": "/a6Vhdhbf5cDXlMPtuAwZ7grJDd3.jpg",
+          "season_number": 5,
+          "vote_average": 8.4
+        },
+        {
+          "air_date": "2019-10-25",
+          "episode_count": 16,
+          "id": 133186,
+          "name": "Season 6",
+          "overview": "BoJack inches his way toward redemption as a stint in rehab forces him to confront his mistakes and start making amends.",
+          "poster_path": "/czEZfIhJdKjYkUX5YVbOI6gu1Nv.jpg",
+          "season_number": 6,
+          "vote_average": 8.4
+        }
+      ],
+      "created_by": [
+        {
+          "id": 1169456,
+          "credit_id": "53f7267ac3a3683403005182",
+          "name": "Raphael Bob-Waksberg",
+          "gender": 2,
+          "profile_path": "/2ktN8lJhecCKG77nlDm3dISbnxk.jpg"
+        }
+      ],
+      "episode_run_time": [
+        25
+      ],
+      "first_air_date": "2014-08-22",
+      "id": 61222,
+      "in_production": false,
+      "languages": [
+        "en"
+      ],
+      "last_air_date": "2020-01-31",
+      "last_episode_to_air": {
+        "id": 2066578,
+        "name": "Nice While It Lasted",
+        "overview": "A celebration brings people together.",
+        "vote_average": 9.0,
+        "vote_count": 20,
+        "air_date": "2020-01-31",
+        "episode_number": 16,
+        "episode_type": "finale",
+        "production_code": "",
+        "runtime": 27,
+        "season_number": 6,
+        "show_id": 61222,
+        "still_path": "/18P31kEav1M8ykJsWbgsjUEK7QO.jpg"
+      },
+      "name": "BoJack Horseman",
+      "next_episode_to_air": null,
+      "networks": [
+        {
+          "id": 213,
+          "logo_path": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png",
+          "name": "Netflix",
+          "origin_country": ""
+        }
+      ],
+      "number_of_episodes": 76,
+      "number_of_seasons": 6,
+      "origin_country": [
+        "US"
+      ],
+      "original_name": "BoJack Horseman",
+      "popularity": 394.233,
+      "production_companies": [
+        {
+          "name": "Tornante Company",
+          "id": 30740,
+          "origin_country": "US"
+        },
+        {
+          "name": "ShadowMachine",
+          "id": 81667,
+          "origin_country": "US"
+        },
+        {
+          "name": "Boxer vs Raptor",
+          "id": 123120,
+          "origin_country": ""
+        }
+      ],
+      "vote_average": 8.558,
+      "vote_count": 2234,
+      "needs_data": false,
+      "last_updated": 1710708629,
+      "release_date": null
+    },
+    "Black Bird": {
+      "type": "Miniseries",
+      "title": "Black Bird",
+      "overview": "As Jimmy Keene begins a 10-year prison sentence, he gets an incredible offer: If he can elicit a confession from suspected killer Larry Hall, Jimmy will be freed. Completing this mission becomes the challenge of a lifetime.",
+      "streamingInfo": {
+        "us": [
+          {
+            "availableSince": 1653873521,
+            "quality": "uhd",
+            "service": "apple",
+            "streamingType": "subscription"
+          }
+        ]
+      },
+      "cast": [
+        "Taron Egerton",
+        "Paul Walter Hauser",
+        "Sepideh Moafi",
+        "Greg Kinnear",
+        "Ray Liotta",
+        "Robert Wisdom",
+        "Laney Stiebing"
+      ],
+      "firstAirYear": 2022,
+      "lastAirYear": 2022,
+      "genres": [
+        "drama",
+        "crime"
+      ],
+      "creators": [
+        "Dennis Lehane"
+      ],
+      "status": "Ended",
+      "seasonCount": 1,
+      "episodeCount": 6,
+      "seasons": [
+        {
+          "air_date": "2022-07-07",
+          "episode_count": 6,
+          "id": 239815,
+          "name": "Miniseries",
+          "overview": "",
+          "poster_path": "/w2shojFb8JZsoh9Ddq52JsHaQoK.jpg",
+          "season_number": 1,
+          "vote_average": 8.0
+        }
+      ],
+      "created_by": [
+        {
+          "id": 4722,
+          "credit_id": "62474e1525a536004e84338d",
+          "name": "Dennis Lehane",
+          "gender": 2,
+          "profile_path": "/9pY4fW3bCG0q6vilEvvswIAbAK0.jpg"
+        }
+      ],
+      "episode_run_time": [],
+      "first_air_date": "2022-07-07",
+      "id": 155537,
+      "in_production": false,
+      "languages": [
+        "en"
+      ],
+      "last_air_date": "2022-08-04",
+      "last_episode_to_air": {
+        "id": 3636887,
+        "name": "You Promised",
+        "overview": "Jimmy reaches his breaking point. Larry becomes suspicious. McCauley and Miller talk to an important person in Larry\u2019s life.",
+        "vote_average": 8.3,
+        "vote_count": 14,
+        "air_date": "2022-08-04",
+        "episode_number": 6,
+        "episode_type": "finale",
+        "production_code": "",
+        "runtime": 60,
+        "season_number": 1,
+        "show_id": 155537,
+        "still_path": "/aPQzt8cF7ccLsw8Zy3m7DnkqJ9L.jpg"
+      },
+      "name": "Black Bird",
+      "next_episode_to_air": null,
+      "networks": [
+        {
+          "id": 2552,
+          "logo_path": "/4KAy34EHvRM25Ih8wb82AuGU7zJ.png",
+          "name": "Apple TV+",
+          "origin_country": ""
+        }
+      ],
+      "number_of_episodes": 6,
+      "number_of_seasons": 1,
+      "origin_country": [
+        "US"
+      ],
+      "original_name": "Black Bird",
+      "popularity": 58.426,
+      "production_companies": [
+        {
+          "name": "Imperative Entertainment",
+          "id": 81121,
+          "origin_country": "US"
+        },
+        {
+          "name": "EDEN Productions",
+          "id": 152551,
+          "origin_country": "US"
+        },
+        {
+          "name": "EMJAG Productions",
+          "id": 14654,
+          "origin_country": "US"
+        },
+        {
+          "name": "Crime Story Media",
+          "id": 156311,
+          "origin_country": "US"
+        },
+        {
+          "name": "Hans Bubby",
+          "id": 181707,
+          "origin_country": "US"
+        }
+      ],
+      "vote_average": 8.114,
+      "vote_count": 523,
+      "needs_data": false,
+      "last_updated": 1710708633,
+      "release_date": null
+    },
+    "Freaks and Geeks": {
+      "type": "Scripted",
+      "title": "Freaks and Geeks",
+      "overview": "High school mathlete Lindsay Weir rebels and begins hanging out with a crowd of burnouts (the \"freaks\"), while her brother Sam Weir navigates a different part of the social universe with his nerdy friends (the \"geeks\").",
+      "streamingInfo": {
+        "us": [
+          {
+            "availableSince": 1648530611,
+            "leaving": 1737964740,
+            "quality": "hd",
+            "service": "hulu",
+            "streamingType": "subscription"
+          },
+          {
+            "availableSince": 1654526017,
+            "addon": "tvs.sbd.1000230",
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1652493983,
+            "service": "paramount",
+            "streamingType": "subscription"
+          },
+          {
+            "availableSince": 1662822578,
+            "service": "paramount",
+            "streamingType": "free"
+          },
+          {
+            "availableSince": 1694503556,
+            "addon": "tvs.sbd.12962",
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1694503556,
+            "addon": "tvs.sbd.10120",
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1694503556,
+            "addon": "tvs.sbd.10000",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1694503556,
+            "addon": "tvs.sbd.12442",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1648531487,
+            "leaving": 1737964740,
+            "quality": "hd",
+            "service": "hulu",
+            "streamingType": "subscription"
+          },
+          {
+            "availableSince": 1690194881,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "subscription"
+          },
+          {
+            "availableSince": 1690194881,
+            "addon": "cbsaacf",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
+          }
+        ]
+      },
+      "cast": [
+        "John Francis Daley",
+        "Linda Cardellini",
+        "James Franco",
+        "Samm Levine",
+        "Martin Starr",
+        "Jason Segel",
+        "Seth Rogen"
+      ],
+      "firstAirYear": 1999,
+      "lastAirYear": 2000,
+      "genres": [
+        "drama",
+        "comedy"
+      ],
+      "creators": [
+        "Paul Feig"
+      ],
+      "status": "Canceled",
+      "seasonCount": 1,
+      "episodeCount": 18,
+      "seasons": [
+        {
+          "air_date": null,
+          "episode_count": 30,
+          "id": 7427,
+          "name": "Specials",
+          "overview": "",
+          "poster_path": "/u6HZ1JAQHLId3aOX5YtOWuyZwNU.jpg",
+          "season_number": 0,
+          "vote_average": 0.0
+        },
+        {
+          "air_date": "1999-09-25",
+          "episode_count": 18,
+          "id": 7426,
+          "name": "Season 1",
+          "overview": "",
+          "poster_path": "/nUEet6ef4R0wxBlszUajaa94fK9.jpg",
+          "season_number": 1,
+          "vote_average": 8.2
+        }
+      ],
+      "created_by": [
+        {
+          "id": 116805,
+          "credit_id": "555619b6c3a368777e002d8a",
+          "name": "Paul Feig",
+          "gender": 2,
+          "profile_path": "/lcD0BkGKWKynUwtPSEDLAsFdIJX.jpg"
+        }
+      ],
+      "episode_run_time": [
+        60,
+        44
+      ],
+      "first_air_date": "1999-09-25",
+      "id": 2382,
+      "in_production": false,
+      "languages": [
+        "en"
+      ],
+      "last_air_date": "2000-10-17",
+      "last_episode_to_air": {
+        "id": 178925,
+        "name": "Noshing and Moshing",
+        "overview": "Neal wrestles with the dilemma of whether to tell his mother about his father's affair. Lindsay is given detention after coming to the aid of a girl being attacked by a boy. Daniel deals with pressures at home and with Kim. He escapes from his problems through punk music.",
+        "vote_average": 8.3,
+        "vote_count": 7,
+        "air_date": "2000-10-17",
+        "episode_number": 18,
+        "episode_type": "finale",
+        "production_code": "",
+        "runtime": 44,
+        "season_number": 1,
+        "show_id": 2382,
+        "still_path": "/nt7cnJ7HCJZICsnYgApqLHE8TDw.jpg"
+      },
+      "name": "Freaks and Geeks",
+      "next_episode_to_air": null,
+      "networks": [
+        {
+          "id": 6,
+          "logo_path": "/cm111bsDVlYaC1foL0itvEI4yLG.png",
+          "name": "NBC",
+          "origin_country": "US"
+        }
+      ],
+      "number_of_episodes": 18,
+      "number_of_seasons": 1,
+      "origin_country": [
+        "US"
+      ],
+      "original_name": "Freaks and Geeks",
+      "popularity": 89.88,
+      "production_companies": [
+        {
+          "name": "Apatow Productions",
+          "id": 10105,
+          "origin_country": "US"
+        }
+      ],
+      "vote_average": 8.132,
+      "vote_count": 677,
+      "needs_data": false,
+      "last_updated": 1710708633,
       "release_date": null
     }
   }

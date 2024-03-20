@@ -616,6 +616,7 @@ def add_media_to_list(type, name):
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
 	add_job("get_media_data")
+	message_user("Done")
 
 def remove_media_from_list(type, name):
 	if log("remove_movie_from_list"):
@@ -632,14 +633,15 @@ def remove_media_from_list(type, name):
 def get_media_suggestions(args):
 	if log("get_media_suggestions"):
 		return
-	media_type = args["media_type"]
+	media_type = str(args["media_type"])
 	available = get_available_media(args)
 	if not available:
 		message_user(f"There are no available {media_type}s that match the criteria.")
 		return
 	else:
-		message = f"Available {media_type}s:\n"
+		message = f"Available {media_type.capitalize()}s:\n"
 	for media, services in available.items():
+		services = [i.capitalize() for i in services]
 		message += f"{media} - {', '.join(services)}\n"
 	message_user(message)
 
@@ -1312,7 +1314,7 @@ def log_set(exercise_num, first=False):
 			pass
 	name = search_exercises(exercise_num)
 	if not (name and reps and weight):
-		end_workout()
+		end_workout(False)
 		return
 	with open("text_files/current_workout.json") as workout_file:
 		try:
@@ -1328,7 +1330,7 @@ def log_set(exercise_num, first=False):
 	with open("text_files/current_workout.json", "w") as workout_file:
 		json.dump(workout_dict, workout_file, indent=2)
 
-def end_workout(start=False):
+def end_workout(finished):
 	if log("end_workout"):
 		return
 	try:
@@ -1336,7 +1338,7 @@ def end_workout(start=False):
 			workout_dict = dict(json.load(workout_file))
 		if not workout_dict["end"]:
 			workout_dict["end"] = time.time()
-			workout_dict["DNF"] = not start
+			workout_dict["DNF"] = not finished
 		with open("text_files/workout_log") as workout_file:
 			try:
 				workouts = list(json.load(workout_file))
@@ -1345,7 +1347,7 @@ def end_workout(start=False):
 		workouts.append(workout_dict)
 		with open("text_files/workout_log", "w") as workout_file:
 			json.dump(workouts, workout_file, indent=2)
-		if not start:
+		if not finished:
 			message_user("Workout Logged")
 		increment_gym_day()
 	except:

@@ -6040,5 +6040,41 @@
     "sender": "script",
     "sent_at": "1710475853.98758",
     "image": false
+  },
+  {
+    "message": "add the movie come and see to my list",
+    "sender": "user",
+    "sent_at": "1710909989.2126102",
+    "image": false
+  },
+  {
+    "message": "add the movie \u201ccome and see\u201d to my list",
+    "sender": "user",
+    "sent_at": "1710910174.7421894",
+    "image": false
+  },
+  {
+    "message": "what movies can i watch",
+    "sender": "user",
+    "sent_at": "1710910461.503443",
+    "image": false
+  },
+  {
+    "message": "Available movies:\n48 Hrs. - paramount\nClerks - paramount\nThe Big Lebowski - peacock\nFast Times at Ridgemont High - peacock\nZoolander - paramount\nDonnie Darko - peacock\nEternal Sunshine of the Spotless Mind - peacock\nThe Menu - hulu\nThe Imitation Game - hulu\nAlien - hulu\nThe Whale - paramount\nTitanic - paramount\nBetter Off Dead... - paramount\n",
+    "sender": "script",
+    "sent_at": "1710910462.8974922",
+    "image": false
+  },
+  {
+    "message": "what movies can i watch",
+    "sender": "user",
+    "sent_at": "1710910786.6367478",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1710910787.6350925",
+    "image": false
   }
 ]

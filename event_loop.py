@@ -48,7 +48,7 @@ def workout_loop():
 				time.sleep(wait_between_sets)
 				log_set(exercise_num)
 				another_set = get_response("Another set?", 900)
-	end_workout()
+	end_workout(True)
 
 def check_for_jobs():
 	with open("text_files/jobs.json") as f:
