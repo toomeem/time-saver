@@ -6076,5 +6076,17 @@
     "sender": "script",
     "sent_at": "1710910787.6350925",
     "image": false
+  },
+  {
+    "message": "add the movie \u201coppenheimer\u201d to my list",
+    "sender": "user",
+    "sent_at": "1710910998.5005403",
+    "image": false
+  },
+  {
+    "message": "Done",
+    "sender": "script",
+    "sent_at": "1710910999.4663196",
+    "image": false
   }
 ]

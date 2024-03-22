@@ -7453,6 +7453,89 @@
       "vote_count": 1329,
       "needs_data": false,
       "last_updated": 1710910181
+    },
+    "Oppenheimer": {
+      "type": "movie",
+      "title": "Oppenheimer",
+      "overview": "The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.",
+      "streamingInfo": {
+        "us": [
+          {
+            "price": {
+              "amount": "5.99",
+              "currency": "USD",
+              "formatted": "5.99 USD"
+            },
+            "availableSince": 1703203248,
+            "quality": "uhd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "availableSince": 1708152024,
+            "leaving": 1718531940,
+            "quality": "uhd",
+            "service": "peacock",
+            "streamingType": "subscription"
+          },
+          {
+            "price": {
+              "amount": "19.99",
+              "currency": "USD",
+              "formatted": "19.99 USD"
+            },
+            "availableSince": 1703203248,
+            "quality": "uhd",
+            "service": "prime",
+            "streamingType": "buy"
+          }
+        ]
+      },
+      "cast": [
+        "Cillian Murphy",
+        "Emily Blunt",
+        "Matt Damon",
+        "Robert Downey Jr.",
+        "Florence Pugh",
+        "Josh Hartnett",
+        "Casey Affleck"
+      ],
+      "genres": [
+        "drama",
+        "history"
+      ],
+      "directors": [
+        "Christopher Nolan"
+      ],
+      "belongs_to_collection": null,
+      "budget": 100000000,
+      "id": 872585,
+      "popularity": 698.282,
+      "production_companies": [
+        {
+          "name": "Syncopy",
+          "id": 9996,
+          "origin_country": "GB"
+        },
+        {
+          "name": "Universal Pictures",
+          "id": 33,
+          "origin_country": "US"
+        },
+        {
+          "name": "Atlas Entertainment",
+          "id": 507,
+          "origin_country": "US"
+        }
+      ],
+      "release_date": 1689739200,
+      "revenue": 952000000,
+      "runtime": 181,
+      "status": "Released",
+      "vote_average": 8.113,
+      "vote_count": 7257,
+      "needs_data": false,
+      "last_updated": 1710911008
     }
   },
   "show": {

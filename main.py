@@ -160,7 +160,7 @@ def hook():
 		case "desc":
 			desc()
 		case "commands":
-			commands()
+			get_commands()
 		case "weight":
 			log_weight(args["weight"], args["day_offset"])
 		case "weight_graph":
@@ -224,10 +224,10 @@ def rn(target="%H:%M"):
 def log(message,sender="",contains_image=False,is_command=True):
 	if is_command:
 		with open("text_files/command_list", "a") as command_file:
-			command_file.write(f"""{rn("date").timestamp()}:{message}\n""")
+			command_file.write(f"""{round(rn("date").timestamp(), 1)}:{message}\n""")
 		with open("text_files/cancel") as cancel_file:
 			cancels = cancel_file.readlines()
-		return message in cancels
+		return message + "\n" in cancels
 	with open("text_files/conversation_log.json") as message_file:
 		message_log = list(json.load(message_file))
 	message_log.append({
@@ -657,7 +657,7 @@ def desc():
 	'''
 	message_user(message)
 
-def commands():
+def get_commands():
 	if log("commands"):
 		return
 	command_lst = [
@@ -693,6 +693,36 @@ def commands():
 	message_user(message)
 
 # end of commands, start of helper functions
+
+def check_workout_split():
+	with open("text_files/current_workout_split") as f:
+		current_split = f.readlines()[0].strip()
+	if current_split not in workout_splits.keys():
+		set_workout_split("ppl")
+
+def check_commands_file():
+	with open("text_files/command_list") as f:
+		commands = f.readlines()
+	for i in range(len(commands)):
+		if commands[i] == "None:\n":
+			commands[i] = "delete"
+		elif commands[i] == "\n":
+			commands[i] = "delete"
+		try:
+			commands[i] = commands[i].split(":")
+		except:
+			commands[i] = "delete"
+		if commands[i][0] != "None":
+			try:
+				commands[i][0] = str(round(float(commands[i][0]), 1))
+			except:
+				commands[i] = "delete"
+		if commands[i] != "delete":
+			commands[i] = ":".join(commands[i])
+	commands = [i for i in commands if i != "delete"]
+	with open("text_files/command_list", "w") as f:
+		f.writelines(commands)
+
 
 def get_available_streaming_services():
 	with open("text_files/streaming_services.json") as f:
@@ -912,7 +942,7 @@ def to_timestamp(date):
 def set_workout_split(split):
 	if log("set_workout_split"):
 		return
-	with open("text_files/workout_split", "w") as workout_split_file:
+	with open("text_files/current_workout_split", "w") as workout_split_file:
 		workout_split_file.write(split)
 
 def get_current_workout_split():
@@ -1154,12 +1184,14 @@ def clean(updates=True):
 		return
 	if updates:
 		threading.Thread(target=update_spotify_data).start()
-	clear_file("text_files/cancel")
-	check_quote_file()
-	check_brentford_file()
-	check_weight_file()
-	check_error_file()
 	add_job("get_media_data")
+	check_brentford_file()
+	clear_file("text_files/cancel")
+	check_commands_file()
+	check_workout_split()
+	check_error_file()
+	check_quote_file()
+	check_weight_file()
 
 def get_time(args):
 	if log("get_time"):
@@ -1441,25 +1473,41 @@ def in_conversation():
 		conversation_bool = message_file.read().strip()
 	return conversation_bool == "True"
 
-def error_report(name):
-	time_stamp = rn("%y/%m/%d/%H/%M/%S")
-	with open("text_files/errors", "a") as error_list:
-		error_list.write(f"{name}:{time_stamp}\n")
+def check_and_cancel(name):
 	with open("text_files/errors") as error_file:
 		errors = error_file.readlines()
-	if len(errors) >=40:
-		errors = errors[30:]
-	elif len(errors)>=10:
-		errors=errors[10:]
-	elif len(errors)>=5:
-		errors = errors[5:]
-	if len(errors) >5 and errors.count(errors[0])==len(errors):
-		with open("text_files/cancel") as cancel_file:
-			cancels = cancel_file.readlines()
-		cancels.append(name+"\n")
-		cancels = list(set(cancels))
-		with open("text_files/cancel", "w") as cancel_file:
-			cancel_file.writelines(cancels)
+	errors = [i.strip().split(":") for i in errors]
+	if len(errors) >= 50:
+		errors = errors[-50:]
+	elif len(errors) >= 10:
+		errors = errors[-10:]
+	else:
+		return
+	timestamps = []
+	for i in errors:
+		if i[1] == name:
+			timestamps.append(i[0])
+	timestamps = sorted(timestamps)[-10:]
+	if len(timestamps) < 10:
+		return
+	if (rn("date").timestamp() - float(timestamps[0])) <= 86400:
+		cancel(name)
+
+def cancel(name):
+	with open("text_files/cancel") as cancel_file:
+		cancels = cancel_file.readlines()
+	name += "\n"
+	if name in cancels:
+		return
+	cancels.append(name)
+	with open("text_files/cancel", "w") as cancel_file:
+		cancel_file.writelines(cancels)
+
+def error_report(name):
+	time_stamp = round(rn("date").timestamp(), 1)
+	with open("text_files/errors", "a") as error_list:
+		error_list.write(f"{time_stamp}:{name}\n")
+	check_and_cancel(name)
 
 def num_suffix(num):
 	num = str(int(num))
@@ -2021,8 +2069,8 @@ def get_show_durations(data):
 
 # end of spotify functions
 
-def event_loop_start():
-	if log("on_start"):
+def main_start():
+	if log("main_start"):
 		return
 	clear_file("text_files/response")
 	clear_file("text_files/cancel")
@@ -2031,5 +2079,5 @@ def event_loop_start():
 
 
 if __name__ == '__main__':
-	event_loop_start()
+	main_start()
 	app.run(host="0.0.0.0", port=port)
