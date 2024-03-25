@@ -6088,5 +6088,581 @@
     "sender": "script",
     "sent_at": "1710910999.4663196",
     "image": false
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1711320569.5327637",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1711320572.3541362",
+    "image": true
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711321059.7295756",
+    "image": false
+  },
+  {
+    "message": "Current gym day: Legs",
+    "sender": "script",
+    "sent_at": "1711321060.5920358",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321068.8025413",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321069.6293201",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321072.5496461",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321078.1116352",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321087.6373222",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321104.785828",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321138.1342523",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321203.66609",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321284.8481252",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321402.3069446",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321493.8667798",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321611.859349",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321675.8696933",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321755.8690414",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321852.06837",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321914.083997",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711321991.0660157",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322106.6276748",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322218.8997266",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322319.8793697",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322425.8405156",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322537.3767898",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322634.5764415",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322714.855029",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322806.0223122",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322906.873336",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711322997.04731",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323086.1639483",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323193.2484381",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323310.1729734",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323413.3407083",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323512.468689",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323617.307218",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323705.1382284",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323811.6985462",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323894.9161892",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711323956.811808",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324029.819317",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324131.3958035",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324194.0870948",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324269.402973",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324352.596898",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324457.7591414",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324551.7210197",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324636.3099144",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324734.1867325",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324815.5173426",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324885.1971786",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711324979.4386263",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325089.6479986",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325207.7405822",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325297.8133671",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325401.0066843",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325483.045314",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325567.96776",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325670.8260295",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325741.4010997",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325839.5621161",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325914.293185",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711325983.1997788",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326069.2386475",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326167.7789865",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326268.0326755",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326333.9790282",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326444.4680138",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326552.7065454",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326615.8864615",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326697.628253",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326772.3729868",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326849.2801557",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711326921.1143708",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327018.376207",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327087.5132627",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327184.4298446",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327252.5157971",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327361.6674213",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327446.1096568",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327546.1373687",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327649.934766",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327722.7344193",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327788.0511887",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711327901.3555741",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328000.5369399",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328099.5120852",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328173.5433292",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328287.5138795",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328383.7021117",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328475.4996457",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328588.4862125",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328655.035809",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328728.1527867",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328791.4325752",
+    "image": false
   }
 ]

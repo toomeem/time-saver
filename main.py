@@ -192,7 +192,7 @@ def hook():
 		case "time":
 			get_time(args)
 		case "set_gym_day":
-			user_set_gym_day(args)
+			user_set_gym_day()
 		case "toggle_workout_split":
 			toggle_workout_split()
 		case "get_current_workout_split":
