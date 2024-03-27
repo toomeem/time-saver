@@ -78,7 +78,7 @@ plot_attributes = {
 		"show_moving_avg": True,
 		"show_regression_line": True,
 		"window_size": 7,
-		"bulk/cut_dates": {"2023/1/29": "bulk", "2023/8/22": "bulk", "2023/6/6": "cut"}
+		"bulk/cut_dates": {"2023/1/29": "bulk", "2023/8/22": "bulk", "2023/6/6": "cut", "2024/3/17": "cut"}
 	}
 }
 bro_split = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
@@ -192,7 +192,7 @@ def hook():
 		case "time":
 			get_time(args)
 		case "set_gym_day":
-			user_set_gym_day()
+			user_set_gym_day(args)
 		case "toggle_workout_split":
 			toggle_workout_split()
 		case "get_current_workout_split":
@@ -200,17 +200,24 @@ def hook():
 		case "get_gym_day":
 			respond_with_gym_day()
 		case "add_media":
-			add_media_to_list(args["media_type"], args["media_name"])
+			add_media_to_list(args)
 		case "remove_media":
-			remove_media_from_list(args["media_type"], args["media_name"])
+			remove_media_from_list(args)
 		case "get_available_media":
 			get_media_suggestions(args)
+		case "get_streaming_services":
+			user_get_streaming_services()
+		case "add_streaming_service":
+			user_add_streaming_service(args)
+		case "remove_streaming_service":
+			user_remove_streaming_service(args)
 		case _:
 			message_user("That command does not exist.\nTo see a list of all commands, text \"commands\".")
 	return "200"
 
 def kill():
 	try:
+		add_job("kill")
 		log("kill")
 	finally:
 		os.abort()
@@ -252,7 +259,8 @@ def log(message,sender="",contains_image=False,is_command=True):
 		conversation = conversation[-5:]
 
 def days_until(target, start=None, return_days=False):
-	log("days_until")
+	if log("days_until"):
+		return
 	target = to_timestamp(target)
 	if not start:
 		start = date.today()
@@ -334,6 +342,8 @@ def update_spotify_data():
 	clear_suggestions_playlist(spotify_client, suggestion_playlist_id)
 
 def spotify_data_description():
+	if log("spotify_data_description"):
+		return
 	data = read_spotify_data()
 	track_num = len(data)
 	_, artist_num = get_artist_info(data)
@@ -518,6 +528,8 @@ def start_workout():
 	add_job("workout_loop")
 
 def get_train_schedule(station_json):
+	if log("get_train_schedule"):
+		return
 	station1 = station_json["starting station"].replace("Jefferson", "Market East")
 	station2 = station_json["destination station"].replace("Jefferson", "Market East")
 	with open("text_files/station_inputs.json") as f:
@@ -569,21 +581,18 @@ def get_train_schedule(station_json):
 		message += f'''\nIt will cost ${"{:.2f}".format(price)}.'''
 	message_user(message)
 
-def user_set_gym_day():
+def user_set_gym_day(args):
 	if log("user_set_gym_day"):
 		return
-	current_split = workout_splits[get_current_workout_split()]
-	current_day = current_split[get_gym_day_num()]
-	message = f'''
-		Current gym day is {current_day}
-		What day would you like to set it to?(respond with a number)'''
-	for i in range(len(current_split)):
-		message += f"\n{i}: {current_split[i]}"
-	day_num = get_response(message)
-	if not day_num:
+	day = args["day"]
+	current_split = get_current_workout_split()
+	try:
+		day_num = list(workout_splits[current_split]).index(day)
+	except:
+		message_user(f"{day} is not a valid gym day.")
 		return
+	message_user(f"Your gym day has been set to {day}")
 	set_gym_day(day_num)
-	message_user(f"Gym day set to {current_split[day_num]}")
 
 def respond_with_current_workout_split():
 	if log("respond_with_current_workout_split"):
@@ -607,28 +616,67 @@ def respond_with_gym_day():
 	day = workout_splits[get_current_workout_split()][get_gym_day_num()]
 	message_user(f"Current gym day: {day}")
 
-def add_media_to_list(type, name):
+def add_media_to_list(args):
 	if log("add_media_to_list"):
 		return
+	type = args["media_type"]
+	name = args["media_name"]
 	with open("text_files/media_data.json") as f:
 		media_list = json.load(f)
 	media_list[type].update({name: {"name": name, "needs_data": True, "type": type}})
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
 	add_job("get_media_data")
-	message_user("Done")
+	message_user(f"Added {name} to the list of {type}s.")
 
-def remove_media_from_list(type, name):
-	if log("remove_movie_from_list"):
+def remove_media_from_list(args):
+	if log("remove_media_from_list"):
 		return
+	type = args["media_type"]
+	name = args["media_name"]
 	with open("text_files/media_data.json") as f:
 		media_list = json.load(f)
 	if "name" in media_list[type].keys():
 		del media_list[type][name]
 	else:
-		return
+		media_names = [i for i in media_list[type].keys()]
+		function = [
+				{"name": "remove_media",
+					"description": "removes a piece of media from the list of media I have",
+					"parameters": {
+						"type": "object",
+						"properties": {
+							"media_name": {
+								"type": "string",
+								"description": "the name of the media to remove, enums are case sensitive",
+								"enum": []
+							}
+						},
+						"required": [
+							"media_name"
+						]
+				}
+			}
+		]
+		function[0]["parameters"]["properties"]["media_name"]["enum"] = media_names
+		context = [
+			{"role": "user", "content": f"remove the {type} {name} from my list"}
+		]
+		json_data = {"model": gpt_model, "messages": context, "functions": function}
+		response = requests.post(
+			"https://api.openai.com/v1/chat/completions",
+			headers=gpt_header,
+			json=json_data,
+		).json()
+		response = json.loads(response["choices"][0]["message"]["function_call"]["arguments"])
+		try:
+			del media_list[type][response["media_name"]]
+		except:
+			message_user([response["media_name"]])
+			return
 	with open("text_files/media_data.json", "w") as f:
 		json.dump(media_list, f, indent=2)
+	message_user(f"Removed {name} from the list of {type}s.")
 
 def get_media_suggestions(args):
 	if log("get_media_suggestions"):
@@ -644,6 +692,55 @@ def get_media_suggestions(args):
 		services = [i.capitalize() for i in services]
 		message += f"{media} - {', '.join(services)}\n"
 	message_user(message)
+
+def user_get_streaming_services():
+	if log("user_get_streaming_services"):
+		return
+	available = available_streaming_services()
+	with open("text_files/streaming_services.json") as f:
+		service_data = json.load(f)
+	message = "Available Streaming Services:\n"
+	for service, data in available.items():
+		if data["addon"] is not None:
+			message += f'''    {service_data[service]["name"]} with {data["addon_name"]}\n'''
+		else:
+			message += f'''    {service_data[service]["name"]}\n'''
+	message_user(message)
+
+def user_add_streaming_service(args):
+	if log("user_add_streaming_service"):
+		return
+	service = determine_streaming_service(args["service_name"])
+	addon = None
+	if "addon" in args.keys():
+		addon = determine_addon(service, args["addon"])
+	with open("text_files/streaming_services.json") as f:
+		service_data = json.load(f)
+	service_data[service]["my_plan"] = {
+		"type": "subscription",
+		"addon": addon,
+		"addon_name": None
+	}
+	if addon:
+		service_data[service]["my_plan"]["addon_name"] = service_data[service]["addons"][addon]["displayName"]
+	with open("text_files/streaming_services.json", "w") as f:
+		json.dump(service_data, f, indent=2)
+	message_user(f'''{service_data[service]["name"]} added to your list.''')
+
+def user_remove_streaming_service(args):
+	if log("user_remove_streaming_service"):
+		return
+	service = determine_streaming_service(args["service_name"])
+	with open("text_files/streaming_services.json") as f:
+		service_data = json.load(f)
+	service_data[service]["my_plan"] = {
+		"type": None,
+		"addon": None,
+		"addon_name": None
+	}
+	with open("text_files/streaming_services.json", "w") as f:
+		json.dump(service_data, f, indent=2)
+	message_user(f'''{service_data[service]["name"]} removed from your list.''')
 
 def desc():
 	if log("desc"):
@@ -686,6 +783,10 @@ def get_commands():
 		, "sends the day of the week you go to the gym"
 		, "adds a movie/show to the list of media to watch"
 		, "removes a movie/show from the list of media to watch"
+		, "sends a list of available movies/shows"
+		, "sends a list of available streaming services"
+		, "adds a streaming service to the list of services I have access to"
+		, "removes a streaming service from the list of services I have access to"
 		, "sends a description of this bot"
 		, "sends this"]
 	message = "\n".join(command_lst)
@@ -694,13 +795,96 @@ def get_commands():
 
 # end of commands, start of helper functions
 
+def determine_streaming_service(service):
+	if log("determine_streaming_service"):
+		return
+	with open("text_files/streaming_services.json") as f:
+		service_data = json.load(f)
+	if service in service_data.keys():
+		return service
+	service_names = [i for i in service_data.keys()]
+	function = [
+			{"name": "add_streaming_service",
+				"description": "adds a streaming service to the list of services I have access to",
+				"parameters": {
+					"type": "object",
+					"properties": {
+						"service_name": {
+							"type": "string",
+							"description": "the name of the streaming service to add, enums are case sensitive",
+							"enum": []
+						}
+					},
+					"required": [
+						"service_name"
+					]
+			}
+		}
+	]
+	function[0]["parameters"]["properties"]["service_name"]["enum"] = service_names
+	context = [
+		{"role": "user", "content": f"add the streaming service {service} to my list"}
+	]
+	json_data = {"model": gpt_model, "messages": context, "functions": function}
+	response = requests.post(
+		"https://api.openai.com/v1/chat/completions",
+		headers=gpt_header,
+		json=json_data,
+	).json()
+	response = response["choices"][0]["message"]["function_call"]["arguments"]
+	return json.loads(response)["service_name"]
+
+def determine_addon(service, addon):
+	if log("determine_addon"):
+		return
+	with open("text_files/streaming_services.json") as f:
+		service_data = json.load(f)[service]["addons"]
+	if addon in service_data.keys():
+		return addon
+	addon_list = {data["displayName"]: id for id, data in service_data.items()}
+	addon_names = [i for i in addon_list.keys()]
+	function = [
+			{"name": "select_addon",
+				"description": "selects an addon for the streaming service",
+				"parameters": {
+					"type": "object",
+					"properties": {
+						"addon": {
+							"type": "string",
+							"description": "the name of the addon to add, ENUMS ARE CASE SENSITIVE",
+							"enum": []
+						}
+					},
+					"required": [
+						"addon"
+					]
+			}
+		}
+	]
+	function[0]["parameters"]["properties"]["addon"]["enum"] = sorted(addon_names)
+	context = [
+		{"role": "user", "content": f"add the streaming service {addon} to my list"}
+	]
+	json_data = {"model": gpt_model, "messages": context, "functions": function}
+	response = requests.post(
+		"https://api.openai.com/v1/chat/completions",
+		headers=gpt_header,
+		json=json_data,
+	).json()
+	response = response["choices"][0]["message"]["function_call"]["arguments"]
+	return addon_list[json.loads(response)["addon"]]
+
 def check_workout_split():
+	if log("check_workout_split"):
+		return
 	with open("text_files/current_workout_split") as f:
 		current_split = f.readlines()[0].strip()
 	if current_split not in workout_splits.keys():
 		set_workout_split("ppl")
 
 def check_commands_file():
+	if log("check_commands_file"):
+		return
 	with open("text_files/command_list") as f:
 		commands = f.readlines()
 	for i in range(len(commands)):
@@ -723,8 +907,9 @@ def check_commands_file():
 	with open("text_files/command_list", "w") as f:
 		f.writelines(commands)
 
-
-def get_available_streaming_services():
+def available_streaming_services():
+	if log("available_streaming_services"):
+		return
 	with open("text_files/streaming_services.json") as f:
 		services = json.load(f)
 	available = {k: v["my_plan"] for k,v in services.items() if v["my_plan"]["type"]}
@@ -747,7 +932,7 @@ def get_available_media(args):
 		media_dict = {k:v for k,v in media_dict.items() if "runtime" in v.keys() and v["runtime"] <= runtime}
 	if media_dict == {}:
 		return {}
-	services = get_available_streaming_services()
+	services = available_streaming_services()
 	available_media = {}
 	for media in media_dict.values():
 		if "streamingInfo" not in media.keys():
@@ -888,6 +1073,8 @@ def add_media_data(media_type, media_name):
 		json.dump(media_data, f, indent=2)
 
 def add_job(name, params={}):
+	if log("add_job"):
+		return
 	job = {
 		"name": name,
 		"time": str(time.time()),
@@ -900,6 +1087,8 @@ def add_job(name, params={}):
 		json.dump(all_jobs, f, indent=2)
 
 def remove_job(name):
+	if log("remove_job"):
+		return
 	with open("text_files/jobs.json") as f:
 		all_jobs = list(json.load(f))
 	all_jobs = [i for i in all_jobs if i["name"] != name]
@@ -907,12 +1096,16 @@ def remove_job(name):
 		json.dump(all_jobs, f, indent=2)
 
 def to_negative_timestamp(date):
+	if log("to_negative_timestamp"):
+		return
 	date = [int(i) for i in date.split("/")]
 	total_year_seconds = 1970 - date[0] * 365.25 * 24 * 60 * 60
 	partial_year_seconds = datetime(1970, date[1], date[2], date[3], date[4], date[5]).timestamp()
 	return (total_year_seconds - partial_year_seconds) * -1
 
 def to_timestamp(date):
+	if log("to_timestamp"):
+		return
 	if isinstance(date, datetime):
 		return date.timestamp()
 	try:
@@ -1011,6 +1204,8 @@ def get_train_price(station1, station2, response=None):
 	return city_weekend[zone1]
 
 def get_station_zone(station):
+	if log("get_station_zone"):
+		return
 	with open("text_files/station_inputs.json") as f:
 		station_inputs = dict(json.load(f))
 	return int(station_inputs[station])
@@ -1085,6 +1280,8 @@ def search_tracks(id):
 	return False
 
 def clear_suggestions_playlist(sp, playlist_id):
+	if log("clear_suggestions_playlist"):
+		return
 	limit = 100
 	playlist = dict(sp.playlist(playlist_id))["tracks"]
 	if not int(playlist["total"]):
@@ -1249,18 +1446,21 @@ def morning_message():
 	message += f'''Today is {rn(f"%A, %B {day_num}{suffix}")}\n'''
 	if brentford_game:
 		message += f"Brentford plays at {brentford_game} today!\n"
+	message += f'''Today's word of the day is "{get_todays_word()}"\n'''
 	message += "Here's today's weather:\n\t"
 	message += formatted_weather().replace("\n", "\n\t")
 	return(message)
 
-def gpt_request(prompt, function_call=False, no_context=False):
+def gpt_request(prompt, function_call=False, no_context=False, context=None):
 	if log("gpt_request"):
 		return
 	global conversation
 	if no_context:
 		json_data = {"model": gpt_model, "messages": [{"role": "user", "content": prompt}]}
+	elif not no_context and context:
+		json_data = {"model": gpt_model, "messages": [context]}
 	elif function_call:
-		json_data = {"model": gpt_model, "messages": [{"role": "user", "content": prompt}], "functions": functions()}
+		json_data = {"model": gpt_model, "messages": [{"role": "user", "content": prompt}], "functions": gpt_functions()}
 	else:
 		json_data = {"model": gpt_model, "messages": conversation}
 	response = requests.post(
@@ -1270,7 +1470,9 @@ def gpt_request(prompt, function_call=False, no_context=False):
 	)
 	return response.json()
 
-def functions():
+def gpt_functions():
+	if log("gpt_functions"):
+		return
 	with open("text_files/functions.json") as f:
 		functions = json.load(f)
 	return functions
@@ -1292,6 +1494,8 @@ def one_rep_max(reps, weight):
 	return round(weight/(1.0278-(0.0278*reps)))
 
 def is_first_set(num):
+	if log("is_first_set"):
+		return
 	with open("text_files/current_workout.json") as workout_file:
 		try:
 			exercises = json.load(workout_file)
@@ -1301,6 +1505,8 @@ def is_first_set(num):
 	return search_exercises(num) not in list(exercises.keys())
 
 def min_sec(total_seconds):
+	if log("min_sec"):
+		return
 	minutes = int(total_seconds//60)
 	seconds = int(round(total_seconds % 60))
 	min_string = "minutes"
@@ -1412,6 +1618,8 @@ def increment_gym_day(increment=1):
 	set_gym_day(gym_day)
 
 def clear_file(file_name):
+	if log("clear_file"):
+		return
 	file = open(file_name, "w")
 	file.close()
 
@@ -1474,6 +1682,7 @@ def in_conversation():
 	return conversation_bool == "True"
 
 def check_and_cancel(name):
+	log("check_and_cancel")
 	with open("text_files/errors") as error_file:
 		errors = error_file.readlines()
 	errors = [i.strip().split(":") for i in errors]
@@ -1494,6 +1703,7 @@ def check_and_cancel(name):
 		cancel(name)
 
 def cancel(name):
+	log("cancel")
 	with open("text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
 	name += "\n"
@@ -1504,12 +1714,15 @@ def cancel(name):
 		cancel_file.writelines(cancels)
 
 def error_report(name):
+	log("error_report")
 	time_stamp = round(rn("date").timestamp(), 1)
 	with open("text_files/errors", "a") as error_list:
 		error_list.write(f"{time_stamp}:{name}\n")
 	check_and_cancel(name)
 
 def num_suffix(num):
+	if log("num_suffix"):
+		return
 	num = str(int(num))
 	if len(num) > 2:
 		num = num[len(num)-2:]
@@ -1522,6 +1735,8 @@ def num_suffix(num):
 	return "th"
 
 def get_weather(data="full"):
+	if log("get_weather"):
+		return
 	try:
 		weather_page = requests.get(
 			"https://forecast.weather.gov/MapClick.php?lat=39.95222000000007&lon=-75.16217999999998")
@@ -1570,6 +1785,8 @@ def get_weather(data="full"):
 		return "error"
 
 def formatted_weather():
+	if log("formatted_weather"):
+		return
 	weather = get_weather()
 	try:
 		conditions = weather["conditions"]
@@ -1605,6 +1822,7 @@ def formatted_weather():
 	return message.replace("Fog/Mist", "Foggy")
 
 def uncancel(name):
+	log("uncancel")
 	with open("text_files/cancel") as cancel_file:
 		cancels = cancel_file.readlines()
 	name += "\n"
@@ -1615,6 +1833,8 @@ def uncancel(name):
 		cancel_file.writelines(cancels)
 
 def get_quote(scan=None):
+	if log("get_quote"):
+		return
 	with open("text_files/used_quotes") as used_quotes_file:
 		used_quotes = (used_quotes_file.readlines())
 	with open("text_files/quotes") as quotes_file:
@@ -1648,15 +1868,21 @@ def get_quote(scan=None):
 	return quote
 
 def weight_date_format(line):
+	if log("weight_date_format"):
+		return
 	line = line.split(":")
 	return f"{date_to_num(line[0])}:{line[1]}"
 
 def date_to_num(date):
+	if log("date_to_num"):
+		return
 	date = date.split("/")
 	date = str(int(date[1])*30 + int(date[2]) + int(date[0])*365)
 	return date
 
 def moving_avg(data, window):
+	if log("moving_avg"):
+		return
 	avg = []
 	for i in range(window, len(data)):
 		avg.append(np.mean(data[i-window:i]))
@@ -1665,6 +1891,8 @@ def moving_avg(data, window):
 	return avg
 
 def closest_num(num, lst):
+	if log("closest_num"):
+		return
 	closest = 0
 	num = int(num)
 	for i in range(len(lst)):
@@ -1673,9 +1901,13 @@ def closest_num(num, lst):
 	return closest
 
 def slope(m , x, b):
+	if log("slope"):
+		return
 	return m*x+b
 
 def create_graph(x, y, data_type, plot_attributes):
+	if log("create_graph"):
+		return
 	plot_attributes = plot_attributes[data_type]
 	show_points = plot_attributes["show_points"]
 	show_regression_line = plot_attributes["show_regression_line"]
@@ -1729,11 +1961,15 @@ def create_graph(x, y, data_type, plot_attributes):
 # start of spotify functions
 
 def iterations(length, max_request=50):
+	if log("iterations"):
+		return
 	if length % max_request == 0:
 		return int((length/max_request)-1)
 	return int(str(length/max_request).split(".")[0])
 
 def format_song_name(song_name):
+	if log("format_song_name"):
+		return
 	song_name = song_name.split(" (")[0]
 	song_name = song_name.split(" - ")[0]
 	song_name = song_name.split(" / ")[0]
@@ -1743,12 +1979,16 @@ def format_song_name(song_name):
 	return song_name
 
 def format_artist(artist_dict):
+	if log("format_artist"):
+		return
 	del artist_dict["external_urls"]
 	del artist_dict["href"]
 	del artist_dict["uri"]
 	return artist_dict
 
 def format_track(song, track_num):
+	if log("format_track"):
+		return
 	added = None
 	if "added_at" in song.keys():
 		added = song["added_at"]
@@ -1797,6 +2037,8 @@ def format_track(song, track_num):
 	return song
 
 def format_podcast(podcast):
+	if log("format_podcast"):
+		return
 	added = None
 	if "added_at" in podcast.keys():
 		added = podcast["added_at"]
@@ -1815,6 +2057,8 @@ def format_podcast(podcast):
 	return podcast
 
 def format_podcast_show(show):
+	if log("format_podcast_show"):
+		return
 	del show["available_markets"]
 	del show["copyrights"]
 	del show["external_urls"]
@@ -1827,6 +2071,8 @@ def format_podcast_show(show):
 	return show
 
 def requests_per_thread_func(thread_count, playlist_len, max_request):
+	if log("requests_per_thread_func"):
+		return
 	total_requests = (playlist_len//max_request)-1
 	if playlist_len % max_request != 0:
 		total_requests += 1
@@ -1838,6 +2084,8 @@ def requests_per_thread_func(thread_count, playlist_len, max_request):
 	return requests_per_thread[::-1]
 
 def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len):
+	if log("get_song_data"):
+		return
 	data_list = []
 	wait_time = 0
 	i = 0
@@ -1878,7 +2126,10 @@ def get_all_songs(sp):
 			json.dump({"data": data_list}, data_file, indent=2)
 	except:
 		error_report("get_all_songs")
+
 def get_genres(spotify_client):
+	if log("get_genres"):
+		return
 	with open("text_files/tracks.json") as data_file:
 		data = dict(json.load(data_file))["data"]
 	max_request = 50
@@ -1897,6 +2148,8 @@ def get_genres(spotify_client):
 		json.dump(genre_dict, data_file, indent=2)
 
 def podcasts(sp):
+	if log("podcasts"):
+		return
 	max_podcast_request = True
 	podcasts = []
 	n = 0
@@ -1910,6 +2163,8 @@ def podcasts(sp):
 		json.dump(podcasts, podcast_file)
 
 def read_spotify_data():
+	if log("read_spotify_data"):
+		return
 	with open("text_files/tracks.json") as data_file:
 		data = list(json.load(data_file)["data"])
 	return data
@@ -1941,6 +2196,8 @@ def duration_graph_organization(data, bars_per_graph):
 	return maxes, avg_track, longest, shortest
 
 def get_artist_info(data):
+	if log("get_artist_info"):
+		return
 	artist_dict = {}
 	for i in data:
 		for artist in i["artists"]:
@@ -1951,6 +2208,8 @@ def get_artist_info(data):
 	return artist_dict, len(artist_dict)
 
 def find_popular(artist_dict, artists_per_graph):
+	if log("find_popular"):
+		return
 	values_list = list(artist_dict.values())
 	popularity = {}
 	most_popular = []
@@ -1974,6 +2233,8 @@ def find_popular(artist_dict, artists_per_graph):
 	return most_popular, uses
 
 def get_explicits(data):
+	if log("get_explicits"):
+		return
 	explicits = {"Explicit": 0, "Clean": 0, "Unknown": 0}
 	for item in data:
 		if str(item["explicit"]) == "True":
@@ -1987,6 +2248,8 @@ def get_explicits(data):
 	return explicits
 
 def genre_data_organization(genres_per_graph=20, genre_num_only=False):
+	if log("genre_data_organization"):
+		return
 	with open("text_files/genres.json") as data_file:
 		data = json.load(data_file)
 	if genre_num_only:
@@ -2011,17 +2274,25 @@ def genre_data_organization(genres_per_graph=20, genre_num_only=False):
 	return most_popular, uses, len(data)
 
 def covers(data):
+	if log("covers"):
+		return
 	names = [i["formatted_name"] for i in data]
 	copies = list(set([i for i in names if list(names).count(i) > 1]))
 	return len(copies)
 
+def to_decade(i):
+	if log("to_decade"):
+		return
+	return int(str(i)[:-1]+"0")
+
 def release_date_data(data, range_only=False):
+	if log("release_date_data"):
+		return
 	yrs = [int(i["album"]["release_date"][:4]) for i in data]
 	first = min(yrs)
 	last = max(yrs)
 	if range_only:
 		return last-first
-	def to_decade(i): return int(str(i)[:-1]+"0")
 	yrs = sorted(list(map(to_decade, yrs)))
 	popularity = {}
 	for i in yrs:
@@ -2033,21 +2304,29 @@ def release_date_data(data, range_only=False):
 	return list(popularity.keys()), list(popularity.values()), last-first
 
 def auto_pct(pct, all_values):
+	if log("auto_pct"):
+		return
 	absolute = int(pct / 100.*np.sum(all_values))
 	return "{:.1f}%\n({:d})".format(pct, absolute)
 
 def get_podcast_data():
+	if log("get_podcast_data"):
+		return
 	with open("text_files/podcasts.json") as data_file:
 		data = json.load(data_file)
 	return data
 
 def get_podcast_duration(data):
+	if log("get_podcast_duration"):
+		return
 	total = 0
 	for i in data:
 		total += i["duration_ms"]
 	return total
 
 def get_show_frequency(data):
+	if log("get_show_frequency"):
+		return
 	shows = []
 	show_dict = {}
 	for i in data:
@@ -2057,6 +2336,8 @@ def get_show_frequency(data):
 	return show_dict
 
 def get_show_durations(data):
+	if log("get_show_durations"):
+		return
 	show_dict = {}
 	for i in data:
 		show_name = i["show"]["name"]

@@ -6664,5 +6664,905 @@
     "sender": "user",
     "sent_at": "1711328791.4325752",
     "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328902.6459854",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711328985.953052",
+    "image": false
+  },
+  {
+    "message": "\n\t\tCurrent gym day is Legs\n\t\tWhat day would you like to set it to?(respond with a number)\n0: Legs\n1: Pull\n2: Push",
+    "sender": "script",
+    "sent_at": "1711328986.5074086",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711329128.958528",
+    "image": false
+  },
+  {
+    "message": "set the gym day to push",
+    "sender": "user",
+    "sent_at": "1711329129.2524352",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329129.5472617",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329130.8520317",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329134.2642834",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329140.3375204",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329150.515623",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329167.672396",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329200.8528936",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329265.8342888",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329366.6784244",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329485.3331234",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329604.135009",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329699.4494958",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329778.2272892",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329883.4204571",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711329969.3270857",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330038.4893107",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330121.7486138",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330220.5334518",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330307.3920557",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330418.0030253",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330488.7411113",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330572.705174",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330668.8590853",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330742.44266",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330805.6898415",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330873.7566226",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711330951.8551347",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331020.81087",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331117.3316488",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331208.244658",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331288.1398067",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331364.3064804",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331484.2974074",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331556.3144746",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331637.1596074",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331718.090668",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331798.3338673",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331911.3174355",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711331981.5414796",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332073.0810041",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332138.0692604",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332229.9477136",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332338.9293644",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332427.4417498",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332511.443702",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332602.5879285",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332685.1962383",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332759.6240158",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332851.8075655",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711332962.685975",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333058.7178285",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333154.0825312",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333214.8029697",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333302.321664",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333403.09535",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333492.2859395",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333587.2633152",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333664.48656",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333776.6485212",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333875.8891473",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711333972.7879856",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334055.4378762",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334166.0003712",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334231.4583442",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334336.5924015",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334405.4509146",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334517.438314",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334631.4365087",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334735.605632",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334847.1554508",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711334944.2199426",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335036.740683",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335128.7856622",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335230.1195796",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335308.3398428",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335376.5277984",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335469.568952",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335580.5374556",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335692.6939888",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335761.4422643",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335853.8685365",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711335957.77255",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711336018.922382",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711522732.7552786",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711522734.1501102",
+    "image": false
+  },
+  {
+    "message": "set the gym day",
+    "sender": "user",
+    "sent_at": "1711523233.0615983",
+    "image": false
+  },
+  {
+    "message": "Sure, what day would you like to set for your gym day? You can choose from the following options:\n1. Push\n2. Pull\n3. Legs\n4. Chest + Shoulders\n5. Back + Abs\n6. Arms\n\nPlease let me know your choice.",
+    "sender": "script",
+    "sent_at": "1711523235.2960973",
+    "image": false
+  },
+  {
+    "message": "set the gym day to push",
+    "sender": "user",
+    "sent_at": "1711523236.2137902",
+    "image": false
+  },
+  {
+    "message": "set the gym day to push",
+    "sender": "user",
+    "sent_at": "1711523257.1385639",
+    "image": false
+  },
+  {
+    "message": "set the gym day to push",
+    "sender": "user",
+    "sent_at": "1711523289.2716866",
+    "image": false
+  },
+  {
+    "message": "Your gym day has been set to Push",
+    "sender": "script",
+    "sent_at": "1711523290.1688244",
+    "image": false
+  },
+  {
+    "message": "what streaming services do i have",
+    "sender": "user",
+    "sent_at": "1711523637.3183951",
+    "image": false
+  },
+  {
+    "message": "Available Streaming Services:\nhulu\nparamount\npeacock\n",
+    "sender": "script",
+    "sent_at": "1711530506.330826",
+    "image": false
+  },
+  {
+    "message": "what streaming services do i have",
+    "sender": "user",
+    "sent_at": "1711531952.589071",
+    "image": false
+  },
+  {
+    "message": "what streaming services do i have",
+    "sender": "user",
+    "sent_at": "1711531989.2930148",
+    "image": false
+  },
+  {
+    "message": "Available Streaming Services:\n\tHulu\n\tParamount+\n\tPeacock\n",
+    "sender": "script",
+    "sent_at": "1711531991.433321",
+    "image": false
+  },
+  {
+    "message": "what streaming services do i have",
+    "sender": "user",
+    "sent_at": "1711532015.0998254",
+    "image": false
+  },
+  {
+    "message": "Available Streaming Services:\n    Hulu\n    Paramount+\n    Peacock\n",
+    "sender": "script",
+    "sent_at": "1711532016.128346",
+    "image": false
+  },
+  {
+    "message": "add apple with a cnbc add on",
+    "sender": "user",
+    "sent_at": "1711532067.3181221",
+    "image": false
+  },
+  {
+    "message": "remove apple",
+    "sender": "user",
+    "sent_at": "1711532094.3521147",
+    "image": false
+  },
+  {
+    "message": "remove paramount",
+    "sender": "user",
+    "sent_at": "1711532170.4819043",
+    "image": false
+  },
+  {
+    "message": "what streaming services do i have",
+    "sender": "user",
+    "sent_at": "1711532180.2633612",
+    "image": false
+  },
+  {
+    "message": "Available Streaming Services:\n    Hulu\n    Peacock\n",
+    "sender": "script",
+    "sent_at": "1711532181.309278",
+    "image": false
+  },
+  {
+    "message": "add paramount",
+    "sender": "user",
+    "sent_at": "1711532435.3524003",
+    "image": false
+  },
+  {
+    "message": "what streaming services do i have",
+    "sender": "user",
+    "sent_at": "1711532451.4308414",
+    "image": false
+  },
+  {
+    "message": "Available Streaming Services:\n    Hulu\n    Paramount+\n    Peacock\n",
+    "sender": "script",
+    "sent_at": "1711532452.1620545",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711532470.9894593",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nOppenheimer - Peacock\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711532471.8262005",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711532487.5684767",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711532489.514967",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer from my list",
+    "sender": "user",
+    "sent_at": "1711532526.6314194",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711532538.7914937",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nOppenheimer - Peacock\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711532540.0898895",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer from my list",
+    "sender": "user",
+    "sent_at": "1711532552.0879242",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711532576.155255",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nOppenheimer - Peacock\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711532577.3897421",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer from my list of movies",
+    "sender": "user",
+    "sent_at": "1711532859.287065",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711532914.2492285",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711533352.6612933",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711533354.803784",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711533420.7373197",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711533486.6057482",
+    "image": false
+  },
+  {
+    "message": "Removed Oppenheimer from the list of shows.",
+    "sender": "script",
+    "sent_at": "1711533488.477953",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711533489.370594",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nOppenheimer - Peacock\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711533490.49702",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711533491.2044108",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nOppenheimer - Peacock\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711533492.4261563",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711533493.2571573",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nOppenheimer - Peacock\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711533494.0776114",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711533494.8945203",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nOppenheimer - Peacock\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711533495.8114707",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711533496.5279436",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nOppenheimer - Peacock\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711533497.66993",
+    "image": false
+  },
+  {
+    "message": "weather",
+    "sender": "user",
+    "sent_at": "1711533498.4787116",
+    "image": false
+  },
+  {
+    "message": "Temperature - 44\u00b0\nConditions - Overcast\nHumidity - Average\nWind Speed - Light Breeze\nVisibility - 10 mi",
+    "sender": "script",
+    "sent_at": "1711533500.338028",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711533613.1675222",
+    "image": false
+  },
+  {
+    "message": "That media does not exist.",
+    "sender": "script",
+    "sent_at": "1711533614.6085947",
+    "image": false
+  },
+  {
+    "message": "remove oppenheimer",
+    "sender": "user",
+    "sent_at": "1711533649.011899",
+    "image": false
+  },
+  {
+    "message": "Removed Oppenheimer from the list of movies.",
+    "sender": "script",
+    "sent_at": "1711533651.1012492",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711533682.4952748",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nDonnie Darko - Peacock\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711533683.6294222",
+    "image": false
+  },
+  {
+    "message": "remove donnie darko",
+    "sender": "user",
+    "sent_at": "1711533694.2678437",
+    "image": false
+  },
+  {
+    "message": "Removed Donnie Darko from the list of movies.",
+    "sender": "script",
+    "sent_at": "1711533695.8620493",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1711533701.6360877",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Peacock\nFast Times at Ridgemont High - Peacock\nZoolander - Paramount\nEternal Sunshine of the Spotless Mind - Peacock\nThe Menu - Hulu\nThe Imitation Game - Hulu\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711533702.8691194",
+    "image": false
   }
 ]

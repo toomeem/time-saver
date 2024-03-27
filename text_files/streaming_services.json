@@ -724,7 +724,8 @@
     },
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "britbox": {
@@ -741,7 +742,8 @@
     "addons": {},
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "curiosity": {
@@ -758,7 +760,8 @@
     "addons": {},
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "disney": {
@@ -775,7 +778,8 @@
     "addons": {},
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "hbo": {
@@ -792,7 +796,8 @@
     "addons": {},
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "hulu": {
@@ -830,7 +835,8 @@
     },
     "my_plan": {
       "type": "subscription",
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "mubi": {
@@ -847,7 +853,8 @@
     "addons": {},
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "netflix": {
@@ -864,7 +871,8 @@
     "addons": {},
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "paramount": {
@@ -887,7 +895,8 @@
     },
     "my_plan": {
       "type": "subscription",
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "peacock": {
@@ -904,7 +913,8 @@
     "addons": {},
     "my_plan": {
       "type": "subscription",
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "prime": {
@@ -1542,7 +1552,8 @@
     },
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "starz": {
@@ -1559,7 +1570,8 @@
     "addons": {},
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   },
   "zee5": {
@@ -1576,7 +1588,8 @@
     "addons": {},
     "my_plan": {
       "type": null,
-      "addon": null
+      "addon": null,
+      "addon_name": null
     }
   }
 }

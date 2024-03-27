@@ -61,6 +61,9 @@ def event_loop():
 		jobs = check_for_jobs()
 		for job in jobs:
 			match job["name"]:
+				case "kill":
+					remove_job("kill")
+					return
 				case "start_workout":
 					threading.Thread(target=workout_loop).start()
 				case "get_media_data":

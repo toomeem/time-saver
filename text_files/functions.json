@@ -157,7 +157,18 @@
 	},
 	{
 		"name": "set_gym_day",
-		"description": "sets what day it is in the gym"
+		"description": "sets what day it is in the gym",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"day": {
+					"type": "string",
+					"description": "the day to set",
+					"enum": ["Push", "Pull", "Legs", "Chest + Shoulders", "Back + Abs", "Arms"]
+				}
+			},
+			"required": ["day"]
+		}
 	},
 	{
 		"name": "toggle_workout_split",
@@ -215,14 +226,14 @@
 	},
 	{
 		"name": "get_available_media",
-		"description": "sends a list of all the movies/shows I haven't watched/read yet, the user may also pass in criteria to filter the list",
+		"description": "sends a list of all the movies/shows I haven't watched yet, the user may also pass in criteria to filter the list",
 		"parameters": {
 			"type": "object",
 			"properties": {
 				"media_type": {
 					"type": "string",
 					"description": "the type of media to filter by",
-					"enum": ["show", "movie", "book"]
+					"enum": ["show", "movie"]
 				},
 				"genre": {
 					"type": "string",
@@ -237,6 +248,42 @@
 			"required": [
 				"media_type"
 			]
+		}
+	},
+	{
+		"name": "get_streaming_services",
+		"description": "sends a list of all the streaming services I have access to"
+	},
+	{
+		"name": "add_streaming_service",
+		"description": "adds a streaming service to the list of services I have access to",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"service_name": {
+					"type": "string",
+					"description": "the name of the streaming service to add"
+				},
+				"addon": {
+					"type": "string",
+					"description": "the name of the addon service to add"
+				}
+			},
+			"required": ["service_name"]
+		}
+	},
+	{
+		"name": "remove_streaming_service",
+		"description": "removes a streaming service from the list of services I have access to",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"service_name": {
+					"type": "string",
+					"description": "the name of the streaming service to remove"
+				}
+			},
+			"required": ["service_name"]
 		}
 	}
 ]
