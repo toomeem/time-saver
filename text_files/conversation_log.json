@@ -7564,5 +7564,365 @@
     "sender": "script",
     "sent_at": "1711533702.8691194",
     "image": false
+  },
+  {
+    "message": "send a graph of my weight",
+    "sender": "user",
+    "sent_at": "1711661217.3719125",
+    "image": false
+  },
+  {
+    "message": "Here is your weight graph",
+    "sender": "script",
+    "sent_at": "1711661220.6144648",
+    "image": true
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711667275.523574",
+    "image": false
+  },
+  {
+    "message": "Current gym day: Push",
+    "sender": "script",
+    "sent_at": "1711667276.2443936",
+    "image": false
+  },
+  {
+    "message": "set the gym day to pull",
+    "sender": "user",
+    "sent_at": "1711667281.2120674",
+    "image": false
+  },
+  {
+    "message": "Your gym day has been set to Pull",
+    "sender": "script",
+    "sent_at": "1711667282.1793406",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1711667287.5308788",
+    "image": false
+  },
+  {
+    "message": "Current gym day: Pull",
+    "sender": "script",
+    "sent_at": "1711667288.8436742",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1711667294.3820662",
+    "image": false
+  },
+  {
+    "message": "add netflix to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774274.0886626",
+    "image": false
+  },
+  {
+    "message": "Netflix added to your list.",
+    "sender": "script",
+    "sent_at": "1711774275.7379837",
+    "image": false
+  },
+  {
+    "message": "add max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774292.8881898",
+    "image": false
+  },
+  {
+    "message": "add max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774294.6779535",
+    "image": false
+  },
+  {
+    "message": "add max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774298.616067",
+    "image": false
+  },
+  {
+    "message": "add max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774303.9985178",
+    "image": false
+  },
+  {
+    "message": "add max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774313.826861",
+    "image": false
+  },
+  {
+    "message": "add max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774332.0844257",
+    "image": false
+  },
+  {
+    "message": "add max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774367.4424837",
+    "image": false
+  },
+  {
+    "message": "add max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774528.6971323",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1711774531.9673457",
+    "image": false
+  },
+  {
+    "message": "add hbo max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774532.6295671",
+    "image": false
+  },
+  {
+    "message": "Max added to your list.",
+    "sender": "script",
+    "sent_at": "1711774534.4236836",
+    "image": false
+  },
+  {
+    "message": "add hbo max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774535.100797",
+    "image": false
+  },
+  {
+    "message": "Max added to your list.",
+    "sender": "script",
+    "sent_at": "1711774536.9627068",
+    "image": false
+  },
+  {
+    "message": "add hbo max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774537.6269748",
+    "image": false
+  },
+  {
+    "message": "Max added to your list.",
+    "sender": "script",
+    "sent_at": "1711774538.9086301",
+    "image": false
+  },
+  {
+    "message": "add hbo max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774539.58741",
+    "image": false
+  },
+  {
+    "message": "Max added to your list.",
+    "sender": "script",
+    "sent_at": "1711774541.470319",
+    "image": false
+  },
+  {
+    "message": "add hbo max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774542.1647658",
+    "image": false
+  },
+  {
+    "message": "Max added to your list.",
+    "sender": "script",
+    "sent_at": "1711774543.6038477",
+    "image": false
+  },
+  {
+    "message": "what\u2019s the weather",
+    "sender": "user",
+    "sent_at": "1711774544.2908232",
+    "image": false
+  },
+  {
+    "message": "Temperature - 40\u00b0\nConditions - Fair\nHumidity - Low\nWind Speed - Windy\nVisibility - 10 mi",
+    "sender": "script",
+    "sent_at": "1711774545.7219212",
+    "image": false
+  },
+  {
+    "message": "add hbo max to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774546.4176135",
+    "image": false
+  },
+  {
+    "message": "Max added to your list.",
+    "sender": "script",
+    "sent_at": "1711774547.6711419",
+    "image": false
+  },
+  {
+    "message": "add hbo to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774548.3755102",
+    "image": false
+  },
+  {
+    "message": "Max added to your list.",
+    "sender": "script",
+    "sent_at": "1711774551.224778",
+    "image": false
+  },
+  {
+    "message": "add disney to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774598.745285",
+    "image": false
+  },
+  {
+    "message": "Disney+ added to your list.",
+    "sender": "script",
+    "sent_at": "1711774600.1821141",
+    "image": false
+  },
+  {
+    "message": "add hulu to my list of streaming services",
+    "sender": "user",
+    "sent_at": "1711774618.3854003",
+    "image": false
+  },
+  {
+    "message": "Hulu added to your list.",
+    "sender": "script",
+    "sent_at": "1711774620.601728",
+    "image": false
+  },
+  {
+    "message": "what movies can i watch",
+    "sender": "user",
+    "sent_at": "1711774627.887162",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Netflix\nFast Times at Ridgemont High - Netflix\nZoolander - Paramount\nSe7en - Hbo\nTexas Chainsaw Massacre - Netflix\nCoraline - Hbo\nFantastic Mr. Fox - Hbo\nGet Out - Netflix\nEternal Sunshine of the Spotless Mind - Peacock\nA Wrinkle in Time - Disney\nUnbreakable - Hbo\nAnimal House - Netflix\nThe Menu - Hbo\nTeen Wolf - Hbo\nFences - Netflix\nThe Imitation Game - Netflix\nRoad House - Hbo\nReservoir Dogs - Netflix\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nThe Blues Brothers - Netflix\nUncle Buck - Netflix\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711774628.9460711",
+    "image": false
+  },
+  {
+    "message": "what sci-fi movies can i watch",
+    "sender": "user",
+    "sent_at": "1711774665.5859485",
+    "image": false
+  },
+  {
+    "message": "There are no available movies that match the criteria.",
+    "sender": "script",
+    "sent_at": "1711774666.319816",
+    "image": false
+  },
+  {
+    "message": "what action movies can i watch",
+    "sender": "user",
+    "sent_at": "1711774684.335511",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\n48 Hrs. - Paramount\nRoad House - Hbo\nThe Blues Brothers - Netflix\n",
+    "sender": "script",
+    "sent_at": "1711774685.419767",
+    "image": false
+  },
+  {
+    "message": "what thriller movies can i watch",
+    "sender": "user",
+    "sent_at": "1711774700.7531228",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\n48 Hrs. - Paramount\nSe7en - Hbo\nTexas Chainsaw Massacre - Netflix\nGet Out - Netflix\nUnbreakable - Hbo\nThe Menu - Hbo\nThe Imitation Game - Netflix\nRoad House - Hbo\nReservoir Dogs - Netflix\n",
+    "sender": "script",
+    "sent_at": "1711774701.4310749",
+    "image": false
+  },
+  {
+    "message": "add \u201cthe usual suspects\u201d to my list of movies",
+    "sender": "user",
+    "sent_at": "1711852661.107886",
+    "image": false
+  },
+  {
+    "message": "Added The Usual Suspects to the list of movies.",
+    "sender": "script",
+    "sent_at": "1711852662.5655503",
+    "image": false
+  },
+  {
+    "message": "remove reservoir dogs from my list",
+    "sender": "user",
+    "sent_at": "1711852686.0732462",
+    "image": false
+  },
+  {
+    "message": "Removed Reservoir Dogs from the list of movies.",
+    "sender": "script",
+    "sent_at": "1711852687.370143",
+    "image": false
+  },
+  {
+    "message": "what movies can i watch",
+    "sender": "user",
+    "sent_at": "1711852699.8005717",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\n48 Hrs. - Paramount\nClerks - Paramount\nThe Big Lebowski - Netflix\nFast Times at Ridgemont High - Netflix\nZoolander - Paramount\nSe7en - Hbo\nTexas Chainsaw Massacre - Netflix\nCoraline - Hbo\nFantastic Mr. Fox - Hbo\nGet Out - Netflix\nEternal Sunshine of the Spotless Mind - Peacock\nA Wrinkle in Time - Disney\nUnbreakable - Hbo\nAnimal House - Netflix\nThe Menu - Hbo\nTeen Wolf - Hbo\nFences - Netflix\nThe Imitation Game - Netflix\nRoad House - Hbo\nAlien - Hulu\nThe Whale - Paramount\nTitanic - Paramount\nThe Blues Brothers - Netflix\nUncle Buck - Netflix\nBetter Off Dead... - Paramount\n",
+    "sender": "script",
+    "sent_at": "1711852702.5350583",
+    "image": false
+  },
+  {
+    "message": "add \u201cargo\u201d to my list of movies",
+    "sender": "user",
+    "sent_at": "1711860188.798155",
+    "image": false
+  },
+  {
+    "message": "Added Argo to the list of movies.",
+    "sender": "script",
+    "sent_at": "1711860189.6663818",
+    "image": false
+  },
+  {
+    "message": "add \u201ccharlie wilson\u2019s war\u201d to my list of movies",
+    "sender": "user",
+    "sent_at": "1711860204.0820792",
+    "image": false
+  },
+  {
+    "message": "Added Charlie Wilson's War to the list of movies.",
+    "sender": "script",
+    "sent_at": "1711860205.5116374",
+    "image": false
+  },
+  {
+    "message": "remove the big lebowski from the list",
+    "sender": "user",
+    "sent_at": "1711860727.7054343",
+    "image": false
+  },
+  {
+    "message": "Removed the big lebowski from the list of movies.",
+    "sender": "script",
+    "sent_at": "1711860729.5458982",
+    "image": false
   }
 ]

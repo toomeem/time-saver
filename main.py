@@ -529,7 +529,7 @@ def start_workout():
     }
     with open("text_files/current_workout.json", "w") as workout_file:
         json.dump(workout_dict, workout_file, indent=2)
-    add_job("workout_loop")
+    add_job("start_workout")
 
 def get_train_schedule(station_json):
     if log("get_train_schedule"):
@@ -720,16 +720,19 @@ def user_add_streaming_service(args):
         addon = determine_addon(service, args["addon"])
     with open("text_files/streaming_services.json") as f:
         service_data = json.load(f)
-    service_data[service]["my_plan"] = {
-        "type": "subscription",
-        "addon": addon,
-        "addon_name": None
-    }
-    if addon:
-        service_data[service]["my_plan"]["addon_name"] = service_data[service]["addons"][addon]["displayName"]
-    with open("text_files/streaming_services.json", "w") as f:
-        json.dump(service_data, f, indent=2)
-    message_user(f"""{service_data[service]["name"]} added to your list.""")
+    try:
+        service_data[service]["my_plan"] = {
+            "type": "subscription",
+            "addon": addon,
+            "addon_name": None
+        }
+        if addon:
+            service_data[service]["my_plan"]["addon_name"] = service_data[service]["addons"][addon]["displayName"]
+        with open("text_files/streaming_services.json", "w") as f:
+            json.dump(service_data, f, indent=2)
+        message_user(f"""{service_data[service]["name"]} added to your list.""")
+    except:
+        message_user("Error\nPlease try again.")
 
 def user_remove_streaming_service(args):
     if log("user_remove_streaming_service"):
@@ -1450,7 +1453,7 @@ def morning_message():
     message += f"""Today is {rn(f"%A, %B {day_num}{suffix}")}\n"""
     if brentford_game:
         message += f"Brentford plays at {brentford_game} today!\n"
-    message += f"""Today's word of the day is "{get_todays_word()}"\n"""
+    # message += f"""Today's word of the day is "{get_todays_word()}"\n"""
     message += "Here's today's weather:\n\t"
     message += formatted_weather().replace("\n", "\n\t")
     return(message)

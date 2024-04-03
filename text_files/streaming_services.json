@@ -777,7 +777,7 @@
     },
     "addons": {},
     "my_plan": {
-      "type": null,
+      "type": "subscription",
       "addon": null,
       "addon_name": null
     }
@@ -795,7 +795,7 @@
     },
     "addons": {},
     "my_plan": {
-      "type": null,
+      "type": "subscription",
       "addon": null,
       "addon_name": null
     }
@@ -870,7 +870,7 @@
     },
     "addons": {},
     "my_plan": {
-      "type": null,
+      "type": "subscription",
       "addon": null,
       "addon_name": null
     }

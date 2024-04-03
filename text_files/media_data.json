@@ -49,7 +49,7 @@
       "belongs_to_collection": null,
       "budget": 0,
       "id": 25237,
-      "popularity": 36.616,
+      "popularity": 20.509,
       "production_companies": [
         {
           "name": "Belarusfilm",
@@ -66,10 +66,10 @@
       "revenue": 168817,
       "runtime": 142,
       "status": "Released",
-      "vote_average": 8.269,
-      "vote_count": 1329,
+      "vote_average": 8.3,
+      "vote_count": 1336,
       "needs_data": false,
-      "last_updated": 1710910181
+      "last_updated": 1711660922
     },
     "Once Upon a Time in America": {
       "type": "movie",
@@ -106,7 +106,7 @@
       "belongs_to_collection": null,
       "budget": 30000000,
       "id": 311,
-      "popularity": 40.354,
+      "popularity": 52.214,
       "production_companies": [
         {
           "name": "The Ladd Company",
@@ -138,10 +138,10 @@
       "revenue": 5500000,
       "runtime": 229,
       "status": "Released",
-      "vote_average": 8.426,
-      "vote_count": 5108,
+      "vote_average": 8.425,
+      "vote_count": 5115,
       "needs_data": false,
-      "last_updated": 1711150477
+      "last_updated": 1711773760
     },
     "Little Shop of Horrors": {
       "type": "movie",
@@ -162,9 +162,9 @@
           },
           {
             "price": {
-              "amount": "14.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "14.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690074995,
             "quality": "hd",
@@ -192,7 +192,7 @@
       "belongs_to_collection": null,
       "budget": 25000000,
       "id": 10776,
-      "popularity": 24.002,
+      "popularity": 31.041,
       "production_companies": [
         {
           "name": "Geffen Pictures",
@@ -209,10 +209,10 @@
       "revenue": 38800000,
       "runtime": 94,
       "status": "Released",
-      "vote_average": 6.908,
-      "vote_count": 1357,
+      "vote_average": 6.906,
+      "vote_count": 1360,
       "needs_data": false,
-      "last_updated": 1711150478
+      "last_updated": 1711773761
     },
     "The Shawshank Redemption": {
       "type": "movie",
@@ -240,7 +240,7 @@
       "belongs_to_collection": null,
       "budget": 25000000,
       "id": 278,
-      "popularity": 126.841,
+      "popularity": 166.236,
       "production_companies": [
         {
           "name": "Castle Rock Entertainment",
@@ -253,9 +253,9 @@
       "runtime": 142,
       "status": "Released",
       "vote_average": 8.705,
-      "vote_count": 25819,
+      "vote_count": 25861,
       "needs_data": false,
-      "last_updated": 1711150478
+      "last_updated": 1711773762
     },
     "Planes, Trains and Automobiles": {
       "type": "movie",
@@ -334,7 +334,7 @@
       "belongs_to_collection": null,
       "budget": 15000000,
       "id": 2609,
-      "popularity": 17.015,
+      "popularity": 25.244,
       "production_companies": [
         {
           "name": "Paramount",
@@ -351,10 +351,10 @@
       "revenue": 49500000,
       "runtime": 93,
       "status": "Released",
-      "vote_average": 7.237,
-      "vote_count": 1797,
+      "vote_average": 7.234,
+      "vote_count": 1802,
       "needs_data": false,
-      "last_updated": 1711150479
+      "last_updated": 1711773762
     },
     "This Is Spinal Tap": {
       "type": "movie",
@@ -397,7 +397,7 @@
       },
       "budget": 2500000,
       "id": 11031,
-      "popularity": 19.085,
+      "popularity": 21.575,
       "production_companies": [
         {
           "name": "Spinal Tap Prod.",
@@ -419,10 +419,10 @@
       "revenue": 4700000,
       "runtime": 82,
       "status": "Released",
-      "vote_average": 7.437,
-      "vote_count": 1321,
+      "vote_average": 7.4,
+      "vote_count": 1323,
       "needs_data": false,
-      "last_updated": 1711150479
+      "last_updated": 1711773762
     },
     "Best in Show": {
       "type": "movie",
@@ -494,7 +494,7 @@
       "belongs_to_collection": null,
       "budget": 0,
       "id": 13785,
-      "popularity": 16.68,
+      "popularity": 15.778,
       "production_companies": [
         {
           "name": "Castle Rock Entertainment",
@@ -506,10 +506,10 @@
       "revenue": 0,
       "runtime": 90,
       "status": "Released",
-      "vote_average": 6.906,
-      "vote_count": 534,
+      "vote_average": 6.91,
+      "vote_count": 536,
       "needs_data": false,
-      "last_updated": 1711150480
+      "last_updated": 1711773763
     },
     "For Your Consideration": {
       "type": "movie",
@@ -566,7 +566,7 @@
       "belongs_to_collection": null,
       "budget": 12000000,
       "id": 14799,
-      "popularity": 10.318,
+      "popularity": 8.457,
       "production_companies": [
         {
           "name": "Shangri-La Entertainment",
@@ -583,10 +583,10 @@
       "revenue": 5542025,
       "runtime": 86,
       "status": "Released",
-      "vote_average": 5.86,
+      "vote_average": 5.9,
       "vote_count": 157,
       "needs_data": false,
-      "last_updated": 1711150480
+      "last_updated": 1711773763
     },
     "48 Hrs.": {
       "type": "movie",
@@ -625,23 +625,12 @@
           },
           {
             "price": {
-              "amount": "4.29",
-              "currency": "USD",
-              "formatted": "4.29 USD"
-            },
-            "availableSince": 1690156582,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "rent"
-          },
-          {
-            "price": {
               "amount": "3.99",
               "currency": "USD",
               "formatted": "3.99 USD"
             },
-            "availableSince": 1710214217,
-            "quality": "sd",
+            "availableSince": 1690156582,
+            "quality": "hd",
             "service": "prime",
             "streamingType": "rent"
           },
@@ -696,7 +685,7 @@
       },
       "budget": 12000000,
       "id": 150,
-      "popularity": 22.556,
+      "popularity": 28.225,
       "production_companies": [
         {
           "name": "Paramount",
@@ -711,7 +700,7 @@
       "vote_average": 6.7,
       "vote_count": 1386,
       "needs_data": false,
-      "last_updated": 1711150481
+      "last_updated": 1711773764
     },
     "Trading Places": {
       "type": "movie",
@@ -721,12 +710,23 @@
         "us": [
           {
             "price": {
-              "amount": "3.79",
+              "amount": "4.29",
               "currency": "USD",
-              "formatted": "3.79 USD"
+              "formatted": "4.29 USD"
             },
             "availableSince": 1690118236,
             "quality": "uhd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "3.89",
+              "currency": "USD",
+              "formatted": "3.89 USD"
+            },
+            "availableSince": 1708353020,
+            "quality": "sd",
             "service": "prime",
             "streamingType": "rent"
           },
@@ -761,7 +761,7 @@
       "belongs_to_collection": null,
       "budget": 15000000,
       "id": 1621,
-      "popularity": 40.294,
+      "popularity": 66.411,
       "production_companies": [
         {
           "name": "Cinema Group Ventures",
@@ -779,9 +779,9 @@
       "runtime": 116,
       "status": "Released",
       "vote_average": 7.217,
-      "vote_count": 3092,
+      "vote_count": 3097,
       "needs_data": false,
-      "last_updated": 1711150481
+      "last_updated": 1711773764
     },
     "The Producers": {
       "type": "movie",
@@ -808,7 +808,7 @@
       "belongs_to_collection": null,
       "budget": 947000,
       "id": 30197,
-      "popularity": 15.34,
+      "popularity": 16.355,
       "production_companies": [
         {
           "name": "Embassy Pictures Corporation",
@@ -825,10 +825,10 @@
       "revenue": 0,
       "runtime": 88,
       "status": "Released",
-      "vote_average": 7.1,
-      "vote_count": 718,
+      "vote_average": 7.094,
+      "vote_count": 723,
       "needs_data": false,
-      "last_updated": 1711150482
+      "last_updated": 1711773765
     },
     "A Few Good Men": {
       "type": "movie",
@@ -838,9 +838,9 @@
         "us": [
           {
             "price": {
-              "amount": "6.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "6.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690097854,
             "quality": "uhd",
@@ -867,7 +867,7 @@
       "belongs_to_collection": null,
       "budget": 40000000,
       "id": 881,
-      "popularity": 35.675,
+      "popularity": 44.74,
       "production_companies": [
         {
           "name": "David Brown Productions",
@@ -880,9 +880,9 @@
       "runtime": 138,
       "status": "Released",
       "vote_average": 7.532,
-      "vote_count": 3353,
+      "vote_count": 3360,
       "needs_data": false,
-      "last_updated": 1711150482
+      "last_updated": 1711773765
     },
     "It's a Wonderful Life": {
       "type": "movie",
@@ -890,12 +890,6 @@
       "overview": "A holiday favourite for generations...  George Bailey has spent his entire life giving to the people of Bedford Falls.  All that prevents rich skinflint Mr. Potter from taking over the entire town is George's modest building and loan company.  But on Christmas Eve the business's $8,000 is lost and George's troubles begin.",
       "streamingInfo": {
         "us": [
-          {
-            "availableSince": 1689625525,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "subscription"
-          },
           {
             "price": {
               "amount": "3.99",
@@ -909,6 +903,23 @@
           },
           {
             "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1690029184,
+            "quality": "uhd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "availableSince": 1689625525,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "subscription"
+          },
+          {
+            "price": {
               "amount": "14.99",
               "currency": "USD",
               "formatted": "14.99 USD"
@@ -917,17 +928,6 @@
             "quality": "hd",
             "service": "prime",
             "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "3.79",
-              "currency": "USD",
-              "formatted": "3.79 USD"
-            },
-            "availableSince": 1690029184,
-            "quality": "uhd",
-            "service": "prime",
-            "streamingType": "rent"
           },
           {
             "availableSince": 1690029184,
@@ -1057,7 +1057,7 @@
       "belongs_to_collection": null,
       "budget": 3180000,
       "id": 1585,
-      "popularity": 37.079,
+      "popularity": 64.203,
       "production_companies": [
         {
           "name": "Liberty Films",
@@ -1069,10 +1069,10 @@
       "revenue": 9644124,
       "runtime": 130,
       "status": "Released",
-      "vote_average": 8.269,
-      "vote_count": 4075,
+      "vote_average": 8.3,
+      "vote_count": 4085,
       "needs_data": false,
-      "last_updated": 1711150483
+      "last_updated": 1711773766
     },
     "Clerks": {
       "type": "movie",
@@ -1106,9 +1106,9 @@
           },
           {
             "price": {
-              "amount": "4.99",
+              "amount": "14.99",
               "currency": "USD",
-              "formatted": "4.99 USD"
+              "formatted": "14.99 USD"
             },
             "availableSince": 1689997406,
             "quality": "hd",
@@ -1138,7 +1138,7 @@
       },
       "budget": 27575,
       "id": 2292,
-      "popularity": 18.565,
+      "popularity": 20.385,
       "production_companies": [
         {
           "name": "View Askew Productions",
@@ -1150,10 +1150,10 @@
       "revenue": 3151130,
       "runtime": 92,
       "status": "Released",
-      "vote_average": 7.414,
-      "vote_count": 2363,
+      "vote_average": 7.4,
+      "vote_count": 2364,
       "needs_data": false,
-      "last_updated": 1711150483
+      "last_updated": 1711773767
     },
     "Casino": {
       "type": "movie",
@@ -1224,9 +1224,9 @@
           },
           {
             "price": {
-              "amount": "14.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "14.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690100410,
             "quality": "uhd",
@@ -1255,7 +1255,7 @@
       "belongs_to_collection": null,
       "budget": 50000000,
       "id": 524,
-      "popularity": 30.891,
+      "popularity": 44.267,
       "production_companies": [
         {
           "name": "Universal Pictures",
@@ -1282,121 +1282,10 @@
       "revenue": 116112375,
       "runtime": 179,
       "status": "Released",
-      "vote_average": 8.012,
-      "vote_count": 5516,
+      "vote_average": 8.01,
+      "vote_count": 5524,
       "needs_data": false,
-      "last_updated": 1711150484
-    },
-    "The Big Lebowski": {
-      "type": "movie",
-      "title": "The Big Lebowski",
-      "overview": "Jeffrey 'The Dude' Lebowski, a Los Angeles slacker who only wants to bowl and drink White Russians, is mistaken for another Jeffrey Lebowski, a wheelchair-bound millionaire, and finds himself dragged into a strange series of events involving nihilists, adult film producers, ferrets, errant toes, and large sums of money.",
-      "streamingInfo": {
-        "us": [
-          {
-            "price": {
-              "amount": "3.99",
-              "currency": "USD",
-              "formatted": "3.99 USD"
-            },
-            "availableSince": 1654457747,
-            "quality": "uhd",
-            "service": "apple",
-            "streamingType": "rent"
-          },
-          {
-            "price": {
-              "amount": "14.99",
-              "currency": "USD",
-              "formatted": "14.99 USD"
-            },
-            "availableSince": 1654457747,
-            "quality": "uhd",
-            "service": "apple",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "14.99",
-              "currency": "USD",
-              "formatted": "14.99 USD"
-            },
-            "availableSince": 1690150295,
-            "quality": "uhd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "3.79",
-              "currency": "USD",
-              "formatted": "3.79 USD"
-            },
-            "availableSince": 1690150295,
-            "quality": "uhd",
-            "service": "prime",
-            "streamingType": "rent"
-          },
-          {
-            "availableSince": 1699151591,
-            "service": "netflix",
-            "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1709357188,
-            "leaving": 1714557540,
-            "quality": "uhd",
-            "service": "peacock",
-            "streamingType": "subscription"
-          }
-        ]
-      },
-      "cast": [
-        "Jeff Bridges",
-        "John Goodman",
-        "Julianne Moore",
-        "Steve Buscemi",
-        "David Huddleston",
-        "Philip Seymour Hoffman",
-        "Tara Reid"
-      ],
-      "genres": [
-        "comedy",
-        "crime"
-      ],
-      "directors": [
-        "Joel Coen",
-        "Ethan Coen"
-      ],
-      "belongs_to_collection": null,
-      "budget": 15000000,
-      "id": 115,
-      "popularity": 33.674,
-      "production_companies": [
-        {
-          "name": "PolyGram Filmed Entertainment",
-          "id": 1382,
-          "origin_country": "US"
-        },
-        {
-          "name": "Working Title Films",
-          "id": 10163,
-          "origin_country": "GB"
-        },
-        {
-          "name": "Gramercy Pictures",
-          "id": 37,
-          "origin_country": "US"
-        }
-      ],
-      "release_date": 889160400,
-      "revenue": 47010480,
-      "runtime": 117,
-      "status": "Released",
-      "vote_average": 7.842,
-      "vote_count": 10739,
-      "needs_data": false,
-      "last_updated": 1711150484
+      "last_updated": 1711773767
     },
     "The Royal Tenenbaums": {
       "type": "movie",
@@ -1491,7 +1380,7 @@
       "belongs_to_collection": null,
       "budget": 21000000,
       "id": 9428,
-      "popularity": 23.133,
+      "popularity": 26.449,
       "production_companies": [
         {
           "name": "Touchstone Pictures",
@@ -1508,10 +1397,10 @@
       "revenue": 71441250,
       "runtime": 110,
       "status": "Released",
-      "vote_average": 7.486,
-      "vote_count": 4350,
+      "vote_average": 7.487,
+      "vote_count": 4356,
       "needs_data": false,
-      "last_updated": 1711150485
+      "last_updated": 1711773768
     },
     "Almost Famous": {
       "type": "movie",
@@ -1521,9 +1410,9 @@
         "us": [
           {
             "price": {
-              "amount": "16.99",
+              "amount": "9.99",
               "currency": "USD",
-              "formatted": "16.99 USD"
+              "formatted": "9.99 USD"
             },
             "availableSince": 1690015220,
             "quality": "uhd",
@@ -1554,9 +1443,9 @@
           },
           {
             "price": {
-              "amount": "14.99",
+              "amount": "9.99",
               "currency": "USD",
-              "formatted": "14.99 USD"
+              "formatted": "9.99 USD"
             },
             "availableSince": 1690025003,
             "quality": "uhd",
@@ -1565,12 +1454,23 @@
           },
           {
             "price": {
-              "amount": "3.79",
+              "amount": "4.29",
               "currency": "USD",
-              "formatted": "3.79 USD"
+              "formatted": "4.29 USD"
             },
             "availableSince": 1690025003,
             "quality": "uhd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "3.89",
+              "currency": "USD",
+              "formatted": "3.89 USD"
+            },
+            "availableSince": 1708940151,
+            "quality": "sd",
             "service": "prime",
             "streamingType": "rent"
           }
@@ -1595,7 +1495,7 @@
       "belongs_to_collection": null,
       "budget": 60000000,
       "id": 786,
-      "popularity": 21.754,
+      "popularity": 24.127,
       "production_companies": [
         {
           "name": "DreamWorks Pictures",
@@ -1618,9 +1518,9 @@
       "runtime": 124,
       "status": "Released",
       "vote_average": 7.5,
-      "vote_count": 2562,
+      "vote_count": 2568,
       "needs_data": false,
-      "last_updated": 1711150486
+      "last_updated": 1711773768
     },
     "Fast Times at Ridgemont High": {
       "type": "movie",
@@ -1656,6 +1556,13 @@
             "streamingType": "subscription"
           },
           {
+            "availableSince": 1709359694,
+            "leaving": 1711965540,
+            "quality": "hd",
+            "service": "peacock",
+            "streamingType": "subscription"
+          },
+          {
             "price": {
               "amount": "3.99",
               "currency": "USD",
@@ -1668,21 +1575,14 @@
           },
           {
             "price": {
-              "amount": "14.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "14.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690106657,
             "quality": "hd",
             "service": "prime",
             "streamingType": "buy"
-          },
-          {
-            "availableSince": 1709359694,
-            "leaving": 1711965540,
-            "quality": "hd",
-            "service": "peacock",
-            "streamingType": "subscription"
           }
         ]
       },
@@ -1704,7 +1604,7 @@
       "belongs_to_collection": null,
       "budget": 4500000,
       "id": 13342,
-      "popularity": 23.295,
+      "popularity": 23.53,
       "production_companies": [
         {
           "name": "Refugee Films",
@@ -1722,9 +1622,9 @@
       "runtime": 90,
       "status": "Released",
       "vote_average": 6.807,
-      "vote_count": 1150,
+      "vote_count": 1152,
       "needs_data": false,
-      "last_updated": 1711150486
+      "last_updated": 1711773769
     },
     "Zoolander": {
       "type": "movie",
@@ -1733,17 +1633,23 @@
       "streamingInfo": {
         "us": [
           {
+            "availableSince": 1654151731,
+            "leaving": 1735707600,
+            "service": "paramount",
+            "streamingType": "subscription"
+          },
+          {
+            "availableSince": 1690013295,
+            "addon": "cbsaacf",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
+          },
+          {
             "availableSince": 1709302810,
             "quality": "hd",
             "service": "apple",
             "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1654519557,
-            "addon": "tvs.sbd.1000230",
-            "quality": "uhd",
-            "service": "apple",
-            "streamingType": "addon"
           },
           {
             "availableSince": 1709302810,
@@ -1762,30 +1668,6 @@
             "quality": "hd",
             "service": "apple",
             "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "3.99",
-              "currency": "USD",
-              "formatted": "3.99 USD"
-            },
-            "availableSince": 1654519557,
-            "quality": "hd",
-            "service": "apple",
-            "streamingType": "rent"
-          },
-          {
-            "availableSince": 1654151731,
-            "leaving": 1735707600,
-            "service": "paramount",
-            "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1690013295,
-            "addon": "cbsaacf",
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "addon"
           },
           {
             "price": {
@@ -1811,13 +1693,31 @@
           },
           {
             "price": {
-              "amount": "3.79",
+              "amount": "4.29",
               "currency": "USD",
-              "formatted": "3.79 USD"
+              "formatted": "4.29 USD"
             },
             "availableSince": 1690013295,
             "quality": "hd",
             "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "availableSince": 1654519557,
+            "addon": "tvs.sbd.1000230",
+            "quality": "uhd",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1654519557,
+            "quality": "hd",
+            "service": "apple",
             "streamingType": "rent"
           },
           {
@@ -1850,7 +1750,7 @@
       },
       "budget": 28000000,
       "id": 9398,
-      "popularity": 40.06,
+      "popularity": 27.037,
       "production_companies": [
         {
           "name": "Paramount",
@@ -1902,10 +1802,10 @@
       "revenue": 60800000,
       "runtime": 90,
       "status": "Released",
-      "vote_average": 6.204,
-      "vote_count": 4236,
+      "vote_average": 6.205,
+      "vote_count": 4243,
       "needs_data": false,
-      "last_updated": 1711150487
+      "last_updated": 1711773770
     },
     "Django Unchained": {
       "type": "movie",
@@ -1961,14 +1861,14 @@
           },
           {
             "price": {
-              "amount": "2.99",
+              "amount": "9.99",
               "currency": "USD",
-              "formatted": "2.99 USD"
+              "formatted": "9.99 USD"
             },
             "availableSince": 1708206398,
             "quality": "hd",
             "service": "prime",
-            "streamingType": "rent"
+            "streamingType": "buy"
           },
           {
             "price": {
@@ -1977,9 +1877,27 @@
               "formatted": "7.99 USD"
             },
             "availableSince": 1708206398,
-            "quality": "hd",
+            "quality": "sd",
             "service": "prime",
             "streamingType": "buy"
+          },
+          {
+            "availableSince": 1711616503,
+            "addon": "starzSub",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
+          },
+          {
+            "price": {
+              "amount": "2.99",
+              "currency": "USD",
+              "formatted": "2.99 USD"
+            },
+            "availableSince": 1708206398,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "rent"
           }
         ]
       },
@@ -2002,7 +1920,7 @@
       "belongs_to_collection": null,
       "budget": 100000000,
       "id": 68718,
-      "popularity": 58.242,
+      "popularity": 78.676,
       "production_companies": [
         {
           "name": "The Weinstein Company",
@@ -2020,9 +1938,9 @@
       "runtime": 165,
       "status": "Released",
       "vote_average": 8.177,
-      "vote_count": 25374,
+      "vote_count": 25405,
       "needs_data": false,
-      "last_updated": 1711150487
+      "last_updated": 1711773770
     },
     "The Untouchables": {
       "type": "movie",
@@ -2103,6 +2021,17 @@
           },
           {
             "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1690018155,
+            "quality": "uhd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
               "amount": "3.79",
               "currency": "USD",
               "formatted": "3.79 USD"
@@ -2122,17 +2051,6 @@
             "quality": "hd",
             "service": "prime",
             "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "3.99",
-              "currency": "USD",
-              "formatted": "3.99 USD"
-            },
-            "availableSince": 1690018155,
-            "quality": "uhd",
-            "service": "prime",
-            "streamingType": "rent"
           }
         ]
       },
@@ -2157,7 +2075,7 @@
       "belongs_to_collection": null,
       "budget": 25000000,
       "id": 117,
-      "popularity": 33.212,
+      "popularity": 33.489,
       "production_companies": [
         {
           "name": "Paramount",
@@ -2174,10 +2092,10 @@
       "revenue": 76270454,
       "runtime": 119,
       "status": "Released",
-      "vote_average": 7.775,
-      "vote_count": 5354,
+      "vote_average": 7.774,
+      "vote_count": 5360,
       "needs_data": false,
-      "last_updated": 1711150488
+      "last_updated": 1711773771
     },
     "Se7en": {
       "type": "movie",
@@ -2257,7 +2175,7 @@
       "belongs_to_collection": null,
       "budget": 33000000,
       "id": 807,
-      "popularity": 68.255,
+      "popularity": 94.703,
       "production_companies": [
         {
           "name": "New Line Cinema",
@@ -2280,9 +2198,9 @@
       "runtime": 127,
       "status": "Released",
       "vote_average": 8.371,
-      "vote_count": 20128,
+      "vote_count": 20152,
       "needs_data": false,
-      "last_updated": 1711150489
+      "last_updated": 1711773772
     },
     "There Will Be Blood": {
       "type": "movie",
@@ -2302,13 +2220,6 @@
             "streamingType": "rent"
           },
           {
-            "availableSince": 1703674568,
-            "addon": "paramountpremium",
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "addon"
-          },
-          {
             "availableSince": 1699130261,
             "addon": "showtime",
             "leaving": 1714460400,
@@ -2318,14 +2229,21 @@
           },
           {
             "price": {
-              "amount": "4.99",
+              "amount": "14.99",
               "currency": "USD",
-              "formatted": "4.99 USD"
+              "formatted": "14.99 USD"
             },
             "availableSince": 1690034351,
             "quality": "hd",
             "service": "prime",
             "streamingType": "buy"
+          },
+          {
+            "availableSince": 1703674568,
+            "addon": "paramountpremium",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
           }
         ]
       },
@@ -2347,7 +2265,7 @@
       "belongs_to_collection": null,
       "budget": 25000000,
       "id": 7345,
-      "popularity": 32.205,
+      "popularity": 39.488,
       "production_companies": [
         {
           "name": "Paramount Vantage",
@@ -2374,10 +2292,10 @@
       "revenue": 77208711,
       "runtime": 158,
       "status": "Released",
-      "vote_average": 8.08,
-      "vote_count": 6260,
+      "vote_average": 8.081,
+      "vote_count": 6273,
       "needs_data": false,
-      "last_updated": 1711150489
+      "last_updated": 1711773773
     },
     "The Prestige": {
       "type": "movie",
@@ -2387,20 +2305,9 @@
         "us": [
           {
             "price": {
-              "amount": "17.99",
+              "amount": "4.19",
               "currency": "USD",
-              "formatted": "17.99 USD"
-            },
-            "availableSince": 1690040594,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "4.29",
-              "currency": "USD",
-              "formatted": "4.29 USD"
+              "formatted": "4.19 USD"
             },
             "availableSince": 1690040594,
             "quality": "uhd",
@@ -2409,20 +2316,9 @@
           },
           {
             "price": {
-              "amount": "3.79",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "3.79 USD"
-            },
-            "availableSince": 1710130593,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "rent"
-          },
-          {
-            "price": {
-              "amount": "18.99",
-              "currency": "USD",
-              "formatted": "18.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690040594,
             "quality": "uhd",
@@ -2451,7 +2347,7 @@
       "belongs_to_collection": null,
       "budget": 40000000,
       "id": 1124,
-      "popularity": 48.104,
+      "popularity": 62.12,
       "production_companies": [
         {
           "name": "Warner Bros. Pictures",
@@ -2479,9 +2375,9 @@
       "runtime": 130,
       "status": "Released",
       "vote_average": 8.204,
-      "vote_count": 15293,
+      "vote_count": 15314,
       "needs_data": false,
-      "last_updated": 1711150489
+      "last_updated": 1711773773
     },
     "The Exorcist": {
       "type": "movie",
@@ -2491,25 +2387,14 @@
         "us": [
           {
             "price": {
-              "amount": "9.99",
+              "amount": "12.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "12.99 USD"
             },
             "availableSince": 1690069759,
             "quality": "hd",
             "service": "prime",
             "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "3.79",
-              "currency": "USD",
-              "formatted": "3.79 USD"
-            },
-            "availableSince": 1708299917,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "rent"
           },
           {
             "price": {
@@ -2524,9 +2409,9 @@
           },
           {
             "price": {
-              "amount": "9.99",
+              "amount": "12.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "12.99 USD"
             },
             "availableSince": 1690070901,
             "quality": "hd",
@@ -2546,9 +2431,9 @@
           },
           {
             "price": {
-              "amount": "9.99",
+              "amount": "12.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "12.99 USD"
             },
             "availableSince": 1703450491,
             "quality": "uhd",
@@ -2580,7 +2465,7 @@
       },
       "budget": 12000000,
       "id": 9552,
-      "popularity": 49.358,
+      "popularity": 69.221,
       "production_companies": [
         {
           "name": "Hoya Productions",
@@ -2603,9 +2488,9 @@
       "runtime": 122,
       "status": "Released",
       "vote_average": 7.726,
-      "vote_count": 7609,
+      "vote_count": 7623,
       "needs_data": false,
-      "last_updated": 1711150490
+      "last_updated": 1711773774
     },
     "Annie Hall": {
       "type": "movie",
@@ -2633,9 +2518,9 @@
           },
           {
             "price": {
-              "amount": "19.99",
+              "amount": "14.99",
               "currency": "USD",
-              "formatted": "19.99 USD"
+              "formatted": "14.99 USD"
             },
             "availableSince": 1710221638,
             "quality": "hd",
@@ -2664,7 +2549,7 @@
       "belongs_to_collection": null,
       "budget": 4000000,
       "id": 703,
-      "popularity": 21.551,
+      "popularity": 30.28,
       "production_companies": [
         {
           "name": "United Artists",
@@ -2681,10 +2566,10 @@
       "revenue": 38288028,
       "runtime": 93,
       "status": "Released",
-      "vote_average": 7.8,
-      "vote_count": 3714,
+      "vote_average": 7.75,
+      "vote_count": 3720,
       "needs_data": false,
-      "last_updated": 1711150490
+      "last_updated": 1711773775
     },
     "Texas Chainsaw Massacre": {
       "type": "movie",
@@ -2722,7 +2607,7 @@
       },
       "budget": 20000000,
       "id": 632727,
-      "popularity": 35.78,
+      "popularity": 35.551,
       "production_companies": [
         {
           "name": "Legendary Pictures",
@@ -2744,10 +2629,10 @@
       "revenue": 0,
       "runtime": 83,
       "status": "Released",
-      "vote_average": 5.204,
-      "vote_count": 1336,
+      "vote_average": 5.198,
+      "vote_count": 1338,
       "needs_data": false,
-      "last_updated": 1711150491
+      "last_updated": 1711773775
     },
     "The Wild Bunch": {
       "type": "movie",
@@ -2757,20 +2642,9 @@
         "us": [
           {
             "price": {
-              "amount": "9.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
-            },
-            "availableSince": 1704135517,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "10.49",
-              "currency": "USD",
-              "formatted": "10.49 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690085791,
             "quality": "hd",
@@ -2812,9 +2686,9 @@
           },
           {
             "price": {
-              "amount": "9.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690087785,
             "quality": "hd",
@@ -2841,7 +2715,7 @@
       "belongs_to_collection": null,
       "budget": 6244087,
       "id": 576,
-      "popularity": 21.277,
+      "popularity": 22.372,
       "production_companies": [
         {
           "name": "Warner Bros.-Seven Arts",
@@ -2853,10 +2727,10 @@
       "revenue": 638641,
       "runtime": 145,
       "status": "Released",
-      "vote_average": 7.614,
+      "vote_average": 7.6,
       "vote_count": 1110,
       "needs_data": false,
-      "last_updated": 1711150492
+      "last_updated": 1711773776
     },
     "Coraline": {
       "type": "movie",
@@ -2864,17 +2738,6 @@
       "overview": "A young girl discovers an idealized parallel universe behind a secret door in her new home, unaware that it contains a sinister secret.",
       "streamingInfo": {
         "us": [
-          {
-            "price": {
-              "amount": "7.99",
-              "currency": "USD",
-              "formatted": "7.99 USD"
-            },
-            "availableSince": 1690020411,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
           {
             "price": {
               "amount": "3.99",
@@ -2888,9 +2751,9 @@
           },
           {
             "price": {
-              "amount": "8.99",
+              "amount": "14.99",
               "currency": "USD",
-              "formatted": "8.99 USD"
+              "formatted": "14.99 USD"
             },
             "availableSince": 1690148262,
             "quality": "uhd",
@@ -2995,9 +2858,20 @@
           },
           {
             "price": {
-              "amount": "8.99",
+              "amount": "12.99",
               "currency": "USD",
-              "formatted": "8.99 USD"
+              "formatted": "12.99 USD"
+            },
+            "availableSince": 1690020411,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "buy"
+          },
+          {
+            "price": {
+              "amount": "14.99",
+              "currency": "USD",
+              "formatted": "14.99 USD"
             },
             "availableSince": 1690020411,
             "quality": "hd",
@@ -3026,7 +2900,7 @@
       "belongs_to_collection": null,
       "budget": 60000000,
       "id": 14836,
-      "popularity": 117.541,
+      "popularity": 143.521,
       "production_companies": [
         {
           "name": "Laika",
@@ -3043,10 +2917,10 @@
       "revenue": 131800000,
       "runtime": 100,
       "status": "Released",
-      "vote_average": 7.869,
-      "vote_count": 7406,
+      "vote_average": 7.87,
+      "vote_count": 7422,
       "needs_data": false,
-      "last_updated": 1711150492
+      "last_updated": 1711773776
     },
     "Sleepy Hollow": {
       "type": "movie",
@@ -3067,9 +2941,9 @@
           },
           {
             "price": {
-              "amount": "4.99",
+              "amount": "14.99",
               "currency": "USD",
-              "formatted": "4.99 USD"
+              "formatted": "14.99 USD"
             },
             "availableSince": 1689984761,
             "quality": "hd",
@@ -3129,7 +3003,7 @@
       "belongs_to_collection": null,
       "budget": 100000000,
       "id": 2668,
-      "popularity": 29.234,
+      "popularity": 40.649,
       "production_companies": [
         {
           "name": "Paramount",
@@ -3162,9 +3036,9 @@
       "runtime": 105,
       "status": "Released",
       "vote_average": 7.17,
-      "vote_count": 6420,
+      "vote_count": 6430,
       "needs_data": false,
-      "last_updated": 1711150493
+      "last_updated": 1711773777
     },
     "Fantastic Mr. Fox": {
       "type": "movie",
@@ -3217,17 +3091,6 @@
             "streamingType": "rent"
           },
           {
-            "price": {
-              "amount": "14.99",
-              "currency": "USD",
-              "formatted": "14.99 USD"
-            },
-            "availableSince": 1690099529,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
-          {
             "availableSince": 1687880188,
             "leaving": 1714535940,
             "service": "hbo",
@@ -3247,6 +3110,17 @@
             "quality": "hd",
             "service": "hulu",
             "streamingType": "addon"
+          },
+          {
+            "price": {
+              "amount": "14.99",
+              "currency": "USD",
+              "formatted": "14.99 USD"
+            },
+            "availableSince": 1690099529,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
           }
         ]
       },
@@ -3271,7 +3145,7 @@
       "belongs_to_collection": null,
       "budget": 40000000,
       "id": 10315,
-      "popularity": 50.723,
+      "popularity": 46.136,
       "production_companies": [
         {
           "name": "Regency Enterprises",
@@ -3293,10 +3167,10 @@
       "revenue": 46471023,
       "runtime": 87,
       "status": "Released",
-      "vote_average": 7.794,
-      "vote_count": 5106,
+      "vote_average": 7.8,
+      "vote_count": 5117,
       "needs_data": false,
-      "last_updated": 1711150494
+      "last_updated": 1711773778
     },
     "October Sky": {
       "type": "movie",
@@ -3304,17 +3178,6 @@
       "overview": "Based on the true story of Homer Hickam, a coal miner's son who was inspired by the first Sputnik launch to take up rocketry against his father's wishes, and eventually became a NASA scientist.",
       "streamingInfo": {
         "us": [
-          {
-            "price": {
-              "amount": "14.69",
-              "currency": "USD",
-              "formatted": "14.69 USD"
-            },
-            "availableSince": 1689609390,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
           {
             "price": {
               "amount": "3.79",
@@ -3325,6 +3188,17 @@
             "quality": "hd",
             "service": "prime",
             "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "4.99",
+              "currency": "USD",
+              "formatted": "4.99 USD"
+            },
+            "availableSince": 1689609390,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
           }
         ]
       },
@@ -3347,7 +3221,7 @@
       "belongs_to_collection": null,
       "budget": 25000000,
       "id": 13466,
-      "popularity": 18.833,
+      "popularity": 17.49,
       "production_companies": [
         {
           "name": "Universal Pictures",
@@ -3359,10 +3233,10 @@
       "revenue": 34698685,
       "runtime": 108,
       "status": "Released",
-      "vote_average": 7.642,
+      "vote_average": 7.6,
       "vote_count": 1164,
       "needs_data": false,
-      "last_updated": 1711150495
+      "last_updated": 1711773779
     },
     "Get Out": {
       "type": "movie",
@@ -3372,9 +3246,9 @@
         "us": [
           {
             "price": {
-              "amount": "3.79",
+              "amount": "4.29",
               "currency": "USD",
-              "formatted": "3.79 USD"
+              "formatted": "4.29 USD"
             },
             "availableSince": 1689621615,
             "quality": "uhd",
@@ -3383,9 +3257,20 @@
           },
           {
             "price": {
-              "amount": "9.99",
+              "amount": "3.79",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "3.79 USD"
+            },
+            "availableSince": 1708737329,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "14.99",
+              "currency": "USD",
+              "formatted": "14.99 USD"
             },
             "availableSince": 1689621615,
             "quality": "uhd",
@@ -3447,7 +3332,7 @@
       "belongs_to_collection": null,
       "budget": 4500000,
       "id": 419430,
-      "popularity": 48.942,
+      "popularity": 55.089,
       "production_companies": [
         {
           "name": "Monkeypaw Productions",
@@ -3470,9 +3355,9 @@
       "runtime": 104,
       "status": "Released",
       "vote_average": 7.621,
-      "vote_count": 16601,
+      "vote_count": 16629,
       "needs_data": false,
-      "last_updated": 1711150496
+      "last_updated": 1711773779
     },
     "Eternal Sunshine of the Spotless Mind": {
       "type": "movie",
@@ -3526,6 +3411,17 @@
           },
           {
             "price": {
+              "amount": "4.99",
+              "currency": "USD",
+              "formatted": "4.99 USD"
+            },
+            "availableSince": 1689988143,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
+          },
+          {
+            "price": {
               "amount": "3.99",
               "currency": "USD",
               "formatted": "3.99 USD"
@@ -3534,17 +3430,6 @@
             "quality": "hd",
             "service": "prime",
             "streamingType": "rent"
-          },
-          {
-            "price": {
-              "amount": "14.99",
-              "currency": "USD",
-              "formatted": "14.99 USD"
-            },
-            "availableSince": 1689988143,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
           },
           {
             "availableSince": 1709359587,
@@ -3575,7 +3460,7 @@
       "belongs_to_collection": null,
       "budget": 20000000,
       "id": 38,
-      "popularity": 75.976,
+      "popularity": 76.018,
       "production_companies": [
         {
           "name": "Focus Features",
@@ -3598,9 +3483,9 @@
       "runtime": 108,
       "status": "Released",
       "vote_average": 8.1,
-      "vote_count": 14241,
+      "vote_count": 14271,
       "needs_data": false,
-      "last_updated": 1711150496
+      "last_updated": 1711773780
     },
     "A Wrinkle in Time": {
       "type": "movie",
@@ -3797,7 +3682,7 @@
       "belongs_to_collection": null,
       "budget": 103000000,
       "id": 407451,
-      "popularity": 21.889,
+      "popularity": 24.918,
       "production_companies": [
         {
           "name": "Whitaker Entertainment",
@@ -3814,10 +3699,10 @@
       "revenue": 132675864,
       "runtime": 109,
       "status": "Released",
-      "vote_average": 5.088,
-      "vote_count": 1740,
+      "vote_average": 5.086,
+      "vote_count": 1743,
       "needs_data": false,
-      "last_updated": 1711150497
+      "last_updated": 1711773781
     },
     "Unbreakable": {
       "type": "movie",
@@ -3827,9 +3712,9 @@
         "us": [
           {
             "price": {
-              "amount": "17.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "17.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1689610368,
             "quality": "uhd",
@@ -3838,9 +3723,9 @@
           },
           {
             "price": {
-              "amount": "4.29",
+              "amount": "4.19",
               "currency": "USD",
-              "formatted": "4.29 USD"
+              "formatted": "4.19 USD"
             },
             "availableSince": 1689610368,
             "quality": "uhd",
@@ -3852,17 +3737,6 @@
             "leaving": 1714535940,
             "service": "hbo",
             "streamingType": "subscription"
-          },
-          {
-            "price": {
-              "amount": "4.99",
-              "currency": "USD",
-              "formatted": "4.99 USD"
-            },
-            "availableSince": 1693884097,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
           },
           {
             "availableSince": 1690207452,
@@ -3927,6 +3801,17 @@
             "quality": "uhd",
             "service": "prime",
             "streamingType": "addon"
+          },
+          {
+            "price": {
+              "amount": "17.99",
+              "currency": "USD",
+              "formatted": "17.99 USD"
+            },
+            "availableSince": 1693884097,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
           }
         ]
       },
@@ -3950,7 +3835,7 @@
       "belongs_to_collection": null,
       "budget": 75000000,
       "id": 9741,
-      "popularity": 33.087,
+      "popularity": 45.738,
       "production_companies": [
         {
           "name": "Limited Edition Productions Inc.",
@@ -3977,10 +3862,10 @@
       "revenue": 248100000,
       "runtime": 106,
       "status": "Released",
-      "vote_average": 7.1,
-      "vote_count": 8874,
+      "vote_average": 7.14,
+      "vote_count": 8883,
       "needs_data": false,
-      "last_updated": 1711150498
+      "last_updated": 1711773782
     },
     "The Terminator": {
       "type": "movie",
@@ -4035,9 +3920,9 @@
         ]
       },
       "cast": [
-        "Linda Hamilton",
-        "Michael Biehn",
         "Arnold Schwarzenegger",
+        "Michael Biehn",
+        "Linda Hamilton",
         "Lance Henriksen",
         "Paul Winfield",
         "Bess Motta",
@@ -4057,7 +3942,7 @@
       },
       "budget": 6400000,
       "id": 218,
-      "popularity": 60.857,
+      "popularity": 87.268,
       "production_companies": [
         {
           "name": "Orion Pictures",
@@ -4084,10 +3969,10 @@
       "revenue": 78371200,
       "runtime": 108,
       "status": "Released",
-      "vote_average": 7.657,
-      "vote_count": 12345,
+      "vote_average": 7.66,
+      "vote_count": 12387,
       "needs_data": false,
-      "last_updated": 1711150499
+      "last_updated": 1711773783
     },
     "Cape Fear": {
       "type": "movie",
@@ -4097,9 +3982,9 @@
         "us": [
           {
             "price": {
-              "amount": "4.29",
+              "amount": "3.79",
               "currency": "USD",
-              "formatted": "4.29 USD"
+              "formatted": "3.79 USD"
             },
             "availableSince": 1689989556,
             "quality": "hd",
@@ -4130,9 +4015,9 @@
           },
           {
             "price": {
-              "amount": "14.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "14.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1689989556,
             "quality": "hd",
@@ -4160,7 +4045,7 @@
       "belongs_to_collection": null,
       "budget": 35000000,
       "id": 1598,
-      "popularity": 21.263,
+      "popularity": 26.572,
       "production_companies": [
         {
           "name": "Amblin Entertainment",
@@ -4187,10 +4072,10 @@
       "revenue": 182300000,
       "runtime": 128,
       "status": "Released",
-      "vote_average": 7.261,
-      "vote_count": 3254,
+      "vote_average": 7.262,
+      "vote_count": 3261,
       "needs_data": false,
-      "last_updated": 1711150500
+      "last_updated": 1711773784
     },
     "Super Badass": {
       "type": "movie",
@@ -4218,7 +4103,7 @@
       "vote_average": 5.0,
       "vote_count": 1,
       "needs_data": false,
-      "last_updated": 1711150501
+      "last_updated": 1711773786
     },
     "The Hangover": {
       "type": "movie",
@@ -4247,28 +4132,6 @@
             "quality": "hd",
             "service": "prime",
             "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "11.69",
-              "currency": "USD",
-              "formatted": "11.69 USD"
-            },
-            "availableSince": 1690211981,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "9.99",
-              "currency": "USD",
-              "formatted": "9.99 USD"
-            },
-            "availableSince": 1710231934,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "buy"
           }
         ]
       },
@@ -4293,7 +4156,7 @@
       },
       "budget": 35000000,
       "id": 18785,
-      "popularity": 74.073,
+      "popularity": 93.381,
       "production_companies": [
         {
           "name": "Legendary Pictures",
@@ -4316,9 +4179,9 @@
       "runtime": 100,
       "status": "Released",
       "vote_average": 7.319,
-      "vote_count": 16269,
+      "vote_count": 16294,
       "needs_data": false,
-      "last_updated": 1711150501
+      "last_updated": 1711773787
     },
     "Rebecca": {
       "type": "movie",
@@ -4339,8 +4202,7 @@
       "genres": [
         "mystery",
         "romance",
-        "thriller",
-        "drama"
+        "thriller"
       ],
       "directors": [
         "Alfred Hitchcock"
@@ -4348,7 +4210,7 @@
       "belongs_to_collection": null,
       "budget": 1288000,
       "id": 223,
-      "popularity": 19.02,
+      "popularity": 25.102,
       "production_companies": [
         {
           "name": "Selznick International Pictures",
@@ -4365,10 +4227,10 @@
       "revenue": 7592465,
       "runtime": 130,
       "status": "Released",
-      "vote_average": 7.916,
-      "vote_count": 1657,
+      "vote_average": 7.9,
+      "vote_count": 1658,
       "needs_data": false,
-      "last_updated": 1711150502
+      "last_updated": 1711773787
     },
     "The Birds": {
       "type": "movie",
@@ -4411,6 +4273,17 @@
           },
           {
             "price": {
+              "amount": "3.79",
+              "currency": "USD",
+              "formatted": "3.79 USD"
+            },
+            "availableSince": 1690022998,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
               "amount": "4.29",
               "currency": "USD",
               "formatted": "4.29 USD"
@@ -4443,7 +4316,7 @@
       },
       "budget": 2500000,
       "id": 571,
-      "popularity": 27.065,
+      "popularity": 35.71,
       "production_companies": [
         {
           "name": "Alfred J. Hitchcock Productions",
@@ -4455,10 +4328,10 @@
       "revenue": 11500000,
       "runtime": 120,
       "status": "Released",
-      "vote_average": 7.524,
-      "vote_count": 3859,
+      "vote_average": 7.523,
+      "vote_count": 3866,
       "needs_data": false,
-      "last_updated": 1711150505
+      "last_updated": 1711773790
     },
     "Animal House": {
       "type": "movie",
@@ -4547,7 +4420,7 @@
       "belongs_to_collection": null,
       "budget": 2700000,
       "id": 8469,
-      "popularity": 38.147,
+      "popularity": 36.488,
       "production_companies": [
         {
           "name": "Universal Pictures",
@@ -4574,10 +4447,10 @@
       "revenue": 141000000,
       "runtime": 109,
       "status": "Released",
-      "vote_average": 6.993,
-      "vote_count": 1445,
+      "vote_average": 7.0,
+      "vote_count": 1446,
       "needs_data": false,
-      "last_updated": 1711150505
+      "last_updated": 1711773791
     },
     "The Menu": {
       "type": "movie",
@@ -4594,21 +4467,14 @@
           },
           {
             "price": {
-              "amount": "14.99",
+              "amount": "9.99",
               "currency": "USD",
-              "formatted": "14.99 USD"
+              "formatted": "9.99 USD"
             },
             "availableSince": 1690014184,
             "quality": "hd",
             "service": "prime",
             "streamingType": "buy"
-          },
-          {
-            "availableSince": 1690038528,
-            "addon": "hbomaxus",
-            "quality": "uhd",
-            "service": "prime",
-            "streamingType": "addon"
           },
           {
             "price": {
@@ -4622,10 +4488,17 @@
             "streamingType": "rent"
           },
           {
+            "availableSince": 1690038528,
+            "addon": "hbomaxus",
+            "quality": "uhd",
+            "service": "prime",
+            "streamingType": "addon"
+          },
+          {
             "price": {
-              "amount": "14.99",
+              "amount": "9.99",
               "currency": "USD",
-              "formatted": "14.99 USD"
+              "formatted": "9.99 USD"
             },
             "availableSince": 1690038528,
             "quality": "uhd",
@@ -4661,7 +4534,7 @@
       "belongs_to_collection": null,
       "budget": 35000000,
       "id": 593643,
-      "popularity": 53.881,
+      "popularity": 56.101,
       "production_companies": [
         {
           "name": "Hyperobject Industries",
@@ -4688,10 +4561,10 @@
       "revenue": 79628200,
       "runtime": 107,
       "status": "Released",
-      "vote_average": 7.19,
-      "vote_count": 4259,
+      "vote_average": 7.191,
+      "vote_count": 4279,
       "needs_data": false,
-      "last_updated": 1711150509
+      "last_updated": 1711773795
     },
     "Teen Wolf": {
       "type": "movie",
@@ -4736,6 +4609,19 @@
             "streamingType": "rent"
           },
           {
+            "availableSince": 1697658069,
+            "addon": "hbomaxus",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1696450947,
+            "addon": "tvs.sbd.10000",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
             "availableSince": 1696450947,
             "addon": "tvs.sbd.1000244",
             "quality": "hd",
@@ -4746,12 +4632,6 @@
             "availableSince": 1696450947,
             "addon": "tvs.sbd.12962",
             "quality": "hd",
-            "service": "apple",
-            "streamingType": "addon"
-          },
-          {
-            "availableSince": 1696450947,
-            "addon": "tvs.sbd.10000",
             "service": "apple",
             "streamingType": "addon"
           },
@@ -4768,17 +4648,6 @@
               "currency": "USD",
               "formatted": "14.99 USD"
             },
-            "availableSince": 1696450947,
-            "quality": "sd",
-            "service": "apple",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "14.99",
-              "currency": "USD",
-              "formatted": "14.99 USD"
-            },
             "availableSince": 1654487058,
             "quality": "hd",
             "service": "apple",
@@ -4790,28 +4659,10 @@
               "currency": "USD",
               "formatted": "3.99 USD"
             },
-            "availableSince": 1696450947,
-            "quality": "sd",
-            "service": "apple",
-            "streamingType": "rent"
-          },
-          {
-            "price": {
-              "amount": "3.99",
-              "currency": "USD",
-              "formatted": "3.99 USD"
-            },
             "availableSince": 1654487058,
             "quality": "hd",
             "service": "apple",
             "streamingType": "rent"
-          },
-          {
-            "availableSince": 1697658069,
-            "addon": "hbomaxus",
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "addon"
           }
         ]
       },
@@ -4838,7 +4689,7 @@
       },
       "budget": 1200000,
       "id": 11824,
-      "popularity": 33.805,
+      "popularity": 38.919,
       "production_companies": [
         {
           "name": "Wolfkill",
@@ -4855,10 +4706,10 @@
       "revenue": 80000000,
       "runtime": 91,
       "status": "Released",
-      "vote_average": 6.183,
-      "vote_count": 1063,
+      "vote_average": 6.18,
+      "vote_count": 1065,
       "needs_data": false,
-      "last_updated": 1711150511
+      "last_updated": 1711773796
     },
     "Fences": {
       "type": "movie",
@@ -4892,9 +4743,9 @@
           },
           {
             "price": {
-              "amount": "9.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1689995062,
             "quality": "uhd",
@@ -4902,15 +4753,15 @@
             "streamingType": "buy"
           },
           {
-            "availableSince": 1659799457,
-            "addon": "tvs.sbd.1000185",
+            "availableSince": 1654455706,
+            "addon": "tvs.sbd.1000230",
             "quality": "uhd",
             "service": "apple",
             "streamingType": "addon"
           },
           {
-            "availableSince": 1654455706,
-            "addon": "tvs.sbd.1000230",
+            "availableSince": 1659799457,
+            "addon": "tvs.sbd.1000185",
             "quality": "uhd",
             "service": "apple",
             "streamingType": "addon"
@@ -4970,9 +4821,9 @@
           },
           {
             "price": {
-              "amount": "9.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1689995062,
             "quality": "uhd",
@@ -4980,15 +4831,15 @@
             "streamingType": "buy"
           },
           {
-            "availableSince": 1659799457,
-            "addon": "tvs.sbd.1000185",
+            "availableSince": 1654455706,
+            "addon": "tvs.sbd.1000230",
             "quality": "uhd",
             "service": "apple",
             "streamingType": "addon"
           },
           {
-            "availableSince": 1654455706,
-            "addon": "tvs.sbd.1000230",
+            "availableSince": 1659799457,
+            "addon": "tvs.sbd.1000185",
             "quality": "uhd",
             "service": "apple",
             "streamingType": "addon"
@@ -5042,7 +4893,7 @@
       "belongs_to_collection": null,
       "budget": 24000000,
       "id": 393457,
-      "popularity": 29.748,
+      "popularity": 34.433,
       "production_companies": [
         {
           "name": "Paramount",
@@ -5074,10 +4925,10 @@
       "revenue": 64400000,
       "runtime": 139,
       "status": "Released",
-      "vote_average": 6.9,
-      "vote_count": 2513,
+      "vote_average": 6.871,
+      "vote_count": 2517,
       "needs_data": false,
-      "last_updated": 1711150512
+      "last_updated": 1711773798
     },
     "The Imitation Game": {
       "type": "movie",
@@ -5171,7 +5022,7 @@
       "belongs_to_collection": null,
       "budget": 14000000,
       "id": 205596,
-      "popularity": 73.099,
+      "popularity": 66.888,
       "production_companies": [
         {
           "name": "Bristol Automotive",
@@ -5193,10 +5044,10 @@
       "revenue": 233600000,
       "runtime": 113,
       "status": "Released",
-      "vote_average": 8.004,
-      "vote_count": 16441,
+      "vote_average": 8.005,
+      "vote_count": 16459,
       "needs_data": false,
-      "last_updated": 1711150513
+      "last_updated": 1711773798
     },
     "Road House": {
       "type": "movie",
@@ -5227,10 +5078,15 @@
             "streamingType": "rent"
           },
           {
-            "availableSince": 1699131414,
-            "leaving": 1714535940,
-            "service": "hbo",
-            "streamingType": "subscription"
+            "price": {
+              "amount": "4.99",
+              "currency": "USD",
+              "formatted": "4.99 USD"
+            },
+            "availableSince": 1690016887,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
           },
           {
             "availableSince": 1699133812,
@@ -5239,6 +5095,12 @@
             "quality": "hd",
             "service": "hulu",
             "streamingType": "addon"
+          },
+          {
+            "availableSince": 1699131414,
+            "leaving": 1714535940,
+            "service": "hbo",
+            "streamingType": "subscription"
           },
           {
             "availableSince": 1703863829,
@@ -5263,17 +5125,6 @@
             "quality": "hd",
             "service": "prime",
             "streamingType": "rent"
-          },
-          {
-            "price": {
-              "amount": "14.69",
-              "currency": "USD",
-              "formatted": "14.69 USD"
-            },
-            "availableSince": 1690016887,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
           }
         ]
       },
@@ -5299,7 +5150,7 @@
       },
       "budget": 15000000,
       "id": 10135,
-      "popularity": 54.989,
+      "popularity": 89.519,
       "production_companies": [
         {
           "name": "United Artists",
@@ -5321,119 +5172,10 @@
       "revenue": 30100000,
       "runtime": 114,
       "status": "Released",
-      "vote_average": 6.648,
-      "vote_count": 1056,
+      "vote_average": 6.687,
+      "vote_count": 1119,
       "needs_data": false,
-      "last_updated": 1711150515
-    },
-    "Reservoir Dogs": {
-      "type": "movie",
-      "title": "Reservoir Dogs",
-      "overview": "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic parolee Mr. Blonde, bickering weasel Mr. Pink and Nice Guy Eddie -- unravel.",
-      "streamingInfo": {
-        "us": [
-          {
-            "availableSince": 1675648949,
-            "service": "netflix",
-            "streamingType": "subscription"
-          },
-          {
-            "price": {
-              "amount": "7.99",
-              "currency": "USD",
-              "formatted": "7.99 USD"
-            },
-            "availableSince": 1668518654,
-            "quality": "uhd",
-            "service": "apple",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "3.99",
-              "currency": "USD",
-              "formatted": "3.99 USD"
-            },
-            "availableSince": 1668518654,
-            "quality": "uhd",
-            "service": "apple",
-            "streamingType": "rent"
-          },
-          {
-            "price": {
-              "amount": "3.79",
-              "currency": "USD",
-              "formatted": "3.79 USD"
-            },
-            "availableSince": 1690097229,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "rent"
-          },
-          {
-            "price": {
-              "amount": "7.99",
-              "currency": "USD",
-              "formatted": "7.99 USD"
-            },
-            "availableSince": 1708328993,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "9.99",
-              "currency": "USD",
-              "formatted": "9.99 USD"
-            },
-            "availableSince": 1690097229,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
-          }
-        ]
-      },
-      "cast": [
-        "Harvey Keitel",
-        "Tim Roth",
-        "Michael Madsen",
-        "Chris Penn",
-        "Steve Buscemi",
-        "Lawrence Tierney",
-        "Randy Brooks"
-      ],
-      "genres": [
-        "crime",
-        "thriller"
-      ],
-      "directors": [
-        "Quentin Tarantino"
-      ],
-      "belongs_to_collection": null,
-      "budget": 1200000,
-      "id": 500,
-      "popularity": 49.792,
-      "production_companies": [
-        {
-          "name": "Live Entertainment",
-          "id": 285,
-          "origin_country": "US"
-        },
-        {
-          "name": "Dog Eat Dog Productions",
-          "id": 26198,
-          "origin_country": ""
-        }
-      ],
-      "release_date": 715406400,
-      "revenue": 2859750,
-      "runtime": 99,
-      "status": "Released",
-      "vote_average": 8.1,
-      "vote_count": 13729,
-      "needs_data": false,
-      "last_updated": 1711150515
+      "last_updated": 1711773800
     },
     "Psycho": {
       "type": "movie",
@@ -5462,17 +5204,6 @@
             "quality": "uhd",
             "service": "apple",
             "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "3.79",
-              "currency": "USD",
-              "formatted": "3.79 USD"
-            },
-            "availableSince": 1690082720,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "rent"
           },
           {
             "price": {
@@ -5521,7 +5252,7 @@
       },
       "budget": 806947,
       "id": 539,
-      "popularity": 51.36,
+      "popularity": 71.919,
       "production_companies": [
         {
           "name": "Shamley Productions",
@@ -5534,9 +5265,9 @@
       "runtime": 109,
       "status": "Released",
       "vote_average": 8.435,
-      "vote_count": 9632,
+      "vote_count": 9651,
       "needs_data": false,
-      "last_updated": 1711150516
+      "last_updated": 1711773801
     },
     "Predestination": {
       "type": "movie",
@@ -5588,7 +5319,7 @@
       "belongs_to_collection": null,
       "budget": 5500000,
       "id": 206487,
-      "popularity": 43.101,
+      "popularity": 43.297,
       "production_companies": [
         {
           "name": "Screen Queensland",
@@ -5615,10 +5346,10 @@
       "revenue": 4942449,
       "runtime": 97,
       "status": "Released",
-      "vote_average": 7.441,
-      "vote_count": 6132,
+      "vote_average": 7.439,
+      "vote_count": 6141,
       "needs_data": false,
-      "last_updated": 1711150517
+      "last_updated": 1711773802
     },
     "Mulholland Drive": {
       "type": "movie",
@@ -5659,7 +5390,7 @@
       "belongs_to_collection": null,
       "budget": 15000000,
       "id": 1018,
-      "popularity": 47.398,
+      "popularity": 75.163,
       "production_companies": [
         {
           "name": "Asymmetrical Productions",
@@ -5685,21 +5416,16 @@
           "name": "Canal+",
           "id": 104,
           "origin_country": "FR"
-        },
-        {
-          "name": "StudioCanal",
-          "id": 694,
-          "origin_country": "FR"
         }
       ],
       "release_date": 991800000,
       "revenue": 20289986,
       "runtime": 147,
       "status": "Released",
-      "vote_average": 7.82,
-      "vote_count": 5890,
+      "vote_average": 7.819,
+      "vote_count": 5905,
       "needs_data": false,
-      "last_updated": 1711150518
+      "last_updated": 1711773802
     },
     "Night Crawlers": {
       "type": "movie",
@@ -5727,7 +5453,7 @@
       "belongs_to_collection": null,
       "budget": 100000,
       "id": 147230,
-      "popularity": 1.785,
+      "popularity": 1.051,
       "production_companies": [
         {
           "name": "DeadMenR67 Productions",
@@ -5742,7 +5468,7 @@
       "vote_average": 3.0,
       "vote_count": 5,
       "needs_data": false,
-      "last_updated": 1711150518
+      "last_updated": 1711773803
     },
     "North by Northwest": {
       "type": "movie",
@@ -5752,9 +5478,9 @@
         "us": [
           {
             "price": {
-              "amount": "3.79",
+              "amount": "4.29",
               "currency": "USD",
-              "formatted": "3.79 USD"
+              "formatted": "4.29 USD"
             },
             "availableSince": 1690019144,
             "quality": "hd",
@@ -5763,9 +5489,20 @@
           },
           {
             "price": {
-              "amount": "7.99",
+              "amount": "3.79",
               "currency": "USD",
-              "formatted": "7.99 USD"
+              "formatted": "3.79 USD"
+            },
+            "availableSince": 1708255660,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "12.99",
+              "currency": "USD",
+              "formatted": "12.99 USD"
             },
             "availableSince": 1690019144,
             "quality": "hd",
@@ -5794,7 +5531,7 @@
       "belongs_to_collection": null,
       "budget": 4000000,
       "id": 213,
-      "popularity": 23.426,
+      "popularity": 30.024,
       "production_companies": [
         {
           "name": "Metro-Goldwyn-Mayer",
@@ -5806,10 +5543,10 @@
       "revenue": 13275000,
       "runtime": 136,
       "status": "Released",
-      "vote_average": 7.981,
-      "vote_count": 3882,
+      "vote_average": 7.982,
+      "vote_count": 3889,
       "needs_data": false,
-      "last_updated": 1711150518
+      "last_updated": 1711773803
     },
     "Alien": {
       "type": "movie",
@@ -5826,9 +5563,9 @@
           },
           {
             "price": {
-              "amount": "3.79",
+              "amount": "4.19",
               "currency": "USD",
-              "formatted": "3.79 USD"
+              "formatted": "4.19 USD"
             },
             "availableSince": 1690127681,
             "quality": "uhd",
@@ -5837,9 +5574,9 @@
           },
           {
             "price": {
-              "amount": "4.29",
+              "amount": "4.19",
               "currency": "USD",
-              "formatted": "4.29 USD"
+              "formatted": "4.19 USD"
             },
             "availableSince": 1690150847,
             "quality": "uhd",
@@ -5859,9 +5596,9 @@
           },
           {
             "price": {
-              "amount": "19.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "19.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690150847,
             "quality": "uhd",
@@ -5870,20 +5607,9 @@
           },
           {
             "price": {
-              "amount": "14.99",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "14.99 USD"
-            },
-            "availableSince": 1708395062,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "19.99",
-              "currency": "USD",
-              "formatted": "19.99 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690127681,
             "quality": "uhd",
@@ -5892,14 +5618,14 @@
           },
           {
             "price": {
-              "amount": "14.99",
+              "amount": "3.79",
               "currency": "USD",
-              "formatted": "14.99 USD"
+              "formatted": "3.79 USD"
             },
-            "availableSince": 1708367582,
-            "quality": "hd",
+            "availableSince": 1711499208,
+            "quality": "sd",
             "service": "prime",
-            "streamingType": "buy"
+            "streamingType": "rent"
           },
           {
             "availableSince": 1709360799,
@@ -5932,7 +5658,7 @@
       },
       "budget": 11000000,
       "id": 348,
-      "popularity": 116.305,
+      "popularity": 144.427,
       "production_companies": [
         {
           "name": "20th Century Fox",
@@ -5949,10 +5675,10 @@
       "revenue": 104931801,
       "runtime": 117,
       "status": "Released",
-      "vote_average": 8.149,
-      "vote_count": 13749,
+      "vote_average": 8.15,
+      "vote_count": 13767,
       "needs_data": false,
-      "last_updated": 1711150519
+      "last_updated": 1711773804
     },
     "One Flew Over the Cuckoo's Nest": {
       "type": "movie",
@@ -5973,9 +5699,9 @@
           },
           {
             "price": {
-              "amount": "4.19",
+              "amount": "3.79",
               "currency": "USD",
-              "formatted": "4.19 USD"
+              "formatted": "3.79 USD"
             },
             "availableSince": 1690083244,
             "quality": "hd",
@@ -6002,7 +5728,7 @@
       "belongs_to_collection": null,
       "budget": 3000000,
       "id": 510,
-      "popularity": 46.907,
+      "popularity": 54.208,
       "production_companies": [
         {
           "name": "Fantasy Films",
@@ -6020,9 +5746,9 @@
       "runtime": 133,
       "status": "Released",
       "vote_average": 8.423,
-      "vote_count": 10003,
+      "vote_count": 10017,
       "needs_data": false,
-      "last_updated": 1711150519
+      "last_updated": 1711773804
     },
     "The Green Mile": {
       "type": "movie",
@@ -6065,9 +5791,9 @@
           },
           {
             "price": {
-              "amount": "9.99",
+              "amount": "14.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "14.99 USD"
             },
             "availableSince": 1690017099,
             "quality": "hd",
@@ -6096,7 +5822,7 @@
       "belongs_to_collection": null,
       "budget": 60000000,
       "id": 497,
-      "popularity": 86.478,
+      "popularity": 95.445,
       "production_companies": [
         {
           "name": "Warner Bros. Pictures",
@@ -6124,9 +5850,9 @@
       "runtime": 189,
       "status": "Released",
       "vote_average": 8.507,
-      "vote_count": 16625,
+      "vote_count": 16655,
       "needs_data": false,
-      "last_updated": 1711150520
+      "last_updated": 1711773805
     },
     "The Whale": {
       "type": "movie",
@@ -6134,6 +5860,19 @@
       "overview": "A reclusive English teacher suffering from severe obesity attempts to reconnect with his estranged teenage daughter for one last chance at redemption.",
       "streamingInfo": {
         "us": [
+          {
+            "availableSince": 1691012598,
+            "leaving": 1746766800,
+            "service": "paramount",
+            "streamingType": "subscription"
+          },
+          {
+            "availableSince": 1698401606,
+            "addon": "paramountpremium",
+            "quality": "uhd",
+            "service": "prime",
+            "streamingType": "addon"
+          },
           {
             "price": {
               "amount": "3.99",
@@ -6157,28 +5896,15 @@
             "streamingType": "rent"
           },
           {
-            "availableSince": 1691012598,
-            "leaving": 1746766800,
-            "service": "paramount",
-            "streamingType": "subscription"
-          },
-          {
             "price": {
-              "amount": "9.99",
+              "amount": "19.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "19.99 USD"
             },
             "availableSince": 1690095767,
             "quality": "uhd",
             "service": "prime",
             "streamingType": "buy"
-          },
-          {
-            "availableSince": 1698401606,
-            "addon": "paramountpremium",
-            "quality": "uhd",
-            "service": "prime",
-            "streamingType": "addon"
           }
         ]
       },
@@ -6200,7 +5926,7 @@
       "belongs_to_collection": null,
       "budget": 3000000,
       "id": 785084,
-      "popularity": 53.246,
+      "popularity": 67.896,
       "production_companies": [
         {
           "name": "A24",
@@ -6217,10 +5943,10 @@
       "revenue": 55101305,
       "runtime": 117,
       "status": "Released",
-      "vote_average": 7.9,
-      "vote_count": 3475,
+      "vote_average": 7.872,
+      "vote_count": 3496,
       "needs_data": false,
-      "last_updated": 1711150524
+      "last_updated": 1711773808
     },
     "Nineteen Eighty-Four": {
       "type": "movie",
@@ -6236,6 +5962,17 @@
           },
           {
             "price": {
+              "amount": "14.99",
+              "currency": "USD",
+              "formatted": "14.99 USD"
+            },
+            "availableSince": 1708995710,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "buy"
+          },
+          {
+            "price": {
               "amount": "3.49",
               "currency": "USD",
               "formatted": "3.49 USD"
@@ -6247,9 +5984,9 @@
           },
           {
             "price": {
-              "amount": "14.69",
+              "amount": "16.79",
               "currency": "USD",
-              "formatted": "14.69 USD"
+              "formatted": "16.79 USD"
             },
             "availableSince": 1690015945,
             "quality": "hd",
@@ -6284,7 +6021,7 @@
       "belongs_to_collection": null,
       "budget": 0,
       "id": 9314,
-      "popularity": 16.956,
+      "popularity": 17.287,
       "production_companies": [
         {
           "name": "Atlantic Releasing Corporation",
@@ -6321,10 +6058,10 @@
       "revenue": 8430492,
       "runtime": 113,
       "status": "Released",
-      "vote_average": 6.818,
-      "vote_count": 1331,
+      "vote_average": 6.821,
+      "vote_count": 1335,
       "needs_data": false,
-      "last_updated": 1711150524
+      "last_updated": 1711773809
     },
     "Titanic": {
       "type": "movie",
@@ -6347,17 +6084,10 @@
             "streamingType": "addon"
           },
           {
-            "availableSince": 1689609832,
-            "addon": "cbsaacf",
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "addon"
-          },
-          {
             "price": {
-              "amount": "9.99",
+              "amount": "16.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "16.99 USD"
             },
             "availableSince": 1689609832,
             "quality": "hd",
@@ -6374,6 +6104,13 @@
             "quality": "hd",
             "service": "prime",
             "streamingType": "rent"
+          },
+          {
+            "availableSince": 1689609832,
+            "addon": "cbsaacf",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
           }
         ]
       },
@@ -6396,7 +6133,7 @@
       "belongs_to_collection": null,
       "budget": 200000000,
       "id": 597,
-      "popularity": 111.747,
+      "popularity": 114.172,
       "production_companies": [
         {
           "name": "Paramount",
@@ -6419,9 +6156,9 @@
       "runtime": 194,
       "status": "Released",
       "vote_average": 7.904,
-      "vote_count": 24419,
+      "vote_count": 24449,
       "needs_data": false,
-      "last_updated": 1711150525
+      "last_updated": 1711773809
     },
     "The Hurt Locker": {
       "type": "movie",
@@ -6442,9 +6179,9 @@
           },
           {
             "price": {
-              "amount": "7.99",
+              "amount": "12.99",
               "currency": "USD",
-              "formatted": "7.99 USD"
+              "formatted": "12.99 USD"
             },
             "availableSince": 1689987968,
             "quality": "uhd",
@@ -6459,10 +6196,15 @@
             "streamingType": "addon"
           },
           {
+            "price": {
+              "amount": "12.99",
+              "currency": "USD",
+              "formatted": "12.99 USD"
+            },
             "availableSince": 1705731990,
-            "addon": "tvs.sbd.1000379",
+            "quality": "hd",
             "service": "apple",
-            "streamingType": "addon"
+            "streamingType": "buy"
           },
           {
             "price": {
@@ -6477,14 +6219,20 @@
           },
           {
             "price": {
-              "amount": "12.99",
+              "amount": "9.99",
               "currency": "USD",
-              "formatted": "12.99 USD"
+              "formatted": "9.99 USD"
             },
-            "availableSince": 1705731990,
-            "quality": "hd",
-            "service": "apple",
+            "availableSince": 1711373360,
+            "quality": "sd",
+            "service": "prime",
             "streamingType": "buy"
+          },
+          {
+            "availableSince": 1705731990,
+            "addon": "tvs.sbd.1000379",
+            "service": "apple",
+            "streamingType": "addon"
           },
           {
             "price": {
@@ -6558,7 +6306,7 @@
       "belongs_to_collection": null,
       "budget": 15000000,
       "id": 12162,
-      "popularity": 35.82,
+      "popularity": 34.662,
       "production_companies": [
         {
           "name": "Film Capital Europe Funds (FCEF )",
@@ -6595,10 +6343,10 @@
       "revenue": 49230772,
       "runtime": 131,
       "status": "Released",
-      "vote_average": 7.3,
-      "vote_count": 5352,
+      "vote_average": 7.256,
+      "vote_count": 5361,
       "needs_data": false,
-      "last_updated": 1711150525
+      "last_updated": 1711773810
     },
     "Dazed and Confused": {
       "type": "movie",
@@ -6649,7 +6397,7 @@
       "belongs_to_collection": null,
       "budget": 6900000,
       "id": 9571,
-      "popularity": 20.83,
+      "popularity": 27.684,
       "production_companies": [
         {
           "name": "Gramercy Pictures",
@@ -6671,10 +6419,10 @@
       "revenue": 8000000,
       "runtime": 102,
       "status": "Released",
-      "vote_average": 7.348,
-      "vote_count": 1915,
+      "vote_average": 7.346,
+      "vote_count": 1918,
       "needs_data": false,
-      "last_updated": 1711150526
+      "last_updated": 1711773810
     },
     "The Blues Brothers": {
       "type": "movie",
@@ -6684,25 +6432,20 @@
         "us": [
           {
             "price": {
-              "amount": "4.29",
+              "amount": "4.99",
               "currency": "USD",
-              "formatted": "4.29 USD"
+              "formatted": "4.99 USD"
             },
             "availableSince": 1690143852,
             "quality": "uhd",
             "service": "prime",
-            "streamingType": "rent"
+            "streamingType": "buy"
           },
           {
-            "price": {
-              "amount": "3.79",
-              "currency": "USD",
-              "formatted": "3.79 USD"
-            },
-            "availableSince": 1703688677,
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "rent"
+            "availableSince": 1704616762,
+            "quality": "hd",
+            "service": "netflix",
+            "streamingType": "subscription"
           },
           {
             "price": {
@@ -6728,20 +6471,25 @@
           },
           {
             "price": {
-              "amount": "6.99",
+              "amount": "3.79",
               "currency": "USD",
-              "formatted": "6.99 USD"
+              "formatted": "3.79 USD"
+            },
+            "availableSince": 1703688677,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "4.19",
+              "currency": "USD",
+              "formatted": "4.19 USD"
             },
             "availableSince": 1690143852,
             "quality": "uhd",
             "service": "prime",
-            "streamingType": "buy"
-          },
-          {
-            "availableSince": 1704616762,
-            "quality": "hd",
-            "service": "netflix",
-            "streamingType": "subscription"
+            "streamingType": "rent"
           }
         ]
       },
@@ -6769,7 +6517,7 @@
       },
       "budget": 27000000,
       "id": 525,
-      "popularity": 33.975,
+      "popularity": 37.627,
       "production_companies": [
         {
           "name": "Universal Pictures",
@@ -6781,10 +6529,10 @@
       "revenue": 115200000,
       "runtime": 133,
       "status": "Released",
-      "vote_average": 7.743,
-      "vote_count": 3981,
+      "vote_average": 7.741,
+      "vote_count": 3984,
       "needs_data": false,
-      "last_updated": 1711150526
+      "last_updated": 1711773811
     },
     "Uncle Buck": {
       "type": "movie",
@@ -6841,7 +6589,7 @@
       "belongs_to_collection": null,
       "budget": 15000000,
       "id": 2616,
-      "popularity": 18.518,
+      "popularity": 25.155,
       "production_companies": [
         {
           "name": "Hughes Entertainment",
@@ -6853,10 +6601,10 @@
       "revenue": 79300000,
       "runtime": 100,
       "status": "Released",
-      "vote_average": 6.771,
-      "vote_count": 1107,
+      "vote_average": 6.8,
+      "vote_count": 1110,
       "needs_data": false,
-      "last_updated": 1711150527
+      "last_updated": 1711773812
     },
     "Super 8": {
       "type": "movie",
@@ -6866,25 +6614,14 @@
         "us": [
           {
             "price": {
-              "amount": "9.99",
+              "amount": "14.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "14.99 USD"
             },
             "availableSince": 1692654305,
             "quality": "hd",
             "service": "prime",
             "streamingType": "buy"
-          },
-          {
-            "price": {
-              "amount": "3.99",
-              "currency": "USD",
-              "formatted": "3.99 USD"
-            },
-            "availableSince": 1692654305,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "rent"
           },
           {
             "availableSince": 1704469740,
@@ -6895,9 +6632,9 @@
           },
           {
             "price": {
-              "amount": "9.99",
+              "amount": "14.99",
               "currency": "USD",
-              "formatted": "9.99 USD"
+              "formatted": "14.99 USD"
             },
             "availableSince": 1690024365,
             "quality": "uhd",
@@ -6917,6 +6654,28 @@
             "quality": "hd",
             "service": "apple",
             "streamingType": "addon"
+          },
+          {
+            "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1692654305,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "3.59",
+              "currency": "USD",
+              "formatted": "3.59 USD"
+            },
+            "availableSince": 1708188300,
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "rent"
           },
           {
             "price": {
@@ -7011,7 +6770,7 @@
       "belongs_to_collection": null,
       "budget": 50000000,
       "id": 37686,
-      "popularity": 31.001,
+      "popularity": 43.55,
       "production_companies": [
         {
           "name": "Paramount",
@@ -7033,10 +6792,10 @@
       "revenue": 260100000,
       "runtime": 112,
       "status": "Released",
-      "vote_average": 6.763,
-      "vote_count": 6354,
+      "vote_average": 6.8,
+      "vote_count": 6358,
       "needs_data": false,
-      "last_updated": 1711150529
+      "last_updated": 1711773813
     },
     "Better Off Dead...": {
       "type": "movie",
@@ -7169,7 +6928,7 @@
       "belongs_to_collection": null,
       "budget": 0,
       "id": 13667,
-      "popularity": 17.635,
+      "popularity": 16.363,
       "production_companies": [
         {
           "name": "A&M Films",
@@ -7191,10 +6950,10 @@
       "revenue": 10297601,
       "runtime": 97,
       "status": "Released",
-      "vote_average": 6.605,
-      "vote_count": 461,
+      "vote_average": 6.6,
+      "vote_count": 462,
       "needs_data": false,
-      "last_updated": 1711150529
+      "last_updated": 1711773814
     },
     "Galaxy Quest": {
       "type": "movie",
@@ -7202,17 +6961,6 @@
       "overview": "For four years, the courageous crew of the NSEA protector - \"Commander Peter Quincy Taggart\" (Tim Allen), \"Lt. Tawny Madison (Sigourney Weaver) and \"Dr.Lazarus\" (Alan Rickman) - set off on a thrilling and often dangerous mission in space...and then their series was cancelled! Now, twenty years later, aliens under attack have mistaken the Galaxy Quest television transmissions for \"historical documents\" and beam up the crew of has-been actors to save the universe. With no script, no director and no clue, the actors must turn in the performances of their lives.",
       "streamingInfo": {
         "us": [
-          {
-            "price": {
-              "amount": "14.99",
-              "currency": "USD",
-              "formatted": "14.99 USD"
-            },
-            "availableSince": 1693860283,
-            "quality": "hd",
-            "service": "prime",
-            "streamingType": "buy"
-          },
           {
             "price": {
               "amount": "4.29",
@@ -7245,6 +6993,17 @@
             "quality": "hd",
             "service": "apple",
             "streamingType": "buy"
+          },
+          {
+            "price": {
+              "amount": "14.99",
+              "currency": "USD",
+              "formatted": "14.99 USD"
+            },
+            "availableSince": 1693860283,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
           }
         ]
       },
@@ -7268,7 +7027,7 @@
       "belongs_to_collection": null,
       "budget": 45000000,
       "id": 926,
-      "popularity": 30.612,
+      "popularity": 31.714,
       "production_companies": [
         {
           "name": "DreamWorks Pictures",
@@ -7285,10 +7044,10 @@
       "revenue": 90683916,
       "runtime": 101,
       "status": "Released",
-      "vote_average": 7.061,
-      "vote_count": 2092,
+      "vote_average": 7.059,
+      "vote_count": 2095,
       "needs_data": false,
-      "last_updated": 1711150531
+      "last_updated": 1711773816
     },
     "Say Anything...": {
       "type": "movie",
@@ -7340,7 +7099,7 @@
       "belongs_to_collection": null,
       "budget": 16000000,
       "id": 2028,
-      "popularity": 18.596,
+      "popularity": 16.496,
       "production_companies": [
         {
           "name": "Gracie Films",
@@ -7357,10 +7116,361 @@
       "revenue": 20036737,
       "runtime": 100,
       "status": "Released",
-      "vote_average": 7.054,
-      "vote_count": 929,
+      "vote_average": 7.1,
+      "vote_count": 930,
       "needs_data": false,
-      "last_updated": 1711150532
+      "last_updated": 1711773817
+    },
+    "The Usual Suspects": {
+      "type": "movie",
+      "title": "The Usual Suspects",
+      "overview": "Held in an L.A. interrogation room, Verbal Kint attempts to convince the feds that a mythic crime lord, Keyser Soze, not only exists, but was also responsible for drawing him and his four partners into a multi-million dollar heist that ended with an explosion in San Pedro harbor \u2013 leaving few survivors. Verbal lures his interrogators with an incredible story of the crime lord's almost supernatural prowess.",
+      "streamingInfo": {
+        "us": [
+          {
+            "price": {
+              "amount": "3.49",
+              "currency": "USD",
+              "formatted": "3.49 USD"
+            },
+            "availableSince": 1689610345,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "14.69",
+              "currency": "USD",
+              "formatted": "14.69 USD"
+            },
+            "availableSince": 1689610345,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
+          }
+        ]
+      },
+      "cast": [
+        "Kevin Spacey",
+        "Gabriel Byrne",
+        "Stephen Baldwin",
+        "Kevin Pollak",
+        "Benicio del Toro",
+        "Chazz Palminteri",
+        "Pete Postlethwaite"
+      ],
+      "genres": [
+        "drama",
+        "crime",
+        "thriller"
+      ],
+      "directors": [
+        "Bryan Singer"
+      ],
+      "belongs_to_collection": null,
+      "budget": 6000000,
+      "id": 629,
+      "popularity": 48.22,
+      "production_companies": [
+        {
+          "name": "Bad Hat Harry Productions",
+          "id": 9168,
+          "origin_country": "US"
+        },
+        {
+          "name": "Blue Parrot Productions",
+          "id": 361,
+          "origin_country": ""
+        }
+      ],
+      "release_date": 806126400,
+      "revenue": 23300000,
+      "runtime": 106,
+      "status": "Released",
+      "vote_average": 8.187,
+      "vote_count": 9959,
+      "needs_data": false,
+      "last_updated": 1711852668
+    },
+    "Argo": {
+      "type": "movie",
+      "title": "Argo",
+      "overview": "As the Iranian revolution reaches a boiling point, a CIA 'exfiltration' specialist concocts a risky plan to free six Americans who have found shelter at the home of the Canadian ambassador.",
+      "streamingInfo": {
+        "us": [
+          {
+            "price": {
+              "amount": "12.99",
+              "currency": "USD",
+              "formatted": "12.99 USD"
+            },
+            "availableSince": 1659899877,
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "buy"
+          },
+          {
+            "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1700304374,
+            "quality": "uhd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "12.99",
+              "currency": "USD",
+              "formatted": "12.99 USD"
+            },
+            "availableSince": 1700304374,
+            "quality": "uhd",
+            "service": "prime",
+            "streamingType": "buy"
+          },
+          {
+            "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1696764456,
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "12.99",
+              "currency": "USD",
+              "formatted": "12.99 USD"
+            },
+            "availableSince": 1690008334,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
+          },
+          {
+            "availableSince": 1709295548,
+            "quality": "uhd",
+            "service": "apple",
+            "streamingType": "subscription"
+          }
+        ]
+      },
+      "cast": [
+        "Ben Affleck",
+        "Bryan Cranston",
+        "Alan Arkin",
+        "Scoot McNairy",
+        "John Goodman",
+        "Victor Garber",
+        "Tate Donovan"
+      ],
+      "genres": [
+        "drama",
+        "thriller"
+      ],
+      "directors": [
+        "Ben Affleck"
+      ],
+      "belongs_to_collection": null,
+      "budget": 44500000,
+      "id": 68734,
+      "popularity": 32.031,
+      "production_companies": [
+        {
+          "name": "GK Films",
+          "id": 3281,
+          "origin_country": "GB"
+        },
+        {
+          "name": "Warner Bros. Pictures",
+          "id": 174,
+          "origin_country": "US"
+        },
+        {
+          "name": "Smoke House Pictures",
+          "id": 1782,
+          "origin_country": "US"
+        }
+      ],
+      "release_date": 1349928000,
+      "revenue": 232300000,
+      "runtime": 120,
+      "status": "Released",
+      "vote_average": 7.276,
+      "vote_count": 7978,
+      "needs_data": false,
+      "last_updated": 1711860200
+    },
+    "Charlie Wilson's War": {
+      "type": "movie",
+      "title": "Charlie Wilson's War",
+      "overview": "The true story of Texas congressman Charlie Wilson's covert dealings in Afghanistan, where his efforts to assist rebels in their war with the Soviets had some unforeseen and long-reaching effects.",
+      "streamingInfo": {
+        "us": [
+          {
+            "price": {
+              "amount": "14.99",
+              "currency": "USD",
+              "formatted": "14.99 USD"
+            },
+            "availableSince": 1690099319,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "buy"
+          },
+          {
+            "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1654486257,
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "rent"
+          },
+          {
+            "price": {
+              "amount": "14.99",
+              "currency": "USD",
+              "formatted": "14.99 USD"
+            },
+            "availableSince": 1654486257,
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "buy"
+          },
+          {
+            "availableSince": 1704647104,
+            "addon": "cinemax",
+            "leaving": 1711943940,
+            "quality": "hd",
+            "service": "hulu",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1705587458,
+            "addon": "tvs.sbd.1000244",
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1705587458,
+            "addon": "tvs.sbd.12962",
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1705587458,
+            "addon": "tvs.sbd.10000",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1705587458,
+            "addon": "tvs.sbd.1000566",
+            "quality": "hd",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1697762110,
+            "addon": "cinemax",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
+          },
+          {
+            "price": {
+              "amount": "3.99",
+              "currency": "USD",
+              "formatted": "3.99 USD"
+            },
+            "availableSince": 1690099319,
+            "quality": "hd",
+            "service": "prime",
+            "streamingType": "rent"
+          },
+          {
+            "availableSince": 1708635560,
+            "addon": "hbomaxus",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1696897437,
+            "leaving": 1727755140,
+            "service": "hbo",
+            "streamingType": "subscription"
+          }
+        ]
+      },
+      "cast": [
+        "Tom Hanks",
+        "Julia Roberts",
+        "Philip Seymour Hoffman",
+        "Amy Adams",
+        "Emily Blunt",
+        "Om Puri",
+        "Shiri Appleby"
+      ],
+      "genres": [
+        "comedy",
+        "drama",
+        "history"
+      ],
+      "directors": [
+        "Mike Nichols"
+      ],
+      "belongs_to_collection": null,
+      "budget": 75000000,
+      "id": 6538,
+      "popularity": 19.51,
+      "production_companies": [
+        {
+          "name": "Universal Pictures",
+          "id": 33,
+          "origin_country": "US"
+        },
+        {
+          "name": "Relativity Media",
+          "id": 7295,
+          "origin_country": "US"
+        },
+        {
+          "name": "Participant",
+          "id": 6735,
+          "origin_country": "US"
+        },
+        {
+          "name": "Playtone",
+          "id": 4171,
+          "origin_country": "US"
+        },
+        {
+          "name": "MP Munich Pape Filmproductions",
+          "id": 103453,
+          "origin_country": ""
+        }
+      ],
+      "release_date": 1198040400,
+      "revenue": 119483446,
+      "runtime": 102,
+      "status": "Released",
+      "vote_average": 6.534,
+      "vote_count": 1388,
+      "needs_data": false,
+      "last_updated": 1711860211
     }
   },
   "show": {
@@ -7448,7 +7558,7 @@
           "overview": "The mission to take down Whiterose and the Dark Army enters its final phase as Elliot attempts to come to terms with his reality.",
           "poster_path": "/gXMZnIvHxOFRQ7UGQWtmsVfCueT.jpg",
           "season_number": 4,
-          "vote_average": 8.5
+          "vote_average": 8.6
         }
       ],
       "created_by": [
@@ -7472,8 +7582,8 @@
         "id": 2010262,
         "name": "Hello, Elliot",
         "overview": "Goodbye, Friend",
-        "vote_average": 8.705,
-        "vote_count": 44,
+        "vote_average": 8.761,
+        "vote_count": 46,
         "air_date": "2019-12-22",
         "episode_number": 13,
         "episode_type": "finale",
@@ -7499,7 +7609,7 @@
         "US"
       ],
       "original_name": "Mr. Robot",
-      "popularity": 195.132,
+      "popularity": 207.154,
       "production_companies": [
         {
           "name": "Anonymous Content",
@@ -7517,10 +7627,10 @@
           "origin_country": "US"
         }
       ],
-      "vote_average": 8.242,
-      "vote_count": 4351,
+      "vote_average": 8.241,
+      "vote_count": 4364,
       "needs_data": false,
-      "last_updated": 1711150533,
+      "last_updated": 1711773818,
       "release_date": null
     },
     "Pantheon": {
@@ -7570,7 +7680,7 @@
           "overview": "In the wake of a global internet shutdown, Maddie joins Caspian in a race to select the one uploaded intelligence who can protect humanity against the other ghosts in the machine. New allies, enemies, and lifeforms will change our world forever.",
           "poster_path": "/ffGpg4Vdx5f5taNOTZPsVQARyED.jpg",
           "season_number": 2,
-          "vote_average": 9.1
+          "vote_average": 9.0
         }
       ],
       "created_by": [
@@ -7596,8 +7706,8 @@
         "id": 4814558,
         "name": "Deep Time",
         "overview": "Caspian negotiates between uploaded intelligences and humans; SafeSurf turns against humans; Maddie gains some perspective on life.",
-        "vote_average": 10.0,
-        "vote_count": 4,
+        "vote_average": 9.8,
+        "vote_count": 5,
         "air_date": "2023-10-15",
         "episode_number": 8,
         "episode_type": "finale",
@@ -7630,7 +7740,7 @@
         "US"
       ],
       "original_name": "Pantheon",
-      "popularity": 46.246,
+      "popularity": 61.993,
       "production_companies": [
         {
           "name": "AMC Studios",
@@ -7651,7 +7761,7 @@
       "vote_average": 7.8,
       "vote_count": 80,
       "needs_data": false,
-      "last_updated": 1711150534,
+      "last_updated": 1711773818,
       "release_date": null
     },
     "After Life": {
@@ -7708,7 +7818,7 @@
           "overview": "Although still mourning Lisa and struggling to turn over a new leaf, Tony shows compassion to his quirky little world.",
           "poster_path": "/6eJf4h9XcvqK64vbx27EFlLVURm.jpg",
           "season_number": 2,
-          "vote_average": 8.0
+          "vote_average": 8.1
         },
         {
           "air_date": "2022-01-14",
@@ -7718,7 +7828,7 @@
           "overview": "While Tony is no longer quite so aggressively grouchy about life, he continues to struggle to fill the void left behind by his late wife.",
           "poster_path": "/nbtahXaZsAWEG09DDT4czm5VoeC.jpg",
           "season_number": 3,
-          "vote_average": 8.2
+          "vote_average": 8.1
         }
       ],
       "created_by": [
@@ -7744,8 +7854,8 @@
         "id": 3409597,
         "name": "Episode 6",
         "overview": "An interview with a sick child hits Tony hard. Later, he makes a decision about Lisa's insurance money and joins his friends at the town fair.",
-        "vote_average": 8.9,
-        "vote_count": 10,
+        "vote_average": 8.818,
+        "vote_count": 11,
         "air_date": "2022-01-14",
         "episode_number": 6,
         "episode_type": "finale",
@@ -7771,7 +7881,7 @@
         "GB"
       ],
       "original_name": "After Life",
-      "popularity": 70.031,
+      "popularity": 44.688,
       "production_companies": [
         {
           "name": "Derek Productions",
@@ -7779,10 +7889,10 @@
           "origin_country": "GB"
         }
       ],
-      "vote_average": 7.876,
-      "vote_count": 747,
+      "vote_average": 7.867,
+      "vote_count": 752,
       "needs_data": false,
-      "last_updated": 1711150534,
+      "last_updated": 1711773819,
       "release_date": null
     },
     "The Goldbergs": {
@@ -7983,7 +8093,7 @@
         "US"
       ],
       "original_name": "The Goldbergs",
-      "popularity": 365.394,
+      "popularity": 310.318,
       "production_companies": [
         {
           "name": "Sony Pictures Television Studios",
@@ -8006,10 +8116,10 @@
           "origin_country": "US"
         }
       ],
-      "vote_average": 7.643,
-      "vote_count": 308,
+      "vote_average": 7.6,
+      "vote_count": 309,
       "needs_data": false,
-      "last_updated": 1711150536,
+      "last_updated": 1711773821,
       "release_date": null
     },
     "Demon Slayer: Kimetsu no Yaiba": {
@@ -8110,7 +8220,7 @@
           "overview": "Tanjiro and his Demon Slayer friends join Flame Hashira Kyojuro Rengoku aboard the Mugen Train, where over 40 passengers disappeared without a trace.",
           "poster_path": "/eziUGb6S6ZOPj8xLOuk1aj5Uazx.jpg",
           "season_number": 2,
-          "vote_average": 7.9
+          "vote_average": 8.0
         },
         {
           "air_date": "2021-12-05",
@@ -8130,7 +8240,7 @@
           "overview": "Tanjiro visits swordsmiths' village, where he faces explaining the damage to his sword. While waiting for repairs, the Mist Hashira battles two upper-rank demons with Tanjiro and Genya's aid. But can they handle a regenerating enemy that splits into four bodies?",
           "poster_path": "/6gD7G8HQay1X8mHiFVttWJ3czYb.jpg",
           "season_number": 4,
-          "vote_average": 5.6
+          "vote_average": 5.7
         },
         {
           "air_date": "2024-05-12",
@@ -8158,8 +8268,8 @@
         "id": 4354762,
         "name": "A Connected Bond: Daybreak and First Light",
         "overview": "Tanjiro continues the fight against Hantengu. Amidst all his injuries and the Superior Four's skill, will he be able to defeat him? As the battle draws to a close, the Demon Slayer Squad must race against time to end the fight before dawn.",
-        "vote_average": 7.385,
-        "vote_count": 13,
+        "vote_average": 7.571,
+        "vote_count": 14,
         "air_date": "2023-06-18",
         "episode_number": 11,
         "episode_type": "finale",
@@ -8385,7 +8495,7 @@
         "JP"
       ],
       "original_name": "\u9b3c\u6ec5\u306e\u5203",
-      "popularity": 83.95,
+      "popularity": 87.179,
       "production_companies": [
         {
           "name": "ufotable",
@@ -8403,10 +8513,10 @@
           "origin_country": "JP"
         }
       ],
-      "vote_average": 8.674,
-      "vote_count": 5940,
+      "vote_average": 8.7,
+      "vote_count": 5948,
       "needs_data": false,
-      "last_updated": 1711150536,
+      "last_updated": 1711773821,
       "release_date": null
     },
     "Brooklyn Nine-Nine": {
@@ -8416,16 +8526,16 @@
       "streamingInfo": {
         "us": [
           {
+            "availableSince": 1709198992,
+            "quality": "hd",
+            "service": "netflix",
+            "streamingType": "subscription"
+          },
+          {
             "availableSince": 1652598183,
             "leaving": 1831283940,
             "quality": "hd",
             "service": "peacock",
-            "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1709198992,
-            "quality": "hd",
-            "service": "netflix",
             "streamingType": "subscription"
           }
         ]
@@ -8481,7 +8591,7 @@
           "overview": "In Season 2, Jake smokes out a mole in the precinct, Amy finds a flaw in one of Holt's old cases, and the precinct gets antiterrorism training.",
           "poster_path": "/w3WcxtO3FRxSxE0RAJuAUR2ZAav.jpg",
           "season_number": 2,
-          "vote_average": 7.7
+          "vote_average": 7.6
         },
         {
           "air_date": "2015-09-27",
@@ -8608,7 +8718,7 @@
         "US"
       ],
       "original_name": "Brooklyn Nine-Nine",
-      "popularity": 446.996,
+      "popularity": 905.323,
       "production_companies": [
         {
           "name": "Dr. Goor Productions",
@@ -8631,10 +8741,10 @@
           "origin_country": "US"
         }
       ],
-      "vote_average": 8.222,
-      "vote_count": 3106,
+      "vote_average": 8.22,
+      "vote_count": 3115,
       "needs_data": false,
-      "last_updated": 1711150537,
+      "last_updated": 1711773823,
       "release_date": null
     },
     "Smiling Friends": {
@@ -8665,6 +8775,12 @@
           },
           {
             "availableSince": 1707280349,
+            "addon": "tvs.sbd.12381",
+            "service": "apple",
+            "streamingType": "addon"
+          },
+          {
+            "availableSince": 1707280349,
             "addon": "tvs.sbd.10000",
             "service": "apple",
             "streamingType": "addon"
@@ -8673,12 +8789,6 @@
             "availableSince": 1707280349,
             "addon": "tvs.sbd.1000566",
             "quality": "hd",
-            "service": "apple",
-            "streamingType": "addon"
-          },
-          {
-            "availableSince": 1707280349,
-            "addon": "tvs.sbd.12381",
             "service": "apple",
             "streamingType": "addon"
           },
@@ -8781,7 +8891,7 @@
         "US"
       ],
       "original_name": "Smiling Friends",
-      "popularity": 41.243,
+      "popularity": 31.382,
       "production_companies": [
         {
           "name": "Six Point Harness",
@@ -8804,15 +8914,15 @@
           "origin_country": "AU"
         },
         {
-          "name": "Cusack Creatures",
-          "id": 190386,
-          "origin_country": "AU"
+          "name": "Studio Yotta",
+          "id": 90789,
+          "origin_country": "US"
         }
       ],
-      "vote_average": 8.137,
-      "vote_count": 102,
+      "vote_average": 8.132,
+      "vote_count": 106,
       "needs_data": false,
-      "last_updated": 1711150539,
+      "last_updated": 1711773824,
       "release_date": null
     },
     "BoJack Horseman": {
@@ -8832,8 +8942,8 @@
       "cast": [
         "Will Arnett",
         "Aaron Paul",
-        "Amy Sedaris",
         "Alison Brie",
+        "Amy Sedaris",
         "Paul F. Tompkins",
         "Adam Conover",
         "Keith Olbermann"
@@ -8973,7 +9083,7 @@
         "US"
       ],
       "original_name": "BoJack Horseman",
-      "popularity": 266.588,
+      "popularity": 321.121,
       "production_companies": [
         {
           "name": "Tornante Company",
@@ -8992,9 +9102,9 @@
         }
       ],
       "vote_average": 8.558,
-      "vote_count": 2236,
+      "vote_count": 2241,
       "needs_data": false,
-      "last_updated": 1711319223,
+      "last_updated": 1712009338,
       "release_date": null
     },
     "Black Bird": {
@@ -9092,7 +9202,7 @@
         "US"
       ],
       "original_name": "Black Bird",
-      "popularity": 60.774,
+      "popularity": 54.503,
       "production_companies": [
         {
           "name": "Imperative Entertainment",
@@ -9120,10 +9230,10 @@
           "origin_country": "US"
         }
       ],
-      "vote_average": 8.1,
-      "vote_count": 527,
+      "vote_average": 8.116,
+      "vote_count": 529,
       "needs_data": false,
-      "last_updated": 1711319225,
+      "last_updated": 1712009339,
       "release_date": null
     },
     "Freaks and Geeks": {
@@ -9150,13 +9260,6 @@
             "availableSince": 1652493983,
             "service": "paramount",
             "streamingType": "subscription"
-          },
-          {
-            "availableSince": 1690194881,
-            "addon": "cbsaacf",
-            "quality": "sd",
-            "service": "prime",
-            "streamingType": "addon"
           },
           {
             "availableSince": 1662822578,
@@ -9195,6 +9298,13 @@
             "quality": "hd",
             "service": "hulu",
             "streamingType": "subscription"
+          },
+          {
+            "availableSince": 1690194881,
+            "addon": "cbsaacf",
+            "quality": "sd",
+            "service": "prime",
+            "streamingType": "addon"
           },
           {
             "availableSince": 1690194881,
@@ -9298,7 +9408,7 @@
         "US"
       ],
       "original_name": "Freaks and Geeks",
-      "popularity": 106.516,
+      "popularity": 229.671,
       "production_companies": [
         {
           "name": "Apatow Productions",
@@ -9306,10 +9416,10 @@
           "origin_country": "US"
         }
       ],
-      "vote_average": 8.132,
+      "vote_average": 8.1,
       "vote_count": 677,
       "needs_data": false,
-      "last_updated": 1711319225,
+      "last_updated": 1712009339,
       "release_date": null
     }
   }

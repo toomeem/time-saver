@@ -179,5 +179,13 @@
     "day_type": "Pull",
     "split": "ppl",
     "DNF": false
+  },
+  {
+    "exercises": {},
+    "start": 1711667296.3357308,
+    "end": 1711773748.0195634,
+    "day_type": "Pull",
+    "split": "ppl",
+    "DNF": false
   }
 ]
