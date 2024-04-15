@@ -29,16 +29,20 @@ def workout_loop():
             todays_exercises.append(f'''{i["num"]}: {i["name"]}''')
         todays_exercises ="\n".join(todays_exercises)
         exercise_list = "Pick an exercise(0 to end the workout)\n\n"+todays_exercises
-        exercise_num = get_response(exercise_list, wait_time=900)
-        if not exercise_num:
-            clear_file("text_files/current_workout.json")
-            return
-        exercise_num = int(exercise_num)
+        exercise_num = ""
+        while not isinstance(exercise_num, int):
+            exercise_num = get_response(exercise_list, wait_time=900)
+            if not exercise_num:
+                clear_file("text_files/current_workout.json")
+                return
+            try:
+                int(exercise_num)
+            except:
+                message_user("Please enter a number")
         if not exercise_num:
             quit_workout = True
         else:
             message_user("Good choice")
-            time.sleep(break_duration_seconds)
             log_set(exercise_num, is_first_set(exercise_num))
             another_set = get_response("Another set?", 900)
             while another_set == "yes":

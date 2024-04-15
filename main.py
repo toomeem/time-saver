@@ -1361,9 +1361,9 @@ def check_quote_file():
     if log("check_quote_file"):
         return
     with open("text_files/quotes") as quotes_file:
-        quotes = list(set(quotes_file.readlines()))
+        quotes = list(np.unique(quotes_file.readlines()))
     with open("text_files/used_quotes") as used_quotes_file:
-        used_quotes = list(set(used_quotes_file.readlines()))
+        used_quotes = list(np.unique(used_quotes_file.readlines()))
     for i in quotes:
         if i in used_quotes:
             quotes.remove(i)
@@ -1580,6 +1580,8 @@ def end_workout(finished):
         return
     try:
         with open("text_files/current_workout.json") as workout_file:
+            if not workout_file.readlines():
+                return
             workout_dict = dict(json.load(workout_file))
         if not workout_dict["end"]:
             workout_dict["end"] = time.time()
