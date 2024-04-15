@@ -9010,5 +9010,209 @@
     "sender": "script",
     "sent_at": "1712889466.489251",
     "image": false
+  },
+  {
+    "message": "set the gym day to arms",
+    "sender": "user",
+    "sent_at": "1713214852.4623718",
+    "image": false
+  },
+  {
+    "message": "Your gym day has been set to Arms",
+    "sender": "script",
+    "sent_at": "1713214853.5821788",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1713214862.6418598",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713214873.0262985",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1713214879.721933",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713214880.1256688",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1713214887.4802194",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713214887.774881",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1713214890.5898874",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713214890.8215828",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1713219718.98429",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1713219757.988119",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1713219789.5263638",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713219796.9100173",
+    "image": false
+  },
+  {
+    "message": "Please enter a number",
+    "sender": "script",
+    "sent_at": "1713219797.429586",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713219797.8908365",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1713219814.0703697",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713219814.6163118",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1713219954.1011245",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713219954.281344",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1713220012.0186791",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713220014.7936354",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1713220025.481201",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713220025.9451456",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1713220062.2631354",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713220066.2125027",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1713220071.1703577",
+    "image": false
+  },
+  {
+    "message": "Good choice",
+    "sender": "script",
+    "sent_at": "1713220071.297714",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713220071.7906399",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1713220124.665199",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713220124.7826507",
+    "image": false
+  },
+  {
+    "message": "27.5",
+    "sender": "user",
+    "sent_at": "1713220129.248766",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713220129.3679945",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713220132.4684393",
+    "image": false
   }
 ]

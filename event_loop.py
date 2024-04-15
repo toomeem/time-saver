@@ -21,8 +21,7 @@ def event_loop_start():
 
 def workout_loop():
     break_duration_seconds = 60 * 2
-    quit_workout = False
-    while not quit_workout:
+    while True:
         raw_todays_exercises = get_day_exercises(all_exercises)
         todays_exercises = []
         for i in raw_todays_exercises:
@@ -36,19 +35,17 @@ def workout_loop():
                 clear_file("text_files/current_workout.json")
                 return
             try:
-                int(exercise_num)
+                exercise_num = int(exercise_num)
             except:
                 message_user("Please enter a number")
-        if not exercise_num:
-            quit_workout = True
-        else:
-            message_user("Good choice")
-            log_set(exercise_num, is_first_set(exercise_num))
+        if exercise_num == 0:
+            break
+        log_set(exercise_num, is_first_set(exercise_num))
+        another_set = get_response("Another set?", 900)
+        while another_set == "yes":
+            time.sleep(break_duration_seconds)
+            log_set(exercise_num)
             another_set = get_response("Another set?", 900)
-            while another_set == "yes":
-                time.sleep(break_duration_seconds)
-                log_set(exercise_num)
-                another_set = get_response("Another set?", 900)
     end_workout(True)
 
 def check_for_jobs():
