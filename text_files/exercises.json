@@ -676,7 +676,7 @@
   },
   {
     "num": 42,
-    "name": "squat",
+    "name": "Squat",
     "primary_muscles": [
       "Quadriceps"
     ],
@@ -691,6 +691,23 @@
         "Legs"
       ],
       "ppl": ["Legs"]
+    }
+  },
+  {
+    "name": "Deadlift Hold",
+    "primary_muscles": [
+      "Forearms"
+    ],
+    "secondary_muscles": [
+      "Hamstrings",
+      "Lower Back"
+    ],
+    "muscle_group_importance": 2,
+    "exercise_day": {
+      "bro_split": [
+        "Back + Abs"
+      ],
+      "ppl": ["Push"]
     }
   }
 ]

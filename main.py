@@ -1566,6 +1566,13 @@ def log_set(exercise_num, first=False):
             workout_dict = dict(json.load(workout_file))
         except:
             workout_dict = {}
+    if not workout_dict:
+        day_type = workout_splits[get_current_workout_split()][get_gym_day_num()]
+        workout_dict = {
+            "exercises": {}, "start": time.time(), "end": None,
+            "day_type": day_type, "split": get_current_workout_split()
+        }
+        first=True
     if first:
         workout_dict["exercises"][name] = {"sets": 1, "reps": [reps], "weight": [weight]}
     else:
@@ -1580,8 +1587,6 @@ def end_workout(finished):
         return
     try:
         with open("text_files/current_workout.json") as workout_file:
-            if not workout_file.readlines():
-                return
             workout_dict = dict(json.load(workout_file))
         if not workout_dict["end"]:
             workout_dict["end"] = time.time()

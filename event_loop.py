@@ -17,7 +17,6 @@ all_exercises = list(json.load(open("text_files/exercises.json", "r")))
 def event_loop_start():
     threading.Thread(target=clean).start()
     set_in_conversation(False)
-    end_workout(True)
 
 def workout_loop():
     break_duration_seconds = 60 * 2
@@ -47,6 +46,7 @@ def workout_loop():
             log_set(exercise_num)
             another_set = get_response("Another set?", 900)
     end_workout(True)
+    message_user("Workout logged")
 
 def check_for_jobs():
     with open("text_files/jobs.json") as f:

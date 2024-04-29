@@ -9214,5 +9214,3029 @@
     "sender": "user",
     "sent_at": "1713220132.4684393",
     "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713220252.908132",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1713220260.6117887",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713220261.0019584",
+    "image": false
+  },
+  {
+    "message": "27.5",
+    "sender": "user",
+    "sent_at": "1713220263.5279644",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713220263.6283119",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1713220266.0904226",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n37: Dead Hang\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1713220266.215754",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1713220273.7104516",
+    "image": false
+  },
+  {
+    "message": "what gym day is it",
+    "sender": "user",
+    "sent_at": "1713310069.128302",
+    "image": false
+  },
+  {
+    "message": "Current gym day: Arms",
+    "sender": "script",
+    "sent_at": "1713310069.9175057",
+    "image": false
+  },
+  {
+    "message": "set the gym day to back",
+    "sender": "user",
+    "sent_at": "1713310086.5898404",
+    "image": false
+  },
+  {
+    "message": "Your gym day has been set to Back + Abs",
+    "sender": "script",
+    "sent_at": "1713310087.4766667",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1713311877.1675136",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n3: Deadlift\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n28: Shrugs\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1713311881.5514529",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1713311943.399734",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713311943.5495732",
+    "image": false
+  },
+  {
+    "message": "5",
+    "sender": "user",
+    "sent_at": "1713312014.5513842",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713312014.6844552",
+    "image": false
+  },
+  {
+    "message": "135",
+    "sender": "user",
+    "sent_at": "1713312015.7975721",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713312016.2212257",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713312018.5889971",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713312138.8132813",
+    "image": false
+  },
+  {
+    "message": "5",
+    "sender": "user",
+    "sent_at": "1713312425.5872128",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713312425.6765225",
+    "image": false
+  },
+  {
+    "message": "185",
+    "sender": "user",
+    "sent_at": "1713312428.319399",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713312428.7817006",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713312429.4823606",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713312549.8543227",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1713312593.6129665",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713312594.0117772",
+    "image": false
+  },
+  {
+    "message": "225",
+    "sender": "user",
+    "sent_at": "1713312595.4625907",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713312595.5263715",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713312596.9008377",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713312717.0547626",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1713312795.4104571",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713312795.7820473",
+    "image": false
+  },
+  {
+    "message": "245",
+    "sender": "user",
+    "sent_at": "1713312797.2646563",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713312797.8301523",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713312799.3670115",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713312919.8525457",
+    "image": false
+  },
+  {
+    "message": "2",
+    "sender": "user",
+    "sent_at": "1713312999.3437817",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713312999.6602523",
+    "image": false
+  },
+  {
+    "message": "265",
+    "sender": "user",
+    "sent_at": "1713313001.2204635",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713313001.7004938",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713313003.357468",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713313123.7149737",
+    "image": false
+  },
+  {
+    "message": "1",
+    "sender": "user",
+    "sent_at": "1713313185.1245787",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713313185.2164435",
+    "image": false
+  },
+  {
+    "message": "285",
+    "sender": "user",
+    "sent_at": "1713313187.1444442",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713313187.2524617",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713313188.888563",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713313309.3061407",
+    "image": false
+  },
+  {
+    "message": "1",
+    "sender": "user",
+    "sent_at": "1713313582.4320576",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713313582.5170476",
+    "image": false
+  },
+  {
+    "message": "300",
+    "sender": "user",
+    "sent_at": "1713313584.1872628",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713313584.564336",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713313586.9691887",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713313707.1058826",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1713313961.8834093",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713313962.1819735",
+    "image": false
+  },
+  {
+    "message": "275",
+    "sender": "user",
+    "sent_at": "1713313965.1211019",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713313965.3294637",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713313967.2013412",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713314087.3841891",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1713314503.6813335",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713314504.0771282",
+    "image": false
+  },
+  {
+    "message": "275",
+    "sender": "user",
+    "sent_at": "1713314507.778363",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713314508.1814883",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713314510.0408707",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713314630.186076",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1713314895.1134932",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713314895.390225",
+    "image": false
+  },
+  {
+    "message": "275",
+    "sender": "user",
+    "sent_at": "1713314896.8645017",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713314896.943543",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1713314899.207543",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1713315019.479666",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1713315268.9312122",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1713315269.3672233",
+    "image": false
+  },
+  {
+    "message": "275",
+    "sender": "user",
+    "sent_at": "1713315271.519937",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1713315271.9401002",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1713315274.6746175",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n3: Deadlift\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n28: Shrugs\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry",
+    "sender": "script",
+    "sent_at": "1713315274.9820216",
+    "image": false
+  },
+  {
+    "message": "what is the current gym schedule",
+    "sender": "user",
+    "sent_at": "1714262043.0618243",
+    "image": false
+  },
+  {
+    "message": "Current gym day: Back + Abs",
+    "sender": "script",
+    "sent_at": "1714262044.0064054",
+    "image": false
+  },
+  {
+    "message": "switch to ppl",
+    "sender": "user",
+    "sent_at": "1714262053.118397",
+    "image": false
+  },
+  {
+    "message": "Pull is not a valid gym day.",
+    "sender": "script",
+    "sent_at": "1714262053.9488857",
+    "image": false
+  },
+  {
+    "message": "switch the gym schedule type to ppl",
+    "sender": "user",
+    "sent_at": "1714262077.0188503",
+    "image": false
+  },
+  {
+    "message": "Workout split set to PPL",
+    "sender": "script",
+    "sent_at": "1714262077.8192499",
+    "image": false
+  },
+  {
+    "message": "set the gym day to push",
+    "sender": "user",
+    "sent_at": "1714262091.2870204",
+    "image": false
+  },
+  {
+    "message": "Your gym day has been set to Push",
+    "sender": "script",
+    "sent_at": "1714262092.1382408",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714262101.0025303",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714262108.6977258",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1714262112.5099034",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714262112.7588978",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1714262125.088913",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714262125.4453194",
+    "image": false
+  },
+  {
+    "message": "170",
+    "sender": "user",
+    "sent_at": "1714262127.3090875",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714262127.4480314",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714262128.9004228",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714262248.9722338",
+    "image": false
+  },
+  {
+    "message": "185",
+    "sender": "user",
+    "sent_at": "1714262349.819315",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714262350.0705922",
+    "image": false
+  },
+  {
+    "message": "2",
+    "sender": "user",
+    "sent_at": "1714262351.4648817",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714262351.6026597",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714262355.461215",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714262475.6321309",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714262487.2401276",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714262487.3421445",
+    "image": false
+  },
+  {
+    "message": "185",
+    "sender": "user",
+    "sent_at": "1714262489.968234",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714262490.395723",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714262493.081845",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714262613.4462943",
+    "image": false
+  },
+  {
+    "message": "1",
+    "sender": "user",
+    "sent_at": "1714262779.2224722",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714262779.745221",
+    "image": false
+  },
+  {
+    "message": "185",
+    "sender": "user",
+    "sent_at": "1714262782.5673292",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714262910.443303",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1714262911.0873764",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714262919.1697533",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714262924.4025078",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1714262929.044369",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714262929.4907613",
+    "image": false
+  },
+  {
+    "message": "1",
+    "sender": "user",
+    "sent_at": "1714262934.1135337",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714262934.612402",
+    "image": false
+  },
+  {
+    "message": "185",
+    "sender": "user",
+    "sent_at": "1714262936.2924073",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714262936.6610186",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714262938.9818687",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714263059.2317586",
+    "image": false
+  },
+  {
+    "message": "2",
+    "sender": "user",
+    "sent_at": "1714263391.3426607",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714263391.765554",
+    "image": false
+  },
+  {
+    "message": "175",
+    "sender": "user",
+    "sent_at": "1714263393.5816605",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714263393.8247025",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714263395.6198263",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714263515.8379996",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1714263825.3480816",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714263825.4173303",
+    "image": false
+  },
+  {
+    "message": "165",
+    "sender": "user",
+    "sent_at": "1714263827.9120305",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714263827.9992883",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714263830.2006984",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714263830.508011",
+    "image": false
+  },
+  {
+    "message": "13",
+    "sender": "user",
+    "sent_at": "1714264250.2312841",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714264250.4654486",
+    "image": false
+  },
+  {
+    "message": "12",
+    "sender": "user",
+    "sent_at": "1714264255.478726",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714264255.5465424",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714264258.8465846",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714264259.1003575",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714264262.4052832",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714264382.6543446",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714264434.95653",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714264435.1398103",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714264436.1741958",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714264436.6893594",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714264438.1837018",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714264558.7083402",
+    "image": false
+  },
+  {
+    "message": "13",
+    "sender": "user",
+    "sent_at": "1714264622.9848554",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714264623.4674017",
+    "image": false
+  },
+  {
+    "message": "17.5",
+    "sender": "user",
+    "sent_at": "1714264626.266022",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714264626.5151594",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714264628.8590221",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714264749.0598888",
+    "image": false
+  },
+  {
+    "message": "14",
+    "sender": "user",
+    "sent_at": "1714264822.5640562",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714264822.7949674",
+    "image": false
+  },
+  {
+    "message": "17.5",
+    "sender": "user",
+    "sent_at": "1714264824.9935844",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714264825.3274615",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714264826.1780567",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714264826.3286262",
+    "image": false
+  },
+  {
+    "message": "21",
+    "sender": "user",
+    "sent_at": "1714264829.787779",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714264829.8967044",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714264968.0484107",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714264968.2673833",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714264970.5162761",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714264970.813027",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714264972.2568905",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714265092.3286479",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1714265161.4332666",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714265161.9747968",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714265163.4383626",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714265163.5081728",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714265165.0598316",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714265285.6256375",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1714265392.7043617",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714265392.8296895",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714265394.273376",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714265394.3413515",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714265397.136708",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714265397.3859625",
+    "image": false
+  },
+  {
+    "message": "-0",
+    "sender": "user",
+    "sent_at": "1714265793.8984787",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714265794.1206906",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714265804.8094187",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714265806.5687807",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714265811.1100953",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714265811.1728864",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714265816.8573985",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714265817.2498803",
+    "image": false
+  },
+  {
+    "message": "140",
+    "sender": "user",
+    "sent_at": "1714265818.856156",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714265819.312543",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714265821.2450771",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714265941.3514628",
+    "image": false
+  },
+  {
+    "message": "7",
+    "sender": "user",
+    "sent_at": "1714266022.1984217",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714266022.4663143",
+    "image": false
+  },
+  {
+    "message": "140",
+    "sender": "user",
+    "sent_at": "1714266038.868144",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714266039.245462",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714266043.1377423",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714266163.3170204",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1714266306.0207605",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714266306.531297",
+    "image": false
+  },
+  {
+    "message": "125",
+    "sender": "user",
+    "sent_at": "1714266308.4072723",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714266308.580458",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714266311.4015975",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714266431.6114376",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1714266654.9870522",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714266655.4529939",
+    "image": false
+  },
+  {
+    "message": "125",
+    "sender": "user",
+    "sent_at": "1714266657.3227425",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714266657.5073004",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714266662.9059913",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714266663.0719306",
+    "image": false
+  },
+  {
+    "message": "19",
+    "sender": "user",
+    "sent_at": "1714266675.728147",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714266675.8760757",
+    "image": false
+  },
+  {
+    "message": "6",
+    "sender": "user",
+    "sent_at": "1714266779.2711542",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714266779.4087043",
+    "image": false
+  },
+  {
+    "message": "60",
+    "sender": "user",
+    "sent_at": "1714266783.8032389",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714266783.9800682",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714266795.554321",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714266915.7907205",
+    "image": false
+  },
+  {
+    "message": "6",
+    "sender": "user",
+    "sent_at": "1714267164.441229",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714267164.6399448",
+    "image": false
+  },
+  {
+    "message": "55",
+    "sender": "user",
+    "sent_at": "1714267165.7489388",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714267166.2100687",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714267167.3882353",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714267287.7277498",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1714267472.5694797",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714267472.83387",
+    "image": false
+  },
+  {
+    "message": "55",
+    "sender": "user",
+    "sent_at": "1714267474.34991",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714267474.8860958",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714267479.4810731",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714267599.9609575",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1714267935.3972404",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714267935.5334218",
+    "image": false
+  },
+  {
+    "message": "55",
+    "sender": "user",
+    "sent_at": "1714267936.550505",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714267937.1101463",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714267939.8288734",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714267940.1716316",
+    "image": false
+  },
+  {
+    "message": "37",
+    "sender": "user",
+    "sent_at": "1714267960.0354006",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714267960.5275536",
+    "image": false
+  },
+  {
+    "message": "15",
+    "sender": "user",
+    "sent_at": "1714268159.6833355",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714268159.7878277",
+    "image": false
+  },
+  {
+    "message": "225",
+    "sender": "user",
+    "sent_at": "1714268164.068633",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714268164.3921819",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714268168.3184965",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714268288.4484463",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714268567.3193643",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714268567.6233177",
+    "image": false
+  },
+  {
+    "message": "255",
+    "sender": "user",
+    "sent_at": "1714268569.2685404",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714268569.6785164",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714268571.1111085",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714268691.2137108",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714269444.6242418",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714269445.167489",
+    "image": false
+  },
+  {
+    "message": "275",
+    "sender": "user",
+    "sent_at": "1714269448.8672686",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714269449.2821941",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714269454.5749605",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714269574.9216347",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714270058.076226",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714270058.2988236",
+    "image": false
+  },
+  {
+    "message": "275",
+    "sender": "user",
+    "sent_at": "1714270060.9952059",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714270061.3873649",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714270065.1363518",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714270065.464571",
+    "image": false
+  },
+  {
+    "message": "15",
+    "sender": "user",
+    "sent_at": "1714270070.3772938",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714270070.5392013",
+    "image": false
+  },
+  {
+    "message": "18",
+    "sender": "user",
+    "sent_at": "1714270073.8617003",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714270074.11152",
+    "image": false
+  },
+  {
+    "message": "100",
+    "sender": "user",
+    "sent_at": "1714270076.6159675",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714270077.1489816",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714270077.8893635",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714270198.1876986",
+    "image": false
+  },
+  {
+    "message": "18",
+    "sender": "user",
+    "sent_at": "1714270435.1785944",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714270435.3210382",
+    "image": false
+  },
+  {
+    "message": "100",
+    "sender": "user",
+    "sent_at": "1714270441.570104",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714270441.9452462",
+    "image": false
+  },
+  {
+    "message": "105",
+    "sender": "user",
+    "sent_at": "1714270837.7748644",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714270837.879296",
+    "image": false
+  },
+  {
+    "message": "14",
+    "sender": "user",
+    "sent_at": "1714270839.0504973",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714270839.4421883",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714270844.8675342",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714270844.9890735",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714270854.397812",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714270854.695513",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714270857.2779925",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n9: Bench Press\n10: Pec Fly\n11: Incline Dumbbell Press\n12: Cable Lateral Raises\n13: Dumbbell Lateral Raises\n14: Chest Press\n15: Rear Delt Fly\n19: Tricep Extension\n20: Tricep Pushdown\n21: Dips\n26: Barbell Wrist Curl\n28: Shrugs\n37: Dead Hang",
+    "sender": "script",
+    "sent_at": "1714270857.7101316",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714270859.2146962",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714270859.7087946",
+    "image": false
+  },
+  {
+    "message": "set the gym day to pull",
+    "sender": "user",
+    "sent_at": "1714351126.8779113",
+    "image": false
+  },
+  {
+    "message": "Your gym day has been set to Pull",
+    "sender": "script",
+    "sent_at": "1714351127.8330476",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714351133.894008",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714351137.1396222",
+    "image": false
+  },
+  {
+    "message": "22",
+    "sender": "user",
+    "sent_at": "1714351146.4697812",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714351146.8462622",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1714351150.1701908",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714351150.3801675",
+    "image": false
+  },
+  {
+    "message": "115",
+    "sender": "user",
+    "sent_at": "1714351152.262814",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714351152.507597",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714351153.897116",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714351274.0469806",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714351325.7082934",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714351326.0737286",
+    "image": false
+  },
+  {
+    "message": "110",
+    "sender": "user",
+    "sent_at": "1714351326.940915",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714351327.0915656",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714351328.5882633",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714351449.1044936",
+    "image": false
+  },
+  {
+    "message": "8",
+    "sender": "user",
+    "sent_at": "1714351461.895033",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714351462.3368256",
+    "image": false
+  },
+  {
+    "message": "105",
+    "sender": "user",
+    "sent_at": "1714351465.5928874",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714351465.916811",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714351467.9203746",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714351468.4380052",
+    "image": false
+  },
+  {
+    "message": "16",
+    "sender": "user",
+    "sent_at": "1714351610.5845711",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714351610.9738321",
+    "image": false
+  },
+  {
+    "message": "7",
+    "sender": "user",
+    "sent_at": "1714351614.5428822",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714351615.055206",
+    "image": false
+  },
+  {
+    "message": "30",
+    "sender": "user",
+    "sent_at": "1714351618.9802117",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714351619.142419",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714351620.9304807",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714351741.2052486",
+    "image": false
+  },
+  {
+    "message": "6",
+    "sender": "user",
+    "sent_at": "1714351816.3708022",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714351816.540888",
+    "image": false
+  },
+  {
+    "message": "30",
+    "sender": "user",
+    "sent_at": "1714351818.0657768",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714351818.1354654",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714351819.5319479",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714351939.675214",
+    "image": false
+  },
+  {
+    "message": "11",
+    "sender": "user",
+    "sent_at": "1714352095.6838999",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714352095.9010282",
+    "image": false
+  },
+  {
+    "message": "25",
+    "sender": "user",
+    "sent_at": "1714352097.841502",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714352097.9538274",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714352099.9048557",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714352099.9900599",
+    "image": false
+  },
+  {
+    "message": "29",
+    "sender": "user",
+    "sent_at": "1714352672.4093585",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714352672.661477",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1714352678.6639516",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714352678.9201071",
+    "image": false
+  },
+  {
+    "message": "60",
+    "sender": "user",
+    "sent_at": "1714352679.9533672",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714352680.449917",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714352682.4070964",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714352802.4924557",
+    "image": false
+  },
+  {
+    "message": "11",
+    "sender": "user",
+    "sent_at": "1714352936.514588",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714352936.7030602",
+    "image": false
+  },
+  {
+    "message": "55",
+    "sender": "user",
+    "sent_at": "1714352937.5309296",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714352937.7203135",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714352940.1199155",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714353060.2542439",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1714353283.0696833",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714353283.4520113",
+    "image": false
+  },
+  {
+    "message": "55",
+    "sender": "user",
+    "sent_at": "1714353284.85449",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714353284.9775932",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714353287.5951407",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714353288.0120156",
+    "image": false
+  },
+  {
+    "message": "18",
+    "sender": "user",
+    "sent_at": "1714353293.1183193",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714353293.61871",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1714353299.1922855",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714353299.7555735",
+    "image": false
+  },
+  {
+    "message": "25",
+    "sender": "user",
+    "sent_at": "1714353301.848751",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714353302.2828574",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714353303.988114",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714353424.3507347",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714353572.0480332",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714353572.5252106",
+    "image": false
+  },
+  {
+    "message": "25",
+    "sender": "user",
+    "sent_at": "1714353574.0829294",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714353574.5718236",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714353576.068411",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714353696.5892777",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1714353954.1017632",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714353954.325718",
+    "image": false
+  },
+  {
+    "message": "25",
+    "sender": "user",
+    "sent_at": "1714353956.0687456",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714353956.3992088",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714353957.9283779",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714353958.443966",
+    "image": false
+  },
+  {
+    "message": "23",
+    "sender": "user",
+    "sent_at": "1714353964.2786744",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714353964.5842986",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714353968.2070413",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714353968.656782",
+    "image": false
+  },
+  {
+    "message": "100",
+    "sender": "user",
+    "sent_at": "1714353970.0853617",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714353970.1670709",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714353972.5232837",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714354092.7013202",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714354883.0006437",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714354883.2138693",
+    "image": false
+  },
+  {
+    "message": "100",
+    "sender": "user",
+    "sent_at": "1714354884.4611285",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714354884.908812",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714354886.251777",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714355006.4669888",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714355092.3731637",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714355092.800623",
+    "image": false
+  },
+  {
+    "message": "100",
+    "sender": "user",
+    "sent_at": "1714355094.1027746",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714355094.3341532",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714355095.6199992",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714355095.8787036",
+    "image": false
+  },
+  {
+    "message": "37",
+    "sender": "user",
+    "sent_at": "1714355118.7655",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714355119.3331168",
+    "image": false
+  },
+  {
+    "message": "5",
+    "sender": "user",
+    "sent_at": "1714355125.4925504",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714355126.0278566",
+    "image": false
+  },
+  {
+    "message": "185",
+    "sender": "user",
+    "sent_at": "1714355127.8406248",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714355128.0621815",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714355129.495764",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714355249.548305",
+    "image": false
+  },
+  {
+    "message": "4",
+    "sender": "user",
+    "sent_at": "1714355322.9297178",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714355323.0932014",
+    "image": false
+  },
+  {
+    "message": "245",
+    "sender": "user",
+    "sent_at": "1714355326.2820787",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714355326.7548223",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714355327.5510862",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714355447.7495658",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1714355613.104992",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714355613.4711208",
+    "image": false
+  },
+  {
+    "message": "275",
+    "sender": "user",
+    "sent_at": "1714355614.8667474",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714355615.018823",
+    "image": false
+  },
+  {
+    "message": "yes",
+    "sender": "user",
+    "sent_at": "1714355616.8995738",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714355737.0397818",
+    "image": false
+  },
+  {
+    "message": "3",
+    "sender": "user",
+    "sent_at": "1714356118.7350936",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714356118.9292126",
+    "image": false
+  },
+  {
+    "message": "300",
+    "sender": "user",
+    "sent_at": "1714356121.9433455",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714356122.0721526",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714356136.2108574",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714356136.4734676",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714356141.4683537",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714356141.617049",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714418200.920991",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714418209.2883048",
+    "image": false
+  },
+  {
+    "message": "41",
+    "sender": "user",
+    "sent_at": "1714418240.8207028",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714418241.1973832",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714418246.1839843",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714418246.378995",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714418247.7449741",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714418248.0131865",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714418249.658139",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714418250.1561484",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714418253.0111487",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714418253.2843664",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714418381.3900926",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714418386.5238867",
+    "image": false
+  },
+  {
+    "message": "41",
+    "sender": "user",
+    "sent_at": "1714418394.9900062",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714418395.3469405",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714418400.9105105",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714418401.1160948",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714418402.2204945",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714418402.7100158",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714418405.2494674",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714418405.341327",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714418422.523336",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714418422.764904",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714418721.5535893",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714418743.6048844",
+    "image": false
+  },
+  {
+    "message": "41",
+    "sender": "user",
+    "sent_at": "1714418747.1709838",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714418747.6416042",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714418754.3051863",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714418754.3620057",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714418757.7230856",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714419079.4658515",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714419087.408339",
+    "image": false
+  },
+  {
+    "message": "41",
+    "sender": "user",
+    "sent_at": "1714419098.5281868",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714419098.7901392",
+    "image": false
+  },
+  {
+    "message": "1",
+    "sender": "user",
+    "sent_at": "1714419106.525554",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714419107.0463488",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714419108.2661624",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714419108.7830799",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714419111.4637756",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714419111.5558498",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714419115.8509696",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714419116.228101",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714419149.708794",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714419157.4869494",
+    "image": false
+  },
+  {
+    "message": "41",
+    "sender": "user",
+    "sent_at": "1714419159.6267986",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714419159.700994",
+    "image": false
+  },
+  {
+    "message": "10",
+    "sender": "user",
+    "sent_at": "1714419161.4024339",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714419161.8263457",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714419162.3779738",
+    "image": false
+  },
+  {
+    "message": "I'm not sure what you mean by \"20\". Could you please provide more context or let me know how I can assist you?",
+    "sender": "script",
+    "sent_at": "1714419163.941392",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714419168.9179232",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714419169.0421493",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714419174.020185",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714419174.2642455",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714419182.4258068",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714419182.5629318",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714419254.6792748",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714419260.1384048",
+    "image": false
+  },
+  {
+    "message": "41",
+    "sender": "user",
+    "sent_at": "1714419265.391009",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714419265.870544",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714419267.6678655",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714419268.0410619",
+    "image": false
+  },
+  {
+    "message": "30",
+    "sender": "user",
+    "sent_at": "1714419270.026924",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714419270.1327884",
+    "image": false
+  },
+  {
+    "message": "no",
+    "sender": "user",
+    "sent_at": "1714419273.7101393",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714419273.8190649",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714419276.9051259",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714419276.977035",
+    "image": false
+  },
+  {
+    "message": "start a workout",
+    "sender": "user",
+    "sent_at": "1714419325.4899182",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714419332.6347206",
+    "image": false
+  },
+  {
+    "message": "41",
+    "sender": "user",
+    "sent_at": "1714419339.4471195",
+    "image": false
+  },
+  {
+    "message": "How many reps did you do?",
+    "sender": "script",
+    "sent_at": "1714419339.844655",
+    "image": false
+  },
+  {
+    "message": "20",
+    "sender": "user",
+    "sent_at": "1714419342.053142",
+    "image": false
+  },
+  {
+    "message": "How much weight did you use?",
+    "sender": "script",
+    "sent_at": "1714419342.1060333",
+    "image": false
+  },
+  {
+    "message": "9",
+    "sender": "user",
+    "sent_at": "1714419343.63026",
+    "image": false
+  },
+  {
+    "message": "Another set?",
+    "sender": "script",
+    "sent_at": "1714419343.695495",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714419345.5434856",
+    "image": false
+  },
+  {
+    "message": "Pick an exercise(0 to end the workout)\n\n16: Dumbbell Bicep Curl\n18: Dumbbell Hammer Curl\n22: Lat Pulldown\n23: Cable Row\n24: Chin Ups\n25: Pull Ups\n27: Lat Pushdowns\n29: Single Arm Row\n30: Barbell Row\n31: Cable Crunch\n32: Plank\n33: Russian Twist\n34: Side Plank\n35: Kettlebell Side Bend\n36: Hanging Leg Raise\n37: Dead Hang\n38: Back Extension\n39: Decline Ab Crunch\n40: Suitcase Carry\n41: Farmers Carry",
+    "sender": "script",
+    "sent_at": "1714419345.8104913",
+    "image": false
+  },
+  {
+    "message": "0",
+    "sender": "user",
+    "sent_at": "1714419348.1056066",
+    "image": false
+  },
+  {
+    "message": "Workout logged",
+    "sender": "script",
+    "sent_at": "1714419348.4352703",
+    "image": false
   }
 ]
