@@ -2013,18 +2013,21 @@ def format_track(song, track_num):
         del song["album"]["available_markets"]
     except:
         pass
-    del song["album"]["external_urls"]
-    del song["album"]["href"]
-    del song["album"]["images"]
-    del song["album"]["uri"]
+    extra_fields = ["external_urls", "href", "images", "uri"]
+    for i in extra_fields:
+        try:
+            del song["album"][i]
+        except:
+            pass
     song["album"]["artists"] = [
         format_artist(i) for i in song["album"]["artists"]]
     song["artists"] = [format_artist(i) for i in song["artists"]]
-    del song["external_ids"]
-    del song["external_urls"]
-    del song["href"]
-    del song["preview_url"]
-    del song["uri"]
+    extra_fields = ["available_markets", "disc_number", "external_ids", "external_urls", "href", "preview_url", "uri"]
+    for i in extra_fields:
+        try:
+            del song[i]
+        except:
+            pass
     song["artist_num"] = len(song["artists"])
     song["album_track_number"] = song["track_number"]
     song["track_number"] = int(track_num)
@@ -2058,30 +2061,24 @@ def format_podcast(podcast):
         added = podcast["added_at"]
         podcast = dict(podcast["episode"])
     podcast["added_at"] = added
-    del podcast["audio_preview_url"]
-    del podcast["external_urls"]
-    del podcast["href"]
-    del podcast["html_description"]
-    del podcast["images"]
-    del podcast["is_externally_hosted"]
-    del podcast["language"]
-    del podcast["languages"]
-    del podcast["uri"]
+    extra_fields = ["available_markets", "external_urls", "href", "images", "uri"]
+    for i in extra_fields:
+        try:
+            del podcast[i]
+        except:
+            pass
     podcast["show"] = format_podcast_show(podcast["show"])
     return podcast
 
 def format_podcast_show(show):
     if log("format_podcast_show"):
         return
-    del show["available_markets"]
-    del show["copyrights"]
-    del show["external_urls"]
-    del show["href"]
-    del show["html_description"]
-    del show["images"]
-    del show["is_externally_hosted"]
-    del show["languages"]
-    del show["uri"]
+    extra_fields = ["available_markets", "copyrights", "external_urls", "href", "html_description", "images", "is_externally_hosted", "languages", "uri"]
+    for i in extra_fields:
+        try:
+            del show[i]
+        except:
+            pass
     return show
 
 def requests_per_thread_func(thread_count, playlist_len, max_request):

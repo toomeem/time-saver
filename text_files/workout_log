@@ -507,5 +507,231 @@
     "day_type": "Legs",
     "split": "ppl",
     "DNF": false
+  },
+  {
+    "exercises": {
+      "Bench Press": {
+        "sets": 6,
+        "reps": [
+          5,
+          3,
+          2,
+          1,
+          5,
+          5
+        ],
+        "weight": [
+          135.0,
+          155.0,
+          175.0,
+          185.0,
+          165.0,
+          95.0
+        ]
+      },
+      "Dumbbell Lateral Raises": {
+        "sets": 4,
+        "reps": [
+          12,
+          10,
+          9,
+          12
+        ],
+        "weight": [
+          20.0,
+          20.0,
+          20.0,
+          17.5
+        ]
+      }
+    },
+    "start": 1715978942.667564,
+    "end": 1715984184.9562576,
+    "day_type": "Push",
+    "split": "ppl",
+    "DNF": true
+  },
+  {
+    "exercises": {
+      "Lat Pulldown": {
+        "sets": 4,
+        "reps": [
+          6,
+          12,
+          10,
+          9
+        ],
+        "weight": [
+          100.0,
+          110.0,
+          110.0,
+          110.0
+        ]
+      },
+      "Dumbbell Bicep Curl": {
+        "sets": 3,
+        "reps": [
+          12,
+          7,
+          7
+        ],
+        "weight": [
+          25.0,
+          30.0,
+          30.0
+        ]
+      },
+      "Single Arm Row": {
+        "sets": 2,
+        "reps": [
+          10,
+          10
+        ],
+        "weight": [
+          65.0,
+          65.0
+        ]
+      },
+      "Dumbbell Hammer Curl": {
+        "sets": 3,
+        "reps": [
+          10,
+          10,
+          12
+        ],
+        "weight": [
+          25.0,
+          25.0,
+          25.0
+        ]
+      },
+      "Cable Row": {
+        "sets": 3,
+        "reps": [
+          10,
+          10,
+          9
+        ],
+        "weight": [
+          100.0,
+          100.0,
+          95.0
+        ]
+      },
+      "Preacher Curl": {
+        "sets": 1,
+        "reps": [
+          10
+        ],
+        "weight": [
+          60.0
+        ]
+      }
+    },
+    "start": 1717024651.4752874,
+    "end": 1717029861.169429,
+    "day_type": "Pull",
+    "split": "ppl",
+    "DNF": true
+  },
+  {
+    "exercises": {},
+    "start": 1717715725.6221771,
+    "end": 1717715745.9967833,
+    "day_type": "Pull",
+    "split": "ppl",
+    "DNF": false
+  },
+  {
+    "exercises": {},
+    "start": 1717715754.7884605,
+    "end": 1717715763.0021908,
+    "day_type": "Push",
+    "split": "ppl",
+    "DNF": false
+  },
+  {
+    "exercises": {
+      "Squat": {
+        "sets": 5,
+        "reps": [
+          4,
+          5,
+          5,
+          3,
+          3
+        ],
+        "weight": [
+          135.0,
+          155.0,
+          175.0,
+          195.0,
+          205.0
+        ]
+      },
+      "Calf Raise": {
+        "sets": 3,
+        "reps": [
+          8,
+          13,
+          12
+        ],
+        "weight": [
+          130.0,
+          120.0,
+          120.0
+        ]
+      }
+    },
+    "start": 1717715769.8694623,
+    "end": 1717722460.0909653,
+    "day_type": "Legs",
+    "split": "ppl",
+    "DNF": true
+  },
+  {
+    "exercises": {
+      "Bench Press": {
+        "sets": 6,
+        "reps": [
+          3,
+          3,
+          155,
+          1,
+          1,
+          10
+        ],
+        "weight": [
+          95.0,
+          135.0,
+          3.0,
+          175.0,
+          185.0,
+          135.0
+        ]
+      },
+      "Dumbbell Lateral Raises": {
+        "sets": 5,
+        "reps": [
+          12,
+          10,
+          8,
+          12,
+          12
+        ],
+        "weight": [
+          10.0,
+          12.5,
+          12.5,
+          10.0,
+          10.0
+        ]
+      }
+    },
+    "start": 1718364808.774614,
+    "end": 1718366815.6441057,
+    "day_type": "Push",
+    "split": "ppl",
+    "DNF": true
   }
 ]
