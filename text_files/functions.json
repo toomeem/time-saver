@@ -225,6 +225,20 @@
 		}
 	},
 	{
+		"name": "get_entire_list",
+		"description": "sends a list of all the movies/shows I haven't watched yet",
+		"parameters": {
+			"type": "object",
+			"properties": {
+				"media_type": {
+					"type": "string",
+					"description": "the type of media to filter by",
+					"enum": ["show", "movie"]
+				}
+			}
+		}
+	},
+	{
 		"name": "get_available_media",
 		"description": "sends a list of all the movies/shows I haven't watched yet, the user may also pass in criteria to filter the list",
 		"parameters": {

@@ -12,7 +12,6 @@ import time
 from collections import Counter
 from datetime import date, datetime, timedelta
 from pprint import pprint
-from statistics import mean
 
 import cloudinary.uploader
 import matplotlib.pyplot as plt
@@ -209,6 +208,8 @@ def hook():
             remove_media_from_list(args)
         case "get_available_media":
             get_media_suggestions(args)
+        case "get_entire_list":
+            get_media_list(args)
         case "get_streaming_services":
             user_get_streaming_services()
         case "add_streaming_service":
@@ -400,8 +401,7 @@ def send_song_duration_graph():
     if log("send_song_duration_graph"):
         return
     data = read_spotify_data()
-    durations, *_ = duration_graph_organization(
-        data, 20)
+    durations, *_ = duration_graph_organization(data, 20)
     duration_names = [list(i.values())[0] for i in durations][::-1]
     duration_values = [list(i.keys())[0]/(60*1000) for i in durations][::-1]
     plt.figure(figsize=(10, 10), dpi=dpi, layout="tight")
@@ -676,11 +676,24 @@ def remove_media_from_list(args):
         try:
             del media_list[type][response["media_name"]]
         except:
-            message_user([response["media_name"]])
+            message_user(f'''{response["media_name"]} is not in the list of {type}s.''')
             return
     with open("text_files/media_data.json", "w") as f:
         json.dump(media_list, f, indent=2)
     message_user(f"Removed {name} from the list of {type}s.")
+
+def get_media_list(args):
+    if log("get_media_list"):
+        return
+    media_list = get_available_media(args, True)
+    if not isinstance(media_list, list):
+        message_user(f"You have no {args['media_type']}s in your list.")
+        return
+    media_list.sort()
+    message = f"{args['media_type'].capitalize()}s:\n"
+    for media in media_list:
+        message += f"{media}\n"
+    message_user(message)
 
 def get_media_suggestions(args):
     if log("get_media_suggestions"):
@@ -922,7 +935,7 @@ def available_streaming_services():
     available = {k: v["my_plan"] for k,v in services.items() if v["my_plan"]["type"]}
     return available
 
-def get_available_media(args):
+def get_available_media(args, get_all=False):
     if log("get_available_media"):
         return
     media_type = args["media_type"]
@@ -939,6 +952,8 @@ def get_available_media(args):
         media_dict = {k:v for k,v in media_dict.items() if "runtime" in v.keys() and v["runtime"] <= runtime}
     if media_dict == {}:
         return {}
+    if get_all:
+        return [i for i in media_dict.keys()]
     services = available_streaming_services()
     available_media = {}
     for media in media_dict.values():
@@ -1244,8 +1259,8 @@ def is_septa_holiday():
 def set_max(set):
     if log("set_max"):
         return
-    reps = mean(set["reps"])
-    weight = mean(set["weight"])
+    reps = np.mean(set["reps"])
+    weight = np.mean(set["weight"])
     return one_rep_max(reps, weight)
 
 def exercise_maxes():

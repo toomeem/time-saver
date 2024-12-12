@@ -2,12 +2,10 @@ import json
 import threading
 import time
 
-from main import (
-    add_media_data, clean, clear_file, end_workout,
+from main import (add_media_data, clean, clear_file, end_workout,
     get_day_exercises, get_missing_media_data, get_quote,
     get_response, is_first_set, log, log_set, message_user,
-    morning_message, remove_job, rn, set_in_conversation
-)
+    morning_message, remove_job, rn, set_in_conversation)
 
 bro_split = ["Legs", "Chest + Shoulders", "Arms", "Back + Abs"]
 ppl = ["Legs", "Pull", "Push"]

@@ -19492,5 +19492,295 @@
     "sender": "script",
     "sent_at": "1719270527.4701765",
     "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1730674803.453398",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1730674805.0719469",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1730674805.8983364",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1730674806.5671825",
+    "image": false
+  },
+  {
+    "message": "when\u2019s the next train from 30th street to lansdale",
+    "sender": "user",
+    "sent_at": "1730674875.7049744",
+    "image": false
+  },
+  {
+    "message": "The next train from 30th Street Station to Lansdale leaves at 6:39 and arrives at 7:41.\nIt will cost $5.25.",
+    "sender": "script",
+    "sent_at": "1730674877.837838",
+    "image": false
+  },
+  {
+    "message": "what movies are on my list",
+    "sender": "user",
+    "sent_at": "1730674927.3688385",
+    "image": false
+  },
+  {
+    "message": "Available Movies:\nPlanes, Trains and Automobiles - Plutotv\nThis Is Spinal Tap - Plutotv\nFor Your Consideration - Tubi\nA Few Good Men - Plutotv\nClerks - Plutotv\nCasino - Peacock\nFast Times at Ridgemont High - Netflix\nZoolander - Paramount\nThere Will Be Blood - Plutotv\nThe Exorcist - Hbo\nAnnie Hall - Plutotv\nTexas Chainsaw Massacre - Netflix\nCoraline - Plutotv\nFantastic Mr. Fox - Disney\nGet Out - Netflix\nA Wrinkle in Time - Disney\nUnbreakable - Hbo\nThe Terminator - Tubi\nAnimal House - Netflix\nThe Menu - Hulu\nTeen Wolf - Tubi\nFences - Netflix\nThe Imitation Game - Netflix\nPredestination - Plutotv\nNorth by Northwest - Tubi\nAlien - Hulu\nThe Green Mile - Tubi\nThe Whale - Paramount\nNineteen Eighty-Four - Tubi\nThe Hurt Locker - Plutotv\nThe Blues Brothers - Plutotv\nUncle Buck - Netflix\nGalaxy Quest - Plutotv\nThe Usual Suspects - Plutotv\n",
+    "sender": "script",
+    "sent_at": "1730674928.1499965",
+    "image": false
+  },
+  {
+    "message": "add a clockwork orange",
+    "sender": "user",
+    "sent_at": "1730674956.199727",
+    "image": false
+  },
+  {
+    "message": "Added A Clockwork Orange to the list of movies.",
+    "sender": "script",
+    "sent_at": "1730674957.2013452",
+    "image": false
+  },
+  {
+    "message": "add come and see",
+    "sender": "user",
+    "sent_at": "1730674970.0780003",
+    "image": false
+  },
+  {
+    "message": "Added Come and See to the list of movies.",
+    "sender": "script",
+    "sent_at": "1730674971.3189857",
+    "image": false
+  },
+  {
+    "message": "add eyes wide shut",
+    "sender": "user",
+    "sent_at": "1730674981.7251315",
+    "image": false
+  },
+  {
+    "message": "Added Eyes Wide Shut to the list of movies.",
+    "sender": "script",
+    "sent_at": "1730674982.649001",
+    "image": false
+  },
+  {
+    "message": "remove reservoir dogs",
+    "sender": "user",
+    "sent_at": "1730675005.4376955",
+    "image": false
+  },
+  {
+    "message": [
+      "Reservoir Dogs"
+    ],
+    "sender": "script",
+    "sent_at": "1730675007.114649",
+    "image": false
+  },
+  {
+    "message": "remove the blues brothers",
+    "sender": "user",
+    "sent_at": "1730675060.4026783",
+    "image": false
+  },
+  {
+    "message": "Removed The Blues Brothers from the list of movies.",
+    "sender": "script",
+    "sent_at": "1730675061.9460475",
+    "image": false
+  },
+  {
+    "message": "remove reservoir dogs from my list",
+    "sender": "user",
+    "sent_at": "1730675074.4701285",
+    "image": false
+  },
+  {
+    "message": [
+      "Reservoir Dogs"
+    ],
+    "sender": "script",
+    "sent_at": "1730675076.1456947",
+    "image": false
+  },
+  {
+    "message": "remove The Big Lebowski",
+    "sender": "user",
+    "sent_at": "1730675134.3132136",
+    "image": false
+  },
+  {
+    "message": [
+      "The Big Lebowski"
+    ],
+    "sender": "script",
+    "sent_at": "1730675136.5530088",
+    "image": false
+  },
+  {
+    "message": "remove the untouchables",
+    "sender": "user",
+    "sent_at": "1730675154.9331121",
+    "image": false
+  },
+  {
+    "message": "Removed The Untouchables from the list of movies.",
+    "sender": "script",
+    "sent_at": "1730675156.504585",
+    "image": false
+  },
+  {
+    "message": "remove donnie darko",
+    "sender": "user",
+    "sent_at": "1730675177.067602",
+    "image": false
+  },
+  {
+    "message": [
+      "Donnie Darko"
+    ],
+    "sender": "script",
+    "sent_at": "1730675179.0010324",
+    "image": false
+  },
+  {
+    "message": "remove super bad",
+    "sender": "user",
+    "sent_at": "1730675193.8447986",
+    "image": false
+  },
+  {
+    "message": "Removed Super Bad from the list of movies.",
+    "sender": "script",
+    "sent_at": "1730675195.3656735",
+    "image": false
+  },
+  {
+    "message": "add disney+ to my streaming services list",
+    "sender": "user",
+    "sent_at": "1730675332.638281",
+    "image": false
+  },
+  {
+    "message": "Disney+ added to your list.",
+    "sender": "script",
+    "sent_at": "1730675334.0449438",
+    "image": false
+  },
+  {
+    "message": "add flex to my streaming services list",
+    "sender": "user",
+    "sent_at": "1730675411.6748223",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1730675413.331088",
+    "image": false
+  },
+  {
+    "message": "add vudu to my streaming services list",
+    "sender": "user",
+    "sent_at": "1730675497.887928",
+    "image": false
+  },
+  {
+    "message": "Error\nPlease try again.",
+    "sender": "script",
+    "sent_at": "1730675499.442233",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1733794913.2356946",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1733794914.4789636",
+    "image": false
+  },
+  {
+    "message": "give me my entire list of movies",
+    "sender": "user",
+    "sent_at": "1733795478.2080758",
+    "image": false
+  },
+  {
+    "message": "give me my entire list of movies",
+    "sender": "user",
+    "sent_at": "1733795523.7443671",
+    "image": false
+  },
+  {
+    "message": "give me my entire list of movies",
+    "sender": "user",
+    "sent_at": "1733795524.8939555",
+    "image": false
+  },
+  {
+    "message": "give me my entire list of movies",
+    "sender": "user",
+    "sent_at": "1733795557.1297686",
+    "image": false
+  },
+  {
+    "message": "give me my entire list of movies",
+    "sender": "user",
+    "sent_at": "1733795558.0726612",
+    "image": false
+  },
+  {
+    "message": "give me my entire list of movies",
+    "sender": "user",
+    "sent_at": "1733795645.0068202",
+    "image": false
+  },
+  {
+    "message": "Movies:\n48 Hrs.\nA Clockwork Orange\nA Few Good Men\nA Wrinkle in Time\nAlien\nAlmost Famous\nAnimal House\nAnnie Hall\nArgo\nBest in Show\nBetter Off Dead...\nCape Fear\nCasino\nCharlie Wilson's War\nClerks\nCome and See\nCoraline\nDazed and Confused\nDjango Unchained\nEternal Sunshine of the Spotless Mind\nEyes Wide Shut\nFantastic Mr. Fox\nFast Times at Ridgemont High\nFences\nFor Your Consideration\nGalaxy Quest\nGet Out\nIt's a Wonderful Life\nLittle Shop of Horrors\nMulholland Drive\nNight Crawlers\nNineteen Eighty-Four\nNorth by Northwest\nOctober Sky\nOnce Upon a Time in America\nOne Flew Over the Cuckoo's Nest\nPlanes, Trains and Automobiles\nPredestination\nPsycho\nRebecca\nRoad House\nSay Anything...\nSe7en\nSleepy Hollow\nSuper 8\nTeen Wolf\nTexas Chainsaw Massacre\nThe Birds\nThe Exorcist\nThe Green Mile\nThe Hangover\nThe Hurt Locker\nThe Imitation Game\nThe Menu\nThe Prestige\nThe Producers\nThe Royal Tenenbaums\nThe Shawshank Redemption\nThe Terminator\nThe Usual Suspects\nThe Whale\nThe Wild Bunch\nThere Will Be Blood\nThis Is Spinal Tap\nTitanic\nTrading Places\nUnbreakable\nUncle Buck\nZoolander\n",
+    "sender": "script",
+    "sent_at": "1733795645.6936827",
+    "image": false
+  },
+  {
+    "message": "remove the hangover from my list of movies",
+    "sender": "user",
+    "sent_at": "1733795789.7917492",
+    "image": false
+  },
+  {
+    "message": "Removed The Hangover from the list of movies.",
+    "sender": "script",
+    "sent_at": "1733795791.223069",
+    "image": false
+  },
+  {
+    "message": "remove casino from my movies",
+    "sender": "user",
+    "sent_at": "1733795907.665224",
+    "image": false
+  },
+  {
+    "message": "Removed casino from the list of movies.",
+    "sender": "script",
+    "sent_at": "1733795909.028711",
+    "image": false
   }
 ]
