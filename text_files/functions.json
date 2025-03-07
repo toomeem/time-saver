@@ -1,303 +1,307 @@
 [
-	{
-		"name": "artists",
-		"description": "sends a bar chart of my top artists on spotify, graphed by the number of songs I listen to from each artist"
-	},
-	{
-		"name": "birthday",
-		"description": "sends some info about the famous people that were born today"
-	},
-	{
-		"name": "commands",
-		"description": "sends a description of all the commands this bot can perform"
-	},
-	{
-		"name": "covers",
-		"description": "sends a pie chart showing the ratio of covers to original songs in my spotify library"
-	},
-	{
-		"name": "desc",
-		"description": "sends a description of this bot, including what it does and who made it"
-	},
-	{
-		"name": "durations",
-		"description": "sends a bar chart of my longest songs on spotify, graphed by the duration of each song in seconds and it compares that to the average song length of my library"
-	},
-	{
-		"name": "episodes",
-		"description": "sends a pie chart of the podcasts I listen to graphed by the number of episodes I have saved from each podcast"
-	},
-	{
-		"name": "explicit",
-		"description": "sends a pie chart of the ratio of explicit songs to clean songs in my library"
-	},
-	{
-		"name": "genres",
-		"description": "sends a bar chart of my top genres"
-	},
-	{
-		"name": "gym",
-		"description": "Starts a workout"
-	},
-	{
-		"name": "hi",
-		"description": "responds with a greeting, only if the user sends a greeting similar to hi, hello, hey, etc."
-	},
-	{
-		"name": "kill",
-		"description": "immediately ends the program/bot, may also be referred to as die or end or terminate"
-	},
-	{
-		"name": "quote",
-		"description": "sends a random quote"
-	},
-	{
-		"name": "run_times",
-		"description": "sends a pie chart of the podcasts I listen to, graphed by the sum of the run times of the episodes"
-	},
-	{
-		"name": "scan",
-		"description": "scans the quote database for a quote containing the word/phrase to search for",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"scan": {
-					"type": "string",
-					"description": "the word/phrase to search for"
-				}
-			},
-			"required": [
-				"scan"
-			]
-		}
-	},
-	{
-		"name": "school",
-		"description": "sends how much school is left"
-	},
-	{
-		"name": "spotify",
-		"description": "sends descriptive data about my Spotify account"
-	},
-	{
-		"name": "temp",
-		"description": "sends the current temperature"
-	},
-	{
-		"name":"time",
-		"description": "sends the current time in any city/country in the world",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"tz_info": {
-					"type": "string",
-					"description": "return the ISO tz identifier"
-				},
-				"place": {
-					"type": "string",
-					"description": "the name of the city/country to get the time for"
-				}
-			},
-			"required": [
-				"tz_info",
-				"place"
-			]
-		}
-	},
-	{
-		"name": "today",
-		"description": "sends the day of the month and week and other info"
-	},
-	{
-		"name": "weather",
-		"description": "sends the current weather conditions in philadelphia"
-	},
-	{
-		"name": "weight",
-		"description": "Logs my weight for a certain day",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"weight": {
-					"type": "integer",
-					"description": "the weight to log"
-				},
-				"day_offset": {
-					"type": "integer",
-					"description": "the number of days ago to log the weight for"
-				}
-			},
-			"required": ["weight"]
-		}
-	},
-	{
-		"name": "weight_graph",
-		"description": "A graph of my weight over time with a trend line and labels"
-	},
-	{
-		"name": "decades",
-		"description": "A graph(pie chart) of how many songs I have from each decade"
-	},
-	{
-		"name": "train",
-		"description": "This checks the next upcoming train for the septa regional rail line between two stations. Be extremely careful not to mix up the start and the destination.",
-		"parameters":{
-			"type": "object",
-			"properties": {
-				"starting station": {
-					"type": "string",
-					"description": "the starting station"
-				},
-				"destination station": {
-					"type": "string",
-					"description": "the desination station"
-				}
-			}
-		}
-	},
-	{
-		"name": "set_gym_day",
-		"description": "sets what day it is in the gym",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"day": {
-					"type": "string",
-					"description": "the day to set",
-					"enum": ["Push", "Pull", "Legs", "Chest + Shoulders", "Back + Abs", "Arms"]
-				}
-			},
-			"required": ["day"]
-		}
-	},
-	{
-		"name": "toggle_workout_split",
-		"description": "toggles the workout split between push/pull/legs and a bro split"
-	},
-	{
-		"name": "get_gym_day",
-		"description": "sends the workout for the day"
-	},
-	{
-		"name": "get_current_workout_split",
-		"description": "sends the workout split"
-	},
-	{
-		"name": "add_media",
-		"description": "adds a show, movie, or book to the list of media I haven't watched/read",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"media_type": {
-					"type": "string",
-					"description": "the type of media it is (show, movie, or book)."
-				},
-				"media_name": {
-					"type": "string",
-					"description": "the name of the media to add"
-				}
-			},
-			"required": [
-				"media_type",
-				"media_name"
-			]
-		}
-	},
-	{
-		"name": "remove_media",
-		"description": "removes a show, movie, or book from the list of media I haven't watched/read",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"media_type": {
-					"type": "string",
-					"description": "the type of media to remove"
-				},
-				"media_name": {
-					"type": "string",
-					"description": "the name of the media to remove"
-				}
-			},
-			"required": [
-				"media_type",
-				"media_name"
-			]
-		}
-	},
-	{
-		"name": "get_entire_list",
-		"description": "sends a list of all the movies/shows I haven't watched yet",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"media_type": {
-					"type": "string",
-					"description": "the type of media to filter by",
-					"enum": ["show", "movie"]
-				}
-			}
-		}
-	},
-	{
-		"name": "get_available_media",
-		"description": "sends a list of all the movies/shows I haven't watched yet, the user may also pass in criteria to filter the list",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"media_type": {
-					"type": "string",
-					"description": "the type of media to filter by",
-					"enum": ["show", "movie"]
-				},
-				"genre": {
-					"type": "string",
-					"description": "the genre to filter by",
-					"enum": ["action", "adventure", "comedy", "drama", "fantasy", "horror", "mystery", "romance", "sci-fi", "thriller", "western"]
-				},
-				"runtime": {
-					"type": "integer",
-					"description": "the maximum runtime of the media to filter by, in minutes"
-				}
-			},
-			"required": [
-				"media_type"
-			]
-		}
-	},
-	{
-		"name": "get_streaming_services",
-		"description": "sends a list of all the streaming services I have access to"
-	},
-	{
-		"name": "add_streaming_service",
-		"description": "adds a streaming service to the list of services I have access to",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"service_name": {
-					"type": "string",
-					"description": "the name of the streaming service to add"
-				},
-				"addon": {
-					"type": "string",
-					"description": "the name of the addon service to add"
-				}
-			},
-			"required": ["service_name"]
-		}
-	},
-	{
-		"name": "remove_streaming_service",
-		"description": "removes a streaming service from the list of services I have access to",
-		"parameters": {
-			"type": "object",
-			"properties": {
-				"service_name": {
-					"type": "string",
-					"description": "the name of the streaming service to remove"
-				}
-			},
-			"required": ["service_name"]
-		}
-	}
+  {
+    "name": "artists",
+    "description": "sends a bar chart of my top artists on spotify, graphed by the number of songs I listen to from each artist"
+  },
+  {
+    "name": "birthday",
+    "description": "sends some info about the famous people that were born today"
+  },
+  {
+    "name": "commands",
+    "description": "sends a description of all the commands this bot can perform"
+  },
+  {
+    "name": "covers",
+    "description": "sends a pie chart showing the ratio of covers to original songs in my spotify library"
+  },
+  {
+    "name": "desc",
+    "description": "sends a description of this bot, including what it does and who made it"
+  },
+  {
+    "name": "durations",
+    "description": "sends a bar chart of my longest songs on spotify, graphed by the duration of each song in seconds and it compares that to the average song length of my library"
+  },
+  {
+    "name": "episodes",
+    "description": "sends a pie chart of the podcasts I listen to graphed by the number of episodes I have saved from each podcast"
+  },
+  {
+    "name": "explicit",
+    "description": "sends a pie chart of the ratio of explicit songs to clean songs in my library"
+  },
+  {
+    "name": "genres",
+    "description": "sends a bar chart of my top genres"
+  },
+  {
+    "name": "gym",
+    "description": "Starts a workout"
+  },
+  {
+    "name": "hi",
+    "description": "responds with a greeting, only if the user sends a greeting similar to hi, hello, hey, etc."
+  },
+  {
+    "name": "kill",
+    "description": "immediately ends the program/bot, may also be referred to as die or end or terminate"
+  },
+  {
+    "name": "quote",
+    "description": "sends a random quote"
+  },
+  {
+    "name": "run_times",
+    "description": "sends a pie chart of the podcasts I listen to, graphed by the sum of the run times of the episodes"
+  },
+  {
+    "name": "scan",
+    "description": "scans the quote database for a quote containing the word/phrase to search for",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "scan": {
+          "type": "string",
+          "description": "the word/phrase to search for"
+        }
+      },
+      "required": [
+        "scan"
+      ]
+    }
+  },
+  {
+    "name": "school",
+    "description": "sends how much school is left"
+  },
+  {
+    "name": "spotify",
+    "description": "sends descriptive data about my Spotify account"
+  },
+  {
+    "name": "temp",
+    "description": "sends the current temperature"
+  },
+  {
+    "name":"time",
+    "description": "sends the current time in any city/country in the world",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "tz_info": {
+          "type": "string",
+          "description": "return the ISO tz identifier"
+        },
+        "place": {
+          "type": "string",
+          "description": "the name of the city/country to get the time for"
+        }
+      },
+      "required": [
+        "tz_info",
+        "place"
+      ]
+    }
+  },
+  {
+    "name": "today",
+    "description": "sends the day of the month and week and other info"
+  },
+  {
+    "name": "weather",
+    "description": "sends the current weather conditions in philadelphia"
+  },
+  {
+    "name": "weight",
+    "description": "Logs my weight for a certain day",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "weight": {
+          "type": "integer",
+          "description": "the weight to log"
+        },
+        "day_offset": {
+          "type": "integer",
+          "description": "the number of days ago to log the weight for"
+        }
+      },
+      "required": ["weight"]
+    }
+  },
+  {
+    "name": "weight_graph",
+    "description": "A graph of my weight over time with a trend line and labels"
+  },
+  {
+    "name": "decades",
+    "description": "A graph(pie chart) of how many songs I have from each decade"
+  },
+  {
+    "name": "train",
+    "description": "This checks the next upcoming train for the septa regional rail line between two stations. Be extremely careful not to mix up the start and the destination.",
+    "parameters":{
+      "type": "object",
+      "properties": {
+        "starting station": {
+          "type": "string",
+          "description": "the starting station"
+        },
+        "destination station": {
+          "type": "string",
+          "description": "the desination station"
+        }
+      }
+    }
+  },
+  {
+    "name": "set_gym_day",
+    "description": "sets what day it is in the gym",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "day": {
+          "type": "string",
+          "description": "the day to set",
+          "enum": ["Push", "Pull", "Legs", "Chest + Shoulders", "Back + Abs", "Arms"]
+        }
+      },
+      "required": ["day"]
+    }
+  },
+  {
+    "name": "toggle_workout_split",
+    "description": "toggles the workout split between push/pull/legs and a bro split"
+  },
+  {
+    "name": "get_gym_day",
+    "description": "sends the workout for the day"
+  },
+  {
+    "name": "get_current_workout_split",
+    "description": "sends the workout split"
+  },
+  {
+    "name": "add_media",
+    "description": "adds a show, movie, or book to the list of media I haven't watched/read",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "media_type": {
+          "type": "string",
+          "description": "the type of media it is (show, movie, or book)."
+        },
+        "media_name": {
+          "type": "string",
+          "description": "the name of the media to add"
+        }
+      },
+      "required": [
+        "media_type",
+        "media_name"
+      ]
+    }
+  },
+  {
+    "name": "remove_media",
+    "description": "removes a show, movie, or book from the list of media I haven't watched/read",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "media_type": {
+          "type": "string",
+          "description": "the type of media to remove"
+        },
+        "media_name": {
+          "type": "string",
+          "description": "the name of the media to remove"
+        }
+      },
+      "required": [
+        "media_type",
+        "media_name"
+      ]
+    }
+  },
+  {
+    "name": "get_entire_list",
+    "description": "sends a list of all the movies/shows I haven't watched yet",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "media_type": {
+          "type": "string",
+          "description": "the type of media to filter by",
+          "enum": ["show", "movie"]
+        }
+      }
+    }
+  },
+  {
+    "name": "get_available_media",
+    "description": "sends a list of all the movies/shows I haven't watched yet, the user may also pass in criteria to filter the list",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "media_type": {
+          "type": "string",
+          "description": "the type of media to filter by",
+          "enum": ["show", "movie"]
+        },
+        "genre": {
+          "type": "string",
+          "description": "the genre to filter by",
+          "enum": ["action", "adventure", "comedy", "drama", "fantasy", "horror", "mystery", "romance", "sci-fi", "thriller", "western"]
+        },
+        "runtime": {
+          "type": "integer",
+          "description": "the maximum runtime of the media to filter by, in minutes"
+        }
+      },
+      "required": [
+        "media_type"
+      ]
+    }
+  },
+  {
+    "name": "get_streaming_services",
+    "description": "sends a list of all the streaming services I have access to"
+  },
+  {
+    "name": "add_streaming_service",
+    "description": "adds a streaming service to the list of services I have access to",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "service_name": {
+          "type": "string",
+          "description": "the name of the streaming service to add"
+        },
+        "addon": {
+          "type": "string",
+          "description": "the name of the addon service to add"
+        }
+      },
+      "required": ["service_name"]
+    }
+  },
+  {
+    "name": "remove_streaming_service",
+    "description": "removes a streaming service from the list of services I have access to",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "service_name": {
+          "type": "string",
+          "description": "the name of the streaming service to remove"
+        }
+      },
+      "required": ["service_name"]
+    }
+  },
+  {
+    "name": "play_suggestions",
+    "description": "plays my 'suggestions' playlist on spotify"
+  }
 ]

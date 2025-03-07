@@ -222,6 +222,8 @@ def hook():
             user_add_streaming_service(args)
         case "remove_streaming_service":
             user_remove_streaming_service(args)
+        case "play_suggestions":
+            play_suggestions()
         case _:
             message_user("That command does not exist.\nTo see a list of all commands, text \"commands\".")
     return "200"
@@ -535,10 +537,11 @@ def play_suggestions():
     global spotify_client
     try:
         user = spotify_client.current_playback()
+        spotify_client.shuffle(state=False)
         device_id = user["device"]["id"]
         spotify_client.start_playback(
             device_id=device_id,
-            context_uri=f"spotify:playlist:{suggestion_playlist_id}"
+            context_uri=f"spotify:playlist:{suggestion_playlist_id}",
         )
     except:
         pass
@@ -2132,7 +2135,6 @@ def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len)
             time.sleep(wait_time)
 
             offset = (sum(requests_per_thread[:thread_num])+request_count+1)*max_request
-            print(offset)
             raw_data = dict(sp.current_user_saved_tracks(
                 limit=max_request, market="US", offset=offset))["items"]
             for i in range(len(raw_data)):
@@ -2404,8 +2406,6 @@ def main_start():
     set_in_conversation(False)
 
 
-# if __name__ == '__main__':
-#     main_start()
-#     app.run(host="0.0.0.0", port=port)
-
-play_suggestions()
+if __name__ == '__main__':
+    main_start()
+    app.run(host="0.0.0.0", port=port)
