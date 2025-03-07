@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "name": "get_media_data",
+    "time": "1740522973.4016767",
+    "params": {}
+  },
+  {
+    "name": "get_media_data",
+    "time": "1740524137.0612297",
+    "params": {}
+  }
+]

@@ -54,7 +54,7 @@ auth_manager = SpotifyOAuth(
     client_secret=spotify_client_secret,
     redirect_uri="http://www.evantoomey.com/",
     open_browser=True,
-    scope=["user-library-read","playlist-modify-public"],
+    scope=["user-library-read","playlist-modify-public", "user-read-playback-state", "user-modify-playback-state", "user-read-currently-playing", "app-remote-control", "streaming", "playlist-read-private", "playlist-modify-private", "user-read-playback-position"],
 )
 spotify_client = Spotify(oauth_manager=auth_manager)
 cloudinary.config(
@@ -64,7 +64,7 @@ cloudinary.config(
 )
 gpt_header = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer " + str(openai_api_key),
+    "Authorization": f"Bearer {openai_api_key}",
 }
 plot_attributes = {
     "weight": {
@@ -117,6 +117,8 @@ def message_user(body, media_url=None):
 
 @app.route("/", methods=["GET","POST"])
 def hook():
+    if request.json is None:
+        return "200"
     message = request.json["message"]["text"]
     if message.lower() == "kill":
         kill()
@@ -129,13 +131,17 @@ def hook():
     if not response:
         message_user("Error\nPlease try again.")
         return "200"
-    try:
+    if "choices" in response.keys() and len(response["choices"]) > 0:
         response = response["choices"][0]
-    except:
+    else:
         pprint("gpt error")
         pprint(response)
-        error_report("hook")
-        message_user("Error\nPlease try again.")
+        error_report("gpt_request")
+        if "error" in response.keys():
+            if response["error"]["code"] == "internal_error":
+                message_user("Error with ChatGPT integration, likely an outage. \nPlease try again later.")
+        else:
+            message_user("Error\nPlease try again.")
         return "200"
     if response["finish_reason"] == "stop":
         message_user(response["message"]["content"])
@@ -280,6 +286,9 @@ def days_until(target, start=None, return_days=False):
     return difference
 
 def school():
+    '''
+    Deprecated - I'm in college now
+    '''
     if log("school"):
         return
     try:
@@ -316,14 +325,14 @@ def log_weight(pounds, day_offset=0):
     if log("log_weight"):
         return
     now = datetime.now(tz) - timedelta(days=day_offset)
-    with open("text_files/weight", "a") as weight_file:
+    with open("text_files/weight.txt", "a") as weight_file:
         weight_file.write(f"""{now.strftime("%Y/%m/%d")}:{pounds}\n""")
     message_user("Weight logged")
 
 def send_weight_graph(plot_attributes):
     if log("send_weight_graph"):
         return
-    with open("text_files/weight") as f:
+    with open("text_files/weight.txt") as f:
         raw_weights = f.readlines()
     raw_weights = [i for i in raw_weights if i != "\n"]
     data = [weight_date_format(i).split(":") for i in raw_weights]
@@ -339,6 +348,7 @@ def send_weight_graph(plot_attributes):
     delete_file("weight.png")
 
 def update_spotify_data():
+    global spotify_client
     if log("update_spotify_data"):
         return
     threading.Thread(target=get_genres, args=(spotify_client,)).start()
@@ -519,6 +529,20 @@ def send_podcast_runtime_graph():
     message_user("Here are the podcasts you listen to.", graph_url)
     delete_file("podcast_runtime_graph.png")
 
+def play_suggestions():
+    if log("play_suggestions"):
+        return
+    global spotify_client
+    try:
+        user = spotify_client.current_playback()
+        device_id = user["device"]["id"]
+        spotify_client.start_playback(
+            device_id=device_id,
+            context_uri=f"spotify:playlist:{suggestion_playlist_id}"
+        )
+    except:
+        pass
+
 def start_workout():
     if log("start_workout"):
         return
@@ -673,9 +697,9 @@ def remove_media_from_list(args):
             json=json_data,
         ).json()
         response = json.loads(response["choices"][0]["message"]["function_call"]["arguments"])
-        try:
+        if "media_name" in response.keys():
             del media_list[type][response["media_name"]]
-        except:
+        else:
             message_user(f'''{response["media_name"]} is not in the list of {type}s.''')
             return
     with open("text_files/media_data.json", "w") as f:
@@ -960,9 +984,9 @@ def get_available_media(args, get_all=False):
         if "streamingInfo" not in media.keys():
             continue
         for service_data in media["streamingInfo"]["us"]:
-                try:
+                if "service" in service_data.keys():
                     service = service_data["service"]
-                except:
+                else:
                     continue
                 if service_data["streamingType"] == "free":
                     pass
@@ -1292,11 +1316,9 @@ def search_tracks(id):
         return
     data = read_spotify_data()
     for track in data:
-        try:
+        if "linked_from" in track.keys():
             if track["linked_from"]["id"] == id:
                 return track
-        except KeyError:
-            pass
         if track["id"] == id:
             return track
     return False
@@ -1307,6 +1329,7 @@ def clear_suggestions_playlist(sp, playlist_id):
     limit = 100
     playlist = dict(sp.playlist(playlist_id))["tracks"]
     if not int(playlist["total"]):
+        print("No tracks in playlist")
         return
     playlist = playlist["items"]
     liked_tracks = [i["track"]["id"] for i in playlist if search_tracks(i["track"]["id"])]
@@ -1351,7 +1374,7 @@ def check_brentford_file():
 def check_weight_file():
     if log("check_weight_file"):
         return
-    weights = check_file_timestamps("weight", strf_format="%Y/%m/%d")
+    weights = check_file_timestamps("weight.txt", strf_format="%Y/%m/%d")
     for i in range(len(weights)):
         try:
             weights[i] = weights[i].strip().split(":")
@@ -1360,7 +1383,7 @@ def check_weight_file():
         except:
             weights[i] = False
     weights = [i for i in weights if i]
-    with open("text_files/weight", "w") as weight_file:
+    with open("text_files/weight.txt", "w") as weight_file:
         weight_file.writelines(sorted(weights))
 
 def check_error_file():
@@ -1434,10 +1457,8 @@ def get_todays_word():
 def delete_file(file_name):
     if log("delete_file"):
         return
-    try:
+    if os.path.exists(file_name):
         os.remove(file_name)
-    except FileNotFoundError:
-        pass
 
 def error_count_notify():
     if log("error_count_notify"):
@@ -2010,9 +2031,10 @@ def format_song_name(song_name):
 def format_artist(artist_dict):
     if log("format_artist"):
         return
-    del artist_dict["external_urls"]
-    del artist_dict["href"]
-    del artist_dict["uri"]
+    fields = ["external_urls", "href", "uri"]
+    for field in fields:
+        if field in artist_dict.keys():
+            del artist_dict[field]
     return artist_dict
 
 def format_track(song, track_num):
@@ -2024,25 +2046,19 @@ def format_track(song, track_num):
         song = dict(song["track"])
     song["added_at"] = added
     song["formatted_name"] = format_song_name(song["name"])
-    try:
+    if "album" in song.keys() and "available_markets" in song["album"].keys():
         del song["album"]["available_markets"]
-    except:
-        pass
     extra_fields = ["external_urls", "href", "images", "uri"]
     for i in extra_fields:
-        try:
+        if i in song["album"].keys():
             del song["album"][i]
-        except:
-            pass
     song["album"]["artists"] = [
         format_artist(i) for i in song["album"]["artists"]]
     song["artists"] = [format_artist(i) for i in song["artists"]]
     extra_fields = ["available_markets", "disc_number", "external_ids", "external_urls", "href", "preview_url", "uri"]
     for i in extra_fields:
-        try:
+        if i in song.keys():
             del song[i]
-        except:
-            pass
     song["artist_num"] = len(song["artists"])
     song["album_track_number"] = song["track_number"]
     song["track_number"] = int(track_num)
@@ -2078,10 +2094,8 @@ def format_podcast(podcast):
     podcast["added_at"] = added
     extra_fields = ["available_markets", "external_urls", "href", "images", "uri"]
     for i in extra_fields:
-        try:
+        if i in podcast.keys():
             del podcast[i]
-        except:
-            pass
     podcast["show"] = format_podcast_show(podcast["show"])
     return podcast
 
@@ -2090,10 +2104,8 @@ def format_podcast_show(show):
         return
     extra_fields = ["available_markets", "copyrights", "external_urls", "href", "html_description", "images", "is_externally_hosted", "languages", "uri"]
     for i in extra_fields:
-        try:
+        if i in show.keys():
             del show[i]
-        except:
-            pass
     return show
 
 def requests_per_thread_func(thread_count, playlist_len, max_request):
@@ -2114,18 +2126,23 @@ def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len)
         return
     data_list = []
     wait_time = 0
-    i = 0
-    while i < requests_per_thread[thread_num]:
+    request_count = 0
+    while request_count < requests_per_thread[thread_num]:
         try:
             time.sleep(wait_time)
-            offset = (sum(requests_per_thread[:thread_num])+i+1)*max_request+1
+
+            offset = (sum(requests_per_thread[:thread_num])+request_count+1)*max_request
+            print(offset)
             raw_data = dict(sp.current_user_saved_tracks(
-                limit=50, market="US", offset=offset))["items"]
-            data_list.extend([format_track(raw_data[i], playlist_len-(offset+i)-1) for i in range(len(raw_data))])
-            i += 1
-        except:
+                limit=max_request, market="US", offset=offset))["items"]
+            for i in range(len(raw_data)):
+                # if raw_data[i] and 'name' in raw_data[i]:
+                data_list.append(format_track(raw_data[i], playlist_len-(offset+i)-1))
+        except Exception as e:
+            print(e)
             error_report("get_song_data")
             wait_time = wait_time*2 + 1
+        request_count += 1
     return data_list
 
 def get_all_songs(sp):
@@ -2148,6 +2165,8 @@ def get_all_songs(sp):
         for i in results:
             data_list.extend(i)
         data_list.sort(key=lambda x: x["track_number"], reverse=True)
+        print(playlist_len)
+        pprint(len(data_list))
         with open("text_files/tracks.json", "w") as data_file:
             json.dump({"data": data_list}, data_file, indent=2)
     except:
@@ -2385,6 +2404,8 @@ def main_start():
     set_in_conversation(False)
 
 
-if __name__ == '__main__':
-    main_start()
-    app.run(host="0.0.0.0", port=port)
+# if __name__ == '__main__':
+#     main_start()
+#     app.run(host="0.0.0.0", port=port)
+
+play_suggestions()
