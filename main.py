@@ -543,8 +543,12 @@ def play_suggestions():
             device_id=device_id,
             context_uri=f"spotify:playlist:{suggestion_playlist_id}",
         )
-    except:
-        pass
+    except Exception as e:
+        if "No active device found" in str(e):
+            message_user("No active device found.")
+        else:
+            message_user("Error")
+            error_report("play_suggestions")
 
 def start_workout():
     if log("start_workout"):
@@ -1766,11 +1770,17 @@ def cancel(name):
     with open("text_files/cancel", "w") as cancel_file:
         cancel_file.writelines(cancels)
 
-def error_report(name):
+def error_report(name, reason=None):
     log("error_report")
     time_stamp = round(rn("date").timestamp(), 1)
-    with open("text_files/errors", "a") as error_list:
-        error_list.write(f"{time_stamp}:{name}\n")
+    try:
+        with open("text_files/errors.json", "r") as error_list:
+            error_list = json.load(error_list)
+    except:
+        error_list = []
+    error_list.append({"time": time_stamp, "name": name, "reason": reason})
+    with open("text_files/errors.json", "w") as error_list:
+        json.dump(error_list, error_list, indent=2)
     check_and_cancel(name)
 
 def num_suffix(num):
