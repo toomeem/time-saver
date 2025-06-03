@@ -243,11 +243,7 @@ def rn(target="%H:%M"):
 
 def log(message,sender="",contains_image=False,is_command=True):
     if is_command:
-        with open("text_files/command_list", "a") as command_file:
-            command_file.write(f"""{round(rn("date").timestamp(), 1)}:{message}\n""")
-        with open("text_files/cancel") as cancel_file:
-            cancels = cancel_file.readlines()
-        return message + "\n" in cancels
+        return log_command(message)
     with open("text_files/conversation_log.json") as message_file:
         message_log = list(json.load(message_file))
     message_log.append({
@@ -270,6 +266,15 @@ def log(message,sender="",contains_image=False,is_command=True):
         conversation.append({"role": sender, "content": message})
     if len(conversation) > 5:
         conversation = conversation[-5:]
+
+def log_command(name):
+    commands_to_not_log = ["format_track", "format_song_name", "format_artist"]
+    if name not in commands_to_not_log:
+        command_timestamp = round(rn("date").timestamp(), 1)
+        with open("text_files/command_list", "a") as command_file:
+            command_file.write(f"{command_timestamp}:{name}\n")
+    cancels = get_cancels()
+    return name in list(cancels)
 
 def days_until(target, start=None, return_days=False):
     if log("days_until"):
@@ -337,7 +342,7 @@ def send_weight_graph(plot_attributes):
     with open("text_files/weight.txt") as f:
         raw_weights = f.readlines()
     raw_weights = [i for i in raw_weights if i != "\n"]
-    data = [weight_date_format(i).split(":") for i in raw_weights]
+    data = [weight_date_format(i) for i in raw_weights]
     data = sorted(data)
     x = [int(i[0]) for i in data]
     y = [float(i[1]) for i in data]
@@ -353,8 +358,10 @@ def update_spotify_data():
     global spotify_client
     if log("update_spotify_data"):
         return
-    threading.Thread(target=get_genres, args=(spotify_client,)).start()
-    threading.Thread(target=podcasts, args=(spotify_client,)).start()
+    # threading.Thread(target=get_genres, args=(spotify_client,)).start()
+    # threading.Thread(target=podcasts, args=(spotify_client,)).start()
+    get_genres(spotify_client) #todo: try to make this multithreaded
+    podcasts(spotify_client)
     get_all_songs(spotify_client)
     clear_suggestions_playlist(spotify_client, suggestion_playlist_id)
 
@@ -936,25 +943,19 @@ def check_workout_split():
 def check_commands_file():
     if log("check_commands_file"):
         return
+    max_commands_kept = 10000
     with open("text_files/command_list") as f:
-        commands = f.readlines()
+        commands = list(f.readlines())
+    if not commands:
+        return
+    if len(commands) > max_commands_kept:
+        commands = commands[-max_commands_kept:]
     for i in range(len(commands)):
         if commands[i] == "None:\n":
-            commands[i] = "delete"
+            commands[i] = ""
         elif commands[i] == "\n":
-            commands[i] = "delete"
-        try:
-            commands[i] = commands[i].split(":")
-        except:
-            commands[i] = "delete"
-        if commands[i][0] != "None":
-            try:
-                commands[i][0] = str(round(float(commands[i][0]), 1))
-            except:
-                commands[i] = "delete"
-        if commands[i] != "delete":
-            commands[i] = ":".join(commands[i])
-    commands = [i for i in commands if i != "delete"]
+            commands[i] = ""
+    commands = [i for i in commands if i]
     with open("text_files/command_list", "w") as f:
         f.writelines(commands)
 
@@ -977,7 +978,7 @@ def get_available_media(args, get_all=False):
     media_dict = {k:v for k,v in media_dict.items() if v["status"] in ["Released", "Returning Series", "Ended", "Canceled"]}
     if "genre" in args.keys():
         genre = args["genre"]
-        media_dict = {k:v for k,v in media_dict.items() if "genres" in v.keys() and genre in [i.lower() for i in v["genres"]]}# todo remove extra list comprehension in like a week
+        media_dict = {k:v for k,v in media_dict.items() if "genres" in v.keys() and genre in [i.lower() for i in v["genres"]]}# todo remove extra list comprehension
     if "runtime" in args.keys():
         runtime = args["runtime"]
         media_dict = {k:v for k,v in media_dict.items() if "runtime" in v.keys() and v["runtime"] <= runtime}
@@ -1014,7 +1015,7 @@ def log_rate_limit(domain):
     with open("text_files/rate_limit.json") as f:
         rate_limit_list = list(json.load(f))
     rate_limit_list = [i for i in rate_limit_list if i["domain"] != domain]
-    rate_limit_list.append({"domain": domain, "time": str(time.time())})
+    rate_limit_list.append({"domain": domain, "timestamp": str(time.time())})
     with open("text_files/rate_limit.json", "w") as f:
         json.dump(rate_limit_list, f, indent=2)
 
@@ -1037,7 +1038,7 @@ def is_rate_limited(domain, wait_time):
     rate_limit_list = [i for i in rate_limit_list if i["domain"] == domain]
     if not rate_limit_list:
         return False
-    if time.time() - float(rate_limit_list[0]["time"]) > wait_time:
+    if time.time() - float(rate_limit_list[0]["timestamp"]) > wait_time:
         remove_rate_limit(domain)
         return False
     return True
@@ -1059,7 +1060,9 @@ def add_media_data(media_type, media_name):
         return
     if is_rate_limited("add_media_data", 60*60*2):
         return
-    url = "https://streaming-availability.p.rapidapi.com/search/title"
+    if media_type != "show":
+        return # todo: find an alternative way to get movie data
+    url = "https://streaming-availability.p.rapidapi.com/shows/search/title"
     headers = {
         "X-RapidAPI-Key": streaming_availability_api_key,
         "X-RapidAPI-Host": "streaming-availability.p.rapidapi.com",
@@ -1073,6 +1076,10 @@ def add_media_data(media_type, media_name):
     response = requests.get(url, headers=headers, params=querystring)
     if response.status_code == 429:
         log_rate_limit("add_media_data")
+        return
+    elif not response.ok:
+        message_user("Error retrieving media data. Please try again later.")
+        error_report("add_media_data", response.json())
         return
     response = response.json()["result"]
     for i in response:
@@ -1130,7 +1137,7 @@ def add_job(name, params={}):
         return
     job = {
         "name": name,
-        "time": str(time.time()),
+        "timestamp": str(time.time()),
         "params": params
     }
     with open("text_files/jobs.json") as f:
@@ -1348,6 +1355,9 @@ def clear_suggestions_playlist(sp, playlist_id):
         sp.playlist_remove_all_occurrences_of_items(playlist_id, [i])
 
 def check_file_timestamps(filename, strf_format="%Y/%m/%d/%H/%M", remove_past=False):
+    '''
+    Checks that timestamps in a file are valid and removes lines with past dates.
+    '''
     if log("check_file_timestamps"):
         return
     with open("text_files/"+filename) as f:
@@ -1393,15 +1403,6 @@ def check_weight_file():
     with open("text_files/weight.txt", "w") as weight_file:
         weight_file.writelines(sorted(weights))
 
-def check_error_file():
-    if log("check_error_file"):
-        return
-    errors = check_file_timestamps("errors", "%Y/%m/%d/%H/%M/%S")
-    if not errors:
-        return
-    with open("text_files/errors", "w") as error_file:
-        error_file.writelines(sorted(errors))
-
 def check_quote_file():
     if log("check_quote_file"):
         return
@@ -1435,10 +1436,9 @@ def clean(updates=True):
         threading.Thread(target=update_spotify_data).start()
     add_job("get_media_data")
     check_brentford_file()
-    clear_file("text_files/cancel")
+    clear_file("text_files/cancel.json")
     check_commands_file()
     check_workout_split()
-    check_error_file()
     check_quote_file()
     check_weight_file()
 
@@ -1471,17 +1471,16 @@ def error_count_notify():
     if log("error_count_notify"):
         return
     now = datetime.now(tz)
-    with open("text_files/errors") as errors:
-        error_list = list(errors.readlines())
+    with open("text_files/errors.json") as errors:
+        error_list = list(json.load(errors))
     if not error_list:
         return 0
     error_count = []
     error_list = error_list[::-1]
     for i in range(len(error_list)):
-        timestamp = error_list[i].strip().split(":")[1]
-        name = error_list[i].strip().split(":")[0]
-        timestamp = [int(i) for i in timestamp.split("/")]
-        timestamp = datetime(timestamp[0], timestamp[1], timestamp[2], timestamp[3], timestamp[4], tzinfo=tz)
+        timestamp = error_list[i]["timestamp"]
+        name = error_list[i]["name"]
+        timestamp = datetime.fromtimestamp(timestamp, tz)
         if (now-timestamp).total_seconds() < 86400:
             error_count.append(name)
     return(Counter(error_count))
@@ -1678,6 +1677,8 @@ def clear_file(file_name):
     if log("clear_file"):
         return
     file = open(file_name, "w")
+    if file_name.endswith(".json"):
+        json.dump([], file)
     file.close()
 
 def log_response(response):
@@ -1739,10 +1740,17 @@ def in_conversation():
     return conversation_bool == "True"
 
 def check_and_cancel(name):
+    '''
+    checks if an error has occurred frequently enough to warrant a cancel.
+    If so, it adds the name to the cancel file.
+    '''
     log("check_and_cancel")
-    with open("text_files/errors") as error_file:
-        errors = error_file.readlines()
-    errors = [i.strip().split(":") for i in errors]
+    with open("text_files/errors.json") as error_file:
+        try:
+            errors = list(json.load(error_file))
+        except json.decoder.JSONDecodeError:
+            message_user("Error file is deleted or corrupted. Please needs manual fix. :(")
+            return
     if len(errors) >= 50:
         errors = errors[-50:]
     elif len(errors) >= 10:
@@ -1751,24 +1759,31 @@ def check_and_cancel(name):
         return
     timestamps = []
     for i in errors:
-        if i[1] == name:
-            timestamps.append(i[0])
+        if i["name"] == name:
+            timestamps.append(i["timestamp"])
     timestamps = sorted(timestamps)[-10:]
     if len(timestamps) < 10:
         return
     if (rn("date").timestamp() - float(timestamps[0])) <= 86400:
         cancel(name)
 
+def get_cancels():
+    try:
+        with open("text_files/cancel.json") as cancel_file:
+            cancels = list(json.load(cancel_file))
+    except json.decoder.JSONDecodeError:
+        cancels = []
+    return cancels
+
 def cancel(name):
     log("cancel")
-    with open("text_files/cancel") as cancel_file:
-        cancels = cancel_file.readlines()
     name += "\n"
+    cancels = get_cancels()
     if name in cancels:
         return
     cancels.append(name)
-    with open("text_files/cancel", "w") as cancel_file:
-        cancel_file.writelines(cancels)
+    with open("text_files/cancel.json", "w") as cancel_file:
+        json.dump(cancels, cancel_file, indent=2)
 
 def error_report(name, reason=None):
     log("error_report")
@@ -1778,9 +1793,9 @@ def error_report(name, reason=None):
             error_list = json.load(error_list)
     except:
         error_list = []
-    error_list.append({"time": time_stamp, "name": name, "reason": reason})
-    with open("text_files/errors.json", "w") as error_list:
-        json.dump(error_list, error_list, indent=2)
+    error_list.append({"timestamp": time_stamp, "name": name, "reason": reason})
+    with open("text_files/errors.json", "w") as error_list_file:
+        json.dump(error_list, error_list_file, indent=2)
     check_and_cancel(name)
 
 def num_suffix(num):
@@ -1886,14 +1901,13 @@ def formatted_weather():
 
 def uncancel(name):
     log("uncancel")
-    with open("text_files/cancel") as cancel_file:
-        cancels = cancel_file.readlines()
+    cancels = get_cancels()
     name += "\n"
     if name not in cancels:
         return
     cancels.remove(name)
-    with open("text_files/cancel", "w") as cancel_file:
-        cancel_file.writelines(cancels)
+    with open("text_files/cancel.json", "w") as cancel_file:
+        json.dump(cancels, cancel_file, indent=2)
 
 def get_quote(scan=None):
     if log("get_quote"):
@@ -1933,15 +1947,9 @@ def get_quote(scan=None):
 def weight_date_format(line):
     if log("weight_date_format"):
         return
+    datetime_format = "%Y/%m/%d"
     line = line.split(":")
-    return f"{date_to_num(line[0])}:{line[1]}"
-
-def date_to_num(date):
-    if log("date_to_num"):
-        return
-    date = date.split("/")
-    date = str(int(date[1])*30 + int(date[2]) + int(date[0])*365)
-    return date
+    return [datetime.strptime(line[0], datetime_format), line[1]]
 
 def moving_avg(data, window):
     if log("moving_avg"):
@@ -1963,7 +1971,7 @@ def closest_num(num, lst):
             closest = i
     return closest
 
-def slope(m , x, b):
+def slope(m, x, b):
     if log("slope"):
         return
     return m*x+b
@@ -2037,7 +2045,7 @@ def format_song_name(song_name):
     song_name = song_name.split(" - ")[0]
     song_name = song_name.split(" / ")[0]
     song_name = song_name.split(" Remastered")[0]
-    while song_name[-1] in [" ", "/", "\\"]:
+    while song_name and song_name[-1] in [" ", "/", "\\"]:
         song_name = song_name[:-1]
     return song_name
 
@@ -2167,7 +2175,7 @@ def get_all_songs(sp):
         playlist_len = int(raw_data["total"])
         raw_data = raw_data["items"]
         data_list = [format_track(raw_data[i], playlist_len-i-1) for i in range(len(raw_data))]
-        thread_count = 10
+        thread_count = 8 # max 10 threads
         requests_per_thread = requests_per_thread_func(thread_count, playlist_len, max_request)
         with concurrent.futures.ThreadPoolExecutor(max_workers=thread_count) as executor:
             futures = [
@@ -2177,8 +2185,6 @@ def get_all_songs(sp):
         for i in results:
             data_list.extend(i)
         data_list.sort(key=lambda x: x["track_number"], reverse=True)
-        print(playlist_len)
-        pprint(len(data_list))
         with open("text_files/tracks.json", "w") as data_file:
             json.dump({"data": data_list}, data_file, indent=2)
     except:
@@ -2411,7 +2417,7 @@ def main_start():
     if log("main_start"):
         return
     clear_file("text_files/response")
-    clear_file("text_files/cancel")
+    clear_file("text_files/cancel.json")
     clear_file("text_files/current_workout.json")
     set_in_conversation(False)
 

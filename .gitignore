@@ -3,7 +3,4 @@
 .mypy_cache
 ngrok.exe
 ./ngrok.exe
-__pycache__/main.cpython-310.pyc
-*ngrok*
-ngrok.exe
-__pycache__/main.cpython-310.pyc
+__pycache__/*

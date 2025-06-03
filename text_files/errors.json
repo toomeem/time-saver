@@ -1,1 +1,514 @@
-[]
+[
+  {
+    "timestamp": 1748938403.3,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748938407.4,
+    "name": "get_all_songs",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939379.1,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939379.8,
+    "name": "get_all_songs",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939442.2,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939445.3,
+    "name": "get_all_songs",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939552.9,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939555.8,
+    "name": "get_all_songs",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939637.0,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939639.2,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939640.0,
+    "name": "get_all_songs",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939683.9,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939687.0,
+    "name": "get_all_songs",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939729.1,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939732.4,
+    "name": "get_all_songs",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939828.3,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939830.2,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939830.9,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939831.5,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939832.1,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939832.6,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939833.1,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939833.7,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939833.8,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939834.3,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939834.9,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939835.4,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939836.0,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939836.6,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939836.8,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939836.8,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939837.3,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939837.8,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939838.4,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939838.9,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939839.4,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939839.5,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939840.0,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939840.0,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939840.2,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939840.2,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939840.6,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939840.6,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939841.1,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939841.1,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939841.2,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939841.2,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939841.3,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939841.3,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939841.4,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939841.4,
+    "name": "add_media_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748939955.1,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940056.0,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940056.1,
+    "name": "add_media_data",
+    "reason": {
+      "message": "Endpoint '/search/title' does not exist"
+    }
+  },
+  {
+    "timestamp": 1748940061.7,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940341.2,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940348.3,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940348.3,
+    "name": "add_media_data",
+    "reason": {
+      "message": "Endpoint '/search/title' does not exist"
+    }
+  },
+  {
+    "timestamp": 1748940648.2,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940879.4,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940879.4,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748940889.8,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940998.8,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748940998.8,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748941003.6,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748941209.4,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748941210.5,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748941211.2,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748941211.7,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748941213.1,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748941404.9,
+    "name": "get_song_data",
+    "reason": null
+  },
+  {
+    "timestamp": 1748941888.8,
+    "name": "get_all_songs",
+    "reason": null
+  },
+  {
+    "timestamp": 1748942450.6,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748942450.7,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943181.4,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943181.4,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943181.5,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943181.6,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943181.7,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943181.7,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943181.9,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943181.9,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943182.0,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943182.0,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943182.2,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943182.2,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943182.3,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943182.3,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943182.7,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943182.8,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943183.0,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943183.0,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943183.2,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943183.2,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1748943530.1,
+    "name": "message_user",
+    "reason": null
+  },
+  {
+    "timestamp": 1748943530.4,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  }
+]
