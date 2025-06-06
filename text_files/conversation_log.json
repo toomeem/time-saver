@@ -5768,5 +5768,113 @@
   {
     "message": "start a workout",
     "sender": "user"
+  },
+  {
+    "message": "Error retrieving media data. Please try again later.",
+    "sender": "script",
+    "sent_at": "1749162724.3621252",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1749169269.6418748",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1749169335.1981797",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1749169336.5695589",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1749169337.3219445",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1749169338.1068172",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1749169338.8794003",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1749169339.7046142",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1749169340.473852",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1749169341.1769943",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1749169341.8816147",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1749169342.3859491",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1749169343.274077",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1749169344.0417938",
+    "image": false
+  },
+  {
+    "message": "hi",
+    "sender": "user",
+    "sent_at": "1749169344.7157643",
+    "image": false
+  },
+  {
+    "message": "Hello!",
+    "sender": "script",
+    "sent_at": "1749169345.3225083",
+    "image": false
+  },
+  {
+    "message": "send me a graph of my top artists",
+    "sender": "user",
+    "sent_at": "1749169351.7315388",
+    "image": false
+  },
+  {
+    "message": "Here are your top artists.",
+    "sender": "script",
+    "sent_at": "1749169356.626635",
+    "image": true
   }
 ]

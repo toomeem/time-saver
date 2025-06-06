@@ -253,7 +253,7 @@ def log(message,sender="",contains_image=False,is_command=True):
             "image": contains_image,
         })
     clear_file("text_files/conversation_log.json")
-    with open("text_files/conversation_log.json", "a") as message_file:
+    with open("text_files/conversation_log.json", "w") as message_file:
         json.dump(
             message_log,
             message_file,
