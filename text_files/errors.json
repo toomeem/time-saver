@@ -750,5 +750,80 @@
     "timestamp": 1749169270.9,
     "name": "message_user",
     "reason": null
+  },
+  {
+    "timestamp": 1749334203.4,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334204.0,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334204.7,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334205.6,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334206.2,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334206.8,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334207.5,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334208.3,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334208.9,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749334209.5,
+    "name": "add_media_data",
+    "reason": {
+      "message": "parameter \"show_type\" has an invalid value: all"
+    }
+  },
+  {
+    "timestamp": 1749686414.9,
+    "name": "get_song_data",
+    "reason": null
   }
 ]

@@ -43,8 +43,8 @@ streaming_availability_api_key = os.getenv("STREAMING_AVAILABILITY_API_KEY")
 tmdb.API_KEY = os.getenv("TMDB_API_KEY")
 gpt_model = "gpt-3.5-turbo"
 tz = pytz.timezone("America/New_York")
-first_day_of_school = "2023/09/15"
-last_day_of_school = "2024/06/15"
+first_day_of_school = "2023/09/26"
+last_day_of_school = "2028/06/15"
 in_school = True
 http_request_header = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
@@ -293,9 +293,6 @@ def days_until(target, start=None, return_days=False):
     return difference
 
 def school():
-    '''
-    Deprecated - I'm in college now
-    '''
     if log("school"):
         return
     try:
@@ -593,8 +590,8 @@ def get_train_schedule(station_json):
         return
     station1 = stations[0].replace("Market East", "Jefferson")
     station2 = stations[1].replace("Market East", "Jefferson")
-    septa_headers = {'Accept': 'application/json'}
-    parameters = {'req1': station1, 'req2': station2}
+    septa_headers = {"Accept": "application/json"}
+    parameters = {"req1": station1, "req2": station2}
     septa_response = requests.get(
         "https://www3.septa.org/api/NextToArrive/index.php",
         params=parameters, headers=septa_headers).json()
@@ -672,6 +669,7 @@ def add_media_to_list(args):
     message_user(f"Added {name} to the list of {type}s.")
 
 def remove_media_from_list(args):
+    return #todo: fix this
     if log("remove_media_from_list"):
         return
     type = args["media_type"]
@@ -853,6 +851,64 @@ def get_commands():
 
 # end of commands, start of helper functions
 
+def get_fastest_route_to_work():
+    septa_headers = {"Accept": "application/json"}
+    septa_response = requests.get(
+        "https://www3.septa.org/api/v2/trips/?route_id=31,38,T1", headers=septa_headers
+    )
+    try:
+        septa_response = septa_response.json()
+    except:
+        error_report("get_fastest_route_to_work")
+        return None
+
+    bus_38_eta, bus_31_json = bus_eta(
+        [i for i in septa_response if i["route_id"] == "38"], 679, 10272
+    )
+    bus_31_eta, bus_31_json = bus_eta(
+        [i for i in septa_response if i["route_id"] == "31"], 679, 10272
+    )
+    pprint(bus_38_eta, bus_31_eta)
+
+def bus_eta(buses, start_stop_id, end_stop_id, direction="Eastbound"):
+    septa_headers = {"Accept": "application/json"}
+    next_bus = None
+    min_arrival = None
+
+    for bus in buses:
+        if bus["status"] == "CANCELED":
+            continue
+        if bus["direction_name"] != direction:
+            continue
+        if bus["trip_completion"]:
+            continue
+        if bus["delay"] >= 998:
+            print("bus delay too long")
+            continue
+        stop_times = requests.get(
+            f"https://www3.septa.org/api/v2/trip-update/?trip_id={bus['trip_id']}", headers=septa_headers
+        ).json()["stop_times"]
+        start_stop_json = [i for i in stop_times if i["stop_id"] == start_stop_id]
+        if not start_stop_json:
+            print("no start stop")
+            continue
+        start_stop_json = start_stop_json[0]
+        if start_stop_json["departed"]:
+            continue
+        now = datetime.now(tz).timestamp()
+        if int(start_stop_json["eta"]) - 90 < now:
+            continue
+        end_stop_json = [i for i in stop_times if i["stop_id"] == end_stop_id]
+        if not end_stop_json:
+            print("no end stop")
+            continue
+        end_stop_json = end_stop_json[0]
+        if not min_arrival or int(end_stop_json["eta"]) < min_arrival:
+            min_arrival = int(end_stop_json["eta"])
+            next_bus = bus
+    return next_bus, min_arrival
+
+
 def determine_streaming_service(service):
     if log("determine_streaming_service"):
         return
@@ -978,7 +1034,10 @@ def get_available_media(args, get_all=False):
     media_dict = {k:v for k,v in media_dict.items() if v["status"] in ["Released", "Returning Series", "Ended", "Canceled"]}
     if "genre" in args.keys():
         genre = args["genre"]
-        media_dict = {k:v for k,v in media_dict.items() if "genres" in v.keys() and genre in [i.lower() for i in v["genres"]]}# todo remove extra list comprehension
+        media_dict = {
+            k:v for k,v in media_dict.items()
+            if ("genres" in v.keys()) and (genre in [i.lower() for i in v["genres"]])
+        }
     if "runtime" in args.keys():
         runtime = args["runtime"]
         media_dict = {k:v for k,v in media_dict.items() if "runtime" in v.keys() and v["runtime"] <= runtime}
@@ -1056,6 +1115,7 @@ def get_missing_media_data():
     return missing_data
 
 def add_media_data(media_type, media_name):
+    return # todo: fix this
     if log("add_media_data"):
         return
     if is_rate_limited("add_media_data", 60*60*2):
@@ -1434,7 +1494,7 @@ def clean(updates=True):
         return
     if updates:
         threading.Thread(target=update_spotify_data).start()
-    add_job("get_media_data")
+    # add_job("get_media_data")
     check_brentford_file()
     clear_file("text_files/cancel.json")
     check_commands_file()
@@ -2146,7 +2206,7 @@ def get_song_data(sp,thread_num, requests_per_thread, max_request, playlist_len)
     if log("get_song_data"):
         return
     data_list = []
-    wait_time = 0
+    wait_time = 0.5
     request_count = 0
     while request_count < requests_per_thread[thread_num]:
         try:
@@ -2175,7 +2235,7 @@ def get_all_songs(sp):
         playlist_len = int(raw_data["total"])
         raw_data = raw_data["items"]
         data_list = [format_track(raw_data[i], playlist_len-i-1) for i in range(len(raw_data))]
-        thread_count = 8 # max 10 threads
+        thread_count = 7 # max 10 threads
         requests_per_thread = requests_per_thread_func(thread_count, playlist_len, max_request)
         with concurrent.futures.ThreadPoolExecutor(max_workers=thread_count) as executor:
             futures = [
@@ -2422,6 +2482,7 @@ def main_start():
     set_in_conversation(False)
 
 
-if __name__ == '__main__':
-    main_start()
-    app.run(host="0.0.0.0", port=port)
+if __name__ == "__main__":
+    get_fastest_route_to_work()
+    # main_start()
+    # app.run(host="0.0.0.0", port=port)
